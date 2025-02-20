@@ -22,7 +22,6 @@ Our intention is to create a starting point for an open AI Systems ontology whos
 
 ### Coming soon
 - Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database
-- Example use-case of auto-assistance in compliance questionnaires using CoT examples and Risk Atlas Nexus
 
 
 ## Links
@@ -31,10 +30,10 @@ Our intention is to create a starting point for an open AI Systems ontology whos
     - [LinkML instance data for an example knowledge graph](src/risk_atlas_nexus/data/knowledge_graph/README.md)
     - [Download a populated graph](graph_export/README.md)
 - **Notebooks:** 
+    - [Risk Atlas Nexus Quickstart](examples/notebooks/Risk_Atlas_Nexus_Quickstart.ipynb) Overview of library functionality
     - [Risk identification](examples/notebooks/risk_identification.ipynb) Uncover risks related to your usecase
-    - [Risk Atlas Nexus Quickstart](examples/notebooks/Risk Atlas Nexus Quickstart.ipynb) Overview of library functionality
-    - [Risk identification](examples/notebooks/risk_identification.ipynb) Uncover risks related to your usecase
-    - [Risk Atlas Nexus Quickstart](examples/notebooks/Risk Atlas Nexus Quickstart.ipynb) Overview of library functionality
+    - [Auto assist questionnaire using](examples/notebooks/autoassist_questionnaire.ipynb) Auto-fill questionnaire using Chain of Thought or Few-Shot Examples
+    - [AI Tasks identification](examples/notebooks/ai_tasks_identification.ipynb) Uncover ai tasks related to your usecase
 - **Additional Resources:**
     - [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
     - [Usage Governance Advisor: From Intent to AI Governance](https://arxiv.org/abs/2412.01957)
@@ -56,10 +55,10 @@ pip install -e .
 
 Risk Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:
 
-- [IBM Watsonx AI (WML)](https://www.ibm.com/products/watsonx-ai)
+- [IBM Watsonx AI](https://www.ibm.com/products/watsonx-ai) (Watson Machine Learning)
 - [Ollama](https://ollama.com/)
 - [vLLM](https://docs.vllm.ai/en/latest/)
-- [RITS](https://rits.fmaas.res.ibm.com)
+- [RITS](https://rits.fmaas.res.ibm.com) (IBM Internal Only)
 
 #### IBM Watsonx AI (WML) 
 
@@ -92,15 +91,17 @@ When using the Ollama inference, you need to:
 pip install -e ".[ollama]"
 ```
 
-2. Please follow the [docs](https://github.com/ollama/ollama/tree/main/docs) here to start Ollama LLM server. Server will start by default at http://localhost:11434
+2. Please follow the [quickstart](https://github.com/ollama/ollama/blob/main/README.md#ollama) guide to start Ollama LLM server. Server will start by default at http://localhost:11434
 
-3. When selecting Ollama execution from Risk Atlas Nexus, pass the `api_url` to the `credentials` or set `OLLAMA_API_URL` with the value as `localhost:11434`.
+3. When selecting Ollama engine in Risk Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
 
 #### vLLM 
 
 When using the vLLM inference, you need to:
 
-1. Install vLLM dependencies as follows:
+1. For Mac users, follow the instuctions [here](https://docs.vllm.ai/en/stable/getting_started/installation/cpu/index.html?device=apple). Users need to build from the source vLLM to natively run on macOS.
+
+2. For Linux users, install vLLM dependencies as follows:
 
 ```command
 pip install -e ".[vllm]"
@@ -108,7 +109,7 @@ pip install -e ".[vllm]"
 
 Above package is enough to run vLLM in once-off offline mode. When selecting vLLM execution from Risk Atlas Nexus, `credentials` should be passed as `None` to use vLLM offline mode.
 
-2. (Optional) To run vLLM on an OpenAI-Compatible vLLM Server, execute the command:
+3. (Optional) To run vLLM on an OpenAI-Compatible vLLM Server, execute the command:
 
 ```command
 vllm serve ibm-granite/granite-3.1-8b-instruct --max_model_len 4096 --host localhost --port 8000 --api-key <CUSTOM_API_KEY>
@@ -116,7 +117,7 @@ vllm serve ibm-granite/granite-3.1-8b-instruct --max_model_len 4096 --host local
 
 The CUSTOM_API_KEY can be any string that you choose to use as your API key. Above command will start vLLM server at http://localhost:8000. The server currently hosts one model at a time. Check all supported APIs at `http://localhost:8000/docs`
 
-**Note:** When selecting vLLM execution from Risk Atlas Nexus, pass `api_url (host:port)` and `api_key` to `credentials` with values from the vllm serve command above.
+**Note:** When selecting vLLM engine in Risk Atlas Nexus, pass `api_url` as `host:port` and given `api_key` to `credentials` with values from the vllm serve command above.
 
 #### RITS 
 
