@@ -1,2 +1,4 @@
 include src/risk_atlas_nexus/ai_risk_ontology/schema/*.yaml
 include src/risk_atlas_nexus/data/knowledge_graph/*.yaml
+include src/risk_atlas_nexus/data/templates/*.json
+include src/risk_atlas_nexus/data/mappings/*.tsv
