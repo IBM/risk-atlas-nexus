@@ -25,7 +25,7 @@ riskgroups:
 risks:
 - id: granite-guardian-harm
   name: Harm
-  description: Content considered universally harmful. This is our general category, which should encompass a variety of risks including those not specifically addressed by the following categories.
+  description: Content considered universally harmful. This is our general category, which should encompass a variety of risks including those not specifically addressed by the following categories: . Social Bias, Profanity, Sexual Content, Unethical Behavior, Violence, Jailbreaking, Groundedness, Answer Relevance, Context Relevance.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=gg-harm
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
