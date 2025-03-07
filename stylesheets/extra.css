@@ -1,0 +1,11 @@
+[data-md-color-scheme="default"] .md-banner a {
+    color: #5e8bde;
+}
+
+.md-header__button.md-logo img {
+    width:3rem;
+    height:3rem;
+}
+[dir=ltr] .md-header__title{
+    margin-left: 0;
+}
