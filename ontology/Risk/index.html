@@ -1296,6 +1296,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1438,6 +1442,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../ai_actor_task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: ai_actor_task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ai_risk/" class="md-nav__link">
         
   
@@ -1464,7 +1490,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: aiActorTask
+    Slot: ai_actor_task
     
   </span>
   
@@ -3005,6 +3031,28 @@
   
   <span class="md-ellipsis">
     Slot: isDeployedBy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isDetectedBy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: isDetectedBy
     
   </span>
   
@@ -4578,6 +4626,8 @@
 <div class="highlight"><pre><span></span><code> classDiagram
     class Risk
     click Risk href &quot;../Risk&quot;
+      RiskConcept &lt;|-- Risk
+        click RiskConcept href &quot;../RiskConcept&quot;
       Entity &lt;|-- Risk
         click Entity href &quot;../Entity&quot;
 
@@ -4609,6 +4659,15 @@
 
       Risk : descriptor
 
+      Risk : detectsRiskConcept
+
+
+
+
+    Risk --&gt; &quot;*&quot; RiskConcept : detectsRiskConcept
+    click RiskConcept href &quot;../RiskConcept&quot;
+
+
       Risk : exactMatch
 
 
@@ -4636,6 +4695,15 @@
 
     Risk --&gt; &quot;0..1&quot; RiskTaxonomy : isDefinedByTaxonomy
     click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
+
+
+      Risk : isDetectedBy
+
+
+
+
+    Risk --&gt; &quot;*&quot; RiskControl : isDetectedBy
+    click RiskControl href &quot;../RiskControl&quot;
 
 
       Risk : isPartOf
@@ -4678,7 +4746,7 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
-<li><strong>Risk</strong></li>
+<li><strong>Risk</strong> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
 </ul>
 </li>
 </ul>
@@ -4742,6 +4810,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>* <br/> <a href="../RiskConcept/">RiskConcept</a></td>
+<td>The property airo:detectsRiskConcept indicates the control used for detecting...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../tag/">tag</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A shost version of the name</td>
@@ -4770,6 +4844,12 @@
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Some explanation about the concern related to an AI risk</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>* <br/> <a href="../RiskControl/">RiskControl</a></td>
+<td>A relationship where a risk, risk source, consequence, or impact is detected ...</td>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
@@ -4887,12 +4967,6 @@
 <td><a href="./">Risk</a></td>
 </tr>
 <tr>
-<td><a href="../RiskControl/">RiskControl</a></td>
-<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
-<td>any_of[range]</td>
-<td><a href="./">Risk</a></td>
-</tr>
-<tr>
 <td><a href="../Action/">Action</a></td>
 <td><a href="../hasRelatedRisk/">hasRelatedRisk</a></td>
 <td>range</td>
@@ -4952,6 +5026,8 @@
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to cause harms</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasRelatedAction</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
@@ -4961,6 +5037,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">broadMatch</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">narrowMatch</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">relatedMatch</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">isPartOf</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isPartOf</span>
@@ -5015,6 +5092,8 @@
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to cause harms</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">isPartOf</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isPartOf</span>
@@ -5204,6 +5283,37 @@
 <span class="w">    </span><span class="nt">any_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskGroup</span>
+<span class="w">  </span><span class="nt">detectsRiskConcept</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The property airo:detectsRiskConcept indicates the control used for</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources,  consequences, and impacts.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">exact_mappings</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">isDetectedBy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk, risk source, consequence, or impact</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is detected by a risk control.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier to this instance of the model element. Example</span>

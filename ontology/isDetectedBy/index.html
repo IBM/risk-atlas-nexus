@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://ibm.github.io/risk-atlas-nexus/ontology/isDistributedBy/">
+        <link rel="canonical" href="https://ibm.github.io/risk-atlas-nexus/ontology/isDetectedBy/">
       
       
-        <link rel="prev" href="../isDetectedBy/">
+        <link rel="prev" href="../isDeployedBy/">
       
       
-        <link rel="next" href="../isImportedBy/">
+        <link rel="next" href="../isDistributedBy/">
       
       
       <link rel="icon" href="../../assets/risk_atlas_nexus_vector.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Slot: isDistributedBy - Risk Atlas Nexus</title>
+        <title>Slot: isDetectedBy - Risk Atlas Nexus</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-isdistributedby" class="md-skip">
+        <a href="#slot-isdetectedby" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: isDistributedBy
+              Slot: isDetectedBy
             
           </span>
         </div>
@@ -3045,28 +3045,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../isDetectedBy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Slot: isDetectedBy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -3083,7 +3061,7 @@
           
   
   <span class="md-ellipsis">
-    Slot: isDistributedBy
+    Slot: isDetectedBy
     
   </span>
   
@@ -3095,7 +3073,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: isDistributedBy
+    Slot: isDetectedBy
     
   </span>
   
@@ -3116,6 +3094,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#applicable-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applicable Classes
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
@@ -3172,6 +3159,28 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isDistributedBy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: isDistributedBy
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4467,6 +4476,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#applicable-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applicable Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
     <span class="md-ellipsis">
       Properties
@@ -4536,14 +4554,46 @@
   
 
 
-<h1 id="slot-isdistributedby">Slot: isDistributedBy</h1>
-<p><em>A relationship indicating that an entity has been distributed by an organization.</em></p>
-<p>URI: <a href="http://research.ibm.com/ontologies/aiont/isDistributedBy">nexus:isDistributedBy</a></p>
+<h1 id="slot-isdetectedby">Slot: isDetectedBy</h1>
+<p><em>A relationship where a risk, risk source, consequence, or impact is detected by a risk control.</em></p>
+<p>URI: <a href="http://research.ibm.com/ontologies/aiont/isDetectedBy">nexus:isDetectedBy</a></p>
 <!-- no inheritance hierarchy -->
 
+<h2 id="applicable-classes">Applicable Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Modifies Slot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
+<td>An umbrella term for refering to risk, risk source, consequence and impact</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RiskGroup/">RiskGroup</a></td>
+<td>A group of AI system related risks that are part of a risk taxonomy</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
+<td>The state of uncertainty associated with an AI system, that has the potential...</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Organization/">Organization</a></li>
+<li>
+<p>Range: <a href="../RiskControl/">RiskControl</a></p>
+</li>
+<li>
+<p>Multivalued: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -4561,23 +4611,28 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>nexus:isDistributedBy</td>
+<td>nexus:isDetectedBy</td>
 </tr>
 <tr>
 <td>native</td>
-<td>nexus:isDistributedBy</td>
+<td>nexus:isDetectedBy</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDistributedBy</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship indicating that an entity has been distributed by an organization.</span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk, risk source, consequence, or impact is detected</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by a risk control.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDistributedBy</span>
-<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Organization</span>
-<span class="nt">inlined_as_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="nt">domain_of</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 </details>
 
@@ -4617,7 +4672,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../isDetectedBy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Slot: isDetectedBy">
+          <a href="../isDeployedBy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Slot: isDeployedBy">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4627,20 +4682,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Slot: isDetectedBy
+                Slot: isDeployedBy
               </div>
             </div>
           </a>
         
         
           
-          <a href="../isImportedBy/" class="md-footer__link md-footer__link--next" aria-label="Next: Slot: isImportedBy">
+          <a href="../isDistributedBy/" class="md-footer__link md-footer__link--next" aria-label="Next: Slot: isDistributedBy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Slot: isImportedBy
+                Slot: isDistributedBy
               </div>
             </div>
             <div class="md-footer__button md-icon">

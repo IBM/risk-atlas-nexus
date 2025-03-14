@@ -1406,6 +1406,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1545,6 +1549,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ontology/ai_actor_task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: ai_actor_task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ontology/ai_risk/" class="md-nav__link">
         
   
@@ -1571,7 +1597,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: aiActorTask
+    Slot: ai_actor_task
     
   </span>
   
@@ -3129,6 +3155,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ontology/isDetectedBy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: isDetectedBy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ontology/isDistributedBy/" class="md-nav__link">
         
   
@@ -4542,7 +4590,7 @@
 <h2 id="add-your-own-taxonomiesrisksactions">Add your own taxonomies/risks/actions</h2>
 <p>You can add your own risk definitions by adding yaml to <a href="https://github.com/ibm/risk-atlas-nexus/src/risk_atlas_nexus/data/knowledge_graph/">knowledge graph data folder</a>. Ensure the entries comply with <a href="../../ontology/">the schema</a></p>
 <h4 id="an-example-addition-of-a-risk">An example addition of a risk</h4>
-<p>If you would like to contribute your own taxonomy files to the project for others to use, add one or more yaml files to the  <a href="https://github.com/ibm/risk-atlas-nexus/src/risk_atlas_nexus/data/knowledge_graph/">knowledge graph data directory</a>.</p>
+<p>If you would like to contribute your own taxonomy files to the project for others to use, add one or more yaml files to the  <a href="https://github.com/IBM/risk-atlas-nexus/tree/main/src/risk_atlas_nexus/data/knowledge_graph/">knowledge graph data directory</a>.</p>
 <p>For example, to add a new risk, create a file with the following sample content.</p>
 <div class="highlight"><pre><span></span><code>- id: my-own-risk
   name: A very risky AI behaviour
@@ -4550,7 +4598,7 @@
   isDefinedByTaxonomy: my-taxonomy
 </code></pre></div>
 <ul>
-<li>Save your new taxonomy files in the <a href="https://github.com/ibm/risk-atlas-nexus/src/risk_atlas_nexus/data/knowledge_graph/">knowledge graph data directory</a>. push your changes and make a PR to the main project.</li>
+<li>Save your new taxonomy files in the <a href="https://github.com/IBM/risk-atlas-nexus/tree/main/src/risk_atlas_nexus/data/knowledge_graph">knowledge graph data directory</a>. push your changes and make a PR to the main project.</li>
 </ul>
 <h3 id="add-your-own-chain-of-thought-templates">Add your own Chain of Thought templates</h3>
 <p>The template used in <code>risk_atlas_nexus/data/templates/cot_examples.json</code> defines the few-shot examples which are use for the <a href="../../examples/notebooks/autoassist_questionnaire/">auto-assist</a> functionality.</p>

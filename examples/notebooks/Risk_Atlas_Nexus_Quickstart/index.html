@@ -932,6 +932,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#14-risk-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Risk Controls
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1459,6 +1468,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1598,6 +1611,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../ontology/ai_actor_task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: ai_actor_task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../ontology/ai_risk/" class="md-nav__link">
         
   
@@ -1624,7 +1659,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: aiActorTask
+    Slot: ai_actor_task
     
   </span>
   
@@ -3182,6 +3217,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../ontology/isDetectedBy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: isDetectedBy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../ontology/isDistributedBy/" class="md-nav__link">
         
   
@@ -4542,6 +4599,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#14-risk-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Risk Controls
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5108,8 +5174,8 @@ from risk_atlas_nexus import RiskAtlasNexus</div>
 <p>You can use the python library methods to quickly explore available risks, relations and actions, as well as to detect potential risks in your usecase.</p>
 <p>Important references:</p>
 <ul>
-<li><a href="../../docs/ontology/index.md">LinkML schema documentation</a></li>
-<li><a href="../../src/risk_atlas_nexus/data/knowledge_graph/README.md">LinkML instance data for an example knowledge graph</a></li>
+<li><a href="../../../docs/ontology/index.md">LinkML schema documentation</a></li>
+<li><a href="../../../src/risk_atlas_nexus/data/knowledge_graph/README.md">LinkML instance data for an example knowledge graph</a></li>
 </ul>
 </div>
 </div>
@@ -5176,7 +5242,7 @@ from risk_atlas_nexus import RiskAtlasNexus</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ran</span> <span class="o">=</span> <span class="n">RiskAtlasNexus</span><span class="p">()</span> <span class="c1"># no args, so default configuration </span>
 
 <span class="n">all_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 437</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 439</span>
 
 <span class="c1"># Let's just print out a few for now</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risks in list "</span><span class="p">)</span> 
@@ -5185,7 +5251,7 @@ from risk_atlas_nexus import RiskAtlasNexus</div>
 <div class="clipboard-copy-txt" id="cell-2">ran = RiskAtlasNexus() # no args, so default configuration 
 
 all_risks = ran.get_all_risks()
-print(f"\n# Total risks available : {len(all_risks)}") # 437
+print(f"\n# Total risks available : {len(all_risks)}") # 439
 
 # Let's just print out a few for now
 print(f"\n# First 2 risks in list ") 
@@ -5227,34 +5293,24 @@ print(all_risks[:2])
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Each risk is returned as a pydantic "Risk" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">toxic_risk</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk_by_id</span><span class="p">(</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
+<span class="n">toxic_risk</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a risk by ID, 'atlas-toxic-output'  "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">toxic_risk</span><span class="p">))</span>
 
 <span class="c1"># Explore related risks</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the related risk ids by ID for 'atlas-toxic-output'"</span><span class="p">)</span> 
-<span class="n">related_risk_ids</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risk_ids_by_risk_id</span><span class="p">(</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">related_risk_ids</span><span class="p">)</span>
-
-<span class="c1"># For related risks, maybe you might want the full risk to be returned, instead of just the ID</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get full entry for each related risks by ID for 'atlas-toxic-output' "</span><span class="p">)</span> 
-<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks_by_risk_id</span><span class="p">(</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
+<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">related_risks</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">
 # Each risk is returned as a pydantic "Risk" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-toxic_risk = ran.get_risk_by_id('atlas-toxic-output')
+toxic_risk = ran.get_risk(id='atlas-toxic-output')
 print(f"\n# Get a risk by ID, 'atlas-toxic-output'  ") 
 print(dict(toxic_risk))
 
 # Explore related risks
-print(f"\n# Get the related risk ids by ID for 'atlas-toxic-output'") 
-related_risk_ids = ran.get_related_risk_ids_by_risk_id('atlas-toxic-output')
-print(related_risk_ids)
-
-# For related risks, maybe you might want the full risk to be returned, instead of just the ID
 print(f"\n# Get full entry for each related risks by ID for 'atlas-toxic-output' ") 
-related_risks = ran.get_related_risks_by_risk_id('atlas-toxic-output')
+related_risks = ran.get_related_risks(id='atlas-toxic-output')
 print(related_risks)
 </div>
 </div>
@@ -5294,22 +5350,22 @@ print(related_risks)
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Explore related risks</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the related risk ids by ID for 'atlas-toxic-output'"</span><span class="p">)</span> 
-<span class="n">related_risk_ids</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risk_ids_by_risk_id</span><span class="p">(</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
+<span class="n">related_risk_ids</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">related_risk_ids</span><span class="p">)</span>
 
 <span class="c1"># For related risks, maybe you might want the full risk to be returned, instead of just the ID</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get full entry for each related risks by ID for 'atlas-toxic-output' "</span><span class="p">)</span> 
-<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks_by_risk_id</span><span class="p">(</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
+<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">related_risks</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-4"># Explore related risks
 print(f"\n# Get the related risk ids by ID for 'atlas-toxic-output'") 
-related_risk_ids = ran.get_related_risk_ids_by_risk_id('atlas-toxic-output')
+related_risk_ids = ran.get_related_risks(id='atlas-toxic-output')
 print(related_risk_ids)
 
 # For related risks, maybe you might want the full risk to be returned, instead of just the ID
 print(f"\n# Get full entry for each related risks by ID for 'atlas-toxic-output' ") 
-related_risks = ran.get_related_risks_by_risk_id('atlas-toxic-output')
+related_risks = ran.get_related_risks(id='atlas-toxic-output')
 print(related_risks)</div>
 </div>
 </div>
@@ -5358,16 +5414,16 @@ print(related_risks)</div>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get an action by ID, 'GV-1.3-001' "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">an_action</span><span class="p">))</span>
 
-
 <span class="c1"># Get any actions for the IBM risk atlas risk toxic output</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the linked actions by ID for 'atlas-toxic-output'"</span><span class="p">)</span> 
-<span class="n">actions_for_toxic_output</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk_actions_by_risk_id</span><span class="p">(</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
+<span class="n">actions_for_toxic_output</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_actions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">actions_for_toxic_output</span><span class="p">)</span> <span class="c1"># 0 expected</span>
 
 <span class="c1"># Hmm, no linked actions recorded.  Let's try the related risks?</span>
 <span class="n">related_actions</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">a_risk</span> <span class="ow">in</span> <span class="n">related_risks</span><span class="p">:</span>
-    <span class="n">related_actions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ran</span><span class="o">.</span><span class="n">get_risk_actions_by_risk_id</span><span class="p">(</span><span class="n">a_risk</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+    <span class="n">related_actions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ran</span><span class="o">.</span><span class="n">get_related_actions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">a_risk</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the actions for the risks which are marked as related to'atlas-toxic-output'"</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">related_actions</span><span class="p">)</span>
@@ -5384,22 +5440,88 @@ an_action = ran.get_action_by_id('GV-1.3-001')
 print(f"\n# Get an action by ID, 'GV-1.3-001' ") 
 print(dict(an_action))
 
-
 # Get any actions for the IBM risk atlas risk toxic output
 print(f"\n# Get the linked actions by ID for 'atlas-toxic-output'") 
-actions_for_toxic_output = ran.get_risk_actions_by_risk_id('atlas-toxic-output')
+actions_for_toxic_output = ran.get_related_actions(id='atlas-toxic-output')
 print(actions_for_toxic_output) # 0 expected
 
 # Hmm, no linked actions recorded.  Let's try the related risks?
 related_actions = []
+related_risks = ran.get_related_risks(id='atlas-toxic-output')
 for a_risk in related_risks:
-    related_actions.extend(ran.get_risk_actions_by_risk_id(a_risk.id))
+    related_actions.extend(ran.get_related_actions(id=a_risk.id))
 
 print(f"\n# Get the actions for the risks which are marked as related to'atlas-toxic-output'") 
 print(related_actions)
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="14-risk-controls">1.4 Risk Controls<a class="anchor-link" href="#14-risk-controls">¶</a></h4><p>Each risk may have the relationship 'isDetectedBy', a relationship where a risk, risk source, consequence, or impact is detected by a risk control.  We can view all risk controls available, or drill down into how specific controls are related to a risk.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_risk_controls</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_risk_controls</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risk controls available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risk_controls</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 212</span>
 
+<span class="c1"># Let's just print out a few for now</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risk controls in list "</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">all_risk_controls</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
 
+<span class="c1"># View an individual risk control by ID. Each risk control is returned as a pydantic "RiskControl" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
+<span class="n">a_risk_control</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk_control</span><span class="p">(</span><span class="s1">'gg-function-call-detection'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a risk control by ID, 'gg-function-call-detection' "</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_risk_control</span><span class="p">))</span>
 
+<span class="c1"># Get any risk controls for the IBM risk atlas risk harmful output</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the linked risk controls by ID for 'granite-function-call"</span><span class="p">)</span> 
+<span class="n">controls_for_granite_function_call</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risk_controls</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'granite-function-call'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">controls_for_granite_function_call</span><span class="p">)</span> <span class="c1"># 1 expected</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6">all_risk_controls = ran.get_all_risk_controls()
+print(f"\n# Total risk controls available : {len(all_risk_controls)}") # 212
+
+# Let's just print out a few for now
+print(f"\n# First 2 risk controls in list ") 
+print(all_risk_controls[:2])
+
+# View an individual risk control by ID. Each risk control is returned as a pydantic "RiskControl" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
+a_risk_control = ran.get_risk_control('gg-function-call-detection')
+print(f"\n# Get a risk control by ID, 'gg-function-call-detection' ") 
+print(dict(a_risk_control))
+
+# Get any risk controls for the IBM risk atlas risk harmful output
+print(f"\n# Get the linked risk controls by ID for 'granite-function-call") 
+controls_for_granite_function_call = ran.get_related_risk_controls(id='granite-function-call')
+print(controls_for_granite_function_call) # 1 expected
 </div>
 </div>
 </div>
@@ -5436,7 +5558,7 @@ print(related_actions)
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5459,7 +5581,7 @@ print(related_actions)
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a taxonomy by ID, 'nist-ai-rmf' "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_taxonomy</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">all_taxonomies = ran.get_all_taxonomies()
+<div class="clipboard-copy-txt" id="cell-7">all_taxonomies = ran.get_all_taxonomies()
 print(f"\n# Total taxonomies available : {len(all_taxonomies)}") # 6
 print(f"\n# Taxonomy IDs available : {[taxonomy.id for taxonomy in all_taxonomies]}") # 5
 
@@ -5471,7 +5593,6 @@ print(all_taxonomies[:2])
 a_taxonomy = ran.get_taxonomy_by_id('nist-ai-rmf')
 print(f"\n# Get a taxonomy by ID, 'nist-ai-rmf' ") 
 print(dict(a_taxonomy))
-
 </div>
 </div>
 </div>
@@ -5498,7 +5619,7 @@ print(dict(a_taxonomy))
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5516,7 +5637,7 @@ print(dict(a_taxonomy))
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risks in NIST risk list "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">all_nist_risks</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">all_nist_risks = ran.get_all_risks(taxonomy='nist-ai-rmf')
+<div class="clipboard-copy-txt" id="cell-8">all_nist_risks = ran.get_all_risks(taxonomy='nist-ai-rmf')
 print(f"\n# Total risks available : {len(all_risks)}") # 437
 print(f"\n# Total NIST risks available : {len(all_nist_risks)}") # 12
 
@@ -5525,51 +5646,6 @@ print(f"\n# First 2 risks in NIST risk list ")
 print(all_nist_risks[:2])</div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="s1">'ai-risk-taxonomy'</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-8">ran.get_all_risks(taxonomy='ai-risk-taxonomy')</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3-usecase-bring-your-own-taxonomiesrisksactions">3. Usecase: Bring Your Own Taxonomies/Risks/Actions<a class="anchor-link" href="#3-usecase-bring-your-own-taxonomiesrisksactions">¶</a></h3><p>You can add your own risk definitions by adding yaml to your own directory and providing the path as an argument to the RAN when creating it.<br/>
-Ensure the risks comply with <a href="../../docs/ontology/index.md">the schema</a></p>
-<h4 id="31-add-your-yaml-definitions">3.1 Add your YAML definitions<a class="anchor-link" href="#31-add-your-yaml-definitions">¶</a></h4><p>Add one or more yaml files to your chosen directory.  For example, to add a new risk, create a file with the following content .</p>
-<pre><code>- id: my-own-risk
-  name: A very risky AI behaviour
-  description: An LLM-based system is often very risky
-  isDefinedByTaxonomy: my-taxonomy
-</code></pre>
 </div>
 </div>
 </div>
@@ -5592,13 +5668,58 @@ Ensure the risks comply with <a href="../../docs/ontology/index.md">the schema</
 </div>
 </clipboard-copy>
 </div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="s1">'ai-risk-taxonomy'</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-9">ran.get_all_risks(taxonomy='ai-risk-taxonomy')</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="3-usecase-bring-your-own-taxonomiesrisksactions">3. Usecase: Bring Your Own Taxonomies/Risks/Actions<a class="anchor-link" href="#3-usecase-bring-your-own-taxonomiesrisksactions">¶</a></h3><p>You can add your own risk definitions by adding yaml to your own directory and providing the path as an argument to the RAN when creating it.<br/>
+Ensure the risks comply with <a href="../../../docs/ontology/index.md">the schema</a></p>
+<h4 id="31-add-your-yaml-definitions">3.1 Add your YAML definitions<a class="anchor-link" href="#31-add-your-yaml-definitions">¶</a></h4><p>Add one or more yaml files to your chosen directory.  For example, to add a new risk, create a file with the following content .</p>
+<pre><code>- id: my-own-risk
+  name: A very risky AI behaviour
+  description: An LLM-based system is often very risky
+  isDefinedByTaxonomy: my-taxonomy
+</code></pre>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Create an instance which extends the graph with your custom definitions</span>
 <span class="n">my_base_dir</span><span class="o">=</span><span class="s1">'&lt;my_user_input_dir_path&gt;'</span>
 <span class="n">my_extended_ran</span> <span class="o">=</span> <span class="n">RiskAtlasNexus</span><span class="p">(</span><span class="n">base_dir</span><span class="o">=</span><span class="n">my_base_dir</span><span class="p">)</span>
 <span class="n">my_extended_risks</span> <span class="o">=</span> <span class="n">my_extended_ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">my_extended_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9"># Create an instance which extends the graph with your custom definitions
+<div class="clipboard-copy-txt" id="cell-10"># Create an instance which extends the graph with your custom definitions
 my_base_dir='<my_user_input_dir_path>'
 my_extended_ran = RiskAtlasNexus(base_dir=my_base_dir)
 my_extended_risks = my_extended_ran.get_all_risks()
@@ -5629,7 +5750,7 @@ print(f"\n# Total risks available : {len(my_extended_risks)}")
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5645,17 +5766,17 @@ print(f"\n# Total risks available : {len(my_extended_risks)}")
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Graph exported to: </span><span class="si">{</span><span class="n">my_output_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
 
 <span class="c1"># Check your risk is in the graph</span>
-<span class="n">my_risk</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk_by_id</span><span class="p">(</span><span class="s1">'my-own-risk'</span><span class="p">)</span>
+<span class="n">my_risk</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'my-own-risk'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get my own risk by ID, 'my-own-risk'  "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">my_risk</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10"># Export the total graph
+<div class="clipboard-copy-txt" id="cell-11"># Export the total graph
 my_output_dir='<my_output_dir_path>'
 my_extended_ran.export(my_output_dir)
 print(f"\n# Graph exported to: {my_output_dir}") 
 
 # Check your risk is in the graph
-my_risk = ran.get_risk_by_id('my-own-risk')
+my_risk = ran.get_risk(id='my-own-risk')
 print(f"\n# Get my own risk by ID, 'my-own-risk'  ") 
 print(dict(my_risk))</my_output_dir_path></div>
 </div>

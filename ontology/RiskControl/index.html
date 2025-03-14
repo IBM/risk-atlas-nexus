@@ -1296,6 +1296,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1438,6 +1442,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../ai_actor_task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: ai_actor_task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ai_risk/" class="md-nav__link">
         
   
@@ -1464,7 +1490,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: aiActorTask
+    Slot: ai_actor_task
     
   </span>
   
@@ -3005,6 +3031,28 @@
   
   <span class="md-ellipsis">
     Slot: isDeployedBy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isDetectedBy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: isDetectedBy
     
   </span>
   
@@ -4592,8 +4640,8 @@
 
 
 
-    RiskControl --&gt; &quot;*&quot; Any : detectsRiskConcept
-    click Any href &quot;../Any&quot;
+    RiskControl --&gt; &quot;*&quot; RiskConcept : detectsRiskConcept
+    click RiskConcept href &quot;../RiskConcept&quot;
 
 
       RiskControl : id
@@ -4631,7 +4679,7 @@
 <tbody>
 <tr>
 <td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
-<td>* <br/> <a href="../Any/">Any</a>&nbsp;or&nbsp;<br /><a href="../Risk/">Risk</a>&nbsp;or&nbsp;<br /><a href="../RiskGroup/">RiskGroup</a></td>
+<td>* <br/> <a href="../RiskConcept/">RiskConcept</a></td>
 <td>The property airo:detectsRiskConcept indicates the control used for detecting...</td>
 <td>direct</td>
 </tr>
@@ -4693,6 +4741,24 @@
 <tr>
 <td><a href="../Container/">Container</a></td>
 <td><a href="../riskcontrols/">riskcontrols</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../RiskGroup/">RiskGroup</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
 </tr>
@@ -4760,7 +4826,7 @@
 <span class="w">  </span><span class="nt">detectsRiskConcept</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The property airo:detectsRiskConcept indicates the control used for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources, consequences, and impacts.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources,  consequences, and impacts.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
 <span class="w">    </span><span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:detectsRiskConcept</span>
@@ -4768,13 +4834,12 @@
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">any_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskGroup</span>
 <span class="w">  </span><span class="nt">isDefinedByTaxonomy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk or a risk group is defined by a risk</span>

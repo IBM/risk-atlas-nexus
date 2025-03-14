@@ -1296,6 +1296,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1438,6 +1442,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../ai_actor_task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: ai_actor_task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ai_risk/" class="md-nav__link">
         
   
@@ -1464,7 +1490,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: aiActorTask
+    Slot: ai_actor_task
     
   </span>
   
@@ -3022,6 +3048,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../isDetectedBy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: isDetectedBy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../isDistributedBy/" class="md-nav__link">
         
   
@@ -3770,6 +3818,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     <span class="md-ellipsis">
       Identifier and Mapping Information
@@ -4470,6 +4527,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     <span class="md-ellipsis">
       Identifier and Mapping Information
@@ -4555,13 +4621,20 @@
 
 
 <h1 id="class-riskconcept">Class: RiskConcept</h1>
-<p><em>An umbrella term for refering to risk, risk source consequence and impact.</em></p>
+<p><em>An umbrella term for refering to risk, risk source, consequence and impact.</em></p>
 <p>URI: <a href="https://w3id.org/airo#RiskConcept">airo:RiskConcept</a></p>
 <div class="highlight"><pre><span></span><code> classDiagram
     class RiskConcept
     click RiskConcept href &quot;../RiskConcept&quot;
       Entity &lt;|-- RiskConcept
         click Entity href &quot;../Entity&quot;
+
+
+      RiskConcept &lt;|-- RiskGroup
+        click RiskGroup href &quot;../RiskGroup&quot;
+      RiskConcept &lt;|-- Risk
+        click Risk href &quot;../Risk&quot;
+
 
       RiskConcept : dateCreated
 
@@ -4570,6 +4643,15 @@
       RiskConcept : description
 
       RiskConcept : id
+
+      RiskConcept : isDetectedBy
+
+
+
+
+    RiskConcept --&gt; &quot;*&quot; RiskControl : isDetectedBy
+    click RiskControl href &quot;../RiskControl&quot;
+
 
       RiskConcept : name
 
@@ -4593,6 +4675,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>* <br/> <a href="../RiskControl/">RiskControl</a></td>
+<td>A relationship where a risk, risk source, consequence, or impact is detected ...</td>
+<td>direct</td>
+</tr>
 <tr>
 <td><a href="../id/">id</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
@@ -4631,6 +4719,31 @@
 </tr>
 </tbody>
 </table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
+<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>range</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../RiskControl/">RiskControl</a></td>
+<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>range</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -4661,9 +4774,11 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An umbrella term for refering to risk, risk source consequence and impact.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An umbrella term for refering to risk, risk source, consequence and impact.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
+<span class="nt">slots</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:RiskConcept</span>
 </code></pre></div>
 </details>
@@ -4671,10 +4786,24 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An umbrella term for refering to risk, risk source consequence and impact.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An umbrella term for refering to risk, risk source, consequence and impact.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
 <span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">isDetectedBy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk, risk source, consequence, or impact</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is detected by a risk control.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier to this instance of the model element. Example</span>
