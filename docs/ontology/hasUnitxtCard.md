@@ -24,8 +24,8 @@ URI: [schema:url](http://schema.org/url)
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Question](Question.md) | An evaluation where a question has to be answered |  no  |
-| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
+| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
 
 
 
@@ -52,7 +52,7 @@ URI: [schema:url](http://schema.org/url)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [schema:url](http://schema.org/url)
 ```yaml
 name: hasUnitxtCard
 description: A relationship to a Unitxt card defining the risk evaluation
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:url
 alias: hasUnitxtCard

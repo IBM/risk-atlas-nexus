@@ -9,7 +9,7 @@ _A relationship where an entity relates to a risk_
 
 
 
-URI: [nexus:hasRelatedRisk](http://research.ibm.com/ontologies/aiont/hasRelatedRisk)
+URI: [nexus:hasRelatedRisk](https://ibm.github.io/risk-atlas-nexus/ontology/hasRelatedRisk)
 
 
 
@@ -23,10 +23,10 @@ URI: [nexus:hasRelatedRisk](http://research.ibm.com/ontologies/aiont/hasRelatedR
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Action](Action.md) | Action to remediate a risk |  no  |
 | [Question](Question.md) | An evaluation where a question has to be answered |  no  |
-| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
+| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
+| [Action](Action.md) | Action to remediate a risk |  no  |
 
 
 
@@ -55,7 +55,7 @@ URI: [nexus:hasRelatedRisk](http://research.ibm.com/ontologies/aiont/hasRelatedR
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -76,7 +76,7 @@ URI: [nexus:hasRelatedRisk](http://research.ibm.com/ontologies/aiont/hasRelatedR
 ```yaml
 name: hasRelatedRisk
 description: A relationship where an entity relates to a risk
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasRelatedRisk
 domain_of:

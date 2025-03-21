@@ -40,7 +40,7 @@ URI: [AiSystemType](AiSystemType.md)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -52,7 +52,7 @@ URI: [AiSystemType](AiSystemType.md)
 <details>
 ```yaml
 name: AiSystemType
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 permissible_values:
   GPAI:

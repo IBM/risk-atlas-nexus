@@ -9,7 +9,7 @@ _A list of AI model families_
 
 
 
-URI: [nexus:aimodelfamilies](http://research.ibm.com/ontologies/aiont/aimodelfamilies)
+URI: [nexus:aimodelfamilies](https://ibm.github.io/risk-atlas-nexus/ontology/aimodelfamilies)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:aimodelfamilies](http://research.ibm.com/ontologies/aiont/aimodelfam
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:aimodelfamilies](http://research.ibm.com/ontologies/aiont/aimodelfam
 ```yaml
 name: aimodelfamilies
 description: A list of AI model families
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: aimodelfamilies
 owner: Container

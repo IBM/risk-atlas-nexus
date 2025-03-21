@@ -9,7 +9,7 @@ _A list of AI risk taxonomies_
 
 
 
-URI: [nexus:taxonomies](http://research.ibm.com/ontologies/aiont/taxonomies)
+URI: [nexus:taxonomies](https://ibm.github.io/risk-atlas-nexus/ontology/taxonomies)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:taxonomies](http://research.ibm.com/ontologies/aiont/taxonomies)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:taxonomies](http://research.ibm.com/ontologies/aiont/taxonomies)
 ```yaml
 name: taxonomies
 description: A list of AI risk taxonomies
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: taxonomies
 owner: Container

@@ -9,7 +9,7 @@ _A description of the architecture of an AI such as 'Decoder-only'._
 
 
 
-URI: [nexus:architecture](http://research.ibm.com/ontologies/aiont/architecture)
+URI: [nexus:architecture](https://ibm.github.io/risk-atlas-nexus/ontology/architecture)
 
 
 
@@ -23,8 +23,8 @@ URI: [nexus:architecture](http://research.ibm.com/ontologies/aiont/architecture)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 | [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 
 
 
@@ -51,7 +51,7 @@ URI: [nexus:architecture](http://research.ibm.com/ontologies/aiont/architecture)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ URI: [nexus:architecture](http://research.ibm.com/ontologies/aiont/architecture)
 ```yaml
 name: architecture
 description: A description of the architecture of an AI such as 'Decoder-only'.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: architecture
 domain_of:

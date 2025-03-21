@@ -52,7 +52,7 @@ URI: [airo:hasTrainingData](https://w3id.org/airo#hasTrainingData)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [airo:hasTrainingData](https://w3id.org/airo#hasTrainingData)
 ```yaml
 name: hasTrainingData
 description: A relationship indicating the datasets an AI model was trained on.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: airo:hasTrainingData
 alias: hasTrainingData

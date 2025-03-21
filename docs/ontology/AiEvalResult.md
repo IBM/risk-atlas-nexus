@@ -104,7 +104,7 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -132,7 +132,7 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
 ```yaml
 name: AiEvalResult
 description: The result of an evaluation for a specific AI model.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - Fact
@@ -149,7 +149,7 @@ class_uri: dqv:QualityMeasurement
 ```yaml
 name: AiEvalResult
 description: The result of an evaluation for a specific AI model.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - Fact
@@ -157,7 +157,7 @@ attributes:
   isResultOf:
     name: isResultOf
     description: A relationship indicating that an entity is the result of an AI evaluation.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: dqv:isMeasurementOf
     alias: isResultOf
@@ -169,7 +169,7 @@ attributes:
   value:
     name: value
     description: Some numeric or string value
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: value
     owner: AiEvalResult
@@ -181,7 +181,7 @@ attributes:
     name: evidence
     description: Evidence provides a source (typical a chunk, paragraph or link) describing
       where some value was found or how it was generated.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: evidence
     owner: AiEvalResult
@@ -192,7 +192,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -205,7 +205,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -216,7 +216,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -227,7 +227,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -238,7 +238,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -250,7 +250,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

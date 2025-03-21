@@ -9,7 +9,7 @@ _An umbrella object that holds the ontology class instances_
 
 
 
-URI: [nexus:Container](http://research.ibm.com/ontologies/aiont/Container)
+URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container)
 
 
 
@@ -193,7 +193,7 @@ URI: [nexus:Container](http://research.ibm.com/ontologies/aiont/Container)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -221,12 +221,12 @@ URI: [nexus:Container](http://research.ibm.com/ontologies/aiont/Container)
 ```yaml
 name: Container
 description: An umbrella object that holds the ontology class instances
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 attributes:
   organizations:
     name: organizations
     description: A list of organizations
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -237,7 +237,7 @@ attributes:
   licenses:
     name: licenses
     description: A list of licenses
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -248,7 +248,7 @@ attributes:
   modalities:
     name: modalities
     description: A list of AI modalities
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -259,7 +259,7 @@ attributes:
   aitasks:
     name: aitasks
     description: A list of AI tasks
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -270,7 +270,7 @@ attributes:
   documents:
     name: documents
     description: A list of documents
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -281,7 +281,7 @@ attributes:
   datasets:
     name: datasets
     description: A list of data sets
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -292,7 +292,7 @@ attributes:
   taxonomies:
     name: taxonomies
     description: A list of AI risk taxonomies
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -303,7 +303,7 @@ attributes:
   riskgroups:
     name: riskgroups
     description: A list of AI risk groups
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -314,7 +314,7 @@ attributes:
   risks:
     name: risks
     description: A list of AI risks
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -325,7 +325,7 @@ attributes:
   riskcontrols:
     name: riskcontrols
     description: A list of AI risk controls
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -336,7 +336,7 @@ attributes:
   actions:
     name: actions
     description: A list of risk related actions
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -347,7 +347,7 @@ attributes:
   evaluations:
     name: evaluations
     description: A list of AI evaluation methods
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -358,7 +358,7 @@ attributes:
   aimodelfamilies:
     name: aimodelfamilies
     description: A list of AI model families
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -369,7 +369,7 @@ attributes:
   aimodels:
     name: aimodels
     description: A list of AI models
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
     - Container
@@ -388,12 +388,12 @@ tree_root: true
 ```yaml
 name: Container
 description: An umbrella object that holds the ontology class instances
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 attributes:
   organizations:
     name: organizations
     description: A list of organizations
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: organizations
     owner: Container
@@ -406,7 +406,7 @@ attributes:
   licenses:
     name: licenses
     description: A list of licenses
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: licenses
     owner: Container
@@ -419,7 +419,7 @@ attributes:
   modalities:
     name: modalities
     description: A list of AI modalities
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: modalities
     owner: Container
@@ -432,7 +432,7 @@ attributes:
   aitasks:
     name: aitasks
     description: A list of AI tasks
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: aitasks
     owner: Container
@@ -445,7 +445,7 @@ attributes:
   documents:
     name: documents
     description: A list of documents
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: documents
     owner: Container
@@ -458,7 +458,7 @@ attributes:
   datasets:
     name: datasets
     description: A list of data sets
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: datasets
     owner: Container
@@ -471,7 +471,7 @@ attributes:
   taxonomies:
     name: taxonomies
     description: A list of AI risk taxonomies
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: taxonomies
     owner: Container
@@ -484,7 +484,7 @@ attributes:
   riskgroups:
     name: riskgroups
     description: A list of AI risk groups
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: riskgroups
     owner: Container
@@ -497,7 +497,7 @@ attributes:
   risks:
     name: risks
     description: A list of AI risks
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: risks
     owner: Container
@@ -510,7 +510,7 @@ attributes:
   riskcontrols:
     name: riskcontrols
     description: A list of AI risk controls
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: riskcontrols
     owner: Container
@@ -523,7 +523,7 @@ attributes:
   actions:
     name: actions
     description: A list of risk related actions
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: actions
     owner: Container
@@ -536,7 +536,7 @@ attributes:
   evaluations:
     name: evaluations
     description: A list of AI evaluation methods
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: evaluations
     owner: Container
@@ -549,7 +549,7 @@ attributes:
   aimodelfamilies:
     name: aimodelfamilies
     description: A list of AI model families
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: aimodelfamilies
     owner: Container
@@ -562,7 +562,7 @@ attributes:
   aimodels:
     name: aimodels
     description: A list of AI models
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: aimodels
     owner: Container

@@ -23,8 +23,8 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 | [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 | [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
 | [Action](Action.md) | Action to remediate a risk |  no  |
 
@@ -53,7 +53,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 ```yaml
 name: isDefinedByTaxonomy
 description: A relationship where a risk or a risk group is defined by a risk taxonomy
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:isPartOf
 alias: isDefinedByTaxonomy

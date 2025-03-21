@@ -9,7 +9,7 @@ _A base AI Model class. No assumption about the type (SVM, LLM, etc.). Subclasse
 
 
 
-URI: [nexus:AiModel](http://research.ibm.com/ontologies/aiont/AiModel)
+URI: [nexus:AiModel](https://ibm.github.io/risk-atlas-nexus/ontology/AiModel)
 
 
 
@@ -170,7 +170,7 @@ URI: [nexus:AiModel](http://research.ibm.com/ontologies/aiont/AiModel)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -199,7 +199,7 @@ URI: [nexus:AiModel](http://research.ibm.com/ontologies/aiont/AiModel)
 name: AiModel
 description: A base AI Model class. No assumption about the type (SVM, LLM, etc.).
   Subclassed by model types (see LargeLanguageModel).
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: BaseAi
 slots:
 - hasEvaluation
@@ -219,13 +219,13 @@ slots:
 name: AiModel
 description: A base AI Model class. No assumption about the type (SVM, LLM, etc.).
   Subclassed by model types (see LargeLanguageModel).
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: BaseAi
 attributes:
   hasEvaluation:
     name: hasEvaluation
     description: A relationship indicating that an entity has an AI evaluation result.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: dqv:hasQualityMeasurement
     alias: hasEvaluation
@@ -239,7 +239,7 @@ attributes:
   architecture:
     name: architecture
     description: A description of the architecture of an AI such as 'Decoder-only'.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: architecture
     owner: AiModel
@@ -249,7 +249,7 @@ attributes:
   gpu_hours:
     name: gpu_hours
     description: GPU consumption in terms of hours
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: gpu_hours
     owner: AiModel
@@ -260,7 +260,7 @@ attributes:
   power_consumption_w:
     name: power_consumption_w
     description: power consumption in Watts
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: power_consumption_w
     owner: AiModel
@@ -272,7 +272,7 @@ attributes:
     name: carbon_emitted
     description: The number of tons of carbon dioxide equivalent that are emitted
       during training
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: carbon_emitted
     owner: AiModel
@@ -287,7 +287,7 @@ attributes:
     name: hasRiskControl
     description: Indicates the control measures associated with a system or component
       to modify risks.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasRiskControl
     alias: hasRiskControl
@@ -299,7 +299,7 @@ attributes:
   producer:
     name: producer
     description: A relationship to the Organization instance which produces this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: producer
     owner: AiModel
@@ -309,7 +309,7 @@ attributes:
   hasModelCard:
     name: hasModelCard
     description: A relationship to model card references.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasModelCard
     owner: AiModel
@@ -322,7 +322,7 @@ attributes:
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
     alias: hasDocumentation
@@ -340,7 +340,7 @@ attributes:
   hasLicense:
     name: hasLicense
     description: Indicates licenses associated with a resource
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
     alias: hasLicense
@@ -354,7 +354,7 @@ attributes:
   performsTask:
     name: performsTask
     description: relationship indicating the AI tasks an AI model can perform.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: performsTask
     owner: AiModel
@@ -367,7 +367,7 @@ attributes:
     name: isProvidedBy
     description: A relationship indicating the AI model has been provided by an AI
       model provider.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isProvidedBy
     alias: isProvidedBy
@@ -379,7 +379,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -392,7 +392,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -403,7 +403,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -414,7 +414,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -425,7 +425,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -437,7 +437,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

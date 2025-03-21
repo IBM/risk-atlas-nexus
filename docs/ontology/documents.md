@@ -9,7 +9,7 @@ _A list of documents_
 
 
 
-URI: [nexus:documents](http://research.ibm.com/ontologies/aiont/documents)
+URI: [nexus:documents](https://ibm.github.io/risk-atlas-nexus/ontology/documents)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:documents](http://research.ibm.com/ontologies/aiont/documents)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:documents](http://research.ibm.com/ontologies/aiont/documents)
 ```yaml
 name: documents
 description: A list of documents
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: documents
 owner: Container

@@ -9,7 +9,7 @@ _Some explanation about the concern related to an AI risk_
 
 
 
-URI: [nexus:concern](http://research.ibm.com/ontologies/aiont/concern)
+URI: [nexus:concern](https://ibm.github.io/risk-atlas-nexus/ontology/concern)
 
 
 
@@ -50,7 +50,7 @@ URI: [nexus:concern](http://research.ibm.com/ontologies/aiont/concern)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ URI: [nexus:concern](http://research.ibm.com/ontologies/aiont/concern)
 ```yaml
 name: concern
 description: Some explanation about the concern related to an AI risk
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: concern
 owner: Risk

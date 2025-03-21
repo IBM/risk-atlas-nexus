@@ -9,7 +9,7 @@ _A shost version of the name_
 
 
 
-URI: [nexus:tag](http://research.ibm.com/ontologies/aiont/tag)
+URI: [nexus:tag](https://ibm.github.io/risk-atlas-nexus/ontology/tag)
 
 
 
@@ -50,7 +50,7 @@ URI: [nexus:tag](http://research.ibm.com/ontologies/aiont/tag)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ URI: [nexus:tag](http://research.ibm.com/ontologies/aiont/tag)
 ```yaml
 name: tag
 description: A shost version of the name
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: tag
 owner: Risk

@@ -9,7 +9,7 @@ _A relationship from a granting entity such as an Organization to a License inst
 
 
 
-URI: [nexus:grants_license](http://research.ibm.com/ontologies/aiont/grants_license)
+URI: [nexus:grants_license](https://ibm.github.io/risk-atlas-nexus/ontology/grants_license)
 
 
 
@@ -23,8 +23,8 @@ URI: [nexus:grants_license](http://research.ibm.com/ontologies/aiont/grants_lice
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiProvider](AiProvider.md) | A provider under the AI Act is defined by Article 3(3) as a natural or legal ... |  no  |
 | [AiOffice](AiOffice.md) | The EU AI Office (https://digital-strategy |  no  |
+| [AiProvider](AiProvider.md) | A provider under the AI Act is defined by Article 3(3) as a natural or legal ... |  no  |
 | [Organization](Organization.md) | Any organizational entity such as a corporation, educational institution, con... |  no  |
 
 
@@ -52,7 +52,7 @@ URI: [nexus:grants_license](http://research.ibm.com/ontologies/aiont/grants_lice
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ URI: [nexus:grants_license](http://research.ibm.com/ontologies/aiont/grants_lice
 name: grants_license
 description: A relationship from a granting entity such as an Organization to a License
   instance.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: grants_license
 domain_of:

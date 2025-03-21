@@ -1,4 +1,4 @@
-id: http://research.ibm.com/ontologies/aiont/ai_risk
+id: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
 name: ai_risk
 description:
   Vocabulary describing AI risks as used by IBM Risk Atlas
@@ -10,7 +10,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: http://research.ibm.com/ontologies/aiont/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
 default_range: string
 default_prefix: nexus
 

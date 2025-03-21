@@ -9,7 +9,7 @@ _relationship indicating the AI tasks an AI model can perform._
 
 
 
-URI: [nexus:performsTask](http://research.ibm.com/ontologies/aiont/performsTask)
+URI: [nexus:performsTask](https://ibm.github.io/risk-atlas-nexus/ontology/performsTask)
 
 
 
@@ -23,11 +23,11 @@ URI: [nexus:performsTask](http://research.ibm.com/ontologies/aiont/performsTask)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
 | [BaseAi](BaseAi.md) | Any type of AI, be it a LLM, RL agent, SVM, etc |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
+| [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
+| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
 
 
 
@@ -56,7 +56,7 @@ URI: [nexus:performsTask](http://research.ibm.com/ontologies/aiont/performsTask)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -77,7 +77,7 @@ URI: [nexus:performsTask](http://research.ibm.com/ontologies/aiont/performsTask)
 ```yaml
 name: performsTask
 description: relationship indicating the AI tasks an AI model can perform.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: performsTask
 domain_of:

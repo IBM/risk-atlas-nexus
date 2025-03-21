@@ -9,7 +9,7 @@ _GPU consumption in terms of hours_
 
 
 
-URI: [nexus:gpu_hours](http://research.ibm.com/ontologies/aiont/gpu_hours)
+URI: [nexus:gpu_hours](https://ibm.github.io/risk-atlas-nexus/ontology/gpu_hours)
 
 
 
@@ -23,8 +23,8 @@ URI: [nexus:gpu_hours](http://research.ibm.com/ontologies/aiont/gpu_hours)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 | [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 
 
 
@@ -53,7 +53,7 @@ URI: [nexus:gpu_hours](http://research.ibm.com/ontologies/aiont/gpu_hours)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ URI: [nexus:gpu_hours](http://research.ibm.com/ontologies/aiont/gpu_hours)
 ```yaml
 name: gpu_hours
 description: GPU consumption in terms of hours
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: gpu_hours
 domain_of:

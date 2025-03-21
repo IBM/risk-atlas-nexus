@@ -158,7 +158,7 @@ URI: [airo:AISystem](https://w3id.org/airo#AISystem)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -187,7 +187,7 @@ URI: [airo:AISystem](https://w3id.org/airo#AISystem)
 name: AiSystem
 description: A compound AI System composed of one or more AI capablities. ChatGPT
   is an example of an AI system which deploys multiple GPT AI models.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: BaseAi
 slots:
 - hasEuAiSystemType
@@ -210,7 +210,7 @@ class_uri: airo:AISystem
 name: AiSystem
 description: A compound AI System composed of one or more AI capablities. ChatGPT
   is an example of an AI system which deploys multiple GPT AI models.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: BaseAi
 slot_usage:
   isComposedOf:
@@ -222,7 +222,7 @@ attributes:
   hasEuAiSystemType:
     name: hasEuAiSystemType
     description: The type of system as defined by the EU AI Act.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasEuAiSystemType
     owner: AiSystem
@@ -232,7 +232,7 @@ attributes:
   hasEuRiskCategory:
     name: hasEuRiskCategory
     description: The risk category of an AI system as defined by the EU AI Act.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasEuRiskCategory
     owner: AiSystem
@@ -242,7 +242,7 @@ attributes:
   producer:
     name: producer
     description: A relationship to the Organization instance which produces this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: producer
     owner: AiSystem
@@ -252,7 +252,7 @@ attributes:
   hasModelCard:
     name: hasModelCard
     description: A relationship to model card references.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasModelCard
     owner: AiSystem
@@ -265,7 +265,7 @@ attributes:
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
     alias: hasDocumentation
@@ -283,7 +283,7 @@ attributes:
   hasLicense:
     name: hasLicense
     description: Indicates licenses associated with a resource
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
     alias: hasLicense
@@ -297,7 +297,7 @@ attributes:
   performsTask:
     name: performsTask
     description: relationship indicating the AI tasks an AI model can perform.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: performsTask
     owner: AiSystem
@@ -310,7 +310,7 @@ attributes:
     name: isProvidedBy
     description: A relationship indicating the AI model has been provided by an AI
       model provider.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isProvidedBy
     alias: isProvidedBy
@@ -322,7 +322,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -335,7 +335,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -346,7 +346,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -357,7 +357,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -368,7 +368,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -380,7 +380,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

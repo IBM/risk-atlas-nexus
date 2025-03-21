@@ -9,7 +9,7 @@ _The number of tons of carbon dioxide equivalent that are emitted during trainin
 
 
 
-URI: [nexus:carbon_emitted](http://research.ibm.com/ontologies/aiont/carbon_emitted)
+URI: [nexus:carbon_emitted](https://ibm.github.io/risk-atlas-nexus/ontology/carbon_emitted)
 
 
 
@@ -23,8 +23,8 @@ URI: [nexus:carbon_emitted](http://research.ibm.com/ontologies/aiont/carbon_emit
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 | [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 
 
 
@@ -53,7 +53,7 @@ URI: [nexus:carbon_emitted](http://research.ibm.com/ontologies/aiont/carbon_emit
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ URI: [nexus:carbon_emitted](http://research.ibm.com/ontologies/aiont/carbon_emit
 name: carbon_emitted
 description: The number of tons of carbon dioxide equivalent that are emitted during
   training
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: carbon_emitted
 domain_of:

@@ -9,7 +9,7 @@ _Annotates whether an AI risk is a traditional risk, specific to or amplified by
 
 
 
-URI: [nexus:descriptor](http://research.ibm.com/ontologies/aiont/descriptor)
+URI: [nexus:descriptor](https://ibm.github.io/risk-atlas-nexus/ontology/descriptor)
 
 
 
@@ -50,7 +50,7 @@ URI: [nexus:descriptor](http://research.ibm.com/ontologies/aiont/descriptor)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ URI: [nexus:descriptor](http://research.ibm.com/ontologies/aiont/descriptor)
 name: descriptor
 description: Annotates whether an AI risk is a traditional risk, specific to or amplified
   by AI.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: descriptor
 owner: Risk

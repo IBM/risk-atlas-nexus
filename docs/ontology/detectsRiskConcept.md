@@ -9,7 +9,7 @@ _The property airo:detectsRiskConcept indicates the control used for detecting r
 
 
 
-URI: [nexus:detectsRiskConcept](http://research.ibm.com/ontologies/aiont/detectsRiskConcept)
+URI: [nexus:detectsRiskConcept](https://ibm.github.io/risk-atlas-nexus/ontology/detectsRiskConcept)
 
 
 
@@ -23,8 +23,8 @@ URI: [nexus:detectsRiskConcept](http://research.ibm.com/ontologies/aiont/detects
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 | [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 
 
 
@@ -53,7 +53,7 @@ URI: [nexus:detectsRiskConcept](http://research.ibm.com/ontologies/aiont/detects
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -76,7 +76,7 @@ URI: [nexus:detectsRiskConcept](http://research.ibm.com/ontologies/aiont/detects
 name: detectsRiskConcept
 description: The property airo:detectsRiskConcept indicates the control used for detecting
   risks, risk sources,  consequences, and impacts.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 exact_mappings:
 - airo:detectsRiskConcept
 rank: 1000

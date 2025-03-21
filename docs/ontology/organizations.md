@@ -9,7 +9,7 @@ _A list of organizations_
 
 
 
-URI: [nexus:organizations](http://research.ibm.com/ontologies/aiont/organizations)
+URI: [nexus:organizations](https://ibm.github.io/risk-atlas-nexus/ontology/organizations)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:organizations](http://research.ibm.com/ontologies/aiont/organization
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:organizations](http://research.ibm.com/ontologies/aiont/organization
 ```yaml
 name: organizations
 description: A list of organizations
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: organizations
 owner: Container

@@ -64,7 +64,7 @@ URI: [schema:Statement](http://schema.org/Statement)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -93,7 +93,7 @@ URI: [schema:Statement](http://schema.org/Statement)
 name: Fact
 description: A fact about something, for example the result of a measurement. In addition
   to the value, evidence is provided.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 abstract: true
 slots:
 - value
@@ -110,13 +110,13 @@ class_uri: schema:Statement
 name: Fact
 description: A fact about something, for example the result of a measurement. In addition
   to the value, evidence is provided.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 abstract: true
 attributes:
   value:
     name: value
     description: Some numeric or string value
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: value
     owner: Fact
@@ -128,7 +128,7 @@ attributes:
     name: evidence
     description: Evidence provides a source (typical a chunk, paragraph or link) describing
       where some value was found or how it was generated.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: evidence
     owner: Fact

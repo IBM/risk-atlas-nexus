@@ -9,7 +9,7 @@ _relationship indicating data preprocessing steps performed on training data set
 
 
 
-URI: [nexus:training_data_preprocessing](http://research.ibm.com/ontologies/aiont/training_data_preprocessing)
+URI: [nexus:training_data_preprocessing](https://ibm.github.io/risk-atlas-nexus/ontology/training_data_preprocessing)
 
 
 
@@ -43,7 +43,7 @@ URI: [nexus:training_data_preprocessing](http://research.ibm.com/ontologies/aion
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -65,7 +65,7 @@ URI: [nexus:training_data_preprocessing](http://research.ibm.com/ontologies/aion
 name: training_data_preprocessing
 description: relationship indicating data preprocessing steps performed on training
   data sets to ensure high quality training data.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: training_data_preprocessing
 range: DataPreprocessing

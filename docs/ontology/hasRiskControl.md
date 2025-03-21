@@ -23,8 +23,8 @@ URI: [airo:hasRiskControl](https://w3id.org/airo#hasRiskControl)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 | [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 
 
 
@@ -53,7 +53,7 @@ URI: [airo:hasRiskControl](https://w3id.org/airo#hasRiskControl)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ URI: [airo:hasRiskControl](https://w3id.org/airo#hasRiskControl)
 name: hasRiskControl
 description: Indicates the control measures associated with a system or component
   to modify risks.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: airo:hasRiskControl
 alias: hasRiskControl

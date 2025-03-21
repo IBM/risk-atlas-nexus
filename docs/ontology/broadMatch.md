@@ -53,7 +53,7 @@ URI: [skos:broadMatch](http://www.w3.org/2004/02/skos/core/broadMatch)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -76,7 +76,7 @@ name: broadMatch
 description: The property is used to state a hierarchical mapping link between two
   concepts, indicating that the concept linked to, is a broader concept than the originating
   concept.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: skos:broadMatch
 alias: broadMatch

@@ -53,7 +53,7 @@ URI: [skos:relatedMatch](http://www.w3.org/2004/02/skos/core/relatedMatch)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ URI: [skos:relatedMatch](http://www.w3.org/2004/02/skos/core/relatedMatch)
 name: relatedMatch
 description: The property skos:relatedMatch is used to state an associative mapping
   link between two concepts.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: skos:relatedMatch
 alias: relatedMatch

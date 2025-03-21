@@ -1,4 +1,4 @@
-id: http://research.ibm.com/ontologies/aiont/eu_ai_act
+id: https://ibm.github.io/risk-atlas-nexus/ontology/eu_ai_act
 name: eu_ai_act
 description:
   Vocabulary pertaining to the EU AI Act
@@ -9,7 +9,7 @@ default_curi_maps:
   - semweb_context
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: http://research.ibm.com/ontologies/aiont/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
 
 default_range: string
 default_prefix: nexus

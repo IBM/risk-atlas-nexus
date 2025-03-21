@@ -9,7 +9,7 @@ _A relationship indicating that an entity has been distributed by an organizatio
 
 
 
-URI: [nexus:isDistributedBy](http://research.ibm.com/ontologies/aiont/isDistributedBy)
+URI: [nexus:isDistributedBy](https://ibm.github.io/risk-atlas-nexus/ontology/isDistributedBy)
 
 
 
@@ -41,7 +41,7 @@ URI: [nexus:isDistributedBy](http://research.ibm.com/ontologies/aiont/isDistribu
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -62,7 +62,7 @@ URI: [nexus:isDistributedBy](http://research.ibm.com/ontologies/aiont/isDistribu
 ```yaml
 name: isDistributedBy
 description: A relationship indicating that an entity has been distributed by an organization.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: isDistributedBy
 range: Organization

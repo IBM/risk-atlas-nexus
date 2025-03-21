@@ -1,11 +1,11 @@
-id: http://research.ibm.com/ontologies/aiont/energy
+id: https://ibm.github.io/risk-atlas-nexus/ontology/energy
 name: energy
 description:
   Defines vocabularies relating to energy consumptionimports:
   - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: http://research.ibm.com/ontologies/aiont/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
 
 default_range: string
 default_prefix: nexus

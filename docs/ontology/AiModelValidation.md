@@ -9,7 +9,7 @@ _AI model validation steps that have been performed after the model training to 
 
 
 
-URI: [nexus:AiModelValidation](http://research.ibm.com/ontologies/aiont/AiModelValidation)
+URI: [nexus:AiModelValidation](https://ibm.github.io/risk-atlas-nexus/ontology/AiModelValidation)
 
 
 
@@ -79,7 +79,7 @@ URI: [nexus:AiModelValidation](http://research.ibm.com/ontologies/aiont/AiModelV
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -108,7 +108,7 @@ URI: [nexus:AiModelValidation](http://research.ibm.com/ontologies/aiont/AiModelV
 name: AiModelValidation
 description: AI model validation steps that have been performed after the model training
   to ensure high AI model quality.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: AiLifecyclePhase
 
 ```
@@ -121,14 +121,14 @@ is_a: AiLifecyclePhase
 name: AiModelValidation
 description: AI model validation steps that have been performed after the model training
   to ensure high AI model quality.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: AiLifecyclePhase
 attributes:
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -141,7 +141,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -152,7 +152,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -163,7 +163,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -174,7 +174,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -186,7 +186,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

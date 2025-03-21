@@ -217,7 +217,7 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -246,7 +246,7 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 name: Risk
 description: The state of uncertainty associated with an AI system, that has the potential
   to cause harms
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - RiskConcept
@@ -269,14 +269,14 @@ attributes:
   tag:
     name: tag
     description: A shost version of the name
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     domain_of:
     - Risk
   type:
     name: type
     description: Annotation whether an AI risk occurs at input or output or is non-technical.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     domain_of:
     - Risk
@@ -284,7 +284,7 @@ attributes:
     name: phase
     description: Annotation whether an AI risk shows specifically during the training-tuning
       or inference phase.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     domain_of:
     - Risk
@@ -292,14 +292,14 @@ attributes:
     name: descriptor
     description: Annotates whether an AI risk is a traditional risk, specific to or
       amplified by AI.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     domain_of:
     - Risk
   concern:
     name: concern
     description: Some explanation about the concern related to an AI risk
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     domain_of:
     - Risk
@@ -315,7 +315,7 @@ class_uri: airo:Risk
 name: Risk
 description: The state of uncertainty associated with an AI system, that has the potential
   to cause harms
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - RiskConcept
@@ -328,7 +328,7 @@ attributes:
   tag:
     name: tag
     description: A shost version of the name
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     alias: tag
     owner: Risk
@@ -338,7 +338,7 @@ attributes:
   type:
     name: type
     description: Annotation whether an AI risk occurs at input or output or is non-technical.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     alias: type
     owner: Risk
@@ -349,7 +349,7 @@ attributes:
     name: phase
     description: Annotation whether an AI risk shows specifically during the training-tuning
       or inference phase.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     alias: phase
     owner: Risk
@@ -360,7 +360,7 @@ attributes:
     name: descriptor
     description: Annotates whether an AI risk is a traditional risk, specific to or
       amplified by AI.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     alias: descriptor
     owner: Risk
@@ -370,7 +370,7 @@ attributes:
   concern:
     name: concern
     description: Some explanation about the concern related to an AI risk
-    from_schema: http://research.ibm.com/ontologies/aiont/ai_risk
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
     rank: 1000
     alias: concern
     owner: Risk
@@ -380,7 +380,7 @@ attributes:
   hasRelatedAction:
     name: hasRelatedAction
     description: A relationship where an entity relates to an action
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasRelatedAction
     owner: Risk
@@ -393,7 +393,7 @@ attributes:
     name: isDefinedByTaxonomy
     description: A relationship where a risk or a risk group is defined by a risk
       taxonomy
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
     alias: isDefinedByTaxonomy
@@ -407,7 +407,7 @@ attributes:
   isPartOf:
     name: isPartOf
     description: A relationship where a risk is part of a risk group
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
     alias: isPartOf
@@ -420,7 +420,7 @@ attributes:
     name: closeMatch
     description: The property is used to link two concepts that are sufficiently similar
       that they can be used interchangeably in some information retrieval applications.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
     alias: closeMatch
@@ -439,7 +439,7 @@ attributes:
     description: The property is used to link two concepts, indicating a high degree
       of confidence that the concepts can be used interchangeably across a wide range
       of information retrieval applications
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
     alias: exactMatch
@@ -458,7 +458,7 @@ attributes:
     description: The property is used to state a hierarchical mapping link between
       two concepts, indicating that the concept linked to, is a broader concept than
       the originating concept.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broadMatch
@@ -477,7 +477,7 @@ attributes:
     description: The property is used to state a hierarchical mapping link between
       two concepts, indicating that the concept linked to, is a narrower concept than
       the originating concept.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
     alias: narrowMatch
@@ -495,7 +495,7 @@ attributes:
     name: relatedMatch
     description: The property skos:relatedMatch is used to state an associative mapping
       link between two concepts.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
     alias: relatedMatch
@@ -513,7 +513,7 @@ attributes:
     name: detectsRiskConcept
     description: The property airo:detectsRiskConcept indicates the control used for
       detecting risks, risk sources,  consequences, and impacts.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     exact_mappings:
     - airo:detectsRiskConcept
     rank: 1000
@@ -530,7 +530,7 @@ attributes:
     name: isDetectedBy
     description: A relationship where a risk, risk source, consequence, or impact
       is detected by a risk control.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: isDetectedBy
     owner: Risk
@@ -544,7 +544,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -557,7 +557,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -568,7 +568,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -579,7 +579,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -590,7 +590,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -602,7 +602,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

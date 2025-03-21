@@ -51,7 +51,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 ```yaml
 name: isPartOf
 description: A relationship where an entity is part of another entity
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:isPartOf
 alias: isPartOf

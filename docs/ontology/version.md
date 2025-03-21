@@ -23,8 +23,8 @@ URI: [schema:version](http://schema.org/version)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [License](License.md) | The general notion of a license which defines terms and grants permissions to... |  no  |
 | [RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |  no  |
+| [License](License.md) | The general notion of a license which defines terms and grants permissions to... |  no  |
 
 
 
@@ -51,7 +51,7 @@ URI: [schema:version](http://schema.org/version)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ URI: [schema:version](http://schema.org/version)
 ```yaml
 name: version
 description: The version of the entity embodied by a specified resource.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:version
 alias: version

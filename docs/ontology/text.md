@@ -9,7 +9,7 @@ _The question itself_
 
 
 
-URI: [nexus:text](http://research.ibm.com/ontologies/aiont/text)
+URI: [nexus:text](https://ibm.github.io/risk-atlas-nexus/ontology/text)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:text](http://research.ibm.com/ontologies/aiont/text)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:text](http://research.ibm.com/ontologies/aiont/text)
 ```yaml
 name: text
 description: The question itself
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: text
 owner: Question

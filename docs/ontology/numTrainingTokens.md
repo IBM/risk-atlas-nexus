@@ -9,7 +9,7 @@ _The number of tokens a AI model was trained on._
 
 
 
-URI: [nexus:numTrainingTokens](http://research.ibm.com/ontologies/aiont/numTrainingTokens)
+URI: [nexus:numTrainingTokens](https://ibm.github.io/risk-atlas-nexus/ontology/numTrainingTokens)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:numTrainingTokens](http://research.ibm.com/ontologies/aiont/numTrain
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:numTrainingTokens](http://research.ibm.com/ontologies/aiont/numTrain
 ```yaml
 name: numTrainingTokens
 description: The number of tokens a AI model was trained on.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: numTrainingTokens
 domain_of:

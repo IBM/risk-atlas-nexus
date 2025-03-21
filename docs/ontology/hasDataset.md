@@ -9,7 +9,7 @@ _A relationship to datasets that are used._
 
 
 
-URI: [nexus:hasDataset](http://research.ibm.com/ontologies/aiont/hasDataset)
+URI: [nexus:hasDataset](https://ibm.github.io/risk-atlas-nexus/ontology/hasDataset)
 
 
 
@@ -24,8 +24,8 @@ URI: [nexus:hasDataset](http://research.ibm.com/ontologies/aiont/hasDataset)
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Question](Question.md) | An evaluation where a question has to be answered |  no  |
-| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
+| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
 
 
 
@@ -54,7 +54,7 @@ URI: [nexus:hasDataset](http://research.ibm.com/ontologies/aiont/hasDataset)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ URI: [nexus:hasDataset](http://research.ibm.com/ontologies/aiont/hasDataset)
 ```yaml
 name: hasDataset
 description: A relationship to datasets that are used.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDataset
 domain_of:

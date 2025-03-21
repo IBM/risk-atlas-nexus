@@ -9,7 +9,7 @@ _A relationship to the Organization instance which produces this instance._
 
 
 
-URI: [nexus:producer](http://research.ibm.com/ontologies/aiont/producer)
+URI: [nexus:producer](https://ibm.github.io/risk-atlas-nexus/ontology/producer)
 
 
 
@@ -23,11 +23,11 @@ URI: [nexus:producer](http://research.ibm.com/ontologies/aiont/producer)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
 | [BaseAi](BaseAi.md) | Any type of AI, be it a LLM, RL agent, SVM, etc |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
+| [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
+| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
 
 
 
@@ -54,7 +54,7 @@ URI: [nexus:producer](http://research.ibm.com/ontologies/aiont/producer)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ URI: [nexus:producer](http://research.ibm.com/ontologies/aiont/producer)
 ```yaml
 name: producer
 description: A relationship to the Organization instance which produces this instance.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: producer
 domain_of:

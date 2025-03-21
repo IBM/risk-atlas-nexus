@@ -9,7 +9,7 @@ _A list of risk related actions_
 
 
 
-URI: [nexus:actions](http://research.ibm.com/ontologies/aiont/actions)
+URI: [nexus:actions](https://ibm.github.io/risk-atlas-nexus/ontology/actions)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:actions](http://research.ibm.com/ontologies/aiont/actions)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:actions](http://research.ibm.com/ontologies/aiont/actions)
 ```yaml
 name: actions
 description: A list of risk related actions
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: actions
 owner: Container

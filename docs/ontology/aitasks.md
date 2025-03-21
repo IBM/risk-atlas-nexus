@@ -9,7 +9,7 @@ _A list of AI tasks_
 
 
 
-URI: [nexus:aitasks](http://research.ibm.com/ontologies/aiont/aitasks)
+URI: [nexus:aitasks](https://ibm.github.io/risk-atlas-nexus/ontology/aitasks)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:aitasks](http://research.ibm.com/ontologies/aiont/aitasks)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:aitasks](http://research.ibm.com/ontologies/aiont/aitasks)
 ```yaml
 name: aitasks
 description: A list of AI tasks
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: aitasks
 owner: Container

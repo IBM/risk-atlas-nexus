@@ -9,7 +9,7 @@ _The type of system as defined by the EU AI Act._
 
 
 
-URI: [nexus:hasEuAiSystemType](http://research.ibm.com/ontologies/aiont/hasEuAiSystemType)
+URI: [nexus:hasEuAiSystemType](https://ibm.github.io/risk-atlas-nexus/ontology/hasEuAiSystemType)
 
 
 
@@ -23,8 +23,8 @@ URI: [nexus:hasEuAiSystemType](http://research.ibm.com/ontologies/aiont/hasEuAiS
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
 | [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
+| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
 
 
 
@@ -51,7 +51,7 @@ URI: [nexus:hasEuAiSystemType](http://research.ibm.com/ontologies/aiont/hasEuAiS
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ URI: [nexus:hasEuAiSystemType](http://research.ibm.com/ontologies/aiont/hasEuAiS
 ```yaml
 name: hasEuAiSystemType
 description: The type of system as defined by the EU AI Act.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasEuAiSystemType
 domain_of:

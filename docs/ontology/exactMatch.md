@@ -53,7 +53,7 @@ URI: [skos:exactMatch](http://www.w3.org/2004/02/skos/core/exactMatch)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -76,7 +76,7 @@ name: exactMatch
 description: The property is used to link two concepts, indicating a high degree of
   confidence that the concepts can be used interchangeably across a wide range of
   information retrieval applications
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: skos:exactMatch
 alias: exactMatch

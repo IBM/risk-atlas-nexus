@@ -9,7 +9,7 @@ _A relationship to model card references._
 
 
 
-URI: [nexus:hasModelCard](http://research.ibm.com/ontologies/aiont/hasModelCard)
+URI: [nexus:hasModelCard](https://ibm.github.io/risk-atlas-nexus/ontology/hasModelCard)
 
 
 
@@ -23,11 +23,11 @@ URI: [nexus:hasModelCard](http://research.ibm.com/ontologies/aiont/hasModelCard)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
 | [BaseAi](BaseAi.md) | Any type of AI, be it a LLM, RL agent, SVM, etc |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
+| [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
+| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
 
 
 
@@ -56,7 +56,7 @@ URI: [nexus:hasModelCard](http://research.ibm.com/ontologies/aiont/hasModelCard)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -77,7 +77,7 @@ URI: [nexus:hasModelCard](http://research.ibm.com/ontologies/aiont/hasModelCard)
 ```yaml
 name: hasModelCard
 description: A relationship to model card references.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasModelCard
 domain_of:

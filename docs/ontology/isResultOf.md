@@ -50,7 +50,7 @@ URI: [dqv:isMeasurementOf](https://www.w3.org/TR/vocab-dqv/isMeasurementOf)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ URI: [dqv:isMeasurementOf](https://www.w3.org/TR/vocab-dqv/isMeasurementOf)
 ```yaml
 name: isResultOf
 description: A relationship indicating that an entity is the result of an AI evaluation.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: dqv:isMeasurementOf
 alias: isResultOf

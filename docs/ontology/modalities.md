@@ -9,7 +9,7 @@ _A list of AI modalities_
 
 
 
-URI: [nexus:modalities](http://research.ibm.com/ontologies/aiont/modalities)
+URI: [nexus:modalities](https://ibm.github.io/risk-atlas-nexus/ontology/modalities)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:modalities](http://research.ibm.com/ontologies/aiont/modalities)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:modalities](http://research.ibm.com/ontologies/aiont/modalities)
 ```yaml
 name: modalities
 description: A list of AI modalities
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: modalities
 owner: Container

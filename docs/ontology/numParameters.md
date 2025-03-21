@@ -9,7 +9,7 @@ _A property indicating the number of parameters in a LLM._
 
 
 
-URI: [nexus:numParameters](http://research.ibm.com/ontologies/aiont/numParameters)
+URI: [nexus:numParameters](https://ibm.github.io/risk-atlas-nexus/ontology/numParameters)
 
 
 
@@ -52,7 +52,7 @@ URI: [nexus:numParameters](http://research.ibm.com/ontologies/aiont/numParameter
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:numParameters](http://research.ibm.com/ontologies/aiont/numParameter
 ```yaml
 name: numParameters
 description: A property indicating the number of parameters in a LLM.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: numParameters
 domain_of:

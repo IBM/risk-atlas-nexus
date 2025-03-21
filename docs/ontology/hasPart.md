@@ -52,7 +52,7 @@ URI: [schema:hasPart](http://schema.org/hasPart)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [schema:hasPart](http://schema.org/hasPart)
 ```yaml
 name: hasPart
 description: A relationship where an entity has another entity
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:hasPart
 alias: hasPart

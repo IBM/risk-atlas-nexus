@@ -9,7 +9,7 @@ _Annotation whether an AI risk occurs at input or output or is non-technical._
 
 
 
-URI: [nexus:type](http://research.ibm.com/ontologies/aiont/type)
+URI: [nexus:type](https://ibm.github.io/risk-atlas-nexus/ontology/type)
 
 
 
@@ -50,7 +50,7 @@ URI: [nexus:type](http://research.ibm.com/ontologies/aiont/type)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ URI: [nexus:type](http://research.ibm.com/ontologies/aiont/type)
 ```yaml
 name: type
 description: Annotation whether an AI risk occurs at input or output or is non-technical.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: type
 owner: Risk

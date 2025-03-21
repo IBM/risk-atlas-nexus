@@ -1,4 +1,4 @@
-id: http://research.ibm.com/ontologies/aiont/ai_eval
+id: https://ibm.github.io/risk-atlas-nexus/ontology/ai_eval
 name: ai_eval
 description:
   Defines vocabulary relating to AI model evaluation
@@ -10,7 +10,7 @@ default_curi_maps:
   - semweb_context
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: http://research.ibm.com/ontologies/aiont/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
   dqv: https://www.w3.org/TR/vocab-dqv/ 
   skos: http://www.w3.org/2004/02/skos/core/
 default_range: string

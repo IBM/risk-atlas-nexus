@@ -1,4 +1,4 @@
-id: http://research.ibm.com/ontologies/aiont/ai_system
+id: https://ibm.github.io/risk-atlas-nexus/ontology/ai_system
 name: ai_system
 description:
   An ontology describing AI systems
@@ -14,7 +14,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: http://research.ibm.com/ontologies/aiont/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
   
 default_range: string
 default_prefix: nexus

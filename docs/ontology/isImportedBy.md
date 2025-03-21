@@ -9,7 +9,7 @@ _A relationship indicating that an entity has been imported by an organization._
 
 
 
-URI: [nexus:isImportedBy](http://research.ibm.com/ontologies/aiont/isImportedBy)
+URI: [nexus:isImportedBy](https://ibm.github.io/risk-atlas-nexus/ontology/isImportedBy)
 
 
 
@@ -41,7 +41,7 @@ URI: [nexus:isImportedBy](http://research.ibm.com/ontologies/aiont/isImportedBy)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -62,7 +62,7 @@ URI: [nexus:isImportedBy](http://research.ibm.com/ontologies/aiont/isImportedBy)
 ```yaml
 name: isImportedBy
 description: A relationship indicating that an entity has been imported by an organization.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: isImportedBy
 range: Organization

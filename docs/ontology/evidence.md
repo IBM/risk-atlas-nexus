@@ -9,7 +9,7 @@ _Evidence provides a source (typical a chunk, paragraph or link) describing wher
 
 
 
-URI: [nexus:evidence](http://research.ibm.com/ontologies/aiont/evidence)
+URI: [nexus:evidence](https://ibm.github.io/risk-atlas-nexus/ontology/evidence)
 
 
 
@@ -23,8 +23,8 @@ URI: [nexus:evidence](http://research.ibm.com/ontologies/aiont/evidence)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
 | [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
+| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
 
 
 
@@ -51,7 +51,7 @@ URI: [nexus:evidence](http://research.ibm.com/ontologies/aiont/evidence)
 ### Schema Source
 
 
-* from schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ URI: [nexus:evidence](http://research.ibm.com/ontologies/aiont/evidence)
 name: evidence
 description: Evidence provides a source (typical a chunk, paragraph or link) describing
   where some value was found or how it was generated.
-from_schema: http://research.ibm.com/ontologies/aiont/ai-risk-ontology
+from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: evidence
 domain_of:

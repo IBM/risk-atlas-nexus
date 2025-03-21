@@ -1,4 +1,4 @@
-id: http://research.ibm.com/ontologies/aiont/common
+id: https://ibm.github.io/risk-atlas-nexus/ontology/common
 name: common
 description:
   A core schema supporting the AI Risk Model ontology
@@ -9,7 +9,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: http://research.ibm.com/ontologies/aiont/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
 
 default_range: string
 default_prefix: nexus
