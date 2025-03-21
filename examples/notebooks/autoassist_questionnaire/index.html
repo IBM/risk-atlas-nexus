@@ -1395,6 +1395,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1538,7 +1542,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
     
   </span>
   
@@ -1582,7 +1586,29 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/AiAgent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class: AiAgent
     
   </span>
   
@@ -2683,6 +2709,28 @@
   
   <span class="md-ellipsis">
     Slot: grants_license
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/hasAiActorTask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: hasAiActorTask
     
   </span>
   
@@ -5060,7 +5108,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/Users/seshu/Documents/2025/fork/risk-atlas-nexus/src/risk_atlas_nexus/toolkit/job_utils.py:2: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+<pre>/Users/dhaval/Projects/Usage-Governance/risk-atlas-nexus/src/risk_atlas_nexus/toolkit/job_utils.py:2: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
   from tqdm.autonotebook import tqdm
 </pre>
 </div>
@@ -5086,7 +5134,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -5099,87 +5147,79 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># inference_engine = WMLInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
-<span class="c1">#     credentials={</span>
-<span class="c1">#         "api_key": "&lt;WML_API_KEY&gt;",</span>
-<span class="c1">#         "api_url": "&lt;WML_API_URL&gt;",</span>
-<span class="c1">#         "project_id": "&lt;WML_PROJECT_ID&gt;",</span>
-<span class="c1">#     },</span>
-<span class="c1">#     parameters=WMLInferenceEngineParams(</span>
-<span class="c1">#         max_new_tokens=100, decoding_method="greedy", repetition_penalty=1</span>
-<span class="c1">#     ),</span>
-<span class="c1">#     postprocessors=["clean_output"],</span>
-<span class="c1"># )</span>
-
-<span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
-    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF"</span><span class="p">,</span>
-    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"&lt;OLLAMA_API_URL&gt;"</span><span class="p">),</span>
-    <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
-        <span class="n">num_predict</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">repeat_penalty</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">WMLInferenceEngine</span><span class="p">(</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"ibm/granite-20b-code-instruct"</span><span class="p">,</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"WML_API_KEY"</span><span class="p">,</span>
+        <span class="s2">"api_url"</span><span class="p">:</span> <span class="s2">"WML_API_URL"</span><span class="p">,</span>
+        <span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"WML_PROJECT_ID"</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">WMLInferenceEngineParams</span><span class="p">(</span>
+        <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">decoding_method</span><span class="o">=</span><span class="s2">"greedy"</span><span class="p">,</span> <span class="n">repetition_penalty</span><span class="o">=</span><span class="mi">1</span>
     <span class="p">),</span>
-    <span class="n">postprocessors</span><span class="o">=</span><span class="p">[</span><span class="s2">"clean_output"</span><span class="p">],</span>
 <span class="p">)</span>
+
+<span class="c1"># inference_engine = OllamaInferenceEngine(</span>
+<span class="c1">#     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",</span>
+<span class="c1">#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),</span>
+<span class="c1">#     parameters=OllamaInferenceEngineParams(</span>
+<span class="c1">#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1</span>
+<span class="c1">#     ),</span>
+<span class="c1"># )</span>
 
 <span class="c1"># inference_engine = VLLMInferenceEngine(</span>
 <span class="c1">#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",</span>
 <span class="c1">#     credentials=InferenceEngineCredentials(</span>
-<span class="c1">#         api_url="&lt;VLLM_API_URL&gt;", api_key="&lt;VLLM_API_KEY&gt;"</span>
+<span class="c1">#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"</span>
 <span class="c1">#     ),</span>
-<span class="c1">#     parameters=VLLMInferenceEngineParams(max_tokens=100, temperature=0.7),</span>
-<span class="c1">#     postprocessors=["clean_output"],</span>
+<span class="c1">#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0.7),</span>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = RITSInferenceEngine(</span>
 <span class="c1">#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",</span>
 <span class="c1">#     credentials={</span>
-<span class="c1">#         "api_key": "&lt;RITS_API_KEY&gt;",</span>
-<span class="c1">#         "api_url": "&lt;RITS_API_URL&gt;",</span>
+<span class="c1">#         "api_key": "RITS_API_KEY",</span>
+<span class="c1">#         "api_url": "RITS_API_URL",</span>
 <span class="c1">#     },</span>
-<span class="c1">#     parameters=RITSInferenceEngineParams(max_tokens=100),</span>
-<span class="c1">#     postprocessors=["clean_output"],</span>
+<span class="c1">#     parameters=RITSInferenceEngineParams(max_tokens=1000, temperature=0.7),</span>
 <span class="c1"># )</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2"># inference_engine = WMLInferenceEngine(
-#     model_name_or_path="ibm/granite-20b-code-instruct",
-#     credentials={
-#         "api_key": "<wml_api_key>",
-#         "api_url": "<wml_api_url>",
-#         "project_id": "<wml_project_id>",
-#     },
-#     parameters=WMLInferenceEngineParams(
-#         max_new_tokens=100, decoding_method="greedy", repetition_penalty=1
-#     ),
-#     postprocessors=["clean_output"],
-# )
-
-inference_engine = OllamaInferenceEngine(
-    model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",
-    credentials=InferenceEngineCredentials(api_url="<ollama_api_url>"),
-    parameters=OllamaInferenceEngineParams(
-        num_predict=100, num_ctx=8192, temperature=0.7, repeat_penalty=1
+<div class="clipboard-copy-txt" id="cell-2">inference_engine = WMLInferenceEngine(
+    model_name_or_path="ibm/granite-20b-code-instruct",
+    credentials={
+        "api_key": "WML_API_KEY",
+        "api_url": "WML_API_URL",
+        "project_id": "WML_PROJECT_ID",
+    },
+    parameters=WMLInferenceEngineParams(
+        max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
     ),
-    postprocessors=["clean_output"],
 )
+
+# inference_engine = OllamaInferenceEngine(
+#     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",
+#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
+#     parameters=OllamaInferenceEngineParams(
+#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1
+#     ),
+# )
 
 # inference_engine = VLLMInferenceEngine(
 #     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",
 #     credentials=InferenceEngineCredentials(
-#         api_url="<vllm_api_url>", api_key="<vllm_api_key>"
+#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"
 #     ),
-#     parameters=VLLMInferenceEngineParams(max_tokens=100, temperature=0.7),
-#     postprocessors=["clean_output"],
+#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0.7),
 # )
 
 # inference_engine = RITSInferenceEngine(
 #     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",
 #     credentials={
-#         "api_key": "<rits_api_key>",
-#         "api_url": "<rits_api_url>",
+#         "api_key": "RITS_API_KEY",
+#         "api_url": "RITS_API_URL",
 #     },
-#     parameters=RITSInferenceEngineParams(max_tokens=100),
-#     postprocessors=["clean_output"],
-# )</rits_api_url></rits_api_key></vllm_api_key></vllm_api_url></ollama_api_url></wml_project_id></wml_api_url></wml_api_key></div>
+#     parameters=RITSInferenceEngineParams(max_tokens=1000, temperature=0.7),
+# )</div>
 </div>
 </div>
 </div>
@@ -5191,8 +5231,7 @@ inference_engine = OllamaInferenceEngine(
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-03-05 15:53:16:512] - INFO - RiskAtlasNexus - OLLAMA inference engine will execute requests on the server at localhost:11434.
-[2025-03-05 15:53:16:585] - INFO - RiskAtlasNexus - Created OLLAMA inference engine.
+<pre>[2025-03-20 10:47:11:888] - INFO - RiskAtlasNexus - Created WML inference engine.
 </pre>
 </div>
 </div>
@@ -5243,8 +5282,7 @@ inference_engine = OllamaInferenceEngine(
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-03-05 15:53:16:644] - INFO - RiskAtlasNexus - YAML ignored: /Users/seshu/Documents/2025/fork/risk-atlas-nexus/src/risk_atlas_nexus/data/knowledge_graph/granite_guardian_dimensions.yaml. Failed to load.
-[2025-03-05 15:53:16:648] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
+<pre>[2025-03-20 10:47:11:960] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
 </pre>
 </div>
 </div>
@@ -5357,7 +5395,7 @@ print(cot_data)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
@@ -5401,23 +5439,16 @@ results</div>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:15&lt;00:00,  2.20s/it]
-</pre>
-</div>
-</div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>['Based on the given context, the system is likely used in a customer service or sales environment, where agents need to provide personalized and relevant responses, recommendations, and summaries of claims to customers. This suggests that the system is used in a call center, help desk, or sales support setting, where agents interact with customers through phone, email, or chat.',
- "Based on the context of generating personalized, relevant responses, recommendations, and summaries of claims to support agents in their interactions with customers, the system is likely intended to be used in the domain of Customer Service/Support. This domain involves providing assistance and resolving issues for customers, and the system's capabilities align with the needs of customer support teams. The system's ability to generate personalized and relevant responses, recommendations, and summaries of claims would be particularly useful in this context, as it would enable agents to provide",
- 'The system utilizes a combination of various techniques to generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents. These techniques can be broadly categorized into several areas: 1. **Natural Language Processing (NLP)**: * Feature extraction: extracting relevant features from text data * Fill mask: filling in missing information in text data * Question answering: answering questions based on text data * Sentence similarity: measuring similarity between sentences * Summarization',
- 'The intended user of the system is likely to be: 1. Customer Service Representatives (CSRs): The system is designed to provide personalized, relevant responses, recommendations, and summaries of claims to support CSRs in their interactions with customers. 2. Sales Representatives: The system may also provide recommendations and summaries to support sales representatives in their interactions with customers. 3. Technical Support Representatives: The system could also be used by technical support representatives to provide personalized support to customers. 4. Customer Experience Agents: The',
- 'The intended purpose of the system is to support agents in their interactions with customers by providing personalized, relevant responses, recommendations, and summaries of claims. This aims to enhance the overall customer experience, improve agent productivity, and increase the accuracy and effectiveness of customer support.',
- 'The application of the system is to enhance customer interactions between agents and customers by providing personalized, relevant responses, recommendations, and summaries of claims. This system aims to support agents in delivering more effective and efficient customer service, ultimately leading to improved customer satisfaction and loyalty.',
- 'The subject of the system appears to be customer service or support, specifically the interaction between agents and customers. The system is designed to generate personalized, relevant responses, recommendations, and summaries of claims to enhance the interactions between agents and customers.']</pre>
+<pre>['Environment: The system is used in a call center environment to support customer service agents in their interactions with customers.',
+ 'The system is intended to be used in the domain of customer service/support.',
+ 'Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning',
+ 'The intended user of the system is the customer support agent who needs to generate personalized, relevant responses, recommendations, and summaries of claims for customers to enhance their interactions with customers.',
+ 'The intended purpose of the system is to provide personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers.',
+ 'The application of the system is to generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers.',
+ 'The subject of the system is customer support.']</pre>
 </div>
 </div>
 </div>

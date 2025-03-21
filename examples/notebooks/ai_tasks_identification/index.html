@@ -1404,6 +1404,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1547,7 +1551,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
     
   </span>
   
@@ -1591,7 +1595,29 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/AiAgent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class: AiAgent
     
   </span>
   
@@ -2692,6 +2718,28 @@
   
   <span class="md-ellipsis">
     Slot: grants_license
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/hasAiActorTask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: hasAiActorTask
     
   </span>
   
@@ -5111,84 +5159,76 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">WMLInferenceEngine</span><span class="p">(</span>
     <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"ibm/granite-20b-code-instruct"</span><span class="p">,</span>
     <span class="n">credentials</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"&lt;WML_API_KEY&gt;"</span><span class="p">,</span>
-        <span class="s2">"api_url"</span><span class="p">:</span> <span class="s2">"&lt;WML_API_URL&gt;"</span><span class="p">,</span>
-        <span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"&lt;WML_PROJECT_ID&gt;"</span><span class="p">,</span>
+        <span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"WML_API_KEY"</span><span class="p">,</span>
+        <span class="s2">"api_url"</span><span class="p">:</span> <span class="s2">"WML_API_URL"</span><span class="p">,</span>
+        <span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"WML_PROJECT_ID"</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">parameters</span><span class="o">=</span><span class="n">WMLInferenceEngineParams</span><span class="p">(</span>
-        <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">decoding_method</span><span class="o">=</span><span class="s2">"greedy"</span><span class="p">,</span> <span class="n">repetition_penalty</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">decoding_method</span><span class="o">=</span><span class="s2">"greedy"</span><span class="p">,</span> <span class="n">repetition_penalty</span><span class="o">=</span><span class="mi">1</span>
     <span class="p">),</span>
-    <span class="n">postprocessors</span><span class="o">=</span><span class="p">[</span><span class="s2">"clean_output"</span><span class="p">,</span> <span class="s2">"return_as_object"</span><span class="p">],</span>
 <span class="p">)</span>
 
 <span class="c1"># inference_engine = OllamaInferenceEngine(</span>
 <span class="c1">#     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",</span>
-<span class="c1">#     credentials=InferenceEngineCredentials(api_url="&lt;OLLAMA_API_URL&gt;"),</span>
+<span class="c1">#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),</span>
 <span class="c1">#     parameters=OllamaInferenceEngineParams(</span>
-<span class="c1">#         num_predict=100, num_ctx=8192, temperature=0.7, repeat_penalty=1</span>
+<span class="c1">#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1</span>
 <span class="c1">#     ),</span>
-<span class="c1">#     postprocessors=["clean_output", "return_as_object"],</span>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = VLLMInferenceEngine(</span>
 <span class="c1">#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",</span>
 <span class="c1">#     credentials=InferenceEngineCredentials(</span>
-<span class="c1">#         api_url="&lt;VLLM_API_URL&gt;", api_key="&lt;VLLM_API_KEY&gt;"</span>
+<span class="c1">#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"</span>
 <span class="c1">#     ),</span>
-<span class="c1">#     parameters=VLLMInferenceEngineParams(max_tokens=100, temperature=0.7),</span>
-<span class="c1">#     postprocessors=["clean_output", "return_as_object"],</span>
+<span class="c1">#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0.7),</span>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = RITSInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
 <span class="c1">#     credentials={</span>
-<span class="c1">#         "api_key": "&lt;RITS_API_KEY&gt;",</span>
-<span class="c1">#         "api_url": "&lt;RITS_API_URL&gt;",</span>
+<span class="c1">#         "api_key": "RITS_API_KEY",</span>
+<span class="c1">#         "api_url": "RITS_API_URL",</span>
 <span class="c1">#     },</span>
-<span class="c1">#     parameters=RITSInferenceEngineParams(max_tokens=100),</span>
-<span class="c1">#     postprocessors=["clean_output", "return_as_object"],</span>
+<span class="c1">#     parameters=RITSInferenceEngineParams(max_tokens=1000, temperature=0.7),</span>
 <span class="c1"># )</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">inference_engine = WMLInferenceEngine(
     model_name_or_path="ibm/granite-20b-code-instruct",
     credentials={
-        "api_key": "<wml_api_key>",
-        "api_url": "<wml_api_url>",
-        "project_id": "<wml_project_id>",
+        "api_key": "WML_API_KEY",
+        "api_url": "WML_API_URL",
+        "project_id": "WML_PROJECT_ID",
     },
     parameters=WMLInferenceEngineParams(
-        max_new_tokens=100, decoding_method="greedy", repetition_penalty=1
+        max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
     ),
-    postprocessors=["clean_output", "return_as_object"],
 )
 
 # inference_engine = OllamaInferenceEngine(
 #     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",
-#     credentials=InferenceEngineCredentials(api_url="<ollama_api_url>"),
+#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
 #     parameters=OllamaInferenceEngineParams(
-#         num_predict=100, num_ctx=8192, temperature=0.7, repeat_penalty=1
+#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1
 #     ),
-#     postprocessors=["clean_output", "return_as_object"],
 # )
 
 # inference_engine = VLLMInferenceEngine(
 #     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",
 #     credentials=InferenceEngineCredentials(
-#         api_url="<vllm_api_url>", api_key="<vllm_api_key>"
+#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"
 #     ),
-#     parameters=VLLMInferenceEngineParams(max_tokens=100, temperature=0.7),
-#     postprocessors=["clean_output", "return_as_object"],
+#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0.7),
 # )
 
 # inference_engine = RITSInferenceEngine(
-#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",
+#     model_name_or_path="ibm/granite-20b-code-instruct",
 #     credentials={
-#         "api_key": "<rits_api_key>",
-#         "api_url": "<rits_api_url>",
+#         "api_key": "RITS_API_KEY",
+#         "api_url": "RITS_API_URL",
 #     },
-#     parameters=RITSInferenceEngineParams(max_tokens=100),
-#     postprocessors=["clean_output", "return_as_object"],
-# )</rits_api_url></rits_api_key></vllm_api_key></vllm_api_url></ollama_api_url></wml_project_id></wml_api_url></wml_api_key></div>
+#     parameters=RITSInferenceEngineParams(max_tokens=1000, temperature=0.7),
+# )</div>
 </div>
 </div>
 </div>

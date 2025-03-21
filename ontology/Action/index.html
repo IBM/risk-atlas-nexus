@@ -1302,6 +1302,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1582,7 +1586,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
     
   </span>
   
@@ -1626,7 +1630,29 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AiAgent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class: AiAgent
     
   </span>
   
@@ -2727,6 +2753,28 @@
   
   <span class="md-ellipsis">
     Slot: grants_license
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hasAiActorTask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: hasAiActorTask
     
   </span>
   
@@ -4653,13 +4701,13 @@
       Entity &lt;|-- Action
         click Entity href &quot;../Entity&quot;
 
-      Action : ai_actor_task
-
       Action : dateCreated
 
       Action : dateModified
 
       Action : description
+
+      Action : hasAiActorTask
 
       Action : hasDocumentation
 
@@ -4680,6 +4728,15 @@
 
 
       Action : id
+
+      Action : isDefinedByTaxonomy
+
+
+
+
+    Action --&gt; &quot;0..1&quot; RiskTaxonomy : isDefinedByTaxonomy
+    click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
+
 
       Action : name
 
@@ -4716,7 +4773,13 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../ai_actor_task/">ai_actor_task</a></td>
+<td><a href="../isDefinedByTaxonomy/">isDefinedByTaxonomy</a></td>
+<td>0..1 <br/> <a href="../RiskTaxonomy/">RiskTaxonomy</a></td>
+<td>A relationship where a risk or a risk group is defined by a risk taxonomy</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../hasAiActorTask/">hasAiActorTask</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
 <td>Pertinent AI Actor Tasks for each subcategory</td>
 <td>direct</td>
@@ -4820,17 +4883,8 @@
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasRelatedRisk</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasDocumentation</span>
-<span class="nt">attributes</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ai_actor_task</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_actor_task</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pertinent AI Actor Tasks for each subcategory. Not every AI Actor</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Task listed will apply to every suggested action in the subcategory (i.e., some</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">apply to AI development and others apply to AI deployment).</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai_risk</span>
-<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
-<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAiActorTask</span>
 </code></pre></div>
 </details>
 
@@ -4841,19 +4895,6 @@
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
 <span class="nt">attributes</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ai_actor_task</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_actor_task</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pertinent AI Actor Tasks for each subcategory. Not every AI Actor</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Task listed will apply to every suggested action in the subcategory (i.e., some</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">apply to AI development and others apply to AI deployment).</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai_risk</span>
-<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_actor_task</span>
-<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
-<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">hasRelatedRisk</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasRelatedRisk</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where an entity relates to a risk</span>
@@ -4885,6 +4926,34 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">isDefinedByTaxonomy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk or a risk group is defined by a risk</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">taxonomy</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema:isPartOf</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskGroup</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskTaxonomy</span>
+<span class="w">  </span><span class="nt">hasAiActorTask</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAiActorTask</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pertinent AI Actor Tasks for each subcategory. Not every AI Actor</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Task listed will apply to every suggested action in the subcategory (i.e., some</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">apply to AI development and others apply to AI deployment).</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://research.ibm.com/ontologies/aiont/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAiActorTask</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier to this instance of the model element. Example</span>

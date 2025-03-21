@@ -1302,6 +1302,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1448,7 +1452,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
     
   </span>
   
@@ -1492,7 +1496,29 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AiAgent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class: AiAgent
     
   </span>
   
@@ -2718,6 +2744,28 @@
   
   <span class="md-ellipsis">
     Slot: grants_license
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hasAiActorTask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: hasAiActorTask
     
   </span>
   
@@ -4635,6 +4683,11 @@
       BaseAi &lt;|-- AiSystem
         click BaseAi href &quot;../BaseAi&quot;
 
+
+      AiSystem &lt;|-- AiAgent
+        click AiAgent href &quot;../AiAgent&quot;
+
+
       AiSystem : dateCreated
 
       AiSystem : dateModified
@@ -4716,7 +4769,10 @@
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
 <li><a href="../BaseAi/">BaseAi</a><ul>
-<li><strong>AiSystem</strong></li>
+<li><strong>AiSystem</strong><ul>
+<li><a href="../AiAgent/">AiAgent</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

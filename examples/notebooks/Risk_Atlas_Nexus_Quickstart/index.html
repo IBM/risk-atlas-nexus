@@ -1474,6 +1474,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1617,7 +1621,7 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
     
   </span>
   
@@ -1661,7 +1665,29 @@
         
   
   <span class="md-ellipsis">
-    Slot: ai_actor_task
+    Slot: hasAiActorTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/AiAgent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class: AiAgent
     
   </span>
   
@@ -2762,6 +2788,28 @@
   
   <span class="md-ellipsis">
     Slot: grants_license
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/hasAiActorTask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: hasAiActorTask
     
   </span>
   
@@ -5194,7 +5242,7 @@ from risk_atlas_nexus import RiskAtlasNexus</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Risk Atlas Nexus project provides an ontology combining an AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema.</p>
-<p>AI Risks were collected from IBM Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AILuminate Benchmark, and OWASP Top 10 for Large Language Model Applications.</p>
+<p>AI Risks were collected from IBM Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AILuminate Benchmark, Credo's Unified Control Framework, and OWASP Top 10 for Large Language Model Applications.</p>
 <p>You can use the python library methods to quickly explore available risks, relations and actions, as well as to detect potential risks in your usecase.</p>
 <p>Important references:</p>
 <ul>
@@ -5266,7 +5314,7 @@ from risk_atlas_nexus import RiskAtlasNexus</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ran</span> <span class="o">=</span> <span class="n">RiskAtlasNexus</span><span class="p">()</span> <span class="c1"># no args, so default configuration </span>
 
 <span class="n">all_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 439</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 480</span>
 
 <span class="c1"># Let's just print out a few for now</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risks in list "</span><span class="p">)</span> 
@@ -5275,7 +5323,7 @@ from risk_atlas_nexus import RiskAtlasNexus</div>
 <div class="clipboard-copy-txt" id="cell-2">ran = RiskAtlasNexus() # no args, so default configuration 
 
 all_risks = ran.get_all_risks()
-print(f"\n# Total risks available : {len(all_risks)}") # 439
+print(f"\n# Total risks available : {len(all_risks)}") # 480
 
 # Let's just print out a few for now
 print(f"\n# First 2 risks in list ") 
@@ -5593,8 +5641,8 @@ print(controls_for_granite_function_call) # 1 expected
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_taxonomies</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_taxonomies</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total taxonomies available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_taxonomies</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 6</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Taxonomy IDs available : </span><span class="si">{</span><span class="p">[</span><span class="n">taxonomy</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">taxonomy</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">all_taxonomies</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total taxonomies available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_taxonomies</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 8</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Taxonomy IDs available : </span><span class="si">{</span><span class="p">[</span><span class="n">taxonomy</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">taxonomy</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">all_taxonomies</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 8</span>
 
 <span class="c1"># Let's just print out a few for now</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 taxonomies in list "</span><span class="p">)</span> 
@@ -5606,8 +5654,8 @@ print(controls_for_granite_function_call) # 1 expected
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_taxonomy</span><span class="p">))</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-7">all_taxonomies = ran.get_all_taxonomies()
-print(f"\n# Total taxonomies available : {len(all_taxonomies)}") # 6
-print(f"\n# Taxonomy IDs available : {[taxonomy.id for taxonomy in all_taxonomies]}") # 5
+print(f"\n# Total taxonomies available : {len(all_taxonomies)}") # 8
+print(f"\n# Taxonomy IDs available : {[taxonomy.id for taxonomy in all_taxonomies]}") # 8
 
 # Let's just print out a few for now
 print(f"\n# First 2 taxonomies in list ") 
