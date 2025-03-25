@@ -1,0 +1,14 @@
+name: "Run Documentation CD"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build-deploy-docs:
+    uses: ./.github/workflows/docs.yaml
+    with:
+      deploy: true
+    permissions:
+      contents: write

@@ -1,0 +1,19 @@
+on:
+    workflow_call:
+        inputs:
+            deploy:
+                type: boolean
+                description: "If true, the documentation will be deployed."
+                default: false
+
+jobs:
+    run-docs:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - uses: ./.github/actions/setup-poetry
+        - name: Build docs
+          run: poetry run mkdocs build --verbose --clean
+        - name: Build and push docs
+          if: inputs.deploy
+          run: poetry run mkdocs gh-deploy --force

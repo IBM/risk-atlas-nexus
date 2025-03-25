@@ -1,0 +1,16 @@
+name: "Run Documentation CI"
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  push:
+    branches:
+      - "**"
+      - "!gh-pages"
+
+jobs:
+  build-docs:
+    if: ${{ github.event_name == 'push' || (github.event.pull_request.head.repo.full_name !=  'IBM/risk-atlas-nexus' && github.event.pull_request.head.repo.full_name != 'IBM/risk-atlas-nexus') }}
+    uses: ./.github/workflows/docs.yaml
+    with:
+      deploy: false
