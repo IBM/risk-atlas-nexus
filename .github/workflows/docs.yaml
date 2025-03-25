@@ -13,7 +13,7 @@ jobs:
         - uses: actions/checkout@v4
         - uses: ./.github/actions/setup-poetry
         - name: Build docs
-          run: poetry run mkdocs build --verbose --clean
+          run: mkdocs build --verbose --clean
         - name: Build and push docs
           if: inputs.deploy
-          run: poetry run mkdocs gh-deploy --force
+          run: mkdocs gh-deploy --force
