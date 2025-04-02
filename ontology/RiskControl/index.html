@@ -4695,11 +4695,11 @@
 <h1 id="class-riskcontrol">Class: RiskControl</h1>
 <p><em>A measure that maintains and/or modifies risk (and risk concepts)</em></p>
 <p>URI: <a href="https://w3id.org/airo#RiskControl">airo:RiskControl</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class RiskControl
-    click RiskControl href &quot;../RiskControl&quot;
+    click RiskControl href "../RiskControl"
       Entity &lt;|-- RiskControl
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       RiskControl : dateCreated
 
@@ -4712,8 +4712,8 @@
 
 
 
-    RiskControl --&gt; &quot;*&quot; RiskConcept : detectsRiskConcept
-    click RiskConcept href &quot;../RiskConcept&quot;
+    RiskControl --&gt; "*" RiskConcept : detectsRiskConcept
+    click RiskConcept href "../RiskConcept"
 
 
       RiskControl : id
@@ -4723,14 +4723,15 @@
 
 
 
-    RiskControl --&gt; &quot;0..1&quot; RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
+    RiskControl --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+    click RiskTaxonomy href "../RiskTaxonomy"
 
 
       RiskControl : name
 
       RiskControl : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

@@ -4680,17 +4680,17 @@
 <li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
 </ul>
 <p>URI: <a href="https://w3id.org/airo#AILifecyclePhase">airo:AILifecyclePhase</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiLifecyclePhase
-    click AiLifecyclePhase href &quot;../AiLifecyclePhase&quot;
+    click AiLifecyclePhase href "../AiLifecyclePhase"
       Entity &lt;|-- AiLifecyclePhase
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
 
       AiLifecyclePhase &lt;|-- DataPreprocessing
-        click DataPreprocessing href &quot;../DataPreprocessing&quot;
+        click DataPreprocessing href "../DataPreprocessing"
       AiLifecyclePhase &lt;|-- AiModelValidation
-        click AiModelValidation href &quot;../AiModelValidation&quot;
+        click AiModelValidation href "../AiModelValidation"
 
 
       AiLifecyclePhase : dateCreated
@@ -4704,7 +4704,8 @@
       AiLifecyclePhase : name
 
       AiLifecyclePhase : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

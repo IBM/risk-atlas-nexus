@@ -4695,11 +4695,11 @@
 <h1 id="class-largelanguagemodelfamily">Class: LargeLanguageModelFamily</h1>
 <p><em>A large language model family is a set of models that are provided by the same AI systems provider and are built around the same architecture, but differ e.g. in the number of parameters. Examples are Meta's Llama2 family or the IBM granite models.</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/LargeLanguageModelFamily">nexus:LargeLanguageModelFamily</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class LargeLanguageModelFamily
-    click LargeLanguageModelFamily href &quot;../LargeLanguageModelFamily&quot;
+    click LargeLanguageModelFamily href "../LargeLanguageModelFamily"
       Entity &lt;|-- LargeLanguageModelFamily
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       LargeLanguageModelFamily : dateCreated
 
@@ -4712,8 +4712,8 @@
 
 
 
-    LargeLanguageModelFamily --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    LargeLanguageModelFamily --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       LargeLanguageModelFamily : id
@@ -4721,7 +4721,8 @@
       LargeLanguageModelFamily : name
 
       LargeLanguageModelFamily : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

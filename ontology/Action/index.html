@@ -4695,11 +4695,11 @@
 <h1 id="class-action">Class: Action</h1>
 <p><em>Action to remediate a risk</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/Action">nexus:Action</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class Action
-    click Action href &quot;../Action&quot;
+    click Action href "../Action"
       Entity &lt;|-- Action
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       Action : dateCreated
 
@@ -4714,8 +4714,8 @@
 
 
 
-    Action --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    Action --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       Action : hasRelatedRisk
@@ -4723,8 +4723,8 @@
 
 
 
-    Action --&gt; &quot;*&quot; Risk : hasRelatedRisk
-    click Risk href &quot;../Risk&quot;
+    Action --&gt; "*" Risk : hasRelatedRisk
+    click Risk href "../Risk"
 
 
       Action : id
@@ -4734,14 +4734,15 @@
 
 
 
-    Action --&gt; &quot;0..1&quot; RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
+    Action --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+    click RiskTaxonomy href "../RiskTaxonomy"
 
 
       Action : name
 
       Action : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

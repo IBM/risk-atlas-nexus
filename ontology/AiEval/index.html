@@ -4695,17 +4695,17 @@
 <h1 id="class-aieval">Class: AiEval</h1>
 <p><em>An AI Evaluation, e.g. a metric, benchmark, unitxt card evaluation, a question or a combination of such entities.</em></p>
 <p>URI: <a href="https://www.w3.org/TR/vocab-dqv/Metric">dqv:Metric</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiEval
-    click AiEval href &quot;../AiEval&quot;
+    click AiEval href "../AiEval"
       Entity &lt;|-- AiEval
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
 
       AiEval &lt;|-- Question
-        click Question href &quot;../Question&quot;
+        click Question href "../Question"
       AiEval &lt;|-- Questionnaire
-        click Questionnaire href &quot;../Questionnaire&quot;
+        click Questionnaire href "../Questionnaire"
 
 
       AiEval : bestValue
@@ -4721,8 +4721,8 @@
 
 
 
-    AiEval --&gt; &quot;*&quot; Dataset : hasDataset
-    click Dataset href &quot;../Dataset&quot;
+    AiEval --&gt; "*" Dataset : hasDataset
+    click Dataset href "../Dataset"
 
 
       AiEval : hasDocumentation
@@ -4730,8 +4730,8 @@
 
 
 
-    AiEval --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    AiEval --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       AiEval : hasLicense
@@ -4739,8 +4739,8 @@
 
 
 
-    AiEval --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    AiEval --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       AiEval : hasRelatedRisk
@@ -4748,8 +4748,8 @@
 
 
 
-    AiEval --&gt; &quot;*&quot; Risk : hasRelatedRisk
-    click Risk href &quot;../Risk&quot;
+    AiEval --&gt; "*" Risk : hasRelatedRisk
+    click Risk href "../Risk"
 
 
       AiEval : hasUnitxtCard
@@ -4759,7 +4759,8 @@
       AiEval : name
 
       AiEval : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

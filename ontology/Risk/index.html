@@ -4695,21 +4695,21 @@
 <h1 id="class-risk">Class: Risk</h1>
 <p><em>The state of uncertainty associated with an AI system, that has the potential to cause harms</em></p>
 <p>URI: <a href="https://w3id.org/airo#Risk">airo:Risk</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class Risk
-    click Risk href &quot;../Risk&quot;
+    click Risk href "../Risk"
       RiskConcept &lt;|-- Risk
-        click RiskConcept href &quot;../RiskConcept&quot;
+        click RiskConcept href "../RiskConcept"
       Entity &lt;|-- Risk
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       Risk : broadMatch
 
 
 
 
-    Risk --&gt; &quot;*&quot; Any : broadMatch
-    click Any href &quot;../Any&quot;
+    Risk --&gt; "*" Any : broadMatch
+    click Any href "../Any"
 
 
       Risk : closeMatch
@@ -4717,8 +4717,8 @@
 
 
 
-    Risk --&gt; &quot;*&quot; Any : closeMatch
-    click Any href &quot;../Any&quot;
+    Risk --&gt; "*" Any : closeMatch
+    click Any href "../Any"
 
 
       Risk : concern
@@ -4736,8 +4736,8 @@
 
 
 
-    Risk --&gt; &quot;*&quot; RiskConcept : detectsRiskConcept
-    click RiskConcept href &quot;../RiskConcept&quot;
+    Risk --&gt; "*" RiskConcept : detectsRiskConcept
+    click RiskConcept href "../RiskConcept"
 
 
       Risk : exactMatch
@@ -4745,8 +4745,8 @@
 
 
 
-    Risk --&gt; &quot;*&quot; Any : exactMatch
-    click Any href &quot;../Any&quot;
+    Risk --&gt; "*" Any : exactMatch
+    click Any href "../Any"
 
 
       Risk : hasRelatedAction
@@ -4754,8 +4754,8 @@
 
 
 
-    Risk --&gt; &quot;*&quot; Action : hasRelatedAction
-    click Action href &quot;../Action&quot;
+    Risk --&gt; "*" Action : hasRelatedAction
+    click Action href "../Action"
 
 
       Risk : id
@@ -4765,8 +4765,8 @@
 
 
 
-    Risk --&gt; &quot;0..1&quot; RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
+    Risk --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+    click RiskTaxonomy href "../RiskTaxonomy"
 
 
       Risk : isDetectedBy
@@ -4774,8 +4774,8 @@
 
 
 
-    Risk --&gt; &quot;*&quot; RiskControl : isDetectedBy
-    click RiskControl href &quot;../RiskControl&quot;
+    Risk --&gt; "*" RiskControl : isDetectedBy
+    click RiskControl href "../RiskControl"
 
 
       Risk : isPartOf
@@ -4783,8 +4783,8 @@
 
 
 
-    Risk --&gt; &quot;0..1&quot; RiskGroup : isPartOf
-    click RiskGroup href &quot;../RiskGroup&quot;
+    Risk --&gt; "0..1" RiskGroup : isPartOf
+    click RiskGroup href "../RiskGroup"
 
 
       Risk : name
@@ -4794,8 +4794,8 @@
 
 
 
-    Risk --&gt; &quot;*&quot; Any : narrowMatch
-    click Any href &quot;../Any&quot;
+    Risk --&gt; "*" Any : narrowMatch
+    click Any href "../Any"
 
 
       Risk : phase
@@ -4805,8 +4805,8 @@
 
 
 
-    Risk --&gt; &quot;*&quot; Any : relatedMatch
-    click Any href &quot;../Any&quot;
+    Risk --&gt; "*" Any : relatedMatch
+    click Any href "../Any"
 
 
       Risk : tag
@@ -4814,7 +4814,8 @@
       Risk : type
 
       Risk : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

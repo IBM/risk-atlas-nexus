@@ -4677,11 +4677,11 @@
 <h1 id="class-aiagent">Class: AiAgent</h1>
 <p><em>An artificial intelligence (AI) agent refers to a system or program that is capable of autonomously performing tasks on behalf of a user or another system by designing its workflow and utilizing available tools.</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/AiAgent">nexus:AiAgent</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiAgent
-    click AiAgent href &quot;../AiAgent&quot;
+    click AiAgent href "../AiAgent"
       AiSystem &lt;|-- AiAgent
-        click AiSystem href &quot;../AiSystem&quot;
+        click AiSystem href "../AiSystem"
 
       AiAgent : dateCreated
 
@@ -4694,8 +4694,8 @@
 
 
 
-    AiAgent --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    AiAgent --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       AiAgent : hasEuAiSystemType
@@ -4703,8 +4703,8 @@
 
 
 
-    AiAgent --&gt; &quot;0..1&quot; AiSystemType : hasEuAiSystemType
-    click AiSystemType href &quot;../AiSystemType&quot;
+    AiAgent --&gt; "0..1" AiSystemType : hasEuAiSystemType
+    click AiSystemType href "../AiSystemType"
 
 
       AiAgent : hasEuRiskCategory
@@ -4712,8 +4712,8 @@
 
 
 
-    AiAgent --&gt; &quot;0..1&quot; EuAiRiskCategory : hasEuRiskCategory
-    click EuAiRiskCategory href &quot;../EuAiRiskCategory&quot;
+    AiAgent --&gt; "0..1" EuAiRiskCategory : hasEuRiskCategory
+    click EuAiRiskCategory href "../EuAiRiskCategory"
 
 
       AiAgent : hasLicense
@@ -4721,8 +4721,8 @@
 
 
 
-    AiAgent --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    AiAgent --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       AiAgent : hasModelCard
@@ -4734,8 +4734,8 @@
 
 
 
-    AiAgent --&gt; &quot;0..1&quot; AiProvider : isProvidedBy
-    click AiProvider href &quot;../AiProvider&quot;
+    AiAgent --&gt; "0..1" AiProvider : isProvidedBy
+    click AiProvider href "../AiProvider"
 
 
       AiAgent : name
@@ -4745,8 +4745,8 @@
 
 
 
-    AiAgent --&gt; &quot;*&quot; AiTask : performsTask
-    click AiTask href &quot;../AiTask&quot;
+    AiAgent --&gt; "*" AiTask : performsTask
+    click AiTask href "../AiTask"
 
 
       AiAgent : producer
@@ -4754,12 +4754,13 @@
 
 
 
-    AiAgent --&gt; &quot;0..1&quot; Organization : producer
-    click Organization href &quot;../Organization&quot;
+    AiAgent --&gt; "0..1" Organization : producer
+    click Organization href "../Organization"
 
 
       AiAgent : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

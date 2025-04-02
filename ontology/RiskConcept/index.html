@@ -4695,17 +4695,17 @@
 <h1 id="class-riskconcept">Class: RiskConcept</h1>
 <p><em>An umbrella term for refering to risk, risk source, consequence and impact.</em></p>
 <p>URI: <a href="https://w3id.org/airo#RiskConcept">airo:RiskConcept</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class RiskConcept
-    click RiskConcept href &quot;../RiskConcept&quot;
+    click RiskConcept href "../RiskConcept"
       Entity &lt;|-- RiskConcept
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
 
       RiskConcept &lt;|-- RiskGroup
-        click RiskGroup href &quot;../RiskGroup&quot;
+        click RiskGroup href "../RiskGroup"
       RiskConcept &lt;|-- Risk
-        click Risk href &quot;../Risk&quot;
+        click Risk href "../Risk"
 
 
       RiskConcept : dateCreated
@@ -4721,14 +4721,15 @@
 
 
 
-    RiskConcept --&gt; &quot;*&quot; RiskControl : isDetectedBy
-    click RiskControl href &quot;../RiskControl&quot;
+    RiskConcept --&gt; "*" RiskControl : isDetectedBy
+    click RiskControl href "../RiskControl"
 
 
       RiskConcept : name
 
       RiskConcept : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

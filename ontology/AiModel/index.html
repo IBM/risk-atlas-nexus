@@ -4677,15 +4677,15 @@
 <h1 id="class-aimodel">Class: AiModel</h1>
 <p><em>A base AI Model class. No assumption about the type (SVM, LLM, etc.). Subclassed by model types (see LargeLanguageModel).</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/AiModel">nexus:AiModel</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiModel
-    click AiModel href &quot;../AiModel&quot;
+    click AiModel href "../AiModel"
       BaseAi &lt;|-- AiModel
-        click BaseAi href &quot;../BaseAi&quot;
+        click BaseAi href "../BaseAi"
 
 
       AiModel &lt;|-- LargeLanguageModel
-        click LargeLanguageModel href &quot;../LargeLanguageModel&quot;
+        click LargeLanguageModel href "../LargeLanguageModel"
 
 
       AiModel : architecture
@@ -4705,8 +4705,8 @@
 
 
 
-    AiModel --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    AiModel --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       AiModel : hasEvaluation
@@ -4714,8 +4714,8 @@
 
 
 
-    AiModel --&gt; &quot;*&quot; AiEvalResult : hasEvaluation
-    click AiEvalResult href &quot;../AiEvalResult&quot;
+    AiModel --&gt; "*" AiEvalResult : hasEvaluation
+    click AiEvalResult href "../AiEvalResult"
 
 
       AiModel : hasLicense
@@ -4723,8 +4723,8 @@
 
 
 
-    AiModel --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    AiModel --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       AiModel : hasModelCard
@@ -4734,8 +4734,8 @@
 
 
 
-    AiModel --&gt; &quot;*&quot; RiskControl : hasRiskControl
-    click RiskControl href &quot;../RiskControl&quot;
+    AiModel --&gt; "*" RiskControl : hasRiskControl
+    click RiskControl href "../RiskControl"
 
 
       AiModel : id
@@ -4745,8 +4745,8 @@
 
 
 
-    AiModel --&gt; &quot;0..1&quot; AiProvider : isProvidedBy
-    click AiProvider href &quot;../AiProvider&quot;
+    AiModel --&gt; "0..1" AiProvider : isProvidedBy
+    click AiProvider href "../AiProvider"
 
 
       AiModel : name
@@ -4756,8 +4756,8 @@
 
 
 
-    AiModel --&gt; &quot;*&quot; AiTask : performsTask
-    click AiTask href &quot;../AiTask&quot;
+    AiModel --&gt; "*" AiTask : performsTask
+    click AiTask href "../AiTask"
 
 
       AiModel : power_consumption_w
@@ -4767,12 +4767,13 @@
 
 
 
-    AiModel --&gt; &quot;0..1&quot; Organization : producer
-    click Organization href &quot;../Organization&quot;
+    AiModel --&gt; "0..1" Organization : producer
+    click Organization href "../Organization"
 
 
       AiModel : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

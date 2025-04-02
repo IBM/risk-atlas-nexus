@@ -4677,11 +4677,11 @@
 <h1 id="class-aioffice">Class: AiOffice</h1>
 <p><em>The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)</em></p>
 <p>URI: <a href="http://schema.org/Organization">schema:Organization</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiOffice
-    click AiOffice href &quot;../AiOffice&quot;
+    click AiOffice href "../AiOffice"
       Organization &lt;|-- AiOffice
-        click Organization href &quot;../Organization&quot;
+        click Organization href "../Organization"
 
       AiOffice : dateCreated
 
@@ -4694,8 +4694,8 @@
 
 
 
-    AiOffice --&gt; &quot;0..1&quot; License : grants_license
-    click License href &quot;../License&quot;
+    AiOffice --&gt; "0..1" License : grants_license
+    click License href "../License"
 
 
       AiOffice : id
@@ -4703,7 +4703,8 @@
       AiOffice : name
 
       AiOffice : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

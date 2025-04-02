@@ -4695,11 +4695,11 @@
 <h1 id="class-dataset">Class: Dataset</h1>
 <p><em>A body of structured information describing some topic(s) of interest.</em></p>
 <p>URI: <a href="http://schema.org/Dataset">schema:Dataset</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class Dataset
-    click Dataset href &quot;../Dataset&quot;
+    click Dataset href "../Dataset"
       Entity &lt;|-- Dataset
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       Dataset : dateCreated
 
@@ -4712,8 +4712,8 @@
 
 
 
-    Dataset --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    Dataset --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       Dataset : hasLicense
@@ -4721,8 +4721,8 @@
 
 
 
-    Dataset --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    Dataset --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       Dataset : id
@@ -4734,12 +4734,13 @@
 
 
 
-    Dataset --&gt; &quot;0..1&quot; Organization : provider
-    click Organization href &quot;../Organization&quot;
+    Dataset --&gt; "0..1" Organization : provider
+    click Organization href "../Organization"
 
 
       Dataset : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

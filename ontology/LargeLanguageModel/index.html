@@ -4713,11 +4713,11 @@
 <h1 id="class-largelanguagemodel">Class: LargeLanguageModel</h1>
 <p><em>A large language model (LLM) is an AI model which supports a range of language-related tasks such as generation, summarization, classification, among others. A LLM is implemented as an artificial neural networks using a transformer architecture.</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/LargeLanguageModel">nexus:LargeLanguageModel</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class LargeLanguageModel
-    click LargeLanguageModel href &quot;../LargeLanguageModel&quot;
+    click LargeLanguageModel href "../LargeLanguageModel"
       AiModel &lt;|-- LargeLanguageModel
-        click AiModel href &quot;../AiModel&quot;
+        click AiModel href "../AiModel"
 
       LargeLanguageModel : architecture
 
@@ -4740,8 +4740,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    LargeLanguageModel --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       LargeLanguageModel : hasEvaluation
@@ -4749,8 +4749,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;*&quot; AiEvalResult : hasEvaluation
-    click AiEvalResult href &quot;../AiEvalResult&quot;
+    LargeLanguageModel --&gt; "*" AiEvalResult : hasEvaluation
+    click AiEvalResult href "../AiEvalResult"
 
 
       LargeLanguageModel : hasInputModality
@@ -4758,8 +4758,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;*&quot; Modality : hasInputModality
-    click Modality href &quot;../Modality&quot;
+    LargeLanguageModel --&gt; "*" Modality : hasInputModality
+    click Modality href "../Modality"
 
 
       LargeLanguageModel : hasLicense
@@ -4767,8 +4767,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    LargeLanguageModel --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       LargeLanguageModel : hasModelCard
@@ -4778,8 +4778,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;*&quot; Modality : hasOutputModality
-    click Modality href &quot;../Modality&quot;
+    LargeLanguageModel --&gt; "*" Modality : hasOutputModality
+    click Modality href "../Modality"
 
 
       LargeLanguageModel : hasRiskControl
@@ -4787,8 +4787,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;*&quot; RiskControl : hasRiskControl
-    click RiskControl href &quot;../RiskControl&quot;
+    LargeLanguageModel --&gt; "*" RiskControl : hasRiskControl
+    click RiskControl href "../RiskControl"
 
 
       LargeLanguageModel : hasTrainingData
@@ -4796,8 +4796,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;*&quot; Dataset : hasTrainingData
-    click Dataset href &quot;../Dataset&quot;
+    LargeLanguageModel --&gt; "*" Dataset : hasTrainingData
+    click Dataset href "../Dataset"
 
 
       LargeLanguageModel : id
@@ -4807,8 +4807,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;0..1&quot; LargeLanguageModelFamily : isPartOf
-    click LargeLanguageModelFamily href &quot;../LargeLanguageModelFamily&quot;
+    LargeLanguageModel --&gt; "0..1" LargeLanguageModelFamily : isPartOf
+    click LargeLanguageModelFamily href "../LargeLanguageModelFamily"
 
 
       LargeLanguageModel : isProvidedBy
@@ -4816,8 +4816,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;0..1&quot; AiProvider : isProvidedBy
-    click AiProvider href &quot;../AiProvider&quot;
+    LargeLanguageModel --&gt; "0..1" AiProvider : isProvidedBy
+    click AiProvider href "../AiProvider"
 
 
       LargeLanguageModel : name
@@ -4831,8 +4831,8 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;*&quot; AiTask : performsTask
-    click AiTask href &quot;../AiTask&quot;
+    LargeLanguageModel --&gt; "*" AiTask : performsTask
+    click AiTask href "../AiTask"
 
 
       LargeLanguageModel : power_consumption_w
@@ -4842,14 +4842,15 @@
 
 
 
-    LargeLanguageModel --&gt; &quot;0..1&quot; Organization : producer
-    click Organization href &quot;../Organization&quot;
+    LargeLanguageModel --&gt; "0..1" Organization : producer
+    click Organization href "../Organization"
 
 
       LargeLanguageModel : supported_languages
 
       LargeLanguageModel : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

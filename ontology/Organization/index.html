@@ -4695,17 +4695,17 @@
 <h1 id="class-organization">Class: Organization</h1>
 <p><em>Any organizational entity such as a corporation, educational institution, consortium, government, etc.</em></p>
 <p>URI: <a href="http://schema.org/Organization">schema:Organization</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class Organization
-    click Organization href &quot;../Organization&quot;
+    click Organization href "../Organization"
       Entity &lt;|-- Organization
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
 
       Organization &lt;|-- AiOffice
-        click AiOffice href &quot;../AiOffice&quot;
+        click AiOffice href "../AiOffice"
       Organization &lt;|-- AiProvider
-        click AiProvider href &quot;../AiProvider&quot;
+        click AiProvider href "../AiProvider"
 
 
       Organization : dateCreated
@@ -4719,8 +4719,8 @@
 
 
 
-    Organization --&gt; &quot;0..1&quot; License : grants_license
-    click License href &quot;../License&quot;
+    Organization --&gt; "0..1" License : grants_license
+    click License href "../License"
 
 
       Organization : id
@@ -4728,7 +4728,8 @@
       Organization : name
 
       Organization : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

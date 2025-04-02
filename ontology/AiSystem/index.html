@@ -4677,15 +4677,15 @@
 <h1 id="class-aisystem">Class: AiSystem</h1>
 <p><em>A compound AI System composed of one or more AI capablities. ChatGPT is an example of an AI system which deploys multiple GPT AI models.</em></p>
 <p>URI: <a href="https://w3id.org/airo#AISystem">airo:AISystem</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiSystem
-    click AiSystem href &quot;../AiSystem&quot;
+    click AiSystem href "../AiSystem"
       BaseAi &lt;|-- AiSystem
-        click BaseAi href &quot;../BaseAi&quot;
+        click BaseAi href "../BaseAi"
 
 
       AiSystem &lt;|-- AiAgent
-        click AiAgent href &quot;../AiAgent&quot;
+        click AiAgent href "../AiAgent"
 
 
       AiSystem : dateCreated
@@ -4699,8 +4699,8 @@
 
 
 
-    AiSystem --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    AiSystem --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       AiSystem : hasEuAiSystemType
@@ -4708,8 +4708,8 @@
 
 
 
-    AiSystem --&gt; &quot;0..1&quot; AiSystemType : hasEuAiSystemType
-    click AiSystemType href &quot;../AiSystemType&quot;
+    AiSystem --&gt; "0..1" AiSystemType : hasEuAiSystemType
+    click AiSystemType href "../AiSystemType"
 
 
       AiSystem : hasEuRiskCategory
@@ -4717,8 +4717,8 @@
 
 
 
-    AiSystem --&gt; &quot;0..1&quot; EuAiRiskCategory : hasEuRiskCategory
-    click EuAiRiskCategory href &quot;../EuAiRiskCategory&quot;
+    AiSystem --&gt; "0..1" EuAiRiskCategory : hasEuRiskCategory
+    click EuAiRiskCategory href "../EuAiRiskCategory"
 
 
       AiSystem : hasLicense
@@ -4726,8 +4726,8 @@
 
 
 
-    AiSystem --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    AiSystem --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       AiSystem : hasModelCard
@@ -4739,8 +4739,8 @@
 
 
 
-    AiSystem --&gt; &quot;0..1&quot; AiProvider : isProvidedBy
-    click AiProvider href &quot;../AiProvider&quot;
+    AiSystem --&gt; "0..1" AiProvider : isProvidedBy
+    click AiProvider href "../AiProvider"
 
 
       AiSystem : name
@@ -4750,8 +4750,8 @@
 
 
 
-    AiSystem --&gt; &quot;*&quot; AiTask : performsTask
-    click AiTask href &quot;../AiTask&quot;
+    AiSystem --&gt; "*" AiTask : performsTask
+    click AiTask href "../AiTask"
 
 
       AiSystem : producer
@@ -4759,12 +4759,13 @@
 
 
 
-    AiSystem --&gt; &quot;0..1&quot; Organization : producer
-    click Organization href &quot;../Organization&quot;
+    AiSystem --&gt; "0..1" Organization : producer
+    click Organization href "../Organization"
 
 
       AiSystem : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

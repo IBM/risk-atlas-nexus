@@ -4662,16 +4662,17 @@
 <li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
 </ul>
 <p>URI: <a href="http://schema.org/Statement">schema:Statement</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class Fact
-    click Fact href &quot;../Fact&quot;
+    click Fact href "../Fact"
       Fact &lt;|-- AiEvalResult
-        click AiEvalResult href &quot;../AiEvalResult&quot;
+        click AiEvalResult href "../AiEvalResult"
 
       Fact : evidence
 
       Fact : value
-</code></pre></div>
+
+</code></pre>
 <!-- no inheritance hierarchy -->
 
 <h2 id="slots">Slots</h2>

@@ -4659,16 +4659,16 @@
 <h1 id="class-container">Class: Container</h1>
 <p><em>An umbrella object that holds the ontology class instances</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/Container">nexus:Container</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class Container
-    click Container href &quot;../Container&quot;
+    click Container href "../Container"
       Container : actions
 
 
 
 
-    Container --&gt; &quot;*&quot; Action : actions
-    click Action href &quot;../Action&quot;
+    Container --&gt; "*" Action : actions
+    click Action href "../Action"
 
 
       Container : aimodelfamilies
@@ -4676,8 +4676,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; LargeLanguageModelFamily : aimodelfamilies
-    click LargeLanguageModelFamily href &quot;../LargeLanguageModelFamily&quot;
+    Container --&gt; "*" LargeLanguageModelFamily : aimodelfamilies
+    click LargeLanguageModelFamily href "../LargeLanguageModelFamily"
 
 
       Container : aimodels
@@ -4685,8 +4685,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; LargeLanguageModel : aimodels
-    click LargeLanguageModel href &quot;../LargeLanguageModel&quot;
+    Container --&gt; "*" LargeLanguageModel : aimodels
+    click LargeLanguageModel href "../LargeLanguageModel"
 
 
       Container : aitasks
@@ -4694,8 +4694,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; AiTask : aitasks
-    click AiTask href &quot;../AiTask&quot;
+    Container --&gt; "*" AiTask : aitasks
+    click AiTask href "../AiTask"
 
 
       Container : datasets
@@ -4703,8 +4703,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; Dataset : datasets
-    click Dataset href &quot;../Dataset&quot;
+    Container --&gt; "*" Dataset : datasets
+    click Dataset href "../Dataset"
 
 
       Container : documents
@@ -4712,8 +4712,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; Documentation : documents
-    click Documentation href &quot;../Documentation&quot;
+    Container --&gt; "*" Documentation : documents
+    click Documentation href "../Documentation"
 
 
       Container : evaluations
@@ -4721,8 +4721,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; AiEval : evaluations
-    click AiEval href &quot;../AiEval&quot;
+    Container --&gt; "*" AiEval : evaluations
+    click AiEval href "../AiEval"
 
 
       Container : licenses
@@ -4730,8 +4730,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; License : licenses
-    click License href &quot;../License&quot;
+    Container --&gt; "*" License : licenses
+    click License href "../License"
 
 
       Container : modalities
@@ -4739,8 +4739,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; Modality : modalities
-    click Modality href &quot;../Modality&quot;
+    Container --&gt; "*" Modality : modalities
+    click Modality href "../Modality"
 
 
       Container : organizations
@@ -4748,8 +4748,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; Organization : organizations
-    click Organization href &quot;../Organization&quot;
+    Container --&gt; "*" Organization : organizations
+    click Organization href "../Organization"
 
 
       Container : riskcontrols
@@ -4757,8 +4757,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; RiskControl : riskcontrols
-    click RiskControl href &quot;../RiskControl&quot;
+    Container --&gt; "*" RiskControl : riskcontrols
+    click RiskControl href "../RiskControl"
 
 
       Container : riskgroups
@@ -4766,8 +4766,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; RiskGroup : riskgroups
-    click RiskGroup href &quot;../RiskGroup&quot;
+    Container --&gt; "*" RiskGroup : riskgroups
+    click RiskGroup href "../RiskGroup"
 
 
       Container : risks
@@ -4775,8 +4775,8 @@
 
 
 
-    Container --&gt; &quot;*&quot; Risk : risks
-    click Risk href &quot;../Risk&quot;
+    Container --&gt; "*" Risk : risks
+    click Risk href "../Risk"
 
 
       Container : taxonomies
@@ -4784,9 +4784,11 @@
 
 
 
-    Container --&gt; &quot;*&quot; RiskTaxonomy : taxonomies
-    click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
-</code></pre></div>
+    Container --&gt; "*" RiskTaxonomy : taxonomies
+    click RiskTaxonomy href "../RiskTaxonomy"
+
+
+</code></pre>
 <!-- no inheritance hierarchy -->
 
 <h2 id="slots">Slots</h2>

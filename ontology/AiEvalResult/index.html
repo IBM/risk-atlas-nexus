@@ -4695,13 +4695,13 @@
 <h1 id="class-aievalresult">Class: AiEvalResult</h1>
 <p><em>The result of an evaluation for a specific AI model.</em></p>
 <p>URI: <a href="https://www.w3.org/TR/vocab-dqv/QualityMeasurement">dqv:QualityMeasurement</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiEvalResult
-    click AiEvalResult href &quot;../AiEvalResult&quot;
+    click AiEvalResult href "../AiEvalResult"
       Fact &lt;|-- AiEvalResult
-        click Fact href &quot;../Fact&quot;
+        click Fact href "../Fact"
       Entity &lt;|-- AiEvalResult
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       AiEvalResult : dateCreated
 
@@ -4718,8 +4718,8 @@
 
 
 
-    AiEvalResult --&gt; &quot;0..1&quot; AiEval : isResultOf
-    click AiEval href &quot;../AiEval&quot;
+    AiEvalResult --&gt; "0..1" AiEval : isResultOf
+    click AiEval href "../AiEval"
 
 
       AiEvalResult : name
@@ -4727,7 +4727,8 @@
       AiEvalResult : url
 
       AiEvalResult : value
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

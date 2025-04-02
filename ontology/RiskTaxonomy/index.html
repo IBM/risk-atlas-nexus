@@ -4695,11 +4695,11 @@
 <h1 id="class-risktaxonomy">Class: RiskTaxonomy</h1>
 <p><em>A taxonomy of AI system related risks</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/RiskTaxonomy">nexus:RiskTaxonomy</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class RiskTaxonomy
-    click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
+    click RiskTaxonomy href "../RiskTaxonomy"
       Entity &lt;|-- RiskTaxonomy
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       RiskTaxonomy : dateCreated
 
@@ -4712,8 +4712,8 @@
 
 
 
-    RiskTaxonomy --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    RiskTaxonomy --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       RiskTaxonomy : hasLicense
@@ -4721,8 +4721,8 @@
 
 
 
-    RiskTaxonomy --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    RiskTaxonomy --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       RiskTaxonomy : id
@@ -4732,7 +4732,8 @@
       RiskTaxonomy : url
 
       RiskTaxonomy : version
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

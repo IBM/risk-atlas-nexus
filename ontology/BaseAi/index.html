@@ -4680,17 +4680,17 @@
 <li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
 </ul>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/BaseAi">nexus:BaseAi</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class BaseAi
-    click BaseAi href &quot;../BaseAi&quot;
+    click BaseAi href "../BaseAi"
       Entity &lt;|-- BaseAi
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
 
       BaseAi &lt;|-- AiSystem
-        click AiSystem href &quot;../AiSystem&quot;
+        click AiSystem href "../AiSystem"
       BaseAi &lt;|-- AiModel
-        click AiModel href &quot;../AiModel&quot;
+        click AiModel href "../AiModel"
 
 
       BaseAi : dateCreated
@@ -4704,8 +4704,8 @@
 
 
 
-    BaseAi --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    BaseAi --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       BaseAi : hasLicense
@@ -4713,8 +4713,8 @@
 
 
 
-    BaseAi --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    BaseAi --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       BaseAi : hasModelCard
@@ -4726,8 +4726,8 @@
 
 
 
-    BaseAi --&gt; &quot;0..1&quot; AiProvider : isProvidedBy
-    click AiProvider href &quot;../AiProvider&quot;
+    BaseAi --&gt; "0..1" AiProvider : isProvidedBy
+    click AiProvider href "../AiProvider"
 
 
       BaseAi : name
@@ -4737,8 +4737,8 @@
 
 
 
-    BaseAi --&gt; &quot;*&quot; AiTask : performsTask
-    click AiTask href &quot;../AiTask&quot;
+    BaseAi --&gt; "*" AiTask : performsTask
+    click AiTask href "../AiTask"
 
 
       BaseAi : producer
@@ -4746,12 +4746,13 @@
 
 
 
-    BaseAi --&gt; &quot;0..1&quot; Organization : producer
-    click Organization href &quot;../Organization&quot;
+    BaseAi --&gt; "0..1" Organization : producer
+    click Organization href "../Organization"
 
 
       BaseAi : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

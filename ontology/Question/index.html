@@ -4677,11 +4677,11 @@
 <h1 id="class-question">Class: Question</h1>
 <p><em>An evaluation where a question has to be answered</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/Question">nexus:Question</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class Question
-    click Question href &quot;../Question&quot;
+    click Question href "../Question"
       AiEval &lt;|-- Question
-        click AiEval href &quot;../AiEval&quot;
+        click AiEval href "../AiEval"
 
       Question : bestValue
 
@@ -4696,8 +4696,8 @@
 
 
 
-    Question --&gt; &quot;*&quot; Dataset : hasDataset
-    click Dataset href &quot;../Dataset&quot;
+    Question --&gt; "*" Dataset : hasDataset
+    click Dataset href "../Dataset"
 
 
       Question : hasDocumentation
@@ -4705,8 +4705,8 @@
 
 
 
-    Question --&gt; &quot;*&quot; Documentation : hasDocumentation
-    click Documentation href &quot;../Documentation&quot;
+    Question --&gt; "*" Documentation : hasDocumentation
+    click Documentation href "../Documentation"
 
 
       Question : hasLicense
@@ -4714,8 +4714,8 @@
 
 
 
-    Question --&gt; &quot;0..1&quot; License : hasLicense
-    click License href &quot;../License&quot;
+    Question --&gt; "0..1" License : hasLicense
+    click License href "../License"
 
 
       Question : hasRelatedRisk
@@ -4723,8 +4723,8 @@
 
 
 
-    Question --&gt; &quot;*&quot; Risk : hasRelatedRisk
-    click Risk href &quot;../Risk&quot;
+    Question --&gt; "*" Risk : hasRelatedRisk
+    click Risk href "../Risk"
 
 
       Question : hasUnitxtCard
@@ -4736,7 +4736,8 @@
       Question : text
 
       Question : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

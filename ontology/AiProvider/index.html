@@ -4695,11 +4695,11 @@
 <h1 id="class-aiprovider">Class: AiProvider</h1>
 <p><em>A provider under the AI Act is defined by Article 3(3) as a natural or legal person or body that develops an AI system or general-purpose AI model or has an AI system or general-purpose AI model developed; and places that system or model on the market, or puts that system into service, under the provider's own name or trademark, whether for payment or free for charge.</em></p>
 <p>URI: <a href="https://w3id.org/airo#AIProvider">airo:AIProvider</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class AiProvider
-    click AiProvider href &quot;../AiProvider&quot;
+    click AiProvider href "../AiProvider"
       Organization &lt;|-- AiProvider
-        click Organization href &quot;../Organization&quot;
+        click Organization href "../Organization"
 
       AiProvider : dateCreated
 
@@ -4712,8 +4712,8 @@
 
 
 
-    AiProvider --&gt; &quot;0..1&quot; License : grants_license
-    click License href &quot;../License&quot;
+    AiProvider --&gt; "0..1" License : grants_license
+    click License href "../License"
 
 
       AiProvider : id
@@ -4721,7 +4721,8 @@
       AiProvider : name
 
       AiProvider : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>

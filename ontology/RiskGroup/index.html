@@ -4695,21 +4695,21 @@
 <h1 id="class-riskgroup">Class: RiskGroup</h1>
 <p><em>A group of AI system related risks that are part of a risk taxonomy.</em></p>
 <p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/RiskGroup">nexus:RiskGroup</a></p>
-<div class="highlight"><pre><span></span><code> classDiagram
+<pre class="mermaid"><code> classDiagram
     class RiskGroup
-    click RiskGroup href &quot;../RiskGroup&quot;
+    click RiskGroup href "../RiskGroup"
       RiskConcept &lt;|-- RiskGroup
-        click RiskConcept href &quot;../RiskConcept&quot;
+        click RiskConcept href "../RiskConcept"
       Entity &lt;|-- RiskGroup
-        click Entity href &quot;../Entity&quot;
+        click Entity href "../Entity"
 
       RiskGroup : broadMatch
 
 
 
 
-    RiskGroup --&gt; &quot;*&quot; Any : broadMatch
-    click Any href &quot;../Any&quot;
+    RiskGroup --&gt; "*" Any : broadMatch
+    click Any href "../Any"
 
 
       RiskGroup : closeMatch
@@ -4717,8 +4717,8 @@
 
 
 
-    RiskGroup --&gt; &quot;*&quot; Any : closeMatch
-    click Any href &quot;../Any&quot;
+    RiskGroup --&gt; "*" Any : closeMatch
+    click Any href "../Any"
 
 
       RiskGroup : dateCreated
@@ -4732,8 +4732,8 @@
 
 
 
-    RiskGroup --&gt; &quot;*&quot; Any : exactMatch
-    click Any href &quot;../Any&quot;
+    RiskGroup --&gt; "*" Any : exactMatch
+    click Any href "../Any"
 
 
       RiskGroup : hasPart
@@ -4741,8 +4741,8 @@
 
 
 
-    RiskGroup --&gt; &quot;*&quot; Risk : hasPart
-    click Risk href &quot;../Risk&quot;
+    RiskGroup --&gt; "*" Risk : hasPart
+    click Risk href "../Risk"
 
 
       RiskGroup : id
@@ -4752,8 +4752,8 @@
 
 
 
-    RiskGroup --&gt; &quot;0..1&quot; RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href &quot;../RiskTaxonomy&quot;
+    RiskGroup --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+    click RiskTaxonomy href "../RiskTaxonomy"
 
 
       RiskGroup : isDetectedBy
@@ -4761,8 +4761,8 @@
 
 
 
-    RiskGroup --&gt; &quot;*&quot; RiskControl : isDetectedBy
-    click RiskControl href &quot;../RiskControl&quot;
+    RiskGroup --&gt; "*" RiskControl : isDetectedBy
+    click RiskControl href "../RiskControl"
 
 
       RiskGroup : name
@@ -4772,8 +4772,8 @@
 
 
 
-    RiskGroup --&gt; &quot;*&quot; Any : narrowMatch
-    click Any href &quot;../Any&quot;
+    RiskGroup --&gt; "*" Any : narrowMatch
+    click Any href "../Any"
 
 
       RiskGroup : relatedMatch
@@ -4781,12 +4781,13 @@
 
 
 
-    RiskGroup --&gt; &quot;*&quot; Any : relatedMatch
-    click Any href &quot;../Any&quot;
+    RiskGroup --&gt; "*" Any : relatedMatch
+    click Any href "../Any"
 
 
       RiskGroup : url
-</code></pre></div>
+
+</code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
