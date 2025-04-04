@@ -23,7 +23,7 @@ class InferenceEngineType(str, Enum):
 class MappingMethod(str, Enum):
     """Enum to contain possible values for risk mapping methods"""
     SEMANTIC = "SEMANTIC"
-    RITS_INFERENCE = "RITS_INFERENCE"
+    INFERENCE = "INFERENCE"
 
     @classmethod
     def list(cls):

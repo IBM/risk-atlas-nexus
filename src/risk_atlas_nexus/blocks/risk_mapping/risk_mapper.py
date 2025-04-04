@@ -1,10 +1,14 @@
 import datetime
+import json
 import re
 from typing import List
 from txtai import Embeddings
 from sssom_schema import Mapping, EntityReference
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 from risk_atlas_nexus.blocks.inference import InferenceEngine
+from risk_atlas_nexus.blocks.inference.response_schema import LIST_OF_STR_SCHEMA
+from risk_atlas_nexus.blocks.inference.templates import RISK_IDENTIFICATION_TEMPLATE
+from risk_atlas_nexus.blocks.risk_detector.base import RISK_IDENTIFICATION_EXAMPLES
 from risk_atlas_nexus.blocks.risk_mapping import RiskMappingBase
 from risk_atlas_nexus.metadata_base import MappingMethod
 
@@ -68,14 +72,15 @@ class RiskMapper(RiskMappingBase):
         """
         mappings = []
        
+        data = []
+        taxonomy_for_mapping= {}
+        for risk in existing_risks:
+            # this embedding is just using name and description, not any other attributes 
+            data.append("ID: " + risk.id + ", Name: " + risk.name + ", Description: " + risk.description)
+            taxonomy_for_mapping[risk.id] = risk.isDefinedByTaxonomy
+            
         if mapping_method == MappingMethod.SEMANTIC:
             # create an embedding with existing risk data
-            data = []
-            taxonomy_for_mapping= {}
-            for risk in existing_risks:
-                # this embedding is just using name and description, not any other attributes 
-                data.append("ID: " + risk.id + ", Name: " + risk.name + ", Description: " + risk.description)
-                taxonomy_for_mapping[risk.id] = risk.isDefinedByTaxonomy
             
             embeddings = Embeddings(path="sentence-transformers/nli-mpnet-base-v2")
             embeddings.index(data)
@@ -90,7 +95,7 @@ class RiskMapper(RiskMappingBase):
                 result = re.search('ID:(.*), Name', s)
                 result2 = re.search('Name:(.*), Description:', s)
                 
-                mapping = Mapping(subject_id= self._format_with_curie(new_prefix, nr.id), 
+                mapping = Mapping(subject_id= self._format_with_curie(nr.isDefinedByTaxonomy, nr.id), 
                                   subject_label=nr.name, 
                                   predicate_id=self._bucket_semantic_score(uid),
                                   object_id=self._format_with_curie(taxonomy_for_mapping[result.group(1).strip()], result.group(1)),
@@ -103,8 +108,56 @@ class RiskMapper(RiskMappingBase):
                 mappings.append(mapping)
 
 
-        elif mapping_method == MappingMethod.RITS_INFERENCE:
-            pass
+        elif mapping_method == MappingMethod.INFERENCE:
+            # this query is just using name and description, not any other attributes 
+            usecases = [("ID: " + nr.id + ", Name: " + nr.name + ", Description: " + nr.description) for nr in new_risks]
+            
+            # using a prompt without the template examples, as they maybe do not exist for all taxonomies 
+            prompts = [
+                self.inference_engine.prepare_prompt(
+                    prompt_template=RISK_IDENTIFICATION_TEMPLATE,
+                    usecase=usecase,
+                    risks=json.dumps(
+                        [
+                            {"category": risk.name, "description": risk.description}
+                            for risk in existing_risks
+                        ],
+                        indent=4,
+                    ),
+                )
+                for usecase in usecases
+            ]
 
+            LIST_OF_STR_SCHEMA["items"]["enum"] = [risk.name for risk in existing_risks]
+            inference_response = self.inference_engine.generate(
+                prompts,
+                response_format=LIST_OF_STR_SCHEMA,
+                postprocessors=["list_of_str"],
+            )
+
+            rls =  [
+                    list(
+                        filter(
+                            lambda risk: risk.name in inference.prediction,
+                            existing_risks,
+                        )
+                    )
+                    for inference in inference_response
+            ]
+
+          
+            for index, rl, in enumerate(rls):
+                for risk in rl:
+                    mapping = Mapping(subject_id= self._format_with_curie(new_risks[index].isDefinedByTaxonomy, new_risks[index].id), 
+                                    subject_label=new_risks[index].name, 
+                                    predicate_id="skos:relatedMatch" ,  #  opted for this here as there is no way to assess relatedness of match with current template
+                                    object_id=self._format_with_curie(taxonomy_for_mapping[risk.id.strip()], risk.id),
+                                    object_label=risk.name,
+                                    mapping_justification="semapv:LLMBasedMatching",
+                                    mapping_date=datetime.date.today(),
+                                    author_id="Risk_Atlas_Nexus_System",
+                                    comment="Autogenerated via LLM based matching script")
+                    mappings.append(mapping)
+        
        
         return mappings

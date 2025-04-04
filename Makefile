@@ -53,5 +53,8 @@ regenerate_owl_schema:
 regenerate_risk_atlas_as_tex:
 	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py
 
+lint_schema:
+	linkml-lint $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml 
+	
 test:
 	pytest

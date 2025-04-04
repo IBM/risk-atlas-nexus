@@ -1,0 +1,1136 @@
+risks:
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - credo-risk-014
+- id: credo-risk-014
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - granite-harm-engagement
+- id: granite-harm-engagement
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - granite-sexual-content
+- id: granite-sexual-content
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - granite-unethical-behavior
+- id: granite-unethical-behavior
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - granite-unethical-behavior
+- id: granite-unethical-behavior
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - atlas-nonconsensual-use
+- id: atlas-nonconsensual-use
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-child-sexual-exploitation
+  relatedMatch:
+  - nist-obscene-degrading-and-or-abusive-content
+- id: nist-obscene-degrading-and-or-abusive-content
+  relatedMatch:
+  - ail-child-sexual-exploitation
+- id: ail-defamation
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - granite-harm-engagement
+- id: granite-harm-engagement
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - atlas-dangerous-use
+- id: atlas-dangerous-use
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - atlas-nonconsensual-use
+- id: atlas-nonconsensual-use
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - mit-ai-risk-subdomain-3.1
+- id: mit-ai-risk-subdomain-3.1
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - mit-ai-risk-subdomain-3.1
+- id: mit-ai-risk-subdomain-3.1
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - mit-ai-risk-subdomain-4.1
+- id: mit-ai-risk-subdomain-4.1
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - mit-ai-risk-subdomain-4.3
+- id: mit-ai-risk-subdomain-4.3
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - nist-harmful-bias-or-homogenization
+- id: nist-harmful-bias-or-homogenization
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - nist-information-integrity
+- id: nist-information-integrity
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - nist-intellectual-property
+- id: nist-intellectual-property
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - nist-obscene-degrading-and-or-abusive-content
+- id: nist-obscene-degrading-and-or-abusive-content
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - llm022025-sensitive-information-disclosure
+- id: llm022025-sensitive-information-disclosure
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - llm092025-misinformation
+- id: llm092025-misinformation
+  relatedMatch:
+  - ail-defamation
+- id: ail-defamation
+  relatedMatch:
+  - llm092025-misinformation
+- id: llm092025-misinformation
+  relatedMatch:
+  - ail-defamation
+- id: ail-hate
+  closeMatch:
+  - nist-dangerous-violent-or-hateful-content
+- id: nist-dangerous-violent-or-hateful-content
+  closeMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - credo-risk-013
+- id: credo-risk-013
+  relatedMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - granite-harm-engagement
+- id: granite-harm-engagement
+  relatedMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - atlas-dangerous-use
+- id: atlas-dangerous-use
+  relatedMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-hate
+- id: ail-hate
+  relatedMatch:
+  - nist-dangerous-violent-or-hateful-content
+- id: nist-dangerous-violent-or-hateful-content
+  relatedMatch:
+  - ail-hate
+- id: ail-indiscriminate-weapons-cbrne
+  closeMatch:
+  - nist-cbrn-information-or-capabilities
+- id: nist-cbrn-information-or-capabilities
+  closeMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  closeMatch:
+  - nist-cbrn-information-or-capabilities
+- id: nist-cbrn-information-or-capabilities
+  closeMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - credo-risk-027
+- id: credo-risk-027
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - granite-violence
+- id: granite-violence
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - granite-violence
+- id: granite-violence
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - mit-ai-risk-subdomain-4.2
+- id: mit-ai-risk-subdomain-4.2
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-indiscriminate-weapons-cbrne
+  relatedMatch:
+  - nist-dangerous-violent-or-hateful-content
+- id: nist-dangerous-violent-or-hateful-content
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+- id: ail-intellectual-property
+  closeMatch:
+  - nist-intellectual-property
+- id: nist-intellectual-property
+  closeMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - credo-risk-002
+- id: credo-risk-002
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - credo-risk-005
+- id: credo-risk-005
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - granite-harm-engagement
+- id: granite-harm-engagement
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - atlas-confidential-information-in-data
+- id: atlas-confidential-information-in-data
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - atlas-data-privacy-rights
+- id: atlas-data-privacy-rights
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - atlas-impact-on-human-agency
+- id: atlas-impact-on-human-agency
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - atlas-ip-information-in-prompt
+- id: atlas-ip-information-in-prompt
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - atlas-nonconsensual-use
+- id: atlas-nonconsensual-use
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.1
+- id: mit-ai-risk-subdomain-2.1
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.1
+- id: mit-ai-risk-subdomain-2.1
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - nist-data-privacy
+- id: nist-data-privacy
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - nist-information-integrity
+- id: nist-information-integrity
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - nist-intellectual-property
+- id: nist-intellectual-property
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - llm022025-sensitive-information-disclosure
+- id: llm022025-sensitive-information-disclosure
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - llm022025-sensitive-information-disclosure
+- id: llm022025-sensitive-information-disclosure
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-intellectual-property
+  relatedMatch:
+  - llm052025-improper-output-handling
+- id: llm052025-improper-output-handling
+  relatedMatch:
+  - ail-intellectual-property
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - credo-risk-026
+- id: credo-risk-026
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - granite-unethical-behavior
+- id: granite-unethical-behavior
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.1
+- id: mit-ai-risk-subdomain-2.1
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.2
+- id: mit-ai-risk-subdomain-2.2
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-4.1
+- id: mit-ai-risk-subdomain-4.1
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-4.2
+- id: mit-ai-risk-subdomain-4.2
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-4.3
+- id: mit-ai-risk-subdomain-4.3
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-4.3
+- id: mit-ai-risk-subdomain-4.3
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-5.1
+- id: mit-ai-risk-subdomain-5.1
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-5.2
+- id: mit-ai-risk-subdomain-5.2
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-6.5
+- id: mit-ai-risk-subdomain-6.5
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-6.6
+- id: mit-ai-risk-subdomain-6.6
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-7.1
+- id: mit-ai-risk-subdomain-7.1
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-7.2
+- id: mit-ai-risk-subdomain-7.2
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - nist-dangerous-violent-or-hateful-content
+- id: nist-dangerous-violent-or-hateful-content
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - nist-information-integrity
+- id: nist-information-integrity
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - nist-information-security
+- id: nist-information-security
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - nist-intellectual-property
+- id: nist-intellectual-property
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-nonviolent-crimes
+  relatedMatch:
+  - llm022025-sensitive-information-disclosure
+- id: llm022025-sensitive-information-disclosure
+  relatedMatch:
+  - ail-nonviolent-crimes
+- id: ail-privacy
+  relatedMatch:
+  - credo-risk-036
+- id: credo-risk-036
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - credo-risk-037
+- id: credo-risk-037
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - credo-risk-037
+- id: credo-risk-037
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - atlas-confidential-data-in-prompt
+- id: atlas-confidential-data-in-prompt
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - atlas-data-contamination
+- id: atlas-data-contamination
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - atlas-nonconsensual-use
+- id: atlas-nonconsensual-use
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - atlas-personal-information-in-data
+- id: atlas-personal-information-in-data
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.1
+- id: mit-ai-risk-subdomain-2.1
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.1
+- id: mit-ai-risk-subdomain-2.1
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.2
+- id: mit-ai-risk-subdomain-2.2
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - nist-data-privacy
+- id: nist-data-privacy
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - nist-data-privacy
+- id: nist-data-privacy
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - nist-information-integrity
+- id: nist-information-integrity
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - nist-information-security
+- id: nist-information-security
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - nist-intellectual-property
+- id: nist-intellectual-property
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - llm022025-sensitive-information-disclosure
+- id: llm022025-sensitive-information-disclosure
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - llm022025-sensitive-information-disclosure
+- id: llm022025-sensitive-information-disclosure
+  relatedMatch:
+  - ail-privacy
+- id: ail-privacy
+  relatedMatch:
+  - llm052025-improper-output-handling
+- id: llm052025-improper-output-handling
+  relatedMatch:
+  - ail-privacy
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - credo-risk-002
+- id: credo-risk-002
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - credo-risk-003
+- id: credo-risk-003
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - credo-risk-014
+- id: credo-risk-014
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - granite-sexual-content
+- id: granite-sexual-content
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - granite-sexual-content
+- id: granite-sexual-content
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - atlas-nonconsensual-use
+- id: atlas-nonconsensual-use
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - atlas-toxic-output
+- id: atlas-toxic-output
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sex-related-crimes
+  relatedMatch:
+  - nist-obscene-degrading-and-or-abusive-content
+- id: nist-obscene-degrading-and-or-abusive-content
+  relatedMatch:
+  - ail-sex-related-crimes
+- id: ail-sexual-content
+  relatedMatch:
+  - credo-risk-014
+- id: credo-risk-014
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - granite-profanity
+- id: granite-profanity
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - granite-sexual-content
+- id: granite-sexual-content
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - granite-sexual-content
+- id: granite-sexual-content
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - nist-obscene-degrading-and-or-abusive-content
+- id: nist-obscene-degrading-and-or-abusive-content
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-sexual-content
+  relatedMatch:
+  - nist-obscene-degrading-and-or-abusive-content
+- id: nist-obscene-degrading-and-or-abusive-content
+  relatedMatch:
+  - ail-sexual-content
+- id: ail-specialized-advice
+  relatedMatch:
+  - credo-risk-005
+- id: credo-risk-005
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - credo-risk-027
+- id: credo-risk-027
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - credo-risk-033
+- id: credo-risk-033
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - credo-risk-036
+- id: credo-risk-036
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-answer-relevance
+- id: granite-answer-relevance
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-evasiveness
+- id: granite-evasiveness
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-groundedness
+- id: granite-groundedness
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-harm-engagement
+- id: granite-harm-engagement
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-relevance
+- id: granite-relevance
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-social-bias
+- id: granite-social-bias
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - granite-unethical-behavior
+- id: granite-unethical-behavior
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - atlas-incomplete-advice
+- id: atlas-incomplete-advice
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - atlas-incomplete-advice
+- id: atlas-incomplete-advice
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - atlas-model-usage-rights
+- id: atlas-model-usage-rights
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - mit-ai-risk-subdomain-5.1
+- id: mit-ai-risk-subdomain-5.1
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - nist-data-privacy
+- id: nist-data-privacy
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - nist-information-integrity
+- id: nist-information-integrity
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - llm092025-misinformation
+- id: llm092025-misinformation
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-specialized-advice
+  relatedMatch:
+  - llm092025-misinformation
+- id: llm092025-misinformation
+  relatedMatch:
+  - ail-specialized-advice
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - credo-risk-003
+- id: credo-risk-003
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - credo-risk-007
+- id: credo-risk-007
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - credo-risk-009
+- id: credo-risk-009
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - credo-risk-010
+- id: credo-risk-010
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - credo-risk-033
+- id: credo-risk-033
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - credo-risk-036
+- id: credo-risk-036
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - credo-risk-037
+- id: credo-risk-037
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - granite-answer-relevance
+- id: granite-answer-relevance
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - granite-groundedness
+- id: granite-groundedness
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - granite-harm-engagement
+- id: granite-harm-engagement
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - granite-sexual-content
+- id: granite-sexual-content
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - atlas-data-curation
+- id: atlas-data-curation
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - atlas-nonconsensual-use
+- id: atlas-nonconsensual-use
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.3
+- id: mit-ai-risk-subdomain-1.3
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - mit-ai-risk-subdomain-2.2
+- id: mit-ai-risk-subdomain-2.2
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - nist-dangerous-violent-or-hateful-content
+- id: nist-dangerous-violent-or-hateful-content
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - nist-harmful-bias-or-homogenization
+- id: nist-harmful-bias-or-homogenization
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - nist-human-ai-configuration
+- id: nist-human-ai-configuration
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-suicide-and-self-harm
+  relatedMatch:
+  - nist-obscene-degrading-and-or-abusive-content
+- id: nist-obscene-degrading-and-or-abusive-content
+  relatedMatch:
+  - ail-suicide-and-self-harm
+- id: ail-violent-crimes
+  relatedMatch:
+  - credo-risk-015
+- id: credo-risk-015
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - granite-groundedness
+- id: granite-groundedness
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - granite-guardian-harm
+- id: granite-guardian-harm
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - granite-unethical-behavior
+- id: granite-unethical-behavior
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - granite-violence
+- id: granite-violence
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - granite-violence
+- id: granite-violence
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - atlas-dangerous-use
+- id: atlas-dangerous-use
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - atlas-harmful-output
+- id: atlas-harmful-output
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - atlas-toxic-output
+- id: atlas-toxic-output
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - mit-ai-risk-subdomain-1.2
+- id: mit-ai-risk-subdomain-1.2
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - nist-cbrn-information-or-capabilities
+- id: nist-cbrn-information-or-capabilities
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - nist-dangerous-violent-or-hateful-content
+- id: nist-dangerous-violent-or-hateful-content
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - nist-obscene-degrading-and-or-abusive-content
+- id: nist-obscene-degrading-and-or-abusive-content
+  relatedMatch:
+  - ail-violent-crimes
+- id: ail-violent-crimes
+  relatedMatch:
+  - llm022025-sensitive-information-disclosure
+- id: llm022025-sensitive-information-disclosure
+  relatedMatch:
+  - ail-violent-crimes
+

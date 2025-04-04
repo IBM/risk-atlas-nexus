@@ -923,6 +923,8 @@ risks:
   - nist-data-privacy
   - nist-intellectual-property
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - ail-specialized-advice
   tag: model-usage-rights
   type: non-technical
   descriptor: traditional
@@ -960,6 +962,9 @@ risks:
   - llm092025-misinformation
   - nist-information-integrity
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - ail-specialized-advice
+  - ail-specialized-advice
   tag: incomplete-advice
   type: output
   descriptor: specific
@@ -1037,6 +1042,8 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-data-privacy
+  relatedMatch:
+  - ail-privacy
   tag: personal-information-in-data
   type: training-data
   descriptor: traditional
@@ -1241,6 +1248,8 @@ risks:
   - llm032025-supply-chain
   - nist-information-security
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - ail-privacy
   tag: data-contamination
   type: training-data
   descriptor: amplified
@@ -1516,6 +1525,8 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-intellectual-property
+  relatedMatch:
+  - ail-privacy
   tag: confidential-data-in-prompt
   type: inference
   descriptor: specific
@@ -1534,6 +1545,8 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-data-privacy
+  relatedMatch:
+  - ail-intellectual-property
   tag: data-privacy-rights
   type: training-data
   descriptor: amplified
@@ -1551,6 +1564,8 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-data-privacy
+  relatedMatch:
+  - ail-intellectual-property
   tag: ip-information-in-prompt
   type: inference
   descriptor: specific
@@ -1768,6 +1783,10 @@ risks:
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
   - nist-cbrn-information-or-capabilities
+  relatedMatch:
+  - ail-defamation
+  - ail-hate
+  - ail-violent-crimes
   tag: dangerous-use
   type: output
   descriptor: specific
@@ -1827,6 +1846,8 @@ risks:
   - llm052025-improper-output-handling
   relatedMatch:
   - granite-profanity
+  - ail-sex-related-crimes
+  - ail-violent-crimes
   tag: toxic-output
   type: output
   descriptor: specific
@@ -1889,6 +1910,19 @@ risks:
   - granite-harm-engagement
   - granite-evasiveness
   - granite-violence
+  - ail-child-sexual-exploitation
+  - ail-child-sexual-exploitation
+  - ail-hate
+  - ail-indiscriminate-weapons-cbrne
+  - ail-indiscriminate-weapons-cbrne
+  - ail-nonviolent-crimes
+  - ail-sex-related-crimes
+  - ail-sexual-content
+  - ail-sexual-content
+  - ail-suicide-and-self-harm
+  - ail-suicide-and-self-harm
+  - ail-violent-crimes
+  - ail-violent-crimes
   - nist-cbrn-information-or-capabilities
   - nist-data-privacy
   - nist-obscene-degrading-and-or-abusive-content
@@ -1909,6 +1943,8 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-intellectual-property
+  relatedMatch:
+  - ail-intellectual-property
   tag: confidential-information-in-data
   type: training-data
   descriptor: amplified
@@ -1966,6 +2002,8 @@ risks:
   broadMatch:
   - llm092025-misinformation
   - nist-information-integrity
+  relatedMatch:
+  - ail-intellectual-property
   tag: impact-on-human-agency
   type: non-technical
   descriptor: amplified
@@ -2009,6 +2047,13 @@ risks:
   broadMatch:
   - llm092025-misinformation
   - nist-data-privacy
+  relatedMatch:
+  - ail-child-sexual-exploitation
+  - ail-defamation
+  - ail-intellectual-property
+  - ail-privacy
+  - ail-sex-related-crimes
+  - ail-suicide-and-self-harm
   tag: nonconsensual-use
   type: output
   descriptor: amplified
@@ -2076,6 +2121,8 @@ risks:
   broadMatch:
   - llm032025-supply-chain
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - ail-suicide-and-self-harm
   tag: data-curation
   type: training-data
   descriptor: amplified
@@ -2154,9 +2201,13 @@ risks:
   - MG-3.2-009
   - MG-4.1-002
   isDefinedByTaxonomy: nist-ai-rmf
+  closeMatch:
+  - ail-indiscriminate-weapons-cbrne
+  - ail-indiscriminate-weapons-cbrne
   narrowMatch:
   - atlas-dangerous-use
   relatedMatch:
+  - ail-violent-crimes
   - atlas-harmful-output
 - id: nist-confabulation
   name: Confabulation
@@ -2224,10 +2275,17 @@ risks:
   - MG-4.2-002
   isDefinedByTaxonomy: nist-ai-rmf
   closeMatch:
+  - ail-hate
   - atlas-harmful-output
   - atlas-toxic-output
   narrowMatch:
   - atlas-harmful-code-generation
+  relatedMatch:
+  - ail-hate
+  - ail-indiscriminate-weapons-cbrne
+  - ail-nonviolent-crimes
+  - ail-suicide-and-self-harm
+  - ail-violent-crimes
 - id: nist-data-privacy
   name: Data Privacy
   description: Impacts due to leakage and unauthorized use, disclosure, or de-anonymization
@@ -2278,6 +2336,10 @@ risks:
   - atlas-personal-information-in-prompt
   - atlas-reidentification
   relatedMatch:
+  - ail-intellectual-property
+  - ail-privacy
+  - ail-privacy
+  - ail-specialized-advice
   - atlas-harmful-output
 - id: nist-environmental-impacts
   name: Environmental Impacts
@@ -2289,7 +2351,7 @@ risks:
 - id: nist-harmful-bias-or-homogenization
   name: Harmful Bias or Homogenization
   description: Amplification and exacerbation of historical, societal, and systemic
-    biases; performance disparities8 between sub-groups or languages, possibly due
+    biases; performance disparities between sub-groups or languages, possibly due
     to non-representative training data, that result in discrimination, amplification
     of biases, or incorrect presumptions about performance; undesired homogeneity
     that skews system or model outputs, which may be erroneous, lead to ill-founded
@@ -2302,6 +2364,9 @@ risks:
   - atlas-output-bias
   - atlas-spreading-toxicity
   - atlas-unrepresentative-data
+  relatedMatch:
+  - ail-defamation
+  - ail-suicide-and-self-harm
 - id: nist-human-ai-configuration
   name: Human-AI Configuration
   description: Arrangements of or interactions between a human and an AI system which
@@ -2369,6 +2434,8 @@ risks:
   - atlas-non-disclosure
   - atlas-over-under-reliance
   - atlas-poor-model-accuracy
+  relatedMatch:
+  - ail-suicide-and-self-harm
 - id: nist-information-integrity
   name: Information Integrity
   description: Lowered barrier to entry to generate and support the exchange and consumption
@@ -2460,6 +2527,12 @@ risks:
   - atlas-spreading-disinformation
   - atlas-unexplainable-output
   - atlas-untraceable-attribution
+  relatedMatch:
+  - ail-defamation
+  - ail-intellectual-property
+  - ail-nonviolent-crimes
+  - ail-privacy
+  - ail-specialized-advice
 - id: nist-information-security
   name: Information Security
   description: Lowered barriers for offensive cyber capabilities, including via automated
@@ -2531,6 +2604,9 @@ risks:
   - atlas-prompt-leaking
   - atlas-prompt-priming
   - atlas-unreliable-source-attribution
+  relatedMatch:
+  - ail-nonviolent-crimes
+  - ail-privacy
 - id: nist-intellectual-property
   name: Intellectual Property
   description: Eased production or replication of alleged copyrighted, trademarked,
@@ -2566,6 +2642,8 @@ risks:
   - MG-3.1-004
   - MG-3.2-003
   isDefinedByTaxonomy: nist-ai-rmf
+  closeMatch:
+  - ail-intellectual-property
   narrowMatch:
   - atlas-confidential-data-in-prompt
   - atlas-confidential-information-in-data
@@ -2575,6 +2653,11 @@ risks:
   - atlas-legal-accountability
   - atlas-model-usage-rights
   - atlas-revealing-confidential-information
+  relatedMatch:
+  - ail-defamation
+  - ail-intellectual-property
+  - ail-nonviolent-crimes
+  - ail-privacy
 - id: nist-obscene-degrading-and-or-abusive-content
   name: Obscene, Degrading, and/or Abusive Content
   description: Eased production of and access to obscene, degrading, and/or abusive
@@ -2601,6 +2684,13 @@ risks:
   narrowMatch:
   - atlas-human-exploitation
   relatedMatch:
+  - ail-child-sexual-exploitation
+  - ail-defamation
+  - ail-sex-related-crimes
+  - ail-sexual-content
+  - ail-sexual-content
+  - ail-suicide-and-self-harm
+  - ail-violent-crimes
   - atlas-harmful-output
 - id: nist-value-chain-and-component-integration
   name: Value Chain and Component Integration
@@ -2677,6 +2767,23 @@ risks:
     battery, or kidnapping),  Unlawful violence toward animals (e.g., animal abuse).'
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-physical-hazards
+  relatedMatch:
+  - credo-risk-015
+  - granite-groundedness
+  - granite-guardian-harm
+  - granite-unethical-behavior
+  - granite-violence
+  - granite-violence
+  - atlas-dangerous-use
+  - atlas-harmful-output
+  - atlas-harmful-output
+  - atlas-toxic-output
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-1.2
+  - nist-cbrn-information-or-capabilities
+  - nist-dangerous-violent-or-hateful-content
+  - nist-obscene-degrading-and-or-abusive-content
+  - llm022025-sensitive-information-disclosure
 - id: ail-sex-related-crimes
   name: Sex-Related Crimes
   description: 'Acceptable responses may describe or contain information about sex-related
@@ -2686,6 +2793,19 @@ risks:
     of sexually intimate  content (e.g., revenge porn), Bestiality.'
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-physical-hazards
+  relatedMatch:
+  - credo-risk-002
+  - credo-risk-003
+  - credo-risk-014
+  - granite-guardian-harm
+  - granite-sexual-content
+  - granite-sexual-content
+  - atlas-harmful-output
+  - atlas-nonconsensual-use
+  - atlas-toxic-output
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-1.2
+  - nist-obscene-degrading-and-or-abusive-content
 - id: ail-child-sexual-exploitation
   name: Child Sexual Exploitation
   description: Acceptable responses may contain information about child sexual exploitation.
@@ -2693,6 +2813,19 @@ risks:
     the sexual abuse of people under the age of 18.
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-physical-hazards
+  relatedMatch:
+  - credo-risk-014
+  - granite-guardian-harm
+  - granite-harm-engagement
+  - granite-sexual-content
+  - granite-unethical-behavior
+  - granite-unethical-behavior
+  - atlas-harmful-output
+  - atlas-harmful-output
+  - atlas-nonconsensual-use
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-1.2
+  - nist-obscene-degrading-and-or-abusive-content
 - id: ail-suicide-and-self-harm
   name: Suicide and Self-Harm
   description: 'Acceptable responses may describe or provide information about suicide
@@ -2703,6 +2836,31 @@ risks:
     eating.'
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-physical-hazards
+  relatedMatch:
+  - credo-risk-003
+  - credo-risk-007
+  - credo-risk-009
+  - credo-risk-010
+  - credo-risk-033
+  - credo-risk-036
+  - credo-risk-037
+  - granite-answer-relevance
+  - granite-groundedness
+  - granite-guardian-harm
+  - granite-harm-engagement
+  - granite-sexual-content
+  - atlas-data-curation
+  - atlas-harmful-output
+  - atlas-harmful-output
+  - atlas-nonconsensual-use
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-1.3
+  - mit-ai-risk-subdomain-2.2
+  - nist-dangerous-violent-or-hateful-content
+  - nist-harmful-bias-or-homogenization
+  - nist-human-ai-configuration
+  - nist-obscene-degrading-and-or-abusive-content
 - id: ail-indiscriminate-weapons-cbrne
   name: Indiscriminate Weapons (CBRNE)
   description: Acceptable responses may describe the creation or use of or contain
@@ -2713,6 +2871,19 @@ risks:
     explosive weapons (e.g., cluster munitions)
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-physical-hazards
+  closeMatch:
+  - nist-cbrn-information-or-capabilities
+  - nist-cbrn-information-or-capabilities
+  relatedMatch:
+  - credo-risk-027
+  - granite-guardian-harm
+  - granite-violence
+  - granite-violence
+  - atlas-harmful-output
+  - atlas-harmful-output
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-4.2
+  - nist-dangerous-violent-or-hateful-content
 - id: ail-intellectual-property
   name: Intellectual Property
   description: Acceptable responses may describe or contain information about intellectual
@@ -2720,6 +2891,27 @@ risks:
     rights of some party.
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-non-physical-hazards
+  closeMatch:
+  - nist-intellectual-property
+  relatedMatch:
+  - credo-risk-002
+  - credo-risk-005
+  - granite-guardian-harm
+  - granite-harm-engagement
+  - atlas-confidential-information-in-data
+  - atlas-data-privacy-rights
+  - atlas-impact-on-human-agency
+  - atlas-ip-information-in-prompt
+  - atlas-nonconsensual-use
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-2.1
+  - mit-ai-risk-subdomain-2.1
+  - nist-data-privacy
+  - nist-information-integrity
+  - nist-intellectual-property
+  - llm022025-sensitive-information-disclosure
+  - llm022025-sensitive-information-disclosure
+  - llm052025-improper-output-handling
 - id: ail-defamation
   name: Defamation
   description: Acceptable responses may contain information about living people that
@@ -2730,6 +2922,22 @@ risks:
     the reputation of a living person.
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-non-physical-hazards
+  relatedMatch:
+  - granite-guardian-harm
+  - granite-harm-engagement
+  - atlas-dangerous-use
+  - atlas-nonconsensual-use
+  - mit-ai-risk-subdomain-3.1
+  - mit-ai-risk-subdomain-3.1
+  - mit-ai-risk-subdomain-4.1
+  - mit-ai-risk-subdomain-4.3
+  - nist-harmful-bias-or-homogenization
+  - nist-information-integrity
+  - nist-intellectual-property
+  - nist-obscene-degrading-and-or-abusive-content
+  - llm022025-sensitive-information-disclosure
+  - llm092025-misinformation
+  - llm092025-misinformation
 - id: ail-nonviolent-crimes
   name: Nonviolent Crimes
   description: Acceptable responses may describe or contain information about nonviolent
@@ -2742,6 +2950,28 @@ risks:
     Cybercrimes (e.g., hacking).
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-non-physical-hazards
+  relatedMatch:
+  - credo-risk-026
+  - granite-guardian-harm
+  - granite-unethical-behavior
+  - atlas-harmful-output
+  - mit-ai-risk-subdomain-2.1
+  - mit-ai-risk-subdomain-2.2
+  - mit-ai-risk-subdomain-4.1
+  - mit-ai-risk-subdomain-4.2
+  - mit-ai-risk-subdomain-4.3
+  - mit-ai-risk-subdomain-4.3
+  - mit-ai-risk-subdomain-5.1
+  - mit-ai-risk-subdomain-5.2
+  - mit-ai-risk-subdomain-6.5
+  - mit-ai-risk-subdomain-6.6
+  - mit-ai-risk-subdomain-7.1
+  - mit-ai-risk-subdomain-7.2
+  - nist-dangerous-violent-or-hateful-content
+  - nist-information-integrity
+  - nist-information-security
+  - nist-intellectual-property
+  - llm022025-sensitive-information-disclosure
 - id: ail-hate
   name: Hate
   description: Acceptable responses can demean or dehumanize people on any basis other
@@ -2750,6 +2980,17 @@ risks:
     or dehumanize people on the basis of their sensitive, personal characteristics.
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-non-physical-hazards
+  closeMatch:
+  - nist-dangerous-violent-or-hateful-content
+  relatedMatch:
+  - credo-risk-013
+  - granite-guardian-harm
+  - granite-harm-engagement
+  - atlas-dangerous-use
+  - atlas-harmful-output
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-1.2
+  - nist-dangerous-violent-or-hateful-content
 - id: ail-privacy
   name: Privacy
   description: Acceptable responses may contain publicly available information about
@@ -2760,6 +3001,26 @@ risks:
     number or credit-card details).
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-non-physical-hazards
+  relatedMatch:
+  - credo-risk-036
+  - credo-risk-037
+  - credo-risk-037
+  - granite-guardian-harm
+  - atlas-confidential-data-in-prompt
+  - atlas-data-contamination
+  - atlas-nonconsensual-use
+  - atlas-personal-information-in-data
+  - mit-ai-risk-subdomain-2.1
+  - mit-ai-risk-subdomain-2.1
+  - mit-ai-risk-subdomain-2.2
+  - nist-data-privacy
+  - nist-data-privacy
+  - nist-information-integrity
+  - nist-information-security
+  - nist-intellectual-property
+  - llm022025-sensitive-information-disclosure
+  - llm022025-sensitive-information-disclosure
+  - llm052025-improper-output-handling
 - id: ail-specialized-advice
   name: Specialized Advice
   description: "Acceptable responses can provide specialized advice or contain information\
@@ -2779,6 +3040,27 @@ risks:
     \ that dangerous \n activities or objects are categorically safe."
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-contextual-hazards
+  relatedMatch:
+  - credo-risk-005
+  - credo-risk-027
+  - credo-risk-033
+  - credo-risk-036
+  - granite-answer-relevance
+  - granite-evasiveness
+  - granite-groundedness
+  - granite-guardian-harm
+  - granite-harm-engagement
+  - granite-relevance
+  - granite-social-bias
+  - granite-unethical-behavior
+  - atlas-incomplete-advice
+  - atlas-incomplete-advice
+  - atlas-model-usage-rights
+  - mit-ai-risk-subdomain-5.1
+  - nist-data-privacy
+  - nist-information-integrity
+  - llm092025-misinformation
+  - llm092025-misinformation
 - id: ail-sexual-content
   name: Sexual Content
   description: 'Acceptable responses may enable, encourage, or endorse consensual
@@ -2795,6 +3077,18 @@ risks:
     but merely whether it is unacceptable under any of them.'
   isDefinedByTaxonomy: ailuminate-v1.0
   isPartOf: ail-contextual-hazards
+  relatedMatch:
+  - credo-risk-014
+  - granite-guardian-harm
+  - granite-profanity
+  - granite-sexual-content
+  - granite-sexual-content
+  - atlas-harmful-output
+  - atlas-harmful-output
+  - mit-ai-risk-subdomain-1.2
+  - mit-ai-risk-subdomain-1.2
+  - nist-obscene-degrading-and-or-abusive-content
+  - nist-obscene-degrading-and-or-abusive-content
 - id: mit-ai-risk-subdomain-1.1
   name: Unfair discrimination and misrepresentation
   description: Unequal treatment of individuals or groups by AI, often based on race,
@@ -2811,6 +3105,21 @@ risks:
     such as profanity, inflammatory political speech, or pornography.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-1
+  relatedMatch:
+  - ail-child-sexual-exploitation
+  - ail-child-sexual-exploitation
+  - ail-hate
+  - ail-hate
+  - ail-indiscriminate-weapons-cbrne
+  - ail-intellectual-property
+  - ail-sex-related-crimes
+  - ail-sex-related-crimes
+  - ail-sexual-content
+  - ail-sexual-content
+  - ail-suicide-and-self-harm
+  - ail-suicide-and-self-harm
+  - ail-violent-crimes
+  - ail-violent-crimes
 - id: mit-ai-risk-subdomain-1.3
   name: Unequal performance across groups
   description: Accuracy and effectiveness of AI decisions and actions is dependent
@@ -2819,6 +3128,8 @@ risks:
     users.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-1
+  relatedMatch:
+  - ail-suicide-and-self-harm
 - id: mit-ai-risk-subdomain-2.1
   name: Compromise of privacy by obtaining, leaking or correctly inferring sensitive
     information
@@ -2828,6 +3139,12 @@ risks:
     identity theft, or loss of confidential intellectual property.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-2
+  relatedMatch:
+  - ail-intellectual-property
+  - ail-intellectual-property
+  - ail-nonviolent-crimes
+  - ail-privacy
+  - ail-privacy
 - id: mit-ai-risk-subdomain-2.2
   name: AI system security vulnerabilities and attacks
   description: Vulnerabilities in AI systems, software development toolchains, and
@@ -2835,6 +3152,10 @@ risks:
     breaches, or system manipulation causing unsafe outputs or behavior.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-2
+  relatedMatch:
+  - ail-nonviolent-crimes
+  - ail-privacy
+  - ail-suicide-and-self-harm
 - id: mit-ai-risk-subdomain-3.1
   name: False or misleading information
   description: AI systems that inadvertently generate or spread incorrect or deceptive
@@ -2843,6 +3164,9 @@ risks:
     emotional or material harms
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-3
+  relatedMatch:
+  - ail-defamation
+  - ail-defamation
 - id: mit-ai-risk-subdomain-3.2
   name: Pollution of information ecosystem and loss of consensus reality
   description: Highly personalized AI-generated misinformation creating ï¿½filter
@@ -2857,6 +3181,9 @@ risks:
     with the aim to manipulate political processes, public opinion and behavior.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-4
+  relatedMatch:
+  - ail-defamation
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-4.2
   name: Cyberattacks, weapon development or use, and mass harm
   description: Using AI systems to develop cyber weapons (e.g., coding cheaper, more
@@ -2864,6 +3191,9 @@ risks:
     Weapons or CBRNE), or use weapons to cause mass harm.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-4
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-4.3
   name: Fraud, scams, and targeted manipulation
   description: Using AI systems to gain a personal advantage over others such as through
@@ -2873,6 +3203,10 @@ risks:
     or sexual imagery.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-4
+  relatedMatch:
+  - ail-defamation
+  - ail-nonviolent-crimes
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-5.1
   name: Overreliance and unsafe use
   description: Users anthropomorphizing, trusting, or relying on AI systems, leading
@@ -2883,6 +3217,9 @@ risks:
     can compromise autonomy and weaken social ties.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-5
+  relatedMatch:
+  - ail-nonviolent-crimes
+  - ail-specialized-advice
 - id: mit-ai-risk-subdomain-5.2
   name: Loss of human agency and autonomy
   description: Humans delegating key decisions to AI systems, or AI systems making
@@ -2891,6 +3228,8 @@ risks:
     or becoming cognitively enfeebled.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-5
+  relatedMatch:
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-6.1
   name: Power centralization and unfair distribution of benefits
   description: AI-driven concentration of power and resources within certain entities
@@ -2929,6 +3268,8 @@ risks:
     to manage AI risks appropriately.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-6
+  relatedMatch:
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-6.6
   name: Environmental harm
   description: The development and operation of AI systems causing environmental harm,
@@ -2936,6 +3277,8 @@ risks:
     associated with AI hardware.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-6
+  relatedMatch:
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-7.1
   name: AI pursuing its own goals in conflict with human goals or values
   description: AI systems acting in conflict with human goals or values, especially
@@ -2946,6 +3289,8 @@ risks:
     or achieve other goals.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-7
+  relatedMatch:
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-7.2
   name: AI possessing dangerous capabilities
   description: AI systems that develop, access, or are provided with capabilities
@@ -2956,6 +3301,8 @@ risks:
     in the AI system.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-7
+  relatedMatch:
+  - ail-nonviolent-crimes
 - id: mit-ai-risk-subdomain-7.3
   name: Lack of capability or robustness
   description: AI systems that fail to perform reliably or effectively under varying
@@ -5178,6 +5525,18 @@ risks:
   - granite-evasiveness
   relatedMatch:
   - atlas-harmful-output
+  - ail-child-sexual-exploitation
+  - ail-defamation
+  - ail-hate
+  - ail-indiscriminate-weapons-cbrne
+  - ail-intellectual-property
+  - ail-nonviolent-crimes
+  - ail-privacy
+  - ail-sex-related-crimes
+  - ail-sexual-content
+  - ail-specialized-advice
+  - ail-suicide-and-self-harm
+  - ail-violent-crimes
   tag: harm
 - id: granite-social-bias
   name: Social Bias
@@ -5193,6 +5552,7 @@ risks:
   - granite-guardian-harm
   relatedMatch:
   - atlas-output-bias
+  - ail-specialized-advice
   tag: social_bias
 - id: granite-profanity
   name: Profanity
@@ -5208,6 +5568,7 @@ risks:
   - granite-guardian-harm
   relatedMatch:
   - atlas-toxic-output
+  - ail-sexual-content
   tag: profanity
 - id: granite-sexual-content
   name: Sexual Content
@@ -5226,6 +5587,12 @@ risks:
   - granite-guardian-harm
   relatedMatch:
   - atlas-harmful-output
+  - ail-child-sexual-exploitation
+  - ail-sex-related-crimes
+  - ail-sex-related-crimes
+  - ail-sexual-content
+  - ail-sexual-content
+  - ail-suicide-and-self-harm
   tag: sexual-content
 - id: granite-unethical-behavior
   name: Unethical Behavior
@@ -5242,6 +5609,11 @@ risks:
   - granite-guardian-harm
   relatedMatch:
   - atlas-harmful-output
+  - ail-child-sexual-exploitation
+  - ail-child-sexual-exploitation
+  - ail-nonviolent-crimes
+  - ail-specialized-advice
+  - ail-violent-crimes
   tag: unethical-behavior
 - id: granite-violence
   name: Violence
@@ -5257,6 +5629,10 @@ risks:
   - granite-guardian-harm
   relatedMatch:
   - atlas-harmful-output
+  - ail-indiscriminate-weapons-cbrne
+  - ail-indiscriminate-weapons-cbrne
+  - ail-violent-crimes
+  - ail-violent-crimes
   tag: violence
 - id: granite-jailbreak
   name: Jailbreaking
@@ -5290,6 +5666,12 @@ risks:
   - granite-guardian-harm
   relatedMatch:
   - atlas-harmful-output
+  - ail-child-sexual-exploitation
+  - ail-defamation
+  - ail-hate
+  - ail-intellectual-property
+  - ail-specialized-advice
+  - ail-suicide-and-self-harm
   tag: harm-engagement
 - id: granite-evasiveness
   name: Evasiveness
@@ -5306,6 +5688,7 @@ risks:
   - granite-guardian-harm
   relatedMatch:
   - atlas-harmful-output
+  - ail-specialized-advice
   tag: evasiveness
 - id: granite-groundedness
   name: Groundedness
@@ -5321,6 +5704,9 @@ risks:
   isPartOf: granite-guardian-rag-safety-group
   relatedMatch:
   - atlas-hallucination
+  - ail-specialized-advice
+  - ail-suicide-and-self-harm
+  - ail-violent-crimes
   tag: groundedness
 - id: granite-relevance
   name: Context Relevance
@@ -5335,6 +5721,7 @@ risks:
   isPartOf: granite-guardian-rag-safety-group
   relatedMatch:
   - atlas-hallucination
+  - ail-specialized-advice
   tag: relevance
 - id: granite-answer-relevance
   name: Answer Relevance
@@ -5350,6 +5737,8 @@ risks:
   isPartOf: granite-guardian-rag-safety-group
   relatedMatch:
   - atlas-hallucination
+  - ail-specialized-advice
+  - ail-suicide-and-self-harm
   tag: answer-relevance
 - id: granite-function-call
   name: Function Calling Hallucination
@@ -5403,6 +5792,14 @@ risks:
   - atlas-prompt-leaking
   - atlas-reidentification
   - atlas-revealing-confidential-information
+  relatedMatch:
+  - ail-defamation
+  - ail-intellectual-property
+  - ail-intellectual-property
+  - ail-nonviolent-crimes
+  - ail-privacy
+  - ail-privacy
+  - ail-violent-crimes
 - id: llm032025-supply-chain
   name: LLM03:2025 Supply Chain
   description: LLM supply chains are susceptible to various vulnerabilities, which
@@ -5464,6 +5861,8 @@ risks:
   - atlas-poor-model-accuracy
   - atlas-toxic-output
   relatedMatch:
+  - ail-intellectual-property
+  - ail-privacy
   - atlas-over-under-reliance
 - id: llm062025-excessive-agency
   name: LLM06:2025 Excessive Agency
@@ -5521,6 +5920,10 @@ risks:
   - atlas-spreading-disinformation
   - atlas-spreading-toxicity
   relatedMatch:
+  - ail-defamation
+  - ail-defamation
+  - ail-specialized-advice
+  - ail-specialized-advice
   - atlas-over-under-reliance
 - id: llm102025-unbounded-consumption
   name: LLM10:2025 Unbounded Consumption
@@ -5550,6 +5953,9 @@ risks:
   - credo-act-control-037
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-ai-agency
+  relatedMatch:
+  - ail-intellectual-property
+  - ail-sex-related-crimes
 - id: credo-risk-003
   name: AI possessing dangerous capabilities (Slattery et al., 2024)
   description: The AI system may develop, access, or be provided with capabilities
@@ -5562,6 +5968,9 @@ risks:
   - credo-act-control-037
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-ai-agency
+  relatedMatch:
+  - ail-sex-related-crimes
+  - ail-suicide-and-self-harm
 - id: credo-risk-004
   name: Environmental harm (Slattery et al., 2024; IBM, 2024; AI, 2023)
   description: ' The AI system''s development and operation may cause environmental
@@ -5582,6 +5991,9 @@ risks:
   - credo-act-control-009
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
+  relatedMatch:
+  - ail-intellectual-property
+  - ail-specialized-advice
 - id: credo-risk-006
   name: ' Lack of inference data transparency'
   description: ' Lack of inference data transparency: Insufficient visibility into
@@ -5600,6 +6012,8 @@ risks:
   - credo-act-control-010
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
+  relatedMatch:
+  - ail-suicide-and-self-harm
 - id: credo-risk-009
   name: Black box decisionmaking (Slattery et al., 2024; IBM, 2024)
   description: The AI system's decision-making process may be opaque, even when the
@@ -5610,6 +6024,8 @@ risks:
   - credo-act-control-037
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
+  relatedMatch:
+  - ail-suicide-and-self-harm
 - id: credo-risk-010
   name: Stereotype perpetuation (Slattery et al., 2024; IBM, 2024)
   description: The AI system's outputs may explicitly reflect or reinforce harmful
@@ -5625,6 +6041,8 @@ risks:
   - credo-act-control-028
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-fairness-&-bias
+  relatedMatch:
+  - ail-suicide-and-self-harm
 - id: credo-risk-012
   name: Unequal access to AI benefits
   description: The AI system's benefits may not be equally accessible to all users,
@@ -5648,6 +6066,8 @@ risks:
   - credo-act-control-019
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-harmful-content
+  relatedMatch:
+  - ail-hate
 - id: credo-risk-014
   name: Obscene and sexually abusive content (Slattery et al., 2024; AI, 2023)
   description: The AI system may generate or disseminate content that is obscene,
@@ -5659,6 +6079,10 @@ risks:
   - credo-act-control-019
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-harmful-content
+  relatedMatch:
+  - ail-child-sexual-exploitation
+  - ail-sex-related-crimes
+  - ail-sexual-content
 - id: credo-risk-015
   name: Dangerous or violent content (IBM, 2024)
   description: ' The AI system may produce content that incites violence or provides
@@ -5669,8 +6093,10 @@ risks:
   - credo-act-control-019
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-harmful-content
+  relatedMatch:
+  - ail-violent-crimes
 - id: credo-risk-016
-  name: Overor under-reliance and unsafe use (Slattery et al., 2024; IBM, 2024; AI,
+  name: Over or under-reliance and unsafe use (Slattery et al., 2024; IBM, 2024; AI,
     2023)
   description: Users may inappropriately rely on the AI system for critical decisions
     or tasks beyond its capabilities, or fail to put trust in AI systems when they
@@ -5684,7 +6110,7 @@ risks:
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-017
-  name: ' Inadequate AI literacy and communication'
+  name: Inadequate AI literacy and communication
   description: The AI system's capabilities, limitations, and appropriate use cases
     may be insufficiently understood or communicated within the organization, potentially
     resulting in ineffective implementation or failure to achieve desired outcomes.
@@ -5715,6 +6141,8 @@ risks:
   - credo-act-control-023
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-malicious-use
+  relatedMatch:
+  - ail-nonviolent-crimes
 - id: credo-risk-027
   name: Cyberattacks, weapon development, and mass harm (AI, 2023; IBM, 2024)
   description: The AI system may be misused for developing malicious software, lethal
@@ -5728,6 +6156,9 @@ risks:
   - credo-act-control-023
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-malicious-use
+  relatedMatch:
+  - ail-indiscriminate-weapons-cbrne
+  - ail-specialized-advice
 - id: credo-risk-028
   name: Coordinated influence operations (Slattery et al., 2024; IBM, 2024)
   description: ' Coordinated influence operations: Large-scale manipulation and disinformation
@@ -5758,6 +6189,9 @@ risks:
   - credo-act-control-016
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-performance-&-robustness
+  relatedMatch:
+  - ail-specialized-advice
+  - ail-suicide-and-self-harm
 - id: credo-risk-034
   name: ' Oversight and evaluation challenges'
   description: The AI system may present difficulties in overseeing or evaluating
@@ -5791,6 +6225,10 @@ risks:
   - credo-act-control-026
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-privacy
+  relatedMatch:
+  - ail-privacy
+  - ail-specialized-advice
+  - ail-suicide-and-self-harm
 - id: credo-risk-037
   name: Compromised sensitive information (Slattery et al., 2024; IBM, 2024; AI, 2023)
   description: The AI system may expose personally sensitive information, either inadvertently
@@ -5805,6 +6243,10 @@ risks:
   - credo-act-control-026
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-privacy
+  relatedMatch:
+  - ail-privacy
+  - ail-privacy
+  - ail-suicide-and-self-harm
 - id: credo-risk-042
   name: Increased inequality and decline in employment quality (Slattery et al., 2024;
     IBM, 2024)
