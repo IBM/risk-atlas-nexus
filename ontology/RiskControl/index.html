@@ -855,6 +855,8 @@
       
         
       
+        
+      
     
     
       
@@ -923,6 +925,28 @@
   
   <span class="md-ellipsis">
     AI Tasks identification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/Prepare_taxonomy_mappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Atlas Nexus: Preparing taxonomy mappings
     
   </span>
   
@@ -4698,6 +4722,8 @@
 <pre class="mermaid"><code> classDiagram
     class RiskControl
     click RiskControl href "../RiskControl"
+      RiskConcept &lt;|-- RiskControl
+        click RiskConcept href "../RiskConcept"
       Entity &lt;|-- RiskControl
         click Entity href "../Entity"
 
@@ -4727,6 +4753,15 @@
     click RiskTaxonomy href "../RiskTaxonomy"
 
 
+      RiskControl : isDetectedBy
+
+
+
+
+    RiskControl --&gt; "*" RiskControl : isDetectedBy
+    click RiskControl href "../RiskControl"
+
+
       RiskControl : name
 
       RiskControl : url
@@ -4735,7 +4770,7 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
-<li><strong>RiskControl</strong></li>
+<li><strong>RiskControl</strong> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
 </ul>
 </li>
 </ul>
@@ -4761,6 +4796,12 @@
 <td>0..1 <br/> <a href="../RiskTaxonomy/">RiskTaxonomy</a></td>
 <td>A relationship where a risk or a risk group is defined by a risk taxonomy</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>* <br/> <a href="./">RiskControl</a></td>
+<td>A relationship where a risk, risk source, consequence, or impact is detected ...</td>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
@@ -4825,12 +4866,30 @@
 </tr>
 <tr>
 <td><a href="../Risk/">Risk</a></td>
+<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>domain</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
 </tr>
 <tr>
 <td><a href="../RiskConcept/">RiskConcept</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="./">RiskControl</a></td>
+<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>domain</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="./">RiskControl</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
@@ -4882,6 +4941,8 @@
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A measure that maintains and/or modifies risk (and risk concepts)</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
@@ -4895,6 +4956,8 @@
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A measure that maintains and/or modifies risk (and risk concepts)</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">detectsRiskConcept</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
@@ -4904,6 +4967,7 @@
 <span class="w">    </span><span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:detectsRiskConcept</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
@@ -4928,6 +4992,21 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskTaxonomy</span>
+<span class="w">  </span><span class="nt">isDetectedBy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk, risk source, consequence, or impact</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is detected by a risk control.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier to this instance of the model element. Example</span>

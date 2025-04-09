@@ -855,6 +855,8 @@
       
         
       
+        
+      
     
     
       
@@ -923,6 +925,28 @@
   
   <span class="md-ellipsis">
     AI Tasks identification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/Prepare_taxonomy_mappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Atlas Nexus: Preparing taxonomy mappings
     
   </span>
   
@@ -4706,6 +4730,8 @@
         click RiskGroup href "../RiskGroup"
       RiskConcept &lt;|-- Risk
         click Risk href "../Risk"
+      RiskConcept &lt;|-- RiskControl
+        click RiskControl href "../RiskControl"
 
 
       RiskConcept : dateCreated
@@ -4804,15 +4830,63 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../RiskGroup/">RiskGroup</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>domain</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
 <td><a href="../Risk/">Risk</a></td>
 <td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
 <td>range</td>
 <td><a href="./">RiskConcept</a></td>
 </tr>
 <tr>
+<td><a href="../Risk/">Risk</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>domain</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="./">RiskConcept</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>domain</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
 <td><a href="../RiskControl/">RiskControl</a></td>
 <td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
 <td>range</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../RiskControl/">RiskControl</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>domain</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../Action/">Action</a></td>
+<td><a href="../hasRelatedRisk/">hasRelatedRisk</a></td>
+<td>domain</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../AiEval/">AiEval</a></td>
+<td><a href="../hasRelatedRisk/">hasRelatedRisk</a></td>
+<td>domain</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../Question/">Question</a></td>
+<td><a href="../hasRelatedRisk/">hasRelatedRisk</a></td>
+<td>domain</td>
+<td><a href="./">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../Questionnaire/">Questionnaire</a></td>
+<td><a href="../hasRelatedRisk/">hasRelatedRisk</a></td>
+<td>domain</td>
 <td><a href="./">RiskConcept</a></td>
 </tr>
 </tbody>
@@ -4869,6 +4943,7 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is detected by a risk control.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
