@@ -11,6 +11,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
   nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
+  dpv: https://w3c.github.io/dpv/2.1/dpv/#
 default_range: string
 default_prefix: nexus
 
@@ -103,7 +104,71 @@ classes:
 
   Any:
     class_uri: linkml:Any
-    
+
+  RiskIncident:
+    is_a: Entity
+    mixins:
+      - RiskConcept
+    class_uri: https://w3id.org/dpv/risk#Incident
+    description: An event occuring or occured which is a realised or materialised risk.
+    attributes:
+      author: 
+        description: The author or authors of the incident report
+      source_uri: 
+        description: The uri of the incident
+    slots:
+      - refersToRisk
+      - isDefinedByTaxonomy
+      - hasStatus
+      - hasSeverity
+      - hasLikelihood
+      - hasImpactOn
+      - hasConsequence
+      - hasImpact
+      - hasVariant
+
+  Impact:
+    is_a: Entity
+    mixins: 
+      - RiskConcept
+    class_uri: dpv:Impact
+
+  IncidentStatus:
+    is_a: Entity
+    class_uri: dpv:IncidentStatus
+
+  IncidentConcludedclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentConcludedclass
+
+  IncidentHaltedclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentHaltedclass
+
+  IncidentMitigatedclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentMitigatedclass
+
+  IncidentNearMissclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentNearMissclass
+
+  IncidentOngoingclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentOngoingclass
+
+  Severity:
+    is_a: Entity
+    class_uri: dpv:Severity
+  
+  Likelihood:
+    is_a: Entity
+    class_uri: dpv:Likelihood
+
+  Consequence:
+    is_a: Entity
+    class_uri: dpv:Consequence
+
 slots:
   isDefinedByTaxonomy:
     slot_uri: schema:isPartOf
@@ -187,3 +252,53 @@ slots:
     multivalued: true
     inlined: false
     inverse: detectsRiskConcept
+  hasStatus:
+    description: >-
+      Indicates the status of specified concept
+    domain: RiskConcept
+    range: IncidentStatus
+  hasSeverity:
+    description: >-
+      Indicates the severity associated with a concept
+    domain: RiskConcept
+    range: Severity
+  hasLikelihood:
+    description: >-
+      The likelihood or probability or chance of something taking place or occuring
+    domain: RiskConcept
+    range: Likelihood
+  hasImpactOn:
+    description: >-
+      Indicates impact(s) possible or arising as consequences from specified concept
+    domain: RiskConcept
+    range: Impact
+    broad_mappings: 
+    - dpv:hasConsequenceOn
+  hasConsequence:
+    description: >-
+      Indicates consequence(s) possible or arising from specified concept
+    domain: RiskConcept
+    range: Consequence
+  hasImpact:
+    description: >-
+      Indicates impact(s) possible or arising as consequences from specified concept
+    domain: RiskConcept
+    range: Impact
+    broad_mappings: 
+    - dpv:hasConsequence
+  hasVariant:
+    description: >-
+      Indicates an incident that shares the same causative factors, produces similar harms, and involves the same intelligent systems as a known AI incident. 
+    domain: RiskIncident
+    range: RiskIncident
+  refersToRisk:
+    exact_mappings:
+    - dpv:refersToRisk
+    description: >-
+      Indicates the incident (subject) is a materialisation of the indicated risk (object)
+    domain: RiskIncident
+    range: Risk
+    multivalued: true
+    inlined: false
+
+

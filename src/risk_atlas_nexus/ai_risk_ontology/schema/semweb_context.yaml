@@ -18,4 +18,5 @@
   prov: http://www.w3.org/ns/prov#
   dcat: http://www.w3.org/ns/dcat#
   dqv: https://www.w3.org/TR/vocab-dqv/#dqv
+  dpv: https://w3c.github.io/dpv/2.1/dpv/#
   

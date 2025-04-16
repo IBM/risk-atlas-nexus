@@ -257,6 +257,7 @@ attributes:
     - Risk
     - RiskControl
     - Action
+    - RiskIncident
     range: RiskTaxonomy
   closeMatch:
     name: closeMatch

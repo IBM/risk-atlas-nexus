@@ -12,6 +12,7 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Action,
     Risk,
     RiskControl,
+    RiskIncident,
     RiskTaxonomy,
 )
 from risk_atlas_nexus.blocks.inference.templates import COT_TEMPLATE, AI_TASKS_TEMPLATE
@@ -382,7 +383,7 @@ class RiskAtlasNexus:
         return risk_detector.detect(usecases)
 
     def get_all_taxonomies(cls):
-        """Get all taxonomy definitions from the LinkML, optionally filtered by taxonomy
+        """Get all taxonomy definitions from the LinkML
 
         Returns:
             List[RiskTaxonomy]
@@ -624,3 +625,68 @@ class RiskAtlasNexus:
         )
 
         return risk_mapper.generate(new_risks=new_risks, existing_risks=existing_risks, inference_engine=inference_engine, new_prefix=new_prefix, mapping_method=mapping_method)
+
+
+    def get_risk_incidents(cls, taxonomy: Optional[str] = None):
+        """Get risk incident instances, optionally filtered by taxonomy
+
+        Returns:
+            List[RiskIncident]
+                Result containing a list of AI Risk Incidents
+        """
+        type_check("<RAN04811131E>", str, allow_none=True, taxonomy=taxonomy)
+
+        risk_incident_instances: List[RiskIncident] = cls._risk_explorer.get_risk_incidents(taxonomy=taxonomy)
+        return risk_incident_instances
+    
+    def get_risk_incident(cls, id=None, taxonomy=None):
+        """Get an risk incident instance filtered by risk incident id
+
+        Args:
+            id: str
+                The string id identifying the risk incident
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            RiskIncident
+                Result containing a risk incident.
+        """
+        type_check("<RAN97353068E>", str, allow_none=False, id=id)
+        type_check("<RAN38198685E>", str, allow_none=True, taxonomy=taxonomy)
+
+        risk_incident: RiskIncident | None = cls._risk_explorer.get_risk_incident(id=id)
+        return risk_incident
+    
+    def get_related_risk_incidents(cls, risk=None, risk_id=None, taxonomy=None):
+        """Get related risk incident filtered by risk id
+
+        Args:
+            risk: (Optional) Risk
+                The risk
+            risk_id: (Optional) str
+                The string ID identifying the risk
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+        Returns:
+            List[RiskIncident]
+                Result containing a list of AI risk incidents
+        """
+        type_check("<RAN40791379E>", Risk, allow_none=True, risk=risk)
+        type_check(
+            "<RANC9FDCC45E>",
+            str,
+            allow_none=True,
+            risk_id=risk_id,
+            taxonomy=taxonomy,
+        )
+        value_check(
+            "<RAN79007538E>",
+            risk or id,
+            "Please provide risk or id",
+        )
+
+        related_risk_incidents = cls._risk_explorer.get_related_risk_incidents(
+            risk=risk, risk_id=risk_id, taxonomy=taxonomy
+        )
+        return related_risk_incidents

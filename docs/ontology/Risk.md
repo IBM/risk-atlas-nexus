@@ -197,6 +197,7 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | [Risk](Risk.md) | [narrowMatch](narrowMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [Risk](Risk.md) | [relatedMatch](relatedMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [RiskIncident](RiskIncident.md) | [refersToRisk](refersToRisk.md) | range | [Risk](Risk.md) |
 | [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
@@ -403,6 +404,7 @@ attributes:
     - Risk
     - RiskControl
     - Action
+    - RiskIncident
     range: RiskTaxonomy
   isPartOf:
     name: isPartOf

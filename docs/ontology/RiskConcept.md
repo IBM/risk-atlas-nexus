@@ -30,6 +30,10 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
         click Risk href "../Risk"
       RiskConcept <|-- RiskControl
         click RiskControl href "../RiskControl"
+      RiskConcept <|-- RiskIncident
+        click RiskIncident href "../RiskIncident"
+      RiskConcept <|-- Impact
+        click Impact href "../Impact"
       
       
       RiskConcept : dateCreated
@@ -93,6 +97,14 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [RiskControl](RiskControl.md) | [detectsRiskConcept](detectsRiskConcept.md) | range | [RiskConcept](RiskConcept.md) |
 | [RiskControl](RiskControl.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |
+| [RiskIncident](RiskIncident.md) | [hasStatus](hasStatus.md) | domain | [RiskConcept](RiskConcept.md) |
+| [RiskIncident](RiskIncident.md) | [hasSeverity](hasSeverity.md) | domain | [RiskConcept](RiskConcept.md) |
+| [RiskIncident](RiskIncident.md) | [hasLikelihood](hasLikelihood.md) | domain | [RiskConcept](RiskConcept.md) |
+| [RiskIncident](RiskIncident.md) | [hasImpactOn](hasImpactOn.md) | domain | [RiskConcept](RiskConcept.md) |
+| [RiskIncident](RiskIncident.md) | [hasConsequence](hasConsequence.md) | domain | [RiskConcept](RiskConcept.md) |
+| [RiskIncident](RiskIncident.md) | [hasImpact](hasImpact.md) | domain | [RiskConcept](RiskConcept.md) |
+| [RiskIncident](RiskIncident.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
+| [Impact](Impact.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |
 | [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |
 | [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |

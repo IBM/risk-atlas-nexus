@@ -29,10 +29,19 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of language-related tasks such as generation, summarization, classification, among others. A LLM is implemented as an artificial neural networks using a transformer architecture. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities. ChatGPT is an example of an AI system which deploys multiple GPT AI models. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is capable of autonomously performing tasks on behalf of a user or another system by designing its workflow and utilizing available tools. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Consequence](Consequence.md) | None |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Dataset](Dataset.md) | A body of structured information describing some topic(s) of interest. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Documentation](Documentation.md) | Documented information about a concept or other topic(s) of interest. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Impact](Impact.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentStatus](IncidentStatus.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentConcludedclass](IncidentConcludedclass.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentHaltedclass](IncidentHaltedclass.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentMitigatedclass](IncidentMitigatedclass.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentNearMissclass](IncidentNearMissclass.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentOngoingclass](IncidentOngoingclass.md) | None |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the same AI systems provider and are built around the same architecture, but differ e.g. in the number of parameters. Examples are Meta's Llama2 family or the IBM granite models. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](License.md) | The general notion of a license which defines terms and grants permissions to users of AI systems, datasets and software. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Likelihood](Likelihood.md) | None |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Modality](Modality.md) | A modality supported by an Ai component. Examples include text, image, video. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Organization](Organization.md) | Any organizational entity such as a corporation, educational institution, consortium, government, etc. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiOffice](AiOffice.md) | The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office) |
@@ -41,7 +50,9 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskConcept](RiskConcept.md) | An umbrella term for refering to risk, risk source, consequence and impact. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Severity](Severity.md) | None |
 | [Fact](Fact.md) | A fact about something, for example the result of a measurement. In addition to the value, evidence is provided. |
 
 
@@ -55,6 +66,7 @@ Name: ai-risk-ontology
 | [aimodels](aimodels.md) | A list of AI models |
 | [aitasks](aitasks.md) | A list of AI tasks |
 | [architecture](architecture.md) | A description of the architecture of an AI such as 'Decoder-only' |
+| [author](author.md) | The author or authors of the incident report |
 | [bestValue](bestValue.md) | Annotation of the best possible result of the evaluation |
 | [broadMatch](broadMatch.md) | The property is used to state a hierarchical mapping link between two concept... |
 | [carbon_emitted](carbon_emitted.md) | The number of tons of carbon dioxide equivalent that are emitted during train... |
@@ -75,21 +87,28 @@ Name: ai-risk-ontology
 | [gpu_hours](gpu_hours.md) | GPU consumption in terms of hours |
 | [grants_license](grants_license.md) | A relationship from a granting entity such as an Organization to a License in... |
 | [hasAiActorTask](hasAiActorTask.md) | Pertinent AI Actor Tasks for each subcategory |
+| [hasConsequence](hasConsequence.md) | Indicates consequence(s) possible or arising from specified concept |
 | [hasDataset](hasDataset.md) | A relationship to datasets that are used |
 | [hasDocumentation](hasDocumentation.md) | Indicates documentation associated with an entity |
 | [hasEuAiSystemType](hasEuAiSystemType.md) | The type of system as defined by the EU AI Act |
 | [hasEuRiskCategory](hasEuRiskCategory.md) | The risk category of an AI system as defined by the EU AI Act |
 | [hasEvaluation](hasEvaluation.md) | A relationship indicating that an entity has an AI evaluation result |
+| [hasImpact](hasImpact.md) | Indicates impact(s) possible or arising as consequences from specified concep... |
+| [hasImpactOn](hasImpactOn.md) | Indicates impact(s) possible or arising as consequences from specified concep... |
 | [hasInputModality](hasInputModality.md) | A relationship indicating the input modalities supported by an AI component |
 | [hasLicense](hasLicense.md) | Indicates licenses associated with a resource |
+| [hasLikelihood](hasLikelihood.md) | The likelihood or probability or chance of something taking place or occuring |
 | [hasModelCard](hasModelCard.md) | A relationship to model card references |
 | [hasOutputModality](hasOutputModality.md) | A relationship indicating the output modalities supported by an AI component |
 | [hasPart](hasPart.md) | A relationship where an entity has another entity |
 | [hasRelatedAction](hasRelatedAction.md) | A relationship where an entity relates to an action |
 | [hasRelatedRisk](hasRelatedRisk.md) | A relationship where an entity relates to a risk |
 | [hasRiskControl](hasRiskControl.md) | Indicates the control measures associated with a system or component to modif... |
+| [hasSeverity](hasSeverity.md) | Indicates the severity associated with a concept |
+| [hasStatus](hasStatus.md) | Indicates the status of specified concept |
 | [hasTrainingData](hasTrainingData.md) | A relationship indicating the datasets an AI model was trained on |
 | [hasUnitxtCard](hasUnitxtCard.md) | A relationship to a Unitxt card defining the risk evaluation |
+| [hasVariant](hasVariant.md) | Indicates an incident that shares the same causative factors, produces simila... |
 | [id](id.md) | A unique identifier to this instance of the model element |
 | [isComposedOf](isComposedOf.md) | Relationship indicating the some entity is composed of other entities (includ... |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | A relationship where a risk or a risk group is defined by a risk taxonomy |
@@ -112,10 +131,13 @@ Name: ai-risk-ontology
 | [power_consumption_w](power_consumption_w.md) | power consumption in Watts |
 | [producer](producer.md) | A relationship to the Organization instance which produces this instance |
 | [provider](provider.md) | A relationship to the Organization instance that provides this instance |
+| [refersToRisk](refersToRisk.md) | Indicates the incident (subject) is a materialisation of the indicated risk (... |
 | [relatedMatch](relatedMatch.md) | The property skos:relatedMatch is used to state an associative mapping link b... |
 | [riskcontrols](riskcontrols.md) | A list of AI risk controls |
 | [riskgroups](riskgroups.md) | A list of AI risk groups |
+| [riskincidents](riskincidents.md) | A list of AI risk incidents |
 | [risks](risks.md) | A list of AI risks |
+| [source_uri](source_uri.md) | The uri of the incident |
 | [supported_languages](supported_languages.md) | A list of languages, expressed as ISO two letter codes |
 | [tag](tag.md) | A shost version of the name |
 | [taxonomies](taxonomies.md) | A list of AI risk taxonomies |

@@ -11,6 +11,7 @@ class RiskExplorer(ExplorerBase):
         self._ontology = ontology
         self._risks = ontology.risks
         self._riskcontrols = ontology.riskcontrols
+        self._riskincidents = ontology.riskincidents
         self._actions = ontology.actions
         self._taxonomies = ontology.taxonomies
 
@@ -166,7 +167,7 @@ class RiskExplorer(ExplorerBase):
             name: (Optional) str
                 The string name identifying the risk to find related actions for
             taxonomy: str
-                (Optional) The string label for a taxonomy, to filter action results by
+                (Optional) Only return actions which come from this taxonomy
 
         Returns:
             list[Action]
@@ -382,4 +383,101 @@ class RiskExplorer(ExplorerBase):
             return matching_risk_controls[0]
         else:
             print("No matching risk control found")
+            return None
+        
+    def get_risk_incidents(self, taxonomy=None):
+        """Get risk incident instances
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[RiskIncident]
+                Result containing a list of RiskIncidents
+        """
+        risk_incident_instances = self._riskincidents or []
+
+        if taxonomy is not None:
+            risk_incident_instances = list(
+                filter(
+                    lambda risk_incident: risk_incident.isDefinedByTaxonomy == taxonomy,
+                    risk_incident_instances,
+                )
+            )
+
+        return risk_incident_instances
+    
+    def get_risk_incident(self, id):
+        """Get risk incident instance by ID
+
+        Args:
+            id: str
+                The string id for a risk incident
+
+        Returns:
+            RiskIncident
+                Result containing a RiskIncident
+        """
+        risk_incident_instances = self._riskincidents or []
+
+        matching_risk_incidents = list(
+            filter(lambda risk_control: risk_control.id == id, risk_incident_instances)
+        )
+
+        if len(matching_risk_incidents) > 0:
+            return matching_risk_incidents[0]
+        else:
+            print("No matching risk incident found")
+            return None
+        
+    def get_related_risk_incidents(
+        self, risk=None, risk_id=None, taxonomy=None
+    ):
+        """Get related risk incidents for a risk 
+
+        Args:
+            risk: (Optional) Risk
+                The Risk object to find related incidents for
+            risk_id: (Optional) str
+            taxonomy: str
+                (Optional) The string label for a taxonomy, to filter action results by
+
+        Returns:
+            list[RiskIncident]
+                Result containing a list of the risk incidents which are marked as related to the specified AI risk
+        """
+        matching_risks = self._risks
+
+        if risk is not None:
+            matching_risks = [risk]
+        if id is not None:
+            matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
+
+        if len(matching_risks) > 0:
+            risk: Risk = matching_risks[0]
+            risk_incidents = []
+
+            if risk.isDetectedBy is not None:
+                risk_incidents.append(risk.isDetectedBy)
+
+            risk_incidents = [j for i in risk_incidents for j in i]
+
+            if taxonomy is not None:
+                risk_incidents = list(
+                    filter(
+                        lambda risk_incident: risk_incident.isDefinedByTaxonomy
+                        == taxonomy,
+                        risk_incidents,
+                    )
+                )
+            related_risk_incidents = list(
+                filter(
+                    lambda risk_incident: risk_incident.id in risk_incidents,
+                    self._riskcontrols,
+                )
+            )
+            return related_risk_incidents
+        else:
+            print("No matching risk controls found")
             return None

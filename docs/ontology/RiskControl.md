@@ -106,6 +106,8 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 | [RiskConcept](RiskConcept.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
 | [RiskControl](RiskControl.md) | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
 | [RiskControl](RiskControl.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
+| [RiskIncident](RiskIncident.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
+| [Impact](Impact.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
 | [AiModel](AiModel.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
 
@@ -208,6 +210,7 @@ attributes:
     - Risk
     - RiskControl
     - Action
+    - RiskIncident
     range: RiskTaxonomy
   isDetectedBy:
     name: isDetectedBy

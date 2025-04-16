@@ -23,8 +23,8 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  yes  |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  yes  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  yes  |
 
 
 

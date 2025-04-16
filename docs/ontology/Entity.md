@@ -42,6 +42,18 @@ URI: [schema:Thing](http://schema.org/Thing)
         click RiskControl href "../RiskControl"
       Entity <|-- Action
         click Action href "../Action"
+      Entity <|-- RiskIncident
+        click RiskIncident href "../RiskIncident"
+      Entity <|-- Impact
+        click Impact href "../Impact"
+      Entity <|-- IncidentStatus
+        click IncidentStatus href "../IncidentStatus"
+      Entity <|-- Severity
+        click Severity href "../Severity"
+      Entity <|-- Likelihood
+        click Likelihood href "../Likelihood"
+      Entity <|-- Consequence
+        click Consequence href "../Consequence"
       Entity <|-- AiEval
         click AiEval href "../AiEval"
       Entity <|-- AiEvalResult
@@ -88,6 +100,12 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [RiskConcept](RiskConcept.md)
     * [RiskControl](RiskControl.md) [ [RiskConcept](RiskConcept.md)]
     * [Action](Action.md)
+    * [RiskIncident](RiskIncident.md) [ [RiskConcept](RiskConcept.md)]
+    * [Impact](Impact.md) [ [RiskConcept](RiskConcept.md)]
+    * [IncidentStatus](IncidentStatus.md)
+    * [Severity](Severity.md)
+    * [Likelihood](Likelihood.md)
+    * [Consequence](Consequence.md)
     * [AiEval](AiEval.md)
     * [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
     * [BaseAi](BaseAi.md)

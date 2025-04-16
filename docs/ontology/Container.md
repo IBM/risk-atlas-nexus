@@ -128,6 +128,15 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
     click RiskGroup href "../RiskGroup"
 
         
+      Container : riskincidents
+        
+          
+    
+    
+    Container --> "*" RiskIncident : riskincidents
+    click RiskIncident href "../RiskIncident"
+
+        
       Container : risks
         
           
@@ -169,6 +178,7 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 | [riskgroups](riskgroups.md) | * <br/> [RiskGroup](RiskGroup.md) | A list of AI risk groups | direct |
 | [risks](risks.md) | * <br/> [Risk](Risk.md) | A list of AI risks | direct |
 | [riskcontrols](riskcontrols.md) | * <br/> [RiskControl](RiskControl.md) | A list of AI risk controls | direct |
+| [riskincidents](riskincidents.md) | * <br/> [RiskIncident](RiskIncident.md) | A list of AI risk incidents | direct |
 | [actions](actions.md) | * <br/> [Action](Action.md) | A list of risk related actions | direct |
 | [evaluations](evaluations.md) | * <br/> [AiEval](AiEval.md) | A list of AI evaluation methods | direct |
 | [aimodelfamilies](aimodelfamilies.md) | * <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A list of AI model families | direct |
@@ -330,6 +340,17 @@ attributes:
     domain_of:
     - Container
     range: RiskControl
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  riskincidents:
+    name: riskincidents
+    description: A list of AI risk incidents
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: RiskIncident
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -517,6 +538,19 @@ attributes:
     domain_of:
     - Container
     range: RiskControl
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  riskincidents:
+    name: riskincidents
+    description: A list of AI risk incidents
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: riskincidents
+    owner: Container
+    domain_of:
+    - Container
+    range: RiskIncident
     multivalued: true
     inlined: true
     inlined_as_list: true

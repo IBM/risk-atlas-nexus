@@ -88,6 +88,12 @@ classes:
         range: RiskControl
         inlined: true
         inlined_as_list: true
+      riskincidents:
+        description: A list of AI risk incidents
+        multivalued: true
+        range: RiskIncident
+        inlined: true
+        inlined_as_list: true
       actions:
         description: A list of risk related actions
         multivalued: true

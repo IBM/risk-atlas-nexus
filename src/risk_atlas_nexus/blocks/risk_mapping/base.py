@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import List
 from sssom_schema import Mapping
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 
@@ -14,8 +13,8 @@ class RiskMappingBase(ABC):
 
     def __init__(
         self,
-        new_risks: List[Risk],
-        existing_risks: List[Risk],
+        new_risks: list[Risk],
+        existing_risks: list[Risk],
         inference_engine: InferenceEngine,
         new_prefix: str,  
         mapping_method: MappingMethod
@@ -27,6 +26,6 @@ class RiskMappingBase(ABC):
         self._mapping_method = mapping_method
 
     @abstractmethod
-    def generate(self, new_risks: List[Risk], existing_risks: List[Risk],  inference_engine: InferenceEngine,
-                 new_prefix: str,  mapping_method: MappingMethod) -> List[Mapping]:
+    def generate(self, new_risks: list[Risk], existing_risks: list[Risk],  inference_engine: InferenceEngine,
+                 new_prefix: str,  mapping_method: MappingMethod) -> list[Mapping]:
         raise NotImplementedError

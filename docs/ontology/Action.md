@@ -213,6 +213,7 @@ attributes:
     - Risk
     - RiskControl
     - Action
+    - RiskIncident
     range: RiskTaxonomy
   hasAiActorTask:
     name: hasAiActorTask
