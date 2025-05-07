@@ -1,0 +1,68 @@
+[
+    {
+        "question": "What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other",
+        "examples": {
+            "intents": [
+                "Optimize supply chain management in Investment banks",
+                "Ability to create dialog flows and integrations from natural language instructions.",
+                "Check if a document has grammatical mistakes.",
+                "optimize supply chain management in Investment banks",
+                "In the context of drug repurposing, generative AI can be employed to analyze vast databases of existing drugs and their clinical trials data. By identifying patterns and similarities, the AI can suggest potential new therapeutic indications for existing drugs, based on the chemical structure and pharmacological properties of the APIs. This process can help streamline the drug development pipeline, as it would reduce the need for time-consuming and expensive clinical trials for new indications. For instance, a drug like Atorvastatin, which is currently used to lower cholesterol, could be repurposed for the treatment of diabetic nephropathy, a kidney disease, based on the AI's analysis of similar drugs and their clinical data. This would not only save resources but also provide new treatment options for patients suffering from this debilitating condition. "
+            ],
+            "answers": [
+                "Strategy",
+                "Customer service/support",
+                "Writing assitant",
+                "Strategy",
+                "Healthcare and strategy"
+            ],
+            "explanations": [
+                "Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks.",
+                "Since the task relates to human conversations or generating human converstations or support.",
+                "Since this helps in improving the quality of text. It is not customer service since this on on the quality of text rather than helping in human conversations.",
+                "Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks.",
+                "Since the task is related to healthcare and drug repurposing, which involves analyzing data related to drugs and their clinical trials, this falls under the healthcare domain. It also involves Strategy it talks about using patterns to create new treatment options."
+            ]
+        }
+    },
+    {
+        "question": "Who is the intended user",
+        "examples": {
+            "intents": [
+                "Find patterns in healthcare insurance claims",
+                "Summarize and analyze historic data, industry patterns, create multi-layered models that identify changes as occur, increase supply chain efficiency and optimize inventory levels",
+                "Optimize supply chain management in Investment banks"
+            ],
+            "answers": [
+                "Healthcare insurance claims patterns seekers",
+                "Compliance officer",
+                "Investment banks"
+            ],
+            "explanations": [
+                "This is because the AI system is designed to identify patterns in healthcare insurance claims data and provide insights to insurance companies, healthcare providers, and other stakeholders. The user can be anyone interested in understanding patterns in healthcare insurance claims data, such as researchers, data analysts, insurance underwriters, and healthcare providers. The AI system can be used to analyze large amounts of data, identify trends and patterns, and provide actionable insights to improve healthcare outcomes, reduce costs, and enhance patient safety.",
+                "Compliance officer needs to summarize and analyze historic data, industry patterns, create multi-layered models that identify changes as occur, increase supply chain efficiency and optimize inventory levels.",
+                "This is because the goal of the system is to optimize supply chain management in Investment banks. The user is the entity that will ultimately be affected by the actions of the AI system."
+            ]
+        }
+    },
+    {
+        "question": "Who is the subject as per the intent?",
+        "examples": {
+            "intents": [
+                "Find patterns in healthcare insurance claims",
+                "Optimize supply chain management in Investment banks",
+                "Summarize and analyze historic data, industry patterns, create multi-layered models that identify changes as occur, increase supply chain efficiency and optimize inventory levels"
+            ],
+            "answers": [
+                "Healthcare insurance claims data",
+                "Investment bank's supply chain management process",
+                "Supply chain"
+            ],
+            "explanations": [
+                "The question is asking about the subject of the AI system, which in this context is the data being analyzed. The AI system is designed to find patterns in healthcare insurance claims, so the subject is the claims data itself. This is a key aspect of compliance in healthcare, as it involves the analysis of sensitive patient data and requires adherence to regulations such as HIPAA. As a compliance officer, it is essential to ensure that the AI system is handling this data in a secure and compliant manner.",
+                "The question is asking about the subject of the AI system, which implies that we need to identify the entity or process that the AI system is focused on. In this case, the intent is to optimize supply chain management in investment banks, so the subject of the AI system is the investment bank's supply chain management process. This is because the AI system is being used to analyze and improve the supply chain management process, making it the central focus of the system.",
+                "The question asks for the subject of the AI system, which refers to the entity or process being analyzed or optimized by the system. In this case, the AI system is designed to analyze historic data, identify industry patterns, and create models to optimize supply chain efficiency and inventory levels. Therefore, the subject of the AI system is the supply chain itself. This answer is generated by identifying the key phrases in the prompt, such as 'supply chain efficiency' and 'inventory levels', which indicate that the AI system is focused on optimizing the supply chain."
+            ]
+        }
+    }
+]

@@ -4,10 +4,10 @@ import json
 from linkml_runtime import SchemaView
 from linkml_runtime.dumpers import YAMLDumper
 from typing import Optional, List, Dict
-
+from pathlib import Path
 from importlib.metadata import version
 from sssom_schema import Mapping
-
+from jinja2 import Template
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Action,
     Risk,
@@ -15,7 +15,11 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     RiskIncident,
     RiskTaxonomy,
 )
-from risk_atlas_nexus.blocks.inference.templates import COT_TEMPLATE, AI_TASKS_TEMPLATE
+from risk_atlas_nexus.blocks.inference.templates import (
+    COT_TEMPLATE,
+    AI_TASKS_TEMPLATE,
+    QUESTIONNAIRE_COT_TEMPLATE,
+)
 from risk_atlas_nexus.blocks.risk_detector import AutoRiskDetector
 from risk_atlas_nexus.blocks.risk_explorer import RiskExplorer
 from risk_atlas_nexus.blocks.risk_mapping import RiskMapper
@@ -508,14 +512,20 @@ class RiskAtlasNexus:
 
             prompts.append(
                 inference_engine.prepare_prompt(
-                    prompt_template=COT_TEMPLATE,
+                    prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
                     usecase=usecase,
                     question=data["question"],
                     examples=(
                         [
-                            {"answer": answer, "usecase": intent}
-                            for answer, intent in zip(
-                                data["examples"]["answers"], data["examples"]["intents"]
+                            {
+                                "intent": intent,
+                                "answer": answer,
+                                "explanation": explanation,
+                            }
+                            for intent, answer, explanation in zip(
+                                data["examples"]["intents"],
+                                data["examples"]["answers"],
+                                data["examples"]["explanations"],
                             )
                         ]
                     ),
@@ -525,7 +535,16 @@ class RiskAtlasNexus:
         return [
             result.prediction
             for result in inference_engine.generate(
-                prompts, postprocessors=["clean_output"]
+                prompts,
+                response_format={
+                    "type": "object",
+                    "properties": {
+                        "answer": {"type": "string"},
+                        "explanation": {"type": "string"},
+                    },
+                    "required": ["answer", "explanation"],
+                },
+                postprocessors=["json_object"],
             )
         ]
 
@@ -588,8 +607,8 @@ class RiskAtlasNexus:
         new_risks: List[Risk],
         existing_risks: List[Risk],
         inference_engine: InferenceEngine,
-        new_prefix: str,  
-        mapping_method: MappingMethod = MappingMethod.SEMANTIC
+        new_prefix: str,
+        mapping_method: MappingMethod = MappingMethod.SEMANTIC,
     ) -> List[Mapping]:
         """Identify mappings between a new set of risks and risks that exist in the Risk Atlas
 
@@ -620,12 +639,21 @@ class RiskAtlasNexus:
             new_risks and existing_risks,
             "Please provide new_risks and existing_risks",
         )
-        risk_mapper = RiskMapper(new_risks=new_risks, existing_risks=existing_risks, inference_engine=inference_engine, 
-                                 new_prefix=new_prefix, mapping_method=mapping_method
+        risk_mapper = RiskMapper(
+            new_risks=new_risks,
+            existing_risks=existing_risks,
+            inference_engine=inference_engine,
+            new_prefix=new_prefix,
+            mapping_method=mapping_method,
         )
 
-        return risk_mapper.generate(new_risks=new_risks, existing_risks=existing_risks, inference_engine=inference_engine, new_prefix=new_prefix, mapping_method=mapping_method)
-
+        return risk_mapper.generate(
+            new_risks=new_risks,
+            existing_risks=existing_risks,
+            inference_engine=inference_engine,
+            new_prefix=new_prefix,
+            mapping_method=mapping_method,
+        )
 
     def get_risk_incidents(cls, taxonomy: Optional[str] = None):
         """Get risk incident instances, optionally filtered by taxonomy
@@ -636,9 +664,11 @@ class RiskAtlasNexus:
         """
         type_check("<RAN04811131E>", str, allow_none=True, taxonomy=taxonomy)
 
-        risk_incident_instances: List[RiskIncident] = cls._risk_explorer.get_risk_incidents(taxonomy=taxonomy)
+        risk_incident_instances: List[RiskIncident] = (
+            cls._risk_explorer.get_risk_incidents(taxonomy=taxonomy)
+        )
         return risk_incident_instances
-    
+
     def get_risk_incident(cls, id=None, taxonomy=None):
         """Get an risk incident instance filtered by risk incident id
 
@@ -657,7 +687,7 @@ class RiskAtlasNexus:
 
         risk_incident: RiskIncident | None = cls._risk_explorer.get_risk_incident(id=id)
         return risk_incident
-    
+
     def get_related_risk_incidents(cls, risk=None, risk_id=None, taxonomy=None):
         """Get related risk incident filtered by risk id
 
@@ -690,3 +720,100 @@ class RiskAtlasNexus:
             risk=risk, risk_id=risk_id, taxonomy=taxonomy
         )
         return related_risk_incidents
+
+    def identify_domain_from_usecases(
+        cls,
+        usecases: List[str],
+        inference_engine: InferenceEngine,
+    ) -> List[List[str]]:
+        """Identify potential risks from a usecase description
+
+        Args:
+            usecases (List[str]):
+                A List of strings describing AI usecases
+            inference_engine (InferenceEngine):
+                An LLM inference engine to identify AI tasks from usecases.
+
+        Returns:
+            List[List[str]]:
+                Result containing a list of AI tasks
+        """
+        type_check(
+            "<RAN3B9CD886E>",
+            InferenceEngine,
+            allow_none=False,
+            inference_engine=inference_engine,
+        )
+        type_check("<RAN4CDA6852E>", List, allow_none=False, usecases=usecases)
+        value_check(
+            "<RAN0E435F50E>",
+            inference_engine and usecases,
+            "Please provide usecases and inference_engine",
+        )
+
+        CoT = json.loads(
+            Path(
+                os.path.join(get_templates_path(), "cot_examples_updated.json")
+            ).read_text()
+        )
+        prompts = [
+            Template(QUESTIONNAIRE_COT_TEMPLATE).render(
+                usecase=usecase,
+                question=CoT[0]["question"],
+                examples=(
+                    [
+                        {
+                            "intent": intent,
+                            "answer": answer,
+                            "explanation": explanation,
+                        }
+                        for intent, answer, explanation in zip(
+                            CoT[0]["examples"]["intents"],
+                            CoT[0]["examples"]["answers"],
+                            CoT[0]["examples"]["explanations"],
+                        )
+                    ]
+                ),
+            )
+            for usecase in usecases
+        ]
+
+        return [
+            result.prediction
+            for result in inference_engine.chat(
+                messages=prompts,
+                response_format={
+                    "type": "object",
+                    "properties": {
+                        "answer": {
+                            "type": "string",
+                            "enum": [
+                                "Customer service/support",
+                                "Technical",
+                                "Information retrieval",
+                                "Strategy",
+                                "Code/software engineering",
+                                "Communications",
+                                "IT/business automation",
+                                "Writing assistant",
+                                "Financial",
+                                "Talent and Organization including HR",
+                                "Product",
+                                "Marketing",
+                                "Cybersecurity",
+                                "Healthcare",
+                                "User Research",
+                                "Sales",
+                                "Risk and Compliance",
+                                "Design",
+                                "Other",
+                            ],
+                        },
+                        "explanation": {"type": "string"},
+                    },
+                    "required": ["answer", "explanation"],
+                },
+                postprocessors=["json_object"],
+                verbose=False,
+            )
+        ]
