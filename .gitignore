@@ -4,6 +4,7 @@
 
 # Ignore venv
 vrisk-atlas-nexus
+not for upload/
 
 # Ignore Python cache
 __pycache__/

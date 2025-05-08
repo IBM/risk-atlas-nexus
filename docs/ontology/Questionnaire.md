@@ -31,6 +31,15 @@ URI: [nexus:Questionnaire](https://ibm.github.io/risk-atlas-nexus/ontology/Quest
         
       Questionnaire : description
         
+      Questionnaire : hasBenchmarkMetadata
+        
+          
+    
+    
+    Questionnaire --> "*" BenchmarkMetadataCard : hasBenchmarkMetadata
+    click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
+
+        
       Questionnaire : hasDataset
         
           
@@ -99,6 +108,7 @@ URI: [nexus:Questionnaire](https://ibm.github.io/risk-atlas-nexus/ontology/Quest
 | [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | [AiEval](AiEval.md) |
 | [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md) | A relationship where an entity relates to a risk | [AiEval](AiEval.md) |
 | [bestValue](bestValue.md) | 0..1 <br/> [String](String.md) | Annotation of the best possible result of the evaluation | [AiEval](AiEval.md) |
+| [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A relationship to a Benchmark Metadata Card which contains metadata about the... | [AiEval](AiEval.md) |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -189,6 +199,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -229,6 +240,7 @@ attributes:
     - Dataset
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   hasRelatedRisk:
@@ -255,6 +267,21 @@ attributes:
     domain_of:
     - AiEval
     range: string
+  hasBenchmarkMetadata:
+    name: hasBenchmarkMetadata
+    description: A relationship to a Benchmark Metadata Card which contains metadata
+      about the benchmark.
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: AiEval
+    alias: hasBenchmarkMetadata
+    owner: Questionnaire
+    domain_of:
+    - AiEval
+    inverse: describesAiEval
+    range: BenchmarkMetadataCard
+    multivalued: true
+    inlined: false
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -279,6 +306,7 @@ attributes:
     owner: Questionnaire
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

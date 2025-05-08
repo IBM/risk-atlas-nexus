@@ -75,6 +75,7 @@ URI: [airo:License](https://w3id.org/airo#License)
 | [Dataset](Dataset.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [RiskTaxonomy](RiskTaxonomy.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [AiEval](AiEval.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [Question](Question.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [Questionnaire](Questionnaire.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [AiOffice](AiOffice.md) | [grants_license](grants_license.md) | range | [License](License.md) |
@@ -185,6 +186,7 @@ attributes:
     owner: License
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

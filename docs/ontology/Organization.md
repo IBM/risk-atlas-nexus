@@ -193,6 +193,7 @@ attributes:
     owner: Organization
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

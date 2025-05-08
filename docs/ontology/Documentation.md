@@ -72,6 +72,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [RiskTaxonomy](RiskTaxonomy.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Action](Action.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiEval](AiEval.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Question](Question.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Questionnaire](Questionnaire.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [BaseAi](BaseAi.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
@@ -165,6 +166,7 @@ attributes:
     owner: Documentation
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

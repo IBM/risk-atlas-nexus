@@ -29,6 +29,7 @@ help: status
 	@echo "make regenerate_graph_output -- export the graph with all instances"
 	@echo "make regenerate_owl_schema -- export the schema as OWL"
 	@echo "make regenerate_risk_atlas_as_tex -- export the IBM AI risk atlas as .tex"
+	@echo "make lint_schema -- schema linter shortcut"
 	@echo ""
 
 status: 
@@ -55,6 +56,6 @@ regenerate_risk_atlas_as_tex:
 
 lint_schema:
 	linkml-lint $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml 
-	
+
 test:
 	pytest

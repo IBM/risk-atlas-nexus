@@ -140,6 +140,7 @@ attributes:
     owner: IncidentMitigatedclass
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

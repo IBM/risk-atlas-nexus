@@ -14,6 +14,7 @@ class RiskExplorer(ExplorerBase):
         self._riskincidents = ontology.riskincidents
         self._actions = ontology.actions
         self._taxonomies = ontology.taxonomies
+        self._evaluations = ontology.evaluations
 
     def get_all_risks(self, taxonomy=None):
         """Get all risk definitions from the LinkML
@@ -451,33 +452,120 @@ class RiskExplorer(ExplorerBase):
 
         if risk is not None:
             matching_risks = [risk]
-        if id is not None:
+        if risk_id is not None:
             matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
 
         if len(matching_risks) > 0:
             risk: Risk = matching_risks[0]
-            risk_incidents = []
 
-            if risk.isDetectedBy is not None:
-                risk_incidents.append(risk.isDetectedBy)
-
-            risk_incidents = [j for i in risk_incidents for j in i]
-
-            if taxonomy is not None:
-                risk_incidents = list(
-                    filter(
-                        lambda risk_incident: risk_incident.isDefinedByTaxonomy
-                        == taxonomy,
-                        risk_incidents,
-                    )
-                )
-            related_risk_incidents = list(
+            risk_incident_instances = self._riskincidents or []
+            
+            risk_incident_instances = list(
                 filter(
-                    lambda risk_incident: risk_incident.id in risk_incidents,
-                    self._riskcontrols,
+                    lambda risk_incident: risk_id in risk_incident.refersToRisk,
+                    risk_incident_instances,
                 )
             )
-            return related_risk_incidents
+            if taxonomy is not None:
+                risk_incident_instances = list(
+                    filter(
+                        lambda risk_incident: risk_incident.isDefinedByTaxonomy == taxonomy,
+                        risk_incident_instances,
+                    )
+                )
+             
+            return risk_incident_instances
         else:
-            print("No matching risk controls found")
+            print("No matching risk incidents found")
+            return None
+        
+    def get_all_evaluations(self, taxonomy=None):
+        """Get all evaluation definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[AiEval]
+                Result containing a list of AiEval
+        """
+        evaluation_instances = self._evaluations
+
+        if taxonomy is not None:
+            evaluation_instances = list(
+                filter(
+                    lambda evaluation: evaluation.isDefinedByTaxonomy == taxonomy,
+                    evaluation_instances,
+                )
+            )
+
+        return evaluation_instances
+
+    def get_evaluation(self, id):
+        """Get evaluation definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for an evaluation
+
+        Returns:
+            AiEval
+                Result containing an AiEval
+        """
+        matching_evaluations = list(
+            filter(lambda evaluation: evaluation.id == id, self._evaluations)
+        )
+
+        if len(matching_evaluations) > 0:
+            return matching_evaluations[0]
+        else:
+            print("No matching evaluation found")
+            return None
+        
+    def get_related_evaluations(
+        self, risk=None, risk_id=None, taxonomy=None
+    ):
+        """Get related evaluations for a risk 
+
+        Args:
+            risk: (Optional) Risk
+                The Risk object to find related evaluations for
+            risk_id: (Optional) str
+            taxonomy: str
+                (Optional) The string label for a taxonomy, to filter action results by
+
+        Returns:
+            list[AiEval]
+                Result containing a list of the evaluations which are marked as related to the specified AI risk
+        """
+        matching_risks = self._risks
+
+        if risk is not None:
+            matching_risks = [risk]
+        if risk_id is not None:
+            matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
+
+        if len(matching_risks) > 0:
+            risk: Risk = matching_risks[0]
+
+            evaluation_instances = self._evaluations or []
+            
+            evaluation_instances = list(
+                filter(
+                    lambda evaluation: risk_id in evaluation.hasRelatedRisk,
+                    evaluation_instances,
+                )
+            )
+            if taxonomy is not None:
+                risk_incident_instances = list(
+                    filter(
+                        lambda evaluation: evaluation.isDefinedByTaxonomy == taxonomy,
+                        evaluation_instances,
+                    )
+                )
+             
+            return evaluation_instances
+        else:
+            print("No matching evaluations found")
             return None

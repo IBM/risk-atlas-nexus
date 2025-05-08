@@ -38,6 +38,15 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
         
       AiEval : description
         
+      AiEval : hasBenchmarkMetadata
+        
+          
+    
+    
+    AiEval --> "*" BenchmarkMetadataCard : hasBenchmarkMetadata
+    click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
+
+        
       AiEval : hasDataset
         
           
@@ -107,6 +116,7 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 | [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | direct |
 | [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md) | A relationship where an entity relates to a risk | direct |
 | [bestValue](bestValue.md) | 0..1 <br/> [String](String.md) | Annotation of the best possible result of the evaluation | direct |
+| [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A relationship to a Benchmark Metadata Card which contains metadata about the... | direct |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -123,7 +133,11 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [evaluations](evaluations.md) | range | [AiEval](AiEval.md) |
+| [AiEval](AiEval.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 | [AiEvalResult](AiEvalResult.md) | [isResultOf](isResultOf.md) | range | [AiEval](AiEval.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [describesAiEval](describesAiEval.md) | range | [AiEval](AiEval.md) |
+| [Question](Question.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
+| [Questionnaire](Questionnaire.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 
 
 
@@ -179,6 +193,7 @@ slots:
 - hasLicense
 - hasRelatedRisk
 - bestValue
+- hasBenchmarkMetadata
 slot_usage:
   isComposedOf:
     name: isComposedOf
@@ -219,6 +234,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -259,6 +275,7 @@ attributes:
     - Dataset
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   hasRelatedRisk:
@@ -285,6 +302,21 @@ attributes:
     domain_of:
     - AiEval
     range: string
+  hasBenchmarkMetadata:
+    name: hasBenchmarkMetadata
+    description: A relationship to a Benchmark Metadata Card which contains metadata
+      about the benchmark.
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: AiEval
+    alias: hasBenchmarkMetadata
+    owner: AiEval
+    domain_of:
+    - AiEval
+    inverse: describesAiEval
+    range: BenchmarkMetadataCard
+    multivalued: true
+    inlined: false
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -309,6 +341,7 @@ attributes:
     owner: AiEval
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description
