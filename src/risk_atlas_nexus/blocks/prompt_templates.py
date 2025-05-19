@@ -19,7 +19,7 @@ risks:
 The task is to identify the potential risks associated with the Input context and classify it into the given risk categories. If input doesn't fit into any of the above categories, classify it as Unknown. Respond with a  list of attribute 'category' containing the classification labels.
 
 Examples:
-{% for example in examples %}
+{% for example in data.examples %}
 Input: {{ example.Input }}
 Output: {{ example.Output }}
 {% endfor %}

@@ -18,6 +18,10 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     RiskTaxonomy,
 )
 from risk_atlas_nexus.blocks.inference import InferenceEngine
+from risk_atlas_nexus.blocks.prompt_builder import (
+    FewShotPromptBuilder,
+    ZeroShotPromptBuilder,
+)
 from risk_atlas_nexus.blocks.prompt_response_schema import (
     DOMAIN_TYPE_SCHEMA,
     LIST_OF_STR_SCHEMA,
@@ -36,7 +40,7 @@ from risk_atlas_nexus.blocks.prompt_builder import (
 from risk_atlas_nexus.blocks.risk_detector import AutoRiskDetector
 from risk_atlas_nexus.blocks.risk_explorer import RiskExplorer
 from risk_atlas_nexus.blocks.risk_mapping import RiskMapper
-from risk_atlas_nexus.data import get_templates_path
+from risk_atlas_nexus.data import load_resource
 from risk_atlas_nexus.metadata_base import MappingMethod
 from risk_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from risk_atlas_nexus.toolkit.error_utils import type_check, value_check
@@ -551,7 +555,7 @@ class RiskAtlasNexus:
         taxonomy: RiskTaxonomy | None = cls._risk_explorer.get_taxonomy_by_id(id)
         return taxonomy
 
-    def generate_zero_shot_output(
+    def generate_zero_shot_risk_questionnaire_output(
         cls,
         inference_engine: InferenceEngine,
         usecase: str,
@@ -603,7 +607,7 @@ class RiskAtlasNexus:
         prompts = ZeroShotPromptBuilder(
             questions,
             QUESTIONNAIRE_COT_TEMPLATE,
-        ).build(usecase=usecase)
+        ).build_all(usecase=usecase)
 
         # Invoke inference service
         return [
@@ -616,20 +620,18 @@ class RiskAtlasNexus:
             )
         ]
 
-    def generate_few_shot_output(
+    def generate_few_shot_risk_questionnaire_output(
         cls,
         usecase: str,
         cot_data: List[Dict],
         inference_engine: InferenceEngine,
-        filter_by: Dict["str", "str"] = None,
+        filter_cot_data_by: Dict["str", "str"] = None,
         verbose=False,
     ):
         """Get prediction using the few shot (Chain of Thought) examples.
 
         Args:
             usecase (str): A string describing an AI usecase
-            inference_engine (InferenceEngine):
-                An LLM inference engine to predict the output based on the given use case.
             cot_data (List[Dict]): Chain of Thought data.
                 Each question is associated with a list of example intents and
                 corresponding answers. Check example JSON below.
@@ -644,6 +646,10 @@ class RiskAtlasNexus:
                         ]
                     }
                 ]
+            inference_engine (InferenceEngine):
+                An LLM inference engine to predict the output based on the given use case.
+            filter_cot_data_by (Dict[str, str]):
+                A dictionary to filter CoT data with key as CoT field and value as filter string.
                 ```
 
         Returns:
@@ -651,15 +657,19 @@ class RiskAtlasNexus:
         """
 
         # filter CoT data
-        if filter_by:
-            for key, value in filter_by.items():
+        if filter_cot_data_by:
+            for key, value in filter_cot_data_by.items():
                 cot_data = filter(
                     lambda data: data[key].startswith(value),
                     cot_data,
                 )
 
+        assert (
+            cot_data and len(cot_data) > 0
+        ), "`Chain of Thought (cot_data)` data cannot be None or empty. Please check `filter_cot_data_by` if provided."
+
         # Prepare few shots inference prompts from CoT Data
-        prompts = FewShotPromptBuilder(cot_data, QUESTIONNAIRE_COT_TEMPLATE).build(
+        prompts = FewShotPromptBuilder(cot_data, QUESTIONNAIRE_COT_TEMPLATE).build_all(
             usecase=usecase
         )
 
@@ -702,10 +712,8 @@ class RiskAtlasNexus:
             "Please provide usecases and inference_engine",
         )
 
-        # Load HF tasks from the template
-        hf_ai_tasks = json.loads(
-            Path(os.path.join(get_templates_path(), "hf_ai_tasks.json")).read_text()
-        )
+        # Load HF tasks from the template dir
+        hf_ai_tasks = load_resource("hf_ai_tasks.json")
 
         # Populate schema items
         json_schema = dict(LIST_OF_STR_SCHEMA)
@@ -906,26 +914,19 @@ class RiskAtlasNexus:
             "Please provide usecases and inference_engine",
         )
 
-        # Load and filter CoT data from the template
-        cot_data = list(
-            filter(
-                lambda data: data["question"].startswith(
-                    "What domain does your use request fall under?"
-                ),
-                json.loads(
-                    Path(
-                        os.path.join(get_templates_path(), "cot_examples.json")
-                    ).read_text()
-                ),
-            )
-        )
+        # Load CoT data from the template dir
+        cot_data = load_resource("risk_questionnaire_cot.json")
+
+        assert (
+            cot_data and len(cot_data) > 0
+        ), "`Chain of Thought (cot_data)` data cannot be None or empty."
 
         # Prepare few shots inference prompts from CoT Data
         prompts = [
             FewShotPromptBuilder(
                 cot_data=cot_data,
                 prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
-            ).build(usecase=usecase)[0]
+            ).build_one(sample_index=0, usecase=usecase)
             for usecase in usecases
         ]
 
@@ -995,11 +996,13 @@ class RiskAtlasNexus:
 
         # Get ai users for usecases
         ai_users = [
-            self.generate_few_shot_output(
+            self.generate_few_shot_risk_questionnaire_output(
                 usecase,
                 cot_data,
                 inference_engine=inference_engine,
-                filter_by={"question": "Who is the intended user of the system?"},
+                filter_cot_data_by={
+                    "question": "Who is the intended user of the system?"
+                },
                 verbose=False,
             )
             for usecase in usecases
@@ -1008,11 +1011,13 @@ class RiskAtlasNexus:
 
         # Get ai subjects for usecases
         ai_subjects = [
-            self.generate_few_shot_output(
+            self.generate_few_shot_risk_questionnaire_output(
                 usecase,
                 cot_data,
                 inference_engine=inference_engine,
-                filter_by={"question": "Who is the subject as per the intent?"},
+                filter_cot_data_by={
+                    "question": "Who is the subject as per the intent?"
+                },
                 verbose=False,
             )
             for usecase in usecases

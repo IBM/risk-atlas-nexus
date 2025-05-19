@@ -5,14 +5,17 @@ from risk_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
 from risk_atlas_nexus.blocks.prompt_templates import RISK_IDENTIFICATION_TEMPLATE
 from risk_atlas_nexus.blocks.risk_detector import RiskDetector
 from risk_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
+from risk_atlas_nexus.blocks.prompt_builder import FewShotPromptBuilder
 
 
 class GenericRiskDetector(RiskDetector):
 
     def detect(self, usecases: list[str]) -> list[Risk]:
         prompts = [
-            self.inference_engine.prepare_prompt(
-                prompt_template=RISK_IDENTIFICATION_TEMPLATE,
+            FewShotPromptBuilder(
+                cot_data=[self._examples], prompt_template=RISK_IDENTIFICATION_TEMPLATE
+            ).build_one(
+                sample_index=0,
                 usecase=usecase,
                 risks=json.dumps(
                     [
@@ -21,15 +24,18 @@ class GenericRiskDetector(RiskDetector):
                     ],
                     indent=4,
                 ),
-                examples=self._examples,
             )
             for usecase in usecases
         ]
 
-        LIST_OF_STR_SCHEMA["items"]["enum"] = [risk.name for risk in self._risks]
+        # Populate schema items
+        json_schema = dict(LIST_OF_STR_SCHEMA)
+        json_schema["items"]["enum"] = [risk.name for risk in self._risks]
+
+        # Invoke inference service
         inference_response = self.inference_engine.generate(
             prompts,
-            response_format=LIST_OF_STR_SCHEMA,
+            response_format=json_schema,
             postprocessors=["list_of_str"],
         )
 
