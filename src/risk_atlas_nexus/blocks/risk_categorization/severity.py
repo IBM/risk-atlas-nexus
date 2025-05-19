@@ -1,11 +1,10 @@
-from typing import List, Dict
-from risk_atlas_nexus.blocks.inference import InferenceEngine
+from jinja2 import Template
+
+from risk_atlas_nexus.blocks.prompt_response_schema import RISK_CATEGORY_SCHEMA
 from risk_atlas_nexus.blocks.prompt_templates import (
     RISK_SEVERITY_INSTRUCTION,
     RISK_SEVERITY_TEMPLATE,
 )
-from risk_atlas_nexus.blocks.inference.response_schema import RISK_CATEGORY_SCHEMA
-from jinja2 import Template
 from risk_atlas_nexus.toolkit.logging import configure_logger
 
 
