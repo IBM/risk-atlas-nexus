@@ -1,8 +1,8 @@
-from typing import Optional, List, Dict
+from typing import List
 from jinja2 import Template
 
 
-class ZeroShotHandler:
+class ZeroShotPromptBuilder:
 
     def __init__(self, data, prompt_template):
         self.data = data
@@ -16,7 +16,7 @@ class ZeroShotHandler:
         return prompts
 
 
-class FewShotHandler:
+class FewShotPromptBuilder:
 
     def __init__(self, cot_data, prompt_template):
         self.cot_data = cot_data

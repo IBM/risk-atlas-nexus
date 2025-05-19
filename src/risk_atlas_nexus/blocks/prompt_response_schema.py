@@ -50,7 +50,6 @@ DOMAIN_TYPE_SCHEMA = {
     ],
 }
 
-
 RISK_CATEGORY_SCHEMA = {
     "type": "object",
     "properties": {

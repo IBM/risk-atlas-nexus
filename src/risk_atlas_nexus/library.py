@@ -18,7 +18,7 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     RiskTaxonomy,
 )
 from risk_atlas_nexus.blocks.inference import InferenceEngine
-from risk_atlas_nexus.blocks.inference.response_schema import (
+from risk_atlas_nexus.blocks.prompt_response_schema import (
     DOMAIN_TYPE_SCHEMA,
     LIST_OF_STR_SCHEMA,
     QUESTIONNAIRE_OUTPUT_SCHEMA,
@@ -29,6 +29,10 @@ from risk_atlas_nexus.blocks.prompt_templates import (
     QUESTIONNAIRE_COT_TEMPLATE,
 )
 from risk_atlas_nexus.blocks.risk_categorization.severity import RiskSeverity
+from risk_atlas_nexus.blocks.prompt_builder import (
+    FewShotPromptBuilder,
+    ZeroShotPromptBuilder,
+)
 from risk_atlas_nexus.blocks.risk_detector import AutoRiskDetector
 from risk_atlas_nexus.blocks.risk_explorer import RiskExplorer
 from risk_atlas_nexus.blocks.risk_mapping import RiskMapper
@@ -596,7 +600,7 @@ class RiskAtlasNexus:
         )
 
         # Prepare zero shots inference prompts
-        prompts = ZeroShotHandler(
+        prompts = ZeroShotPromptBuilder(
             questions,
             QUESTIONNAIRE_COT_TEMPLATE,
         ).build(usecase=usecase)
@@ -655,7 +659,7 @@ class RiskAtlasNexus:
                 )
 
         # Prepare few shots inference prompts from CoT Data
-        prompts = FewShotHandler(cot_data, QUESTIONNAIRE_COT_TEMPLATE).build(
+        prompts = FewShotPromptBuilder(cot_data, QUESTIONNAIRE_COT_TEMPLATE).build(
             usecase=usecase
         )
 
@@ -918,7 +922,7 @@ class RiskAtlasNexus:
 
         # Prepare few shots inference prompts from CoT Data
         prompts = [
-            FewShotHandler(
+            FewShotPromptBuilder(
                 cot_data=cot_data,
                 prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
             ).build(usecase=usecase)[0]
