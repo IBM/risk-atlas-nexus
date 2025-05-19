@@ -22,8 +22,14 @@ class RiskSeverity:
         Args:
             usecases (List[str]):
                 A List of strings describing AI usecases
-            inference_engine (InferenceEngine):
-                An LLM inference engine to identify AI tasks from usecases.
+            domains (List[str]):
+                A List of strings containing domain type per usercase
+            ai_tasks (List[List[str]]):
+                A List of ai tasks per usercase
+            ai_users (List[str]):
+                A List of strings containing ai user per usercase
+            ai_subjects (List[str]):
+                A List of strings containing ai subject per usercase
 
         Returns:
             List[Dict]:

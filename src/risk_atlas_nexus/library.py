@@ -946,7 +946,7 @@ class RiskAtlasNexus:
         cot_data: List[Dict],
         inference_engine: InferenceEngine,
     ):
-        """Categorize risk severity from a usecase description
+        """Give risk severity level from a usecase description
 
         Args:
             usecases (List[str]):
