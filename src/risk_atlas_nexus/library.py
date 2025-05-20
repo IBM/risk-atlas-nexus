@@ -607,7 +607,7 @@ class RiskAtlasNexus:
         prompts = ZeroShotPromptBuilder(
             questions,
             QUESTIONNAIRE_COT_TEMPLATE,
-        ).build_all(usecase=usecase)
+        ).build(usecase=usecase)
 
         # Invoke inference service
         return [
@@ -669,7 +669,7 @@ class RiskAtlasNexus:
         ), "`Chain of Thought (cot_data)` data cannot be None or empty. Please check `filter_cot_data_by` if provided."
 
         # Prepare few shots inference prompts from CoT Data
-        prompts = FewShotPromptBuilder(cot_data, QUESTIONNAIRE_COT_TEMPLATE).build_all(
+        prompts = FewShotPromptBuilder(cot_data, QUESTIONNAIRE_COT_TEMPLATE).build(
             usecase=usecase
         )
 
@@ -924,9 +924,9 @@ class RiskAtlasNexus:
         # Prepare few shots inference prompts from CoT Data
         prompts = [
             FewShotPromptBuilder(
-                cot_data=cot_data,
+                cot_data=cot_data[0],
                 prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
-            ).build_one(sample_index=0, usecase=usecase)
+            ).build(usecase=usecase)
             for usecase in usecases
         ]
 

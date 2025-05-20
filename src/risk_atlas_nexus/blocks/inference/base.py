@@ -97,6 +97,7 @@ class InferenceEngine(ABC):
             List[OpenAIChatCompletionMessageParam],
             List[str],
         ],
+        tools=None,
         response_format=None,
         postprocessors=None,
         verbose=True,
