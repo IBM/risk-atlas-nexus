@@ -83,6 +83,7 @@ class OllamaInferenceEngine(InferenceEngine):
             List[OpenAIChatCompletionMessageParam],
             List[str],
         ],
+        tools=None,
         response_format=None,
         postprocessors=None,
         verbose=True,
@@ -92,6 +93,7 @@ class OllamaInferenceEngine(InferenceEngine):
             response = self.client.chat(
                 model=self.model_name_or_path,
                 messages=self._to_openai_format(messages),
+                tools=tools,
                 format=response_format,
                 options=self.parameters,  # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
             )

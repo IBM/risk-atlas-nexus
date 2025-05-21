@@ -1,9 +1,15 @@
 import os
+import json
+from pathlib import Path
+
+PACKAGEDIR = Path(__file__).parent.absolute()
 
 
 def get_data_path():
-    return os.path.abspath(os.path.join(os.path.dirname(__file__), "knowledge_graph"))
+    return os.path.join(PACKAGEDIR, "knowledge_graph")
 
 
-def get_templates_path():
-    return os.path.abspath(os.path.join(os.path.dirname(__file__), "templates"))
+def load_resource(file_name):
+    return json.loads(
+        Path(os.path.join(PACKAGEDIR, "templates", file_name)).read_text()
+    )
