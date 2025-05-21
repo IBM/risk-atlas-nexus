@@ -8,21 +8,14 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     RiskTaxonomy,
 )
 from risk_atlas_nexus.blocks.inference.base import InferenceEngine
-from risk_atlas_nexus.data import get_templates_path
+from risk_atlas_nexus.data import load_resource
 from risk_atlas_nexus.toolkit.logging import configure_logger
 
 
 logger = configure_logger(__name__)
 
 
-def load_risk_identification_examples():
-    with open(
-        os.path.join(get_templates_path(), "risks_identification_examples.json")
-    ) as f:
-        return json.load(f)
-
-
-RISK_IDENTIFICATION_EXAMPLES = load_risk_identification_examples()
+RISK_IDENTIFICATION_EXAMPLES = load_resource("risks_identification_cot.json")
 
 
 class RiskDetector(ABC):

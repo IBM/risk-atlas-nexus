@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Union
 
-from jinja2 import Template
 from risk_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
     RITSInferenceEngineParams,
@@ -58,12 +57,6 @@ class InferenceEngine(ABC):
 
         return parameters
 
-    def prepare_prompt(self, prompt_template: str, usecase: str, **kwargs) -> List[str]:
-        return Template(prompt_template).render(
-            usecase=usecase,
-            **kwargs,
-        )
-
     def _to_openai_format(self, prompt: Union[OpenAIChatCompletionMessageParam, str]):
         if isinstance(prompt, str):
             return [{"role": "user", "content": prompt}]
@@ -104,6 +97,7 @@ class InferenceEngine(ABC):
             List[OpenAIChatCompletionMessageParam],
             List[str],
         ],
+        tools=None,
         response_format=None,
         postprocessors=None,
         verbose=True,
