@@ -65,7 +65,7 @@
             {
                 "intent": "Find patterns in healthcare insurance claims",
                 "answer": "Natural language processing: text classification",
-                "explanation": "Health insurance claims can be find patterns or to classify claims into categories (e.g., diagnosis, procedure, treatment)."
+                "explanation": "Health insurance claims can find patterns or classify claims into categories (e.g., diagnosis, procedure, treatment)."
             },
             {
                 "intent": "Generative AI can optimize waste management processes. By analyzing historical data on waste generation, recycling rates, and resource utilization, generative models can generate optimized waste collection routes, recommend recycling strategies, and predict waste generation patterns. This helps in reducing waste generation, optimizing resource allocation, and promoting circular economy practices.",
@@ -73,7 +73,7 @@
                 "explanation": "Text generation techniques are used to generate reports, recommendations, and insights from the analysis of historical data. and Reinforcement learning algorithms can be employed to optimize the generative model's performance in real-time, based on feedback from the environment (e.g., changes in waste generation rates)."
             },
             {
-                "intent": "Ability to create dialog flows and integrations from natural language instructionscheck if a document has grammatical mistakes",
+                "intent": "Ability to create dialog flows and integrations from natural language instructions check if a document has grammatical mistakes",
                 "answer": "Natural Language Processing: Text Classification and Token Classification",
                 "explanation": "Specifically, Text Classification is used to classify the input text into categories such as 'grammatically correct' or 'contains grammatical errors' Techniques like token classification (also known as part-of-speech tagging) are employed to analyze the document's structure and identify potential grammatical mistakes"
             }

@@ -23,8 +23,8 @@ URI: [dqv:hasQualityMeasurement](https://www.w3.org/TR/vocab-dqv/hasQualityMeasu
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
+| [AiModel](AiModel.md) | A base AI Model class |  no  |
 
 
 

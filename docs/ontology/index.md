@@ -29,6 +29,7 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of language-related tasks such as generation, summarization, classification, among others. A LLM is implemented as an artificial neural networks using a transformer architecture. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities. ChatGPT is an example of an AI system which deploys multiple GPT AI models. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is capable of autonomously performing tasks on behalf of a user or another system by designing its workflow and utilizing available tools. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Consequence](Consequence.md) | None |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Dataset](Dataset.md) | A body of structured information describing some topic(s) of interest. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Documentation](Documentation.md) | Documented information about a concept or other topic(s) of interest. |
@@ -67,6 +68,7 @@ Name: ai-risk-ontology
 | [aitasks](aitasks.md) | A list of AI tasks |
 | [architecture](architecture.md) | A description of the architecture of an AI such as 'Decoder-only' |
 | [author](author.md) | The author or authors of the incident report |
+| [benchmarkmetadatacards](benchmarkmetadatacards.md) | A list of AI evaluation benchmark metadata cards |
 | [bestValue](bestValue.md) | Annotation of the best possible result of the evaluation |
 | [broadMatch](broadMatch.md) | The property is used to state a hierarchical mapping link between two concept... |
 | [carbon_emitted](carbon_emitted.md) | The number of tons of carbon dioxide equivalent that are emitted during train... |
@@ -76,6 +78,7 @@ Name: ai-risk-ontology
 | [datasets](datasets.md) | A list of data sets |
 | [dateCreated](dateCreated.md) | The date on which the entity was created |
 | [dateModified](dateModified.md) | The date on which the entity was most recently modified |
+| [describesAiEval](describesAiEval.md) | A relationship where a BenchmarkMetadataCard describes and AI evaluation (ben... |
 | [description](description.md) | The description of an entity |
 | [descriptor](descriptor.md) | Annotates whether an AI risk is a traditional risk, specific to or amplified ... |
 | [detectsRiskConcept](detectsRiskConcept.md) | The property airo:detectsRiskConcept indicates the control used for detecting... |
@@ -87,27 +90,54 @@ Name: ai-risk-ontology
 | [gpu_hours](gpu_hours.md) | GPU consumption in terms of hours |
 | [grants_license](grants_license.md) | A relationship from a granting entity such as an Organization to a License in... |
 | [hasAiActorTask](hasAiActorTask.md) | Pertinent AI Actor Tasks for each subcategory |
+| [hasAnnotation](hasAnnotation.md) | The process used to annotate or label the dataset, including who or what perf... |
+| [hasAudience](hasAudience.md) | The intended audience, such as researchers, developers, policymakers, etc |
+| [hasBaselineResults](hasBaselineResults.md) | The results of well-known or widely used models to give context to new perfor... |
+| [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | A relationship to a Benchmark Metadata Card which contains metadata about the... |
+| [hasCalculation](hasCalculation.md) | The way metrics are computed based on model outputs and the benchmark data |
 | [hasConsequence](hasConsequence.md) | Indicates consequence(s) possible or arising from specified concept |
+| [hasConsiderationComplianceWithRegulations](hasConsiderationComplianceWithRegulations.md) | Compliance with relevant legal or ethical regulations (if applicable) |
+| [hasConsiderationConsentProcedures](hasConsiderationConsentProcedures.md) | Information on how consent was obtained (if applicable), especially for datas... |
+| [hasConsiderationPrivacyAndAnonymity](hasConsiderationPrivacyAndAnonymity.md) | How any personal or sensitive data is handled and whether any anonymization t... |
+| [hasDataFormat](hasDataFormat.md) | The structure and modality of the data (e |
 | [hasDataset](hasDataset.md) | A relationship to datasets that are used |
+| [hasDataSize](hasDataSize.md) | The size of the dataset, including the number of data points or examples |
+| [hasDataSource](hasDataSource.md) | The origin or source of the data used in the benchmark (e |
+| [hasDataType](hasDataType.md) | The type of data used in the benchmark (e |
+| [hasDemographicAnalysis](hasDemographicAnalysis.md) | How the benchmark evaluates performance across different demographic groups (... |
 | [hasDocumentation](hasDocumentation.md) | Indicates documentation associated with an entity |
+| [hasDomains](hasDomains.md) | The specific domains or areas where the benchmark is applied (e |
 | [hasEuAiSystemType](hasEuAiSystemType.md) | The type of system as defined by the EU AI Act |
 | [hasEuRiskCategory](hasEuRiskCategory.md) | The risk category of an AI system as defined by the EU AI Act |
 | [hasEvaluation](hasEvaluation.md) | A relationship indicating that an entity has an AI evaluation result |
+| [hasGoal](hasGoal.md) | The specific goal or primary use case the benchmark is designed for |
 | [hasImpact](hasImpact.md) | Indicates impact(s) possible or arising as consequences from specified concep... |
 | [hasImpactOn](hasImpactOn.md) | Indicates impact(s) possible or arising as consequences from specified concep... |
+| [hasImplementation](hasImplementation.md) | A relationship to a implementation defining the risk evaluation |
 | [hasInputModality](hasInputModality.md) | A relationship indicating the input modalities supported by an AI component |
+| [hasInterpretation](hasInterpretation.md) | How users should interpret the scores or results from the metrics |
+| [hasLanguages](hasLanguages.md) | The languages included in the dataset used by the benchmark (e |
 | [hasLicense](hasLicense.md) | Indicates licenses associated with a resource |
 | [hasLikelihood](hasLikelihood.md) | The likelihood or probability or chance of something taking place or occuring |
+| [hasLimitations](hasLimitations.md) | Limitations in evaluating or addressing risks, such as gaps in demographic co... |
+| [hasMethods](hasMethods.md) | The evaluation techniques applied within the benchmark |
+| [hasMetrics](hasMetrics.md) | The specific performance metrics used to assess models (e |
 | [hasModelCard](hasModelCard.md) | A relationship to model card references |
+| [hasOutOfScopeUses](hasOutOfScopeUses.md) | Use cases where the benchmark is not designed to be applied and could give mi... |
 | [hasOutputModality](hasOutputModality.md) | A relationship indicating the output modalities supported by an AI component |
 | [hasPart](hasPart.md) | A relationship where an entity has another entity |
 | [hasRelatedAction](hasRelatedAction.md) | A relationship where an entity relates to an action |
 | [hasRelatedRisk](hasRelatedRisk.md) | A relationship where an entity relates to a risk |
+| [hasRelatedRisks](hasRelatedRisks.md) | Specific risks of LLMs the benchmark assesses |
+| [hasResources](hasResources.md) | Links to relevant resources, such as repositories or papers related to the be... |
 | [hasRiskControl](hasRiskControl.md) | Indicates the control measures associated with a system or component to modif... |
 | [hasSeverity](hasSeverity.md) | Indicates the severity associated with a concept |
+| [hasSimilarBenchmarks](hasSimilarBenchmarks.md) | Benchmarks that are closely related in terms of goals or data type |
 | [hasStatus](hasStatus.md) | Indicates the status of specified concept |
+| [hasTasks](hasTasks.md) | The tasks or evaluations the benchmark is intended to assess |
 | [hasTrainingData](hasTrainingData.md) | A relationship indicating the datasets an AI model was trained on |
 | [hasUnitxtCard](hasUnitxtCard.md) | A relationship to a Unitxt card defining the risk evaluation |
+| [hasValidation](hasValidation.md) | Measures taken to ensure that the benchmark provides valid and reliable evalu... |
 | [hasVariant](hasVariant.md) | Indicates an incident that shares the same causative factors, produces simila... |
 | [id](id.md) | A unique identifier to this instance of the model element |
 | [isComposedOf](isComposedOf.md) | Relationship indicating the some entity is composed of other entities (includ... |
@@ -126,6 +156,7 @@ Name: ai-risk-ontology
 | [numParameters](numParameters.md) | A property indicating the number of parameters in a LLM |
 | [numTrainingTokens](numTrainingTokens.md) | The number of tokens a AI model was trained on |
 | [organizations](organizations.md) | A list of organizations |
+| [overview](overview.md) | A brief description of the benchmark's main goals and scope |
 | [performsTask](performsTask.md) | relationship indicating the AI tasks an AI model can perform |
 | [phase](phase.md) | Annotation whether an AI risk shows specifically during the training-tuning o... |
 | [power_consumption_w](power_consumption_w.md) | power consumption in Watts |

@@ -23,18 +23,19 @@ URI: [airo:hasDocumentation](https://w3id.org/airo#hasDocumentation)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Action](Action.md) | Action to remediate a risk |  no  |
 | [RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |  no  |
-| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
 | [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [BaseAi](BaseAi.md) | Any type of AI, be it a LLM, RL agent, SVM, etc |  no  |
-| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
 | [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  no  |
-| [Dataset](Dataset.md) | A body of structured information describing some topic(s) of interest |  no  |
+| [BaseAi](BaseAi.md) | Any type of AI, be it a LLM, RL agent, SVM, etc |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
+| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
 | [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
+| [Dataset](Dataset.md) | A body of structured information describing some topic(s) of interest |  no  |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
+| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... |  no  |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
+| [Action](Action.md) | Action to remediate a risk |  no  |
+| [AiModel](AiModel.md) | A base AI Model class |  no  |
 
 
 
@@ -93,6 +94,7 @@ domain_of:
 - RiskTaxonomy
 - Action
 - AiEval
+- BenchmarkMetadataCard
 - BaseAi
 - LargeLanguageModelFamily
 range: Documentation

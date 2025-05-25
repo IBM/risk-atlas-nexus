@@ -15,7 +15,7 @@ from risk_atlas_nexus.toolkit.logging import configure_logger
 logger = configure_logger(__name__)
 
 
-RISK_IDENTIFICATION_EXAMPLES = load_resource("risks_identification_cot.json")
+RISK_IDENTIFICATION_EXAMPLES = load_resource("risk_generation_cot.json")
 
 
 class RiskDetector(ABC):

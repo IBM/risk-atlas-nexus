@@ -56,6 +56,15 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
     click AiTask href "../AiTask"
 
         
+      Container : benchmarkmetadatacards
+        
+          
+    
+    
+    Container --> "*" BenchmarkMetadataCard : benchmarkmetadatacards
+    click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
+
+        
       Container : datasets
         
           
@@ -181,6 +190,7 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 | [riskincidents](riskincidents.md) | * <br/> [RiskIncident](RiskIncident.md) | A list of AI risk incidents | direct |
 | [actions](actions.md) | * <br/> [Action](Action.md) | A list of risk related actions | direct |
 | [evaluations](evaluations.md) | * <br/> [AiEval](AiEval.md) | A list of AI evaluation methods | direct |
+| [benchmarkmetadatacards](benchmarkmetadatacards.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A list of AI evaluation benchmark metadata cards | direct |
 | [aimodelfamilies](aimodelfamilies.md) | * <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A list of AI model families | direct |
 | [aimodels](aimodels.md) | * <br/> [LargeLanguageModel](LargeLanguageModel.md) | A list of AI models | direct |
 
@@ -373,6 +383,17 @@ attributes:
     domain_of:
     - Container
     range: AiEval
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  benchmarkmetadatacards:
+    name: benchmarkmetadatacards
+    description: A list of AI evaluation benchmark metadata cards
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: BenchmarkMetadataCard
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -577,6 +598,19 @@ attributes:
     domain_of:
     - Container
     range: AiEval
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  benchmarkmetadatacards:
+    name: benchmarkmetadatacards
+    description: A list of AI evaluation benchmark metadata cards
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: benchmarkmetadatacards
+    owner: Container
+    domain_of:
+    - Container
+    range: BenchmarkMetadataCard
     multivalued: true
     inlined: true
     inlined_as_list: true

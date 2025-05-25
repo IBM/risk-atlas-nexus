@@ -29,9 +29,16 @@ documents:
   dateModified: 2024-08-14
 taxonomies:
 - id: mit-ai-risk-repository
-  name: The AI Risk Repository
-  description: A comprehensive living database of over 700 AI risks categorized by
-    their cause and risk domain.
+  name: 'The AI Risk Repository: Domain Taxonomy of AI Risks'
+  description: 'The Domain Taxonomy of AI Risks adapted from Weidinger (2021) classifies risks into 7 AI risk domains: (1) Discrimination & Toxicity, (2) Privacy & Security, (3) Misinformation, (4) Malicious Actors & Misuse, (5) Human-Computer Interaction, (6) Socioeconomic & Environmental, and (7) AI System Safety, Failures, & Limitations.'
+  url: https://airisk.mit.edu/
+  dateCreated: 2024-08-16
+  version: '1'
+  hasDocumentation:
+  - arxiv.org/2408.12622
+- id: mit-ai-risk-repository-causal
+  name: 'The AI Risk Repository: Casual Taxonomy of AI Risks'
+  description: The Causal Taxonomy of AI Risks, adapted from Yampolskiy (2016), classifies risks by its causal factors (1) entity (human, AI), (2) intentionality (intentional, unintentional), and (3) timing (pre-deployment, post-deployment).
   url: https://airisk.mit.edu/
   dateCreated: 2024-08-16
   version: '1'
@@ -59,6 +66,15 @@ riskgroups:
 - id: mit-ai-risk-domain-7
   name: AI system safety, failures, & limitations
   isDefinedByTaxonomy: mit-ai-risk-repository
+- id: mit-ai-risk-repository-causal-entity
+  name: Entity
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+- id: mit-ai-risk-repository-causal-intent
+  name: Intent
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+- id: mit-ai-risk-repository-causal-timing
+  name: Timing
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
 risks:
 - id: mit-ai-risk-subdomain-1.1
   name: Unfair discrimination and misrepresentation
@@ -243,4 +259,48 @@ risks:
     particularly as AI systems become more advanced and autonomous.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-7
-
+- id: mit-ai-causal-risk-entity-ai
+  name: AI
+  description: The risk is caused by a decision or action made by an AI system 
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-entity
+- id: mit-ai-causal-risk-entity-human
+  name: Human
+  description: The risk is caused by a decision or action made by humans 
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-entity
+- id: mit-ai-causal-risk-entity-other
+  name: Other
+  description: The risk is caused by some other reason or is ambiguous
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-entity
+- id: mit-ai-causal-risk-intent-intentional
+  name: Intentional
+  description: The risk occurs due to an expected outcome from pursuing a goal
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-intent
+- id: mit-ai-causal-risk-intent-unintentional
+  name: Unintentional
+  description: The risk occurs due to an unexpected outcome from pursuing a goal
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-intent
+- id: mit-ai-causal-risk-intent-other
+  name: Other
+  description: The risk is presented as occurring without clearly specifying the intentionality
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-intent
+- id: mit-ai-causal-risk-timing-pre-deployment
+  name: Pre -deployment
+  description: The risk occurs before the AI is deployed
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-timing
+- id: mit-ai-causal-risk-timing-post-deployment
+  name: Post -deployment
+  description: The risk occurs after the AI model has been trained and deployed
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-timing
+- id: mit-ai-causal-risk-timing-other
+  name: Other
+  description: The risk is presented without a clearly specified time of occurrence
+  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  isPartOf: mit-ai-risk-repository-causal-timing

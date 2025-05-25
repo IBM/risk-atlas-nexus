@@ -146,6 +146,7 @@ attributes:
     owner: Severity
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

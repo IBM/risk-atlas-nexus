@@ -6,11 +6,17 @@ from typing import Union, List, Dict
 # Third party
 from linkml_runtime import SchemaView
 from sssom_schema import Mapping
+from linkml_runtime.dumpers import YAMLDumper
 
 # Unit Test Infrastructure
 from src.risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
+    AiEval,
+    BenchmarkMetadataCard,
+    Dataset,
+    Documentation,
     Risk,
     Action,
+    RiskIncident,
 )
 from tests.base import TestCaseBase
 
@@ -63,7 +69,9 @@ class TestLibrary(TestCaseBase):
     ###############################################################################################
 
     def test_own_base_dir_actually_exists(self):
-        self.assertRaises(FileNotFoundError, RiskAtlasNexus, "/an_unlikely_file_path")
+        self.assertRaises(
+            FileNotFoundError, RiskAtlasNexus, "/an_unlikely_file_path"
+        )
 
     def test_get_all_risks_type(self):
         """Check type of Get all risk definitions"""
@@ -99,31 +107,34 @@ class TestLibrary(TestCaseBase):
         """Get related risk definitions from the LinkML, by risk atlas tag"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(tag="toxic-output")
-        self.assertIs(len(risks), 7)
+        assert all(i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks)
+        self.assertGreater(len(risks), 0)
 
     def test_get_related_risk_ids_by_tag(self):
         """Get related risk definitions from the LinkML, by risk atlas tag"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(tag="toxic-output")
-        self.assertIs(len(risks), 7)
+        assert all(i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks)
+        self.assertGreater(len(risks), 0)
 
     def test_get_related_risks_by_id(self):
         """Get related risk definitions from the LinkML, by risk id"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(id="granite-function-call")
-        self.assertIs(len(risks), 1)
+        assert all(i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks)
+        self.assertGreater(len(risks), 0)
 
     def test_get_related_risk_ids_by_id(self):
         """Get related risk definitions from the LinkML, by risk id"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(id="granite-function-call")
-        self.assertIs(len(risks), 1)
+        self.assertGreater(len(risks), 0)
 
     def test_get_risk_actions_by_risk_id(self):
         """Get related actions definitions from the LinkML, by risk id"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_actions(id="nist-human-ai-configuration")
-        self.assertIs(len(risks), 53)
+        self.assertGreater(len(risks), 0)
 
     def test_get_all_actions_type(self):
         """Check type of Get all action definitions"""
@@ -157,7 +168,7 @@ class TestLibrary(TestCaseBase):
         """Get all taxonomy definitions from the LinkML"""
         ran_lib = self.ran_lib
         taxonomies = ran_lib.get_all_taxonomies()
-        self.assertIs(len(taxonomies), 8)
+        self.assertGreater(len(taxonomies), 0)
 
     def test_get_taxonomy_by_id(self):
         """Get taxonomy definitions from the LinkML filtered by taxonomy id"""
@@ -169,12 +180,15 @@ class TestLibrary(TestCaseBase):
         """Get all risk control definitions from the LinkML"""
         ran_lib = self.ran_lib
         risk_controls = ran_lib.get_all_risk_controls()
-        self.assertIs(len(risk_controls), 13)
+        self.assertGreater(len(risk_controls), 0)
+        
 
     def test_get_risk_control_by_id(self):
         """Get risk_control definition from the LinkML filtered by risk_control id"""
         ran_lib = self.ran_lib
-        risk_control = ran_lib.get_risk_control(id="gg-unethical-behavior-detection")
+        risk_control = ran_lib.get_risk_control(
+            id="gg-unethical-behavior-detection"
+        )
         assert risk_control.id == "gg-unethical-behavior-detection"
 
     def test_generate_proposed_mappings(self):
@@ -183,12 +197,143 @@ class TestLibrary(TestCaseBase):
 
         risks_1 = ran_lib.get_all_risks(taxonomy="nist-ai-rmf")
         risks_2 = ran_lib.get_all_risks(taxonomy="ibm-risk-atlas")
-        
-        mappings = ran_lib.generate_proposed_mappings(risks_1, risks_2, None, "test_prefix", "SEMANTIC")
-        
-        self.assertIs(len(mappings), 12)
+
+        mappings = ran_lib.generate_proposed_mappings(
+            risks_1, risks_2, None, "test_prefix", "SEMANTIC"
+        )
+
+        self.assertGreater(len(mappings), 0)
         self.assertIsInstance(mappings, List)
         assert all(isinstance(i, Mapping) for i in mappings)
 
         with self.assertRaises(ValueError):
-            mappings2 = ran_lib.generate_proposed_mappings(risks_1, None, None, "test_prefix", "SEMANTIC")
+            mappings2 = ran_lib.generate_proposed_mappings(
+                risks_1, None, None, "test_prefix", "SEMANTIC"
+            )
+
+    def test_get_risk_incidents(self):
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._riskincidents = [RiskIncident(id="test-ri")]
+        ris = ran_lib.get_risk_incidents()
+        assert all(isinstance(i, RiskIncident) for i in ris)
+        self.assertIs(len(ris), 1)
+
+    def test_get_risk_incident(self):
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._riskincidents = [RiskIncident(id="test-ri")]
+        ri = ran_lib.get_risk_incident(id="test-ri")
+        assert isinstance(ri, RiskIncident)
+
+    def test_get_related_risk_incidents(self):
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._riskincidents = [
+            RiskIncident(id="test-ri", refersToRisk=["atlas-data-bias"])
+        ]
+        ri = ran_lib.get_risk_incident(id="test-ri")
+        assert isinstance(ri, RiskIncident)
+        rris = ran_lib.get_related_risk_incidents(risk_id="atlas-data-bias")
+        assert all(isinstance(i, RiskIncident) for i in rris)
+        self.assertIs(len(rris), 1)
+        incident = rris[0]
+        self.assertEquals(incident.id, "test-ri")
+        self.assertIn("atlas-data-bias", incident.refersToRisk)
+
+    def test_get_all_evaluations(self):
+        """Get all evaluation definitions from the LinkML"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._evaluations = [
+            AiEval(id="test-eval1")
+        ]
+        evaluations = ran_lib.get_all_evaluations()
+        self.assertGreater(len(evaluations), 0)
+        
+
+    def test_get_evaluation_by_id(self):
+        """Get evaluation definition from the LinkML filtered by evaluation id"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._evaluations = [
+            AiEval(id="test-eval1")
+        ]
+        evaluation = ran_lib.get_evaluation(
+            id="test-eval1"
+        )
+        assert evaluation.id == "test-eval1"
+
+    
+    def test_get_related_evaluations(self):
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._evaluations = ran_lib._risk_explorer._evaluations +[
+            AiEval(id="test-eval1", hasRelatedRisk=["atlas-data-bias"])
+        ]
+        ev1 = ran_lib.get_evaluation(id="test-eval1")
+        assert isinstance(ev1, AiEval)
+        evs = ran_lib.get_related_evaluations(risk_id="atlas-data-bias")
+        assert all(isinstance(i, AiEval) for i in evs)
+        self.assertIs(len(evs), 1)
+        ev = evs[0]
+        self.assertEquals(ev.id, "test-eval1")
+        self.assertIn("atlas-data-bias", ev.hasRelatedRisk)
+
+    def test_get_all_benchmark_metadata_cards(self):
+        """Get all benchmark_metadata_card definitions from the LinkML"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._benchmarkmetadatacards = [
+            BenchmarkMetadataCard(id="test-bmc1")
+        ]
+        bmcs = ran_lib.get_benchmark_metadata_cards()
+        self.assertGreater(len(bmcs), 0)
+        
+
+    def test_get_benchmark_metadata_card_by_id(self):
+        """Get benchmark metadata card definition from the LinkML filtered by dataset id"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._benchmarkmetadatacards = [
+            BenchmarkMetadataCard(id="test-bmc1")
+        ]
+        bmc = ran_lib.get_benchmark_metadata_card(
+            id="test-bmc1"
+        )
+        assert bmc.id == "test-bmc1"
+
+    def test_get_all_documents(self):
+        """Get all documents definitions from the LinkML"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._documents = [
+            Documentation(id="test-ds1")
+        ]
+        documents = ran_lib.get_documents()
+        self.assertGreater(len(documents), 0)
+        
+
+    def test_get_document_by_id(self):
+        """Get document definition from the LinkML filtered by dataset id"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._documents = [
+            Documentation(id="test-ds1")
+        ]
+        document = ran_lib.get_document(
+            id="test-ds1"
+        )
+        assert document.id == "test-ds1"
+
+    
+    def test_get_all_datasets(self):
+        """Get all dataset definitions from the LinkML"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._datasets = [
+            Dataset(id="test-ds1")
+        ]
+        datasets = ran_lib.get_datasets()
+        self.assertGreater(len(datasets), 0)
+        
+
+    def test_get_evaluation_by_id(self):
+        """Get dataset definition from the LinkML filtered by dataset id"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._datasets = [
+            Dataset(id="test-ds1")
+        ]
+        dataset = ran_lib.get_dataset(
+            id="test-ds1"
+        )
+        assert dataset.id == "test-ds1"

@@ -568,6 +568,7 @@ attributes:
     owner: Risk
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

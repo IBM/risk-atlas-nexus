@@ -161,6 +161,7 @@ attributes:
     owner: AiLifecyclePhase
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

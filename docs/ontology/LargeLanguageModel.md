@@ -523,6 +523,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -538,8 +539,10 @@ attributes:
     owner: LargeLanguageModel
     domain_of:
     - Dataset
+    - Documentation
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   performsTask:
@@ -590,6 +593,7 @@ attributes:
     owner: LargeLanguageModel
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

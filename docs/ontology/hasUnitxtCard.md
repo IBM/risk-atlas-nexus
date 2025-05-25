@@ -37,6 +37,8 @@ URI: [schema:url](http://schema.org/url)
 
 * Range: [Uri](Uri.md)
 
+* Multivalued: True
+
 
 
 
@@ -80,6 +82,8 @@ alias: hasUnitxtCard
 domain_of:
 - AiEval
 range: uri
+multivalued: true
+inlined: false
 
 ```
 </details>

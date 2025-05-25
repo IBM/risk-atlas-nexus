@@ -57,6 +57,8 @@ classes:
     is_a: Entity
     class_uri: airo:Documentation
     description: Documented information about a concept or other topic(s) of interest.
+    slots:
+      - hasLicense
   
   Fact:
     abstract: true

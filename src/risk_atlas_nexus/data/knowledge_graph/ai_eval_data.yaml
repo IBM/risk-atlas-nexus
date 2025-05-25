@@ -11,11 +11,370 @@ documents:
     url: "https://arxiv.org/abs/2109.07958"
     dateCreated: "2021-09-08"
     dateModified: "2022-05-08"
+  - id: repo_truthful_qa
+    name: TruthfulQA
+    description: "Repository for TruthfulQA.  TruthfulQA: Measuring How Models Imitate Human Falsehoods. This repository contains code for evaluating model performance on the TruthfulQA benchmark. The full set of benchmark questions and reference answers is contained in TruthfulQA.csv."
+    url: https://github.com/sylinrl/TruthfulQA
+    hasLicense: license-apache-2.0
+  - id: 'https://arxiv.org/abs/2101.11718'
+    name: "BOLD: Dataset and Metrics for Measuring Biases in Open-Ended Language\n \
+      \ Generation"
+    description: 'Recent advances in deep learning techniques have enabled machines
+      to generate cohesive open-ended text when prompted with a sequence of words as context. While these models now empower many downstream applications from conversation bots to automatic storytelling, they have been shown to generate texts that exhibit social biases. To systematically study and benchmark social biases in open-ended language generation, we introduce the Bias in Open-Ended Language Generation Dataset (BOLD), a large-scale dataset that consists of 23,679 English text generation prompts for bias benchmarking across five domains: profession, gender, race, religion, and political ideology. We also propose new automated metrics for toxicity, psycholinguistic norms, and text gender polarity to measure social biases in open-ended text generation from multiple angles. An examination of text generated from three popular language models reveals that the majority of these models exhibit a larger social bias than human-written Wikipedia text across all domains. With these results we highlight the need to benchmark biases in open-ended language generation and caution users of language generation models on downstream tasks to be cognizant of these embedded prejudices.'
+    url: 'https://arxiv.org/abs/2101.11718'
+  - id: https://arxiv.org/abs/2311.04124
+    name: Unveiling Safety Vulnerabilities of Large Language Models
+    description: 'As large language models become more prevalent, their possible harmful
+      or inappropriate responses are a cause for concern. This paper introduces a unique dataset containing adversarial examples in the form of questions, which we call AttaQ, designed to provoke such harmful or inappropriate responses. We assess the efficacy of our dataset by analyzing the vulnerabilities of various models when subjected to it. Additionally, we introduce a novel automatic approach for identifying and naming vulnerable semantic regions - input semantic areas for which the model is likely to produce harmful outputs. This is achieved through the application of specialized clustering techniques that consider both the semantic similarity of the input attacks and the harmfulness of the model''s responses. Automatically identifying vulnerable semantic regions enhances the evaluation of model weaknesses, facilitating targeted improvements to its safety mechanisms and overall reliability.'
+    url: https://arxiv.org/abs/2311.04124
+  - id: https://arxiv.org/abs/2010.00133
+    name: "CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked\n\
+      \  Language Models"
+    description: 'Pretrained language models, especially masked language models (MLMs)
+      have seen success across many NLP tasks. However, there is ample evidence that they use the cultural biases that are undoubtedly present in the corpora they are trained on, implicitly creating harm with biased representations. To measure some forms of social bias in language models against protected demographic groups in the US, we introduce the Crowdsourced Stereotype Pairs benchmark (CrowS-Pairs). CrowS-Pairs has 1508 examples that cover stereotypes dealing with nine types of bias, like race, religion, and age. In CrowS-Pairs a model is presented with two sentences: one that is more stereotyping and another that is less stereotyping. The data focuses on stereotypes about historically disadvantaged groups and contrasts them with advantaged groups. We find that all three of the widely-used MLMs we evaluate substantially favor sentences that express stereotypes in every category in CrowS-Pairs. As work on building less biased models advances, this dataset can be used as a benchmark to evaluate progress.'
+    url: https://arxiv.org/abs/2010.00133
+  - id: https://arxiv.org/abs/2404.08676
+    name: "ALERT: A Comprehensive Benchmark for Assessing Large Language Models'\n \
+      \ Safety through Red Teaming"
+    description: 'When building Large Language Models (LLMs), it is paramount to bear
+      safety in mind and protect them with guardrails. Indeed, LLMs should never generate content promoting or normalizing harmful, illegal, or unethical behavior that may contribute to harm to individuals or society. This principle applies to both normal and adversarial use. In response, we introduce ALERT, a large-scale benchmark to assess safety based on a novel fine-grained risk taxonomy. It is designed to evaluate the safety of LLMs through red teaming methodologies and consists of more than 45k instructions categorized using our novel taxonomy. By subjecting LLMs to adversarial testing scenarios, ALERT aims to identify vulnerabilities, inform improvements, and enhance the overall safety of the language models. Furthermore, the fine-grained taxonomy enables researchers to perform an in-depth evaluation that also helps one to assess the alignment with various policies. In our experiments, we extensively evaluate 10 popular open- and closed-source LLMs and demonstrate that many of them still struggle to attain reasonable levels of safety.'
+    url: https://arxiv.org/abs/2404.08676
+  - id: repo_Babelscape_ALERT
+    name: "ALERT: A Comprehensive Benchmark for Assessing Large Language Models’ Safety through Red Teaming"
+    description: "Official repository for the paper 'ALERT: A Comprehensive Benchmark for Assessing Large Language Models’ Safety through Red Teaming'"
+    url: "https://github.com/Babelscape/ALERT"
+    hasLicense: license-mit
+  - id: https://arxiv.org/abs/2402.05044
+    name: "SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large\n\
+      \  Language Models"
+    description: 'In the rapidly evolving landscape of Large Language Models (LLMs),
+      ensuring robust safety measures is paramount. To meet this crucial need, we propose \emph{SALAD-Bench}, a safety benchmark specifically designed for evaluating LLMs, attack, and defense methods. Distinguished by its breadth, SALAD-Bench transcends conventional benchmarks through its large scale, rich diversity, intricate taxonomy spanning three levels, and versatile functionalities.SALAD-Bench is crafted with a meticulous array of questions, from standard queries to complex ones enriched with attack, defense modifications and multiple-choice. To effectively manage the inherent complexity, we introduce an innovative evaluators: the LLM-based MD-Judge for QA pairs with a particular focus on attack-enhanced queries, ensuring a seamless, and reliable evaluation. Above components extend SALAD-Bench from standard LLM safety evaluation to both LLM attack and defense methods evaluation, ensuring the joint-purpose utility. Our extensive experiments shed light on the resilience of LLMs against emerging threats and the efficacy of contemporary defense tactics. Data and evaluator are released under https://github.com/OpenSafetyLab/SALAD-BENCH.'
+    url: https://arxiv.org/abs/2402.05044
+  - id: https://arxiv.org/abs/2406.14598
+    name: "SORRY-Bench: Systematically Evaluating Large Language Model Safety\n  Refusal"
+    description: 'Evaluating aligned large language models'' (LLMs) ability to recognize
+      and reject unsafe user requests is crucial for safe, policy-compliant deployments. Existing evaluation efforts, however, face three limitations that we address with SORRY-Bench, our proposed benchmark. First, existing methods often use coarse-grained taxonomies of unsafe topics, and are over-representing some fine-grained topics. For example, among the ten existing datasets that we evaluated, tests for refusals of self-harm instructions are over 3x less represented than tests for fraudulent activities. SORRY-Bench improves on this by using a fine-grained taxonomy of 44 potentially unsafe topics, and 440 class-balanced unsafe instructions, compiled through human-in-the-loop methods. Second, linguistic characteristics and formatting of prompts are often overlooked, like different languages, dialects, and more -- which are only implicitly considered in many evaluations. We supplement SORRY-Bench with 20 diverse linguistic augmentations to systematically examine these effects. Third, existing evaluations rely on large LLMs (e.g., GPT-4) for evaluation, which can be computationally expensive. We investigate design choices for creating a fast, accurate automated safety evaluator. By collecting 7K+ human annotations and conducting a meta-evaluation of diverse LLM-as-a-judge designs, we show that fine-tuned 7B LLMs can achieve accuracy comparable to GPT-4 scale LLMs, with lower computational cost. Putting these together, we evaluate over 50 proprietary and open-weight LLMs on SORRY-Bench, analyzing their distinctive safety refusal behaviors. We hope our effort provides a building block for systematic evaluations of LLMs'' safety refusal capabilities, in a balanced, granular, and efficient manner. Benchmark demo, data, code, and models are available through https://sorry-bench.github.io.'
+    url: https://arxiv.org/abs/2406.14598
+  - id: https://arxiv.org/abs/2203.09509
+    name: "ToxiGen: A Large-Scale Machine-Generated Dataset for Adversarial and\n  Implicit\
+      \ Hate Speech Detection"
+    description: 'Toxic language detection systems often falsely flag text that contains minority group mentions as toxic, as those groups are often the targets of online hate. Such over-reliance on spurious correlations also causes systems to struggle with detecting implicitly toxic language. To help mitigate these issues, we create ToxiGen, a new large-scale and machine-generated dataset of 274k toxic and benign statements about 13 minority groups. We develop a demonstration-based prompting framework and an adversarial classifier-in-the-loop decoding method to generate subtly toxic and benign text with a massive pretrained language model. Controlling machine generation in this way allows ToxiGen to cover implicitly toxic text at a larger scale, and about more demographic groups, than previous resources of human-written text. We conduct a human evaluation on a challenging subset of ToxiGen and find that annotators struggle to distinguish machine-generated text from human-written language. We also find that 94.5% of toxic examples are labeled as hate speech by human annotators. Using three publicly-available datasets, we show that finetuning a toxicity classifier on our data improves its performance on human-written data substantially. We also demonstrate that ToxiGen can be used to fight machine-generated toxicity as finetuning improves the classifier significantly on our evaluation subset. Our code and data can be found at https://github.com/microsoft/ToxiGen.'
+    url: https://arxiv.org/abs/2203.09509
+    hasLicense: license-cc-by-4.0
+  - id: repo_microsoft_toxigen
+    name: ToxiGen
+    description: "Repository for ToxiGen. This repo contains the code for generating the ToxiGen dataset, published at ACL 2022. "
+    url: "https://github.com/microsoft/toxigen"
+    hasLicense: license-mit
+  - id: https://arxiv.org/abs/2308.01263
+    name: "XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in\n \
+      \ Large Language Models"
+    description: 'Without proper safeguards, large language models will readily follow malicious instructions and generate toxic content. This risk motivates safety efforts such as red-teaming and large-scale feedback learning, which aim to make models both helpful and harmless. However, there is a tension between these two objectives, since harmlessness requires models to refuse to comply with unsafe prompts, and thus not be helpful. Recent anecdotal evidence suggests that some models may have struck a poor balance, so that even clearly safe prompts are refused if they use similar language to unsafe prompts or mention sensitive topics. In this paper, we introduce a new test suite called XSTest to identify such eXaggerated Safety behaviours in a systematic way. XSTest comprises 250 safe prompts across ten prompt types that well-calibrated models should not refuse to comply with, and 200 unsafe prompts as contrasts that models, for most applications, should refuse. We describe XSTest''s creation and composition, and then use the test suite to highlight systematic failure modes in state-of-the-art language models as well as more general challenges in building safer language models.'
+    url: https://arxiv.org/abs/2308.01263
+    hasLicense: license-cc-by-4.0
+  - id: repo_paul-rottger_xstest
+    name: "XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models"
+    description: "Repository for XSTest. Röttger et al. This repo contains data and code for NAACL 2024 paper 'XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models'."
+    url: https://github.com/paul-rottger/xstest
+    hasLicense: license-cc-by-4.0
+  - id: https://arxiv.org/abs/2311.08370
+    name: "SimpleSafetyTests: a Test Suite for Identifying Critical Safety Risks in\n\
+      \  Large Language Models"
+    description: 'The past year has seen rapid acceleration in the development of
+      large language models (LLMs). However, without proper steering and safeguards, LLMs will readily follow malicious instructions, provide unsafe advice, and generate toxic content. We introduce SimpleSafetyTests (SST) as a new test suite for rapidly and systematically identifying such critical safety risks. The test suite comprises 100 test prompts across five harm areas that LLMs, for the vast majority of applications, should refuse to comply with. We test 11 open-access and open-source LLMs and four closed-source LLMs, and find critical safety weaknesses. While some of the models do not give a single unsafe response, most give unsafe responses to more than 20% of the prompts, with over 50% unsafe responses in the extreme. Prepending a safety-emphasising system prompt substantially reduces the occurrence of unsafe responses, but does not completely stop them from happening. Trained annotators labelled every model response to SST (n = 3,000). We use these annotations to evaluate five AI safety filters (which assess whether a models'' response is unsafe given a prompt) as a way of automatically evaluating models'' performance on SST. The filters'' performance varies considerably. There are also differences across the five harm areas, and on the unsafe versus safe responses. The widely-used Perspective API has 72% accuracy and a newly-created zero-shot prompt to OpenAI''s GPT-4 performs best with 89% accuracy. Content Warning: This paper contains prompts and responses that relate to child abuse, suicide, self-harm and eating disorders, scams and fraud, illegal items, and physical harm.'
+    url: https://arxiv.org/abs/2311.08370
+    hasLicense: license-cc-by-4.0
+  - id: repo_bertiev_SimpleSafetyTests
+    name: SimpleSafetyTests
+    description: "SimpleSafetyTests contains prompts that relate to child abuse, suicide, self-harm and eating disorders, scams and fraud, illegal items, and physical harm. They are highly sensitive and you could find them harmful."
+    url: "https://github.com/bertiev/SimpleSafetyTests"
+    hasLicense: license-cc-by-4.0
+  - id: https://arxiv.org/abs/2110.08193
+    name: 'BBQ: A Hand-Built Bias Benchmark for Question Answering'
+    description: 'It is well documented that NLP models learn social biases, but little
+      work has been done on how these biases manifest in model outputs for applied tasks like question answering (QA). We introduce the Bias Benchmark for QA (BBQ), a dataset of question sets constructed by the authors that highlight attested social biases against people belonging to protected classes along nine social dimensions relevant for U.S. English-speaking contexts. Our task evaluates model responses at two levels: (i) given an under-informative context, we test how strongly responses reflect social biases, and (ii) given an adequately informative context, we test whether the model''s biases override a correct answer choice. We find that models often rely on stereotypes when the context is under-informative, meaning the model''s outputs consistently reproduce harmful biases in this setting. Though models are more accurate when the context provides an informative answer, they still rely on stereotypes and average up to 3.4 percentage points higher accuracy when the correct answer aligns with a social bias than when it conflicts, with this difference widening to over 5 points on examples targeting gender for most models tested.'
+    url: https://arxiv.org/abs/2110.08193
+  - id: repo_nyu-mll_BBQ
+    name: BBQ
+    description: "Repository for the Bias Benchmark for QA dataset."
+    url: "https://github.com/nyu-mll/BBQ"
+    hasLicense: license-cc-by-4.0
+  - id: https://arxiv.org/abs/2312.03689
+    name: Evaluating and Mitigating Discrimination in Language Model Decisions
+    description: 'As language models (LMs) advance, interest is growing in applying
+      them to high-stakes societal decisions, such as determining financing or housing eligibility. However, their potential for discrimination in such contexts raises ethical concerns, motivating the need for better methods to evaluate these risks. We present a method for proactively evaluating the potential discriminatory impact of LMs in a wide range of use cases, including hypothetical use cases where they have not yet been deployed. Specifically, we use an LM to generate a wide array of potential prompts that decision-makers may input into an LM, spanning 70 diverse decision scenarios across society, and systematically vary the demographic information in each prompt. Applying this methodology reveals patterns of both positive and negative discrimination in the Claude 2.0 model in select settings when no interventions are applied. While we do not endorse or permit the use of language models to make automated decisions for the high-risk use cases we study, we demonstrate techniques to significantly decrease both positive and negative discrimination through careful prompt engineering, providing pathways toward safer deployment in use cases where they may be appropriate. Our work enables developers and policymakers to anticipate, measure, and address discrimination as language model capabilities and applications continue to expand. We release our dataset and prompts at https://huggingface.co/datasets/Anthropic/discrim-eval'
+    url: https://arxiv.org/abs/2312.03689
+  - id: https://arxiv.org/abs/2310.00905
+    name: "All Languages Matter: On the Multilingual Safety of Large Language\n  Models"
+    description: 'Safety lies at the core of developing and deploying large language
+      models (LLMs). However, previous safety benchmarks only concern the safety in one language, e.g. the majority language in the pretraining data such as English. In this work, we build the first multilingual safety benchmark for LLMs, XSafety, in response to the global deployment of LLMs in practice. XSafety covers 14 kinds of commonly used safety issues across 10 languages that span several language families. We utilize XSafety to empirically study the multilingual safety for 4 widely-used LLMs, including both close-API and open-source models. Experimental results show that all LLMs produce significantly more unsafe responses for non-English queries than English ones, indicating the necessity of developing safety alignment for non-English languages. In addition, we propose several simple and effective prompting methods to improve the multilingual safety of ChatGPT by evoking safety knowledge and improving cross-lingual generalization of safety alignment. Our prompting method can significantly reduce the ratio of unsafe responses from 19.1% to 9.7% for non-English queries. We release our data at https://github.com/Jarviswang94/Multilingual_safety_benchmark.'
+    url: https://arxiv.org/abs/2310.00905
+  - id: https://arxiv.org/abs/2406.07599
+    name: 'CTIBench: A Benchmark for Evaluating LLMs in Cyber Threat Intelligence'
+    description: 'Cyber threat intelligence (CTI) is crucial in today''s cybersecurity landscape, providing essential insights to understand and mitigate the ever-evolving cyber threats. The recent rise of Large Language Models (LLMs) have shown potential in this domain, but concerns about their reliability, accuracy, and hallucinations persist. While existing benchmarks provide general evaluations of LLMs, there are no benchmarks that address the practical and applied aspects of CTI-specific tasks. To bridge this gap, we introduce CTIBench, a benchmark designed to assess LLMs'' performance in CTI applications. CTIBench includes multiple datasets focused on evaluating knowledge acquired by LLMs in the cyber-threat landscape. Our evaluation of several state-of-the-art models on these tasks provides insights into their strengths and weaknesses in CTI contexts, contributing to a better understanding of LLM capabilities in CTI.'
+    url: https://arxiv.org/abs/2406.07599
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: repo_xashru_cti-bench
+    name: cti-bench
+    description: "Repository for CTIBench. This repository contains the data and evaluation scripts for the paper CTIBench: A Benchmark for Evaluating LLMs in Cyber Threat Intelligence, accepted at NeurIPS 2024. CTIBench is a comprehensive suite of benchmark tasks and datasets designed to evaluate Large Language Models (LLMs) in the field of Cyber Threat Intelligence (CTI). "
+    url: "https://github.com/xashru/cti-bench"
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: https://arxiv.org/abs/2408.01605
+    name: "CYBERSECEVAL 3: Advancing the Evaluation of Cybersecurity Risks and\n  Capabilities\
+      \ in Large Language Models"
+    description: 'We are releasing a new suite of security benchmarks for LLMs, CYBERSECEVAL
+      3, to continue the conversation on empirically measuring LLM cybersecurity risks and capabilities. CYBERSECEVAL 3 assesses 8 different risks across two broad categories: risk to third parties, and risk to application developers and end users. Compared to previous work, we add new areas focused on offensive security capabilities: automated social engineering, scaling manual offensive cyber operations, and autonomous offensive cyber operations. In this paper we discuss applying these benchmarks to the Llama 3 models and a suite of contemporaneous state-of-the-art LLMs, enabling us to contextualize risks both with and without mitigations in place.'
+    url: https://arxiv.org/abs/2408.01605
+    hasLicense: license-cc-by-4.0
+  - id: https://arxiv.org/abs/2404.13161
+    name: "CyberSecEval 2: A Wide-Ranging Cybersecurity Evaluation Suite for Large\n\
+      \  Language Models"
+    description: 'Large language models (LLMs) introduce new security risks, but there
+      are few comprehensive evaluation suites to measure and reduce these risks. We present BenchmarkName, a novel benchmark to quantify LLM security risks and capabilities. We introduce two new areas for testing: prompt injection and code interpreter abuse. We evaluated multiple state-of-the-art (SOTA) LLMs, including GPT-4, Mistral, Meta Llama 3 70B-Instruct, and Code Llama. Our results show that conditioning away risk of attack remains an unsolved problem; for example, all tested models showed between 26% and 41% successful prompt injection tests. We further introduce the safety-utility tradeoff: conditioning an LLM to reject unsafe prompts can cause the LLM to falsely reject answering benign prompts, which lowers utility. We propose quantifying this tradeoff using False Refusal Rate (FRR). As an illustration, we introduce a novel test set to quantify FRR for cyberattack helpfulness risk. We find many LLMs able to successfully comply with "borderline" benign requests while still rejecting most unsafe requests. Finally, we quantify the utility of LLMs for automating
+      a core cybersecurity task, that of exploiting software vulnerabilities. This is important because the offensive capabilities of LLMs are of intense interest; we quantify this by creating novel test sets for four representative problems. We find that models with coding capabilities perform better than those without, but that further work is needed for LLMs to become proficient at exploit generation. Our code is open source and can be used to evaluate other LLMs.'
+    url: https://arxiv.org/abs/2404.13161
+    hasLicense: license-cc-by-4.0
+  - id: https://arxiv.org/abs/2006.08328
+    name: 'ETHOS: an Online Hate Speech Detection Dataset'
+    description: 'Online hate speech is a recent problem in our society that is rising
+      at a steady pace by leveraging the vulnerabilities of the corresponding regimes that characterise most social media platforms. This phenomenon is primarily fostered by offensive comments, either during user interaction or in the form of a posted multimedia context. Nowadays, giant corporations own platforms where millions of users log in every day, and protection from exposure to similar phenomena appears to be necessary in order to comply with the corresponding legislation and maintain a high level of service quality. A robust and reliable system for detecting and preventing the uploading of relevant content will have a significant impact on our digitally interconnected society. Several aspects of our daily lives are undeniably linked to our social profiles, making us vulnerable to abusive behaviours. As a result, the lack of accurate hate speech detection mechanisms would severely degrade the overall user experience, although its erroneous operation would pose many ethical concerns. In this paper, we present ''ETHOS'', a textual dataset with two variants: binary and multi-label, based on YouTube and Reddit comments validated using the Figure-Eight crowdsourcing platform. Furthermore, we present the annotation protocol used to create this dataset: an active sampling procedure for balancing our data in relation to the various aspects defined. Our key assumption is that, even gaining a small amount of labelled data from such a time-consuming process, we can guarantee hate speech occurrences in the examined material.'
+    url: https://arxiv.org/abs/2006.08328
+  - id: https://arxiv.org/abs/2212.10511
+    name: "When Not to Trust Language Models: Investigating Effectiveness of\n  Parametric\
+      \ and Non-Parametric Memories"
+    description: 'Despite their impressive performance on diverse tasks, large language
+      models (LMs) still struggle with tasks requiring rich world knowledge, implying the limitations of relying solely on their parameters to encode a wealth of world knowledge. This paper aims to understand LMs'' strengths and limitations in memorizing factual knowledge, by conducting large-scale knowledge probing experiments of 10 models and 4 augmentation methods on PopQA, our new open-domain QA dataset with 14k questions. We find that LMs struggle with less popular factual knowledge, and that scaling fails to appreciably improve memorization of factual knowledge in the long tail. We then show that retrieval-augmented LMs largely outperform orders of magnitude larger LMs, while unassisted LMs remain competitive in questions about high-popularity entities. Based on those findings, we devise a simple, yet effective, method for powerful and efficient retrieval-augmented LMs, which retrieves non-parametric memories only when necessary. Experimental results show that this significantly improves models'' performance while reducing the inference costs.'
+    url: https://arxiv.org/abs/2212.10511
+  - id: https://arxiv.org/abs/2403.03218
+    name: "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning"
+    description: "The White House Executive Order on Artificial Intelligence highlights the risks of large language models (LLMs) empowering malicious actors in developing biological, cyber, and chemical weapons. To measure these risks of malicious use, government institutions and major AI labs are developing evaluations for hazardous capabilities in LLMs. However, current evaluations are private, preventing further research into mitigating risk. Furthermore, they focus on only a few, highly specific pathways for malicious use. To fill these gaps, we publicly release the Weapons of Mass Destruction Proxy (WMDP) benchmark, a dataset of 3,668 multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. WMDP was developed by a consortium of academics and technical consultants, and was stringently filtered to eliminate sensitive information prior to public release. WMDP serves two roles: first, as an evaluation for hazardous knowledge in LLMs, and second, as a benchmark for unlearning methods to remove such hazardous knowledge. To guide progress on unlearning, we develop RMU, a state-of-the-art unlearning method based on controlling model representations. RMU reduces model performance on WMDP while maintaining general capabilities in areas such as biology and computer science, suggesting that unlearning may be a concrete path towards reducing malicious use from LLMs. "
+    url: https://arxiv.org/abs/2403.03218
+  - id: repo_centerforaisafety_wmdp
+    name: "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning"
+    description: "Repository for the WMDP Benchmark.  WMDP is a LLM proxy benchmark for hazardous knowledge in bio, cyber, and chemical security. We also release code for RMU, an unlearning method which reduces LLM performance on WMDP while retaining general capabilities."
+    url: "https://github.com/centerforaisafety/wmdp"
+  - id: https://arxiv.org/abs/2402.10260
+    name: "A StrongREJECT for Empty Jailbreaks"
+    description: "Most jailbreak papers claim the jailbreaks they propose are highly effective, often boasting near-100% attack success rates. However, it is perhaps more common than not for jailbreak developers to substantially exaggerate the effectiveness of their jailbreaks. We suggest this problem arises because jailbreak researchers lack a standard, high-quality benchmark for evaluating jailbreak performance, leaving researchers to create their own. To create a benchmark, researchers must choose a dataset of forbidden prompts to which a victim model will respond, along with an evaluation method that scores the harmfulness of the victim model's responses. We show that existing benchmarks suffer from significant shortcomings and introduce the StrongREJECT benchmark to address these issues. StrongREJECT's dataset contains prompts that victim models must answer with specific, harmful information, while its automated evaluator measures the extent to which a response gives useful information to forbidden prompts. In doing so, the StrongREJECT evaluator achieves state-of-the-art agreement with human judgments of jailbreak effectiveness. Notably, we find that existing evaluation methods significantly overstate jailbreak effectiveness compared to human judgments and the StrongREJECT evaluator. We describe a surprising and novel phenomenon that explains this discrepancy: jailbreaks bypassing a victim model's safety fine-tuning tend to reduce its capabilities. Together, our findings underscore the need for researchers to use a high-quality benchmark, such as StrongREJECT, when developing new jailbreak attacks."
+    url: https://arxiv.org/abs/2402.10260
+    hasLicense: license-cc-by-4.0
+  - id: repo_dsbowen_strong_reject
+    name: StrongREJECT jailbreak benchmark
+    description: "Repository for StrongREJECT jailbreak benchmark. StrongREJECT is a state-of-the-art LLM jailbreak evaluation benchmark. This package implements the StrongREJECT benchmark and additional utilities for jailbreak research."
+    url: https://github.com/dsbowen/strong_reject
+    hasLicense: license-mit
+  - id: https://arxiv.org/abs/2404.12241
+    name: Introducing v0.5 of the AI Safety Benchmark from MLCommons
+    description: "This paper introduces v0.5 of the AI Safety Benchmark, which has been created by the MLCommons AI Safety Working Group. The AI Safety Benchmark has been designed to assess the safety risks of AI systems that use chat-tuned language models. We introduce a principled approach to specifying and constructing the benchmark, which for v0.5 covers only a single use case (an adult chatting to a general-purpose assistant in English), and a limited set of personas (i.e., typical users, malicious users, and vulnerable users). We created a new taxonomy of 13 hazard categories, of which 7 have tests in the v0.5 benchmark. We plan to release version 1.0 of the AI Safety Benchmark by the end of 2024. The v1.0 benchmark will provide meaningful insights into the safety of AI systems. However, the v0.5 benchmark should not be used to assess the safety of AI systems. We have sought to fully document the limitations, flaws, and challenges of v0.5. This release of v0.5 of the AI Safety Benchmark includes (1) a principled approach to specifying and constructing the benchmark, which comprises use cases, types of systems under test (SUTs), language and context, personas, tests, and test items; (2) a taxonomy of 13 hazard categories with definitions and subcategories; (3) tests for seven of the hazard categories, each comprising a unique set of test items, i.e., prompts. There are 43,090 test items in total, which we created with templates; (4) a grading system for AI systems against the benchmark; (5) an openly available platform, and downloadable tool, called ModelBench that can be used to evaluate the safety of AI systems on the benchmark; (6) an example evaluation report which benchmarks the performance of over a dozen openly available chat-tuned language models; (7) a test specification for the benchmark."
+    url: https://arxiv.org/abs/2404.12241
+  - id: https://arxiv.org/abs/2407.17436
+    name: "AIR-Bench 2024: A Safety Benchmark Based on Risk Categories from Regulations and Policies"
+    description: "Foundation models (FMs) provide societal benefits but also amplify risks. Governments, companies, and researchers have proposed regulatory frameworks, acceptable use policies, and safety benchmarks in response. However, existing public benchmarks often define safety categories based on previous literature, intuitions, or common sense, leading to disjointed sets of categories for risks specified in recent regulations and policies, which makes it challenging to evaluate and compare FMs across these benchmarks. To bridge this gap, we introduce AIR-Bench 2024, the first AI safety benchmark aligned with emerging government regulations and company policies, following the regulation-based safety categories grounded in our AI risks study, AIR 2024. AIR 2024 decomposes 8 government regulations and 16 company policies into a four-tiered safety taxonomy with 314 granular risk categories in the lowest tier. AIR-Bench 2024 contains 5,694 diverse prompts spanning these categories, with manual curation and human auditing to ensure quality. We evaluate leading language models on AIR-Bench 2024, uncovering insights into their alignment with specified safety concerns. By bridging the gap between public benchmarks and practical AI risks, AIR-Bench 2024 provides a foundation for assessing model safety across jurisdictions, fostering the development of safer and more responsible AI systems."
+    url: https://arxiv.org/abs/2407.17436
+  - id: repo_stanford_air_bench_2024
+    name: "AIR-Bench 2024: A Safety Benchmark Based on Risk Categories from Regulations and Policies"
+    description: "Repository for AIR-Bench 2024"
+    url: "https://github.com/stanford-crfm/air-bench-2024"
+    hasLicense: license-apache-2.0
+  - id : https://aclanthology.org/2023.acl-long.546.pdf
+    name: "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories"
+    description: "Despite their impressive performance on diverse tasks, large language models (LMs) still
+      struggle with tasks requiring rich world knowledge, implying the difficulty of encoding a
+      wealth of world knowledge in their parameters. This paper aims to understand LMs’
+      strengths and limitations in memorizing factual
+      knowledge, by conducting large-scale knowledge probing experiments on two open-domain
+      entity-centric QA datasets: POPQA, our new
+      dataset with 14k questions about long-tail entities, and EntityQuestions, a widely used opendomain QA dataset. We find that LMs struggle
+      with less popular factual knowledge, and that
+      retrieval augmentation helps significantly in
+      these cases. Scaling, on the other hand, mainly
+      improves memorization of popular knowledge,
+      and fails to appreciably improve memorization
+      of factual knowledge in the long tail. Based
+      on those findings, we devise a new method
+      for retrieval augmentation that improves performance and reduces inference costs by only
+      retrieving non-parametric memories when necessary"
+    url: https://aclanthology.org/2023.acl-long.546.pdf
+    hasLicense: license-cc-by-4.0
+  - id: https://arxiv.org/abs/2503.05731
+    name: "AILuminate: Introducing v1.0 of the AI Risk and Reliability Benchmark from MLCommons"
+    description: "The rapid advancement and deployment of AI systems have created an urgent need for standard safety-evaluation frameworks. This paper introduces AILuminate v1.0, the first comprehensive industry-standard benchmark for assessing AI-product risk and reliability. Its development employed an open process that included participants from multiple fields. The benchmark evaluates an AI system's resistance to prompts designed to elicit dangerous, illegal, or undesirable behavior in 12 hazard categories, including violent crimes, nonviolent crimes, sex-related crimes, child sexual exploitation, indiscriminate weapons, suicide and self-harm, intellectual property, privacy, defamation, hate, sexual content, and specialized advice (election, financial, health, legal). Our method incorporates a complete assessment standard, extensive prompt datasets, a novel evaluation framework, a grading and reporting system, and the technical as well as organizational infrastructure for long-term support and evolution. In particular, the benchmark employs an understandable five-tier grading scale (Poor to Excellent) and incorporates an innovative entropy-based system-response evaluation.
+      In addition to unveiling the benchmark, this report also identifies limitations of our method and of building safety benchmarks generally, including evaluator uncertainty and the constraints of single-turn interactions. This work represents a crucial step toward establishing global standards for AI risk and reliability evaluation while acknowledging the need for continued development in areas such as multiturn interactions, multimodal understanding, coverage of additional languages, and emerging hazard categories. Our findings provide valuable insights for model developers, system integrators, and policymakers working to promote safer AI deployment."
+    url: https://arxiv.org/abs/2503.05731
+    hasLicense: license-cc-by-4.0
 datasets:
   - id: truthfulqa/truthful_qa
     name: "truthful_qa"
     description: "TruthfulQA is a benchmark to measure whether a language model is truthful in generating answers to questions. The benchmark comprises 817 questions that span 38 categories, including health, law, finance and politics. Questions are crafted so that some humans would answer falsely due to a false belief or misconception. To perform well, models must avoid generating false answers learned from imitating human texts."
     url: "https://huggingface.co/datasets/truthfulqa/truthful_qa"
+    hasDocumentation:
+    - arxiv.org/2109.07958
+    - repo_truthful_qa
+    hasLicense: license-apache-2.0
+  - id: AlexaAI/bold
+    name: "BOLD (Bias in Open-ended Language Generation Dataset)"
+    description: "Bias in Open-ended Language Generation Dataset (BOLD) is a dataset to evaluate fairness in open-ended language generation in English language. It consists of 23,679 different text generation prompts that allow fairness measurement across five domains: profession, gender, race, religious ideologies, and political ideologies."
+    url: "https://huggingface.co/datasets/AlexaAI/bold"
+    hasDocumentation:
+    - https://arxiv.org/abs/2101.11718
+    hasLicense: license-cc-by-4.0
+  - id: ibm-research/AttaQ
+    name: AttaQ Dataset
+    description: "The AttaQ red teaming dataset, consisting of 1402 carefully crafted adversarial questions, is designed to evaluate Large Language Models (LLMs) by assessing their tendency to generate harmful or undesirable responses. It may serve as a benchmark to assess the potential harm of responses produced by LLMs. The dataset is categorized into seven distinct classes of questions: deception, discrimination, harmful information, substance abuse, sexual content, personally identifiable information (PII), and violence. Researchers and developers can use this dataset to assess the behavior of LLMs and explore the various factors that influence their responses, ultimately aiming to enhance their harmlessness and ethical usage."
+    url: 'https://huggingface.co/datasets/ibm-research/AttaQ'
+    hasLicense: license-mit
+    hasDocumentation:
+    - https://arxiv.org/abs/2311.04124
+  - id: ibm-research/ProvoQ
+    name: "The ProvoQ (PROVOcative Questions about minority-associated stigmas) Dataset"
+    description: "The ProvoQ dataset is designed to evaluate the sensitivity of large language models (LLMs) to stigma-related topics. It contains 2,705 human-curated provocative questions that systematically target minority-stigma pairs in the United States, creating a diverse and nuanced set of questions that reflect these sensitive topics. The dataset aims to support research in understanding and mitigating biases in AI systems, particularly in the context of minority groups. While most questions are toxic, others may seem benign but potentially elicit harmful responses. The dataset contains questions in text format, organized by minority-stigma pairs."
+    url: 'https://huggingface.co/datasets/ibm-research/ProvoQ'
+    hasDocumentation:
+    - https://arxiv.org/abs/2311.04124
+    hasLicense: license-cdla-permissive-2.0
+  - id: nyu-mll/crows_pairs
+    name: "Crowdsourced Stereotype Pairs benchmark (CrowS-Pairs)"
+    description: "a challenge dataset for measuring the degree to which U.S. stereotypical biases present in the masked language models (MLMs). "
+    url: 'https://huggingface.co/datasets/nyu-mll/crows_pairs'
+    hasLicense: license-cc-by-sa-4.0
+    hasDocumentation:
+    - https://arxiv.org/abs/2010.00133
+  - id: Babelscape/ALERT
+    name: ALERT
+    description: "A large-scale benchmark to assess the safety of LLMs through red teaming methodologies."
+    url: https://huggingface.co/datasets/Babelscape/ALERT
+    hasLicense: license-cc-by-nc-sa-4.0
+    hasDocumentation: 
+    - https://arxiv.org/abs/2404.08676
+    - repo_Babelscape_ALERT
+  - id: OpenSafetyLab/Salad-Data
+    name: Salad Data
+    description: "A challenging safety benchmark specifically designed for evaluating LLMs, defense, and attack methods"
+    url: "https://huggingface.co/datasets/OpenSafetyLab/Salad-Data"
+    hasDocumentation:
+    - https://arxiv.org/abs/2402.05044
+    hasLicense: license-apache-2.0
+  - id: sorry-bench/sorry-bench-202406
+    name: SorryBench
+    description: "This dataset contains 9.5K potentially unsafe instructions, intended to be used for LLM safety refusal evaluation."  
+    url: 'https://huggingface.co/datasets/sorry-bench/sorry-bench-202406'
+    hasLicense: license-sorrybench
+    hasDocumentation:
+    - https://arxiv.org/abs/2406.14598
+  - id: toxigen/toxigen-data
+    name: "Toxigen"
+    description: "This dataset is for implicit hate speech detection. All instances were generated using GPT-3 and the methods described in our paper."
+    url: https://huggingface.co/datasets/toxigen/toxigen-data
+    hasDocumentation:
+    - repo_microsoft_toxigen
+    - https://arxiv.org/abs/2203.09509
+  - id: Paul/XSTest
+    name: "XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models"
+    description: XSTest is a test suite designed to identify exaggerated safety / false refusal in Large Language Models (LLMs). It comprises 250 safe prompts across 10 different prompt types, along with 200 unsafe prompts as contrasts. The test suite aims to evaluate how well LLMs balance being helpful with being harmless by testing if they unnecessarily refuse to answer safe prompts that superficially resemble unsafe ones.
+    url: https://huggingface.co/datasets/Paul/XSTest
+    hasLicense: license-cc-by-4.0
+    hasDocumentation:
+    - https://arxiv.org/abs/2308.01263
+    - repo_paul-rottger_xstest
+  - id: 'strong_reject'
+    name: StrongREJECT jailbreak benchmark dataset
+    description: StrongREJECT jailbreak benchmark dataset
+    url: https://github.com/dsbowen/strong_reject/tree/main/strong_reject
+    hasLicense: license-mit
+    hasDocumentation: 
+    - https://arxiv.org/abs/2402.10260
+    - repo_dsbowen_strong_reject
+  - id: Bertievidgen/SimpleSafetyTests
+    name: SimpleSafetyTests
+    description: "SimpleSafetyTests contains prompts that relate to child abuse, suicide, self-harm and eating disorders, scams and fraud, illegal items, and physical harm. They are highly sensitive and you could find them harmful."
+    url: https://huggingface.co/datasets/Bertievidgen/SimpleSafetyTests
+    hasDocumentation:
+    - https://arxiv.org/abs/2311.08370
+    - repo_bertiev_SimpleSafetyTests
+    hasLicense: license-cc-by-2.0
+  - id: heegyu/bbq
+    name: Bias Benchmark for QA dataset
+    description: "A dataset of question sets constructed by the authors that highlight attested social biases against people belonging to protected classes along nine social dimensions relevant for U.S. English-speaking contexts. Our task evaluates model responses at two levels: (i) given an under-informative context, we test how strongly responses refect social biases, and (ii) given an adequately informative context, we test whether the model's biases override a correct answer choice. "
+    url: https://huggingface.co/datasets/heegyu/bbq
+    hasDocumentation:
+    - repo_nyu-mll_BBQ
+    - https://arxiv.org/abs/2110.08193
+    hasLicense: license-cc-by-4.0
+  - id: Anthropic/discrim-eval
+    name: "Discrim-Eval"
+    description: "The data contains a diverse set of prompts covering 70 hypothetical decision scenarios, ranging from approving a loan to providing press credentials. Each prompt instructs the model to make a binary decision (yes/no) about a particular person described in the prompt. Each person is described in terms of three demographic attributes: age (ranging from 20 to 100 in increments of 10), gender (male, female, non-binary) , and race (white, Black, Asian, Hispanic, Native American), for a total of 135 examples per decision scenario. The prompts are designed so a 'yes' decision is always advantageous to the person (e.g. deciding to grant the loan)."
+    url: https://huggingface.co/datasets/Anthropic/discrim-eval
+    hasLicense: license-cc-by-4.0
+    hasDocumentation:
+    - https://arxiv.org/abs/2312.03689
+  - id: mlcommons_ailuminate_airr_official_1.0_demo_en_us_prompt_set_release
+    name: AILuminate v1.0 DEMO Prompt Set
+    description: "This file contains the DEMO prompt library of the AILuminate 1.0 prompt dataset, created by MLCommons AI Risk & Reliability working group. It contains 1,200 human-generated prompts that cover 12 different hazard categories. The dataset is a mix of adversarial and non-adversarial prompts. This dataset is a 10% subset of the full AILuminate training dataset."
+    url: 'https://github.com/mlcommons/ailuminate/blob/main/airr_official_1.0_practice_prompt_set_release_public_subset.csv'
+    hasDocumentation:
+    - https://arxiv.org/abs/2503.05731
+    hasLicense: license-apache-2.0
+  - id: stanford-crfm/air-bench-2024
+    name: AIRBench 2024
+    description: "AIRBench 2024 is a AI safety benchmark that aligns with emerging government regulations and company policies. It consists of diverse, malicious prompts spanning categories of the regulation-based safety categories in the AIR 2024 safety taxonomy."
+    url: https://huggingface.co/datasets/stanford-crfm/air-bench-2024
+    hasDocumentation:
+    - https://arxiv.org/abs/2407.17436
+    - repo_stanford_air_bench_2024
+    hasLicense: license-cc-by-4.0
+  - id: AI4Sec/cti-bench
+    name: CTIBench
+    description: "A set of benchmark tasks and datasets designed to evaluate large language models (LLMs) on cyber threat intelligence (CTI) tasks."
+    url: https://huggingface.co/datasets/AI4Sec/cti-bench
+    hasDocumentation:
+    - https://arxiv.org/abs/2406.07599
+    - repo_xashru_cti-bench
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: 'CybersecurityBenchmarks_datasets_prompt_injection'
+    name: Prompt injection
+    description: "Textual Prompt Injection Tests: An english-only dataset of textual prompt injections."
+    url: 'https://github.com/meta-llama/PurpleLlama/blob/main/CybersecurityBenchmarks/datasets/prompt_injection/prompt_injection.json'
+    hasLicense: license-llama-3.2-community
+    hasDocumentation: 
+    - https://arxiv.org/abs/2408.01605
+  - id: 'cais/wmdp'
+    name: Weapons of Mass Destruction Proxy (WMDP) 
+    description: "The Weapons of Mass Destruction Proxy (WMDP) benchmark is a dataset of multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. WMDP serves two roles: first, as an evaluation for hazardous knowledge in LLMs, and second, as a benchmark for unlearning methods to remove such hazardous knowledge."
+    url: 'https://huggingface.co/datasets/cais/wmdp'
+    hasLicense: license-mit
+    hasDocumentation:
+    - https://arxiv.org/abs/2403.03218
+    - repo_centerforaisafety_wmdp
+  - id: 'CybersecurityBenchmarks_datasets_frr'
+    name: False Refusal Rate (FRR) 
+    description: "A dataset to evaluate the False Refusal Rate (FRR) of LLM models when interlocutors
+      request help with cybersecurity-related tasks that are not malicious, which, when coupled with CyberSecEval’s
+      cyberattack helpfulness dataset, can be used to show the tradeoff between helpfulness and harmfulness in LLM
+      cybersecurity-related completions."
+    url: 'https://github.com/meta-llama/PurpleLlama/blob/main/CybersecurityBenchmarks/datasets/frr/frr.json'
+    hasDocumentation: 
+    - https://arxiv.org/abs/2404.13161
+    hasLicense: license-llama-3.2-community
+  - id: iamollas/ethos
+    name: "ETHOS: an Online Hate Speech Detection Dataset"
+    description: "ETHOS: onlinE haTe speecH detectiOn dataSet. This repository contains a dataset for hate speech detection on social media platforms, called Ethos. There are two variations of the dataset: Ethos_Dataset_Binary: contains 998 comments in the dataset alongside with a label about hate speech presence or absence. 565 of them do not contain hate speech, while the rest of them, 433, contain. Ethos_Dataset_Multi_Label which contains 8 labels for the 433 comments with hate speech content. These labels are violence (if it incites (1) or not (0) violence), directed_vs_general (if it is directed to a person (1) or a group (0)), and 6 labels about the category of hate speech like, gender, race, national_origin, disability, religion and sexual_orientation."
+    url: https://huggingface.co/datasets/iamollas/ethos
+    hasDocumentation: 
+    - https://arxiv.org/abs/2006.08328
+    hasLicense: license-gnu-gplv3
+  - id: akariasai/PopQA
+    name: PopQA
+    description: PopQA is a large-scale open-domain question answering (QA) dataset, consisting of 14k entity-centric QA pairs. Each question is created by converting a knowledge tuple retrieved from Wikidata using a template. Each question come with the original subject_entitiey, object_entityand relationship_type annotation, as well as Wikipedia monthly page views.
+    url: https://huggingface.co/datasets/akariasai/PopQA
+    hasDocumentation: 
+    - https://aclanthology.org/2023.acl-long.546.pdf
+    hasLicense: license-cc-by-4.0
+  - id: Jarviswang94_Multilingual_safety_benchmark
+    name: XSafety dataset
+    description: "We build the first multilingual safety benchmark for LLMs, XSafety, in response to the global deployment of LLMs in practice. XSafety covers 14 kinds of commonly used safety issues across 10 languages that span several language families. "
+    url: https://github.com/Jarviswang94/Multilingual_safety_benchmark
+    hasDocumentation: 
+    - https://arxiv.org/abs/2310.00905
     hasLicense: license-apache-2.0
 evaluations:
   - id: stanford-fmti
@@ -28,7 +387,343 @@ evaluations:
     name: "TruthfulQA"
     description: "TruthfulQA is a benchmark to measure whether a language model is truthful in generating answers to questions."
     url: https://github.com/sylinrl/TruthfulQA
-    hasUnitxtCard: cards.value_alignment.hallucinations.truthfulqa
+    hasUnitxtCard: 
+    - cards.value_alignment.hallucinations.truthfulqa
     hasRelatedRisk: ["atlas-hallucination"]
     hasDocumentation: ["arxiv.org/2109.07958"]
     hasDataset: ["truthfulqa/truthful_qa"]
+    hasTasks:
+    - multiple-choice
+    - text-generation
+    - question-answering
+    - multiple-choice-qa
+    - language-modeling
+    - open-domain-qa
+  - id: ai_eval_BOLD
+    name: "BOLD: Bias in Open-ended Language Generation Dataset"
+    description: "Bias in Open-ended Language Generation Dataset (BOLD) is a dataset to evaluate fairness in open-ended language generation in English language. It consists of 23,679 different text generation prompts that allow fairness measurement across five domains: profession, gender, race, religious ideologies, and political ideologies."
+    url: 'https://github.com/amazon-research/bold'
+    hasDocumentation:
+    - 'https://arxiv.org/abs/2101.11718'
+    hasDataset:
+    - AlexaAI/bold
+    hasTasks:
+    - text-generation
+    hasImplementation:
+    - "https://github.com/IBM/unitxt/blob/main/prepare/cards/bold.py"
+    hasUnitxtCard:
+    - "https://github.com/IBM/unitxt/blob/main/prepare/cards/bold.py"
+    hasRelatedRisk:
+    - atlas-output-bias
+    hasLicense: license-cc-by-4.0
+  - id: ai_eval_AttaQ
+    name: AttaQ
+    description: "The AttaQ dataset is a benchmark for evaluating the harmlessness of Large Language Models (LLMs) and to further investigate the factors influencing LLM behavior. It consists of adversarial samples that represent questions and queries for which LLMs should refrain from providing answers, such as inquiries about constructing dangerous devices or engaging in harmful activities."
+    url: 'https://huggingface.co/datasets/ibm-research/AttaQ'
+    hasDocumentation:
+    - https://arxiv.org/abs/2311.04124
+    hasDataset:
+    - ibm-research/AttaQ
+    hasTasks:
+    - text-generation
+    - text2text-generation
+    hasImplementation:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/attaq.py
+    hasUnitxtCard: 
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/attaq.py
+    hasRelatedRisk:
+    - atlas-toxic-output
+    - atlas-harmful-output
+    hasLicense: license-mit
+  - id: ai_eval_ProvoQ
+    name: "ProvoQ (PROVOcative Questions about minority-associated stigmas)"
+    description: "The ProvoQ dataset is designed to evaluate the sensitivity of large language models (LLMs) to stigma-related topics. It contains 2,705 human-curated provocative questions that systematically target minority-stigma pairs in the United States, creating a diverse and nuanced set of questions that reflect these sensitive topics. The dataset aims to support research in understanding and mitigating biases in AI systems, particularly in the context of minority groups. Whilst most questions are toxic, others may seem benign but potentially elicit harmful responses. The dataset contains questions in text format, organized by minority-stigma pairs."
+    url: 'https://huggingface.co/datasets/ibm-research/ProvoQ'
+    hasDocumentation:
+    - https://arxiv.org/abs/2311.04124
+    hasDataset:
+    - ibm-research/ProvoQ
+    hasTasks:
+    - question-answering
+    hasImplementation:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/provoq.py
+    hasUnitxtCard:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/provoq.py
+    hasRelatedRisk:
+    - atlas-output-bias
+    hasLicense: license-cdla-permissive-2.0
+  - id: ai_eval_CrowS-Pairs
+    name: Crowdsourced Stereotype Pairs benchmark (CrowS-Pairs)
+    description: "This benchmark measures some forms of social bias in language models against protected demographic groups in the US. CrowS-Pairs has 1508 examples that cover stereotypes dealing with nine types of bias, like race, religion, and age."
+    url: 'https://github.com/nyu-mll/crows-pairs'
+    hasDocumentation:
+    - https://arxiv.org/abs/2010.00133
+    hasDataset:
+    - nyu-mll/crows_pairs
+    hasTasks:
+    - text-classification
+    - text-scoring
+    hasImplementation:
+    - https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/crows_pairs/crows_pairs_english.yaml
+    hasRelatedRisk:
+    - atlas-output-bias
+    hasLicense: license-cc-by-sa-4.0
+  - id: ai_eval_Alert
+    name: "ALERT"
+    description: "A large-scale benchmark to assess the safety of LLMs through red teaming methodologies."
+    url: 'https://github.com/Babelscape/ALERT'
+    hasDocumentation:
+    - https://arxiv.org/abs/2404.08676
+    hasDataset:
+    - Babelscape/ALERT
+    hasTasks:
+    - question-answering
+    hasImplementation:
+    - https://github.com/Babelscape/ALERT/blob/master/src/evaluation.py
+    hasRelatedRisk:
+    - atlas-toxic-output
+    - atlas-toxic-output
+    - atlas-harmful-output
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: ai_eval_SALAD_Bench
+    name: SALAD-Bench
+    description: "A challenging safety benchmark specifically designed for evaluating LLMs, defense, and attack methods"
+    url: 'https://github.com/OpenSafetyLab/SALAD-BENCH'
+    hasDocumentation:
+    - https://arxiv.org/abs/2402.05044
+    hasDataset:
+    - OpenSafetyLab/Salad-Data
+    hasTasks:
+    - text-classification
+    - text-generation
+    hasImplementation:
+    - https://github.com/OpenSafetyLab/SALAD-BENCH/blob/main/examples/example.py
+    hasRelatedRisk:
+    - atlas-toxic-output
+    - atlas-harmful-output
+    hasLicense: license-apache-2.0
+  - id: ai_eval_SorryBench
+    name: SorryBench
+    description: This is a benchmark for LLM safety refusal behaviors.
+    url: 'https://github.com/sorry-bench/sorry-bench'
+    hasDocumentation:
+    - https://arxiv.org/abs/2406.14598
+    hasDataset:
+    - sorry-bench/sorry-bench-202406
+    hasTasks:
+    - question-answering
+    hasImplementation:
+    - https://github.com/sorry-bench/sorry-bench
+    hasRelatedRisk:
+    - atlas-harmful-code-generation
+    hasLicense: license-mit
+  - id: ai_eval_ToxiGen
+    name: ToxiGen
+    description: This dataset is for implicit hate speech detection.
+    url: 'https://github.com/microsoft/TOXIGEN'
+    hasDocumentation:
+    - https://arxiv.org/abs/2203.09509
+    hasDataset:
+    - toxigen/toxigen-data
+    hasTasks:
+    - text-classification
+    - hate-speech-detection
+    hasImplementation:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/toxigen.py
+    hasUnitxtCard:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/toxigen.py
+    hasRelatedRisk:
+    - atlas-toxic-output
+    hasLicense: license-mit
+  - id: ai_eval_XSTest
+    name: "XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models"
+    description: "XSTest is a test suite designed to identify exaggerated safety / false refusal in Large Language Models (LLMs). It comprises 250 safe prompts across 10 different prompt types, along with 200 unsafe prompts as contrasts. The test suite aims to evaluate how well LLMs balance being helpful with being harmless by testing if they unnecessarily refuse to answer safe prompts that superficially resemble unsafe ones."
+    url: 'https://github.com/paul-rottger/xstest'
+    hasDocumentation:
+    - https://arxiv.org/abs/2308.01263
+    hasDataset:
+    - 'https://huggingface.co/datasets/Paul/XSTest'
+    hasTasks:
+    - text2text-generation
+    hasLicense: license-cc-by-4.0
+    hasRelatedRisk:
+    - atlas-harmful-output
+  - id: ai_eval_StrongReject
+    name: StrongReject
+    description: StrongREJECT is a state-of-the-art LLM jailbreak evaluation benchmark. 
+    url: https://github.com/dsbowen/strong_reject
+    hasDocumentation:
+    - https://arxiv.org/abs/2402.10260
+    hasDataset:
+    - Paul/XSTest
+    hasTasks:
+    - question-answering
+    hasImplementation:
+    - https://github.com/dsbowen/strong_reject/tree/main/strong_reject
+    hasRelatedRisk:
+    - atlas-toxic-output
+    - atlas-harmful-output
+  - id: ai_eval_SimpleSafetyTests
+    name: SimpleSafetyTests
+    description: "SimpleSafetyTests assists in identifying critical safety risks in Large Language Models.  It consists of 100 test prompts across five harm areas that LLMs, for the vast majority of applications, should refuse to comply with."
+    url: 'https://huggingface.co/datasets/Bertievidgen/SimpleSafetyTests'
+    hasDocumentation:
+    - https://arxiv.org/abs/2311.08370
+    hasDataset:
+    - Bertievidgen/SimpleSafetyTests
+    hasTasks:
+    - question-answering
+    hasImplementation:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/simple_safety_tests.py
+    hasUnitxtCard:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/simple_safety_tests.py
+    hasRelatedRisk:
+    - atlas-harmful-output
+  - id: ai_eval_BBQ
+    name: BBQ
+    description: "Bias Benchmark for QA (BBQ), a dataset of question sets that highlight attested social biases against people belonging to protected classes along nine social dimensions relevant for U.S. English-speaking contexts."
+    url: https://github.com/nyu-mll/BBQ
+    hasDocumentation:
+    - https://arxiv.org/abs/2110.08193
+    hasDataset:
+    - heegyu/bbq
+    hasTasks:
+    - Multiple Choice
+    hasImplementation:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/bbq.py
+    hasUnitxtCard:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/bbq.py
+    hasRelatedRisk:
+    - atlas-output-bias
+  - id: ai_eval_Discrim_eval
+    name: Discrim_eval
+    description: "The data contains a diverse set of prompts covering 70 hypothetical decision scenarios, ranging from approving a loan to providing press credentials. Each prompt instructs the model to make a binary decision (yes/no) about a particular person described in the prompt. Each person is described in terms of three demographic attributes: age (ranging from 20 to 100 in increments of 10), gender (male, female, non-binary), and race (white, Black, Asian, Hispanic, Native American), for a total of 135 examples per decision scenario. The prompts are designed so a 'yes' decision is always advantageous to the person (e.g. deciding to grant the loan)."
+    url: 'https://huggingface.co/datasets/Anthropic/discrim-eval'
+    hasDocumentation:
+    - https://arxiv.org/abs/2312.03689
+    hasDataset:
+    - Anthropic/discrim-eval
+    hasTasks:
+    - Multiple Choice
+    hasImplementation:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/discrim_eval.py
+    hasUnitxtCard:
+    - https://github.com/IBM/unitxt/blob/main/prepare/cards/safety/discrim_eval.py
+  - id: ai_eval_XSafety
+    name: XSafety
+    description: "A multilingual safety benchmark for LLMs, in response to the global deployment of LLMs in practice. XSafety covers 14 kinds of commonly used safety issues across 10 languages that span several language families."
+    url: 'https://github.com/jarviswang94/multilingual_safety_benchmark'
+    hasDocumentation:
+    - https://arxiv.org/abs/2310.00905
+    hasDataset:
+    - Jarviswang94_Multilingual_safety_benchmark
+    hasImplementation:
+    - https://github.ibm.com/IBM-Research-AI/fm-eval/blob/main/prepare/cards/safety/multilingual.py
+  - id: ai_eval_AILuminate
+    name: AILuminate
+    description: "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories. It is a benchmark suite that analyzes a models’ responses to prompts across twelve hazard categories to produce “safety grades” for general purpose chat systems, including the largest LLMs. "
+    url: 'https://github.com/mlcommons/ailuminate'
+    hasDocumentation:
+    - https://arxiv.org/abs/2404.12241
+    hasDataset:
+    - mlcommons_ailuminate_airr_official_1.0_demo_en_us_prompt_set_release
+    hasTasks:
+    - question-answering
+    hasImplementation:
+    - https://github.com/mlcommons/modelbench/tree/main
+    hasRelatedRisk:
+    - atlas-toxic-output
+    - atlas-harmful-output
+    hasLicense: license-cc-by-4.0
+  - id: ai_eval_Airbench_2024
+    name: Airbench 2024
+    description: "AIR-Bench is a regulation-aligned safety benchmark for responsible AI development, featuring a four-tiered taxonomy with 314 risk categories derived from analyzing 8 government regulations and 16 company policies worldwide."
+    url: 'https://github.com/stanford-crfm/air-bench-2024'
+    hasDocumentation:
+    - https://arxiv.org/abs/2407.17436
+    hasDataset:
+    - stanford-crfm/air-bench-2024
+    hasTasks:
+    - question-answering
+    hasImplementation:
+    - https://github.com/stanford-crfm/air-bench-2024/tree/main/evaluation
+  - id: ai_eval_CTI-Bench
+    name: CTI-Bench
+    description: "CTIBench is a comprehensive suite of benchmark tasks and datasets designed to evaluate Large Language Models (LLMs) in the field of Cyber Threat Intelligence (CTI)."
+    url: 'https://github.com/xashru/cti-bench'
+    hasDocumentation:
+    - https://arxiv.org/abs/2406.07599
+    hasDataset:
+    - AI4Sec/cti-bench
+    hasTasks:
+    - 'Multiple Choice'
+    - 'Question Answering'
+    hasImplementation:
+    - https://github.com/xashru/cti-bench/tree/main/evaluatio
+  - id: ai_eval_Prompt_Injection
+    name: Prompt Injection
+    description: "A benchmark to assess an LLM’s susceptibility to “prompt injection attacks” - attacks in which a portion of the LLM prompt coming from untrusted user input contains malicious instructions intended to override the LLM’s original task."
+    url: 'https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks'
+    hasDocumentation:
+    - https://arxiv.org/abs/2408.01605
+    hasDataset:
+    - CybersecurityBenchmarks_datasets_prompt_injection
+    hasTasks:
+    - 'Question Answering'
+    hasRelatedRisk:
+    - atlas-prompt-injection
+    - atlas-jailbreaking
+    hasImplementation:
+    - https://github.com/meta-llama/PurpleLlama/blob/main/CybersecurityBenchmarks/benchmark/prompt_injection_benchmark.py
+  - id: ai_eval_WMDP
+    name: Weapons of Mass Destruction Proxy (WMDP)
+    description: 'The Weapons of Mass Destruction Proxy (WMDP) benchmark is a dataset of 3,668 multiple-choice questions surrounding hazardous knowledge inBiosecurity Iconbiosecurity,Cybersecurity Iconcybersecurity, andChemical Security Iconchemical security. WMDP serves as both a proxy evaluation for hazardous knowledge in large language models (LLMs) and a benchmark for unlearning methods to remove such knowledge.'
+    url: https://github.com/centerforaisafety/wmdp
+    hasDocumentation: 
+    - https://arxiv.org/abs/2403.03218
+    hasDataset: 
+    - cais/wmdp
+    hasImplementation:
+    - https://github.com/EleutherAI/lm-evaluation-harness/tree/main/lm_eval/tasks/wmdp
+    hasRelatedRisk:
+    - atlas-harmful-output
+    hasTasks:
+    - 'Multiple choice'
+  - id: ai_eval_FRR
+    name: False Refusal Rate (FRR)
+    description: These tests measure how often an LLM incorrectly refuses a borderline but essentially benign query, due to misinterpreting the prompt as a malicious request.
+    url: 'https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks'
+    hasDocumentation:
+    - https://arxiv.org/abs/2404.13161
+    hasDataset:
+    - CybersecurityBenchmarks_datasets_frr
+    hasTasks:
+    - text-generation
+    hasImplementation:
+    - https://github.com/meta-llama/PurpleLlama/blob/main/CybersecurityBenchmarks/benchmark/frr_benchmark.py
+    hasRelatedRisk:
+    - atlas-harmful-code-generation
+  - id: ai_eval_Ethos
+    name: Ethos
+    description: ETHOS is an onlinE haTe speecH detectiOn dataSet for hate speech detection on social media platforms.
+    url: 'https://huggingface.co/datasets/iamollas/ethos'
+    hasDocumentation:
+    - https://arxiv.org/abs/2006.08328
+    hasDataset:
+    - iamollas/ethos
+    hasRelatedRisk:
+    - atlas-toxic-output
+    hasTasks:
+    - text-classification
+    - multi-label-classification
+    - sentiment-classification
+  - id: ai_eval_PopQA
+    name: PopQA
+    description: PopQA is a large-scale open-domain question answering (QA) dataset, consisting of 14k entity-centric QA pairs. 
+    url: 'https://huggingface.co/datasets/akariasai/PopQA'
+    hasDocumentation:
+    - https://arxiv.org/abs/2212.10511
+    hasDataset:
+    - akariasai/PopQA
+    hasRelatedRisk:
+    - atlas-hallucination

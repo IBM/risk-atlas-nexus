@@ -9,11 +9,16 @@ class RiskExplorer(ExplorerBase):
 
         # load the data into the graph
         self._ontology = ontology
-        self._risks = ontology.risks
-        self._riskcontrols = ontology.riskcontrols
-        self._riskincidents = ontology.riskincidents
-        self._actions = ontology.actions
-        self._taxonomies = ontology.taxonomies
+        self._risks = ontology.risks or []
+        self._riskcontrols = ontology.riskcontrols or []
+        self._riskincidents = ontology.riskincidents or []
+        self._actions = ontology.actions or []
+        self._taxonomies = ontology.taxonomies or []
+        self._evaluations = ontology.evaluations or []
+        self._benchmarkmetadatacards = ontology.benchmarkmetadatacards or []
+        self._documents = ontology.documents or []
+        self._datasets = ontology.datasets or []
+
 
     def get_all_risks(self, taxonomy=None):
         """Get all risk definitions from the LinkML
@@ -451,33 +456,265 @@ class RiskExplorer(ExplorerBase):
 
         if risk is not None:
             matching_risks = [risk]
-        if id is not None:
+        if risk_id is not None:
             matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
 
         if len(matching_risks) > 0:
             risk: Risk = matching_risks[0]
-            risk_incidents = []
 
-            if risk.isDetectedBy is not None:
-                risk_incidents.append(risk.isDetectedBy)
-
-            risk_incidents = [j for i in risk_incidents for j in i]
-
-            if taxonomy is not None:
-                risk_incidents = list(
-                    filter(
-                        lambda risk_incident: risk_incident.isDefinedByTaxonomy
-                        == taxonomy,
-                        risk_incidents,
-                    )
-                )
-            related_risk_incidents = list(
+            risk_incident_instances = self._riskincidents or []
+            
+            risk_incident_instances = list(
                 filter(
-                    lambda risk_incident: risk_incident.id in risk_incidents,
-                    self._riskcontrols,
+                    lambda risk_incident: risk.id in risk_incident.refersToRisk,
+                    risk_incident_instances,
                 )
             )
-            return related_risk_incidents
+            if taxonomy is not None:
+                risk_incident_instances = list(
+                    filter(
+                        lambda risk_incident: risk_incident.isDefinedByTaxonomy == taxonomy,
+                        risk_incident_instances,
+                    )
+                )
+             
+            return risk_incident_instances
         else:
-            print("No matching risk controls found")
+            print("No matching risk incidents found")
             return None
+        
+    def get_all_evaluations(self, taxonomy=None):
+        """Get all evaluation definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[AiEval]
+                Result containing a list of AiEval
+        """
+        evaluation_instances = self._evaluations
+
+        if taxonomy is not None:
+            evaluation_instances = list(
+                filter(
+                    lambda evaluation: evaluation.isDefinedByTaxonomy == taxonomy,
+                    evaluation_instances,
+                )
+            )
+
+        return evaluation_instances
+
+    def get_evaluation(self, id):
+        """Get evaluation definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for an evaluation
+
+        Returns:
+            AiEval
+                Result containing an AiEval
+        """
+        matching_evaluations = list(
+            filter(lambda evaluation: evaluation.id == id, self._evaluations)
+        )
+
+        if len(matching_evaluations) > 0:
+            return matching_evaluations[0]
+        else:
+            print("No matching evaluation found")
+            return None
+        
+    def get_related_evaluations(
+        self, risk=None, risk_id=None, taxonomy=None
+    ):
+        """Get related evaluations for a risk 
+
+        Args:
+            risk: (Optional) Risk
+                The Risk object to find related evaluations for
+            risk_id: (Optional) str
+            taxonomy: str
+                (Optional) The string label for a taxonomy, to filter action results by
+
+        Returns:
+            list[AiEval]
+                Result containing a list of the evaluations which are marked as related to the specified AI risk
+        """
+        matching_risks = self._risks
+
+        if risk is not None:
+            matching_risks = [risk]
+        if risk_id is not None:
+            matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
+
+        if len(matching_risks) > 0:
+            risk: Risk = matching_risks[0]
+
+            evaluation_instances = self._evaluations or []
+            
+            evaluation_instances = list(
+                filter(
+                    lambda evaluation: risk.id in (evaluation.hasRelatedRisk or []),
+                    evaluation_instances,
+                )
+            )
+            if taxonomy is not None:
+                evaluation_instances = list(
+                    filter(
+                        lambda evaluation: evaluation.isDefinedByTaxonomy == taxonomy,
+                        evaluation_instances,
+                    )
+                )
+             
+            return evaluation_instances
+        else:
+            print("No matching evaluations found")
+            return []
+
+    def get_all_benchmark_metadata_cards(self, taxonomy=None, aieval_id=None):
+        """Get all benchmark metadata definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+            aieval_id: str
+                (Optional) The string id for an AiEval that the benchmark describes 
+
+        Returns:
+            list[AiEval]
+                Result containing a list of BenchmarkMetadataCards
+        """
+        benchmark_metadata_card_instances = self._benchmarkmetadatacards  or []
+        
+        if taxonomy is not None:
+            benchmark_metadata_card_instances = list(
+                filter(
+                    lambda benchmark_metadata_card: benchmark_metadata_card.isDefinedByTaxonomy == taxonomy,
+                    benchmark_metadata_card_instances,
+                )
+            )
+
+        if aieval_id is not None:
+            benchmark_metadata_card_instances = list(
+                filter(
+                    lambda benchmark_metadata_card: benchmark_metadata_card.describesAiEval == aieval_id,
+                    benchmark_metadata_card_instances,
+                )
+            )
+
+        return benchmark_metadata_card_instances
+
+    def get_benchmark_metadata_card(self, id):
+        """Get benchmark_metadata_card definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a benchmark_metadata_card
+
+        Returns:
+            BenchmarkMetadataCard
+                Result containing an BenchmarkMetadataCard
+        """
+        matching_benchmark_metadata_cards = list(
+            filter(lambda benchmark_metadata_card: benchmark_metadata_card.id == id, self._benchmarkmetadatacards)
+        )
+
+        if len(matching_benchmark_metadata_cards) > 0:
+            return matching_benchmark_metadata_cards[0]
+        else:
+            print("No matching benchmark_metadata_card found")
+            return None
+        
+    
+    def get_documents(self, taxonomy=None):
+        """Get all documentation definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[Documentation]
+                Result containing a list of Documentation entries
+        """
+        documentation_instances = self._documents  or []
+        
+        if taxonomy is not None:
+            documentation_instances = list(
+                filter(
+                    lambda document: document.isDefinedByTaxonomy == taxonomy,
+                    documentation_instances,
+                )
+            )
+
+        return documentation_instances
+
+    def get_document(self, id):
+        """Get document definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a documentation entry
+
+        Returns:
+            Documentation
+                Result containing a Documentation
+        """
+        matching_documentation_instances = list(
+            filter(lambda document: document.id == id, self._documents)
+        )
+
+        if len(matching_documentation_instances) > 0:
+            return matching_documentation_instances[0]
+        else:
+            print("No matching documents found")
+            return None
+
+    
+    def get_datasets(self, taxonomy=None):
+        """Get all dataset definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[Dataset]
+                Result containing a list of Dataset entries
+        """
+        dataset_instances = self._datasets  or []
+        
+        if taxonomy is not None:
+            dataset_instances = list(
+                filter(
+                    lambda dataset: dataset.isDefinedByTaxonomy == taxonomy,
+                    dataset_instances,
+                )
+            )
+
+        return dataset_instances
+
+    def get_dataset(self, id):
+        """Get dataset definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a dataset entry
+
+        Returns:
+            Dataset
+                Result containing a Dataset
+        """
+        matching_dataset_instances = list(
+            filter(lambda dataset: dataset.id == id, self._datasets)
+        )
+
+        if len(matching_dataset_instances) > 0:
+            return matching_dataset_instances[0]
+        else:
+            print("No matching dataset found")
+            return []
+            

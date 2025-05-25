@@ -148,6 +148,7 @@ attributes:
     owner: DataPreprocessing
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

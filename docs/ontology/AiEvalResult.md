@@ -212,6 +212,7 @@ attributes:
     owner: AiEvalResult
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

@@ -29,10 +29,13 @@ classes:
     slots:
       - hasDocumentation
       - hasDataset
+      - hasTasks
+      - hasImplementation
       - hasUnitxtCard
       - hasLicense
       - hasRelatedRisk
       - bestValue
+      - hasBenchmarkMetadata
   
   AiEvalResult:
     is_a: Entity
@@ -42,6 +45,45 @@ classes:
     - Fact
     slots:
     - isResultOf
+
+  BenchmarkMetadataCard:
+    is_a: Entity
+    class_uri: nexus:benchmarkmetadatacard
+    description: Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly.
+    attributes:
+      name:
+        description: The official name of the benchmark.
+      overview:
+        description: A brief description of the benchmark's main goals and scope.
+    slots:
+      - describesAiEval
+      - hasDataType
+      - hasDomains
+      - hasLanguages
+      - hasSimilarBenchmarks
+      - hasResources
+      - hasGoal
+      - hasAudience
+      - hasTasks
+      - hasLimitations
+      - hasOutOfScopeUses
+      - hasDataSource
+      - hasDataSize
+      - hasDataFormat
+      - hasAnnotation
+      - hasMethods
+      - hasMetrics
+      - hasCalculation
+      - hasInterpretation
+      - hasBaselineResults
+      - hasValidation
+      - hasRelatedRisks
+      - hasDemographicAnalysis
+      - hasConsiderationPrivacyAndAnonymity
+      - hasLicense
+      - hasConsiderationConsentProcedures
+      - hasConsiderationComplianceWithRegulations
+      - hasDocumentation
 
   Question:
     is_a: AiEval
@@ -59,10 +101,33 @@ classes:
         range: Question
 
 slots:
+  hasImplementation:
+    slot_uri: schema:url
+    description: A relationship to a implementation defining the risk evaluation
+    range: uri
+    multivalued: true
+    inlined: false
   hasUnitxtCard:
     slot_uri: schema:url
     description: A relationship to a Unitxt card defining the risk evaluation
     range: uri
+    multivalued: true
+    inlined: false
+  hasBenchmarkMetadata:
+    description: A relationship to a Benchmark Metadata Card which contains metadata about the benchmark.
+    domain: AiEval
+    range: BenchmarkMetadataCard
+    multivalued: true
+    inlined: false
+    inverse: describesAiEval
+  describesAiEval:
+    description: >-
+      A relationship where a BenchmarkMetadataCard describes and AI evaluation (benchmark).
+    domain: BenchmarkMetadataCard
+    range: AiEval
+    multivalued: true
+    inlined: false
+    inverse: hasBenchmarkMetadata
   bestValue:
     description: Annotation of the best possible result of the evaluation
   hasEvaluation:
@@ -77,3 +142,69 @@ slots:
     description: A relationship indicating that an entity is the result of an AI evaluation.
     range: AiEval
     inlined: false
+  hasDataType:
+    description: The type of data used in the benchmark (e.g., text, images, or multi-modal)
+    multivalued: true
+  hasDomains:
+    description: The specific domains or areas where the benchmark is applied (e.g., natural language processing,computer vision).
+    multivalued: true
+  hasLanguages:
+    description: The languages included in the dataset used by the benchmark (e.g., English, multilingual).
+    multivalued: true
+  hasSimilarBenchmarks:
+    description: Benchmarks that are closely related in terms of goals or data type.
+    multivalued: true
+  hasResources:
+    description: Links to relevant resources, such as repositories or papers related to the benchmark.
+    multivalued: true
+  hasGoal:
+    description: The specific goal or primary use case the benchmark is designed for.
+  hasAudience:
+    description: The intended audience, such as researchers, developers, policymakers, etc.
+  hasTasks:
+    description: The tasks or evaluations the benchmark is intended to assess.
+    multivalued: true
+    inlined: false
+  hasLimitations:
+    description: Limitations in evaluating or addressing risks, such as gaps in demographic coverage or specific domains.
+    multivalued: true
+  hasOutOfScopeUses:
+    description: Use cases where the benchmark is not designed to be applied and could give misleading results.
+    multivalued: true
+  hasDataSource:
+    description: The origin or source of the data used in the benchmark (e.g., curated datasets, user submissions).
+    multivalued: true
+  hasDataSize:
+    description: The size of the dataset, including the number of data points or examples.
+  hasDataFormat:
+    description: The structure and modality of the data (e.g., sentence pairs, question-answer format, tabular data).
+  hasAnnotation:
+    description: The process used to annotate or label the dataset, including who or what performed the annotations (e.g., human annotators, automated processes).
+  hasMethods:
+    description: The evaluation techniques applied within the benchmark.
+    multivalued: true
+  hasMetrics:
+    description: The specific performance metrics used to assess models (e.g., accuracy, F1 score, precision, recall).
+    multivalued: true
+  hasCalculation:
+    description: The way metrics are computed based on model outputs and the benchmark data.
+    multivalued: true
+  hasInterpretation:
+    description: How users should interpret the scores or results from the metrics.
+    multivalued: true
+  hasBaselineResults:
+    description: The results of well-known or widely used models to give context to new performance scores.
+  hasValidation:
+    description: Measures taken to ensure that the benchmark provides valid and reliable evaluations.
+    multivalued: true
+  hasRelatedRisks: 
+    description: Specific risks of LLMs the benchmark assesses
+    multivalued: true
+  hasDemographicAnalysis:
+    description:  How the benchmark evaluates performance across different demographic groups (e.g., gender, race).
+  hasConsiderationPrivacyAndAnonymity:
+    description: How any personal or sensitive data is handled and whether any anonymization techniques are applied.
+  hasConsiderationConsentProcedures:
+    description: Information on how consent was obtained (if applicable), especially for datasets involving personal data.
+  hasConsiderationComplianceWithRegulations:
+    description: Compliance with relevant legal or ethical regulations (if applicable).

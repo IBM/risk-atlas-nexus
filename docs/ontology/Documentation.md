@@ -29,6 +29,15 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
         
       Documentation : description
         
+      Documentation : hasLicense
+        
+          
+    
+    
+    Documentation --> "0..1" License : hasLicense
+    click License href "../License"
+
+        
       Documentation : id
         
       Documentation : name
@@ -52,6 +61,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
+| [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | direct |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -72,6 +82,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [RiskTaxonomy](RiskTaxonomy.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Action](Action.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiEval](AiEval.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Question](Question.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Questionnaire](Questionnaire.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [BaseAi](BaseAi.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
@@ -127,6 +138,8 @@ name: Documentation
 description: Documented information about a concept or other topic(s) of interest.
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
+slots:
+- hasLicense
 class_uri: airo:Documentation
 
 ```
@@ -141,6 +154,22 @@ description: Documented information about a concept or other topic(s) of interes
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 attributes:
+  hasLicense:
+    name: hasLicense
+    description: Indicates licenses associated with a resource
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: airo:hasLicense
+    alias: hasLicense
+    owner: Documentation
+    domain_of:
+    - Dataset
+    - Documentation
+    - RiskTaxonomy
+    - AiEval
+    - BenchmarkMetadataCard
+    - BaseAi
+    range: License
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -165,6 +194,7 @@ attributes:
     owner: Documentation
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

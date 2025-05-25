@@ -194,6 +194,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -252,6 +253,7 @@ attributes:
     owner: Action
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

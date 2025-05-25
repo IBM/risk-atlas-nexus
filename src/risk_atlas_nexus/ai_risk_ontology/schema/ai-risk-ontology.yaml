@@ -106,6 +106,12 @@ classes:
         range: AiEval
         inlined: true
         inlined_as_list: true
+      benchmarkmetadatacards:
+        description: A list of AI evaluation benchmark metadata cards
+        multivalued: true
+        range: BenchmarkMetadataCard
+        inlined: true
+        inlined_as_list: true
       aimodelfamilies:
         description: A list of AI model families
         multivalued: true

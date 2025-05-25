@@ -38,6 +38,15 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
         
       AiEval : description
         
+      AiEval : hasBenchmarkMetadata
+        
+          
+    
+    
+    AiEval --> "*" BenchmarkMetadataCard : hasBenchmarkMetadata
+    click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
+
+        
       AiEval : hasDataset
         
           
@@ -56,6 +65,8 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
     click Documentation href "../Documentation"
 
         
+      AiEval : hasImplementation
+        
       AiEval : hasLicense
         
           
@@ -73,6 +84,8 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
     AiEval --> "*" Risk : hasRelatedRisk
     click Risk href "../Risk"
 
+        
+      AiEval : hasTasks
         
       AiEval : hasUnitxtCard
         
@@ -103,10 +116,13 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 | ---  | --- | --- | --- |
 | [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | direct |
 | [hasDataset](hasDataset.md) | * <br/> [Dataset](Dataset.md) | A relationship to datasets that are used | direct |
-| [hasUnitxtCard](hasUnitxtCard.md) | 0..1 <br/> [Uri](Uri.md) | A relationship to a Unitxt card defining the risk evaluation | direct |
+| [hasTasks](hasTasks.md) | * <br/> [String](String.md) | The tasks or evaluations the benchmark is intended to assess | direct |
+| [hasImplementation](hasImplementation.md) | * <br/> [Uri](Uri.md) | A relationship to a implementation defining the risk evaluation | direct |
+| [hasUnitxtCard](hasUnitxtCard.md) | * <br/> [Uri](Uri.md) | A relationship to a Unitxt card defining the risk evaluation | direct |
 | [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | direct |
 | [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md) | A relationship where an entity relates to a risk | direct |
 | [bestValue](bestValue.md) | 0..1 <br/> [String](String.md) | Annotation of the best possible result of the evaluation | direct |
+| [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A relationship to a Benchmark Metadata Card which contains metadata about the... | direct |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -123,7 +139,11 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [evaluations](evaluations.md) | range | [AiEval](AiEval.md) |
+| [AiEval](AiEval.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 | [AiEvalResult](AiEvalResult.md) | [isResultOf](isResultOf.md) | range | [AiEval](AiEval.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [describesAiEval](describesAiEval.md) | range | [AiEval](AiEval.md) |
+| [Question](Question.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
+| [Questionnaire](Questionnaire.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 
 
 
@@ -175,10 +195,13 @@ is_a: Entity
 slots:
 - hasDocumentation
 - hasDataset
+- hasTasks
+- hasImplementation
 - hasUnitxtCard
 - hasLicense
 - hasRelatedRisk
 - bestValue
+- hasBenchmarkMetadata
 slot_usage:
   isComposedOf:
     name: isComposedOf
@@ -219,6 +242,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -236,6 +260,32 @@ attributes:
     range: Dataset
     multivalued: true
     inlined: false
+  hasTasks:
+    name: hasTasks
+    description: The tasks or evaluations the benchmark is intended to assess.
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: hasTasks
+    owner: AiEval
+    domain_of:
+    - AiEval
+    - BenchmarkMetadataCard
+    range: string
+    multivalued: true
+    inlined: false
+  hasImplementation:
+    name: hasImplementation
+    description: A relationship to a implementation defining the risk evaluation
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:url
+    alias: hasImplementation
+    owner: AiEval
+    domain_of:
+    - AiEval
+    range: uri
+    multivalued: true
+    inlined: false
   hasUnitxtCard:
     name: hasUnitxtCard
     description: A relationship to a Unitxt card defining the risk evaluation
@@ -247,6 +297,8 @@ attributes:
     domain_of:
     - AiEval
     range: uri
+    multivalued: true
+    inlined: false
   hasLicense:
     name: hasLicense
     description: Indicates licenses associated with a resource
@@ -257,8 +309,10 @@ attributes:
     owner: AiEval
     domain_of:
     - Dataset
+    - Documentation
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   hasRelatedRisk:
@@ -285,6 +339,21 @@ attributes:
     domain_of:
     - AiEval
     range: string
+  hasBenchmarkMetadata:
+    name: hasBenchmarkMetadata
+    description: A relationship to a Benchmark Metadata Card which contains metadata
+      about the benchmark.
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: AiEval
+    alias: hasBenchmarkMetadata
+    owner: AiEval
+    domain_of:
+    - AiEval
+    inverse: describesAiEval
+    range: BenchmarkMetadataCard
+    multivalued: true
+    inlined: false
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -309,6 +378,7 @@ attributes:
     owner: AiEval
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description
