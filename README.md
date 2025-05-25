@@ -4,49 +4,55 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0) ![main branch](https://github.com/IBM/risk-atlas-nexus/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main) [![](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/) <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
- 👉 (Feb-2025) Our new [HF spaces demo site](https://huggingface.co/spaces/ibm/risk-atlas-nexus) is available! 
+👉 (Feb-2025) Our new [HF spaces demo site](https://huggingface.co/spaces/ibm/risk-atlas-nexus) is available!
 
 ## Overview
-Risk Atlas Nexus aims to provide tooling to help bring together disparate resources related to governance of foundation models. We support a community driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations.  Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, Risk Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. Risk Atlas Nexus builds on the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) making this educational resource a nexus of governance assets and tooling.  An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data. 
+
+Risk Atlas Nexus aims to provide tooling to help bring together disparate resources related to governance of foundation models. We support a community driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations. Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, Risk Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. Risk Atlas Nexus builds on the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) making this educational resource a nexus of governance assets and tooling. An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data.
 
 Our intention is to create a starting point for an open AI Systems ontology whose focus is on risk and that the community can extend and enhance. This ontology serves as the foundation that unifies innovation and tooling in the AI risk space. By lowering the barrier to entry for developers, it fosters a governance-first approach to AI solutions, while also inviting the broader community to contribute their own tools and methodologies to expand its impact.
 
 ## Features
-- 🏗️📊 An ontology has been provided, that combines the AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema 
+
+- 🏗️📊 An ontology has been provided, that combines the AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema
 - 📚⚠️ AI Risks were collected from IBM AI Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AI Risk Taxonomy (AIR 2024), the AILuminate Benchmark, Credo's Unified Control Framework, and OWASP Top 10 for Large Language Model Applications
 - 🔗📌 Mappings are proposed between the taxonomies and between risks and actions
-- 🐍🔍 Use the python library methods to quickly explore available risks, relations and actions 
-- 🚨🧐 Use the python library methods to detect potential risks in your usecase 
+- 🐍🔍 Use the python library methods to quickly explore available risks, relations and actions
+- 🚨🧐 Use the python library methods to detect potential risks in your usecase
 - 📤📈 Download an exported graph populated with data instances
 - ✨📝 Example use-case of auto-assistance in compliance questionnaires using CoT examples and Risk Atlas Nexus
 
 ## Architecture
+
 ![Architecture](resources/images/architecture.png)
 
 ### Coming soon
+
 - Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database
 
-
 ## Links
-- **AI Risk Ontology**
-    - [LinkML schema documentation](docs/ontology/index.md)
-    - [LinkML instance data for an example knowledge graph](https://github.com/IBM/risk-atlas-nexus/blob/main/src/risk_atlas_nexus/data/knowledge_graph/README.md)
-    - [Download a populated graph](https://github.com/IBM/risk-atlas-nexus/blob/main/graph_export/README.md)
-    - [Contribute your own taxonomy files and CoT templates](docs/concepts/Contributing_a_taxonomy.md)
-- **Notebooks:** 
-    - [Risk Atlas Nexus Quickstart](docs/examples/notebooks/Risk_Atlas_Nexus_Quickstart.ipynb) Overview of library functionality
-    - [Risk identification](docs/examples/notebooks/risk_identification.ipynb) Uncover risks related to your usecase
-    - [Auto assist questionnaire](docs/examples/notebooks/autoassist_questionnaire.ipynb) Auto-fill questionnaire using Chain of Thought or Few-Shot Examples
-    - [AI Tasks identification](docs/examples/notebooks/ai_tasks_identification.ipynb) Uncover ai tasks related to your usecase
-- **Additional Resources:**
-    - [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
-    - [Usage Governance Advisor: From Intent to AI Governance](https://arxiv.org/abs/2412.01957)
 
+- **AI Risk Ontology**
+  - [LinkML schema documentation](docs/ontology/index.md)
+  - [LinkML instance data for an example knowledge graph](https://github.com/IBM/risk-atlas-nexus/blob/main/src/risk_atlas_nexus/data/knowledge_graph/README.md)
+  - [Download a populated graph](https://github.com/IBM/risk-atlas-nexus/blob/main/graph_export/README.md)
+  - [Contribute your own taxonomy files and CoT templates](docs/concepts/Contributing_a_taxonomy.md)
+- **Notebooks:**
+  - [Risk Atlas Nexus Quickstart](docs/examples/notebooks/Risk_Atlas_Nexus_Quickstart.ipynb) Overview of library functionality
+  - [Risk identification](docs/examples/notebooks/risk_identification.ipynb) Uncover risks related to your usecase
+  - [Auto assist questionnaire](docs/examples/notebooks/autoassist_questionnaire.ipynb) Auto-fill questionnaire using Chain of Thought or Few-Shot Examples
+  - [AI Tasks identification](docs/examples/notebooks/ai_tasks_identification.ipynb) Uncover ai tasks related to your usecase
+  - [AI Domain identification](docs/examples/notebooks/domain_identification.ipynb) Uncover ai domain from your usecase
+- **Additional Resources:**
+  - [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
+  - [Usage Governance Advisor: From Intent to AI Governance](https://arxiv.org/abs/2412.01957)
 
 ## Installation
+
 This project targets python version ">=3.11, <3.12". You can download specific versions of python here: https://www.python.org/downloads/
 
 Install the risk_atlas_nexus library
+
 ```
 git clone git@github.com:IBM/risk-atlas-nexus.git
 cd risk-atlas-nexus
@@ -64,7 +70,7 @@ Risk Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data
 - [vLLM](https://docs.vllm.ai/en/latest/)
 - [RITS](https://rits.fmaas.res.ibm.com) (IBM Internal Only)
 
-#### IBM Watsonx AI (WML) 
+#### IBM Watsonx AI (WML)
 
 When using the WML platform, you need to:
 
@@ -85,7 +91,7 @@ Either 'WML_PROJECT_ID' or 'WML_SPACE_ID' need to be specified.
 pip install -e ".[wml]"
 ```
 
-#### Ollama 
+#### Ollama
 
 When using the Ollama inference, you need to:
 
@@ -99,7 +105,7 @@ pip install -e ".[ollama]"
 
 3. When selecting Ollama engine in Risk Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
 
-#### vLLM 
+#### vLLM
 
 When using the vLLM inference, you need to:
 
@@ -141,14 +147,16 @@ pip install -e ".[rits]"
 ```
 
 ## Compatibility
+
 - View the [changelog](CHANGELOG.md).
 
-
 ## Referencing the project
+
 If you use Risk Atlas Nexus in your projects, please consider citing the following:
+
 ```bib
 @article{airiskatlas2025,
-      title={AI Risk Atlas: Taxonomy and Tooling for Navigating AI Risks and Resources}, 
+      title={AI Risk Atlas: Taxonomy and Tooling for Navigating AI Risks and Resources},
       author={Frank Bagehorn and Kristina Brimijoin and Elizabeth M. Daly and Jessica He and Michael Hind and Luis Garces-Erice and Christopher Giblin and Ioana Giurgiu and Jacquelyn Martino and Rahul Nair and David Piorkowski and Ambrish Rawat and John Richards and Sean Rooney and Dhaval Salwala and Seshu Tirupathi and Peter Urbanetz and Kush R. Varshney and Inge Vejsbjerg and Mira L. Wolf-Bauwens},
       year={2025},
       eprint={2503.05780},
@@ -157,10 +165,13 @@ If you use Risk Atlas Nexus in your projects, please consider citing the followi
       url={https://arxiv.org/abs/2503.05780}
 }
 ```
+
 ## License
+
 Risk Atlas Nexus is under Apache 2.0 license.
 
 ## Contributing
+
 - Get started by checking our [contribution guidelines](CONTRIBUTING.md).
 - Read the wiki for more technical and design details.
 - If you have any questions, just ask!
@@ -169,6 +180,7 @@ Risk Atlas Nexus is under Apache 2.0 license.
 Tip: Use the makefile provided to regenerate artifacts provided in the repository by running `make` in this repository.
 
 ## Find out more
+
 - Try out a quick demo at the [HF spaces demo site](https://huggingface.co/spaces/ibm/risk-atlas-nexus)
 - [IBM's AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
 - Read the the IBM AI Ethics Board publication [Foundation models: Opportunities, risks and mitigations](https://www.ibm.com/downloads/documents/us-en/10a99803d8afd656) which goes into more detail about the risk taxonomy, and describes the point of view of IBM on the ethics of foundation models.
