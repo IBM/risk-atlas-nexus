@@ -49,3 +49,29 @@ DOMAIN_TYPE_SCHEMA = {
         "explanation",
     ],
 }
+
+RISK_CATEGORY_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "Description": {"type": "string"},
+        "Classification": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Unacceptable Risk",
+                    "High Risk",
+                    "Limited Risk",
+                    "Minimal Risk",
+                ]
+            },
+        },
+        "Relevant Text from the EU AI Act": {},
+        "Reasoning": {"type": "string"},
+    },
+    "required": [
+        "Description",
+        "Classification",
+        "Relevant Text from the EU AI Act",
+        "Reasoning",
+    ],
+}
