@@ -6375,7 +6375,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -6434,8 +6434,8 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6453,23 +6453,23 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">WMLInferenceEngine</span><span class="p">(</span>
-    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"ibm/granite-20b-code-instruct"</span><span class="p">,</span>
-    <span class="n">credentials</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"WML_API_KEY"</span><span class="p">,</span>
-        <span class="s2">"api_url"</span><span class="p">:</span> <span class="s2">"WML_API_URL"</span><span class="p">,</span>
-        <span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"WML_PROJECT_ID"</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="n">parameters</span><span class="o">=</span><span class="n">WMLInferenceEngineParams</span><span class="p">(</span>
-        <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">decoding_method</span><span class="o">=</span><span class="s2">"greedy"</span><span class="p">,</span> <span class="n">repetition_penalty</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"llama3:latest"</span><span class="p">,</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"OLLAMA_API_URL"</span><span class="p">),</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
+        <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">repeat_penalty</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span>
     <span class="p">),</span>
 <span class="p">)</span>
 
-<span class="c1"># inference_engine = OllamaInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",</span>
-<span class="c1">#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),</span>
-<span class="c1">#     parameters=OllamaInferenceEngineParams(</span>
-<span class="c1">#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1</span>
+<span class="c1"># inference_engine = WMLInferenceEngine(</span>
+<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
+<span class="c1">#     credentials={</span>
+<span class="c1">#         "api_key": "WML_API_KEY",</span>
+<span class="c1">#         "api_url": "WML_API_URL",</span>
+<span class="c1">#         "project_id": "WML_PROJECT_ID",</span>
+<span class="c1">#     },</span>
+<span class="c1">#     parameters=WMLInferenceEngineParams(</span>
+<span class="c1">#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1</span>
 <span class="c1">#     ),</span>
 <span class="c1"># )</span>
 
@@ -6482,7 +6482,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = RITSInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",</span>
 <span class="c1">#     credentials={</span>
 <span class="c1">#         "api_key": "RITS_API_KEY",</span>
 <span class="c1">#         "api_url": "RITS_API_URL",</span>
@@ -6490,23 +6490,23 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <span class="c1">#     parameters=RITSInferenceEngineParams(max_tokens=1000, temperature=0.7),</span>
 <span class="c1"># )</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">inference_engine = WMLInferenceEngine(
-    model_name_or_path="ibm/granite-20b-code-instruct",
-    credentials={
-        "api_key": "WML_API_KEY",
-        "api_url": "WML_API_URL",
-        "project_id": "WML_PROJECT_ID",
-    },
-    parameters=WMLInferenceEngineParams(
-        max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
+<div class="clipboard-copy-txt" id="cell-2">inference_engine = OllamaInferenceEngine(
+    model_name_or_path="llama3:latest",
+    credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
+    parameters=OllamaInferenceEngineParams(
+        num_predict=1000, temperature=0, repeat_penalty=1, num_ctx=8192
     ),
 )
 
-# inference_engine = OllamaInferenceEngine(
-#     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",
-#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
-#     parameters=OllamaInferenceEngineParams(
-#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1
+# inference_engine = WMLInferenceEngine(
+#     model_name_or_path="ibm/granite-20b-code-instruct",
+#     credentials={
+#         "api_key": "WML_API_KEY",
+#         "api_url": "WML_API_URL",
+#         "project_id": "WML_PROJECT_ID",
+#     },
+#     parameters=WMLInferenceEngineParams(
+#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
 #     ),
 # )
 
@@ -6519,13 +6519,27 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 # )
 
 # inference_engine = RITSInferenceEngine(
-#     model_name_or_path="ibm/granite-20b-code-instruct",
+#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",
 #     credentials={
 #         "api_key": "RITS_API_KEY",
 #         "api_url": "RITS_API_URL",
 #     },
 #     parameters=RITSInferenceEngineParams(max_tokens=1000, temperature=0.7),
 # )</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2025-05-25 23:10:58:730] - INFO - RiskAtlasNexus - OLLAMA inference engine will execute requests on the server at http://localhost:11434.
+[2025-05-25 23:10:58:743] - INFO - RiskAtlasNexus - Created OLLAMA inference engine.
+</pre>
 </div>
 </div>
 </div>
@@ -6542,13 +6556,13 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -6564,6 +6578,19 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">risk_atlas_nexus</span> <span class="o">=</span> <span class="n">RiskAtlasNexus</span><span class="p">()</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">risk_atlas_nexus = RiskAtlasNexus()</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2025-05-25 23:10:58:946] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
+</pre>
 </div>
 </div>
 </div>
@@ -6585,13 +6612,13 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -6611,7 +6638,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
     <span class="n">inference_engine</span><span class="o">=</span><span class="n">inference_engine</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">risks</span>
+<span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">prediction</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-4">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
@@ -6620,7 +6647,30 @@ risks = risk_atlas_nexus.identify_ai_tasks_from_usecases(
     inference_engine=inference_engine,
 )
 
-risks</div>
+risks[0].prediction</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with OLLAMA: 100%|██████████| 1/1 [00:23&lt;00:00, 23.60s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['Text Classification',
+ 'Summarization',
+ 'Question Answering',
+ 'Text Generation',
+ 'Translation']</pre>
 </div>
 </div>
 </div>

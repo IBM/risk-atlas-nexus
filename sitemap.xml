@@ -2,830 +2,834 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/concepts/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/concepts/Contributing_a_taxonomy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/concepts/IBM_AI_Risk_Atlas/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/concepts/architecture/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/examples/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/examples/notebooks/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/examples/notebooks/Prepare_taxonomy_mappings/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/examples/notebooks/Risk_Atlas_Nexus_Quickstart/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/examples/notebooks/ai_tasks_identification/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/examples/notebooks/autoassist_questionnaire/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/risk-atlas-nexus/examples/notebooks/domain_identification/</loc>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/examples/notebooks/risk_identification/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/faq/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/installation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Action/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiAgent/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiEval/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiEvalResult/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiLifecyclePhase/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiModel/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiModelValidation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiOffice/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiProvider/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiSystem/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiSystemType/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/AiTask/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Any/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/BaseAi/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/BenchmarkMetadataCard/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Boolean/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Consequence/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Container/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Curie/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/DataPreprocessing/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Dataset/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Date/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/DateOrDatetime/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Datetime/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Decimal/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Documentation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Double/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Entity/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/EuAiRiskCategory/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Fact/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Float/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Impact/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/IncidentConcludedclass/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/IncidentHaltedclass/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/IncidentMitigatedclass/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/IncidentNearMissclass/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/IncidentOngoingclass/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/IncidentStatus/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Integer/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Jsonpath/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Jsonpointer/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/LargeLanguageModel/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/LargeLanguageModelFamily/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/License/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Likelihood/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Modality/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Ncname/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Nodeidentifier/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Objectidentifier/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Organization/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Question/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Questionnaire/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Risk/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/RiskConcept/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/RiskControl/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/RiskGroup/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/RiskIncident/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/RiskTaxonomy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Severity/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Sparqlpath/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/String/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Time/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Uri/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/Uriorcurie/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/action_type/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/actions/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/aiActorTask/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/ai_actor_task/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/aimodelfamilies/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/aimodels/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/aitasks/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/architecture/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/author/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/benchmarkmetadatacards/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/bestValue/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/broadMatch/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/carbon_emitted/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/closeMatch/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/concern/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/contextWindowSize/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/datasets/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/dateCreated/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/dateModified/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/describesAiEval/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/description/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/descriptor/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/detectsRiskConcept/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/documents/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/evaluations/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/evidence/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/exactMatch/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/fine_tuning/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/gpu_hours/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/grants_license/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasAiActorTask/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasAnnotation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasAudience/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasBaselineResults/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasBenchmarkMetadata/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasCalculation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasConsequence/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasConsiderationComplianceWithRegulations/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasConsiderationConsentProcedures/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasConsiderationPrivacyAndAnonymity/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDataFormat/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDataSize/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDataSource/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDataType/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDataset/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDemographicAnalysis/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDocumentation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasDomains/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasEuAiSystemType/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasEuRiskCategory/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasEvaluation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasGoal/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasImpact/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasImpactOn/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasImplementation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasInputModality/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasInterpretation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasLanguages/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasLicense/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasLikelihood/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasLimitations/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasMRACard/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasMethods/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasMetrics/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasModelCard/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasOutOfScopeUses/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasOutputModality/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasPart/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasRelatedAction/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasRelatedRisk/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasRelatedRisks/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasResources/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasRiskControl/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasSeverity/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasSimilarBenchmarks/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasStatus/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasTasks/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasTrainingData/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasUnitxtCard/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasValidation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/hasVariant/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/id/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isComposedOf/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isDefinedBy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isDefinedByTaxonomy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isDeployedBy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isDetectedBy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isDistributedBy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isImportedBy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isPartOf/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isProvidedBy/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/isResultOf/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/licenses/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/modalities/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/name/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/narrowMatch/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/numParameters/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/numTrainingTokens/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/organizations/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/overview/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/performsTask/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/phase/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/power_consumption_w/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/producer/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/provider/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/refersToRisk/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/relatedMatch/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/riskcontrols/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/riskgroups/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/riskincidents/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/risks/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/source_uri/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/supported_languages/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/tag/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/taxonomies/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/text/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/training_data_preprocessing/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/type/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/url/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/validated_by/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/value/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/ontology/version/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/reference/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/reference/ai_ontology_reference/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/reference/library_reference/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
     <url>
          <loc>https://ibm.github.io/risk-atlas-nexus/usage/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-26</lastmod>
     </url>
 </urlset>

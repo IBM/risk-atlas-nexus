@@ -6543,23 +6543,23 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">WMLInferenceEngine</span><span class="p">(</span>
-    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"ibm/granite-20b-code-instruct"</span><span class="p">,</span>
-    <span class="n">credentials</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"WML_API_KEY"</span><span class="p">,</span>
-        <span class="s2">"api_url"</span><span class="p">:</span> <span class="s2">"WML_API_URL"</span><span class="p">,</span>
-        <span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"WML_PROJECT_ID"</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="n">parameters</span><span class="o">=</span><span class="n">WMLInferenceEngineParams</span><span class="p">(</span>
-        <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">decoding_method</span><span class="o">=</span><span class="s2">"greedy"</span><span class="p">,</span> <span class="n">repetition_penalty</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"granite3.2:8b"</span><span class="p">,</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"OLLAMA_API_URL"</span><span class="p">),</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
+        <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">repeat_penalty</span><span class="o">=</span><span class="mi">1</span>
     <span class="p">),</span>
 <span class="p">)</span>
 
-<span class="c1"># inference_engine = OllamaInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",</span>
-<span class="c1">#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),</span>
-<span class="c1">#     parameters=OllamaInferenceEngineParams(</span>
-<span class="c1">#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1</span>
+<span class="c1"># inference_engine = WMLInferenceEngine(</span>
+<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
+<span class="c1">#     credentials={</span>
+<span class="c1">#         "api_key": "WML_API_KEY",</span>
+<span class="c1">#         "api_url": "WML_API_URL",</span>
+<span class="c1">#         "project_id": "WML_PROJECT_ID",</span>
+<span class="c1">#     },</span>
+<span class="c1">#     parameters=WMLInferenceEngineParams(</span>
+<span class="c1">#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1</span>
 <span class="c1">#     ),</span>
 <span class="c1"># )</span>
 
@@ -6580,23 +6580,23 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <span class="c1">#     parameters=RITSInferenceEngineParams(max_tokens=1000, temperature=0.7),</span>
 <span class="c1"># )</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">inference_engine = WMLInferenceEngine(
-    model_name_or_path="ibm/granite-20b-code-instruct",
-    credentials={
-        "api_key": "WML_API_KEY",
-        "api_url": "WML_API_URL",
-        "project_id": "WML_PROJECT_ID",
-    },
-    parameters=WMLInferenceEngineParams(
-        max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
+<div class="clipboard-copy-txt" id="cell-2">inference_engine = OllamaInferenceEngine(
+    model_name_or_path="granite3.2:8b",
+    credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
+    parameters=OllamaInferenceEngineParams(
+        num_predict=1000, num_ctx=8192, temperature=0, repeat_penalty=1
     ),
 )
 
-# inference_engine = OllamaInferenceEngine(
-#     model_name_or_path="hf.co/ibm-granite/granite-20b-code-instruct-8k-GGUF",
-#     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
-#     parameters=OllamaInferenceEngineParams(
-#         num_predict=1000, num_ctx=8192, temperature=0.7, repeat_penalty=1
+# inference_engine = WMLInferenceEngine(
+#     model_name_or_path="ibm/granite-20b-code-instruct",
+#     credentials={
+#         "api_key": "WML_API_KEY",
+#         "api_url": "WML_API_URL",
+#         "project_id": "WML_PROJECT_ID",
+#     },
+#     parameters=WMLInferenceEngineParams(
+#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
 #     ),
 # )
 
