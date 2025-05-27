@@ -1101,9 +1101,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-few-shot-examples-for-auto-assist-functionality" class="md-nav__link">
+  <a href="#defining-examples-for-auto-assist-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      Defining Few-Shot Examples for Auto-Assist Functionality
+      Defining Examples for Auto-Assist Functionality
     </span>
   </a>
   
@@ -1113,6 +1113,24 @@
   <a href="#load-risk-questionnaire" class="md-nav__link">
     <span class="md-ellipsis">
       Load Risk Questionnaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-assist-questionnaire-zero-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Assist Questionnaire - Zero Shot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-assist-questionnaire-few-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Assist Questionnaire - Few Shot
     </span>
   </a>
   
@@ -5874,9 +5892,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-few-shot-examples-for-auto-assist-functionality" class="md-nav__link">
+  <a href="#defining-examples-for-auto-assist-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      Defining Few-Shot Examples for Auto-Assist Functionality
+      Defining Examples for Auto-Assist Functionality
     </span>
   </a>
   
@@ -5886,6 +5904,24 @@
   <a href="#load-risk-questionnaire" class="md-nav__link">
     <span class="md-ellipsis">
       Load Risk Questionnaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-assist-questionnaire-zero-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Assist Questionnaire - Zero Shot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-assist-questionnaire-few-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto Assist Questionnaire - Few Shot
     </span>
   </a>
   
@@ -6354,7 +6390,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="auto-fill-questionnaire-using-chain-of-thought-or-few-shot-examples">Auto-fill Questionnaire using Chain of Thought or Few-Shot Examples<a class="anchor-link" href="#auto-fill-questionnaire-using-chain-of-thought-or-few-shot-examples">¶</a></h4><p>This notebook showcases the application of few-shot examples in autofilling questionnaires. It utilizes a json file (<code>cot_examples.json</code>) to
+<h4 id="auto-fill-questionnaire-using-chain-of-thought-or-few-shot-examples">Auto-fill Questionnaire using Chain of Thought or Few-Shot Examples<a class="anchor-link" href="#auto-fill-questionnaire-using-chain-of-thought-or-few-shot-examples">¶</a></h4><p>This notebook showcases the application of few-shot examples in autofilling questionnaires. It utilizes a json file (<code>risk_questionnaire_cot.json</code>) to
 provide the LLM with example responses for some use-cases.</p>
 <p>By leveraging these few-shot examples, we can enable seamless completion of lengthy questionnaires, minimizing manual effort and improving overall efficiency.</p>
 </div>
@@ -6423,7 +6459,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/Users/dhaval/Projects/Usage-Governance/risk-atlas-nexus/src/risk_atlas_nexus/toolkit/job_utils.py:2: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+<pre>/Users/dhaval/Projects/Usage-Governance/risk-atlas-nexus/src/risk_atlas_nexus/toolkit/job_utils.py:4: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
   from tqdm.autonotebook import tqdm
 </pre>
 </div>
@@ -6449,7 +6485,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -6546,8 +6582,8 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-05-25 22:39:41:225] - INFO - RiskAtlasNexus - OLLAMA inference engine will execute requests on the server at http://localhost:11434.
-[2025-05-25 22:39:41:374] - INFO - RiskAtlasNexus - Created OLLAMA inference engine.
+<pre>[2025-05-26 18:30:21:729] - INFO - RiskAtlasNexus - OLLAMA inference engine will execute requests on the server at http://localhost:11434.
+[2025-05-26 18:30:21:803] - INFO - RiskAtlasNexus - Created OLLAMA inference engine.
 </pre>
 </div>
 </div>
@@ -6598,7 +6634,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-05-25 22:39:41:446] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
+<pre>[2025-05-26 18:30:21:880] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
 </pre>
 </div>
 </div>
@@ -6612,23 +6648,39 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="defining-few-shot-examples-for-auto-assist-functionality">Defining Few-Shot Examples for Auto-Assist Functionality<a class="anchor-link" href="#defining-few-shot-examples-for-auto-assist-functionality">¶</a></h4><p>This cell showcases the template used in <code>risk_atlas_nexus/data/templates/risk_questionnaire_cot.json</code> to provide few-shot
-examples for auto-assist functionality.</p>
-<p><strong>Template Structure:</strong></p>
-<ul>
-<li>Each question is associated with a list of example intents and
-corresponding answers.</li>
-<li>The format is:</li>
-</ul>
+<h4 id="defining-examples-for-auto-assist-functionality">Defining Examples for Auto-Assist Functionality<a class="anchor-link" href="#defining-examples-for-auto-assist-functionality">¶</a></h4><p>This cell showcases the template used in <code>risk_atlas_nexus/data/templates/risk_questionnaire_cot.json</code> to provide questions and their examples for auto-assist functionality.</p>
+<p><strong>Customization:</strong></p>
+<p>To adapt this auto-assist functionality to custom questionnaires, users need to provide their own set of questions, example intents, and corresponding answers in a json file (e.g., <code>risk_questionnaire_cot.json</code>). This will enable the LLM to learn from these few-shot examples and generate responses for unseen queries.</p>
+<p><strong>Template Structure: Zero Shot</strong></p>
+<p>Each question is accompanied by corresponding examples provided as an empty list.</p>
 <div class="highlight"><pre><span></span><span class="w">  </span><span class="o">[</span>
 <span class="w">      </span><span class="o">{</span>
 <span class="w">          </span><span class="s2">"question"</span>:<span class="w"> </span><span class="s2">"In which environment is the system used?"</span>,
-<span class="w">          </span><span class="s2">"examples"</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">          </span><span class="s2">"cot_examples"</span>:<span class="w"> </span><span class="o">[]</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">      </span>...
+<span class="w">  </span><span class="o">]</span>
+</pre></div>
+<p><strong>Template Structure: Few Shot</strong></p>
+<p>Each question is associated with a list of examples, each containing intent, answer, and optional explanation.</p>
+<div class="highlight"><pre><span></span><span class="w">  </span><span class="o">[</span>
+<span class="w">      </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">"question"</span>:<span class="w"> </span><span class="s2">"In which environment is the system used?"</span>,
+<span class="w">          </span><span class="s2">"cot_examples"</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">            </span><span class="o">{</span>
 <span class="w">              </span><span class="s2">"intent"</span>:<span class="w"> </span><span class="s2">"Find patterns in healthcare insurance claims"</span>,
 <span class="w">              </span><span class="s2">"answer"</span>:<span class="w"> </span><span class="s2">"Insurance Claims Processing or Risk Management or Data Analytics"</span>,
 <span class="w">              </span><span class="s2">"explanation"</span>:<span class="w"> </span><span class="s2">"The system might be used by an insurance company's claims processing department to analyze and identify patterns in healthcare insurance claims."</span>
+<span class="w">            </span><span class="o">}</span>,
+<span class="w">            </span><span class="o">{</span>
+<span class="w">                </span><span class="s2">"intent"</span>:<span class="w"> </span><span class="s2">"optimize supply chain management in Investment banks"</span>,
+<span class="w">                </span><span class="s2">"answer"</span>:<span class="w"> </span><span class="s2">"Treasury Departments or Asset Management Divisions or Private Banking Units"</span>,
+<span class="w">                </span><span class="s2">"explanation"</span>:<span class="w"> </span>null
+<span class="w">            </span><span class="o">}</span>,
+<span class="w">            </span>...
 <span class="w">          </span><span class="o">]</span>
 <span class="w">      </span><span class="o">}</span>
+<span class="w">      </span>...
 <span class="w">  </span><span class="o">]</span>
 </pre></div>
 <p>In this notebook, we're using a simplified template to cover 7 questions
@@ -6642,12 +6694,6 @@ from the Airo questionnaire:</p>
 <li>System Application</li>
 <li>AI Subject</li>
 </ol>
-<p><strong>Customization:</strong></p>
-<p>To adapt this auto-assist functionality to custom questionnaires, users
-need to provide their own set of questions, example intents, and
-corresponding answers in a json file (e.g., <code>risk_questionnaire_cot.json</code>). This will enable
-the LLM to learn from these few-shot examples and generate responses for
-unseen queries.</p>
 </div>
 </div>
 </div>
@@ -6658,7 +6704,7 @@ unseen queries.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="load-risk-questionnaire">Load Risk Questionnaire<a class="anchor-link" href="#load-risk-questionnaire">¶</a></h4>
+<h4 id="load-risk-questionnaire">Load Risk Questionnaire<a class="anchor-link" href="#load-risk-questionnaire">¶</a></h4><p><strong>Note:</strong> Please load your custom questionnaire below according to the specified format to utilize custom questionnaire instead.</p>
 </div>
 </div>
 </div>
@@ -6668,7 +6714,7 @@ unseen queries.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -6681,11 +6727,13 @@ unseen queries.</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">risk_questionnaire</span> <span class="o">=</span> <span class="n">load_resource</span><span class="p">(</span><span class="s2">"risk_questionnaire.json"</span><span class="p">)</span>
-<span class="n">risk_questionnaire</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">risk_questionnaire</span> <span class="o">=</span> <span class="n">load_resource</span><span class="p">(</span><span class="s2">"risk_questionnaire_cot.json"</span><span class="p">)</span>
+
+<span class="n">risk_questionnaire</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">risk_questionnaire = load_resource("risk_questionnaire.json")
-risk_questionnaire</div>
+<div class="clipboard-copy-txt" id="cell-4">risk_questionnaire = load_resource("risk_questionnaire_cot.json")
+
+risk_questionnaire[0]</div>
 </div>
 </div>
 </div>
@@ -6695,17 +6743,24 @@ risk_questionnaire</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>[{'no': 'Q1',
-  'text': 'What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other'},
- {'no': 'Q2', 'text': 'In which environment is the system used?'},
- {'no': 'Q3',
-  'text': 'What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning.'},
- {'no': 'Q4', 'text': 'Who is the intended user of the system?'},
- {'no': 'Q5', 'text': 'What is the intended purpose of the system?'},
- {'no': 'Q6', 'text': 'What is the application of the system?'},
- {'no': 'Q7', 'text': 'Who is the subject as per the intent?'}]</pre>
+<pre>{'question': 'What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other',
+ 'cot_examples': [{'intent': 'Optimize supply chain management in Investment banks',
+   'answer': 'Strategy',
+   'explanation': 'Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks.'},
+  {'intent': 'Ability to create dialog flows and integrations from natural language instructions.',
+   'answer': 'Customer service/support',
+   'explanation': 'Since the task relates to human conversations or generating human converstations or support.'},
+  {'intent': 'Check if a document has grammatical mistakes.',
+   'answer': 'Writing assitant',
+   'explanation': 'Since this helps in improving the quality of text. It is not customer service since this on on the quality of text rather than helping in human conversations.'},
+  {'intent': 'Optimize supply chain management in Investment banks',
+   'answer': 'Strategy',
+   'explanation': 'Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks.'},
+  {'intent': "In the context of drug repurposing, generative AI can be employed to analyze vast databases of existing drugs and their clinical trials data. By identifying patterns and similarities, the AI can suggest potential new therapeutic indications for existing drugs, based on the chemical structure and pharmacological properties of the APIs. This process can help streamline the drug development pipeline, as it would reduce the need for time-consuming and expensive clinical trials for new indications. For instance, a drug like Atorvastatin, which is currently used to lower cholesterol, could be repurposed for the treatment of diabetic nephropathy, a kidney disease, based on the AI's analysis of similar drugs and their clinical data. This would not only save resources but also provide new treatment options for patients suffering from this debilitating condition. ",
+   'answer': 'Healthcare and strategy',
+   'explanation': 'Since the task is related to healthcare and drug repurposing, which involves analyzing data related to drugs and their clinical trials, this falls under the healthcare domain. It also involves Strategy it talks about using patterns to create new treatment options.'}]}</pre>
 </div>
 </div>
 </div>
@@ -6719,6 +6774,17 @@ risk_questionnaire</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>There are two ways to use the inference engine to get the LLM outputs. <code>generate_zero_shot_risk_questionnaire_output</code> which gives the zero-shot output for the question and <code>generate_few_shot_risk_questionnaire_output</code> which gives the output using few-shot examples defined above.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="auto-assist-questionnaire-zero-shot">Auto Assist Questionnaire - Zero Shot<a class="anchor-link" href="#auto-assist-questionnaire-zero-shot">¶</a></h4>
 </div>
 </div>
 </div>
@@ -6747,8 +6813,16 @@ risk_questionnaire</div>
     <span class="n">usecase</span><span class="p">,</span> <span class="n">risk_questionnaire</span><span class="p">,</span> <span class="n">inference_engine</span>
 <span class="p">)</span>
 
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">])</span>
+<span class="c1"># Display Results</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">question_data</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+    <span class="nb">zip</span><span class="p">(</span><span class="n">risk_questionnaire</span><span class="p">,</span> <span class="n">results</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: "</span>
+        <span class="o">+</span> <span class="n">question_data</span><span class="p">[</span><span class="s2">"question"</span><span class="p">]</span>
+        <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">A: "</span>
+        <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span>
+    <span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-5">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
@@ -6756,8 +6830,16 @@ results = risk_atlas_nexus.generate_zero_shot_risk_questionnaire_output(
     usecase, risk_questionnaire, inference_engine
 )
 
-for index, result in enumerate(results, start=1):
-    print(f"\n {index}: " + result.prediction["answer"])</div>
+# Display Results
+for index, (question_data, result) in enumerate(
+    zip(risk_questionnaire, results), start=1
+):
+    print(
+        f"\n{index}: "
+        + question_data["question"]
+        + "\nA: "
+        + result.prediction["answer"]
+    )</div>
 </div>
 </div>
 </div>
@@ -6769,26 +6851,33 @@ for index, result in enumerate(results, start=1):
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:26&lt;00:00,  3.81s/it]</pre>
+<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:24&lt;00:00,  3.46s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
- 1: Customer service/support
+1: What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other
+A: Customer service/support
 
- 2: The system is used in a digital environment, specifically designed for online interactions between customers and support agents.
+2: In which environment is the system used?
+A: The system is used in a digital environment, specifically designed for online interactions between customers and support agents.
 
- 3: The system employs a variety of techniques, including multi-modal capabilities such as Document Question/Answering, Image and text to text, Video and text to text, and visual question answering. In terms of Natural Language Processing, it utilizes methods like feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, and zero shot classification. For computer vision, it uses image classification, image segmentation, text to image, and object detection. It also incorporates audio techniques such as audio classification and text to speech. Additionally, it includes tabular methods like tabular classification and tabular regression. Lastly, it leverages reinforcement learning.
+3: What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning
+A: The system employs a variety of techniques, including multi-modal approaches such as Document Question/Answering, Image and text to text, Video and text to text, and visual question answering. In terms of Natural Language Processing, it utilizes methods like feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, and zero shot classification. For computer vision, it uses image classification, image segmentation, text to image, and object detection. In the audio domain, it applies audio classification, audio to audio, and text to speech. Additionally, it incorporates tabular methods such as tabular classification and tabular regression. Lastly, it leverages reinforcement learning.
 
- 4: The intended user of the system is the support agent.
+4: Who is the intended user of the system?
+A: The intended user of the system is the support agent.
 
- 5: The intended purpose of the system is to assist compliance officers in generating personalized, relevant responses, recommendations, and summaries of claims for customers. This is done to enhance interactions between support agents and customers, ensuring accurate and efficient communication.
+5: What is the intended purpose of the system?
+A: The intended purpose of the system is to assist compliance officers in generating personalized, relevant responses, recommendations, and summaries of claims for customers. This is done to enhance interactions between support agents and customers, ensuring accurate and efficient communication.
 
- 6: The application of the system is to assist compliance officers in generating personalized, relevant responses, recommendations, and summaries of claims for support agents. This is achieved by understanding the intent of the customer's inquiry and providing tailored information to enhance the interaction between the support agent and the customer.
+6: What is the application of the system?
+A: The application of the system is to assist compliance officers in generating personalized, relevant responses, recommendations, and summaries of claims for support agents. This is achieved by understanding the intent of the customer's inquiry and providing tailored information to enhance the interaction between the support agent and the customer.
 
- 7: The subject in this context is the compliance officer.
+7: Who is the subject as per the intent?
+A: The subject in this context is the compliance officer.
 </pre>
 </div>
 </div>
@@ -6802,13 +6891,24 @@ for index, result in enumerate(results, start=1):
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="auto-assist-questionnaire-few-shot">Auto Assist Questionnaire - Few Shot<a class="anchor-link" href="#auto-assist-questionnaire-few-shot">¶</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
@@ -6823,31 +6923,41 @@ for index, result in enumerate(results, start=1):
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
 
-<span class="c1"># load CoT examples for risk questionnaire</span>
-<span class="n">risk_questionnaire_cot</span> <span class="o">=</span> <span class="n">load_resource</span><span class="p">(</span><span class="s2">"risk_questionnaire_cot.json"</span><span class="p">)</span>
-
 <span class="n">results</span> <span class="o">=</span> <span class="n">risk_atlas_nexus</span><span class="o">.</span><span class="n">generate_few_shot_risk_questionnaire_output</span><span class="p">(</span>
     <span class="n">usecase</span><span class="p">,</span>
-    <span class="n">risk_questionnaire_cot</span><span class="p">,</span>
+    <span class="n">risk_questionnaire</span><span class="p">,</span>
     <span class="n">inference_engine</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">])</span>
+<span class="c1"># Display Results</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">question_data</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+    <span class="nb">zip</span><span class="p">(</span><span class="n">risk_questionnaire</span><span class="p">,</span> <span class="n">results</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: "</span>
+        <span class="o">+</span> <span class="n">question_data</span><span class="p">[</span><span class="s2">"question"</span><span class="p">]</span>
+        <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">A: "</span>
+        <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span>
+    <span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-6">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
-# load CoT examples for risk questionnaire
-risk_questionnaire_cot = load_resource("risk_questionnaire_cot.json")
-
 results = risk_atlas_nexus.generate_few_shot_risk_questionnaire_output(
     usecase,
-    risk_questionnaire_cot,
+    risk_questionnaire,
     inference_engine,
 )
 
-for index, result in enumerate(results, start=1):
-    print(f"\n {index}: " + result.prediction["answer"])</div>
+# Display Results
+for index, (question_data, result) in enumerate(
+    zip(risk_questionnaire, results), start=1
+):
+    print(
+        f"\n{index}: "
+        + question_data["question"]
+        + "\nA: "
+        + result.prediction["answer"]
+    )</div>
 </div>
 </div>
 </div>
@@ -6859,35 +6969,36 @@ for index, result in enumerate(results, start=1):
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Inferring with OLLAMA:   0%|          | 0/7 [00:00&lt;?, ?it/s]</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:43&lt;00:00,  6.17s/it]</pre>
+<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:36&lt;00:00,  5.23s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
- 1: Customer service/support
+1: What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other
+A: Customer service/support
 
- 2: Customer Service or Claims Support Departments
+2: In which environment is the system used?
+A: Customer Service or Claims Support Departments
 
- 3: Natural language processing: text generation and summarization
+3: What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning
+A: Natural language processing: text generation and summarization
 
- 4: Customer Support Agents
+4: Who is the intended user of the system?
+A: Customer Support Agents
 
- 5: To enhance customer service by providing support agents with personalized, contextually relevant information and recommendations, enabling them to address customer inquiries and claims more effectively and efficiently.
+5: What is the intended purpose of the system?
+A: To enhance customer service by providing support agents with personalized, contextually relevant information and recommendations, enabling them to address customer inquiries and claims more effectively and efficiently.
 
- 6: Natural Language Generation (NLG): Develop AI models to generate personalized, context-aware responses and summaries for customer interactions. 
+6: What is the application of the system?
+A: Natural Language Generation (NLG): Develop AI models to generate personalized, context-aware responses and summaries for customer interactions. 
 Sentiment Analysis: Use NLP to understand customer sentiment and tailor responses accordingly. 
 Recommendation Engine: Analyze customer data to suggest relevant products, services, or solutions based on individual preferences and needs. 
 Chatbot Integration: Integrate with customer support platforms to provide real-time, automated assistance to support agents.
 
- 7: Claims and Customers
+7: Who is the subject as per the intent?
+A: Claims and Customers
 </pre>
 </div>
 </div>
