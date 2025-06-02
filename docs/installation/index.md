@@ -18,7 +18,7 @@ Risk Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data
 - [vLLM](https://docs.vllm.ai/en/latest/)
 - [RITS](https://rits.fmaas.res.ibm.com) (IBM Internal Only)
 
-#### IBM Watsonx AI (WML) 
+#### IBM Watsonx AI (WML)
 
 When using the WML platform, you need to:
 
@@ -39,7 +39,7 @@ Either 'WML_PROJECT_ID' or 'WML_SPACE_ID' need to be specified.
 pip install -e ".[wml]"
 ```
 
-#### Ollama 
+#### Ollama
 
 When using the Ollama inference, you need to:
 
@@ -53,7 +53,7 @@ pip install -e ".[ollama]"
 
 3. When selecting Ollama engine in Risk Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
 
-#### vLLM 
+#### vLLM
 
 When using the vLLM inference, you need to:
 

@@ -22,6 +22,7 @@ class InferenceEngineType(str, Enum):
 @unique
 class MappingMethod(str, Enum):
     """Enum to contain possible values for risk mapping methods"""
+
     SEMANTIC = "SEMANTIC"
     INFERENCE = "INFERENCE"
 

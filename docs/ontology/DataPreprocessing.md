@@ -22,20 +22,20 @@ URI: [nexus:DataPreprocessing](https://ibm.github.io/risk-atlas-nexus/ontology/D
     click DataPreprocessing href "../DataPreprocessing"
       AiLifecyclePhase <|-- DataPreprocessing
         click AiLifecyclePhase href "../AiLifecyclePhase"
-      
+
       DataPreprocessing : dateCreated
-        
+
       DataPreprocessing : dateModified
-        
+
       DataPreprocessing : description
-        
+
       DataPreprocessing : id
-        
+
       DataPreprocessing : name
-        
+
       DataPreprocessing : url
-        
-      
+
+
 ```
 
 
@@ -148,6 +148,7 @@ attributes:
     owner: DataPreprocessing
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

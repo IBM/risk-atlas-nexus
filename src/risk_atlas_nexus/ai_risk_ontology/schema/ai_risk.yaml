@@ -28,7 +28,7 @@ classes:
   RiskGroup:
     is_a: Entity
     description: A group of AI system related risks that are part of a risk taxonomy.
-    mixins: 
+    mixins:
       - RiskConcept
     slot_usage:
       hasPart:
@@ -45,7 +45,7 @@ classes:
 
   Risk:
     is_a: Entity
-    mixins: 
+    mixins:
       - RiskConcept
     description: The state of uncertainty associated with an AI system, that has the potential to cause harms
     class_uri: airo:Risk
@@ -81,10 +81,10 @@ classes:
     class_uri: airo:RiskConcept
     slots:
       - isDetectedBy
-      
+
   RiskControl:
     is_a: Entity
-    mixins: 
+    mixins:
       - RiskConcept
     class_uri: airo:RiskControl
     description: A measure that maintains and/or modifies risk (and risk concepts)
@@ -112,9 +112,9 @@ classes:
     class_uri: https://w3id.org/dpv/risk#Incident
     description: An event occuring or occured which is a realised or materialised risk.
     attributes:
-      author: 
+      author:
         description: The author or authors of the incident report
-      source_uri: 
+      source_uri:
         description: The uri of the incident
     slots:
       - refersToRisk
@@ -129,7 +129,7 @@ classes:
 
   Impact:
     is_a: Entity
-    mixins: 
+    mixins:
       - RiskConcept
     class_uri: dpv:Impact
 
@@ -160,7 +160,7 @@ classes:
   Severity:
     is_a: Entity
     class_uri: dpv:Severity
-  
+
   Likelihood:
     is_a: Entity
     class_uri: dpv:Likelihood
@@ -236,8 +236,8 @@ slots:
   detectsRiskConcept:
     exact_mappings:
     - airo:detectsRiskConcept
-    description: >- 
-      The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources, 
+    description: >-
+      The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources,
       consequences, and impacts.
     domain: RiskControl
     range: RiskConcept
@@ -272,7 +272,7 @@ slots:
       Indicates impact(s) possible or arising as consequences from specified concept
     domain: RiskConcept
     range: Impact
-    broad_mappings: 
+    broad_mappings:
     - dpv:hasConsequenceOn
   hasConsequence:
     description: >-
@@ -284,11 +284,11 @@ slots:
       Indicates impact(s) possible or arising as consequences from specified concept
     domain: RiskConcept
     range: Impact
-    broad_mappings: 
+    broad_mappings:
     - dpv:hasConsequence
   hasVariant:
     description: >-
-      Indicates an incident that shares the same causative factors, produces similar harms, and involves the same intelligent systems as a known AI incident. 
+      Indicates an incident that shares the same causative factors, produces similar harms, and involves the same intelligent systems as a known AI incident.
     domain: RiskIncident
     range: RiskIncident
   refersToRisk:
@@ -300,5 +300,3 @@ slots:
     range: Risk
     multivalued: true
     inlined: false
-
-

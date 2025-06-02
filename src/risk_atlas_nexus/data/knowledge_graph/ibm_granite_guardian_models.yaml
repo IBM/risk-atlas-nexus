@@ -8,16 +8,16 @@ aimodels:
   dateCreated: 2025-02-26
   isProvidedBy: ibm
   isPartOf: ibm-granite
-  hasDocumentation: 
+  hasDocumentation:
   - granite-guardian-paper
   hasLicense: license-apache-2.0
   hasInputModality:
   - modality-text
   hasOutputModality:
   - modality-text
-  performsTask: 
+  performsTask:
   - text-generation
-  hasRiskControl: 
+  hasRiskControl:
   - gg-harm-detection
   - gg-social-bias-detection
   - gg-profanity-detection
@@ -35,12 +35,12 @@ aimodels:
   name: Granite Guardian 3.2 5B
   description: Granite Guardian 3.2 5B is a thinned down version of Granite Guardian 3.1 8B designed to detect risks in prompts and responses. It can help with risk detection along many key dimensions catalogued in the IBM AI Risk Atlas. To generate this model, the Granite Guardian is iteratively pruned and healed on the same unique data comprising human annotations and synthetic data informed by internal red-teaming used for its training. About 30% of the original parameters were removed allowing for faster inference and lower resource requirements while still providing competitive performance. It outperforms other open-source models in the same space on standard benchmarks.
   url: https://github.com/ibm-granite/granite-guardian
-  hasModelCard: 
+  hasModelCard:
   - https://huggingface.co/ibm-granite/granite-guardian-3.2-5b
   dateCreated: 2025-02-26
   isProvidedBy: ibm
   isPartOf: ibm-granite
-  hasDocumentation: 
+  hasDocumentation:
   - granite-guardian-paper
   hasLicense: license-apache-2.0
   hasInputModality:
@@ -49,7 +49,7 @@ aimodels:
   - modality-text
   performsTask:
   - text-generation
-  hasRiskControl: 
+  hasRiskControl:
   - gg-harm-detection
   - gg-social-bias-detection
   - gg-profanity-detection

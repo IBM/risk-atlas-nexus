@@ -24,12 +24,12 @@ URI: [schema:Statement](http://schema.org/Statement)
     click Fact href "../Fact"
       Fact <|-- AiEvalResult
         click AiEvalResult href "../AiEvalResult"
-      
+
       Fact : evidence
-        
+
       Fact : value
-        
-      
+
+
 ```
 
 

@@ -1,0 +1,62 @@
+{
+    "ibm-risk-atlas": {
+        "cot_examples": [
+            {
+                "Input": "In a medical chatbot, generative AI can be employed to create a triage system that assesses patients' symptoms and provides immediate, contextually relevant advice based on their medical history and current condition. The chatbot can analyze the patient's input, identify potential medical issues, and offer tailored recommendations or insights to the patient or healthcare provider. This can help streamline the triage process, ensuring that patients receive the appropriate level of care and attention, and ultimately improving patient outcomes.",
+                "Output": [
+                    "Improper usage",
+                    "Incomplete advice",
+                    "Lack of model transparency",
+                    "Lack of system transparency",
+                    "Lack of training data transparency",
+                    "Data bias",
+                    "Uncertain data provenance",
+                    "Lack of data transparency",
+                    "Impact on human agency",
+                    "Impact on affected communities",
+                    "Improper retraining",
+                    "Inaccessible training data"
+                ]
+            }
+        ]
+    },
+    "mit-ai-risk-repository": {
+        "cot_examples": [
+            {
+                "Input": "In a medical chatbot, generative AI can be employed to create a triage system that assesses patients' symptoms and provides immediate, contextually relevant advice based on their medical history and current condition. The chatbot can analyze the patient's input, identify potential medical issues, and offer tailored recommendations or insights to the patient or healthcare provider. This can help streamline the triage process, ensuring that patients receive the appropriate level of care and attention, and ultimately improving patient outcomes.",
+                "Output": [
+                    "Loss of human agency and autonomy",
+                    "Lack of transparency or interpretability",
+                    "Overreliance and unsafe use"
+                ]
+            }
+        ]
+    },
+    "nist-ai-rmf": {
+        "cot_examples": [
+            {
+                "Input": "In a medical chatbot, generative AI can be employed to create a triage system that assesses patients' symptoms and provides immediate, contextually relevant advice based on their medical history and current condition. The chatbot can analyze the patient's input, identify potential medical issues, and offer tailored recommendations or insights to the patient or healthcare provider. This can help streamline the triage process, ensuring that patients receive the appropriate level of care and attention, and ultimately improving patient outcomes.",
+                "Output": [
+                    "Harmful Bias or Homogenization",
+                    "Information Security",
+                    "Value Chain and Component Integration"
+                ]
+            }
+        ]
+    },
+    "ibm-granite-guardian": {
+        "cot_examples": [
+            {
+                "Input": "In a medical chatbot, generative AI can be employed to create a triage system that assesses patients' symptoms and provides immediate, contextually relevant advice based on their medical history and current condition. The chatbot can analyze the patient's input, identify potential medical issues, and offer tailored recommendations or insights to the patient or healthcare provider. This can help streamline the triage process, ensuring that patients receive the appropriate level of care and attention, and ultimately improving patient outcomes.",
+                "Output": [
+                    "Harm",
+                    "Social Bias",
+                    "Violence",
+                    "Answer Relevance",
+                    "Context Relevance",
+                    "Function Calling Hallucination"
+                ]
+            }
+        ]
+    }
+}

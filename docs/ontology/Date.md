@@ -45,6 +45,3 @@ URI: [xsd:date](http://www.w3.org/2001/XMLSchema#date)
 | self | xsd:date |
 | native | nexus:date |
 | exact | schema:Date |
-
-
-

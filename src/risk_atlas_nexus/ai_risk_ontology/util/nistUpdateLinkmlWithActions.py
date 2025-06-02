@@ -5,6 +5,7 @@ from linkml_runtime.loaders import yaml_loader
 # Local
 from risk_atlas_nexus.ai_risk_ontology import Action, Container, Risk
 
+
 SCHEMA_DIR = "src/ai_risk_ontology/schema/"
 DATA_DIR = "src/data/knowledge-graph/"
 

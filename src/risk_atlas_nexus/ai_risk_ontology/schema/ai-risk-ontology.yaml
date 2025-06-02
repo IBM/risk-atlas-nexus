@@ -16,7 +16,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
   nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
-  
+
 default_range: string
 default_prefix: nexus
 
@@ -104,6 +104,12 @@ classes:
         description: A list of AI evaluation methods
         multivalued: true
         range: AiEval
+        inlined: true
+        inlined_as_list: true
+      benchmarkmetadatacards:
+        description: A list of AI evaluation benchmark metadata cards
+        multivalued: true
+        range: BenchmarkMetadataCard
         inlined: true
         inlined_as_list: true
       aimodelfamilies:

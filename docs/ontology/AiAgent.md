@@ -22,85 +22,85 @@ URI: [nexus:AiAgent](https://ibm.github.io/risk-atlas-nexus/ontology/AiAgent)
     click AiAgent href "../AiAgent"
       AiSystem <|-- AiAgent
         click AiSystem href "../AiSystem"
-      
+
       AiAgent : dateCreated
-        
+
       AiAgent : dateModified
-        
+
       AiAgent : description
-        
+
       AiAgent : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     AiAgent --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       AiAgent : hasEuAiSystemType
-        
-          
-    
-    
+
+
+
+
     AiAgent --> "0..1" AiSystemType : hasEuAiSystemType
     click AiSystemType href "../AiSystemType"
 
-        
+
       AiAgent : hasEuRiskCategory
-        
-          
-    
-    
+
+
+
+
     AiAgent --> "0..1" EuAiRiskCategory : hasEuRiskCategory
     click EuAiRiskCategory href "../EuAiRiskCategory"
 
-        
+
       AiAgent : hasLicense
-        
-          
-    
-    
+
+
+
+
     AiAgent --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       AiAgent : hasModelCard
-        
+
       AiAgent : id
-        
+
       AiAgent : isProvidedBy
-        
-          
-    
-    
+
+
+
+
     AiAgent --> "0..1" AiProvider : isProvidedBy
     click AiProvider href "../AiProvider"
 
-        
+
       AiAgent : name
-        
+
       AiAgent : performsTask
-        
-          
-    
-    
+
+
+
+
     AiAgent --> "*" AiTask : performsTask
     click AiTask href "../AiTask"
 
-        
+
       AiAgent : producer
-        
-          
-    
-    
+
+
+
+
     AiAgent --> "0..1" Organization : producer
     click Organization href "../Organization"
 
-        
+
       AiAgent : url
-        
-      
+
+
 ```
 
 
@@ -266,6 +266,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -281,8 +282,10 @@ attributes:
     owner: AiAgent
     domain_of:
     - Dataset
+    - Documentation
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   performsTask:
@@ -333,6 +336,7 @@ attributes:
     owner: AiAgent
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

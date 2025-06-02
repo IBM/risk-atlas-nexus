@@ -17,20 +17,20 @@ URI: [dpv:Likelihood](https://w3c.github.io/dpv/2.1/dpv/#Likelihood)
     click Likelihood href "../Likelihood"
       Entity <|-- Likelihood
         click Entity href "../Entity"
-      
+
       Likelihood : dateCreated
-        
+
       Likelihood : dateModified
-        
+
       Likelihood : description
-        
+
       Likelihood : id
-        
+
       Likelihood : name
-        
+
       Likelihood : url
-        
-      
+
+
 ```
 
 
@@ -146,6 +146,7 @@ attributes:
     owner: Likelihood
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

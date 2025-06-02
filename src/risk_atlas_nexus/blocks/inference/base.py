@@ -1,18 +1,19 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Union
 
-from jinja2 import Template
+import pydantic
+
 from risk_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    OllamaInferenceEngineParams,
+    OpenAIChatCompletionMessageParam,
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
-    WMLInferenceEngineParams,
-    OllamaInferenceEngineParams,
     VLLMInferenceEngineParams,
-    OpenAIChatCompletionMessageParam,
+    WMLInferenceEngineParams,
 )
 from risk_atlas_nexus.toolkit.logging import configure_logger
-import pydantic
+
 
 logger = configure_logger(__name__)
 
@@ -58,12 +59,6 @@ class InferenceEngine(ABC):
 
         return parameters
 
-    def prepare_prompt(self, prompt_template: str, usecase: str, **kwargs) -> List[str]:
-        return Template(prompt_template).render(
-            usecase=usecase,
-            **kwargs,
-        )
-
     def _to_openai_format(self, prompt: Union[OpenAIChatCompletionMessageParam, str]):
         if isinstance(prompt, str):
             return [{"role": "user", "content": prompt}]
@@ -104,6 +99,7 @@ class InferenceEngine(ABC):
             List[OpenAIChatCompletionMessageParam],
             List[str],
         ],
+        tools=None,
         response_format=None,
         postprocessors=None,
         verbose=True,

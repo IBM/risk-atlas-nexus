@@ -44,6 +44,3 @@ URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
 | self | xsd:double |
 | native | nexus:double |
 | close | schema:Float |
-
-
-

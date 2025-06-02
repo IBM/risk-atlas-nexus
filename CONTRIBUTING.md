@@ -10,7 +10,7 @@ We are pleased that you would like to contribute to Risk Atlas Nexus. We welcome
 Please make sure to include any potentially useful information in the issue, so we can pinpoint the issue faster without going back and forth.
 
 - What SHA of Risk atlas nexus are you running? If this is not the latest SHA on the main branch, please try if the problem persists with the latest version.
-- Python versions 
+- Python versions
 - TBC
 
 ## Contributing a change
@@ -23,8 +23,18 @@ feat: this is my commit message
 
 Signed-off-by: Random J Developer <random@developer.example.org>
 ```
-Formatter: run the black formatter on python changes
-`python3.11 -m black .`
+
+
+Coding Style Guidelines
+We are using tools to enforce code style:
+- iSort, to sort imports
+- Black, to format code
+
+We run a series of checks on the codebase on every commit using pre-commit. To install the hooks, run:
+`pre-commit install`
+
+To run the checks on-demand, run:
+`pre-commit run --all-files`
 
 ## Contributing to documentation
 `python3.11 -m pip install -e ".[docs]"`

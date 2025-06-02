@@ -14,6 +14,7 @@ from risk_atlas_nexus.ai_risk_ontology import (
     RiskTaxonomy,
 )
 
+
 MO_HOST = "https://usage-gov-advisor.bx.cloud9.ibm.com"
 MO_API_PREFIX = "/v1"
 DATA_DIR = "src/risk_atlas_nexus/data/knowledge_graph/"

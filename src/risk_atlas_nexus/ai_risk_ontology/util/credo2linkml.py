@@ -1,6 +1,6 @@
 # Standard Library
-import csv
 import ast
+import csv
 
 # Third Party
 from linkml_runtime.dumpers import YAMLDumper
@@ -17,7 +17,6 @@ from risk_atlas_nexus.ai_risk_ontology import (
 )
 
 
-
 def create_container_object() -> Container:
     # Create risk taxonomy paper from Credo
     documents = [
@@ -30,10 +29,8 @@ def create_container_object() -> Container:
                 "dateCreated": "2025-03-07",
                 "dateModified": "2025-03-07",
             }
-
         )
     ]
-    
 
     # Create risk taxonomy
     taxonomies = [
@@ -52,13 +49,12 @@ def create_container_object() -> Container:
 
     # Create risk groups
     risks = get_risks()
-    risk_group_names = sorted(
-        list(set([risk["Risk Type"] for risk in risks]))
-    )
+    risk_group_names = sorted(list(set([risk["Risk Type"] for risk in risks])))
     riskgroups = [
         RiskGroup(
             **{
-                "id": "credo-rg-" + risk_group.lower().replace(" ", "-").replace("&", "and"),
+                "id": "credo-rg-"
+                + risk_group.lower().replace(" ", "-").replace("&", "and"),
                 "name": risk_group,
                 "isDefinedByTaxonomy": "credo-ucf",
             }
@@ -74,7 +70,10 @@ def create_container_object() -> Container:
                 "name": risk["Risk Scenario"],
                 "description": risk["Description"],
                 "isPartOf": "credo-rg-" + risk["Risk Type"].lower().replace(" ", "-"),
-                "hasRelatedAction":["credo-act-" + c.lower().replace(" ", "-") for c in ast.literal_eval(risk['Control ID'])],
+                "hasRelatedAction": [
+                    "credo-act-" + c.lower().replace(" ", "-")
+                    for c in ast.literal_eval(risk["Control ID"])
+                ],
                 "isDefinedByTaxonomy": "credo-ucf",
             }
         )
@@ -83,18 +82,23 @@ def create_container_object() -> Container:
 
     # Create risk actions
     actions = get_risk_actions()
-    
+
     acts = [
-        Action( **{
-            "id": "credo-ract-" + action["Control ID"].lower().replace(" ", "-"),
-            "name": action["Control Label"],
-            "description": action["Description"],
-            "dateCreated": "2025-03-07",
-            "dateModified": "2025-03-07",
-            "hasDocumentation": ["credo-doc"],
-            "hasRelatedRisk": ["credo-" + r.lower().replace(" ", "-") for r in ast.literal_eval(action['RISK ID'])],
-            "isDefinedByTaxonomy": "credo-ucf",
-        })
+        Action(
+            **{
+                "id": "credo-act-" + action["Control ID"].lower().replace(" ", "-"),
+                "name": action["Control Label"],
+                "description": action["Description"],
+                "dateCreated": "2025-03-07",
+                "dateModified": "2025-03-07",
+                "hasDocumentation": ["credo-doc"],
+                "hasRelatedRisk": [
+                    "credo-" + r.lower().replace(" ", "-")
+                    for r in ast.literal_eval(action["RISK ID"])
+                ],
+                "isDefinedByTaxonomy": "credo-ucf",
+            }
+        )
         for action in actions
     ]
 
@@ -110,12 +114,19 @@ def create_container_object() -> Container:
 
 
 def get_risks() -> list[dict]:
-    with open("resources/credo-risks-with-ctl.csv", encoding="utf-8",)  as csvfile:
+    with open(
+        "resources/credo-risks-with-ctl.csv",
+        encoding="utf-8",
+    ) as csvfile:
         importer = csv.DictReader(csvfile)
         return [row for row in importer]
 
+
 def get_risk_actions() -> list[dict]:
-    with open("resources/credo-ctl-with-risk.csv", encoding="utf-8",)  as csvfile:
+    with open(
+        "resources/credo-ctl-with-risk.csv",
+        encoding="utf-8",
+    ) as csvfile:
         importer = csv.DictReader(csvfile)
         return [row for row in importer]
 
