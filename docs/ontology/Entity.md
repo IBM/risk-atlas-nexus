@@ -58,6 +58,8 @@ URI: [schema:Thing](http://schema.org/Thing)
         click AiEval href "../AiEval"
       Entity <|-- AiEvalResult
         click AiEvalResult href "../AiEvalResult"
+      Entity <|-- BenchmarkMetadataCard
+        click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
       Entity <|-- BaseAi
         click BaseAi href "../BaseAi"
       Entity <|-- LargeLanguageModelFamily
@@ -68,20 +70,20 @@ URI: [schema:Thing](http://schema.org/Thing)
         click AiLifecyclePhase href "../AiLifecyclePhase"
       Entity <|-- Modality
         click Modality href "../Modality"
-      
+
       Entity : dateCreated
-        
+
       Entity : dateModified
-        
+
       Entity : description
-        
+
       Entity : id
-        
+
       Entity : name
-        
+
       Entity : url
-        
-      
+
+
 ```
 
 
@@ -108,6 +110,7 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [Consequence](Consequence.md)
     * [AiEval](AiEval.md)
     * [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
+    * [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
     * [BaseAi](BaseAi.md)
     * [LargeLanguageModelFamily](LargeLanguageModelFamily.md)
     * [AiTask](AiTask.md)
@@ -221,6 +224,7 @@ attributes:
     owner: Entity
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

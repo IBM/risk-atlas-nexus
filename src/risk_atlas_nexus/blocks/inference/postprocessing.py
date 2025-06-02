@@ -1,8 +1,10 @@
 import json
 import re
-from risk_atlas_nexus.toolkit.logging import configure_logger
 from typing import Any, List, Union
+
 from risk_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
+from risk_atlas_nexus.toolkit.logging import configure_logger
+
 
 logger = configure_logger(__name__)
 

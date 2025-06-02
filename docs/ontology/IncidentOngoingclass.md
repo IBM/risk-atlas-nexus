@@ -17,20 +17,20 @@ URI: [dpv:IncidentOngoingclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentOngoi
     click IncidentOngoingclass href "../IncidentOngoingclass"
       IncidentStatus <|-- IncidentOngoingclass
         click IncidentStatus href "../IncidentStatus"
-      
+
       IncidentOngoingclass : dateCreated
-        
+
       IncidentOngoingclass : dateModified
-        
+
       IncidentOngoingclass : description
-        
+
       IncidentOngoingclass : id
-        
+
       IncidentOngoingclass : name
-        
+
       IncidentOngoingclass : url
-        
-      
+
+
 ```
 
 
@@ -140,6 +140,7 @@ attributes:
     owner: IncidentOngoingclass
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

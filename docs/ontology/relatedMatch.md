@@ -23,8 +23,8 @@ URI: [skos:relatedMatch](http://www.w3.org/2004/02/skos/core/relatedMatch)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
 | [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
+| [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
 
 
 

@@ -22,29 +22,29 @@ URI: [nexus:LargeLanguageModelFamily](https://ibm.github.io/risk-atlas-nexus/ont
     click LargeLanguageModelFamily href "../LargeLanguageModelFamily"
       Entity <|-- LargeLanguageModelFamily
         click Entity href "../Entity"
-      
+
       LargeLanguageModelFamily : dateCreated
-        
+
       LargeLanguageModelFamily : dateModified
-        
+
       LargeLanguageModelFamily : description
-        
+
       LargeLanguageModelFamily : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModelFamily --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       LargeLanguageModelFamily : id
-        
+
       LargeLanguageModelFamily : name
-        
+
       LargeLanguageModelFamily : url
-        
-      
+
+
 ```
 
 
@@ -160,6 +160,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -189,6 +190,7 @@ attributes:
     owner: LargeLanguageModelFamily
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

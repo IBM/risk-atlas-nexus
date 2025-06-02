@@ -24,27 +24,27 @@ URI: [airo:AILifecyclePhase](https://w3id.org/airo#AILifecyclePhase)
     click AiLifecyclePhase href "../AiLifecyclePhase"
       Entity <|-- AiLifecyclePhase
         click Entity href "../Entity"
-      
+
 
       AiLifecyclePhase <|-- DataPreprocessing
         click DataPreprocessing href "../DataPreprocessing"
       AiLifecyclePhase <|-- AiModelValidation
         click AiModelValidation href "../AiModelValidation"
-      
-      
+
+
       AiLifecyclePhase : dateCreated
-        
+
       AiLifecyclePhase : dateModified
-        
+
       AiLifecyclePhase : description
-        
+
       AiLifecyclePhase : id
-        
+
       AiLifecyclePhase : name
-        
+
       AiLifecyclePhase : url
-        
-      
+
+
 ```
 
 
@@ -161,6 +161,7 @@ attributes:
     owner: AiLifecyclePhase
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

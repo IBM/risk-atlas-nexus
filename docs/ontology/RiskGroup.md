@@ -24,92 +24,92 @@ URI: [nexus:RiskGroup](https://ibm.github.io/risk-atlas-nexus/ontology/RiskGroup
         click RiskConcept href "../RiskConcept"
       Entity <|-- RiskGroup
         click Entity href "../Entity"
-      
+
       RiskGroup : broadMatch
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "*" Any : broadMatch
     click Any href "../Any"
 
-        
+
       RiskGroup : closeMatch
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "*" Any : closeMatch
     click Any href "../Any"
 
-        
+
       RiskGroup : dateCreated
-        
+
       RiskGroup : dateModified
-        
+
       RiskGroup : description
-        
+
       RiskGroup : exactMatch
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "*" Any : exactMatch
     click Any href "../Any"
 
-        
+
       RiskGroup : hasPart
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "*" Risk : hasPart
     click Risk href "../Risk"
 
-        
+
       RiskGroup : id
-        
+
       RiskGroup : isDefinedByTaxonomy
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
     click RiskTaxonomy href "../RiskTaxonomy"
 
-        
+
       RiskGroup : isDetectedBy
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "*" RiskControl : isDetectedBy
     click RiskControl href "../RiskControl"
 
-        
+
       RiskGroup : name
-        
+
       RiskGroup : narrowMatch
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "*" Any : narrowMatch
     click Any href "../Any"
 
-        
+
       RiskGroup : relatedMatch
-        
-          
-    
-    
+
+
+
+
     RiskGroup --> "*" Any : relatedMatch
     click Any href "../Any"
 
-        
+
       RiskGroup : url
-        
-      
+
+
 ```
 
 
@@ -403,6 +403,7 @@ attributes:
     owner: RiskGroup
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

@@ -22,20 +22,20 @@ URI: [airo:Modality](https://w3id.org/airo#Modality)
     click Modality href "../Modality"
       Entity <|-- Modality
         click Entity href "../Entity"
-      
+
       Modality : dateCreated
-        
+
       Modality : dateModified
-        
+
       Modality : description
-        
+
       Modality : id
-        
+
       Modality : name
-        
+
       Modality : url
-        
-      
+
+
 ```
 
 
@@ -157,6 +157,7 @@ attributes:
     owner: Modality
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

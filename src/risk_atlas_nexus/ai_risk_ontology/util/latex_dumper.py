@@ -1,9 +1,9 @@
 from typing import Union
-from pydantic import BaseModel
 
 from linkml_runtime.dumpers.dumper_root import Dumper
 from linkml_runtime.utils.context_utils import CONTEXTS_PARAM_TYPE
 from linkml_runtime.utils.yamlutils import YAMLRoot
+from pydantic import BaseModel
 
 
 class LatexDumper(Dumper):
@@ -64,19 +64,33 @@ class LatexDumper(Dumper):
         Returns:
             str
         """
-        tex = ["\\documentclass[a4paper,12pt]{article}\n", "\\usepackage{xcolor}\n",
-               "\\usepackage[skins]{tcolorbox}%\n", "\\usepackage{tcolorbox}\n", "\\usepackage{hyperref}\n",
-               "\\newtcolorbox[auto counter, number within=section]{definitionbox}[2][]{%\n", "colframe=black!50,\n",
-               "colback=black!5,\n", "coltitle=white,\n", "fonttitle=\\bfseries,\n", "title={#2},\n",
-               "sharp corners=south,\n", "enhanced,\n", "before upper={\\noindent},\n", "}\n", "\\begin{document}\n",
-               "\\section{IBM AI Risk Atlas}\n",
-               "Explore this atlas to understand some of the risks of working with generative AI, foundation models, "
-               "and machine learning models. Risks are categorized with one of these tags:\n",
-               "\\begin{itemize}\n",
-               "\\item Traditional AI risks (applies to traditional models as well as generative AI)\n",
-               "\\item Risks amplified by generative AI (might also apply to traditional models)\n",
-               "\\item New risks specifically associated with generative AI\n", "\\end{itemize}\n",
-               "\\subsection*{AI Risk Atlas Definitions}\n"]
+        tex = [
+            "\\documentclass[a4paper,12pt]{article}\n",
+            "\\usepackage{xcolor}\n",
+            "\\usepackage[skins]{tcolorbox}%\n",
+            "\\usepackage{tcolorbox}\n",
+            "\\usepackage{hyperref}\n",
+            "\\newtcolorbox[auto counter, number within=section]{definitionbox}[2][]{%\n",
+            "colframe=black!50,\n",
+            "colback=black!5,\n",
+            "coltitle=white,\n",
+            "fonttitle=\\bfseries,\n",
+            "title={#2},\n",
+            "sharp corners=south,\n",
+            "enhanced,\n",
+            "before upper={\\noindent},\n",
+            "}\n",
+            "\\begin{document}\n",
+            "\\section{IBM AI Risk Atlas}\n",
+            "Explore this atlas to understand some of the risks of working with generative AI, foundation models, "
+            "and machine learning models. Risks are categorized with one of these tags:\n",
+            "\\begin{itemize}\n",
+            "\\item Traditional AI risks (applies to traditional models as well as generative AI)\n",
+            "\\item Risks amplified by generative AI (might also apply to traditional models)\n",
+            "\\item New risks specifically associated with generative AI\n",
+            "\\end{itemize}\n",
+            "\\subsection*{AI Risk Atlas Definitions}\n",
+        ]
 
         for risk in element_dict["risks"]:
             tex.append("\\begin{definitionbox}{" + risk["name"] + "}\n")

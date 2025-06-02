@@ -24,7 +24,7 @@ Closes: IBM/risk-atlas-nexus#XYZ
 
 Signed-off-by: Your Name <email@ie.ibm.com>
 ```
-* The reviewer should copy the above text into the extended description field when performing the `squash and merge` from this page. 
+* The reviewer should copy the above text into the extended description field when performing the `squash and merge` from this page.
 -->
 
 ## Impacted Areas in Application
@@ -40,7 +40,7 @@ Signed-off-by: Your Name <email@ie.ibm.com>
 
 ## Any special notes for your reviewer?
 
---- 
+---
 
 ## Checklist
 - [ ] Automated tests exist

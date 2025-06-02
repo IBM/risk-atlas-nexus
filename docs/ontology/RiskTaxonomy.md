@@ -22,40 +22,40 @@ URI: [nexus:RiskTaxonomy](https://ibm.github.io/risk-atlas-nexus/ontology/RiskTa
     click RiskTaxonomy href "../RiskTaxonomy"
       Entity <|-- RiskTaxonomy
         click Entity href "../Entity"
-      
+
       RiskTaxonomy : dateCreated
-        
+
       RiskTaxonomy : dateModified
-        
+
       RiskTaxonomy : description
-        
+
       RiskTaxonomy : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     RiskTaxonomy --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       RiskTaxonomy : hasLicense
-        
-          
-    
-    
+
+
+
+
     RiskTaxonomy --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       RiskTaxonomy : id
-        
+
       RiskTaxonomy : name
-        
+
       RiskTaxonomy : url
-        
+
       RiskTaxonomy : version
-        
-      
+
+
 ```
 
 
@@ -185,6 +185,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -200,8 +201,10 @@ attributes:
     owner: RiskTaxonomy
     domain_of:
     - Dataset
+    - Documentation
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   id:
@@ -228,6 +231,7 @@ attributes:
     owner: RiskTaxonomy
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

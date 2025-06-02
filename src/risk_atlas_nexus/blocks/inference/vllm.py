@@ -6,15 +6,15 @@ from dotenv import load_dotenv
 from risk_atlas_nexus.blocks.inference.base import InferenceEngine
 from risk_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    OpenAIChatCompletionMessageParam,
     TextGenerationInferenceOutput,
     VLLMInferenceEngineParams,
-    OpenAIChatCompletionMessageParam,
 )
-
 from risk_atlas_nexus.blocks.inference.postprocessing import postprocess
 from risk_atlas_nexus.metadata_base import InferenceEngineType
 from risk_atlas_nexus.toolkit.job_utils import run_parallel
 from risk_atlas_nexus.toolkit.logging import configure_logger
+
 
 logger = configure_logger(__name__)
 

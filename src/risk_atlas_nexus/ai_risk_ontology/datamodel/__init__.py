@@ -1,5 +1,7 @@
 from pathlib import Path
+
 from .ai_risk_ontology import *
+
 
 THIS_PATH = Path(__file__).parent
 

@@ -24,74 +24,74 @@ URI: [nexus:BaseAi](https://ibm.github.io/risk-atlas-nexus/ontology/BaseAi)
     click BaseAi href "../BaseAi"
       Entity <|-- BaseAi
         click Entity href "../Entity"
-      
+
 
       BaseAi <|-- AiSystem
         click AiSystem href "../AiSystem"
       BaseAi <|-- AiModel
         click AiModel href "../AiModel"
-      
-      
+
+
       BaseAi : dateCreated
-        
+
       BaseAi : dateModified
-        
+
       BaseAi : description
-        
+
       BaseAi : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     BaseAi --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       BaseAi : hasLicense
-        
-          
-    
-    
+
+
+
+
     BaseAi --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       BaseAi : hasModelCard
-        
+
       BaseAi : id
-        
+
       BaseAi : isProvidedBy
-        
-          
-    
-    
+
+
+
+
     BaseAi --> "0..1" AiProvider : isProvidedBy
     click AiProvider href "../AiProvider"
 
-        
+
       BaseAi : name
-        
+
       BaseAi : performsTask
-        
-          
-    
-    
+
+
+
+
     BaseAi --> "*" AiTask : performsTask
     click AiTask href "../AiTask"
 
-        
+
       BaseAi : producer
-        
-          
-    
-    
+
+
+
+
     BaseAi --> "0..1" Organization : producer
     click Organization href "../Organization"
 
-        
+
       BaseAi : url
-        
-      
+
+
 ```
 
 
@@ -230,6 +230,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -245,8 +246,10 @@ attributes:
     owner: BaseAi
     domain_of:
     - Dataset
+    - Documentation
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   performsTask:
@@ -297,6 +300,7 @@ attributes:
     owner: BaseAi
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

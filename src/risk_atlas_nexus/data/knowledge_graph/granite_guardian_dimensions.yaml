@@ -125,7 +125,7 @@ risks:
   - granite-guardian-harm
 - id: granite-harm-engagement
   name: Harm Engagement
-  description: An engagement or endorsement with any requests that are harmful or unethical. This includes scenarios where the user or assistant messages reflects an engagement with any requests that are harmful, e.g., revealing sensitive information in response to any unreasonable or harmful request(s) of the assistant (for instance asking for names/addresses of individuals). Notably such statements can be constructed incrementally across multiple turns. 
+  description: An engagement or endorsement with any requests that are harmful or unethical. This includes scenarios where the user or assistant messages reflects an engagement with any requests that are harmful, e.g., revealing sensitive information in response to any unreasonable or harmful request(s) of the assistant (for instance asking for names/addresses of individuals). Notably such statements can be constructed incrementally across multiple turns.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2025-02-26
   dateModified: 2025-02-26
@@ -189,14 +189,14 @@ risks:
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
   isDefinedByTaxonomy: ibm-granite-guardian
-  isDetectedBy: 
+  isDetectedBy:
   - gg-function-call-detection
   isPartOf: granite-guardian-agentic-safety-group
   tag: function-call
   relatedMatch:
   - atlas-hallucination
 - id: atlas-harmful-output
-  relatedMatch: 
+  relatedMatch:
   - granite-guardian-harm
   - granite-sexual-content
   - granite-unethical-behavior
@@ -210,7 +210,7 @@ risks:
   relatedMatch:
   - granite-profanity
 - id: atlas-jailbreaking
-  relatedMatch: 
+  relatedMatch:
   - granite-jailbreak
 - id: atlas-hallucination
   relatedMatch:
@@ -221,12 +221,12 @@ risks:
 riskcontrols:
 - id: gg-harm-detection
   name: Harm detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-guardian-harm
-  isDefinedByTaxonomy: ibm-granite-guardian 
+  isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-social-bias-detection
   name: Social Bias detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-social-bias
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-profanity-detection
@@ -241,7 +241,7 @@ riskcontrols:
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-unethical-behavior-detection
   name: Unethical Behavior detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-unethical-behavior
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-violence-detection
@@ -251,17 +251,17 @@ riskcontrols:
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-jailbreak-detection
   name: Jailbreaking detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-jailbreak
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-harm-engagement-detection
   name: Harm engagement detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-harm-engagement
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-evasiveness-detection
   name: Evasiveness detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-evasiveness
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-groundedness-detection
@@ -271,16 +271,16 @@ riskcontrols:
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-relevance-detection
   name: Context Relevance detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-relevance
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-answer-relevance-detection
   name: Answer Relevance detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-answer-relevance
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-function-call-detection
   name: Function Calling Hallucination detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-function-call
   isDefinedByTaxonomy: ibm-granite-guardian

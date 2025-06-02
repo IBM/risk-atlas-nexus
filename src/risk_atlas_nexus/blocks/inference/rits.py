@@ -1,16 +1,19 @@
 import os
 from typing import Any, Dict, List, Union
+
 from dotenv import load_dotenv
+
 from risk_atlas_nexus.blocks.inference.base import InferenceEngine
 from risk_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    OpenAIChatCompletionMessageParam,
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
-    OpenAIChatCompletionMessageParam,
 )
 from risk_atlas_nexus.blocks.inference.postprocessing import postprocess
 from risk_atlas_nexus.metadata_base import InferenceEngineType
 from risk_atlas_nexus.toolkit.job_utils import run_parallel
+
 
 # load .env file to environment
 load_dotenv()

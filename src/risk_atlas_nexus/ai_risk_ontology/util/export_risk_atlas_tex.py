@@ -2,15 +2,17 @@
 # in src/risk_atlas_nexus/data/knowledge_graph
 
 import os
+
 from risk_atlas_nexus import RiskAtlasNexus
-from risk_atlas_nexus.ai_risk_ontology.util.latex_dumper import LatexDumper
-from risk_atlas_nexus.toolkit.logging import configure_logger
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Container,
     Documentation,
     RiskGroup,
     RiskTaxonomy,
 )
+from risk_atlas_nexus.ai_risk_ontology.util.latex_dumper import LatexDumper
+from risk_atlas_nexus.toolkit.logging import configure_logger
+
 
 logger = configure_logger(__name__)
 
@@ -25,13 +27,13 @@ def create_container_object() -> Container:
                 "id": "10a99803d8afd656",
                 "name": "Foundation models: Opportunities, risks and mitigations",
                 "description": "In this document we: Explore the benefits of foundation models, including their "
-                               "capability to perform challenging tasks, potential to speed up the adoption of AI, "
-                               "ability to increase productivity and the cost benefits they provide. Discuss the three "
-                               "categories of risk, including risks known from earlier forms of AI, known risks "
-                               "amplified by foundation models and emerging risks intrinsic to the generative "
-                               "capabilities of foundation models. Cover the principles, pillars and governance that "
-                               "form the foundation of IBM’s AI ethics initiatives and suggest guardrails for risk "
-                               "mitigation.",
+                "capability to perform challenging tasks, potential to speed up the adoption of AI, "
+                "ability to increase productivity and the cost benefits they provide. Discuss the three "
+                "categories of risk, including risks known from earlier forms of AI, known risks "
+                "amplified by foundation models and emerging risks intrinsic to the generative "
+                "capabilities of foundation models. Cover the principles, pillars and governance that "
+                "form the foundation of IBM’s AI ethics initiatives and suggest guardrails for risk "
+                "mitigation.",
                 "url": "https://www.ibm.com/downloads/documents/us-en/10a99803d8afd656",
             }
         )
@@ -44,7 +46,7 @@ def create_container_object() -> Container:
                 "id": "ibm-risk-atlas",
                 "name": "IBM AI Risk Atlas",
                 "description": "Explore this atlas to understand some of the risks of working with generative AI, "
-                               "foundation models, and machine learning models.",
+                "foundation models, and machine learning models.",
                 "url": "https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas",
                 "hasDocumentation": ["10a99803d8afd656"],
             }

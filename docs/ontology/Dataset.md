@@ -22,47 +22,47 @@ URI: [schema:Dataset](http://schema.org/Dataset)
     click Dataset href "../Dataset"
       Entity <|-- Dataset
         click Entity href "../Entity"
-      
+
       Dataset : dateCreated
-        
+
       Dataset : dateModified
-        
+
       Dataset : description
-        
+
       Dataset : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     Dataset --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       Dataset : hasLicense
-        
-          
-    
-    
+
+
+
+
     Dataset --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       Dataset : id
-        
+
       Dataset : name
-        
+
       Dataset : provider
-        
-          
-    
-    
+
+
+
+
     Dataset --> "0..1" Organization : provider
     click Organization href "../Organization"
 
-        
+
       Dataset : url
-        
-      
+
+
 ```
 
 
@@ -177,8 +177,10 @@ attributes:
     owner: Dataset
     domain_of:
     - Dataset
+    - Documentation
     - RiskTaxonomy
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     range: License
   hasDocumentation:
@@ -194,6 +196,7 @@ attributes:
     - RiskTaxonomy
     - Action
     - AiEval
+    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
     range: Documentation
@@ -234,6 +237,7 @@ attributes:
     owner: Dataset
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

@@ -44,6 +44,3 @@ URI: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
 | self | xsd:integer |
 | native | nexus:integer |
 | exact | schema:Integer |
-
-
-

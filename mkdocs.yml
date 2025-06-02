@@ -41,12 +41,12 @@ theme:
     - announce.dismiss
     - navigation.footer
     - navigation.tabs
-    - navigation.indexes  
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.path
-    - navigation.sections 
+    - navigation.sections
     - navigation.top
     - navigation.tracking
     - search.suggest
@@ -70,7 +70,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 plugins:
   - awesome-nav:
-      filename: .nav.yml 
+      filename: .nav.yml
   - mkdocstrings:
       handlers:
         python:

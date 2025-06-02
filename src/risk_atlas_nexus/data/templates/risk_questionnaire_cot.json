@@ -1,0 +1,202 @@
+[
+    {
+        "question": "What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other",
+        "cot_examples": [
+            {
+                "intent": "Optimize supply chain management in Investment banks",
+                "answer": "Strategy",
+                "explanation": "Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks."
+            },
+            {
+                "intent": "Ability to create dialog flows and integrations from natural language instructions.",
+                "answer": "Customer service/support",
+                "explanation": "Since the task relates to human conversations or generating human converstations or support."
+            },
+            {
+                "intent": "Check if a document has grammatical mistakes.",
+                "answer": "Writing assitant",
+                "explanation": "Since this helps in improving the quality of text. It is not customer service since this on on the quality of text rather than helping in human conversations."
+            },
+            {
+                "intent": "Optimize supply chain management in Investment banks",
+                "answer": "Strategy",
+                "explanation": "Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks."
+            },
+            {
+                "intent": "In the context of drug repurposing, generative AI can be employed to analyze vast databases of existing drugs and their clinical trials data. By identifying patterns and similarities, the AI can suggest potential new therapeutic indications for existing drugs, based on the chemical structure and pharmacological properties of the APIs. This process can help streamline the drug development pipeline, as it would reduce the need for time-consuming and expensive clinical trials for new indications. For instance, a drug like Atorvastatin, which is currently used to lower cholesterol, could be repurposed for the treatment of diabetic nephropathy, a kidney disease, based on the AI's analysis of similar drugs and their clinical data. This would not only save resources but also provide new treatment options for patients suffering from this debilitating condition. ",
+                "answer": "Healthcare and strategy",
+                "explanation": "Since the task is related to healthcare and drug repurposing, which involves analyzing data related to drugs and their clinical trials, this falls under the healthcare domain. It also involves Strategy it talks about using patterns to create new treatment options."
+            }
+        ]
+    },
+    {
+        "question": "In which environment is the system used?",
+        "cot_examples": [
+            {
+                "intent": "Find patterns in healthcare insurance claims",
+                "answer": "Insurance Claims Processing or Risk Management or Data Analytics",
+                "explanation": "1. Insurance Claims Processing: The system might be used by an insurance company's claims processing department to analyze and identify patterns in healthcare insurance claims. 2. Risk Management: The system could be applied in risk management teams to detect potential risks and opportunities for cost savings. 3. Data Analytics: The system might be used by a data analytics team within the healthcare insurance company to identify patterns in claims data, helping to inform business decisions."
+            },
+            {
+                "intent": "Generative AI can optimize waste management processes. By analyzing historical data on waste generation, recycling rates, and resource utilization, generative models can generate optimized waste collection routes, recommend recycling strategies, and predict waste generation patterns. This helps in reducing waste generation, optimizing resource allocation, and promoting circular economy practices.",
+                "answer": "Municipal Waste Management or Private Waste Management departments",
+                "explanation": "Waste management companies need to efficiently collect and process waste while minimizing costs and environmental impact. By using generative AI to analyze historical data on waste generation, recycling rates, and resource utilization, they can optimize collection routes, reduce fuel consumption, and lower labor costs."
+            },
+            {
+                "intent": "Summarize and analyze historic data, industry patterns, create multi-layered models that identify changes as occur, increase supply chain efficiency and optimize inventory levels",
+                "answer": "Distribution Centers or Retail Chains",
+                "explanation": "1. Distribution Centers: Companies that manage large-scale distribution centers could utilize this system to optimize inventory levels and improve supply chain efficiency. 2. Retail Chains: Large retail chains with complex supply chains might benefit from using this application to summarize and analyze data, identify trends, and make informed decisions."
+            },
+            {
+                "intent": "optimize supply chain management in Investment banks",
+                "answer": "Treasury Departments or Asset Management Divisions or Private Banking Units",
+                "explanation": "1. Treasury Departments: The system might be used by investment banks' treasury departments to manage cash flows, optimize inventory levels, and streamline procurement processes. 2. Asset Management Divisions: Investment banks with asset management divisions could utilize this application to optimize supply chain management for their fund operations. 3. Private Banking Units: Private banking units within investment banks might benefit from using this system to manage wealth management services and optimize supply chain operations."
+            },
+            {
+                "intent": "In the context of drug repurposing, generative AI can be employed to analyze vast databases of existing drugs and their clinical trials data. By identifying patterns and similarities, the AI can suggest potential new therapeutic indications for existing drugs, based on the chemical structure and pharmacological properties of the APIs. This process can help streamline the drug development pipeline, as it would reduce the need for time-consuming and expensive clinical trials for new indications. For instance, a drug like Atorvastatin, which is currently used to lower cholesterol, could be repurposed for the treatment of diabetic nephropathy, a kidney disease, based on the AI's analysis of similar drugs and their clinical data. This would not only save resources but also provide new treatment options for patients suffering from this debilitating condition. ",
+                "answer": "Pharmacologists or Toxicologists or Clinical Trial Managers",
+                "explanation": "Experts that specialize in developing new treatments for various diseases might utilize this application to accelerate their research pipeline or to streamline the drug development process."
+            }
+        ]
+    },
+    {
+        "question": "What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning",
+        "cot_examples": [
+            {
+                "intent": "Find patterns in healthcare insurance claims",
+                "answer": "Natural language processing: text classification",
+                "explanation": "Health insurance claims can find patterns or classify claims into categories (e.g., diagnosis, procedure, treatment)."
+            },
+            {
+                "intent": "Generative AI can optimize waste management processes. By analyzing historical data on waste generation, recycling rates, and resource utilization, generative models can generate optimized waste collection routes, recommend recycling strategies, and predict waste generation patterns. This helps in reducing waste generation, optimizing resource allocation, and promoting circular economy practices.",
+                "answer": "Natural language processing: text generation and reinforcement learning",
+                "explanation": "Text generation techniques are used to generate reports, recommendations, and insights from the analysis of historical data. and Reinforcement learning algorithms can be employed to optimize the generative model's performance in real-time, based on feedback from the environment (e.g., changes in waste generation rates)."
+            },
+            {
+                "intent": "Ability to create dialog flows and integrations from natural language instructions check if a document has grammatical mistakes",
+                "answer": "Natural Language Processing: Text Classification and Token Classification",
+                "explanation": "Specifically, Text Classification is used to classify the input text into categories such as 'grammatically correct' or 'contains grammatical errors' Techniques like token classification (also known as part-of-speech tagging) are employed to analyze the document's structure and identify potential grammatical mistakes"
+            }
+        ]
+    },
+    {
+        "question": "Who is the intended user of the system?",
+        "cot_examples": [
+            {
+                "intent": "Find patterns in healthcare insurance claims",
+                "answer": "Insurance companies, government agencies, or other organizations responsible for reimbursing healthcare providers",
+                "explanation": "Healthcare payers need to efficiently process and reimburse claims while minimizing errors and disputes. By identifying patterns in claims data, they can automate routine tasks, detect potential errors or anomalies, and improve overall payment accuracy."
+            },
+            {
+                "intent": "Generative AI can optimize waste management processes. By analyzing historical data on waste generation, recycling rates, and resource utilization, generative models can generate optimized waste collection routes, recommend recycling strategies, and predict waste generation patterns. This helps in reducing waste generation, optimizing resource allocation, and promoting circular economy practices.",
+                "answer": "Waste Management Companies",
+                "explanation": "Waste management companies need to efficiently collect and process waste while minimizing costs and environmental impact. By using generative AI to analyze historical data on waste generation, recycling rates, and resource utilization, they can optimize collection routes, reduce fuel consumption, and lower labor costs."
+            },
+            {
+                "intent": "Summarize and analyze historic data, industry patterns, create multi-layered models that identify changes as occur, increase supply chain efficiency and optimize inventory levels",
+                "answer": "Supply Chain companies",
+                "explanation": "Supply chain managers need to efficiently manage inventory levels, shipping routes, and logistics operations while minimizing costs and maximizing customer satisfaction. By using the system to summarize and analyze historic data, industry patterns, and create multi-layered models that identify changes as they occur, supply chain managers can gain insights into optimal inventory levels, efficient shipping routes, and streamlined logistics processes."
+            },
+            {
+                "intent": "Optimize supply chain management in Investment banks",
+                "answer": "Investment banks or asset management banks",
+                "explanation": "Investment banks have complex supply chains that involve the movement of goods, services, and financial instruments. By using the system to optimize supply chain management, financial institutions can minimize costs, maximize efficiency, and reduce risks associated with inventory levels, shipping routes, and logistics operations."
+            },
+            {
+                "intent": "In the context of drug repurposing, generative AI can be employed to analyze vast databases of existing drugs and their clinical trials data. By identifying patterns and similarities, the AI can suggest potential new therapeutic indications for existing drugs, based on the chemical structure and pharmacological properties of the APIs. This process can help streamline the drug development pipeline, as it would reduce the need for time-consuming and expensive clinical trials for new indications. For instance, a drug like Atorvastatin, which is currently used to lower cholesterol, could be repurposed for the treatment of diabetic nephropathy, a kidney disease, based on the AI's analysis of similar drugs and their clinical data. This would not only save resources but also provide new treatment options for patients suffering from this debilitating condition. ",
+                "answer": "Pharmaceutical Companies or  Biotechnology Companies",
+                "explanation": "companies have a vested interest in optimizing their product portfolios and reducing development costs. By using the system to analyze vast databases of existing drugs and clinical trials data, pharmaceutical companies can quickly identify potential new indications for existing medications, thereby streamlining the drug development pipeline."
+            }
+        ]
+    },
+    {
+        "question": "What is the intended purpose of the system?",
+        "cot_examples": [
+            {
+                "intent": "Provide a dashboard to track sales performance by region and product line",
+                "answer": "To create a centralized monitoring system that allows executives to visualize key sales metrics, identify trends, and make data-driven decisions about resource allocation and business strategy.",
+                "explanation": null
+            },
+            {
+                "intent": "Automate the process of onboarding new employees, including generating necessary documents and assigning benefits",
+                "answer": "To design an automated HR workflow that streamlines the employee onboarding experience, reducing administrative burden and improving the overall efficiency of the organization.",
+                "explanation": null
+            },
+            {
+                "intent": "Create a recommendation engine to suggest potential clients based on our existing customer base and sales history",
+                "answer": "To develop a predictive analytics system that identifies high-value potential customers and provides actionable insights for sales teams, enabling them to prioritize leads and optimize marketing efforts.",
+                "explanation": null
+            },
+            {
+                "intent": "Develop a digital twin of our manufacturing process to simulate production schedules, equipment usage, and material requirements",
+                "answer": "To create a virtual replica of the physical manufacturing environment, allowing operations teams to analyze and optimize production workflows, reduce waste, and improve overall efficiency and quality",
+                "explanation": null
+            }
+        ]
+    },
+    {
+        "question": "What is the application of the system?",
+        "cot_examples": [
+            {
+                "intent": "Provide a dashboard to track sales performance by region and product line",
+                "answer": "Natural Language Processing (NLP): Analyze sales data to identify trends, patterns, and correlations between regions, products, and sales metrics.\n Machine Learning (ML): Develop predictive models to forecast future sales performance based on historical data and seasonal fluctuations.\n Computer Vision: Integrate with CRM systems to visualize sales pipelines, track customer interactions, and monitor pipeline health.",
+                "explanation": null
+            },
+            {
+                "intent": "Automate the process of onboarding new employees, including generating necessary documents and assigning benefits",
+                "answer": "Robotic Process Automation (RPA): Automate manual tasks such as generating new hire paperwork, updating HR systems, and scheduling interviews. \n Document Generation: Use AI-powered document generation tools to create customized new hire packets, including contracts, benefits information, and employee handbooks. Predictive Analytics: Analyze new hire data to identify potential risks or challenges and provide personalized recommendations for onboarding.",
+                "explanation": null
+            },
+            {
+                "intent": "Create a recommendation engine to suggest potential clients based on our existing customer base and sales history",
+                "answer": "Collaborative Filtering: Analyze customer behavior and preferences to identify patterns and correlations that can inform product recommendations.\n Knowledge Graph: Build a graph-based knowledge model of customers, products, and services to enable more accurate matchings.\n Text Analysis: Use NLP to analyze customer feedback and reviews to identify sentiment trends and improve product development.",
+                "explanation": null
+            },
+            {
+                "intent": "Develop a digital twin of our manufacturing process to simulate production schedules, equipment usage, and material requirements",
+                "answer": "Simulation Software: Develop AI-powered simulation models that can predict production outcomes under various scenarios, including equipment failures or material shortages.\n Predictive Maintenance: Analyze sensor data from equipment to predict maintenance needs and optimize scheduling. \n Optimization Engine: Use machine learning algorithms to optimize production processes and minimize waste.",
+                "explanation": null
+            }
+        ]
+    },
+    {
+        "question": "Who is the subject as per the intent?",
+        "cot_examples": [
+            {
+                "intent": "Find patterns in healthcare insurance claims",
+                "answer": "Healthcare insurance claims data",
+                "explanation": "The question is asking about the subject of the AI system, which in this context is the data being analyzed. The AI system is designed to find patterns in healthcare insurance claims, so the subject is the claims data itself. This is a key aspect of compliance in healthcare, as it involves the analysis of sensitive patient data and requires adherence to regulations such as HIPAA. As a compliance officer, it is essential to ensure that the AI system is handling this data in a secure and compliant manner."
+            },
+            {
+                "intent": "Optimize supply chain management in Investment banks",
+                "answer": "Investment bank's supply chain management process",
+                "explanation": "The question is asking about the subject of the AI system, which implies that we need to identify the entity or process that the AI system is focused on. In this case, the intent is to optimize supply chain management in investment banks, so the subject of the AI system is the investment bank's supply chain management process. This is because the AI system is being used to analyze and improve the supply chain management process, making it the central focus of the system."
+            },
+            {
+                "intent": "Summarize and analyze historic data, industry patterns, create multi-layered models that identify changes as occur, increase supply chain efficiency and optimize inventory levels",
+                "answer": "Supply chain",
+                "explanation": "The question asks for the subject of the AI system, which refers to the entity or process being analyzed or optimized by the system. In this case, the AI system is designed to analyze historic data, identify industry patterns, and create models to optimize supply chain efficiency and inventory levels. Therefore, the subject of the AI system is the supply chain itself. This answer is generated by identifying the key phrases in the prompt, such as 'supply chain efficiency' and 'inventory levels', which indicate that the AI system is focused on optimizing the supply chain."
+            },
+            {
+                "intent": "Provide real-time visibility into employee productivity and engagement across multiple locations",
+                "answer": "Employees",
+                "explanation": "The system would need to track and analyze data on employee productivity, engagement, and performance across various locations."
+            },
+            {
+                "intent": "Automate invoicing and payment processing for large B2B customers",
+                "answer": "Business Customers",
+                "explanation": "The system would need to manage data on business customer interactions, including: Customer contact information and preferences, Purchase history and payment records, Invoicing and payment tracking."
+            },
+            {
+                "intent": "Create a personalized travel experience for high-value corporate clients",
+                "answer": "Corporate Travelers",
+                "explanation": "The system would need to collect and analyze data on the preferences and behavior of high-value corporate travelers, including: Customer flight information and itineraries, Hotel reservations and preferences, meal choices and dining experiences."
+            },
+            {
+                "intent": "Develop a predictive maintenance model for critical equipment across multiple industries",
+                "answer": "Equipment Owners",
+                "explanation": "The system would need to manage data on the condition and usage of critical equipment, including: Equipment serial numbers and models, Maintenance history and records, Sensor data and sensor readings."
+            }
+        ]
+    }
+]

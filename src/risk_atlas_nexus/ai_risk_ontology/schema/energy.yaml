@@ -20,7 +20,7 @@ slots:
   power_consumption_w:
     range: integer
     minimum_value: 0
-    description: power consumption in Watts 
+    description: power consumption in Watts
   carbon_emitted:
     range: float
     minimum_value: 0

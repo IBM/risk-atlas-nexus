@@ -17,20 +17,20 @@ URI: [dpv:IncidentConcludedclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentCon
     click IncidentConcludedclass href "../IncidentConcludedclass"
       IncidentStatus <|-- IncidentConcludedclass
         click IncidentStatus href "../IncidentStatus"
-      
+
       IncidentConcludedclass : dateCreated
-        
+
       IncidentConcludedclass : dateModified
-        
+
       IncidentConcludedclass : description
-        
+
       IncidentConcludedclass : id
-        
+
       IncidentConcludedclass : name
-        
+
       IncidentConcludedclass : url
-        
-      
+
+
 ```
 
 
@@ -140,6 +140,7 @@ attributes:
     owner: IncidentConcludedclass
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

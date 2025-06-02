@@ -45,6 +45,3 @@ URI: [xsd:time](http://www.w3.org/2001/XMLSchema#time)
 | self | xsd:time |
 | native | nexus:time |
 | exact | schema:Time |
-
-
-

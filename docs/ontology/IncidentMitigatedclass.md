@@ -17,20 +17,20 @@ URI: [dpv:IncidentMitigatedclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentMit
     click IncidentMitigatedclass href "../IncidentMitigatedclass"
       IncidentStatus <|-- IncidentMitigatedclass
         click IncidentStatus href "../IncidentStatus"
-      
+
       IncidentMitigatedclass : dateCreated
-        
+
       IncidentMitigatedclass : dateModified
-        
+
       IncidentMitigatedclass : description
-        
+
       IncidentMitigatedclass : id
-        
+
       IncidentMitigatedclass : name
-        
+
       IncidentMitigatedclass : url
-        
-      
+
+
 ```
 
 
@@ -140,6 +140,7 @@ attributes:
     owner: IncidentMitigatedclass
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

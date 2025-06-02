@@ -17,20 +17,20 @@ URI: [dpv:Consequence](https://w3c.github.io/dpv/2.1/dpv/#Consequence)
     click Consequence href "../Consequence"
       Entity <|-- Consequence
         click Entity href "../Entity"
-      
+
       Consequence : dateCreated
-        
+
       Consequence : dateModified
-        
+
       Consequence : description
-        
+
       Consequence : id
-        
+
       Consequence : name
-        
+
       Consequence : url
-        
-      
+
+
 ```
 
 
@@ -146,6 +146,7 @@ attributes:
     owner: Consequence
     domain_of:
     - Entity
+    - BenchmarkMetadataCard
     range: string
   description:
     name: description

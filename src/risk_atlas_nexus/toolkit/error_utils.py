@@ -1,5 +1,6 @@
 from random import randint
 
+
 def type_check(log_code, *types, allow_none=False, **variables):
     """Check for acceptable types for a given object.
 
@@ -78,4 +79,4 @@ def _gen_new_error_code(prefix="RAN", level="error"):
     if level == "warning":
         level_letter = "W"
 
-    return prefix + '{:08d}'.format(randint(0, 10**8)) + level_letter
+    return prefix + "{:08d}".format(randint(0, 10**8)) + level_letter

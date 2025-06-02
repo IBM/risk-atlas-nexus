@@ -23,9 +23,9 @@ URI: [schema:url](http://schema.org/url)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
-| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
+| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
+| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
 
 
 
@@ -36,6 +36,8 @@ URI: [schema:url](http://schema.org/url)
 ## Properties
 
 * Range: [Uri](Uri.md)
+
+* Multivalued: True
 
 
 
@@ -80,6 +82,8 @@ alias: hasUnitxtCard
 domain_of:
 - AiEval
 range: uri
+multivalued: true
+inlined: false
 
 ```
 </details>
