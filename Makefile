@@ -56,7 +56,7 @@ regenerate_risk_atlas_as_tex:
 lint_schema:
 	linkml-lint $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml 
 	
-regenerate_cypher_code:
+regenerate_cypher_code: lift_mappings_from_tsv
 	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_cypher.py
 
 test:
