@@ -39,6 +39,7 @@ from risk_atlas_nexus.blocks.prompt_templates import (
     AI_TASKS_TEMPLATE,
     QUESTIONNAIRE_COT_TEMPLATE,
 )
+from risk_atlas_nexus.blocks.risk_categorization.severity import RiskSeverity
 from risk_atlas_nexus.blocks.risk_detector import AutoRiskDetector
 from risk_atlas_nexus.blocks.risk_explorer import RiskExplorer
 from risk_atlas_nexus.blocks.risk_mapping import RiskMapper
@@ -1169,3 +1170,88 @@ class RiskAtlasNexus:
             postprocessors=["json_object"],
             verbose=verbose,
         )
+
+    def categorize_risk_severity(
+        self,
+        usecases: List[str],
+        cot_data: List[Dict],
+        inference_engine: InferenceEngine,
+    ):
+        """Give risk severity level from a usecase description
+
+        Args:
+            usecases (List[str]):
+                A List of strings describing AI usecases
+            cot_data (List[Dict]): Chain of Thought data.
+            inference_engine (InferenceEngine):
+                An LLM inference engine to identify AI tasks from usecases.
+
+        Returns:
+            List[Dict]:
+                List of result containing risk categorisation information
+        """
+        type_check(
+            "<RAN3B9CD886E>",
+            InferenceEngine,
+            allow_none=False,
+            inference_engine=inference_engine,
+        )
+        type_check(
+            "<RAN4CDA6852E>",
+            List,
+            allow_none=False,
+            usecases=usecases,
+        )
+        value_check(
+            "<RAN0E435F50E>",
+            inference_engine and cot_data and usecases,
+            "Please provide usecases, cot_data and inference_engine",
+        )
+
+        # Create Risk Severity instance
+        severity = RiskSeverity(inference_engine)
+
+        # Collecting required paramters for categorizing Risk Severity
+        # Get usecase domain
+        domains = self.identify_domain_from_usecases(
+            usecases, inference_engine=inference_engine, verbose=False
+        )
+        logger.info(f"Domain: {domains}")
+
+        # Get ai tasks for usecases
+        ai_tasks = self.identify_ai_tasks_from_usecases(
+            usecases, inference_engine=inference_engine, verbose=False
+        )
+        logger.info(f"AI Tasks: {ai_tasks}")
+
+        # Get ai users for usecases
+        ai_users = [
+            self.generate_few_shot_risk_questionnaire_output(
+                usecase,
+                cot_data,
+                inference_engine=inference_engine,
+                filter_cot_data_by={
+                    "question": "Who is the intended user of the system?"
+                },
+                verbose=False,
+            )
+            for usecase in usecases
+        ]
+        logger.info(f"AI User: {ai_users}")
+
+        # Get ai subjects for usecases
+        ai_subjects = [
+            self.generate_few_shot_risk_questionnaire_output(
+                usecase,
+                cot_data,
+                inference_engine=inference_engine,
+                filter_cot_data_by={
+                    "question": "Who is the subject as per the intent?"
+                },
+                verbose=False,
+            )
+            for usecase in usecases
+        ]
+        logger.info(f"AI Subject: {ai_subjects}")
+
+        return severity.categorize(usecases, domains, ai_tasks, ai_users, ai_subjects)
