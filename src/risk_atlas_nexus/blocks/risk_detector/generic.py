@@ -22,6 +22,7 @@ class GenericRiskDetector(RiskDetector):
                     ],
                     indent=4,
                 ),
+                max_risk=self.max_risk,
             )
             for usecase in usecases
         ]

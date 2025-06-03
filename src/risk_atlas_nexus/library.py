@@ -486,6 +486,7 @@ class RiskAtlasNexus:
         usecases: List[str],
         inference_engine: InferenceEngine,
         taxonomy: Optional[str] = None,
+        max_risk: Optional[int] = None,
     ) -> List[List[Risk]]:
         """Identify potential risks from a usecase description
 
@@ -494,8 +495,10 @@ class RiskAtlasNexus:
                 A List of strings describing AI usecases
             inference_engine (InferenceEngine):
                 An LLM inference engine to infer risks from the usecases.
-            taxonomy (str):
-                The string label for a taxonomy
+            taxonomy (str, optional):
+                The string label for a taxonomy. Default to None.
+            max_risk (int, optional):
+                The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.
 
         Returns:
             List[List[Risk]]:
@@ -513,16 +516,23 @@ class RiskAtlasNexus:
             allow_none=True,
             taxonomy=taxonomy,
         )
+        type_check(
+            "<RAN4717CF18E>",
+            int,
+            allow_none=True,
+            max_risk=max_risk,
+        )
         value_check(
             "<RAN4717CF18E>",
-            usecases or inference_engine,
-            "Please provide usecases and inference_engine",
+            usecases and inference_engine,
+            "Please provide List[usecase] and inference_engine",
         )
 
         risk_detector = AutoRiskDetector.create(
             cls._ontology,
             inference_engine=inference_engine,
             taxonomy=taxonomy,
+            max_risk=max_risk,
         )
 
         return risk_detector.detect(usecases)

@@ -19,6 +19,9 @@ class AutoRiskDetector:
         ontology: Container,
         inference_engine: InferenceEngine,
         taxonomy: Optional[str] = None,
+        max_risk: Optional[int] = None,
     ) -> RiskDetector:
-        risk_detector = GenericRiskDetector(ontology, inference_engine, taxonomy)
+        risk_detector = GenericRiskDetector(
+            ontology, inference_engine, taxonomy, max_risk
+        )
         return risk_detector

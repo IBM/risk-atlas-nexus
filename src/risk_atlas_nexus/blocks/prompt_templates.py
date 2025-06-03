@@ -12,22 +12,21 @@ QUESTIONNAIRE_COT_TEMPLATE = """
         Question: {{ question }}
 """
 
-RISK_IDENTIFICATION_TEMPLATE = """This is an AI risk similarity task. You are given JSON titled RISKS which contains a list of risk categories and their descriptions.
+RISK_IDENTIFICATION_TEMPLATE = """You are an expert at AI risk classification. Study the risks JSON below containing list of risk category and its description.
 
 RISKS:
 {{ risks }}
 
 Instructions:
-1. Identify the RISKS which are semantically similar and most relevant to the Input context
-2. For the similar risks, choose which relation characterizes the relevance relationship between Input context and the RISK.
-3. If input doesn't fit into any of the above categories, classify it as Unknown.
-4. Respond with a (maximum length 5 items) list of attribute 'category' containing the most relevant classification labels and their relation.
-
-{% if cot_examples is not none %}EXAMPLES:{% for example in cot_examples %}
+1. Identify the potential RISKS associated with the given Input. Use RISK `description` to verify if the risk is associated with the Input.
+2. If Input doesn't fit into any of the above RISKS categories, classify it as Unknown.
+3. Respond with a list{% if max_risk is not none %} (top {{ max_risk }} high risks categories){% endif %} of attribute 'category' containing the risk labels.
+{% if cot_examples is not none %}
+EXAMPLES:{% for example in cot_examples %}
 Input: {{ example.Input }}
-Output: {{ example.Output }}{% endfor %}{% endif %}
+Output: {{ example.Output }}{% endfor %}
 ===== END OF EXAMPLES ======
-
+{% endif %}
 Input: {{ usecase }}
 Output: """
 
