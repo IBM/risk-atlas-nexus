@@ -1,5 +1,5 @@
-from risk_atlas_nexus.blocks.risk_explorer.base import ExplorerBase
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
+from risk_atlas_nexus.blocks.risk_explorer.base import ExplorerBase
 from risk_atlas_nexus.data.knowledge_graph import *
 
 
@@ -18,7 +18,6 @@ class RiskExplorer(ExplorerBase):
         self._benchmarkmetadatacards = ontology.benchmarkmetadatacards or []
         self._documents = ontology.documents or []
         self._datasets = ontology.datasets or []
-
 
     def get_all_risks(self, taxonomy=None):
         """Get all risk definitions from the LinkML
@@ -129,7 +128,7 @@ class RiskExplorer(ExplorerBase):
                 Result containing a list of AI risks IDs
         """
         matching_risks = self._risks
-       
+
         if risk is not None:
             matching_risks = [risk]
         if tag is not None:
@@ -389,7 +388,7 @@ class RiskExplorer(ExplorerBase):
         else:
             print("No matching risk control found")
             return None
-        
+
     def get_risk_incidents(self, taxonomy=None):
         """Get risk incident instances
 
@@ -412,7 +411,7 @@ class RiskExplorer(ExplorerBase):
             )
 
         return risk_incident_instances
-    
+
     def get_risk_incident(self, id):
         """Get risk incident instance by ID
 
@@ -435,11 +434,9 @@ class RiskExplorer(ExplorerBase):
         else:
             print("No matching risk incident found")
             return None
-        
-    def get_related_risk_incidents(
-        self, risk=None, risk_id=None, taxonomy=None
-    ):
-        """Get related risk incidents for a risk 
+
+    def get_related_risk_incidents(self, risk=None, risk_id=None, taxonomy=None):
+        """Get related risk incidents for a risk
 
         Args:
             risk: (Optional) Risk
@@ -457,13 +454,15 @@ class RiskExplorer(ExplorerBase):
         if risk is not None:
             matching_risks = [risk]
         if risk_id is not None:
-            matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
+            matching_risks = list(
+                filter(lambda risk: risk.id == risk_id, matching_risks)
+            )
 
         if len(matching_risks) > 0:
             risk: Risk = matching_risks[0]
 
             risk_incident_instances = self._riskincidents or []
-            
+
             risk_incident_instances = list(
                 filter(
                     lambda risk_incident: risk.id in risk_incident.refersToRisk,
@@ -473,16 +472,17 @@ class RiskExplorer(ExplorerBase):
             if taxonomy is not None:
                 risk_incident_instances = list(
                     filter(
-                        lambda risk_incident: risk_incident.isDefinedByTaxonomy == taxonomy,
+                        lambda risk_incident: risk_incident.isDefinedByTaxonomy
+                        == taxonomy,
                         risk_incident_instances,
                     )
                 )
-             
+
             return risk_incident_instances
         else:
             print("No matching risk incidents found")
             return None
-        
+
     def get_all_evaluations(self, taxonomy=None):
         """Get all evaluation definitions from the LinkML
 
@@ -526,11 +526,9 @@ class RiskExplorer(ExplorerBase):
         else:
             print("No matching evaluation found")
             return None
-        
-    def get_related_evaluations(
-        self, risk=None, risk_id=None, taxonomy=None
-    ):
-        """Get related evaluations for a risk 
+
+    def get_related_evaluations(self, risk=None, risk_id=None, taxonomy=None):
+        """Get related evaluations for a risk
 
         Args:
             risk: (Optional) Risk
@@ -548,13 +546,15 @@ class RiskExplorer(ExplorerBase):
         if risk is not None:
             matching_risks = [risk]
         if risk_id is not None:
-            matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
+            matching_risks = list(
+                filter(lambda risk: risk.id == risk_id, matching_risks)
+            )
 
         if len(matching_risks) > 0:
             risk: Risk = matching_risks[0]
 
             evaluation_instances = self._evaluations or []
-            
+
             evaluation_instances = list(
                 filter(
                     lambda evaluation: risk.id in (evaluation.hasRelatedRisk or []),
@@ -568,7 +568,7 @@ class RiskExplorer(ExplorerBase):
                         evaluation_instances,
                     )
                 )
-             
+
             return evaluation_instances
         else:
             print("No matching evaluations found")
@@ -581,18 +581,19 @@ class RiskExplorer(ExplorerBase):
             taxonomy: str
                 (Optional) The string label for a taxonomy
             aieval_id: str
-                (Optional) The string id for an AiEval that the benchmark describes 
+                (Optional) The string id for an AiEval that the benchmark describes
 
         Returns:
             list[AiEval]
                 Result containing a list of BenchmarkMetadataCards
         """
-        benchmark_metadata_card_instances = self._benchmarkmetadatacards  or []
-        
+        benchmark_metadata_card_instances = self._benchmarkmetadatacards or []
+
         if taxonomy is not None:
             benchmark_metadata_card_instances = list(
                 filter(
-                    lambda benchmark_metadata_card: benchmark_metadata_card.isDefinedByTaxonomy == taxonomy,
+                    lambda benchmark_metadata_card: benchmark_metadata_card.isDefinedByTaxonomy
+                    == taxonomy,
                     benchmark_metadata_card_instances,
                 )
             )
@@ -600,7 +601,8 @@ class RiskExplorer(ExplorerBase):
         if aieval_id is not None:
             benchmark_metadata_card_instances = list(
                 filter(
-                    lambda benchmark_metadata_card: benchmark_metadata_card.describesAiEval == aieval_id,
+                    lambda benchmark_metadata_card: benchmark_metadata_card.describesAiEval
+                    == aieval_id,
                     benchmark_metadata_card_instances,
                 )
             )
@@ -619,7 +621,10 @@ class RiskExplorer(ExplorerBase):
                 Result containing an BenchmarkMetadataCard
         """
         matching_benchmark_metadata_cards = list(
-            filter(lambda benchmark_metadata_card: benchmark_metadata_card.id == id, self._benchmarkmetadatacards)
+            filter(
+                lambda benchmark_metadata_card: benchmark_metadata_card.id == id,
+                self._benchmarkmetadatacards,
+            )
         )
 
         if len(matching_benchmark_metadata_cards) > 0:
@@ -627,8 +632,7 @@ class RiskExplorer(ExplorerBase):
         else:
             print("No matching benchmark_metadata_card found")
             return None
-        
-    
+
     def get_documents(self, taxonomy=None):
         """Get all documentation definitions from the LinkML
 
@@ -640,8 +644,8 @@ class RiskExplorer(ExplorerBase):
             list[Documentation]
                 Result containing a list of Documentation entries
         """
-        documentation_instances = self._documents  or []
-        
+        documentation_instances = self._documents or []
+
         if taxonomy is not None:
             documentation_instances = list(
                 filter(
@@ -673,7 +677,6 @@ class RiskExplorer(ExplorerBase):
             print("No matching documents found")
             return None
 
-    
     def get_datasets(self, taxonomy=None):
         """Get all dataset definitions from the LinkML
 
@@ -685,8 +688,8 @@ class RiskExplorer(ExplorerBase):
             list[Dataset]
                 Result containing a list of Dataset entries
         """
-        dataset_instances = self._datasets  or []
-        
+        dataset_instances = self._datasets or []
+
         if taxonomy is not None:
             dataset_instances = list(
                 filter(
@@ -717,4 +720,3 @@ class RiskExplorer(ExplorerBase):
         else:
             print("No matching dataset found")
             return []
-            

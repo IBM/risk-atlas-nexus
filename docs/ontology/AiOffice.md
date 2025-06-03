@@ -22,29 +22,29 @@ URI: [schema:Organization](http://schema.org/Organization)
     click AiOffice href "../AiOffice"
       Organization <|-- AiOffice
         click Organization href "../Organization"
-      
+
       AiOffice : dateCreated
-        
+
       AiOffice : dateModified
-        
+
       AiOffice : description
-        
+
       AiOffice : grants_license
-        
-          
-    
-    
+
+
+
+
     AiOffice --> "0..1" License : grants_license
     click License href "../License"
 
-        
+
       AiOffice : id
-        
+
       AiOffice : name
-        
+
       AiOffice : url
-        
-      
+
+
 ```
 
 

@@ -19,29 +19,29 @@ URI: [dpv:Impact](https://w3c.github.io/dpv/2.1/dpv/#Impact)
         click RiskConcept href "../RiskConcept"
       Entity <|-- Impact
         click Entity href "../Entity"
-      
+
       Impact : dateCreated
-        
+
       Impact : dateModified
-        
+
       Impact : description
-        
+
       Impact : id
-        
+
       Impact : isDetectedBy
-        
-          
-    
-    
+
+
+
+
     Impact --> "*" RiskControl : isDetectedBy
     click RiskControl href "../RiskControl"
 
-        
+
       Impact : name
-        
+
       Impact : url
-        
-      
+
+
 ```
 
 

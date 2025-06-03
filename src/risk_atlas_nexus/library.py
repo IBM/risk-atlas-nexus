@@ -2,13 +2,14 @@ import json
 import os
 from importlib.metadata import version
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import Any, Dict, List, Optional
 
 import yaml
 from jinja2 import Template
 from linkml_runtime import SchemaView
 from linkml_runtime.dumpers import YAMLDumper
 from sssom_schema import Mapping
+
 
 # workaround for txtai
 os.environ["KMP_DUPLICATE_LIB_OK"] = "True"
@@ -604,11 +605,16 @@ class RiskAtlasNexus:
             "Please provide questions and inference_engine",
         )
 
+        # Extract only questions
+        risk_questionnaire = [
+            question_data["question"] for question_data in risk_questionnaire
+        ]
+
         # Prepare zero shots inference prompts
         prompts = [
             ZeroShotPromptBuilder(
                 QUESTIONNAIRE_COT_TEMPLATE,
-            ).build(usecase=usecase, question=question["text"])
+            ).build(usecase=usecase, question=question)
             for question in risk_questionnaire
         ]
 
@@ -623,7 +629,7 @@ class RiskAtlasNexus:
     def generate_few_shot_risk_questionnaire_output(
         cls,
         usecase: str,
-        risk_questionnaire_cot: List[Dict[str, Any]],
+        risk_questionnaire: List[Dict[str, Any]],
         inference_engine: InferenceEngine,
         verbose=True,
     ):
@@ -631,7 +637,7 @@ class RiskAtlasNexus:
 
         Args:
             usecase (str): A string describing an AI usecase
-            risk_questionnaire_cot (List[Dict]): Chain of Thought data for risk questionnaire.
+            risk_questionnaire (List[Dict]): Chain of Thought data for risk questionnaire.
                 Each question is associated with a list of example intents and
                 corresponding answers. Check example JSON below.
                 ```
@@ -670,26 +676,26 @@ class RiskAtlasNexus:
             "<RAN46376875E>",
             List,
             allow_none=False,
-            questions=risk_questionnaire_cot,
+            questions=risk_questionnaire,
         )
         value_check(
             "<RAN59638961E>",
-            inference_engine and risk_questionnaire_cot,
+            inference_engine and risk_questionnaire,
             "Please provide risk_questionnaire_cot and inference_engine",
         )
 
         assert (
-            risk_questionnaire_cot and len(risk_questionnaire_cot) > 0
+            risk_questionnaire and len(risk_questionnaire) > 0
         ), "`Chain of Thought (risk_questionnaire_cot)` data cannot be None or empty."
 
         # Prepare few shots inference prompts from CoT Data
         prompts = [
             FewShotPromptBuilder(QUESTIONNAIRE_COT_TEMPLATE).build(
-                cot_examples=cot_data["examples"],
+                cot_examples=question_data["cot_examples"],
                 usecase=usecase,
-                question=cot_data["question"],
+                question=question_data["question"],
             )
-            for cot_data in risk_questionnaire_cot
+            for question_data in risk_questionnaire
         ]
 
         # Invoke inference service
@@ -883,6 +889,7 @@ class RiskAtlasNexus:
         )
         value_check(
             "<RAN79007538E>",
+            risk or risk_id,
             risk or risk_id,
             "Please provide risk or id",
         )
@@ -1138,17 +1145,17 @@ class RiskAtlasNexus:
         )
 
         # Load risk questionnaire CoT from the template dir
-        risk_questionnaire_cot = load_resource("risk_questionnaire_cot.json")
+        risk_questionnaire = load_resource("risk_questionnaire_cot.json")
 
         # Retrieve domain question data
-        domain_ques_data = risk_questionnaire_cot[0]
+        domain_ques_data = risk_questionnaire[0]
 
         # Prepare few shots inference prompts from CoT Data
         prompts = [
             FewShotPromptBuilder(
                 prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
             ).build(
-                cot_examples=domain_ques_data["examples"],
+                cot_examples=domain_ques_data["cot_examples"],
                 usecase=usecase,
                 question=domain_ques_data["question"],
             )

@@ -244,7 +244,7 @@ datasets:
     description: "A large-scale benchmark to assess the safety of LLMs through red teaming methodologies."
     url: https://huggingface.co/datasets/Babelscape/ALERT
     hasLicense: license-cc-by-nc-sa-4.0
-    hasDocumentation: 
+    hasDocumentation:
     - https://arxiv.org/abs/2404.08676
     - repo_Babelscape_ALERT
   - id: OpenSafetyLab/Salad-Data
@@ -256,7 +256,7 @@ datasets:
     hasLicense: license-apache-2.0
   - id: sorry-bench/sorry-bench-202406
     name: SorryBench
-    description: "This dataset contains 9.5K potentially unsafe instructions, intended to be used for LLM safety refusal evaluation."  
+    description: "This dataset contains 9.5K potentially unsafe instructions, intended to be used for LLM safety refusal evaluation."
     url: 'https://huggingface.co/datasets/sorry-bench/sorry-bench-202406'
     hasLicense: license-sorrybench
     hasDocumentation:
@@ -281,7 +281,7 @@ datasets:
     description: StrongREJECT jailbreak benchmark dataset
     url: https://github.com/dsbowen/strong_reject/tree/main/strong_reject
     hasLicense: license-mit
-    hasDocumentation: 
+    hasDocumentation:
     - https://arxiv.org/abs/2402.10260
     - repo_dsbowen_strong_reject
   - id: Bertievidgen/SimpleSafetyTests
@@ -335,10 +335,10 @@ datasets:
     description: "Textual Prompt Injection Tests: An english-only dataset of textual prompt injections."
     url: 'https://github.com/meta-llama/PurpleLlama/blob/main/CybersecurityBenchmarks/datasets/prompt_injection/prompt_injection.json'
     hasLicense: license-llama-3.2-community
-    hasDocumentation: 
+    hasDocumentation:
     - https://arxiv.org/abs/2408.01605
   - id: 'cais/wmdp'
-    name: Weapons of Mass Destruction Proxy (WMDP) 
+    name: Weapons of Mass Destruction Proxy (WMDP)
     description: "The Weapons of Mass Destruction Proxy (WMDP) benchmark is a dataset of multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. WMDP serves two roles: first, as an evaluation for hazardous knowledge in LLMs, and second, as a benchmark for unlearning methods to remove such hazardous knowledge."
     url: 'https://huggingface.co/datasets/cais/wmdp'
     hasLicense: license-mit
@@ -346,34 +346,34 @@ datasets:
     - https://arxiv.org/abs/2403.03218
     - repo_centerforaisafety_wmdp
   - id: 'CybersecurityBenchmarks_datasets_frr'
-    name: False Refusal Rate (FRR) 
+    name: False Refusal Rate (FRR)
     description: "A dataset to evaluate the False Refusal Rate (FRR) of LLM models when interlocutors
       request help with cybersecurity-related tasks that are not malicious, which, when coupled with CyberSecEval’s
       cyberattack helpfulness dataset, can be used to show the tradeoff between helpfulness and harmfulness in LLM
       cybersecurity-related completions."
     url: 'https://github.com/meta-llama/PurpleLlama/blob/main/CybersecurityBenchmarks/datasets/frr/frr.json'
-    hasDocumentation: 
+    hasDocumentation:
     - https://arxiv.org/abs/2404.13161
     hasLicense: license-llama-3.2-community
   - id: iamollas/ethos
     name: "ETHOS: an Online Hate Speech Detection Dataset"
     description: "ETHOS: onlinE haTe speecH detectiOn dataSet. This repository contains a dataset for hate speech detection on social media platforms, called Ethos. There are two variations of the dataset: Ethos_Dataset_Binary: contains 998 comments in the dataset alongside with a label about hate speech presence or absence. 565 of them do not contain hate speech, while the rest of them, 433, contain. Ethos_Dataset_Multi_Label which contains 8 labels for the 433 comments with hate speech content. These labels are violence (if it incites (1) or not (0) violence), directed_vs_general (if it is directed to a person (1) or a group (0)), and 6 labels about the category of hate speech like, gender, race, national_origin, disability, religion and sexual_orientation."
     url: https://huggingface.co/datasets/iamollas/ethos
-    hasDocumentation: 
+    hasDocumentation:
     - https://arxiv.org/abs/2006.08328
     hasLicense: license-gnu-gplv3
   - id: akariasai/PopQA
     name: PopQA
     description: PopQA is a large-scale open-domain question answering (QA) dataset, consisting of 14k entity-centric QA pairs. Each question is created by converting a knowledge tuple retrieved from Wikidata using a template. Each question come with the original subject_entitiey, object_entityand relationship_type annotation, as well as Wikipedia monthly page views.
     url: https://huggingface.co/datasets/akariasai/PopQA
-    hasDocumentation: 
+    hasDocumentation:
     - https://aclanthology.org/2023.acl-long.546.pdf
     hasLicense: license-cc-by-4.0
   - id: Jarviswang94_Multilingual_safety_benchmark
     name: XSafety dataset
     description: "We build the first multilingual safety benchmark for LLMs, XSafety, in response to the global deployment of LLMs in practice. XSafety covers 14 kinds of commonly used safety issues across 10 languages that span several language families. "
     url: https://github.com/Jarviswang94/Multilingual_safety_benchmark
-    hasDocumentation: 
+    hasDocumentation:
     - https://arxiv.org/abs/2310.00905
     hasLicense: license-apache-2.0
 evaluations:
@@ -387,7 +387,7 @@ evaluations:
     name: "TruthfulQA"
     description: "TruthfulQA is a benchmark to measure whether a language model is truthful in generating answers to questions."
     url: https://github.com/sylinrl/TruthfulQA
-    hasUnitxtCard: 
+    hasUnitxtCard:
     - cards.value_alignment.hallucinations.truthfulqa
     hasRelatedRisk: ["atlas-hallucination"]
     hasDocumentation: ["arxiv.org/2109.07958"]
@@ -429,7 +429,7 @@ evaluations:
     - text2text-generation
     hasImplementation:
     - https://github.com/IBM/unitxt/blob/main/prepare/cards/attaq.py
-    hasUnitxtCard: 
+    hasUnitxtCard:
     - https://github.com/IBM/unitxt/blob/main/prepare/cards/attaq.py
     hasRelatedRisk:
     - atlas-toxic-output
@@ -550,7 +550,7 @@ evaluations:
     - atlas-harmful-output
   - id: ai_eval_StrongReject
     name: StrongReject
-    description: StrongREJECT is a state-of-the-art LLM jailbreak evaluation benchmark. 
+    description: StrongREJECT is a state-of-the-art LLM jailbreak evaluation benchmark.
     url: https://github.com/dsbowen/strong_reject
     hasDocumentation:
     - https://arxiv.org/abs/2402.10260
@@ -679,9 +679,9 @@ evaluations:
     name: Weapons of Mass Destruction Proxy (WMDP)
     description: 'The Weapons of Mass Destruction Proxy (WMDP) benchmark is a dataset of 3,668 multiple-choice questions surrounding hazardous knowledge inBiosecurity Iconbiosecurity,Cybersecurity Iconcybersecurity, andChemical Security Iconchemical security. WMDP serves as both a proxy evaluation for hazardous knowledge in large language models (LLMs) and a benchmark for unlearning methods to remove such knowledge.'
     url: https://github.com/centerforaisafety/wmdp
-    hasDocumentation: 
+    hasDocumentation:
     - https://arxiv.org/abs/2403.03218
-    hasDataset: 
+    hasDataset:
     - cais/wmdp
     hasImplementation:
     - https://github.com/EleutherAI/lm-evaluation-harness/tree/main/lm_eval/tasks/wmdp
@@ -719,7 +719,7 @@ evaluations:
     - sentiment-classification
   - id: ai_eval_PopQA
     name: PopQA
-    description: PopQA is a large-scale open-domain question answering (QA) dataset, consisting of 14k entity-centric QA pairs. 
+    description: PopQA is a large-scale open-domain question answering (QA) dataset, consisting of 14k entity-centric QA pairs.
     url: 'https://huggingface.co/datasets/akariasai/PopQA'
     hasDocumentation:
     - https://arxiv.org/abs/2212.10511

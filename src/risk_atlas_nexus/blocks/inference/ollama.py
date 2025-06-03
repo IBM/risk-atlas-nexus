@@ -7,8 +7,8 @@ from risk_atlas_nexus.blocks.inference.base import InferenceEngine
 from risk_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
     OllamaInferenceEngineParams,
-    TextGenerationInferenceOutput,
     OpenAIChatCompletionMessageParam,
+    TextGenerationInferenceOutput,
 )
 from risk_atlas_nexus.blocks.inference.postprocessing import postprocess
 from risk_atlas_nexus.metadata_base import InferenceEngineType

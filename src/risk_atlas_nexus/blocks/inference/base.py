@@ -1,17 +1,19 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Union
 
+import pydantic
+
 from risk_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    OllamaInferenceEngineParams,
+    OpenAIChatCompletionMessageParam,
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
-    WMLInferenceEngineParams,
-    OllamaInferenceEngineParams,
     VLLMInferenceEngineParams,
-    OpenAIChatCompletionMessageParam,
+    WMLInferenceEngineParams,
 )
 from risk_atlas_nexus.toolkit.logging import configure_logger
-import pydantic
+
 
 logger = configure_logger(__name__)
 

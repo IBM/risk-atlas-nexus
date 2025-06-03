@@ -22,29 +22,29 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
     click Documentation href "../Documentation"
       Entity <|-- Documentation
         click Entity href "../Entity"
-      
+
       Documentation : dateCreated
-        
+
       Documentation : dateModified
-        
+
       Documentation : description
-        
+
       Documentation : hasLicense
-        
-          
-    
-    
+
+
+
+
     Documentation --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       Documentation : id
-        
+
       Documentation : name
-        
+
       Documentation : url
-        
-      
+
+
 ```
 
 

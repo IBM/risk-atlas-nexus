@@ -17,20 +17,20 @@ URI: [dpv:IncidentNearMissclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentNear
     click IncidentNearMissclass href "../IncidentNearMissclass"
       IncidentStatus <|-- IncidentNearMissclass
         click IncidentStatus href "../IncidentStatus"
-      
+
       IncidentNearMissclass : dateCreated
-        
+
       IncidentNearMissclass : dateModified
-        
+
       IncidentNearMissclass : description
-        
+
       IncidentNearMissclass : id
-        
+
       IncidentNearMissclass : name
-        
+
       IncidentNearMissclass : url
-        
-      
+
+
 ```
 
 

@@ -70,20 +70,20 @@ URI: [schema:Thing](http://schema.org/Thing)
         click AiLifecyclePhase href "../AiLifecyclePhase"
       Entity <|-- Modality
         click Modality href "../Modality"
-      
+
       Entity : dateCreated
-        
+
       Entity : dateModified
-        
+
       Entity : description
-        
+
       Entity : id
-        
+
       Entity : name
-        
+
       Entity : url
-        
-      
+
+
 ```
 
 

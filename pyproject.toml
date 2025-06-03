@@ -1,6 +1,6 @@
 [project]
 name = "risk_atlas_nexus"
-version = "0.0.1"
+version = "0.0.3"
 authors = [
     { name = "Elizabeth Daly", email = "elizabeth.daly@ie.ibm.com" },
     { name = "Dhaval Salwala", email = "dhaval.vinodbhai.salwala@ibm.com" },
@@ -24,6 +24,7 @@ dependencies = [
     "linkml_runtime",
     "pydantic",
     "requests",
+    "rich",
     "sssom",
     "txtai",
     "tqdm",
@@ -31,7 +32,11 @@ dependencies = [
     "python-dotenv",
     "datasets",
     "openai>=1.0",
+    "txtai",
+    "isort",
+    "pre-commit"
 ]
+
 
 [project.optional-dependencies]
 wml = ["ibm-watsonx-ai"]
@@ -48,6 +53,7 @@ docs = [
 ]
 
 [tool.isort]
+skip_glob = ["vrisk-atlas-nexus/*"]
 profile = "black"
 line_length = 88
 remove_redundant_aliases = true

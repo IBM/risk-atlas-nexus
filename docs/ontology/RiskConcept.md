@@ -22,7 +22,7 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
     click RiskConcept href "../RiskConcept"
       Entity <|-- RiskConcept
         click Entity href "../Entity"
-      
+
 
       RiskConcept <|-- RiskGroup
         click RiskGroup href "../RiskGroup"
@@ -34,30 +34,30 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
         click RiskIncident href "../RiskIncident"
       RiskConcept <|-- Impact
         click Impact href "../Impact"
-      
-      
+
+
       RiskConcept : dateCreated
-        
+
       RiskConcept : dateModified
-        
+
       RiskConcept : description
-        
+
       RiskConcept : id
-        
+
       RiskConcept : isDetectedBy
-        
-          
-    
-    
+
+
+
+
     RiskConcept --> "*" RiskControl : isDetectedBy
     click RiskControl href "../RiskControl"
 
-        
+
       RiskConcept : name
-        
+
       RiskConcept : url
-        
-      
+
+
 ```
 
 

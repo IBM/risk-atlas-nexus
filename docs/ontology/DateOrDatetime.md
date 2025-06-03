@@ -44,6 +44,3 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 | ---  | ---  |
 | self | linkml:DateOrDatetime |
 | native | nexus:date_or_datetime |
-
-
-

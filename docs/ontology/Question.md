@@ -22,75 +22,75 @@ URI: [nexus:Question](https://ibm.github.io/risk-atlas-nexus/ontology/Question)
     click Question href "../Question"
       AiEval <|-- Question
         click AiEval href "../AiEval"
-      
+
       Question : bestValue
-        
+
       Question : dateCreated
-        
+
       Question : dateModified
-        
+
       Question : description
-        
+
       Question : hasBenchmarkMetadata
-        
-          
-    
-    
+
+
+
+
     Question --> "*" BenchmarkMetadataCard : hasBenchmarkMetadata
     click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
 
-        
+
       Question : hasDataset
-        
-          
-    
-    
+
+
+
+
     Question --> "*" Dataset : hasDataset
     click Dataset href "../Dataset"
 
-        
+
       Question : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     Question --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       Question : hasImplementation
-        
+
       Question : hasLicense
-        
-          
-    
-    
+
+
+
+
     Question --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       Question : hasRelatedRisk
-        
-          
-    
-    
+
+
+
+
     Question --> "*" Risk : hasRelatedRisk
     click Risk href "../Risk"
 
-        
+
       Question : hasTasks
-        
+
       Question : hasUnitxtCard
-        
+
       Question : id
-        
+
       Question : name
-        
+
       Question : text
-        
+
       Question : url
-        
-      
+
+
 ```
 
 

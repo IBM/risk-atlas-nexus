@@ -17,7 +17,7 @@ URI: [dpv:IncidentStatus](https://w3c.github.io/dpv/2.1/dpv/#IncidentStatus)
     click IncidentStatus href "../IncidentStatus"
       Entity <|-- IncidentStatus
         click Entity href "../Entity"
-      
+
 
       IncidentStatus <|-- IncidentConcludedclass
         click IncidentConcludedclass href "../IncidentConcludedclass"
@@ -29,21 +29,21 @@ URI: [dpv:IncidentStatus](https://w3c.github.io/dpv/2.1/dpv/#IncidentStatus)
         click IncidentNearMissclass href "../IncidentNearMissclass"
       IncidentStatus <|-- IncidentOngoingclass
         click IncidentOngoingclass href "../IncidentOngoingclass"
-      
-      
+
+
       IncidentStatus : dateCreated
-        
+
       IncidentStatus : dateModified
-        
+
       IncidentStatus : description
-        
+
       IncidentStatus : id
-        
+
       IncidentStatus : name
-        
+
       IncidentStatus : url
-        
-      
+
+
 ```
 
 

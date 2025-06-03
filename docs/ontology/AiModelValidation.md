@@ -22,20 +22,20 @@ URI: [nexus:AiModelValidation](https://ibm.github.io/risk-atlas-nexus/ontology/A
     click AiModelValidation href "../AiModelValidation"
       AiLifecyclePhase <|-- AiModelValidation
         click AiLifecyclePhase href "../AiLifecyclePhase"
-      
+
       AiModelValidation : dateCreated
-        
+
       AiModelValidation : dateModified
-        
+
       AiModelValidation : description
-        
+
       AiModelValidation : id
-        
+
       AiModelValidation : name
-        
+
       AiModelValidation : url
-        
-      
+
+
 ```
 
 

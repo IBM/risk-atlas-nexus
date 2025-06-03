@@ -17,9 +17,9 @@ labels: documentation
 <!-- Description of the documentation issue -->
 
 
-### Content location (URL or repository) (if applicable): 
+### Content location (URL or repository) (if applicable):
 <!-- Provide the URL of the page referenced -->
 
 
-### Git issue/epic related to this documentation task: 
+### Git issue/epic related to this documentation task:
  <!-- Attach the issue to an epic if one applies or link it to the corresponding dev issue, if applicable -->

@@ -15,7 +15,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
   nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
-  
+
 default_range: string
 default_prefix: nexus
 
@@ -117,7 +117,7 @@ classes:
     is_a: AiLifecyclePhase
     description: AI model validation steps that have been performed after the model training to ensure high AI model quality.
     slots:
-  
+
   AiProvider:
     is_a: Organization
     class_uri: airo:AIProvider
@@ -127,14 +127,14 @@ classes:
   Modality:
     is_a: Entity
     class_uri: airo:Modality
-    description: A modality supported by an Ai component. Examples include text, image, video. 
+    description: A modality supported by an Ai component. Examples include text, image, video.
     slots:
 
 # ----------------
 # Slots
 # ----------------
 slots:
-  numParameters: 
+  numParameters:
     range: integer
     minimum_value: 0
     description: A property indicating the number of parameters in a LLM.
@@ -202,5 +202,3 @@ slots:
     description: Indicates the control measures associated with a system or component to modify risks.
     multivalued: true
     range: RiskControl
-
-    

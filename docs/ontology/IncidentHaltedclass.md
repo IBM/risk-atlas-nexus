@@ -17,20 +17,20 @@ URI: [dpv:IncidentHaltedclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentHalted
     click IncidentHaltedclass href "../IncidentHaltedclass"
       IncidentStatus <|-- IncidentHaltedclass
         click IncidentStatus href "../IncidentStatus"
-      
+
       IncidentHaltedclass : dateCreated
-        
+
       IncidentHaltedclass : dateModified
-        
+
       IncidentHaltedclass : description
-        
+
       IncidentHaltedclass : id
-        
+
       IncidentHaltedclass : name
-        
+
       IncidentHaltedclass : url
-        
-      
+
+
 ```
 
 

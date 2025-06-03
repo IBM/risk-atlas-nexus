@@ -22,73 +22,73 @@ URI: [nexus:Questionnaire](https://ibm.github.io/risk-atlas-nexus/ontology/Quest
     click Questionnaire href "../Questionnaire"
       AiEval <|-- Questionnaire
         click AiEval href "../AiEval"
-      
+
       Questionnaire : bestValue
-        
+
       Questionnaire : dateCreated
-        
+
       Questionnaire : dateModified
-        
+
       Questionnaire : description
-        
+
       Questionnaire : hasBenchmarkMetadata
-        
-          
-    
-    
+
+
+
+
     Questionnaire --> "*" BenchmarkMetadataCard : hasBenchmarkMetadata
     click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
 
-        
+
       Questionnaire : hasDataset
-        
-          
-    
-    
+
+
+
+
     Questionnaire --> "*" Dataset : hasDataset
     click Dataset href "../Dataset"
 
-        
+
       Questionnaire : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     Questionnaire --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       Questionnaire : hasImplementation
-        
+
       Questionnaire : hasLicense
-        
-          
-    
-    
+
+
+
+
     Questionnaire --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       Questionnaire : hasRelatedRisk
-        
-          
-    
-    
+
+
+
+
     Questionnaire --> "*" Risk : hasRelatedRisk
     click Risk href "../Risk"
 
-        
+
       Questionnaire : hasTasks
-        
+
       Questionnaire : hasUnitxtCard
-        
+
       Questionnaire : id
-        
+
       Questionnaire : name
-        
+
       Questionnaire : url
-        
-      
+
+
 ```
 
 

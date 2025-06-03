@@ -22,20 +22,20 @@ URI: [nexus:DataPreprocessing](https://ibm.github.io/risk-atlas-nexus/ontology/D
     click DataPreprocessing href "../DataPreprocessing"
       AiLifecyclePhase <|-- DataPreprocessing
         click AiLifecyclePhase href "../AiLifecyclePhase"
-      
+
       DataPreprocessing : dateCreated
-        
+
       DataPreprocessing : dateModified
-        
+
       DataPreprocessing : description
-        
+
       DataPreprocessing : id
-        
+
       DataPreprocessing : name
-        
+
       DataPreprocessing : url
-        
-      
+
+
 ```
 
 

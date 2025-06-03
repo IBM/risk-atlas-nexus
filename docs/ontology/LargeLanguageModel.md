@@ -22,139 +22,139 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/risk-atlas-nexus/ontology/
     click LargeLanguageModel href "../LargeLanguageModel"
       AiModel <|-- LargeLanguageModel
         click AiModel href "../AiModel"
-      
+
       LargeLanguageModel : architecture
-        
+
       LargeLanguageModel : carbon_emitted
-        
+
       LargeLanguageModel : contextWindowSize
-        
+
       LargeLanguageModel : dateCreated
-        
+
       LargeLanguageModel : dateModified
-        
+
       LargeLanguageModel : description
-        
+
       LargeLanguageModel : fine_tuning
-        
+
       LargeLanguageModel : gpu_hours
-        
+
       LargeLanguageModel : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       LargeLanguageModel : hasEvaluation
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "*" AiEvalResult : hasEvaluation
     click AiEvalResult href "../AiEvalResult"
 
-        
+
       LargeLanguageModel : hasInputModality
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "*" Modality : hasInputModality
     click Modality href "../Modality"
 
-        
+
       LargeLanguageModel : hasLicense
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       LargeLanguageModel : hasModelCard
-        
+
       LargeLanguageModel : hasOutputModality
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "*" Modality : hasOutputModality
     click Modality href "../Modality"
 
-        
+
       LargeLanguageModel : hasRiskControl
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "*" RiskControl : hasRiskControl
     click RiskControl href "../RiskControl"
 
-        
+
       LargeLanguageModel : hasTrainingData
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "*" Dataset : hasTrainingData
     click Dataset href "../Dataset"
 
-        
+
       LargeLanguageModel : id
-        
+
       LargeLanguageModel : isPartOf
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "0..1" LargeLanguageModelFamily : isPartOf
     click LargeLanguageModelFamily href "../LargeLanguageModelFamily"
 
-        
+
       LargeLanguageModel : isProvidedBy
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "0..1" AiProvider : isProvidedBy
     click AiProvider href "../AiProvider"
 
-        
+
       LargeLanguageModel : name
-        
+
       LargeLanguageModel : numParameters
-        
+
       LargeLanguageModel : numTrainingTokens
-        
+
       LargeLanguageModel : performsTask
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "*" AiTask : performsTask
     click AiTask href "../AiTask"
 
-        
+
       LargeLanguageModel : power_consumption_w
-        
+
       LargeLanguageModel : producer
-        
-          
-    
-    
+
+
+
+
     LargeLanguageModel --> "0..1" Organization : producer
     click Organization href "../Organization"
 
-        
+
       LargeLanguageModel : supported_languages
-        
+
       LargeLanguageModel : url
-        
-      
+
+
 ```
 
 

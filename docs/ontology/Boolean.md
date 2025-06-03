@@ -45,6 +45,3 @@ URI: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 | self | xsd:boolean |
 | native | nexus:boolean |
 | exact | schema:Boolean |
-
-
-

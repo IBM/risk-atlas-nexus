@@ -8,10 +8,10 @@ from linkml_runtime.dumpers import YAMLDumper
 from pydantic import BaseModel
 from sssom.parsers import parse_sssom_table
 
-
 # Local
 from risk_atlas_nexus.ai_risk_ontology import Container, Risk
 from risk_atlas_nexus.toolkit.logging import configure_logger
+
 
 MAP_DIR = "src/risk_atlas_nexus/data/mappings/"
 DATA_DIR = "src/risk_atlas_nexus/data/knowledge_graph/mappings/"
@@ -24,9 +24,7 @@ class RiskMap(BaseModel):
     target_risk_id: str
     relationship: str
 
-    def __init__(
-        self, src_risk_id: str, target_risk_id: str, relationship: str
-    ):
+    def __init__(self, src_risk_id: str, target_risk_id: str, relationship: str):
         src_id = src_risk_id.split(":")[-1]
         target_id = target_risk_id.split(":")[-1]
 
@@ -91,24 +89,18 @@ def process_mappings_to_risks(risk_maps):
 
 def write_to_file(output_risks, output_file):
     with open(output_file, "+tw", encoding="utf-8") as output_file:
-        print(
-            YAMLDumper().dumps(Container(risks=output_risks)), file=output_file
-        )
+        print(YAMLDumper().dumps(Container(risks=output_risks)), file=output_file)
         output_file.close()
 
 
 if __name__ == "__main__":
     logger.info(f"Processing mapping files in : %s", MAP_DIR)
     mapping_files = [
-        file_name
-        for file_name in listdir(MAP_DIR)
-        if isfile(join(MAP_DIR, file_name))
+        file_name for file_name in listdir(MAP_DIR) if isfile(join(MAP_DIR, file_name))
     ]
     for file_name in mapping_files:
         output_file = DATA_DIR + Path(file_name).stem + "_from_tsv_data.yaml"
         rs = process_mapping_from_tsv_to_risk_mapping(file_name)
-        logger.info(
-            f"Processed file: %s, %s valid entries", file_name, len(rs)
-        )
+        logger.info(f"Processed file: %s, %s valid entries", file_name, len(rs))
         output_risks = process_mappings_to_risks(rs)
         write_to_file(output_risks, output_file)

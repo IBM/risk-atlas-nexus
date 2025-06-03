@@ -41,7 +41,7 @@ licenses:
   - id: "license-gnu-gplv3"
     name: "GNU General Public License v3.0"
     description: "GNU GPLv3 - a free and open-source software license that guarantees users the freedom to use, modify, and redistribute software. A 'copyleft' license, meaning any derivative works must also be released under the same GPLv3 terms."
-    url: "https://spdx.org/licenses/GPL-3.0-or-later.html" 
+    url: "https://spdx.org/licenses/GPL-3.0-or-later.html"
 modalities:
   - id: "modality-text"
     name: "text"

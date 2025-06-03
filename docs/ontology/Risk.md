@@ -24,120 +24,120 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
         click RiskConcept href "../RiskConcept"
       Entity <|-- Risk
         click Entity href "../Entity"
-      
+
       Risk : broadMatch
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" Any : broadMatch
     click Any href "../Any"
 
-        
+
       Risk : closeMatch
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" Any : closeMatch
     click Any href "../Any"
 
-        
+
       Risk : concern
-        
+
       Risk : dateCreated
-        
+
       Risk : dateModified
-        
+
       Risk : description
-        
+
       Risk : descriptor
-        
+
       Risk : detectsRiskConcept
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" RiskConcept : detectsRiskConcept
     click RiskConcept href "../RiskConcept"
 
-        
+
       Risk : exactMatch
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" Any : exactMatch
     click Any href "../Any"
 
-        
+
       Risk : hasRelatedAction
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" Action : hasRelatedAction
     click Action href "../Action"
 
-        
+
       Risk : id
-        
+
       Risk : isDefinedByTaxonomy
-        
-          
-    
-    
+
+
+
+
     Risk --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
     click RiskTaxonomy href "../RiskTaxonomy"
 
-        
+
       Risk : isDetectedBy
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" RiskControl : isDetectedBy
     click RiskControl href "../RiskControl"
 
-        
+
       Risk : isPartOf
-        
-          
-    
-    
+
+
+
+
     Risk --> "0..1" RiskGroup : isPartOf
     click RiskGroup href "../RiskGroup"
 
-        
+
       Risk : name
-        
+
       Risk : narrowMatch
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" Any : narrowMatch
     click Any href "../Any"
 
-        
+
       Risk : phase
-        
+
       Risk : relatedMatch
-        
-          
-    
-    
+
+
+
+
     Risk --> "*" Any : relatedMatch
     click Any href "../Any"
 
-        
+
       Risk : tag
-        
+
       Risk : type
-        
+
       Risk : url
-        
-      
+
+
 ```
 
 

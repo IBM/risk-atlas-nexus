@@ -15,7 +15,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
  classDiagram
     class Any
     click Any href "../Any"
-      
+
 ```
 
 

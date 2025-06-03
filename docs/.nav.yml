@@ -1,16 +1,16 @@
 
-preserve_directory_names: true 
+preserve_directory_names: true
 
-flatten_single_child_sections: false 
+flatten_single_child_sections: false
 
-ignore: "*.hidden.md" 
+ignore: "*.hidden.md"
 
 sort:
-  direction: asc 
-  type: natural 
-  by: filename 
-  sections: last 
-  ignore_case: true 
+  direction: asc
+  type: natural
+  by: filename
+  sections: last
+  ignore_case: true
 
 nav:
   - Home:
@@ -21,7 +21,7 @@ nav:
       - Usage: usage/index.md
   - Concepts:
     - Concepts: concepts/index.md
-    - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md 
+    - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md
     - Architecture: concepts/architecture.md
     - "Contribute your own taxonomy files": concepts/Contributing_a_taxonomy.md
   - Examples:

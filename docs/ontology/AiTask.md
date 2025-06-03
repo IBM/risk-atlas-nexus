@@ -22,20 +22,20 @@ URI: [airo:AiCapability](https://w3id.org/airo#AiCapability)
     click AiTask href "../AiTask"
       Entity <|-- AiTask
         click Entity href "../Entity"
-      
+
       AiTask : dateCreated
-        
+
       AiTask : dateModified
-        
+
       AiTask : description
-        
+
       AiTask : id
-        
+
       AiTask : name
-        
+
       AiTask : url
-        
-      
+
+
 ```
 
 

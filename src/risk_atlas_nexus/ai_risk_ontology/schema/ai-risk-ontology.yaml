@@ -16,7 +16,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
   nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
-  
+
 default_range: string
 default_prefix: nexus
 

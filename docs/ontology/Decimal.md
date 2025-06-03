@@ -44,6 +44,3 @@ URI: [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal)
 | self | xsd:decimal |
 | native | nexus:decimal |
 | broad | schema:Number |
-
-
-

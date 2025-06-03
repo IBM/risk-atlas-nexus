@@ -32,14 +32,14 @@ help: status
 	@echo "make lint_schema -- schema linter shortcut"
 	@echo ""
 
-status: 
+status:
 	@echo "Project: $(SCHEMA_NAME)"
 	@echo "Datafolder: $(SOURCE_SCHEMA_PATH)"
 
 regenerate_documentation:
 	gen-doc -d docs/ontology $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
 
-lift_mappings_from_tsv: 
+lift_mappings_from_tsv:
 	python ./src/risk_atlas_nexus/ai_risk_ontology/util/lifting/import_risk_mappings.py
 
 compile_pydantic_model:
@@ -55,7 +55,7 @@ regenerate_risk_atlas_as_tex:
 	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py
 
 lint_schema:
-	linkml-lint $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml 
+	linkml-lint $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
 
 test:
 	pytest

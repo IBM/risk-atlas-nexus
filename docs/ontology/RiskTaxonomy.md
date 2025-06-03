@@ -22,40 +22,40 @@ URI: [nexus:RiskTaxonomy](https://ibm.github.io/risk-atlas-nexus/ontology/RiskTa
     click RiskTaxonomy href "../RiskTaxonomy"
       Entity <|-- RiskTaxonomy
         click Entity href "../Entity"
-      
+
       RiskTaxonomy : dateCreated
-        
+
       RiskTaxonomy : dateModified
-        
+
       RiskTaxonomy : description
-        
+
       RiskTaxonomy : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     RiskTaxonomy --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       RiskTaxonomy : hasLicense
-        
-          
-    
-    
+
+
+
+
     RiskTaxonomy --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       RiskTaxonomy : id
-        
+
       RiskTaxonomy : name
-        
+
       RiskTaxonomy : url
-        
+
       RiskTaxonomy : version
-        
-      
+
+
 ```
 
 

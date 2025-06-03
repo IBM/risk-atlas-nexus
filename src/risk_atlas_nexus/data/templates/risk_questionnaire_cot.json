@@ -1,7 +1,7 @@
 [
     {
         "question": "What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other",
-        "examples": [
+        "cot_examples": [
             {
                 "intent": "Optimize supply chain management in Investment banks",
                 "answer": "Strategy",
@@ -31,7 +31,7 @@
     },
     {
         "question": "In which environment is the system used?",
-        "examples": [
+        "cot_examples": [
             {
                 "intent": "Find patterns in healthcare insurance claims",
                 "answer": "Insurance Claims Processing or Risk Management or Data Analytics",
@@ -61,7 +61,7 @@
     },
     {
         "question": "What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning",
-        "examples": [
+        "cot_examples": [
             {
                 "intent": "Find patterns in healthcare insurance claims",
                 "answer": "Natural language processing: text classification",
@@ -81,7 +81,7 @@
     },
     {
         "question": "Who is the intended user of the system?",
-        "examples": [
+        "cot_examples": [
             {
                 "intent": "Find patterns in healthcare insurance claims",
                 "answer": "Insurance companies, government agencies, or other organizations responsible for reimbursing healthcare providers",
@@ -111,7 +111,7 @@
     },
     {
         "question": "What is the intended purpose of the system?",
-        "examples": [
+        "cot_examples": [
             {
                 "intent": "Provide a dashboard to track sales performance by region and product line",
                 "answer": "To create a centralized monitoring system that allows executives to visualize key sales metrics, identify trends, and make data-driven decisions about resource allocation and business strategy.",
@@ -136,7 +136,7 @@
     },
     {
         "question": "What is the application of the system?",
-        "examples": [
+        "cot_examples": [
             {
                 "intent": "Provide a dashboard to track sales performance by region and product line",
                 "answer": "Natural Language Processing (NLP): Analyze sales data to identify trends, patterns, and correlations between regions, products, and sales metrics.\n Machine Learning (ML): Develop predictive models to forecast future sales performance based on historical data and seasonal fluctuations.\n Computer Vision: Integrate with CRM systems to visualize sales pipelines, track customer interactions, and monitor pipeline health.",
@@ -161,7 +161,7 @@
     },
     {
         "question": "Who is the subject as per the intent?",
-        "examples": [
+        "cot_examples": [
             {
                 "intent": "Find patterns in healthcare insurance claims",
                 "answer": "Healthcare insurance claims data",

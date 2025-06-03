@@ -22,36 +22,36 @@ URI: [schema:Organization](http://schema.org/Organization)
     click Organization href "../Organization"
       Entity <|-- Organization
         click Entity href "../Entity"
-      
+
 
       Organization <|-- AiOffice
         click AiOffice href "../AiOffice"
       Organization <|-- AiProvider
         click AiProvider href "../AiProvider"
-      
-      
+
+
       Organization : dateCreated
-        
+
       Organization : dateModified
-        
+
       Organization : description
-        
+
       Organization : grants_license
-        
-          
-    
-    
+
+
+
+
     Organization --> "0..1" License : grants_license
     click License href "../License"
 
-        
+
       Organization : id
-        
+
       Organization : name
-        
+
       Organization : url
-        
-      
+
+
 ```
 
 

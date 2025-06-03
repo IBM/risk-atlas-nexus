@@ -17,20 +17,20 @@ URI: [dpv:Severity](https://w3c.github.io/dpv/2.1/dpv/#Severity)
     click Severity href "../Severity"
       Entity <|-- Severity
         click Entity href "../Entity"
-      
+
       Severity : dateCreated
-        
+
       Severity : dateModified
-        
+
       Severity : description
-        
+
       Severity : id
-        
+
       Severity : name
-        
+
       Severity : url
-        
-      
+
+
 ```
 
 

@@ -1,6 +1,7 @@
-import os
 import json
+import os
 from pathlib import Path
+
 
 PACKAGEDIR = Path(__file__).parent.absolute()
 

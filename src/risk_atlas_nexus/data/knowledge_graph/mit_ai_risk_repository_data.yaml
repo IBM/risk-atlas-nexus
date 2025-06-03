@@ -261,12 +261,12 @@ risks:
   isPartOf: mit-ai-risk-domain-7
 - id: mit-ai-causal-risk-entity-ai
   name: AI
-  description: The risk is caused by a decision or action made by an AI system 
+  description: The risk is caused by a decision or action made by an AI system
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-entity
 - id: mit-ai-causal-risk-entity-human
   name: Human
-  description: The risk is caused by a decision or action made by humans 
+  description: The risk is caused by a decision or action made by humans
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-entity
 - id: mit-ai-causal-risk-entity-other

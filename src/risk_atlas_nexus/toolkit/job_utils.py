@@ -1,6 +1,7 @@
-from typing import Optional
-from tqdm.autonotebook import tqdm
 from multiprocessing.pool import ThreadPool
+from typing import Optional
+
+from tqdm.autonotebook import tqdm
 
 
 # Run tasks in parallel using Python’s multiprocessing module. Concurrency depends on the number of

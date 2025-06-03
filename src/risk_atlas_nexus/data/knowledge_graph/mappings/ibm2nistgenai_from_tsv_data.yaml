@@ -485,4 +485,3 @@ risks:
 - id: nist-information-integrity
   narrowMatch:
   - atlas-untraceable-attribution
-

@@ -22,80 +22,80 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
     click AiEval href "../AiEval"
       Entity <|-- AiEval
         click Entity href "../Entity"
-      
+
 
       AiEval <|-- Question
         click Question href "../Question"
       AiEval <|-- Questionnaire
         click Questionnaire href "../Questionnaire"
-      
-      
+
+
       AiEval : bestValue
-        
+
       AiEval : dateCreated
-        
+
       AiEval : dateModified
-        
+
       AiEval : description
-        
+
       AiEval : hasBenchmarkMetadata
-        
-          
-    
-    
+
+
+
+
     AiEval --> "*" BenchmarkMetadataCard : hasBenchmarkMetadata
     click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
 
-        
+
       AiEval : hasDataset
-        
-          
-    
-    
+
+
+
+
     AiEval --> "*" Dataset : hasDataset
     click Dataset href "../Dataset"
 
-        
+
       AiEval : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     AiEval --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       AiEval : hasImplementation
-        
+
       AiEval : hasLicense
-        
-          
-    
-    
+
+
+
+
     AiEval --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       AiEval : hasRelatedRisk
-        
-          
-    
-    
+
+
+
+
     AiEval --> "*" Risk : hasRelatedRisk
     click Risk href "../Risk"
 
-        
+
       AiEval : hasTasks
-        
+
       AiEval : hasUnitxtCard
-        
+
       AiEval : id
-        
+
       AiEval : name
-        
+
       AiEval : url
-        
-      
+
+
 ```
 
 

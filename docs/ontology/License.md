@@ -22,22 +22,22 @@ URI: [airo:License](https://w3id.org/airo#License)
     click License href "../License"
       Entity <|-- License
         click Entity href "../Entity"
-      
+
       License : dateCreated
-        
+
       License : dateModified
-        
+
       License : description
-        
+
       License : id
-        
+
       License : name
-        
+
       License : url
-        
+
       License : version
-        
-      
+
+
 ```
 
 

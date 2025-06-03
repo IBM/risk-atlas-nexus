@@ -22,47 +22,47 @@ URI: [schema:Dataset](http://schema.org/Dataset)
     click Dataset href "../Dataset"
       Entity <|-- Dataset
         click Entity href "../Entity"
-      
+
       Dataset : dateCreated
-        
+
       Dataset : dateModified
-        
+
       Dataset : description
-        
+
       Dataset : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     Dataset --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       Dataset : hasLicense
-        
-          
-    
-    
+
+
+
+
     Dataset --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       Dataset : id
-        
+
       Dataset : name
-        
+
       Dataset : provider
-        
-          
-    
-    
+
+
+
+
     Dataset --> "0..1" Organization : provider
     click Organization href "../Organization"
 
-        
+
       Dataset : url
-        
-      
+
+
 ```
 
 

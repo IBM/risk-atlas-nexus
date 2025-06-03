@@ -12,7 +12,8 @@ dictionary of key/value pairs, and the `FewShotPromptBuilder`, which accepts a l
 dictionaries containing key/value pairs and the CoT examples.
 """
 
-from typing import List, Any
+from typing import Any, List
+
 from jinja2 import Template
 
 

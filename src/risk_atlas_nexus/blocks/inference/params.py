@@ -1,5 +1,6 @@
 import dataclasses
-from typing import Any, Dict, List, Literal, Optional, TypedDict, Union, TypeAlias
+from typing import Any, Dict, List, Literal, Optional, TypeAlias, TypedDict, Union
+
 from openai.types.chat import ChatCompletionMessageParam
 
 

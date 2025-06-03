@@ -22,49 +22,49 @@ URI: [nexus:Action](https://ibm.github.io/risk-atlas-nexus/ontology/Action)
     click Action href "../Action"
       Entity <|-- Action
         click Entity href "../Entity"
-      
+
       Action : dateCreated
-        
+
       Action : dateModified
-        
+
       Action : description
-        
+
       Action : hasAiActorTask
-        
+
       Action : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     Action --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       Action : hasRelatedRisk
-        
-          
-    
-    
+
+
+
+
     Action --> "*" Risk : hasRelatedRisk
     click Risk href "../Risk"
 
-        
+
       Action : id
-        
+
       Action : isDefinedByTaxonomy
-        
-          
-    
-    
+
+
+
+
     Action --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
     click RiskTaxonomy href "../RiskTaxonomy"
 
-        
+
       Action : name
-        
+
       Action : url
-        
-      
+
+
 ```
 
 

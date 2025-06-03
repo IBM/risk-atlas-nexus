@@ -24,47 +24,47 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
         click RiskConcept href "../RiskConcept"
       Entity <|-- RiskControl
         click Entity href "../Entity"
-      
+
       RiskControl : dateCreated
-        
+
       RiskControl : dateModified
-        
+
       RiskControl : description
-        
+
       RiskControl : detectsRiskConcept
-        
-          
-    
-    
+
+
+
+
     RiskControl --> "*" RiskConcept : detectsRiskConcept
     click RiskConcept href "../RiskConcept"
 
-        
+
       RiskControl : id
-        
+
       RiskControl : isDefinedByTaxonomy
-        
-          
-    
-    
+
+
+
+
     RiskControl --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
     click RiskTaxonomy href "../RiskTaxonomy"
 
-        
+
       RiskControl : isDetectedBy
-        
-          
-    
-    
+
+
+
+
     RiskControl --> "*" RiskControl : isDetectedBy
     click RiskControl href "../RiskControl"
 
-        
+
       RiskControl : name
-        
+
       RiskControl : url
-        
-      
+
+
 ```
 
 

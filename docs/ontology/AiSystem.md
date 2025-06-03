@@ -22,90 +22,90 @@ URI: [airo:AISystem](https://w3id.org/airo#AISystem)
     click AiSystem href "../AiSystem"
       BaseAi <|-- AiSystem
         click BaseAi href "../BaseAi"
-      
+
 
       AiSystem <|-- AiAgent
         click AiAgent href "../AiAgent"
-      
-      
+
+
       AiSystem : dateCreated
-        
+
       AiSystem : dateModified
-        
+
       AiSystem : description
-        
+
       AiSystem : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     AiSystem --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       AiSystem : hasEuAiSystemType
-        
-          
-    
-    
+
+
+
+
     AiSystem --> "0..1" AiSystemType : hasEuAiSystemType
     click AiSystemType href "../AiSystemType"
 
-        
+
       AiSystem : hasEuRiskCategory
-        
-          
-    
-    
+
+
+
+
     AiSystem --> "0..1" EuAiRiskCategory : hasEuRiskCategory
     click EuAiRiskCategory href "../EuAiRiskCategory"
 
-        
+
       AiSystem : hasLicense
-        
-          
-    
-    
+
+
+
+
     AiSystem --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       AiSystem : hasModelCard
-        
+
       AiSystem : id
-        
+
       AiSystem : isProvidedBy
-        
-          
-    
-    
+
+
+
+
     AiSystem --> "0..1" AiProvider : isProvidedBy
     click AiProvider href "../AiProvider"
 
-        
+
       AiSystem : name
-        
+
       AiSystem : performsTask
-        
-          
-    
-    
+
+
+
+
     AiSystem --> "*" AiTask : performsTask
     click AiTask href "../AiTask"
 
-        
+
       AiSystem : producer
-        
-          
-    
-    
+
+
+
+
     AiSystem --> "0..1" Organization : producer
     click Organization href "../Organization"
 
-        
+
       AiSystem : url
-        
-      
+
+
 ```
 
 

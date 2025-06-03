@@ -2,9 +2,10 @@ import json
 import os
 from abc import ABC, abstractmethod
 from typing import Optional
-from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
+
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Container,
+    Risk,
     RiskTaxonomy,
 )
 from risk_atlas_nexus.blocks.inference.base import InferenceEngine

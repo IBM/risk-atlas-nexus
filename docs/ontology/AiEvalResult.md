@@ -24,33 +24,33 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
         click Fact href "../Fact"
       Entity <|-- AiEvalResult
         click Entity href "../Entity"
-      
+
       AiEvalResult : dateCreated
-        
+
       AiEvalResult : dateModified
-        
+
       AiEvalResult : description
-        
+
       AiEvalResult : evidence
-        
+
       AiEvalResult : id
-        
+
       AiEvalResult : isResultOf
-        
-          
-    
-    
+
+
+
+
     AiEvalResult --> "0..1" AiEval : isResultOf
     click AiEval href "../AiEval"
 
-        
+
       AiEvalResult : name
-        
+
       AiEvalResult : url
-        
+
       AiEvalResult : value
-        
-      
+
+
 ```
 
 

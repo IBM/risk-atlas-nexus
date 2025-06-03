@@ -23,16 +23,16 @@ classes:
 enums:
   EuAiRiskCategory:
     permissible_values:
-      MINIMAL: 
+      MINIMAL:
       LIMITED:
-      HIGH: 
+      HIGH:
       UNACCEPTABLE:
 
   AiSystemType:
     permissible_values:
-      GPAI: 
+      GPAI:
         description: General-purpose AI (GPAI)
-      GPAI_OS: 
+      GPAI_OS:
         description: General-purpose AI (GPAI) models released under free and open-source licences
       PROHIBITED:
         description: Prohibited AI system due to unacceptable risk category (e.g. social scoring systems and manipulative AI).
@@ -48,16 +48,16 @@ slots:
     description: A relationship indicating that an entity has been deployed by an organization.
     range: Organization
     inlined_as_list: true
-  isImportedBy: 
+  isImportedBy:
     description: A relationship indicating that an entity has been imported by an organization.
     range: Organization
     inlined_as_list: true
-  isDistributedBy: 
+  isDistributedBy:
     description: A relationship indicating that an entity has been distributed by an organization.
     range: Organization
     inlined_as_list: true
   hasEuAiSystemType:
-    description: The type of system as defined by the EU AI Act. 
+    description: The type of system as defined by the EU AI Act.
     range: AiSystemType
   hasEuRiskCategory:
     description: The risk category of an AI system as defined by the EU AI Act.

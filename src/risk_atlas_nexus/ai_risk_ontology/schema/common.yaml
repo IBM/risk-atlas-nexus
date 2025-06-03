@@ -59,7 +59,7 @@ classes:
     description: Documented information about a concept or other topic(s) of interest.
     slots:
       - hasLicense
-  
+
   Fact:
     abstract: true
     class_uri: schema:Statement
@@ -97,7 +97,7 @@ slots:
     description: The date on which the entity was most recently modified.
   version:
     slot_uri: schema:version
-    description: The version of the entity embodied by a specified resource.    
+    description: The version of the entity embodied by a specified resource.
   hasDocumentation:
     slot_uri: airo:hasDocumentation
     range: Documentation
@@ -117,7 +117,7 @@ slots:
     multivalued: true
     inlined: false
     description: A relationship to datasets that are used.
-  producer: 
+  producer:
     range: Organization
     description: A relationship to the Organization instance which produces this instance.
   provider:
@@ -139,4 +139,3 @@ slots:
     slot_uri: schema:hasPart
     description: A relationship where an entity has another entity
     multivalued: true
-

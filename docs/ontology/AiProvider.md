@@ -22,29 +22,29 @@ URI: [airo:AIProvider](https://w3id.org/airo#AIProvider)
     click AiProvider href "../AiProvider"
       Organization <|-- AiProvider
         click Organization href "../Organization"
-      
+
       AiProvider : dateCreated
-        
+
       AiProvider : dateModified
-        
+
       AiProvider : description
-        
+
       AiProvider : grants_license
-        
-          
-    
-    
+
+
+
+
     AiProvider --> "0..1" License : grants_license
     click License href "../License"
 
-        
+
       AiProvider : id
-        
+
       AiProvider : name
-        
+
       AiProvider : url
-        
-      
+
+
 ```
 
 

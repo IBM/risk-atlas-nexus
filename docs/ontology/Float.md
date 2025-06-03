@@ -44,6 +44,3 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 | self | xsd:float |
 | native | nexus:float |
 | exact | schema:Float |
-
-
-

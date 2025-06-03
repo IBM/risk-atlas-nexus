@@ -24,114 +24,114 @@ URI: [https://w3id.org/dpv/risk#Incident](https://w3id.org/dpv/risk#Incident)
         click RiskConcept href "../RiskConcept"
       Entity <|-- RiskIncident
         click Entity href "../Entity"
-      
+
       RiskIncident : author
-        
+
       RiskIncident : dateCreated
-        
+
       RiskIncident : dateModified
-        
+
       RiskIncident : description
-        
+
       RiskIncident : hasConsequence
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" Consequence : hasConsequence
     click Consequence href "../Consequence"
 
-        
+
       RiskIncident : hasImpact
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" Impact : hasImpact
     click Impact href "../Impact"
 
-        
+
       RiskIncident : hasImpactOn
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" Impact : hasImpactOn
     click Impact href "../Impact"
 
-        
+
       RiskIncident : hasLikelihood
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" Likelihood : hasLikelihood
     click Likelihood href "../Likelihood"
 
-        
+
       RiskIncident : hasSeverity
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" Severity : hasSeverity
     click Severity href "../Severity"
 
-        
+
       RiskIncident : hasStatus
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" IncidentStatus : hasStatus
     click IncidentStatus href "../IncidentStatus"
 
-        
+
       RiskIncident : hasVariant
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" RiskIncident : hasVariant
     click RiskIncident href "../RiskIncident"
 
-        
+
       RiskIncident : id
-        
+
       RiskIncident : isDefinedByTaxonomy
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
     click RiskTaxonomy href "../RiskTaxonomy"
 
-        
+
       RiskIncident : isDetectedBy
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "*" RiskControl : isDetectedBy
     click RiskControl href "../RiskControl"
 
-        
+
       RiskIncident : name
-        
+
       RiskIncident : refersToRisk
-        
-          
-    
-    
+
+
+
+
     RiskIncident --> "*" Risk : refersToRisk
     click Risk href "../Risk"
 
-        
+
       RiskIncident : source_uri
-        
+
       RiskIncident : url
-        
-      
+
+
 ```
 
 

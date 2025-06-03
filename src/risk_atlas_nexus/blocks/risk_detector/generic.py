@@ -2,10 +2,10 @@ import json
 
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 from risk_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
+from risk_atlas_nexus.blocks.prompt_builder import FewShotPromptBuilder
+from risk_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 from risk_atlas_nexus.blocks.prompt_templates import RISK_IDENTIFICATION_TEMPLATE
 from risk_atlas_nexus.blocks.risk_detector import RiskDetector
-from risk_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
-from risk_atlas_nexus.blocks.prompt_builder import FewShotPromptBuilder
 
 
 class GenericRiskDetector(RiskDetector):
@@ -13,7 +13,7 @@ class GenericRiskDetector(RiskDetector):
     def detect(self, usecases: list[str]) -> list[Risk]:
         prompts = [
             FewShotPromptBuilder(prompt_template=RISK_IDENTIFICATION_TEMPLATE).build(
-                cot_examples=self._examples["examples"],
+                cot_examples=self._examples["cot_examples"],
                 usecase=usecase,
                 risks=json.dumps(
                     [

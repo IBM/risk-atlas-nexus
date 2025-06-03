@@ -22,98 +22,98 @@ URI: [nexus:AiModel](https://ibm.github.io/risk-atlas-nexus/ontology/AiModel)
     click AiModel href "../AiModel"
       BaseAi <|-- AiModel
         click BaseAi href "../BaseAi"
-      
+
 
       AiModel <|-- LargeLanguageModel
         click LargeLanguageModel href "../LargeLanguageModel"
-      
-      
+
+
       AiModel : architecture
-        
+
       AiModel : carbon_emitted
-        
+
       AiModel : dateCreated
-        
+
       AiModel : dateModified
-        
+
       AiModel : description
-        
+
       AiModel : gpu_hours
-        
+
       AiModel : hasDocumentation
-        
-          
-    
-    
+
+
+
+
     AiModel --> "*" Documentation : hasDocumentation
     click Documentation href "../Documentation"
 
-        
+
       AiModel : hasEvaluation
-        
-          
-    
-    
+
+
+
+
     AiModel --> "*" AiEvalResult : hasEvaluation
     click AiEvalResult href "../AiEvalResult"
 
-        
+
       AiModel : hasLicense
-        
-          
-    
-    
+
+
+
+
     AiModel --> "0..1" License : hasLicense
     click License href "../License"
 
-        
+
       AiModel : hasModelCard
-        
+
       AiModel : hasRiskControl
-        
-          
-    
-    
+
+
+
+
     AiModel --> "*" RiskControl : hasRiskControl
     click RiskControl href "../RiskControl"
 
-        
+
       AiModel : id
-        
+
       AiModel : isProvidedBy
-        
-          
-    
-    
+
+
+
+
     AiModel --> "0..1" AiProvider : isProvidedBy
     click AiProvider href "../AiProvider"
 
-        
+
       AiModel : name
-        
+
       AiModel : performsTask
-        
-          
-    
-    
+
+
+
+
     AiModel --> "*" AiTask : performsTask
     click AiTask href "../AiTask"
 
-        
+
       AiModel : power_consumption_w
-        
+
       AiModel : producer
-        
-          
-    
-    
+
+
+
+
     AiModel --> "0..1" Organization : producer
     click Organization href "../Organization"
 
-        
+
       AiModel : url
-        
-      
+
+
 ```
 
 

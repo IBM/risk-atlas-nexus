@@ -1,10 +1,10 @@
 ---
-name: Enhancement  
+name: Enhancement
 about: Complete the following form to suggest an enhancement
 labels: enhancement
 ---
 
-# Enhancement 
+# Enhancement
 <!-- Please, complete the following form to suggest an enhancement. If some fields do not apply to your situation, feel free to skip them.-->
 
 ## Description of the Enhancement:

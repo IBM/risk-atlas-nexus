@@ -12372,4 +12372,3 @@ aimodels:
   hasOutputModality:
   - modality-text
   isPartOf: ibm-granite
-
