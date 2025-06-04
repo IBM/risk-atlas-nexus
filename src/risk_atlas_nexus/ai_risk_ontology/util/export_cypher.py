@@ -3,8 +3,8 @@ Generate Cypher code from linkml instance specifications.
 """
 
 # Standard Library
-from os import listdir
-from os.path import isfile, join
+from os import listdir, makedirs
+from os.path import isdir, isfile, join
 from pathlib import Path
 from typing import Any
 
@@ -295,6 +295,7 @@ def export_data_to_cypher(container: Container) -> str:
 
 if __name__ == "__main__":
     ontology = load_yamls_to_container(MAPPING_DIR)
+    makedirs(OUTPUT_DIR, exist_ok=True)
     with open(
         OUTPUT_DIR + "ai-risk-ontology.cypher", "+tw", encoding="utf-8"
     ) as output_file:
