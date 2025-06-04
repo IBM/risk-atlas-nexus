@@ -4,7 +4,7 @@ Generate Cypher code from linkml instance specifications.
 
 # Standard Library
 from os import listdir, makedirs
-from os.path import isdir, isfile, join
+from os.path import isfile, join
 from pathlib import Path
 from typing import Any
 
@@ -52,28 +52,7 @@ class GraphEdge:
         return f"{self.label}: {self.source_id}/{self.source_label} -> {self.target_id}/{self.target_label}"
 
     def to_cypher(self) -> str:
-        qb = QueryBuilder()
-        return (
-            str(
-                qb.match()
-                .node(
-                    labels=self.source_label,
-                    ref_name="src",
-                    properties={"id": self.source_id},
-                )
-                .match()
-                .node(
-                    labels=self.target_label,
-                    ref_name="dst",
-                    properties={"id": self.target_id},
-                )
-                .merge()
-                .node(ref_name="src")
-                .related_to(label=self.label)
-                .node(ref_name="dst")
-            )
-            + ";\n"
-        )
+        return f'MATCH (src: {self.source_label} {{id: "{self.source_id}"}}) MATCH (dst: {self.target_label} {{id: "{self.target_id}"}}) MERGE (src)-[: {self.label}]->(dst);\n'
 
 
 class GraphNode:
@@ -95,13 +74,6 @@ class GraphNode:
         self.edges = relations
 
     def to_cypher(self, with_relations: bool = True) -> str:
-        qb = QueryBuilder()
-        # merge_node = (
-        #     qb.merge()
-        #     .node(labels=self.label, ref_name="node", properties={"id": self.id})
-        #     .on_create()
-        #     .set(self.properties)
-        # )
         merge_node = "MERGE (node:" + self.label + ' {id: "' + self.id + '"})'
         if self.properties:
             merge_node += (
