@@ -1,7 +1,5 @@
-import json
-import os
 from abc import ABC, abstractmethod
-from typing import Optional
+from typing import List, Optional
 
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Container,
@@ -63,5 +61,5 @@ class RiskDetector(ABC):
             )
 
     @abstractmethod
-    def detect(self, usecases: list[str]) -> list[Risk]:
+    def detect(self, usecases: List[str]) -> List[List[Risk]]:
         raise NotImplementedError

@@ -1,4 +1,5 @@
 import json
+from typing import List
 
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 from risk_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
@@ -10,7 +11,7 @@ from risk_atlas_nexus.blocks.risk_detector import RiskDetector
 
 class GenericRiskDetector(RiskDetector):
 
-    def detect(self, usecases: list[str]) -> list[Risk]:
+    def detect(self, usecases: List[str]) -> List[List[Risk]]:
         prompts = [
             FewShotPromptBuilder(prompt_template=RISK_IDENTIFICATION_TEMPLATE).build(
                 cot_examples=self._examples["cot_examples"],
@@ -32,10 +33,12 @@ class GenericRiskDetector(RiskDetector):
         json_schema["items"]["enum"] = [risk.name for risk in self._risks]
 
         # Invoke inference service
-        inference_response = self.inference_engine.generate(
-            prompts,
-            response_format=json_schema,
-            postprocessors=["list_of_str"],
+        inference_response: List[TextGenerationInferenceOutput] = (
+            self.inference_engine.generate(
+                prompts,
+                response_format=json_schema,
+                postprocessors=["list_of_str"],
+            )
         )
 
         return [
