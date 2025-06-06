@@ -14,10 +14,14 @@ readme = "README.md"
 requires-python = ">=3.11, <3.12"
 classifiers = [
     "Intended Audience :: Developers",
-    "Topic :: Software Development :: AI Risks and governance",
+    "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "Topic :: Software Development"
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows"
 ]
 dependencies = [
     "linkml",
