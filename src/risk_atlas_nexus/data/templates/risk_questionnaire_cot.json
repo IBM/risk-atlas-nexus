@@ -1,5 +1,6 @@
 [
     {
+        "no": "Q1",
         "question": "What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other",
         "cot_examples": [
             {
@@ -30,6 +31,7 @@
         ]
     },
     {
+        "no": "Q2",
         "question": "In which environment is the system used?",
         "cot_examples": [
             {
@@ -60,6 +62,7 @@
         ]
     },
     {
+        "no": "Q3",
         "question": "What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning",
         "cot_examples": [
             {
@@ -80,6 +83,7 @@
         ]
     },
     {
+        "no": "Q4",
         "question": "Who is the intended user of the system?",
         "cot_examples": [
             {
@@ -110,6 +114,7 @@
         ]
     },
     {
+        "no": "Q5",
         "question": "What is the intended purpose of the system?",
         "cot_examples": [
             {
@@ -135,6 +140,7 @@
         ]
     },
     {
+        "no": "Q6",
         "question": "What is the application of the system?",
         "cot_examples": [
             {
@@ -160,6 +166,7 @@
         ]
     },
     {
+        "no": "Q7",
         "question": "Who is the subject as per the intent?",
         "cot_examples": [
             {

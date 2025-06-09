@@ -1,3 +1,5 @@
+from typing import List
+
 from jinja2 import Template
 
 from risk_atlas_nexus.blocks.prompt_response_schema import RISK_CATEGORY_SCHEMA
@@ -16,55 +18,57 @@ class RiskSeverity:
     def __init__(self, inference_engine):
         self.inference_engine = inference_engine
 
-    def categorize(self, usecases, domains, ai_tasks, ai_users, ai_subjects):
-        """Categorize risk severity from a usecase description
+    def categorize(
+        self,
+        usecase: str,
+        domain: List[str],
+        ai_task: str,
+        ai_user: str,
+        ai_subject: str,
+    ):
+        """Categorize the severity of risks based on the use case description.
 
         Args:
-            usecases (List[str]):
-                A List of strings describing AI usecases
-            domains (List[str]):
-                A List of strings containing domain type per usercase
-            ai_tasks (List[List[str]]):
-                A List of ai tasks per usercase
-            ai_users (List[str]):
-                A List of strings containing ai user per usercase
-            ai_subjects (List[str]):
-                A List of strings containing ai subject per usercase
+            usecase (str):
+                A usecase description
+            domain (str):
+                Domain type of usecase
+            ai_task (List[str]):
+                AI tasks inferred from usercase
+            ai_user (str):
+                AI user inferred from usercase
+            ai_subject (str):
+                AI subject inferred from  usercase
 
         Returns:
-            List[Dict]:
-                List of result containing risk categorisation information
+            Dict: Risk categorisation information
         """
-        # Prepare inference prompts
+
+        # Prepare a risk categorization inference message to be used with the inference engine.
         messages = [
-            [
-                {
-                    "role": "system",
-                    "content": Template(RISK_SEVERITY_INSTRUCTION).render(),
-                },
-                {
-                    "role": "user",
-                    "content": Template(RISK_SEVERITY_TEMPLATE).render(
-                        userIntent=usecase,
-                        domain=domain,
-                        aiTasks=ai_task,
-                        aiUser=ai_user,
-                        aiSubject=ai_subject,
-                    ),
-                },
-            ]
-            for usecase, domain, ai_task, ai_user, ai_subject in zip(
-                usecases, domains, ai_tasks, ai_users, ai_subjects
-            )
+            {
+                "role": "system",
+                "content": Template(RISK_SEVERITY_INSTRUCTION).render(),
+            },
+            {
+                "role": "user",
+                "content": Template(RISK_SEVERITY_TEMPLATE).render(
+                    userIntent=usecase,
+                    domain=domain,
+                    aiTasks=ai_task,
+                    aiUser=ai_user,
+                    aiSubject=ai_subject,
+                ),
+            },
         ]
 
         # Invoke inference service
         return [
             result.prediction
             for result in self.inference_engine.chat(
-                messages=messages,
+                messages=[messages],
                 response_format=RISK_CATEGORY_SCHEMA,
                 postprocessors=["json_object"],
                 verbose=False,
             )
-        ]
+        ][0]
