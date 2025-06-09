@@ -1,6 +1,6 @@
 # Risk Atlas Nexus
 
-<img src="resources/images/risk_atlas_nexus_vector.svg" width="200">
+<img src="https://github.com/IBM/risk-atlas-nexus/blob/main/resources/images/risk_atlas_nexus_vector.svg?raw=true" width="200">
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0) ![main branch](https://github.com/IBM/risk-atlas-nexus/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main) [![](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/) <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
@@ -21,14 +21,15 @@ Our intention is to create a starting point for an open AI Systems ontology whos
 - 🚨🧐 Use the python library methods to detect potential risks in your usecase
 - 📤📈 Download an exported graph populated with data instances
 - ✨📝 Example use-case of auto-assistance in compliance questionnaires using CoT examples and Risk Atlas Nexus
+- 🔧↔️ Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database
 
 ## Architecture
 
-![Architecture](resources/images/architecture.png)
+![Architecture](https://github.com/IBM/risk-atlas-nexus/blob/main/resources/images/architecture.png?raw=true)
 
 ### Coming soon
 
-- Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database
+-
 
 ## Links
 

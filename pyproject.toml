@@ -1,7 +1,8 @@
 [project]
 name = "risk_atlas_nexus"
-version = "0.0.3"
+version = "0.0.5"
 authors = [
+    { name = "Risk Atlas Nexus", email = "risk-atlas-nexus@ibm.com" },
     { name = "Elizabeth Daly", email = "elizabeth.daly@ie.ibm.com" },
     { name = "Dhaval Salwala", email = "dhaval.vinodbhai.salwala@ibm.com" },
     { name = "Frank Bagehorn", email = "fba@zurich.ibm.com" },
@@ -9,15 +10,33 @@ authors = [
     { name = "Sean Rooney", email = "sro@zurich.ibm.com" },
     { name = "Inge Vejsbjerg", email = "ingevejs@ie.ibm.com" },
 ]
+keywords = [
+    "ai risks",
+    "ai safety",
+    "ai governance",
+    "risk taxonomies",
+    "risk identification",
+    "risk detection",
+    "ai task identification",
+    "ai risk management",
+    "ai risk questionnaire",
+    "ai systems modelling",
+    "knowledge graph",
+    "chain of thought",
+]
 description = "Risk Atlas Nexus provides tooling to help bring together disparate resources related to governance of foundation models. "
 readme = "README.md"
 requires-python = ">=3.11, <3.12"
 classifiers = [
     "Intended Audience :: Developers",
-    "Topic :: Software Development :: AI Risks and governance",
+    "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
 ]
 dependencies = [
     "linkml",
@@ -34,7 +53,7 @@ dependencies = [
     "openai>=1.0",
     "txtai",
     "isort",
-    "pre-commit"
+    "pre-commit",
 ]
 
 
@@ -60,3 +79,9 @@ remove_redundant_aliases = true
 group_by_package = true
 combine_star = true
 lines_after_imports = 2
+
+[project.urls]
+Homepage = "https://github.com/IBM/risk-atlas-nexus"
+Documentation = "https://ibm.github.io/risk-atlas-nexus/"
+Changelog = "https://github.com/IBM/risk-atlas-nexus/blob/main/CHANGELOG.md"
+Issues = "https://github.com/IBM/risk-atlas-nexus/issues"

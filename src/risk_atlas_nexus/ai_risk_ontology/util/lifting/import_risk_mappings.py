@@ -96,7 +96,7 @@ def write_to_file(output_risks, output_file):
 if __name__ == "__main__":
     logger.info(f"Processing mapping files in : %s", MAP_DIR)
     mapping_files = [
-        file_name for file_name in listdir(MAP_DIR) if isfile(join(MAP_DIR, file_name))
+        file_name for file_name in listdir(MAP_DIR) if (isfile(join(MAP_DIR, file_name) and not file_name.endswith(".md")))
     ]
     for file_name in mapping_files:
         output_file = DATA_DIR + Path(file_name).stem + "_from_tsv_data.yaml"

@@ -29,6 +29,7 @@ help: status
 	@echo "make regenerate_graph_output -- export the graph with all instances"
 	@echo "make regenerate_owl_schema -- export the schema as OWL"
 	@echo "make regenerate_risk_atlas_as_tex -- export the IBM AI risk atlas as .tex"
+	@echo "make regenerate_cypher_code -- export the graph with all instances to Cypher queries"
 	@echo "make lint_schema -- schema linter shortcut"
 	@echo ""
 
@@ -53,6 +54,9 @@ regenerate_owl_schema:
 
 regenerate_risk_atlas_as_tex:
 	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py
+
+regenerate_cypher_code: lift_mappings_from_tsv
+	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_cypher.py
 
 lint_schema:
 	linkml-lint $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
