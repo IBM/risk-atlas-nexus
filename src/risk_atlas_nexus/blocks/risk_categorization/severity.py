@@ -13,7 +13,7 @@ from risk_atlas_nexus.toolkit.logging import configure_logger
 logger = configure_logger(__name__)
 
 
-class RiskSeverity:
+class RiskSeverityCategorizer:
 
     def __init__(self, inference_engine):
         self.inference_engine = inference_engine

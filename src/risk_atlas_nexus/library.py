@@ -39,7 +39,7 @@ from risk_atlas_nexus.blocks.prompt_templates import (
     AI_TASKS_TEMPLATE,
     QUESTIONNAIRE_COT_TEMPLATE,
 )
-from risk_atlas_nexus.blocks.risk_categorization.severity import RiskSeverity
+from risk_atlas_nexus.blocks.risk_categorization.severity import RiskSeverityCategorizer
 from risk_atlas_nexus.blocks.risk_detector import AutoRiskDetector
 from risk_atlas_nexus.blocks.risk_explorer import RiskExplorer
 from risk_atlas_nexus.blocks.risk_mapping import RiskMapper
@@ -1223,7 +1223,7 @@ class RiskAtlasNexus:
         )
 
         # Create Risk Severity instance
-        risk_severity = RiskSeverity(inference_engine)
+        risk_severity = RiskSeverityCategorizer(inference_engine)
 
         # Load risk questionnaire CoT from the template dir
         risk_questionnaire = load_resource("risk_questionnaire_cot.json")
