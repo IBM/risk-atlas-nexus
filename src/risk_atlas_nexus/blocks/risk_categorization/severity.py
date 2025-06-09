@@ -1,3 +1,12 @@
+"""
+This file utilizes prompt templates that have been adapted from the source provided
+here: https://github.com/sanja7s/AIDesign/blob/main/RiskGen_AI_Design.ipynb. The
+RISK_SEVERITY_INSTRUCTION and RISK_SEVERITY_TEMPLATE prompt templates used below follow
+the same instructions as given in the above link but have been modified to align with the
+AI Act's risk-based categories shared here:
+https://researchsummit.ie/wp-content/uploads/2022/10/AIRO-Delaram-Golpayegani.pdf
+"""
+
 from typing import List
 
 from jinja2 import Template
