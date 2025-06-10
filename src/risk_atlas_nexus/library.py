@@ -1192,7 +1192,7 @@ class RiskAtlasNexus:
         usecases: List[str],
         inference_engine: InferenceEngine,
     ):
-        """Determine the risk severity level based on a usecase description.
+        """Determine the severity of risks based on the use case description.
 
         Args:
             usecases (List[str]):
@@ -1201,7 +1201,7 @@ class RiskAtlasNexus:
                 An LLM inference engine
 
         Returns:
-            List[Dict]:
+            results (List[Dict]):
                 List of result containing risk categorisation information
         """
         type_check(
@@ -1225,56 +1225,56 @@ class RiskAtlasNexus:
         # Create Risk Severity instance
         risk_severity = RiskSeverityCategorizer(inference_engine)
 
-        # Load risk questionnaire CoT from the template dir
+        # Load risk questionnaire from the template dir
         risk_questionnaire = load_resource("risk_questionnaire_cot.json")
 
-        # Collecting required paramters for categorizing Risk Severity
-        # Get usecase domain
-        domains = [
-            domain.prediction["answer"]
-            for domain in self.identify_domain_from_usecases(
-                usecases, inference_engine=inference_engine, verbose=False
+        # Collecting required parameters for categorizing risk severity per usecase
+        results = []
+        for usecase in usecases:
+
+            # Get AI Domain of the usecase
+            domain = [
+                domain.prediction["answer"]
+                for domain in self.identify_domain_from_usecases(
+                    [usecase], inference_engine=inference_engine, verbose=False
+                )
+            ][0]
+            logger.info(f"AI Domain: {domain}")
+
+            # Using Risk Questionnaire to get the following parameters:
+            #
+            # 1. AI user (Q4) that interacts with the system inferred usecase
+            # 2. Intended purpose (Q5) of the AI System inferred from usecase
+            # 3. The capability of an AI system (Q6) to do what it is designed to do
+            # 4. AI subject (Q7) impacted by the AI System inferred from usecase
+            predictions = [
+                response.prediction["answer"]
+                for response in self.generate_few_shot_risk_questionnaire_output(
+                    usecase,
+                    list(
+                        filter(
+                            lambda question: question["no"] in ["Q4", "Q5", "Q6", "Q7"],
+                            risk_questionnaire,
+                        )
+                    ),
+                    inference_engine=inference_engine,
+                    verbose=False,
+                )
+            ]
+            ai_user = predictions[0]
+            logger.info(f"AI User: {ai_user}")
+            purpose = predictions[1]
+            logger.info(f"Purposes: {purpose}")
+            capability = predictions[2]
+            logger.info(f"Capability: {capability}")
+            ai_subject = predictions[3]
+            logger.info(f"AI Subject: {ai_subject}")
+
+            # Calling the risk categorization API with the required parameters.
+            results.append(
+                risk_severity.categorize(
+                    domain, purpose, capability, ai_user, ai_subject
+                )
             )
-        ]
-        logger.info(f"Domain: {domains}")
 
-        # Get ai task for usecases
-        ai_tasks = [
-            ai_task.prediction
-            for ai_task in self.identify_ai_tasks_from_usecases(
-                usecases, inference_engine=inference_engine, verbose=False
-            )
-        ]
-        logger.info(f"AI Tasks: {ai_tasks}")
-
-        # Get ai users for usecases
-        ai_users = [
-            self.generate_few_shot_risk_questionnaire_output(
-                usecase,
-                list(filter(lambda cot: cot["no"] in ["Q4"], risk_questionnaire)),
-                inference_engine=inference_engine,
-                verbose=False,
-            )[0].prediction["answer"]
-            for usecase in usecases
-        ]
-        logger.info(f"AI User: {ai_users}")
-
-        # Get ai subjects for usecases
-        ai_subjects = [
-            self.generate_few_shot_risk_questionnaire_output(
-                usecase,
-                list(filter(lambda cot: cot["no"] == "Q7", risk_questionnaire)),
-                inference_engine=inference_engine,
-                verbose=False,
-            )[0].prediction["answer"]
-            for usecase in usecases
-        ]
-        logger.info(f"AI Subject: {ai_subjects}")
-
-        # Calling the risk severity API with the necessary parameters.
-        return [
-            risk_severity.categorize(usecase, domain, ai_task, ai_user, ai_subject)
-            for usecase, domain, ai_task, ai_user, ai_subject in zip(
-                usecases, domains, ai_tasks, ai_users, ai_subjects
-            )
-        ]
+        return results

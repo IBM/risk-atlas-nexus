@@ -44,23 +44,24 @@ You have access to the entirety of the EU AI Act and its amendments, which outli
 
 RISK_SEVERITY_TEMPLATE = """
 
-        Classify the following AI system by utilizing a four-tier classification: 1) Unacceptable Risk, 2) High Risk, and 3) Limited Risk, 4) Minimal Risk
+        Classify the following AI system by utilizing a four-tier classification: 1) Unacceptable Risk 2) High Risk and 3) Limited Risk 4) Minimal Risk
 
         Follow these four steps below:
         1. Write a brief description of the AI system, using similar language to the EU AI Act. The description should start with "The AI system intended to be used ...", and be no longer than two sentences.
-        2. Determine whether the AI system is of Unacceptable Risk or High Risk, providing the exact text from the EU AI Act and explaining the reasoning. Be very strict and verify the reasoning.
+        2. Determine whether the AI system is of Unacceptable Risk, High Risk or Limited Risk providing the exact text from the EU AI Act and explaining the reasoning. Be very strict and verify the reasoning.
         Assume High Risk unless there is clear evidence for Unacceptable Risk. Pay particular attention to the subject and user of the AI system, as this is critical for classification.
-        Ensure that the subject and user align with the text. They are very important. Also, ensure that you understand the purpose and the capability of the AI system as this is highly critical for the risk classification.
+        Ensure that the subject and user align with the text. They are very important. Also, ensure that you understand the purpose of the AI system as this is highly critical for the risk classification.
         For example, the capability to verify patient identities by using AI technology implies the use of biometric identification of patients. Be aware of these and similar cases.
         3. Go through all the amendments to the EU AI Act and ensure that nothing has changed that would affect the classification.
         If something has changed, update the classification accordingly and explicitly reference the amendment that most closely resembles the AI system.
         The amendments can be found under the text: "Here are some important amendments to the Act:"
-        4. If the AI system is neither High Risk nor Unacceptable Risk or Limited Risk, classify it as Minimal Risk.
+        4. You should consider Limited Risk only if the relevant portions of the Act under Limited Risk apply to the AI system.
+        5. If the AI system does not fall into the categories of Unacceptable Risk, High Risk, or Limited Risk, it should be classified as Minimal Risk.
 
         It is of utmost importance to exercise precision and make accurate judgments when classifying the risk associated with the AI system.
         Please carefully consider all the regulations listed below during the risk classification of the AI system:
 
-        The relevant portions of the Act for what is unacceptable:
+        The relevant portions of the Act for what is Unacceptable risk:
         5.2.2. PROHIBITED ARTIFICIAL INTELLIGENCE PRACTICES (TITLE II)
         Title II establishes a list of prohibited AI. The regulation follows a risk-based approach,
         differentiating between uses of AI that create (i) an unacceptable risk, (ii) a high risk, and (iii)
@@ -279,6 +280,15 @@ RISK_SEVERITY_TEMPLATE = """
         (a) AI systems intended to assist a judicial authority in researching and
         interpreting facts and the law and in applying the law to a concrete set of facts.
 
+        The relevant portions of the Act for what is Limited Risk:
+        1. This refers to the risks associated with a need for transparency around the use of AI.
+        The AI Act introduces specific disclosure obligations to ensure that humans are informed when necessary to preserve trust.
+        For instance, when using AI systems such as chatbots and deepfakes, humans should be made aware that they are interacting with a
+        machine so they can take an informed decision.
+        2. Moreover, providers of generative AI have to ensure that AI-generated content is identifiable. On top of that,
+        certain AI-generated content should be clearly and visibly labelled, namely deep fakes and text published with the
+        purpose to inform the public on matters of public interest.
+
         Here are some important amendments to the EU AI Act: It is very important to consider them for the risk classification. Please read them carefully:
         Amendment 709
         Proposal for a regulation
@@ -435,16 +445,16 @@ RISK_SEVERITY_TEMPLATE = """
 
         Here are the details of the AI system:
 
-        User Intent: {{ userIntent }},
         Domain: {{ domain }},
-        AI Tasks: {{ aiTasks }},
+        Purpose: {{ purpose }},
+        Capability: {{ capability }},
         AI User: {{ aiUser }},
         AI Subject: {{ aiSubject }}
 
          Please return the classification in the following format:
          {
            "Description": "The AI system intended to be used ...",
-           "Classification": ["Unacceptable Risk"/"High Risk"/"Limited Risk"/"Minimal Risk"],
+           "Classification": "Unacceptable Risk"/"High Risk"/"Limited Risk"/"Minimal Risk",
            "Relevant Text from the EU AI Act": "[Quotation if applicable] - Include the amendment or EU AI Act section that mostly closely resembles the text.",
            "Reasoning": "[Explanation]"
          }

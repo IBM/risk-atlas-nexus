@@ -29,25 +29,25 @@ class RiskSeverityCategorizer:
 
     def categorize(
         self,
-        usecase: str,
         domain: List[str],
-        ai_task: str,
+        purpose: str,
+        capability: str,
         ai_user: str,
         ai_subject: str,
     ):
-        """Categorize the severity of risks based on the use case description.
+        """Categorize the severity of risks associated with an AI system based on the specified parameters.
 
         Args:
-            usecase (str):
-                A usecase description
             domain (str):
-                Domain type of usecase
-            ai_task (List[str]):
-                AI tasks inferred from usercase
+                Domain of the AI system
+            purpose (str):
+                Intended purpose of the AI system
+            capability (str):
+                The capability of an AI system to do what it is designed to do.
             ai_user (str):
-                AI user inferred from usercase
+                An AI user who interacts with the AI system
             ai_subject (str):
-                AI subject inferred from  usercase
+                AI subject impacted by the AI system
 
         Returns:
             Dict: Risk categorisation information
@@ -62,9 +62,9 @@ class RiskSeverityCategorizer:
             {
                 "role": "user",
                 "content": Template(RISK_SEVERITY_TEMPLATE).render(
-                    userIntent=usecase,
                     domain=domain,
-                    aiTasks=ai_task,
+                    purpose=purpose,
+                    capability=capability,
                     aiUser=ai_user,
                     aiSubject=ai_subject,
                 ),

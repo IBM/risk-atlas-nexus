@@ -1,3 +1,6 @@
+from risk_atlas_nexus.ai_risk_ontology import EuAiRiskCategory
+
+
 LIST_OF_STR_SCHEMA = {
     "type": "array",
     "items": {"enum": None},
@@ -55,17 +58,15 @@ RISK_CATEGORY_SCHEMA = {
     "properties": {
         "Description": {"type": "string"},
         "Classification": {
-            "type": "array",
-            "items": {
-                "enum": [
-                    "Unacceptable Risk",
-                    "High Risk",
-                    "Limited Risk",
-                    "Minimal Risk",
-                ]
-            },
+            "type": "string",
+            "enum": [
+                EuAiRiskCategory.UNACCEPTABLE.value,
+                EuAiRiskCategory.HIGH.value,
+                EuAiRiskCategory.LIMITED.value,
+                EuAiRiskCategory.MINIMAL.value,
+            ],
         },
-        "Relevant Text from the EU AI Act": {},
+        "Relevant Text from the EU AI Act": {"type": "string"},
         "Reasoning": {"type": "string"},
     },
     "required": [
