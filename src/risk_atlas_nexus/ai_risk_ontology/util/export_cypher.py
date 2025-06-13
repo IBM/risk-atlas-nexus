@@ -10,15 +10,16 @@ from typing import Any
 
 # Third Party
 from cymple import QueryBuilder
+from linkml_runtime.linkml_model import SchemaDefinition
 from linkml_runtime.loaders import yaml_loader
 from linkml_runtime.utils.schemaview import SchemaView
-from linkml_runtime.linkml_model import SchemaDefinition
 from pydantic import BaseModel
 
 # Local
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Container
 from risk_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from risk_atlas_nexus.toolkit.logging import configure_logger
+
 
 MAPPING_DIR = "src/risk_atlas_nexus/data/mappings/"
 OUTPUT_DIR = "graph_export/cypher/"

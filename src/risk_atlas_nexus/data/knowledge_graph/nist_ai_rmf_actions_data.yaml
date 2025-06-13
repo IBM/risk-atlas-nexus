@@ -545,7 +545,7 @@ actions:
 - id: GV-6.1-002
   name: GV-6.1-002
   description: Conduct joint educational activities and events in collaboration with
-    third parties to promote best practices for managing GAI risks."
+    third parties to promote best practices for managing GAI risks.
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -588,7 +588,7 @@ actions:
   description: Implement a use-cased based supplier risk assessment framework to evaluate
     and monitor third-party entities' performance and adherence to content provenance
     standards and technologies to detect anomalies and unauthorized changes; services
-    acquisition and value chain risk management; and legal compliance."
+    acquisition and value chain risk management; and legal compliance.
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-integrity
@@ -1065,7 +1065,7 @@ actions:
 - id: MP-4.1-001
   name: MP-4.1-001
   description: Conduct periodic monitoring of AI-generated content for privacy risks;
-    address any possible instances of PII or sensitive data exposure."
+    address any possible instances of PII or sensitive data exposure.
   hasRelatedRisk:
   - nist-data-privacy
   hasDocumentation:
@@ -1078,7 +1078,7 @@ actions:
 - id: MP-4.1-002
   name: MP-4.1-002
   description: Implement processes for responding to potential intellectual property
-    infringement claims or other rights."
+    infringement claims or other rights.
   hasRelatedRisk:
   - nist-intellectual-property
   hasDocumentation:
@@ -1155,7 +1155,7 @@ actions:
 - id: MP-4.1-007
   name: MP-4.1-007
   description: Re-evaluate models that were fine-tuned or enhanced on top of third-party
-    models."
+    models.
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -2087,7 +2087,7 @@ actions:
   name: MS-2.10-002
   description: Engage directly with end-users and other stakeholders to understand
     their expectations and concerns regarding content provenance. Use this feedback
-    to guide the design of provenance data-tracking techniques."
+    to guide the design of provenance data-tracking techniques.
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -2324,7 +2324,7 @@ actions:
   name: MS-3.3-003
   description: Evaluate potential biases and stereotypes that could emerge from the
     AI-generated content using appropriate methodologies including computational testing
-    methods as well as evaluating structured feedback input."
+    methods as well as evaluating structured feedback input.
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -2421,7 +2421,7 @@ actions:
   name: MS-4.2-004
   description: Monitor and document instances where human operators or other systems
     override the GAI's decisions. Evaluate these cases to understand if the overrides
-    are linked to issues related to content provenance."
+    are linked to issues related to content provenance.
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -2566,7 +2566,7 @@ actions:
   name: MG-2.2-007
   description: Use real-time auditing tools where they can be demonstrated to aid
     in the tracking and validation of the lineage and authenticity of AI-generated
-    data."
+    data.
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -2580,7 +2580,7 @@ actions:
   name: MG-2.2-008
   description: Use structured feedback mechanisms to solicit and capture user input
     about AI-generated content to detect subtle shifts in quality or alignment with
-    community and societal values."
+    community and societal values.
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -2799,7 +2799,7 @@ actions:
 - id: MG-3.2-004
   name: MG-3.2-004
   description: Evaluate user reported problematic content and integrate feedback into
-    system updates."
+    system updates.
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:

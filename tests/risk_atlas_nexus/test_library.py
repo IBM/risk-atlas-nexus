@@ -42,7 +42,7 @@ class TestLibrary(TestCaseBase):
     ###############################################################################################
     def test_library_version(self):
         version = self.ran_lib.get_version()
-        assert version == {"version": "0.0.1"}
+        assert version == {"version": "0.0.5"}
 
     ###############################################################################################
     #                                 Tests for .get_schema()                                    #

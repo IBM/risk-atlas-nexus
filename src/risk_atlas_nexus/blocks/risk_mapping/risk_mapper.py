@@ -1,12 +1,15 @@
 import datetime
 import json
 import re
+from typing import List
 
 from sssom_schema import EntityReference, Mapping
 from txtai import Embeddings
 
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 from risk_atlas_nexus.blocks.inference import InferenceEngine
+from risk_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
+from risk_atlas_nexus.blocks.prompt_builder import ZeroShotPromptBuilder
 from risk_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 from risk_atlas_nexus.blocks.prompt_templates import RISK_IDENTIFICATION_TEMPLATE
 from risk_atlas_nexus.blocks.risk_mapping import RiskMappingBase
@@ -152,8 +155,8 @@ class RiskMapper(RiskMappingBase):
 
             # using a prompt without the template examples, as they maybe do not exist for all taxonomies
             prompts = [
-                self.inference_engine.prepare_prompt(
-                    prompt_template=RISK_IDENTIFICATION_TEMPLATE,
+                ZeroShotPromptBuilder(prompt_template=RISK_IDENTIFICATION_TEMPLATE).build(
+                    cot_examples=[],
                     usecase=usecase,
                     risks=json.dumps(
                         [
@@ -161,16 +164,22 @@ class RiskMapper(RiskMappingBase):
                             for risk in existing_risks
                         ],
                         indent=4,
-                    ),
+                    )
                 )
                 for usecase in usecases
             ]
 
-            LIST_OF_STR_SCHEMA["items"]["enum"] = [risk.name for risk in existing_risks]
-            inference_response = self.inference_engine.generate(
-                prompts,
-                response_format=LIST_OF_STR_SCHEMA,
-                postprocessors=["list_of_str"],
+            # Populate schema items
+            json_schema = dict(LIST_OF_STR_SCHEMA)
+            json_schema["items"]["enum"] = [risk.name for risk in existing_risks]
+
+            # Invoke inference service
+            inference_response: List[TextGenerationInferenceOutput] = (
+                self.inference_engine.generate(
+                    prompts,
+                    response_format=json_schema,
+                    postprocessors=["list_of_str"],
+                )
             )
 
             rls = [
@@ -182,6 +191,7 @@ class RiskMapper(RiskMappingBase):
                 )
                 for inference in inference_response
             ]
+
 
             for (
                 index,

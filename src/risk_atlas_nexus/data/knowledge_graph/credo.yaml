@@ -399,7 +399,7 @@ risks:
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-performance-&-robustness
 - id: credo-risk-035
-  name: Lack of robustness (Slattery et al., 2024)
+  name: 'Lack of robustness (Slattery et al., 2024)'
   description: The AI system's performance may fail to generalize well to new environments
     or inputs, potentially leading to unexpected failures or degraded performance
     in real-world applications.
@@ -1038,9 +1038,9 @@ actions:
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-042
   name: Establish a general purpose incident response mechanism
-  description: Establish processes to enable incident monitoring and reporting. This
-    includes defining "serious incidents" or set a threshold for formal reporting
-    based on regulatory requirements to third-parties, regulators, and impacted individuals.
+  description: "Establish processes to enable incident monitoring and reporting. This
+    includes defining 'serious incidents' or set a threshold for formal reporting
+    based on regulatory requirements to third-parties, regulators, and impacted individuals."
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasRelatedRisk:
