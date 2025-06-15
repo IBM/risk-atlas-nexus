@@ -3,4 +3,5 @@
 - [AI Tasks identification](notebooks/ai_tasks_identification.ipynb) Uncover ai tasks related to your usecase.
 - [Preparing taxononmy mappings](notebooks/Prepare_taxonomy_mappings.ipynb) Prepare your own mapping files for a new taxonomy.
 - [Auto assist questionnaire](notebooks/autoassist_questionnaire.ipynb) Auto-fill questionnaire using Chain of Thought or Few-Shot Examples.
- - [AI Domain identification](notebooks/domain_identification.ipynb) Uncover AI domain from your usecase
+- [AI Domain identification](notebooks/domain_identification.ipynb) Uncover AI domain from your usecase
+- [Risk Categorization](notebooks/risk_categorization.ipynb) Assess and categorize the severity of risks associated with an AI system usecase.

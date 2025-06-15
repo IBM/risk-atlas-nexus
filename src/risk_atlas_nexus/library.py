@@ -39,6 +39,7 @@ from risk_atlas_nexus.blocks.prompt_templates import (
     AI_TASKS_TEMPLATE,
     QUESTIONNAIRE_COT_TEMPLATE,
 )
+from risk_atlas_nexus.blocks.risk_categorization.severity import RiskSeverityCategorizer
 from risk_atlas_nexus.blocks.risk_detector import GenericRiskDetector
 from risk_atlas_nexus.blocks.risk_explorer import RiskExplorer
 from risk_atlas_nexus.blocks.risk_mapping import RiskMapper
@@ -1192,3 +1193,91 @@ class RiskAtlasNexus:
             postprocessors=["json_object"],
             verbose=verbose,
         )
+
+    def categorize_risk_severity(
+        self,
+        usecases: List[str],
+        inference_engine: InferenceEngine,
+    ):
+        """Determine the severity of risks based on the use case description.
+        Args:
+            usecases (List[str]):
+                A List of strings describing AI usecases
+            inference_engine (InferenceEngine):
+                An LLM inference engine
+        Returns:
+            results (List[Dict]):
+                Results detailing risk categorization by usecase.
+        """
+        type_check(
+            "<RAN3B9CD886E>",
+            InferenceEngine,
+            allow_none=False,
+            inference_engine=inference_engine,
+        )
+        type_check(
+            "<RAN4CDA6852E>",
+            List,
+            allow_none=False,
+            usecases=usecases,
+        )
+        value_check(
+            "<RAN0E435F50E>",
+            inference_engine and usecases,
+            "Please provide usecases and inference_engine",
+        )
+
+        # Create Risk Severity instance
+        risk_severity = RiskSeverityCategorizer(inference_engine)
+
+        # Load risk questionnaire from the template dir
+        risk_questionnaire = load_resource("risk_questionnaire_cot.json")
+
+        # Collecting required parameters for categorizing risk severity per usecase
+        results = []
+        for usecase in usecases:
+
+            # Get AI Domain of the usecase
+            domain = [
+                domain.prediction["answer"]
+                for domain in self.identify_domain_from_usecases(
+                    [usecase], inference_engine=inference_engine, verbose=False
+                )
+            ][0]
+
+            # Using a risk questionnaire to identify key attributes necessary for
+            # constituting an AI system from the usecase.
+            #
+            # (Q4) AI User that interacts with the AI system
+            # (Q5) Intended purpose of the AI System
+            # (Q6) The capability of an AI system to do what it is designed to do
+            # (Q7) AI Subject impacted by the AI System
+            predictions = [
+                response.prediction["answer"]
+                for response in self.generate_few_shot_risk_questionnaire_output(
+                    usecase,
+                    list(
+                        filter(
+                            lambda question: question["no"] in ["Q4", "Q5", "Q6", "Q7"],
+                            risk_questionnaire,
+                        )
+                    ),
+                    inference_engine=inference_engine,
+                    verbose=False,
+                )
+            ]
+
+            # Extracting predictions
+            ai_user = predictions[0]
+            purpose = predictions[1]
+            capability = predictions[2]
+            ai_subject = predictions[3]
+
+            # Calling the risk categorization API with the required attributes.
+            results.append(
+                risk_severity.categorize(
+                    domain, purpose, capability, ai_user, ai_subject
+                )
+            )
+
+        return results

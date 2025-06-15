@@ -49,3 +49,28 @@ DOMAIN_TYPE_SCHEMA = {
         "explanation",
     ],
 }
+
+RISK_CATEGORY_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "Description": {"type": "string"},
+        "Classification": {
+            "type": "string",
+            "enum": [
+                "Excluded",
+                "Prohibited",
+                "High-Risk Exception",
+                "High Risk",
+                "Limited or Low Risk",
+            ],
+        },
+        "AIActText": {"type": "string"},
+        "Reasoning": {"type": "string"},
+    },
+    "required": [
+        "Description",
+        "Classification",
+        "AIActText",
+        "Reasoning",
+    ],
+}
