@@ -6013,8 +6013,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" Consequence : hasConsequence
-    click Consequence href "../Consequence"
+
+        RiskIncident --&gt; "0..1" Consequence : hasConsequence
+        click Consequence href "../Consequence"
+
 
 
       RiskIncident : hasImpact
@@ -6022,8 +6024,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" Impact : hasImpact
-    click Impact href "../Impact"
+
+        RiskIncident --&gt; "0..1" Impact : hasImpact
+        click Impact href "../Impact"
+
 
 
       RiskIncident : hasImpactOn
@@ -6031,8 +6035,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" Impact : hasImpactOn
-    click Impact href "../Impact"
+
+        RiskIncident --&gt; "0..1" Impact : hasImpactOn
+        click Impact href "../Impact"
+
 
 
       RiskIncident : hasLikelihood
@@ -6040,8 +6046,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" Likelihood : hasLikelihood
-    click Likelihood href "../Likelihood"
+
+        RiskIncident --&gt; "0..1" Likelihood : hasLikelihood
+        click Likelihood href "../Likelihood"
+
 
 
       RiskIncident : hasSeverity
@@ -6049,8 +6057,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" Severity : hasSeverity
-    click Severity href "../Severity"
+
+        RiskIncident --&gt; "0..1" Severity : hasSeverity
+        click Severity href "../Severity"
+
 
 
       RiskIncident : hasStatus
@@ -6058,8 +6068,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" IncidentStatus : hasStatus
-    click IncidentStatus href "../IncidentStatus"
+
+        RiskIncident --&gt; "0..1" IncidentStatus : hasStatus
+        click IncidentStatus href "../IncidentStatus"
+
 
 
       RiskIncident : hasVariant
@@ -6067,8 +6079,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" RiskIncident : hasVariant
-    click RiskIncident href "../RiskIncident"
+
+        RiskIncident --&gt; "0..1" RiskIncident : hasVariant
+        click RiskIncident href "../RiskIncident"
+
 
 
       RiskIncident : id
@@ -6078,8 +6092,10 @@
 
 
 
-    RiskIncident --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href "../RiskTaxonomy"
+
+        RiskIncident --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+        click RiskTaxonomy href "../RiskTaxonomy"
+
 
 
       RiskIncident : isDetectedBy
@@ -6087,8 +6103,10 @@
 
 
 
-    RiskIncident --&gt; "*" RiskControl : isDetectedBy
-    click RiskControl href "../RiskControl"
+
+        RiskIncident --&gt; "*" RiskControl : isDetectedBy
+        click RiskControl href "../RiskControl"
+
 
 
       RiskIncident : name
@@ -6098,8 +6116,10 @@
 
 
 
-    RiskIncident --&gt; "*" Risk : refersToRisk
-    click Risk href "../Risk"
+
+        RiskIncident --&gt; "*" Risk : refersToRisk
+        click Risk href "../Risk"
+
 
 
       RiskIncident : source_uri
@@ -6472,8 +6492,8 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Impact</span>
 <span class="w">  </span><span class="nt">hasVariant</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasVariant</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Indicates</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">incident</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">shares</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">causative</span><span class="nv"> </span><span class="s">factors,</span><span class="nv"> </span><span class="s">produces</span>
-<span class="w">      </span><span class="s">similar</span><span class="nv"> </span><span class="s">harms,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">involves</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">intelligent</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">incident.</span><span class="nv"> </span><span class="s">&#39;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates an incident that shares the same causative factors, produces</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">similar harms, and involves the same intelligent systems as a known AI incident.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskIncident</span>

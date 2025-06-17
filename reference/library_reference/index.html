@@ -5777,6 +5777,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#risk_atlas_nexus.library.RiskAtlasNexus.categorize_risk_severity" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;categorize_risk_severity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#risk_atlas_nexus.library.RiskAtlasNexus.export" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;export
@@ -6189,6 +6198,15 @@
   <a href="#risk_atlas_nexus.library.RiskAtlasNexus.schema_view" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;schema_view
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk_atlas_nexus.library.RiskAtlasNexus.categorize_risk_severity" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;categorize_risk_severity
     </span>
   </a>
   
@@ -6638,6 +6656,13 @@
 <p><span class="doc-section-title">Methods:</span></p>
     <ul>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="risk_atlas_nexus.library.RiskAtlasNexus.categorize_risk_severity" href="#risk_atlas_nexus.library.RiskAtlasNexus.categorize_risk_severity">categorize_risk_severity</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Determine the severity of risks based on the use case description.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="risk_atlas_nexus.library.RiskAtlasNexus.export" href="#risk_atlas_nexus.library.RiskAtlasNexus.export">export</a></code></b>
             –
             <div class="doc-md-description">
@@ -6969,6 +6994,33 @@
 </div>
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="risk_atlas_nexus.library.RiskAtlasNexus.categorize_risk_severity" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">categorize_risk_severity</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">categorize_risk_severity</span><span class="p">(</span><span class="n">usecases</span><span class="p">:</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">],</span> <span class="n">inference_engine</span><span class="p">:</span> <span class="n"><span title="risk_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Determine the severity of risks based on the use case description.
+Args:
+    usecases (List[str]):
+        A List of strings describing AI usecases
+    inference_engine (InferenceEngine):
+        An LLM inference engine
+Returns:
+    results (List[Dict]):
+        Results detailing risk categorization by usecase.</p>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
@@ -8580,7 +8632,7 @@ Result containing a list of AI tasks</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">identify_risks_from_usecases</span><span class="p">(</span><span class="n">usecases</span><span class="p">:</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">],</span> <span class="n">inference_engine</span><span class="p">:</span> <span class="n"><span title="risk_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk" href="../ai_ontology_reference/#risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk">Risk</a></span><span class="p">]]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">identify_risks_from_usecases</span><span class="p">(</span><span class="n">usecases</span><span class="p">:</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">],</span> <span class="n">inference_engine</span><span class="p">:</span> <span class="n"><span title="risk_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ibm-risk-atlas&#39;</span><span class="p">,</span> <span class="n">cot_examples</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Dict">Dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_risk</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk" href="../ai_ontology_reference/#risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk">Risk</a></span><span class="p">]]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -8609,11 +8661,34 @@ Result containing a list of AI tasks</p>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
               (<code><span title="str">str</span></code>, default:
+                  <code>&#39;ibm-risk-atlas&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The string label for a taxonomy. Default to "ibm-risk-atlas".</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>cot_examples</code></b>
+              (<code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.List">List</span>]</code>, default:
                   <code>None</code>
 )
           –
           <div class="doc-md-description">
-            <p>The string label for a taxonomy</p>
+            <p>The Chain of Thought (CoT) examples to use in the risk identification.
+The example template is available at src/risk_atlas_nexus/data/templates/risk_generation_cot.json.
+Assign the ID of the taxonomy you wish to use as the key for CoT examples. Providing this value
+will override the CoT examples present in the template master. Default to None.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>max_risk</code></b>
+              (<code><span title="int">int</span></code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.</p>
           </div>
         </li>
     </ul>

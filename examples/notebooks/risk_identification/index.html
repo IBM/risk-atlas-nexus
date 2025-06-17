@@ -1001,6 +1001,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-with-custom-cot-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Identification using IBM AI Risk taxonomy with Custom CoT examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#risk-identification-using-nist-ai-taxonomy" class="md-nav__link">
     <span class="md-ellipsis">
       Risk Identification using NIST AI taxonomy
@@ -5941,6 +5950,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-with-custom-cot-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Identification using IBM AI Risk taxonomy with Custom CoT examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#risk-identification-using-nist-ai-taxonomy" class="md-nav__link">
     <span class="md-ellipsis">
       Risk Identification using NIST AI taxonomy
@@ -6669,9 +6687,19 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <h5 id="risk-identification-api">Risk Identification API<a class="anchor-link" href="#risk-identification-api">¶</a></h5><p>RiskAtlasNexus.identify_risks_from_usecases()</p>
 <p>Params:</p>
 <ul>
-<li>usecases (List[str]): A List of strings describing AI usecases</li>
-<li>inference_engine (InferenceEngine): An LLM inference engine to infer risks from the usecase.</li>
-<li>taxonomy (str, optional): The label for a taxonomy. If not specified, If not provided, the default is <code>ibm-risk-atlas</code>.</li>
+<li>usecases (List[str]):
+A List of strings describing AI usecases</li>
+<li>inference_engine (InferenceEngine):
+An LLM inference engine to infer risks from the usecases.</li>
+<li>taxonomy (str, optional):
+The string label for a taxonomy. Default to None.</li>
+<li>cot_examples (Dict[str, List], optional):
+The Chain of Thought (CoT) examples to use in the risk identification.
+The example template is available at src/risk_atlas_nexus/data/templates/risk_generation_cot.json.
+Assign the ID of the taxonomy you wish to use as the key for CoT examples. Providing this value
+will override the CoT examples present in the template master. Default to None.</li>
+<li>max_risk (int, optional):
+The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.</li>
 </ul>
 </div>
 </div>
@@ -6712,6 +6740,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
     <span class="n">usecases</span><span class="o">=</span><span class="p">[</span><span class="n">usecase</span><span class="p">],</span>
     <span class="n">inference_engine</span><span class="o">=</span><span class="n">inference_engine</span><span class="p">,</span>
     <span class="n">taxonomy</span><span class="o">=</span><span class="s2">"ibm-risk-atlas"</span><span class="p">,</span>
+    <span class="n">max_risk</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">risks</span>
@@ -6722,6 +6751,105 @@ risks = risk_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
     inference_engine=inference_engine,
     taxonomy="ibm-risk-atlas",
+    max_risk=5,
+)
+
+risks</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="risk-identification-using-ibm-ai-risk-taxonomy-with-custom-cot-examples">Risk Identification using IBM AI Risk taxonomy with Custom CoT examples<a class="anchor-link" href="#risk-identification-using-ibm-ai-risk-taxonomy-with-custom-cot-examples">¶</a></h5><p><strong>Note:</strong> To use custom risk <code>cot_examples</code> for a new taxonomy or an existing taxonomy, users must provide their own set of example usecase and associated risks in a JSON file such as in <a href="https://github.com/IBM/risk-atlas-nexus/blob/main/src/risk_atlas_nexus/data/templates/risk_generation_cot.json">risk_generation_cot.json</a>. This will enable the LLM to learn from these few-shot examples and generate better responses. Please follow the guide <a href="https://ibm.github.io/risk-atlas-nexus/concepts/Chain_of_thought_templates/#risk-identification">here</a>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+
+<span class="n">risks</span> <span class="o">=</span> <span class="n">risk_atlas_nexus</span><span class="o">.</span><span class="n">identify_risks_from_usecases</span><span class="p">(</span>
+    <span class="n">usecases</span><span class="o">=</span><span class="p">[</span><span class="n">usecase</span><span class="p">],</span>
+    <span class="n">inference_engine</span><span class="o">=</span><span class="n">inference_engine</span><span class="p">,</span>
+    <span class="n">taxonomy</span><span class="o">=</span><span class="s2">"ibm-risk-atlas"</span><span class="p">,</span>
+    <span class="n">cot_examples</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">"ibm-risk-atlas"</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">"Usecase"</span><span class="p">:</span> <span class="s2">"In a medical chatbot, generative AI can be employed to create a triage system that assesses patients' symptoms and provides immediate, contextually relevant advice based on their medical history and current condition. The chatbot can analyze the patient's input, identify potential medical issues, and offer tailored recommendations or insights to the patient or healthcare provider. This can help streamline the triage process, ensuring that patients receive the appropriate level of care and attention, and ultimately improving patient outcomes."</span><span class="p">,</span>
+                <span class="s2">"Risks"</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">"Improper usage"</span><span class="p">,</span>
+                    <span class="s2">"Incomplete advice"</span><span class="p">,</span>
+                    <span class="s2">"Lack of model transparency"</span><span class="p">,</span>
+                    <span class="s2">"Lack of system transparency"</span><span class="p">,</span>
+                    <span class="s2">"Lack of training data transparency"</span><span class="p">,</span>
+                    <span class="s2">"Data bias"</span><span class="p">,</span>
+                    <span class="s2">"Uncertain data provenance"</span><span class="p">,</span>
+                    <span class="s2">"Lack of data transparency"</span><span class="p">,</span>
+                    <span class="s2">"Impact on human agency"</span><span class="p">,</span>
+                    <span class="s2">"Impact on affected communities"</span><span class="p">,</span>
+                    <span class="s2">"Improper retraining"</span><span class="p">,</span>
+                    <span class="s2">"Inaccessible training data"</span><span class="p">,</span>
+                <span class="p">],</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="n">max_risk</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">risks</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-5">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+
+risks = risk_atlas_nexus.identify_risks_from_usecases(
+    usecases=[usecase],
+    inference_engine=inference_engine,
+    taxonomy="ibm-risk-atlas",
+    cot_examples={
+        "ibm-risk-atlas": [
+            {
+                "Usecase": "In a medical chatbot, generative AI can be employed to create a triage system that assesses patients' symptoms and provides immediate, contextually relevant advice based on their medical history and current condition. The chatbot can analyze the patient's input, identify potential medical issues, and offer tailored recommendations or insights to the patient or healthcare provider. This can help streamline the triage process, ensuring that patients receive the appropriate level of care and attention, and ultimately improving patient outcomes.",
+                "Risks": [
+                    "Improper usage",
+                    "Incomplete advice",
+                    "Lack of model transparency",
+                    "Lack of system transparency",
+                    "Lack of training data transparency",
+                    "Data bias",
+                    "Uncertain data provenance",
+                    "Lack of data transparency",
+                    "Impact on human agency",
+                    "Impact on affected communities",
+                    "Improper retraining",
+                    "Inaccessible training data",
+                ],
+            }
+        ]
+    },
+    max_risk=5,
 )
 
 risks</div>
@@ -6750,7 +6878,7 @@ risks</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6770,7 +6898,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-6">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = risk_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -6804,7 +6932,7 @@ risks</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6824,7 +6952,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-7">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = risk_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -6858,7 +6986,7 @@ risks</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6878,7 +7006,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-8">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = risk_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -6912,7 +7040,7 @@ risks</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6932,7 +7060,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-9">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = risk_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],

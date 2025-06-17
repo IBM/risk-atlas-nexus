@@ -6005,8 +6005,10 @@
 
 
 
-    RiskGroup --&gt; "*" Any : broadMatch
-    click Any href "../Any"
+
+        RiskGroup --&gt; "*" Any : broadMatch
+        click Any href "../Any"
+
 
 
       RiskGroup : closeMatch
@@ -6014,8 +6016,10 @@
 
 
 
-    RiskGroup --&gt; "*" Any : closeMatch
-    click Any href "../Any"
+
+        RiskGroup --&gt; "*" Any : closeMatch
+        click Any href "../Any"
+
 
 
       RiskGroup : dateCreated
@@ -6029,8 +6033,10 @@
 
 
 
-    RiskGroup --&gt; "*" Any : exactMatch
-    click Any href "../Any"
+
+        RiskGroup --&gt; "*" Any : exactMatch
+        click Any href "../Any"
+
 
 
       RiskGroup : hasPart
@@ -6038,8 +6044,10 @@
 
 
 
-    RiskGroup --&gt; "*" Risk : hasPart
-    click Risk href "../Risk"
+
+        RiskGroup --&gt; "*" Risk : hasPart
+        click Risk href "../Risk"
+
 
 
       RiskGroup : id
@@ -6049,8 +6057,10 @@
 
 
 
-    RiskGroup --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href "../RiskTaxonomy"
+
+        RiskGroup --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+        click RiskTaxonomy href "../RiskTaxonomy"
+
 
 
       RiskGroup : isDetectedBy
@@ -6058,8 +6068,10 @@
 
 
 
-    RiskGroup --&gt; "*" RiskControl : isDetectedBy
-    click RiskControl href "../RiskControl"
+
+        RiskGroup --&gt; "*" RiskControl : isDetectedBy
+        click RiskControl href "../RiskControl"
+
 
 
       RiskGroup : name
@@ -6069,8 +6081,10 @@
 
 
 
-    RiskGroup --&gt; "*" Any : narrowMatch
-    click Any href "../Any"
+
+        RiskGroup --&gt; "*" Any : narrowMatch
+        click Any href "../Any"
+
 
 
       RiskGroup : relatedMatch
@@ -6078,8 +6092,10 @@
 
 
 
-    RiskGroup --&gt; "*" Any : relatedMatch
-    click Any href "../Any"
+
+        RiskGroup --&gt; "*" Any : relatedMatch
+        click Any href "../Any"
+
 
 
       RiskGroup : url

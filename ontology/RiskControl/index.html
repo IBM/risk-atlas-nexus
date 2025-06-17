@@ -6011,8 +6011,10 @@
 
 
 
-    RiskControl --&gt; "*" RiskConcept : detectsRiskConcept
-    click RiskConcept href "../RiskConcept"
+
+        RiskControl --&gt; "*" RiskConcept : detectsRiskConcept
+        click RiskConcept href "../RiskConcept"
+
 
 
       RiskControl : id
@@ -6022,8 +6024,10 @@
 
 
 
-    RiskControl --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href "../RiskTaxonomy"
+
+        RiskControl --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+        click RiskTaxonomy href "../RiskTaxonomy"
+
 
 
       RiskControl : isDetectedBy
@@ -6031,8 +6035,10 @@
 
 
 
-    RiskControl --&gt; "*" RiskControl : isDetectedBy
-    click RiskControl href "../RiskControl"
+
+        RiskControl --&gt; "*" RiskControl : isDetectedBy
+        click RiskControl href "../RiskControl"
+
 
 
       RiskControl : name
@@ -6247,7 +6253,7 @@
 <span class="w">  </span><span class="nt">detectsRiskConcept</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The property airo:detectsRiskConcept indicates the control used for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources,  consequences, and impacts.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources, consequences, and impacts.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
 <span class="w">    </span><span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:detectsRiskConcept</span>

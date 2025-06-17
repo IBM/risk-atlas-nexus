@@ -789,21 +789,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Add your own mappings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#save-your-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Save your changes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -817,9 +802,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contribute-the-templates" class="md-nav__link">
+  <a href="#save-your-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      Contribute the templates
+      Save your changes
     </span>
   </a>
   
@@ -5953,21 +5938,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Add your own mappings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#save-your-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Save your changes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -5981,9 +5951,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contribute-the-templates" class="md-nav__link">
+  <a href="#save-your-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      Contribute the templates
+      Save your changes
     </span>
   </a>
   
@@ -6027,10 +5997,7 @@ project.</p>
 </ol>
 </li>
 <li><a href="#add-your-own-mappings">Add your own mappings</a></li>
-<li><a href="#add-your-own-chain-of-thought-templates">Add your own Chain of Thought templates</a><ol>
-<li><a href="#contribute-the-templates">Contribute the templates</a></li>
-</ol>
-</li>
+<li><a href="#add-your-own-chain-of-thought-templates">Add your own Chain of Thought templates</a></li>
 </ol>
 <h2 id="overview">Overview</h2>
 <p>You may wish to contribute your own taxonomy definitions, entity mappings or Chain of Thought templates to the Risk
@@ -6042,7 +6009,7 @@ the project.</p>
 <p>The Risk Atlas Nexus ontology combines the AI risk view (taxonomies, risks, actions) with an AI model view (AI systems,
 AI models, model evaluations) into one schema. These are loaded into the system with LinkML, through yaml
 representations, stored in
-the <a href="https://github.com/ibm/risk-atlas-nexus/src/risk_atlas_nexus/data/knowledge_graph/">knowledge graph data folder</a>.</p>
+the <a href="https://github.com/IBM/risk-atlas-nexus/tree/main/src/risk_atlas_nexus/data/knowledge_graph/">knowledge graph data folder</a>.</p>
 <h3 id="how-are-mappings-maintained-between-taxonomies">How are mappings maintained between taxonomies?</h3>
 <p>To express some semantically meaningful mapping between risks from different taxonomies, we have used the <a href="https://academic.oup.com/database/article/doi/10.1093/database/baac035/6591806">Simple
 Standard for Sharing Ontological Mappings (SSSOM)</a>
@@ -6074,53 +6041,13 @@ directory.</p>
 <li>Lift all the TSV files to yaml mapping entries by executing <code>make lift_mappings_from_tsv</code>.</li>
 <li>Ensure the changes were saved to the <a href="https://github.com/ibm/risk-atlas-nexus/src/risk_atlas_nexus/data/knowledge_graph/mapping/">knowledge graph data mapping folder</a> .</li>
 </ol>
+<h2 id="add-your-own-chain-of-thought-templates">Add your own Chain of Thought templates</h2>
+<p>Please follow <a href="https://ibm.github.io/risk-atlas-nexus/concepts/Chain_of_thought_templates/#risk-identification">Risk Identification</a> section to create custom Chain of Thought examples for your own taxonomy.</p>
 <h3 id="save-your-changes">Save your changes</h3>
 <ul>
 <li>Save your new taxonomy files in
   the <a href="https://github.com/IBM/risk-atlas-nexus/tree/main/src/risk_atlas_nexus/data/knowledge_graph">knowledge graph data directory</a>
   . Push your changes and make a PR to the main project.</li>
-</ul>
-<h2 id="add-your-own-chain-of-thought-templates">Add your own Chain of Thought templates</h2>
-<p>The template used in <code>risk_atlas_nexus/data/templates/risk_questionnaire_cot.json</code> defines the few-shot examples which are use for the <a href="../../examples/notebooks/autoassist_questionnaire/">auto-assist</a> functionality.</p>
-<p><strong>Customization:</strong></p>
-<p>To adapt this auto-assist functionality to custom questionnaires, users need to provide their own set of questions, example intents, and corresponding answers in a json file (e.g., <code>risk_questionnaire_cot.json</code>). This will enable the LLM to learn from these few-shot examples and generate responses for unseen queries.</p>
-<p><strong>Template Structure: Zero Shot</strong></p>
-<p>Each question is accompanied by corresponding examples provided as an empty list.</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">[</span>
-<span class="w">      </span><span class="o">{</span>
-<span class="w">          </span><span class="s2">&quot;question&quot;</span>:<span class="w"> </span><span class="s2">&quot;In which environment is the system used?&quot;</span>,
-<span class="w">          </span><span class="s2">&quot;cot_examples&quot;</span>:<span class="w"> </span><span class="o">[]</span>
-<span class="w">      </span><span class="o">}</span>
-<span class="w">      </span>...
-<span class="w">  </span><span class="o">]</span>
-</code></pre></div>
-<p><strong>Template Structure: Few Shot</strong></p>
-<p>Each question is associated with a list of examples, each containing intent, answer, and optional explanation.</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">[</span>
-<span class="w">      </span><span class="o">{</span>
-<span class="w">          </span><span class="s2">&quot;question&quot;</span>:<span class="w"> </span><span class="s2">&quot;In which environment is the system used?&quot;</span>,
-<span class="w">          </span><span class="s2">&quot;cot_examples&quot;</span>:<span class="w"> </span><span class="o">[</span>
-<span class="w">            </span><span class="o">{</span>
-<span class="w">              </span><span class="s2">&quot;intent&quot;</span>:<span class="w"> </span><span class="s2">&quot;Find patterns in healthcare insurance claims&quot;</span>,
-<span class="w">              </span><span class="s2">&quot;answer&quot;</span>:<span class="w"> </span><span class="s2">&quot;Insurance Claims Processing or Risk Management or Data Analytics&quot;</span>,
-<span class="w">              </span><span class="s2">&quot;explanation&quot;</span>:<span class="w"> </span><span class="s2">&quot;The system might be used by an insurance company&#39;s claims processing department to analyze and identify patterns in healthcare insurance claims.&quot;</span>
-<span class="w">            </span><span class="o">}</span>,
-<span class="w">            </span><span class="o">{</span>
-<span class="w">                </span><span class="s2">&quot;intent&quot;</span>:<span class="w"> </span><span class="s2">&quot;optimize supply chain management in Investment banks&quot;</span>,
-<span class="w">                </span><span class="s2">&quot;answer&quot;</span>:<span class="w"> </span><span class="s2">&quot;Treasury Departments or Asset Management Divisions or Private Banking Units&quot;</span>,
-<span class="w">                </span><span class="s2">&quot;explanation&quot;</span>:<span class="w"> </span>null
-<span class="w">            </span><span class="o">}</span>,
-<span class="w">            </span>...
-<span class="w">          </span><span class="o">]</span>
-<span class="w">      </span><span class="o">}</span>
-<span class="w">      </span>...
-<span class="w">  </span><span class="o">]</span>
-</code></pre></div>
-<h3 id="contribute-the-templates">Contribute the templates</h3>
-<p>If you would like to contribute your own templates to the project for others to use:</p>
-<ul>
-<li>Save your new template in the <code>risk_atlas_nexus/data/templates/</code> folder, push your changes and make a PR to the main
-  project.</li>
 </ul>
 
 

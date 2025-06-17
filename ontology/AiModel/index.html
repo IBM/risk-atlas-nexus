@@ -6002,8 +6002,10 @@
 
 
 
-    AiModel --&gt; "*" Documentation : hasDocumentation
-    click Documentation href "../Documentation"
+
+        AiModel --&gt; "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation"
+
 
 
       AiModel : hasEvaluation
@@ -6011,8 +6013,10 @@
 
 
 
-    AiModel --&gt; "*" AiEvalResult : hasEvaluation
-    click AiEvalResult href "../AiEvalResult"
+
+        AiModel --&gt; "*" AiEvalResult : hasEvaluation
+        click AiEvalResult href "../AiEvalResult"
+
 
 
       AiModel : hasLicense
@@ -6020,8 +6024,10 @@
 
 
 
-    AiModel --&gt; "0..1" License : hasLicense
-    click License href "../License"
+
+        AiModel --&gt; "0..1" License : hasLicense
+        click License href "../License"
+
 
 
       AiModel : hasModelCard
@@ -6031,8 +6037,10 @@
 
 
 
-    AiModel --&gt; "*" RiskControl : hasRiskControl
-    click RiskControl href "../RiskControl"
+
+        AiModel --&gt; "*" RiskControl : hasRiskControl
+        click RiskControl href "../RiskControl"
+
 
 
       AiModel : id
@@ -6042,8 +6050,10 @@
 
 
 
-    AiModel --&gt; "0..1" AiProvider : isProvidedBy
-    click AiProvider href "../AiProvider"
+
+        AiModel --&gt; "0..1" AiProvider : isProvidedBy
+        click AiProvider href "../AiProvider"
+
 
 
       AiModel : name
@@ -6053,8 +6063,10 @@
 
 
 
-    AiModel --&gt; "*" AiTask : performsTask
-    click AiTask href "../AiTask"
+
+        AiModel --&gt; "*" AiTask : performsTask
+        click AiTask href "../AiTask"
+
 
 
       AiModel : power_consumption_w
@@ -6064,8 +6076,10 @@
 
 
 
-    AiModel --&gt; "0..1" Organization : producer
-    click Organization href "../Organization"
+
+        AiModel --&gt; "0..1" Organization : producer
+        click Organization href "../Organization"
+
 
 
       AiModel : url

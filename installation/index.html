@@ -5822,12 +5822,16 @@
   <h1>Installation</h1>
 
 <p>This project targets python version "&gt;=3.11, &lt;3.12". You can download specific versions of python here: <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
-<p>Install the risk_atlas_nexus library
+<p><strong>Note:</strong> Replace <code>INFERENCE_LIB</code> with one of the LLM inference library [ollama, vllm, wml, rits] as explained <a href="#install-for-inference-apis">here</a></p>
+<p>To install the current release
+<div class="highlight"><pre><span></span><code>pip install risk-atlas-nexus[INFERENCE_LIB]
+</code></pre></div></p>
+<p>To install the latest code
 <div class="highlight"><pre><span></span><code>git clone git@github.com:IBM/risk-atlas-nexus.git
 cd risk-atlas-nexus
 python -m venv vrisk-atlas-nexus
 source vrisk-atlas-nexus/bin/activate
-pip install -e .
+pip install -e &quot;.[INFERENCE_LIB]&quot;
 </code></pre></div></p>
 <h3 id="install-for-inference-apis">Install for inference APIs</h3>
 <p>Risk Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:</p>

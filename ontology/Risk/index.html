@@ -6005,8 +6005,10 @@
 
 
 
-    Risk --&gt; "*" Any : broadMatch
-    click Any href "../Any"
+
+        Risk --&gt; "*" Any : broadMatch
+        click Any href "../Any"
+
 
 
       Risk : closeMatch
@@ -6014,8 +6016,10 @@
 
 
 
-    Risk --&gt; "*" Any : closeMatch
-    click Any href "../Any"
+
+        Risk --&gt; "*" Any : closeMatch
+        click Any href "../Any"
+
 
 
       Risk : concern
@@ -6033,8 +6037,10 @@
 
 
 
-    Risk --&gt; "*" RiskConcept : detectsRiskConcept
-    click RiskConcept href "../RiskConcept"
+
+        Risk --&gt; "*" RiskConcept : detectsRiskConcept
+        click RiskConcept href "../RiskConcept"
+
 
 
       Risk : exactMatch
@@ -6042,8 +6048,10 @@
 
 
 
-    Risk --&gt; "*" Any : exactMatch
-    click Any href "../Any"
+
+        Risk --&gt; "*" Any : exactMatch
+        click Any href "../Any"
+
 
 
       Risk : hasRelatedAction
@@ -6051,8 +6059,10 @@
 
 
 
-    Risk --&gt; "*" Action : hasRelatedAction
-    click Action href "../Action"
+
+        Risk --&gt; "*" Action : hasRelatedAction
+        click Action href "../Action"
+
 
 
       Risk : id
@@ -6062,8 +6072,10 @@
 
 
 
-    Risk --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
-    click RiskTaxonomy href "../RiskTaxonomy"
+
+        Risk --&gt; "0..1" RiskTaxonomy : isDefinedByTaxonomy
+        click RiskTaxonomy href "../RiskTaxonomy"
+
 
 
       Risk : isDetectedBy
@@ -6071,8 +6083,10 @@
 
 
 
-    Risk --&gt; "*" RiskControl : isDetectedBy
-    click RiskControl href "../RiskControl"
+
+        Risk --&gt; "*" RiskControl : isDetectedBy
+        click RiskControl href "../RiskControl"
+
 
 
       Risk : isPartOf
@@ -6080,8 +6094,10 @@
 
 
 
-    Risk --&gt; "0..1" RiskGroup : isPartOf
-    click RiskGroup href "../RiskGroup"
+
+        Risk --&gt; "0..1" RiskGroup : isPartOf
+        click RiskGroup href "../RiskGroup"
+
 
 
       Risk : name
@@ -6091,8 +6107,10 @@
 
 
 
-    Risk --&gt; "*" Any : narrowMatch
-    click Any href "../Any"
+
+        Risk --&gt; "*" Any : narrowMatch
+        click Any href "../Any"
+
 
 
       Risk : phase
@@ -6102,8 +6120,10 @@
 
 
 
-    Risk --&gt; "*" Any : relatedMatch
-    click Any href "../Any"
+
+        Risk --&gt; "*" Any : relatedMatch
+        click Any href "../Any"
+
 
 
       Risk : tag
@@ -6670,7 +6690,7 @@
 <span class="w">  </span><span class="nt">detectsRiskConcept</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The property airo:detectsRiskConcept indicates the control used for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources,  consequences, and impacts.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources, consequences, and impacts.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
 <span class="w">    </span><span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:detectsRiskConcept</span>

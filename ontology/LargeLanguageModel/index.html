@@ -6037,8 +6037,10 @@
 
 
 
-    LargeLanguageModel --&gt; "*" Documentation : hasDocumentation
-    click Documentation href "../Documentation"
+
+        LargeLanguageModel --&gt; "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation"
+
 
 
       LargeLanguageModel : hasEvaluation
@@ -6046,8 +6048,10 @@
 
 
 
-    LargeLanguageModel --&gt; "*" AiEvalResult : hasEvaluation
-    click AiEvalResult href "../AiEvalResult"
+
+        LargeLanguageModel --&gt; "*" AiEvalResult : hasEvaluation
+        click AiEvalResult href "../AiEvalResult"
+
 
 
       LargeLanguageModel : hasInputModality
@@ -6055,8 +6059,10 @@
 
 
 
-    LargeLanguageModel --&gt; "*" Modality : hasInputModality
-    click Modality href "../Modality"
+
+        LargeLanguageModel --&gt; "*" Modality : hasInputModality
+        click Modality href "../Modality"
+
 
 
       LargeLanguageModel : hasLicense
@@ -6064,8 +6070,10 @@
 
 
 
-    LargeLanguageModel --&gt; "0..1" License : hasLicense
-    click License href "../License"
+
+        LargeLanguageModel --&gt; "0..1" License : hasLicense
+        click License href "../License"
+
 
 
       LargeLanguageModel : hasModelCard
@@ -6075,8 +6083,10 @@
 
 
 
-    LargeLanguageModel --&gt; "*" Modality : hasOutputModality
-    click Modality href "../Modality"
+
+        LargeLanguageModel --&gt; "*" Modality : hasOutputModality
+        click Modality href "../Modality"
+
 
 
       LargeLanguageModel : hasRiskControl
@@ -6084,8 +6094,10 @@
 
 
 
-    LargeLanguageModel --&gt; "*" RiskControl : hasRiskControl
-    click RiskControl href "../RiskControl"
+
+        LargeLanguageModel --&gt; "*" RiskControl : hasRiskControl
+        click RiskControl href "../RiskControl"
+
 
 
       LargeLanguageModel : hasTrainingData
@@ -6093,8 +6105,10 @@
 
 
 
-    LargeLanguageModel --&gt; "*" Dataset : hasTrainingData
-    click Dataset href "../Dataset"
+
+        LargeLanguageModel --&gt; "*" Dataset : hasTrainingData
+        click Dataset href "../Dataset"
+
 
 
       LargeLanguageModel : id
@@ -6104,8 +6118,10 @@
 
 
 
-    LargeLanguageModel --&gt; "0..1" LargeLanguageModelFamily : isPartOf
-    click LargeLanguageModelFamily href "../LargeLanguageModelFamily"
+
+        LargeLanguageModel --&gt; "0..1" LargeLanguageModelFamily : isPartOf
+        click LargeLanguageModelFamily href "../LargeLanguageModelFamily"
+
 
 
       LargeLanguageModel : isProvidedBy
@@ -6113,8 +6129,10 @@
 
 
 
-    LargeLanguageModel --&gt; "0..1" AiProvider : isProvidedBy
-    click AiProvider href "../AiProvider"
+
+        LargeLanguageModel --&gt; "0..1" AiProvider : isProvidedBy
+        click AiProvider href "../AiProvider"
+
 
 
       LargeLanguageModel : name
@@ -6128,8 +6146,10 @@
 
 
 
-    LargeLanguageModel --&gt; "*" AiTask : performsTask
-    click AiTask href "../AiTask"
+
+        LargeLanguageModel --&gt; "*" AiTask : performsTask
+        click AiTask href "../AiTask"
+
 
 
       LargeLanguageModel : power_consumption_w
@@ -6139,8 +6159,10 @@
 
 
 
-    LargeLanguageModel --&gt; "0..1" Organization : producer
-    click Organization href "../Organization"
+
+        LargeLanguageModel --&gt; "0..1" Organization : producer
+        click Organization href "../Organization"
+
 
 
       LargeLanguageModel : supported_languages

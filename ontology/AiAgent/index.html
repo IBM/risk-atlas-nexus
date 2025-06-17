@@ -5991,8 +5991,10 @@
 
 
 
-    AiAgent --&gt; "*" Documentation : hasDocumentation
-    click Documentation href "../Documentation"
+
+        AiAgent --&gt; "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation"
+
 
 
       AiAgent : hasEuAiSystemType
@@ -6000,8 +6002,10 @@
 
 
 
-    AiAgent --&gt; "0..1" AiSystemType : hasEuAiSystemType
-    click AiSystemType href "../AiSystemType"
+
+        AiAgent --&gt; "0..1" AiSystemType : hasEuAiSystemType
+        click AiSystemType href "../AiSystemType"
+
 
 
       AiAgent : hasEuRiskCategory
@@ -6009,8 +6013,10 @@
 
 
 
-    AiAgent --&gt; "0..1" EuAiRiskCategory : hasEuRiskCategory
-    click EuAiRiskCategory href "../EuAiRiskCategory"
+
+        AiAgent --&gt; "0..1" EuAiRiskCategory : hasEuRiskCategory
+        click EuAiRiskCategory href "../EuAiRiskCategory"
+
 
 
       AiAgent : hasLicense
@@ -6018,8 +6024,10 @@
 
 
 
-    AiAgent --&gt; "0..1" License : hasLicense
-    click License href "../License"
+
+        AiAgent --&gt; "0..1" License : hasLicense
+        click License href "../License"
+
 
 
       AiAgent : hasModelCard
@@ -6031,8 +6039,10 @@
 
 
 
-    AiAgent --&gt; "0..1" AiProvider : isProvidedBy
-    click AiProvider href "../AiProvider"
+
+        AiAgent --&gt; "0..1" AiProvider : isProvidedBy
+        click AiProvider href "../AiProvider"
+
 
 
       AiAgent : name
@@ -6042,8 +6052,10 @@
 
 
 
-    AiAgent --&gt; "*" AiTask : performsTask
-    click AiTask href "../AiTask"
+
+        AiAgent --&gt; "*" AiTask : performsTask
+        click AiTask href "../AiTask"
+
 
 
       AiAgent : producer
@@ -6051,8 +6063,10 @@
 
 
 
-    AiAgent --&gt; "0..1" Organization : producer
-    click Organization href "../Organization"
+
+        AiAgent --&gt; "0..1" Organization : producer
+        click Organization href "../Organization"
+
 
 
       AiAgent : url

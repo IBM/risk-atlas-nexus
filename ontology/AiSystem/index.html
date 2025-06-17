@@ -5996,8 +5996,10 @@
 
 
 
-    AiSystem --&gt; "*" Documentation : hasDocumentation
-    click Documentation href "../Documentation"
+
+        AiSystem --&gt; "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation"
+
 
 
       AiSystem : hasEuAiSystemType
@@ -6005,8 +6007,10 @@
 
 
 
-    AiSystem --&gt; "0..1" AiSystemType : hasEuAiSystemType
-    click AiSystemType href "../AiSystemType"
+
+        AiSystem --&gt; "0..1" AiSystemType : hasEuAiSystemType
+        click AiSystemType href "../AiSystemType"
+
 
 
       AiSystem : hasEuRiskCategory
@@ -6014,8 +6018,10 @@
 
 
 
-    AiSystem --&gt; "0..1" EuAiRiskCategory : hasEuRiskCategory
-    click EuAiRiskCategory href "../EuAiRiskCategory"
+
+        AiSystem --&gt; "0..1" EuAiRiskCategory : hasEuRiskCategory
+        click EuAiRiskCategory href "../EuAiRiskCategory"
+
 
 
       AiSystem : hasLicense
@@ -6023,8 +6029,10 @@
 
 
 
-    AiSystem --&gt; "0..1" License : hasLicense
-    click License href "../License"
+
+        AiSystem --&gt; "0..1" License : hasLicense
+        click License href "../License"
+
 
 
       AiSystem : hasModelCard
@@ -6036,8 +6044,10 @@
 
 
 
-    AiSystem --&gt; "0..1" AiProvider : isProvidedBy
-    click AiProvider href "../AiProvider"
+
+        AiSystem --&gt; "0..1" AiProvider : isProvidedBy
+        click AiProvider href "../AiProvider"
+
 
 
       AiSystem : name
@@ -6047,8 +6057,10 @@
 
 
 
-    AiSystem --&gt; "*" AiTask : performsTask
-    click AiTask href "../AiTask"
+
+        AiSystem --&gt; "*" AiTask : performsTask
+        click AiTask href "../AiTask"
+
 
 
       AiSystem : producer
@@ -6056,8 +6068,10 @@
 
 
 
-    AiSystem --&gt; "0..1" Organization : producer
-    click Organization href "../Organization"
+
+        AiSystem --&gt; "0..1" Organization : producer
+        click Organization href "../Organization"
+
 
 
       AiSystem : url

@@ -6001,8 +6001,10 @@
 
 
 
-    BaseAi --&gt; "*" Documentation : hasDocumentation
-    click Documentation href "../Documentation"
+
+        BaseAi --&gt; "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation"
+
 
 
       BaseAi : hasLicense
@@ -6010,8 +6012,10 @@
 
 
 
-    BaseAi --&gt; "0..1" License : hasLicense
-    click License href "../License"
+
+        BaseAi --&gt; "0..1" License : hasLicense
+        click License href "../License"
+
 
 
       BaseAi : hasModelCard
@@ -6023,8 +6027,10 @@
 
 
 
-    BaseAi --&gt; "0..1" AiProvider : isProvidedBy
-    click AiProvider href "../AiProvider"
+
+        BaseAi --&gt; "0..1" AiProvider : isProvidedBy
+        click AiProvider href "../AiProvider"
+
 
 
       BaseAi : name
@@ -6034,8 +6040,10 @@
 
 
 
-    BaseAi --&gt; "*" AiTask : performsTask
-    click AiTask href "../AiTask"
+
+        BaseAi --&gt; "*" AiTask : performsTask
+        click AiTask href "../AiTask"
+
 
 
       BaseAi : producer
@@ -6043,8 +6051,10 @@
 
 
 
-    BaseAi --&gt; "0..1" Organization : producer
-    click Organization href "../Organization"
+
+        BaseAi --&gt; "0..1" Organization : producer
+        click Organization href "../Organization"
+
 
 
       BaseAi : url
