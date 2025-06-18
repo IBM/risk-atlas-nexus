@@ -2,7 +2,7 @@
 
 CoT templates are designed to enhance interpretability, support systematic reasoning, and provide examples that aid model predictions, resulting in improved accuracy.
 
-Risk Atlas Nexus currently supports adding custom CoT templats for [Auto-assist Risk Questionnaire](#auto-assist-risk-questionnaire) and [Risk Identification](#risk-identification).
+Risk Atlas Nexus currently supports adding custom CoT templates for [Auto-assist Risk Questionnaire](#auto-assist-risk-questionnaire) and [Risk Identification](#risk-identification).
 
 ## Auto-assist Risk Questionnaire
 

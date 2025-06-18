@@ -24,16 +24,21 @@ nav:
     - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md
     - Architecture: concepts/architecture.md
     - "Contribute your own taxonomy files": concepts/Contributing_a_taxonomy.md
+    - "concepts/*"
   - Examples:
     - Examples: examples/index.md
-    - 🔀 Quick start:
+    - 🚀 Quick start:
       - "Risk Atlas Nexus Quickstart": examples/notebooks/Risk_Atlas_Nexus_Quickstart.ipynb
-    - 🔀 Discovery:
+    - 🔍 Discovery:
       - "Risk identification": examples/notebooks/risk_identification.ipynb
       - "AI Tasks identification": examples/notebooks/ai_tasks_identification.ipynb
+      - "Domain identification": examples/notebooks/domain_identification.ipynb
+      - "Risk categorization": examples/notebooks/risk_categorization.ipynb
       - "Preparing mappings": examples/notebooks/Prepare_taxonomy_mappings.ipynb
-    - 🔀 Questionnaire:
+    - 📝 Questionnaire:
       -  "Auto assist questionnaire" : examples/notebooks/autoassist_questionnaire.ipynb
+    - 🔀  Mapping:
+      - "Preparing mappings": examples/notebooks/Prepare_taxonomy_mappings.ipynb
   - Ontology:
       - Ontology: ontology/index.md
       - "ontology/*"
