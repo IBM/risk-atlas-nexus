@@ -5945,21 +5945,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#coming-soon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coming soon
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -6113,9 +6098,10 @@
 <h1 id="risk-atlas-nexus">Risk Atlas Nexus</h1>
 <p><img src="assets/risk_atlas_nexus_vector.svg" width="200"></p>
 <p><a href="https://www.apache.org/licenses/LICENSE-2.0"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache%202.0-yellow.svg" /></a> <img alt="main branch" src="https://github.com/IBM/risk-atlas-nexus/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main" /> <a href="https://www.python.org/downloads/"><img alt="" src="https://img.shields.io/badge/python-3.11-blue.svg" /></a> <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a></p>
-<p>👉 (Feb-2025) Our new <a href="https://huggingface.co/spaces/ibm/risk-atlas-nexus">HF spaces demo site</a> is available!</p>
+<p>👉 (Jun-2025) Our <a href="https://huggingface.co/spaces/ibm/risk-atlas-nexus">HF spaces demo site</a> has been updated to show related benchmarks!</p>
+<p>👉 (Jun-2025) The <a href="https://github.com/ibm/risk-atlas-nexus-demos">demo projects repository</a> showcases implementations of Risk Atlas Nexus.</p>
 <h2 id="overview">Overview</h2>
-<p>Risk Atlas Nexus aims to provide tooling to help bring together disparate resources related to governance of foundation models. We support a community driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations.  Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, Risk Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. Risk Atlas Nexus builds on the <a href="https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas">IBM AI Risk Atlas</a> making this educational resource a nexus of governance assets and tooling.  An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data.</p>
+<p>Risk Atlas Nexus aims to provide tooling to help bring together resources related to governance of foundation models. We support a community driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations. Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, Risk Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. Risk Atlas Nexus builds on the <a href="https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas">IBM AI Risk Atlas</a> making this educational resource a nexus of governance assets and tooling. An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data.</p>
 <p>Our intention is to create a starting point for an open AI Systems ontology whose focus is on risk and that the community can extend and enhance. This ontology serves as the foundation that unifies innovation and tooling in the AI risk space. By lowering the barrier to entry for developers, it fosters a governance-first approach to AI solutions, while also inviting the broader community to contribute their own tools and methodologies to expand its impact.</p>
 <h2 id="features">Features</h2>
 <ul>
@@ -6126,13 +6112,10 @@
 <li>🚨 Use the python library methods to detect potential risks in your usecase</li>
 <li>📤 Download an exported graph populated with data instances</li>
 <li>✨ Example use-case of auto-assistance in compliance questionnaires using CoT examples and Risk Atlas Nexus</li>
+<li>🔧 Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database</li>
 </ul>
 <h2 id="architecture">Architecture</h2>
 <p><img alt="Architecture" src="assets/architecture.png" /></p>
-<h3 id="coming-soon">Coming soon</h3>
-<ul>
-<li>Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database</li>
-</ul>
 <h2 id="links">Links</h2>
 <ul>
 <li><strong>AI Risk Ontology</strong><ul>
@@ -6142,14 +6125,20 @@
 <li><a href="concepts/Contributing_a_taxonomy/">Contribute your own taxonomy files and CoT templates</a></li>
 </ul>
 </li>
-<li><strong>Notebooks:</strong><ul>
+<li>
+<p><strong>Notebooks:</strong></p>
+<ul>
 <li><a href="examples/notebooks/Risk_Atlas_Nexus_Quickstart/">Risk Atlas Nexus Quickstart</a> Overview of library functionality</li>
 <li><a href="examples/notebooks/risk_identification/">Risk identification</a> Uncover risks related to your usecase</li>
 <li><a href="examples/notebooks/autoassist_questionnaire/">Auto assist questionnaire</a> Auto-fill questionnaire using Chain of Thought or Few-Shot Examples</li>
 <li><a href="examples/notebooks/ai_tasks_identification/">AI Tasks identification</a> Uncover ai tasks related to your usecase</li>
+<li><a href="examples/notebooks/domain_identification/">AI Domain identification</a> Uncover ai domain from your usecase</li>
+<li><a href="examples/notebooks/risk_categorization/">Risk Categorization</a> Assess and categorize the severity of risks associated with an AI system usecase. Prompt templates are used with thanks to https://doi.org/10.48550/arXiv.2407.12454.</li>
 </ul>
 </li>
-<li><strong>Additional Resources:</strong><ul>
+<li>
+<p><strong>Additional Resources:</strong></p>
+<ul>
 <li><a href="https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas">IBM AI Risk Atlas</a></li>
 <li><a href="https://arxiv.org/abs/2412.01957">Usage Governance Advisor: From Intent to AI Governance</a></li>
 </ul>
@@ -6157,7 +6146,11 @@
 </ul>
 <h2 id="installation">Installation</h2>
 <p>This project targets python version "&gt;=3.11, &lt;3.12". You can download specific versions of python here: https://www.python.org/downloads/</p>
-<p>Install the risk_atlas_nexus library
+<p><strong>Note:</strong> Replace <code>INFERENCE_LIB</code> with one of the LLM inference library [ollama, vllm, wml, rits] as explained <a href="#install-for-inference-apis">here</a></p>
+<p>To install the current release
+<div class="highlight"><pre><span></span><code>pip install risk-atlas-nexus[INFERENCE_LIB]
+</code></pre></div></p>
+<p>To install the latest code
 <div class="highlight"><pre><span></span><code>git clone git@github.com:IBM/risk-atlas-nexus.git
 cd risk-atlas-nexus
 python -m venv vrisk-atlas-nexus
@@ -6238,7 +6231,7 @@ pip install -e .
 </code></pre></div>
 <h2 id="compatibility">Compatibility</h2>
 <ul>
-<li>View the <a href="https://github.com/ibm/risk-atlas-nexus/CHANGELOG.md">changelog</a>.</li>
+<li>View the <a href="https://github.com/IBM/risk-atlas-nexus/releases">releases changelog</a>.</li>
 </ul>
 <h2 id="referencing-the-project">Referencing the project</h2>
 <p>If you use Risk Atlas Nexus in your projects, please consider citing the following:
