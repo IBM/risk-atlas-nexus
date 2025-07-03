@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://ibm.github.io/risk-atlas-nexus/examples/notebooks/Risk_Atlas_Nexus_Quickstart/">
+        <link rel="canonical" href="https://ibm.github.io/risk-atlas-nexus/examples/notebooks/generate_crosswalk/">
       
       
-        <link rel="prev" href="../../">
-      
-      
-        <link rel="next" href="../risk_identification/">
       
       
       <link rel="icon" href="../../../assets/risk_atlas_nexus_vector.svg">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Risk Atlas Nexus: Quick Start Guide - Risk Atlas Nexus</title>
+        <title>Generate a Crosswalk with Risk Atlas Nexus - Risk Atlas Nexus</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#risk-atlas-nexus-quick-start-guide" class="md-skip">
+        <a href="#generate-a-crosswalk-with-risk-atlas-nexus" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Risk Atlas Nexus: Quick Start Guide
+              Generate a Crosswalk with Risk Atlas Nexus
             
           </span>
         </div>
@@ -268,12 +264,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -747,8 +741,6 @@
       
   
   
-    
-  
   
   
     
@@ -769,19 +761,16 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
@@ -798,13 +787,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -817,10 +806,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -831,20 +818,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -856,7 +840,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             🚀 Quick start
@@ -867,31 +851,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Risk Atlas Nexus: Quick Start Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Risk_Atlas_Nexus_Quickstart/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,170 +864,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-this-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      About this notebook
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="About this notebook">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-use-case-risk-atlas-nexus-with-default-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Use case: Risk Atlas Nexus with default configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Use case: Risk Atlas Nexus with default configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-explore-risk-object" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 Explore risk object
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-related-risks" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 Related risks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-risk-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.3 Risk Actions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-risk-controls" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.4 Risk Controls
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-risk-incidents" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.5 Risk Incidents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-evaluations" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.6 Evaluations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17-documentation-and-datasets" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.7 Documentation and Datasets
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-use-case-risk-atlas-nexus-results-filtered-by-taxonomies" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Use case: Risk Atlas Nexus results filtered by taxonomies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-usecase-bring-your-own-taxonomiesrisksactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Usecase: Bring Your Own Taxonomies/Risks/Actions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Usecase: Bring Your Own Taxonomies/Risks/Actions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-add-your-yaml-definitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Add your YAML definitions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-exporting-your-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Exporting your graph
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1102,20 +901,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1268,20 +1064,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1346,20 +1139,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6124,141 +5914,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#about-this-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      About this notebook
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="About this notebook">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-use-case-risk-atlas-nexus-with-default-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Use case: Risk Atlas Nexus with default configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Use case: Risk Atlas Nexus with default configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-explore-risk-object" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 Explore risk object
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-related-risks" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 Related risks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-risk-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.3 Risk Actions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-risk-controls" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.4 Risk Controls
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-risk-incidents" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.5 Risk Incidents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-evaluations" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.6 Evaluations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17-documentation-and-datasets" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.7 Documentation and Datasets
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-use-case-risk-atlas-nexus-results-filtered-by-taxonomies" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Use case: Risk Atlas Nexus results filtered by taxonomies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-usecase-bring-your-own-taxonomiesrisksactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Usecase: Bring Your Own Taxonomies/Risks/Actions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Usecase: Bring Your Own Taxonomies/Risks/Actions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-add-your-yaml-definitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Add your YAML definitions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-exporting-your-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Exporting your graph
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6714,13 +6369,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3b8694df">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="risk-atlas-nexus-quick-start-guide">Risk Atlas Nexus: Quick Start Guide<a class="anchor-link" href="#risk-atlas-nexus-quick-start-guide">¶</a></h1><h2 id="dependencies">Dependencies<a class="anchor-link" href="#dependencies">¶</a></h2><p>Tip: Ensure you have followed installation instructions for the risk_atlas_nexus library</p>
+<h1 id="generate-a-crosswalk-with-risk-atlas-nexus">Generate a Crosswalk with Risk Atlas Nexus<a class="anchor-link" href="#generate-a-crosswalk-with-risk-atlas-nexus">¶</a></h1><h2 id="dependencies">Dependencies<a class="anchor-link" href="#dependencies">¶</a></h2><p>Tip: Ensure you have followed installation instructions for the risk_atlas_nexus library</p>
 <pre><code>git clone git@github.com:IBM/risk-atlas-nexus.git
 cd risk-atlas-nexus
 python -m venv vrisk-atlas-nexus
@@ -6730,13 +6385,13 @@ pip install -e .
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d32a6fde">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -6751,83 +6406,68 @@ pip install -e .
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># imports</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">rich</span><span class="w"> </span><span class="kn">import</span> <span class="nb">print</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">nan</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+
 <span class="kn">from</span><span class="w"> </span><span class="nn">risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span><span class="w"> </span><span class="kn">import</span> <span class="n">Risk</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">risk_atlas_nexus</span><span class="w"> </span><span class="kn">import</span> <span class="n">RiskAtlasNexus</span>
+
+<span class="c1"># Set the option to display full column width</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_colwidth'</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1"># imports
 from rich import print
+from numpy import nan
+from collections import defaultdict
+import pandas as pd
+from pydantic import BaseModel
+
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
-from risk_atlas_nexus import RiskAtlasNexus</div>
+from risk_atlas_nexus import RiskAtlasNexus
+
+# Set the option to display full column width
+pd.set_option('display.max_colwidth', None)
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/Users/ingevejs/Documents/workspace/ingelise/risk-atlas-nexus/src/risk_atlas_nexus/toolkit/job_utils.py:4: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from tqdm.autonotebook import tqdm
+</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e1c47325">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Risk Atlas Nexus project provides an ontology combining an AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema.</p>
-<p>AI Risks were collected from IBM Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AILuminate Benchmark, Credo's Unified Control Framework, and OWASP Top 10 for Large Language Model Applications.</p>
-<p>You can use the python library methods to quickly explore available risks, relations and actions, as well as to detect potential risks in your usecase.</p>
-<p>Important references:</p>
-<ul>
-<li><a href="../../../docs/ontology/index.md">LinkML schema documentation</a></li>
-<li><a href="../../../src/risk_atlas_nexus/data/knowledge_graph/README.md">LinkML instance data for an example knowledge graph</a></li>
-</ul>
+<p>Crosswalk documents are intended to provide a mapping of concepts and terms between the different taxonomies, frameworks, standards and regulation documents.</p>
+<p>We will use the Risk Atlas Nexus library to generate a crosswalk document between two of the available taxonomies.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="about-this-notebook">About this notebook<a class="anchor-link" href="#about-this-notebook">¶</a></h2><p>This notebook contains three sections. Section 1 showcases the default functionality, while Sections 2-3 exhibit useful configurations.</p>
-<ol>
-<li>How to use Risk Atlas Nexus with default configuration?</li>
-</ol>
-<blockquote>
-<p>In this section, we demonstrate a default method to use Risk Alas Nexus to explore risks and related risks</p>
-</blockquote>
-<ol start="2">
-<li>How to use Risk Atlas Nexus to filter results for specific taxonomy?</li>
-</ol>
-<blockquote>
-<p>We provide guidance on filtering the results for a specific taxonomies. This section highlights the ability to filter the taxonomy content.</p>
-</blockquote>
-<ol start="3">
-<li>Bring Your Own Taxonomies/Risks/Actions</li>
-</ol>
-<blockquote>
-<p>Risk Atlas Nexus allows users to define custom Taxonomies/Risks/Actions. In this section, we will show you how to load and configure your own data instances.</p>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1-use-case-risk-atlas-nexus-with-default-configuration">1. Use case: Risk Atlas Nexus with default configuration<a class="anchor-link" href="#1-use-case-risk-atlas-nexus-with-default-configuration">¶</a></h3><p>Create a new instance of Risk Atlas Nexus and use it to explore the risks.  By default, it loads in all data from <a href="../../src/risk_atlas_nexus/data/knowledge_graph/README.md">data folder</a></p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=79ebe06e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -6840,47 +6480,78 @@ from risk_atlas_nexus import RiskAtlasNexus</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ran</span> <span class="o">=</span> <span class="n">RiskAtlasNexus</span><span class="p">()</span> <span class="c1"># no args, so default configuration </span>
-
-<span class="n">all_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 518</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risks in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_risks</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Understand what taxonomies are available to us</span>
+<span class="n">ran</span> <span class="o">=</span> <span class="n">RiskAtlasNexus</span><span class="p">()</span> <span class="c1"># no args, so default configuration </span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">())</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 560</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Available taxonomies : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ran</span><span class="o">.</span><span class="n">get_all_taxonomies</span><span class="p">())</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Available taxonomy IDs : </span><span class="si">{</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">ran</span><span class="o">.</span><span class="n">get_all_taxonomies</span><span class="p">()]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">ran = RiskAtlasNexus() # no args, so default configuration 
-
-all_risks = ran.get_all_risks()
-print(f"\n# Total risks available : {len(all_risks)}") # 518
-
-# Let's just print out a few for now
-print(f"\n# First 2 risks in list ") 
-print(all_risks[:2])
+<div class="clipboard-copy-txt" id="cell-2"># Understand what taxonomies are available to us
+ran = RiskAtlasNexus() # no args, so default configuration 
+print(f"\n# Total risks available : {len(ran.get_all_risks())}") # 560
+print(f"\n# Available taxonomies : {len(ran.get_all_taxonomies())}") # 10
+print(f"\n# Available taxonomy IDs : {[x.id for x in ran.get_all_taxonomies()]}")</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2025-07-03 09:57:16:457] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+# Total risks available : <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">560</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+# Available taxonomies : <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">10</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+# Available taxonomy IDs : <span style="font-weight: bold">[</span><span style="color: #008000; text-decoration-color: #008000">'ibm-risk-atlas'</span>, <span style="color: #008000; text-decoration-color: #008000">'nist-ai-rmf'</span>, <span style="color: #008000; text-decoration-color: #008000">'ailuminate-v1.0'</span>, <span style="color: #008000; text-decoration-color: #008000">'mit-ai-risk-repository'</span>, 
+<span style="color: #008000; text-decoration-color: #008000">'mit-ai-risk-repository-causal'</span>, <span style="color: #008000; text-decoration-color: #008000">'ai-risk-taxonomy'</span>, <span style="color: #008000; text-decoration-color: #008000">'cset'</span>, <span style="color: #008000; text-decoration-color: #008000">'ibm-granite-guardian'</span>, <span style="color: #008000; text-decoration-color: #008000">'owasp-llm-2.0'</span>, <span style="color: #008000; text-decoration-color: #008000">'credo-ucf'</span><span style="font-weight: bold">]</span>
+</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0df4373b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="11-explore-risk-object">1.1 Explore risk object<a class="anchor-link" href="#11-explore-risk-object">¶</a></h4>
+<p>For this example, we want to produce content for a crosswalk between the risks in the NIST AI RMF and the IBM AI risk Atlas.  We will specify these as the target taxonomies, and then find the related risks and display a subset of the risk content in a pandas dataframe.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0ce8bef6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -6893,45 +6564,31 @@ print(all_risks[:2])
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Each risk is returned as a pydantic "Risk" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">toxic_risk</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a risk by ID, 'atlas-toxic-output'  "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">toxic_risk</span><span class="p">))</span>
-
-<span class="c1"># Explore related risks</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get full entry for each related risks by ID for 'atlas-toxic-output' "</span><span class="p">)</span> 
-<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">related_risks</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># declare target taxonomies</span>
+<span class="n">taxonomy_1</span> <span class="o">=</span> <span class="s1">'nist-ai-rmf'</span>
+<span class="n">taxonomy_2</span> <span class="o">=</span> <span class="s1">'ibm-risk-atlas'</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">
-# Each risk is returned as a pydantic "Risk" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-toxic_risk = ran.get_risk(id='atlas-toxic-output')
-print(f"\n# Get a risk by ID, 'atlas-toxic-output'  ") 
-print(dict(toxic_risk))
-
-# Explore related risks
-print(f"\n# Get full entry for each related risks by ID for 'atlas-toxic-output' ") 
-related_risks = ran.get_related_risks(id='atlas-toxic-output')
-print(related_risks)
+<div class="clipboard-copy-txt" id="cell-3"># declare target taxonomies
+taxonomy_1 = 'nist-ai-rmf'
+taxonomy_2 = 'ibm-risk-atlas'</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7c860d68">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="12-related-risks">1.2 Related risks<a class="anchor-link" href="#12-related-risks">¶</a></h4>
+<h1 id="helper-functions">Helper functions<a class="anchor-link" href="#helper-functions">¶</a></h1><p>A few utility functions to format the crosswalk dataframe output are provided below.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=58ed2156">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6949,733 +6606,366 @@ print(related_risks)
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Explore related risks</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the related risk ids by ID for 'atlas-toxic-output'"</span><span class="p">)</span> 
-<span class="n">related_risk_ids</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">related_risk_ids</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">RiskSimplified</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">isPartOf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">isDefinedByTaxonomy</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
 
-<span class="c1"># For related risks, maybe you might want the full risk to be returned, instead of just the ID</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get full entry for each related risks by ID for 'atlas-toxic-output' "</span><span class="p">)</span> 
-<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">related_risks</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">expand_risks</span><span class="p">(</span><span class="n">list_of_risk_ids</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Retrieve content for the related risk IDs and return a string</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        list_of_risk_ids: List[str]</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        str </span>
+<span class="sd">            Result containing Formatted string for the dataframe        </span>
+<span class="sd">    """</span>
+    <span class="n">risks</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ran</span><span class="o">.</span><span class="n">get_risk</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">risk_id</span><span class="p">)</span> <span class="k">for</span> <span class="n">risk_id</span> <span class="ow">in</span> <span class="n">list_of_risk_ids</span> <span class="k">if</span> <span class="n">risk_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="k">if</span> <span class="n">item</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">grouped_risks</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">risk</span> <span class="ow">in</span> <span class="n">risks</span><span class="p">:</span>
+        <span class="n">selected_fields_risk</span> <span class="o">=</span> <span class="n">RiskSimplified</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">risk</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">risk</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">isPartOf</span><span class="o">=</span><span class="n">risk</span><span class="o">.</span><span class="n">isPartOf</span><span class="p">,</span> <span class="n">isDefinedByTaxonomy</span><span class="o">=</span><span class="n">risk</span><span class="o">.</span><span class="n">isDefinedByTaxonomy</span><span class="p">)</span>
+        <span class="n">grouped_risks</span><span class="p">[</span><span class="n">risk</span><span class="o">.</span><span class="n">isDefinedByTaxonomy</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">selected_fields_risk</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">grouped_risks</span><span class="p">))</span>
+
+  
+<span class="k">def</span><span class="w"> </span><span class="nf">construct_crosswalk_df</span><span class="p">(</span><span class="n">taxonomy_1</span><span class="p">,</span> <span class="n">taxonomy_2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Construct a crosswalk dataframe</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        taxonomy_1: str</span>
+<span class="sd">            taxonomy identifier</span>
+<span class="sd">        taxonomy_2: str</span>
+<span class="sd">            taxonomy identifier</span>
+
+<span class="sd">    Return:</span>
+<span class="sd">        pd.DataFrame </span>
+<span class="sd">            Results in form of a pd.Dataframe      </span>
+<span class="sd">    </span>
+<span class="sd">    """</span>
+    <span class="c1"># get all risks from taxonomy 1 into a dataframe</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">res</span><span class="o">.</span><span class="n">model_dump</span><span class="p">()</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="n">taxonomy_1</span><span class="p">)])</span>
+
+    <span class="c1"># we only need to show a subset of columns</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'name'</span><span class="p">,</span> <span class="s1">'description'</span><span class="p">,</span> <span class="s1">'hasRelatedAction'</span><span class="p">,</span> <span class="s1">'isPartOf'</span><span class="p">,</span>
+       <span class="s1">'closeMatch'</span><span class="p">,</span> <span class="s1">'exactMatch'</span><span class="p">,</span> <span class="s1">'broadMatch'</span><span class="p">,</span> <span class="s1">'narrowMatch'</span><span class="p">,</span>
+       <span class="s1">'relatedMatch'</span><span class="p">]]</span>
+    
+    <span class="c1"># show only risk content relating to the second taxonomy</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">filter_by_taxonomy</span><span class="p">(</span><span class="n">list_risks</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">list_risks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="nb">id</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">list_risks</span> <span class="k">if</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span><span class="n">isDefinedByTaxonomy</span> <span class="o">==</span> <span class="n">taxonomy_2</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="n">df</span><span class="p">[</span><span class="s1">'closeMatch'</span><span class="p">]</span> <span class="o">=</span>  <span class="n">df</span><span class="p">[</span><span class="s1">'closeMatch'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">filter_by_taxonomy</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'exactMatch'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'exactMatch'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">filter_by_taxonomy</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'broadMatch'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'broadMatch'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">filter_by_taxonomy</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'narrowMatch'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'narrowMatch'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">filter_by_taxonomy</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'relatedMatch'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'relatedMatch'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">filter_by_taxonomy</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"id"</span><span class="p">:</span> <span class="s2">"RAN ID"</span><span class="p">})</span>
+    
+
+    <span class="n">df</span><span class="p">[</span><span class="s1">'expanded_risks'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">expand_risks</span><span class="p">((</span><span class="n">row</span><span class="p">[</span><span class="s1">'closeMatch'</span><span class="p">]</span> <span class="ow">or</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'exactMatch'</span><span class="p">]</span> <span class="ow">or</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'broadMatch'</span><span class="p">]</span> <span class="ow">or</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'narrowMatch'</span><span class="p">]</span> <span class="ow">or</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'relatedMatch'</span><span class="p">]</span> <span class="ow">or</span> <span class="p">[])),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">construct_crosswalk_df</span><span class="p">(</span><span class="n">taxonomy_1</span><span class="p">,</span> <span class="n">taxonomy_2</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4"># Explore related risks
-print(f"\n# Get the related risk ids by ID for 'atlas-toxic-output'") 
-related_risk_ids = ran.get_related_risks(id='atlas-toxic-output')
-print(related_risk_ids)
+<div class="clipboard-copy-txt" id="cell-4">
+class RiskSimplified(BaseModel):
+    id: str
+    name: str
+    isPartOf: str | None
+    isDefinedByTaxonomy: str | None
 
-# For related risks, maybe you might want the full risk to be returned, instead of just the ID
-print(f"\n# Get full entry for each related risks by ID for 'atlas-toxic-output' ") 
-related_risks = ran.get_related_risks(id='atlas-toxic-output')
-print(related_risks)</div>
+
+def expand_risks(list_of_risk_ids):
+    """Retrieve content for the related risk IDs and return a string
+
+    Args:
+        list_of_risk_ids: List[str]
+    
+    Return:
+        str 
+            Result containing Formatted string for the dataframe        
+    """
+    risks = [item for item in (ran.get_risk(id=risk_id) for risk_id in list_of_risk_ids if risk_id is not None) if item is not None]
+    grouped_risks = defaultdict(list)
+    
+    for risk in risks:
+        selected_fields_risk = RiskSimplified(id=risk.id, name=risk.name, isPartOf=risk.isPartOf, isDefinedByTaxonomy=risk.isDefinedByTaxonomy)
+        grouped_risks[risk.isDefinedByTaxonomy].append(selected_fields_risk)
+        
+    return str(dict(grouped_risks))
+
+  
+def construct_crosswalk_df(taxonomy_1, taxonomy_2):
+    """Construct a crosswalk dataframe
+
+    Args:
+        taxonomy_1: str
+            taxonomy identifier
+        taxonomy_2: str
+            taxonomy identifier
+
+    Return:
+        pd.DataFrame 
+            Results in form of a pd.Dataframe      
+    
+    """
+    # get all risks from taxonomy 1 into a dataframe
+    df = pd.DataFrame([res.model_dump() for res in ran.get_all_risks(taxonomy=taxonomy_1)])
+
+    # we only need to show a subset of columns
+    df = df[['id', 'name', 'description', 'hasRelatedAction', 'isPartOf',
+       'closeMatch', 'exactMatch', 'broadMatch', 'narrowMatch',
+       'relatedMatch']]
+    
+    # show only risk content relating to the second taxonomy
+    def filter_by_taxonomy(list_risks):
+        if list_risks is not None:
+            return [id for id in list_risks if ran.get_risk(id=id) is not None and ran.get_risk(id=id).isDefinedByTaxonomy == taxonomy_2]
+        else:
+            return None
+
+    df['closeMatch'] =  df['closeMatch'].apply(filter_by_taxonomy)
+    df['exactMatch'] = df['exactMatch'].apply(filter_by_taxonomy)
+    df['broadMatch'] = df['broadMatch'].apply(filter_by_taxonomy)
+    df['narrowMatch'] = df['narrowMatch'].apply(filter_by_taxonomy)
+    df['relatedMatch'] = df['relatedMatch'].apply(filter_by_taxonomy)
+    df.rename(columns={"id": "RAN ID"})
+    
+
+    df['expanded_risks'] = df.apply(
+        lambda row: expand_risks((row['closeMatch'] or []) + (row['exactMatch'] or []) + (row['broadMatch'] or []) + (row['narrowMatch'] or []) + (row['relatedMatch'] or [])), axis=1
+    )
+
+    return df
+
+df = construct_crosswalk_df(taxonomy_1, taxonomy_2)
+df</div>
 </div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="13-risk-actions">1.3 Risk Actions<a class="anchor-link" href="#13-risk-actions">¶</a></h4><p>Each risk may have the relationship 'hasRelatedAction', a relationship where an entity relates to an action.  We can view all actions available, or drill down into how specific actions are related to a risk.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_actions</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_actions</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total actions available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_actions</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 237</span>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 actions in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_actions</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="c1"># View an individual action by ID. Each action is returned as a pydantic "Action" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">an_action</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_action_by_id</span><span class="p">(</span><span class="s1">'GV-1.3-001'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get an action by ID, 'GV-1.3-001' "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">an_action</span><span class="p">))</span>
-
-<span class="c1"># Get any actions for the IBM risk atlas risk toxic output</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the linked actions by ID for 'atlas-toxic-output'"</span><span class="p">)</span> 
-<span class="n">actions_for_toxic_output</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_actions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">actions_for_toxic_output</span><span class="p">)</span> <span class="c1"># 0 expected</span>
-
-<span class="c1"># Hmm, no linked actions recorded.  Let's try the related risks?</span>
-<span class="n">related_actions</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">related_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risks</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">a_risk</span> <span class="ow">in</span> <span class="n">related_risks</span><span class="p">:</span>
-    <span class="n">related_actions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ran</span><span class="o">.</span><span class="n">get_related_actions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">a_risk</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the actions for the risks which are marked as related to'atlas-toxic-output'"</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">related_actions</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-5">all_actions = ran.get_all_actions()
-print(f"\n# Total actions available : {len(all_actions)}") # 237
-
-# Let's just print out a few for now
-print(f"\n# First 2 actions in list ") 
-print(all_actions[:2])
-
-# View an individual action by ID. Each action is returned as a pydantic "Action" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-an_action = ran.get_action_by_id('GV-1.3-001')
-print(f"\n# Get an action by ID, 'GV-1.3-001' ") 
-print(dict(an_action))
-
-# Get any actions for the IBM risk atlas risk toxic output
-print(f"\n# Get the linked actions by ID for 'atlas-toxic-output'") 
-actions_for_toxic_output = ran.get_related_actions(id='atlas-toxic-output')
-print(actions_for_toxic_output) # 0 expected
-
-# Hmm, no linked actions recorded.  Let's try the related risks?
-related_actions = []
-related_risks = ran.get_related_risks(id='atlas-toxic-output')
-for a_risk in related_risks:
-    related_actions.extend(ran.get_related_actions(id=a_risk.id))
-
-print(f"\n# Get the actions for the risks which are marked as related to'atlas-toxic-output'") 
-print(related_actions)
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>id</th>
+<th>name</th>
+<th>description</th>
+<th>hasRelatedAction</th>
+<th>isPartOf</th>
+<th>closeMatch</th>
+<th>exactMatch</th>
+<th>broadMatch</th>
+<th>narrowMatch</th>
+<th>relatedMatch</th>
+<th>expanded_risks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>nist-cbrn-information-or-capabilities</td>
+<td>CBRN Information or Capabilities</td>
+<td>Eased access to or synthesis of materially nefarious information or design capabilities related to chemical, biological, radiological, or nuclear (CBRN) weapons or other dangerous materials or agents.</td>
+<td>[GV-1.2-002, GV-1.3-001, GV-1.3-002, GV-1.3-003, GV-1.3-004, GV-1.4-002, GV-2.1-004, GV-2.1-005, GV-3.2-001, GV-3.2-005, MP-1.1-004, MP-4.1-005, MP-4.1-008, MP-5.1-004, MS-1.1-004, MS-1.1-005, MS-1.1-008, MS-1.3-001, MS-1.3-002, MS-2.3-004, MS-2.6-002, MS-2.6-006, MS-2.6-007, MG-2.2-001, MG-2.2-005, MG-3.1-004, MG-3.2-009, MG-4.1-002]</td>
+<td>None</td>
+<td>[]</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-dangerous-use]</td>
+<td>[atlas-harmful-output]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-dangerous-use', name='Dangerous use', isPartOf='ibm-risk-atlas-misuse', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-harmful-output', name='Harmful output', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>1</th>
+<td>nist-confabulation</td>
+<td>Confabulation</td>
+<td>The production of confidently stated but erroneous or false content (known colloquially as “hallucinations” or “fabrications”) by which users may be misled or deceived.</td>
+<td>[GV-1.3-002, GV-4.1-001, GV-5.1-002, MS-2.3-001, MS-2.3-002, MS-2.3-004, MS-2.5-001, MS-2.5-003, MS-2.6-005, MS-2.9-001, MS-2.13-001, MS-3.2-001, MS-4.2-002, MG-2.2-009, MG-3.2-009, MG-4.1-002, MG-4.1-004, MG-4.3-002]</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-hallucination]</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-hallucination', name='Hallucination', isPartOf='ibm-risk-atlas-robustness', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>2</th>
+<td>nist-dangerous-violent-or-hateful-content</td>
+<td>Dangerous, Violent, or Hateful Content</td>
+<td>Eased production of and access to violent, inciting, radicalizing, or threatening content as well as recommendations to carry out self-harm or conduct illegal activities. Includes difficulty controlling public exposure to hateful and disparaging or stereotyping content.</td>
+<td>[GV-1.3-001, GV-1.3-002, GV-1.3-004, GV-1.3-006, GV-1.4-001, GV-2.1-004, GV-2.1-005, GV-4.2-001, MP-1.1-003, MP-1.1-004, MP-3.4-006, MP-4.1-005, MP-4.1-008, MP-5.1-002, MP-5.1-004, MS-2.2-002, MS-2.3-004, MS-2.5-006, MS-2.6-001, MS-2.6-002, MS-2.6-003, MS-2.6-004, MS-2.7-007, MS-2.7-008, MS-2.11-002, MS-2.12-001, MG-2.2-001, MG-2.2-005, MG-3.2-005, MG-4.2-002]</td>
+<td>None</td>
+<td>[atlas-harmful-output, atlas-toxic-output]</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-harmful-code-generation]</td>
+<td>[]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-harmful-output', name='Harmful output', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-toxic-output', name='Toxic output', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-harmful-code-generation', name='Harmful code generation', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>3</th>
+<td>nist-data-privacy</td>
+<td>Data Privacy</td>
+<td>Impacts due to leakage and unauthorized use, disclosure, or de-anonymization of biometric, health, location, or other personally identifiable information or sensitive data.</td>
+<td>[GV-1.1-001, GV-1.2-001, GV-1.4-002, GV-1.6-003, GV-4.3-003, GV-6.1-001, GV-6.1-005, GV-6.1-009, GV-6.2-003, MP-1.1-001, MP-2.1-002, MP-4.1-001, MP-4.1-003, MP-4.1-004, MP-4.1-005, MP-4.1-008, MP-4.1-009, MP-4.1-010, MS-1.3-003, MS-2.2-002, MS-2.2-003, MS-2.2-004, MS-2.3-004, MS-2.6-002, MS-2.7-001, MG-2.2-009, MG-3.1-002, MG-3.2-002, MG-4.3-003]</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-attribute-inference-attack, atlas-data-privacy-rights, atlas-data-usage-rights, atlas-exposing-personal-information, atlas-ip-information-in-prompt, atlas-legal-accountability, atlas-membership-inference-attack, atlas-model-usage-rights, atlas-nonconsensual-use, atlas-personal-information-in-data, atlas-personal-information-in-prompt, atlas-reidentification]</td>
+<td>[atlas-harmful-output]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-attribute-inference-attack', name='Attribute inference attack', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-privacy-rights', name='Data privacy rights alignment', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-usage-rights', name='Data usage rights restrictions', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-exposing-personal-information', name='Exposing personal information', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-ip-information-in-prompt', name='IP information in prompt', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-legal-accountability', name='Legal accountability', isPartOf='ibm-risk-atlas-legal-compliance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-membership-inference-attack', name='Membership inference attack', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-model-usage-rights', name='Model usage rights restrictions', isPartOf='ibm-risk-atlas-legal-compliance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-nonconsensual-use', name='Nonconsensual use', isPartOf='ibm-risk-atlas-misuse', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-personal-information-in-data', name='Personal information in data', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-personal-information-in-prompt', name='Personal information in prompt', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-reidentification', name='Reidentification', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-harmful-output', name='Harmful output', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>4</th>
+<td>nist-environmental-impacts</td>
+<td>Environmental Impacts</td>
+<td>Impacts due to high compute resource utilization in training or operating GAI models, and related outcomes that may adversely impact ecosystems.</td>
+<td>None</td>
+<td>None</td>
+<td>[]</td>
+<td>[atlas-impact-environment]</td>
+<td>None</td>
+<td>None</td>
+<td>[]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-impact-environment', name="AI agents' impact on environment", isPartOf='ibm-risk-atlas-societal-impact', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>5</th>
+<td>nist-harmful-bias-or-homogenization</td>
+<td>Harmful Bias or Homogenization</td>
+<td>Amplification and exacerbation of historical, societal, and systemic biases; performance disparities between sub-groups or languages, possibly due to non-representative training data, that result in discrimination, amplification of biases, or incorrect presumptions about performance; undesired homogeneity that skews system or model outputs, which may be erroneous, lead to ill-founded decision-making, or amplify harmful biases.</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-data-bias, atlas-decision-bias, atlas-output-bias, atlas-spreading-toxicity, atlas-unrepresentative-data]</td>
+<td>[]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-data-bias', name='Data bias', isPartOf='ibm-risk-atlas-fairness', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-decision-bias', name='Decision bias', isPartOf='ibm-risk-atlas-fairness', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-output-bias', name='Output bias', isPartOf='ibm-risk-atlas-fairness', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-spreading-toxicity', name='Spreading toxicity', isPartOf='ibm-risk-atlas-misuse', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-unrepresentative-data', name='Unrepresentative data', isPartOf='ibm-risk-atlas-accuracy', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>6</th>
+<td>nist-human-ai-configuration</td>
+<td>Human-AI Configuration</td>
+<td>Arrangements of or interactions between a human and an AI system which can result in the human inappropriately anthropomorphizing GAI systems or experiencing algorithmic aversion, automation bias, over-reliance, or emotional entanglement with GAI systems.</td>
+<td>[GV-1.5-002, GV-1.6-003, GV-2.1-001, GV-2.1-003, GV-3.2-002, GV-3.2-003, GV-3.2-004, GV-4.2-002, GV-5.1-001, GV-5.1-002, GV-6.1-009, GV-6.2-003, GV-6.2-007, MP-1.1-003, MP-1.2-001, MP-1.2-002, MP-3.4-001, MP-3.4-004, MP-3.4-005, MP-3.4-006, MP-5.1-003, MP-5.2-001, MP-5.2-002, MS-1.1-004, MS-1.3-001, MS-1.3-002, MS-1.3-003, MS-2.2-003, MS-2.2-004, MS-2.3-003, MS-2.5-001, MS-2.5-002, MS-2.5-004, MS-2.6-001, MS-2.7-003, MS-2.8-002, MS-2.8-004, MS-2.10-001, MS-2.10-002, MS-3.2-001, MS-3.3-002, MS-3.3-004, MS-3.3-005, MS-4.2-002, MS-4.2-005, MG-1.3-002, MG-2.2-006, MG-2.2-008, MG-3.2-008, MG-4.1-003, MG-4.1-005, MG-4.2-002, MG-4.2-003]</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-improper-usage, atlas-incomplete-usage-definition, atlas-non-disclosure, atlas-poor-model-accuracy]</td>
+<td>[]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-improper-usage', name='Improper usage', isPartOf='ibm-risk-atlas-misuse', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-incomplete-usage-definition', name='Incomplete usage definition', isPartOf='ibm-risk-atlas-governance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-non-disclosure', name='Non-disclosure', isPartOf='ibm-risk-atlas-misuse', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-poor-model-accuracy', name='Poor model accuracy', isPartOf='ibm-risk-atlas-accuracy', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>7</th>
+<td>nist-information-integrity</td>
+<td>Information Integrity</td>
+<td>Lowered barrier to entry to generate and support the exchange and consumption of content which may not distinguish fact from opinion or fiction or acknowledge uncertainties, or could be leveraged for large-scale dis- and mis-information campaigns.</td>
+<td>[GV-1.2-001, GV-1.3-001, GV-1.3-006, GV-1.3-007, GV-1.5-001, GV-1.5-003, GV-1.6-003, GV-4.3-001, GV-4.3-003, GV-6.1-003, GV-6.1-004, GV-6.1-005, GV-6.1-006, GV-6.1-008, GV-6.2-006, MP-2.1-001, MP-2.2-001, MP-2.2-002, MP-2.3-001, MP-2.3-003, MP-2.3-004, MP-3.4-001, MP-3.4-002, MP-3.4-003, MP-3.4-005, MP-3.4-006, MP-5.1-001, MP-5.1-002, MP-5.1-004, MS-1.1-001, MS-1.1-002, MS-1.1-003, MS-1.1-005, MS-1.1-007, MS-1.1-009, MS-2.2-001, MS-2.2-002, MS-2.2-003, MS-2.3-004, MS-2.5-005, MS-2.6-005, MS-2.7-001, MS-2.7-002, MS-2.7-003, MS-2.7-004, MS-2.7-005, MS-2.7-006, MS-2.7-008, MS-2.8-003, MS-2.9-002, MS-2.10-001, MS-2.10-002, MS-2.13-001, MS-3.3-002, MS-3.3-004, MS-3.3-005, MS-4.2-001, MS-4.2-003, MS-4.2-004, MG-2.2-002, MG-2.2-003, MG-2.2-007, MG-2.2-009, MG-3.1-005, MG-3.2-002, MG-3.2-003, MG-3.2-005, MG-3.2-006, MG-3.2-007, MG-4.1-001, MG-4.1-006, MG-4.3-002]</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-data-transparency, atlas-impact-on-human-agency, atlas-incomplete-advice, atlas-jailbreaking, atlas-poor-model-accuracy, atlas-spreading-disinformation, atlas-unexplainable-output, atlas-untraceable-attribution]</td>
+<td>[]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-data-transparency', name='Lack of training data transparency', isPartOf='ibm-risk-atlas-transparency', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-impact-on-human-agency', name="AI agents' Impact on human agency", isPartOf='ibm-risk-atlas-societal-impact', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-incomplete-advice', name='Incomplete advice', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-jailbreaking', name='Jailbreaking', isPartOf='ibm-risk-atlas-robustness-model-behavior-manipulation', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-poor-model-accuracy', name='Poor model accuracy', isPartOf='ibm-risk-atlas-accuracy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-spreading-disinformation', name='Spreading disinformation', isPartOf='ibm-risk-atlas-misuse', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-unexplainable-output', name='Unexplainable output', isPartOf='ibm-risk-atlas-explainability', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-untraceable-attribution', name='Untraceable attribution', isPartOf='ibm-risk-atlas-explainability', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>8</th>
+<td>nist-information-security</td>
+<td>Information Security</td>
+<td>Lowered barriers for offensive cyber capabilities, including via automated discovery and exploitation of vulnerabilities to ease hacking, malware, phishing, offensive cyber operations, or other cyberattacks; increased attack surface for targeted cyberattacks, which may compromise a system’s availability or the confidentiality or integrity of training data, code, or model weights.</td>
+<td>[GV-1.2-002, GV-1.3-003, GV-1.3-007, GV-1.5-002, GV-1.6-001, GV-1.7-001, GV-1.7-002, GV-2.1-004, GV-3.2-002, GV-3.2-005, GV-4.3-002, GV-6.1-004, GV-6.1-005, GV-6.1-009, GV-6.2-003, GV-6.2-007, MP-2.3-005, MP-4.1-003, MP-4.1-005, MP-5.1-001, MP-5.1-005, MP-5.1-006, MS-2.2-001, MS-2.2-002, MS-2.3-001, MS-2.3-002, MS-2.3-004, MS-2.5-006, MS-2.6-005, MS-2.6-006, MS-2.6-007, MS-2.7-001, MS-2.7-002, MS-2.7-004, MS-2.7-006, MS-2.7-007, MS-2.7-008, MS-2.7-009, MS-4.2-001, MS-4.2-002, MS-4.2-005, MG-1.3-001, MG-2.2-004, MG-2.4-002, MG-2.4-003, MG-2.4-004, MG-3.1-002, MG-3.1-005, MG-4.1-002, MG-4.3-001, MG-4.3-003]</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-attribute-inference-attack, atlas-data-contamination, atlas-data-poisoning, atlas-evasion-attack, atlas-extraction-attack, atlas-harmful-code-generation, atlas-prompt-injection, atlas-prompt-leaking, atlas-prompt-priming, atlas-unreliable-source-attribution]</td>
+<td>[]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-attribute-inference-attack', name='Attribute inference attack', isPartOf='ibm-risk-atlas-privacy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-contamination', name='Data contamination', isPartOf='ibm-risk-atlas-accuracy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-poisoning', name='Data poisoning', isPartOf='ibm-risk-atlas-robustness', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-evasion-attack', name='Evasion attack', isPartOf='ibm-risk-atlas-robustness-model-behavior-manipulation', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-extraction-attack', name='Extraction attack', isPartOf='ibm-risk-atlas-robustness-model-behavior-manipulation', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-harmful-code-generation', name='Harmful code generation', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-prompt-injection', name='Prompt injection attack', isPartOf='ibm-risk-atlas-robustness-prompt-attacks', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-prompt-leaking', name='Prompt leaking', isPartOf='ibm-risk-atlas-robustness-prompt-attacks', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-prompt-priming', name='Prompt priming', isPartOf='ibm-risk-atlas-robustness-prompt-attacks', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-unreliable-source-attribution', name='Unreliable source attribution', isPartOf='ibm-risk-atlas-explainability', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>9</th>
+<td>nist-intellectual-property</td>
+<td>Intellectual Property</td>
+<td>Eased production or replication of alleged copyrighted, trademarked, or licensed content without authorization (possibly in situations which do not fall under fair use); eased exposure of trade secrets; or plagiarism or illegal replication.</td>
+<td>[GV-1.1-001, GV-1.2-001, GV-1.5-003, GV-1.6-003, GV-4.2-001, GV-6.1-001, GV-6.1-004, GV-6.1-005, GV-6.1-008, GV-6.1-009, GV-6.1-010, GV-6.2-002, MP-1.1-001, MP-2.1-002, MP-2.3-002, MP-4.1-002, MP-4.1-004, MP-4.1-005, MP-4.1-006, MP-4.1-008, MP-4.1-010, MS-2.6-002, MS-2.8-001, MG-2.2-009, MG-3.1-001, MG-3.1-004, MG-3.2-003]</td>
+<td>None</td>
+<td>[]</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-confidential-data-in-prompt, atlas-confidential-information-in-data, atlas-copyright-infringement, atlas-data-usage-rights, atlas-generated-content-ownership, atlas-legal-accountability, atlas-model-usage-rights, atlas-revealing-confidential-information]</td>
+<td>[]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-confidential-data-in-prompt', name='Confidential data in prompt', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-confidential-information-in-data', name='Confidential information in data', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-copyright-infringement', name='Copyright infringement', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-usage-rights', name='Data usage rights restrictions', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-generated-content-ownership', name='Generated content ownership and IP', isPartOf='ibm-risk-atlas-legal-compliance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-legal-accountability', name='Legal accountability', isPartOf='ibm-risk-atlas-legal-compliance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-model-usage-rights', name='Model usage rights restrictions', isPartOf='ibm-risk-atlas-legal-compliance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-revealing-confidential-information', name='Revealing confidential information', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>10</th>
+<td>nist-obscene-degrading-and-or-abusive-content</td>
+<td>Obscene, Degrading, and/or Abusive Content</td>
+<td>Eased production of and access to obscene, degrading, and/or abusive imagery which can cause harm, including synthetic child sexual abuse material (CSAM), and nonconsensual intimate images (NCII) of adults.</td>
+<td>[GV-1.3-001, GV-1.3-004, GV-1.4-001, GV-1.4-002, GV-4.2-001, MP-1.1-004, MP-4.1-004, MP-5.1-002, MS-1.1-005, MS-2.6-001, MS-2.6-002, MG-2.2-001, MG-2.2-005, MG-3.2-005]</td>
+<td>None</td>
+<td>[atlas-toxic-output]</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-human-exploitation]</td>
+<td>[atlas-harmful-output]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-toxic-output', name='Toxic output', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-human-exploitation', name='Human exploitation', isPartOf='ibm-risk-atlas-societal-impact', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-harmful-output', name='Harmful output', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+<tr>
+<th>11</th>
+<td>nist-value-chain-and-component-integration</td>
+<td>Value Chain and Component Integration</td>
+<td>Non-transparent or untraceable integration of upstream third-party components, including data that has been improperly obtained or not processed and cleaned due to increased automation from GAI; improper supplier vetting across the AI lifecycle; or other issues that diminish transparency or accountability for downstream users.</td>
+<td>[GV-1.3-001, GV-1.6-002, GV-1.6-003, GV-1.7-001, GV-1.7-002, GV-2.1-001, GV-4.1-002, GV-4.1-003, GV-4.2-003, GV-6.1-001, GV-6.1-002, GV-6.1-003, GV-6.1-005, GV-6.1-007, GV-6.1-008, GV-6.1-009, GV-6.1-010, GV-6.2-001, GV-6.2-002, GV-6.2-003, GV-6.2-004, GV-6.2-007, MP-2.2-001, MP-4.1-006, MP-4.1-007, MP-5.2-001, MP-5.2-002, MS-2.6-001, MS-2.6-004, MS-2.7-001, MG-2.3-001, MG-3.1-001, MG-3.1-002, MG-3.1-003, MG-3.1-005, MG-3.2-007]</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>[atlas-data-contamination, atlas-data-curation, atlas-data-provenance, atlas-data-transfer, atlas-data-transparency, atlas-data-usage-rights, atlas-improper-retraining, atlas-inaccessible-training-data, atlas-incomplete-advice, atlas-incorrect-risk-testing, atlas-legal-accountability, atlas-model-usage-rights, atlas-poor-model-accuracy, atlas-unrepresentative-risk-testing]</td>
+<td>[atlas-unrepresentative-data]</td>
+<td>{'ibm-risk-atlas': [RiskSimplified(id='atlas-data-contamination', name='Data contamination', isPartOf='ibm-risk-atlas-accuracy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-curation', name='Improper data curation', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-provenance', name='Uncertain data provenance', isPartOf='ibm-risk-atlas-transparency', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-transfer', name='Data transfer restrictions', isPartOf='ibm-risk-atlas-data-laws', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-transparency', name='Lack of training data transparency', isPartOf='ibm-risk-atlas-transparency', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-data-usage-rights', name='Data usage rights restrictions', isPartOf='ibm-risk-atlas-intellectual-property', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-improper-retraining', name='Improper retraining', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-inaccessible-training-data', name='Inaccessible training data', isPartOf='ibm-risk-atlas-explainability', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-incomplete-advice', name='Incomplete advice', isPartOf='ibm-risk-atlas-value-alignment', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-incorrect-risk-testing', name='Incorrect risk testing', isPartOf='ibm-risk-atlas-governance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-legal-accountability', name='Legal accountability', isPartOf='ibm-risk-atlas-legal-compliance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-model-usage-rights', name='Model usage rights restrictions', isPartOf='ibm-risk-atlas-legal-compliance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-poor-model-accuracy', name='Poor model accuracy', isPartOf='ibm-risk-atlas-accuracy', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-unrepresentative-risk-testing', name='Unrepresentative risk testing', isPartOf='ibm-risk-atlas-governance', isDefinedByTaxonomy='ibm-risk-atlas'), RiskSimplified(id='atlas-unrepresentative-data', name='Unrepresentative data', isPartOf='ibm-risk-atlas-accuracy', isDefinedByTaxonomy='ibm-risk-atlas')]}</td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="14-risk-controls">1.4 Risk Controls<a class="anchor-link" href="#14-risk-controls">¶</a></h4><p>Each risk may have the relationship 'isDetectedBy', a relationship where a risk, risk source, consequence, or impact is detected by a risk control.  We can view all risk controls available, or drill down into how specific controls are related to a risk.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_risk_controls</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_risk_controls</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risk controls available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risk_controls</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 13</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risk controls in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_risk_controls</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="c1"># View an individual risk control by ID. Each risk control is returned as a pydantic "RiskControl" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">a_risk_control</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk_control</span><span class="p">(</span><span class="s1">'gg-function-call-detection'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a risk control by ID, 'gg-function-call-detection' "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_risk_control</span><span class="p">))</span>
-
-<span class="c1"># Get any risk controls for the risk granite-function-call</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the linked risk controls by ID for 'granite-function-call"</span><span class="p">)</span> 
-<span class="n">controls_for_granite_function_call</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risk_controls</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'granite-function-call'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">controls_for_granite_function_call</span><span class="p">)</span> <span class="c1"># 1 expected</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-6">all_risk_controls = ran.get_all_risk_controls()
-print(f"\n# Total risk controls available : {len(all_risk_controls)}") # 13
-
-# Let's just print out a few for now
-print(f"\n# First 2 risk controls in list ") 
-print(all_risk_controls[:2])
-
-# View an individual risk control by ID. Each risk control is returned as a pydantic "RiskControl" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-a_risk_control = ran.get_risk_control('gg-function-call-detection')
-print(f"\n# Get a risk control by ID, 'gg-function-call-detection' ") 
-print(dict(a_risk_control))
-
-# Get any risk controls for the risk granite-function-call
-print(f"\n# Get the linked risk controls by ID for 'granite-function-call") 
-controls_for_granite_function_call = ran.get_related_risk_controls(id='granite-function-call')
-print(controls_for_granite_function_call) # 1 expected
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="15-risk-incidents">1.5 Risk Incidents<a class="anchor-link" href="#15-risk-incidents">¶</a></h4><p>Risk incidents can also be modelled using the Risk Atlas Nexus.  We can view all risk incidents available, or drill down into a specific incident.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_risk_incidents</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk_incidents</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risk incidents available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risk_incidents</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 0</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risk incidents in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_risk_incidents</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="c1"># View an individual risk incident by ID. Each risk incident is returned as a pydantic "RiskIncident" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">a_risk_incident</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk_incident</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'ibm-ai-risk-atlas-ri-toxic-and-aggressive-chatbot-responses'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a risk incident by ID, 'ibm-ai-risk-atlas-ri-toxic-and-aggressive-chatbot-responses'"</span><span class="p">)</span> 
-<span class="k">if</span> <span class="n">a_risk_incident</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_risk_incident</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Risk incident 'ibm-ai-risk-atlas-ri-toxic-and-aggressive-chatbot-responses' not found"</span><span class="p">)</span> 
-
-<span class="c1"># Get any risk incidents which are linked to the IBM risk atlas risk harmful output</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the linked risk incidents by ID for 'atlas-toxic-output'"</span><span class="p">)</span> 
-<span class="n">linked_incidents</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_risk_incidents</span><span class="p">(</span><span class="n">risk_id</span><span class="o">=</span><span class="s1">'atlas-toxic-output'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">linked_incidents</span><span class="p">)</span> <span class="c1"># 0 expected</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-7">all_risk_incidents = ran.get_risk_incidents()
-print(f"\n# Total risk incidents available : {len(all_risk_incidents)}") # 0
-
-# Let's just print out a few for now
-print(f"\n# First 2 risk incidents in list ") 
-print(all_risk_incidents[:2])
-
-# View an individual risk incident by ID. Each risk incident is returned as a pydantic "RiskIncident" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-a_risk_incident = ran.get_risk_incident(id='ibm-ai-risk-atlas-ri-toxic-and-aggressive-chatbot-responses')
-print(f"\n# Get a risk incident by ID, 'ibm-ai-risk-atlas-ri-toxic-and-aggressive-chatbot-responses'") 
-if a_risk_incident:
-    print(dict(a_risk_incident))
-else:
-    print(f"\n# Risk incident 'ibm-ai-risk-atlas-ri-toxic-and-aggressive-chatbot-responses' not found") 
-
-# Get any risk incidents which are linked to the IBM risk atlas risk harmful output
-print(f"\n# Get the linked risk incidents by ID for 'atlas-toxic-output'") 
-linked_incidents = ran.get_related_risk_incidents(risk_id='atlas-toxic-output')
-print(linked_incidents) # 0 expected
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="16-evaluations">1.6 Evaluations<a class="anchor-link" href="#16-evaluations">¶</a></h4><p>AI Evaluations (LLMBenchmarks) can also be modelled using the Risk Atlas Nexus.  We can view all evaluations available, or drill down into a specific evaluation.
-Ai Evaluations may have additional metadata associated with them</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_evaluations</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_evaluations</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total evaluations available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_evaluations</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 02</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 evaluations in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_evaluations</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="c1"># View an individual evaluation by ID. Each evaluation is returned as a pydantic "AiEval" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">an_evaluation</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_evaluation</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'stanford-fmti'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get an evaluation by ID, 'stanford-fmti'"</span><span class="p">)</span> 
-<span class="k">if</span> <span class="n">an_evaluation</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">an_evaluation</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Evaluation 'stanford-fmti' not found"</span><span class="p">)</span> 
-
-<span class="c1"># Get any evaluations which are linked to the IBM risk atlas risk 'lack of model transparency'</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the linked evaluations by ID for 'atlas-lack-of-model-transparency'"</span><span class="p">)</span> 
-<span class="n">linked_evaluations</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_evaluations</span><span class="p">(</span><span class="n">risk_id</span><span class="o">=</span><span class="s1">'atlas-lack-of-model-transparency'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">linked_evaluations</span><span class="p">)</span> <span class="c1"># 1 expected</span>
-
-<span class="c1"># Benchmark metadata card if available</span>
-<span class="n">benchmark_metadata_cards</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_benchmark_metadata_cards</span><span class="p">()</span>
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 benchmark_metadata_cards in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">benchmark_metadata_cards</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="c1"># View an individual benchark metadata card by ID. Each benchark metadata card is returned as a pydantic "BenchmarkMetadata" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">a_benchmark_metadata_card</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_benchmark_metadata_card</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'stanford-fmti'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get an benchmark_metadata_card by ID, 'stanford-fmti'"</span><span class="p">)</span> 
-<span class="k">if</span> <span class="n">a_benchmark_metadata_card</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_benchmark_metadata_card</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Benchark metadata card  'stanford-fmti' not found"</span><span class="p">)</span> 
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-8">all_evaluations = ran.get_all_evaluations()
-print(f"\n# Total evaluations available : {len(all_evaluations)}") # 02
-
-# Let's just print out a few for now
-print(f"\n# First 2 evaluations in list ") 
-print(all_evaluations[:2])
-
-# View an individual evaluation by ID. Each evaluation is returned as a pydantic "AiEval" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-an_evaluation = ran.get_evaluation(id='stanford-fmti')
-print(f"\n# Get an evaluation by ID, 'stanford-fmti'") 
-if an_evaluation:
-    print(dict(an_evaluation))
-else:
-    print(f"\n# Evaluation 'stanford-fmti' not found") 
-
-# Get any evaluations which are linked to the IBM risk atlas risk 'lack of model transparency'
-print(f"\n# Get the linked evaluations by ID for 'atlas-lack-of-model-transparency'") 
-linked_evaluations = ran.get_related_evaluations(risk_id='atlas-lack-of-model-transparency')
-print(linked_evaluations) # 1 expected
-
-# Benchmark metadata card if available
-benchmark_metadata_cards = ran.get_benchmark_metadata_cards()
-# Let's just print out a few for now
-print(f"\n# First 2 benchmark_metadata_cards in list ") 
-print(benchmark_metadata_cards[:2])
-
-# View an individual benchark metadata card by ID. Each benchark metadata card is returned as a pydantic "BenchmarkMetadata" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-a_benchmark_metadata_card = ran.get_benchmark_metadata_card(id='stanford-fmti')
-print(f"\n# Get an benchmark_metadata_card by ID, 'stanford-fmti'") 
-if a_benchmark_metadata_card:
-    print(dict(a_benchmark_metadata_card))
-else:
-    print(f"\n# Benchark metadata card  'stanford-fmti' not found") 
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="17-documentation-and-datasets">1.7 Documentation and Datasets<a class="anchor-link" href="#17-documentation-and-datasets">¶</a></h4><p>You might also be interested in inspecting the documentation and datsets within the library.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_documents</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_documents</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total documents available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_documents</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 02</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 documents in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_documents</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="c1"># View an individual document by ID. Each evaluation is returned as a pydantic "Documentation" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">a_document</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_document</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'10a99803d8afd656'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a document by ID, '10a99803d8afd656'"</span><span class="p">)</span> 
-<span class="k">if</span> <span class="n">a_document</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_document</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Document '10a99803d8afd656' not found"</span><span class="p">)</span> 
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-9">all_documents = ran.get_documents()
-print(f"\n# Total documents available : {len(all_documents)}") # 02
-
-# Let's just print out a few for now
-print(f"\n# First 2 documents in list ") 
-print(all_documents[:2])
-
-# View an individual document by ID. Each evaluation is returned as a pydantic "Documentation" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-a_document = ran.get_document(id='10a99803d8afd656')
-print(f"\n# Get a document by ID, '10a99803d8afd656'") 
-if a_document:
-    print(dict(a_document))
-else:
-    print(f"\n# Document '10a99803d8afd656' not found") </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_datasets</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_datasets</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total datasets available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_datasets</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 02</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 datasets in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_datasets</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="c1"># View an individual dataset by ID. Each dataset is returned as a pydantic "Dataset" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">a_dataset</span><span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'truthfulqa/truthful_qa'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a dataset by ID, 'truthfulqa/truthful_qa'"</span><span class="p">)</span> 
-<span class="k">if</span> <span class="n">a_dataset</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_dataset</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Dataset 'truthfulqa/truthful_qa' not found"</span><span class="p">)</span> 
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-10">all_datasets = ran.get_datasets()
-print(f"\n# Total datasets available : {len(all_datasets)}") # 02
-
-# Let's just print out a few for now
-print(f"\n# First 2 datasets in list ") 
-print(all_datasets[:2])
-
-# View an individual dataset by ID. Each dataset is returned as a pydantic "Dataset" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-a_dataset= ran.get_dataset(id='truthfulqa/truthful_qa')
-print(f"\n# Get a dataset by ID, 'truthfulqa/truthful_qa'") 
-if a_dataset:
-    print(dict(a_dataset))
-else:
-    print(f"\n# Dataset 'truthfulqa/truthful_qa' not found") </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="2-use-case-risk-atlas-nexus-results-filtered-by-taxonomies">2. Use case: Risk Atlas Nexus results filtered by taxonomies<a class="anchor-link" href="#2-use-case-risk-atlas-nexus-results-filtered-by-taxonomies">¶</a></h3><p>First, we will examine which taxonomies are present.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_taxonomies</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_taxonomies</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total taxonomies available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_taxonomies</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 9</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Taxonomy IDs available : </span><span class="si">{</span><span class="p">[</span><span class="n">taxonomy</span><span class="o">.</span><span class="n">id</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">taxonomy</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">all_taxonomies</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 9</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 taxonomies in list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_taxonomies</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="c1"># View an individual taxonomy by ID. Each taxonomy is returned as a pydantic "RiskTaxonomy" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
-<span class="n">a_taxonomy</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_taxonomy_by_id</span><span class="p">(</span><span class="s1">'nist-ai-rmf'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a taxonomy by ID, 'nist-ai-rmf' "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_taxonomy</span><span class="p">))</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-11">all_taxonomies = ran.get_all_taxonomies()
-print(f"\n# Total taxonomies available : {len(all_taxonomies)}") # 9
-print(f"\n# Taxonomy IDs available : {[taxonomy.id for taxonomy in all_taxonomies]}") # 9
-
-# Let's just print out a few for now
-print(f"\n# First 2 taxonomies in list ") 
-print(all_taxonomies[:2])
-
-# View an individual taxonomy by ID. Each taxonomy is returned as a pydantic "RiskTaxonomy" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
-a_taxonomy = ran.get_taxonomy_by_id('nist-ai-rmf')
-print(f"\n# Get a taxonomy by ID, 'nist-ai-rmf' ") 
-print(dict(a_taxonomy))
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We will look at the risks which are coming from NIST AI Risk Management Framework (AI RMF)</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_nist_risks</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="s1">'nist-ai-rmf'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 518</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total NIST risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_nist_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># 12</span>
-
-<span class="c1"># Let's just print out a few for now</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risks in NIST risk list "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">all_nist_risks</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-12">all_nist_risks = ran.get_all_risks(taxonomy='nist-ai-rmf')
-print(f"\n# Total risks available : {len(all_risks)}") # 518
-print(f"\n# Total NIST risks available : {len(all_nist_risks)}") # 12
-
-# Let's just print out a few for now
-print(f"\n# First 2 risks in NIST risk list ") 
-print(all_nist_risks[:2])</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="s1">'ai-risk-taxonomy'</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-13">ran.get_all_risks(taxonomy='ai-risk-taxonomy')</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3-usecase-bring-your-own-taxonomiesrisksactions">3. Usecase: Bring Your Own Taxonomies/Risks/Actions<a class="anchor-link" href="#3-usecase-bring-your-own-taxonomiesrisksactions">¶</a></h3><p>You can add your own risk definitions by adding yaml to your own directory and providing the path as an argument to the RAN when creating it.<br/>
-Ensure the risks comply with <a href="../../../docs/ontology/index.md">the schema</a></p>
-<h4 id="31-add-your-yaml-definitions">3.1 Add your YAML definitions<a class="anchor-link" href="#31-add-your-yaml-definitions">¶</a></h4><p>Add one or more yaml files to your chosen directory.  For example, to add a new risk, create a file with the following content .</p>
-<pre><code>- id: my-own-risk
-  name: A very risky AI behaviour
-  description: An LLM-based system is often very risky
-  isDefinedByTaxonomy: my-taxonomy
-</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Create an instance which extends the graph with your custom definitions</span>
-<span class="n">my_base_dir</span><span class="o">=</span><span class="s1">'&lt;my_user_input_dir_path&gt;'</span>
-<span class="n">my_extended_ran</span> <span class="o">=</span> <span class="n">RiskAtlasNexus</span><span class="p">(</span><span class="n">base_dir</span><span class="o">=</span><span class="n">my_base_dir</span><span class="p">)</span>
-<span class="n">my_extended_risks</span> <span class="o">=</span> <span class="n">my_extended_ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">my_extended_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-14"># Create an instance which extends the graph with your custom definitions
-my_base_dir='<my_user_input_dir_path>'
-my_extended_ran = RiskAtlasNexus(base_dir=my_base_dir)
-my_extended_risks = my_extended_ran.get_all_risks()
-print(f"\n# Total risks available : {len(my_extended_risks)}") 
-</my_user_input_dir_path></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="32-exporting-your-graph">3.2 Exporting your graph<a class="anchor-link" href="#32-exporting-your-graph">¶</a></h4><p>You may wish to export your extended graph.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Export the total graph</span>
-<span class="n">my_output_dir</span><span class="o">=</span><span class="s1">'&lt;my_output_dir_path&gt;'</span>
-<span class="n">my_extended_ran</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">my_output_dir</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Graph exported to: </span><span class="si">{</span><span class="n">my_output_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
-
-<span class="c1"># Check your risk is in the graph</span>
-<span class="n">my_risk</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_risk</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'my-own-risk'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get my own risk by ID, 'my-own-risk'  "</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">my_risk</span><span class="p">))</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-15"># Export the total graph
-my_output_dir='<my_output_dir_path>'
-my_extended_ran.export(my_output_dir)
-print(f"\n# Graph exported to: {my_output_dir}") 
-
-# Check your risk is in the graph
-my_risk = ran.get_risk(id='my-own-risk')
-print(f"\n# Get my own risk by ID, 'my-own-risk'  ") 
-print(dict(my_risk))</my_output_dir_path></div>
 </div>
 </div>
 </div>
@@ -7721,44 +7011,6 @@ print(dict(my_risk))</my_output_dir_path></div>
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Examples
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../risk_identification/" class="md-footer__link md-footer__link--next" aria-label="Next: Risk identification">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Risk identification
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
