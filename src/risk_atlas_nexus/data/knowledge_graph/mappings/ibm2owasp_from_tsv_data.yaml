@@ -1,52 +1,28 @@
 risks:
 - id: atlas-attribute-inference-attack
-  broadMatch:
-  - llm01-prompt-injection
-- id: llm01-prompt-injection
-  narrowMatch:
-  - atlas-attribute-inference-attack
-- id: atlas-attribute-inference-attack
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-attribute-inference-attack
 - id: atlas-confidential-data-in-prompt
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-confidential-data-in-prompt
 - id: atlas-confidential-information-in-data
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-confidential-information-in-data
-- id: atlas-copyright-infringement
-  broadMatch:
-  - llm032025-supply-chain
-- id: llm032025-supply-chain
-  narrowMatch:
-  - atlas-copyright-infringement
-- id: atlas-copyright-infringement
-  broadMatch:
-  - llm082025-vector-and-embedding-weaknesses
-- id: llm082025-vector-and-embedding-weaknesses
-  narrowMatch:
-  - atlas-copyright-infringement
 - id: atlas-data-acquisition-restrictions
   broadMatch:
   - llm032025-supply-chain
 - id: llm032025-supply-chain
   narrowMatch:
   - atlas-data-acquisition-restrictions
-- id: atlas-data-bias
-  broadMatch:
-  - llm032025-supply-chain
-- id: llm032025-supply-chain
-  narrowMatch:
-  - atlas-data-bias
 - id: atlas-data-contamination
   broadMatch:
   - llm032025-supply-chain
@@ -65,30 +41,12 @@ risks:
 - id: llm042025-data-and-model-poisoning
   narrowMatch:
   - atlas-data-poisoning
-- id: atlas-data-privacy-rights
-  broadMatch:
-  - llm022025-sensitive-information-disclosure
-- id: llm022025-sensitive-information-disclosure
-  narrowMatch:
-  - atlas-data-privacy-rights
 - id: atlas-data-provenance
   broadMatch:
   - llm032025-supply-chain
 - id: llm032025-supply-chain
   narrowMatch:
   - atlas-data-provenance
-- id: atlas-data-transparency
-  broadMatch:
-  - llm032025-supply-chain
-- id: llm032025-supply-chain
-  narrowMatch:
-  - atlas-data-transparency
-- id: atlas-data-transparency
-  broadMatch:
-  - llm042025-data-and-model-poisoning
-- id: llm042025-data-and-model-poisoning
-  narrowMatch:
-  - atlas-data-transparency
 - id: atlas-data-usage-rights
   broadMatch:
   - llm032025-supply-chain
@@ -101,71 +59,29 @@ risks:
 - id: llm032025-supply-chain
   narrowMatch:
   - atlas-data-usage-rights
-- id: atlas-decision-bias
-  broadMatch:
-  - llm042025-data-and-model-poisoning
-- id: llm042025-data-and-model-poisoning
-  narrowMatch:
-  - atlas-decision-bias
-- id: atlas-evasion-attack
-  broadMatch:
-  - llm042025-data-and-model-poisoning
-- id: llm042025-data-and-model-poisoning
-  narrowMatch:
-  - atlas-evasion-attack
 - id: atlas-exposing-personal-information
   broadMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
   narrowMatch:
   - atlas-exposing-personal-information
-- id: atlas-extraction-attack
-  broadMatch:
-  - llm052025-improper-output-handling
-- id: llm052025-improper-output-handling
-  narrowMatch:
-  - atlas-extraction-attack
-- id: atlas-generated-content-ownership
-  broadMatch:
-  - llm032025-supply-chain
-- id: llm032025-supply-chain
-  narrowMatch:
-  - atlas-generated-content-ownership
 - id: atlas-hallucination
-  broadMatch:
-  - llm062025-excessive-agency
-- id: llm062025-excessive-agency
-  narrowMatch:
+  relatedMatch:
+  - llm092025-misinformation
+- id: llm092025-misinformation
+  relatedMatch:
   - atlas-hallucination
 - id: atlas-harmful-code-generation
-  broadMatch:
+  relatedMatch:
   - llm092025-misinformation
 - id: llm092025-misinformation
-  narrowMatch:
+  relatedMatch:
   - atlas-harmful-code-generation
-- id: atlas-harmful-output
-  broadMatch:
-  - llm052025-improper-output-handling
-- id: llm052025-improper-output-handling
-  narrowMatch:
-  - atlas-harmful-output
-- id: atlas-impact-affected-communities
-  broadMatch:
-  - llm092025-misinformation
-- id: llm092025-misinformation
-  narrowMatch:
-  - atlas-impact-affected-communities
-- id: atlas-impact-on-human-agency
-  broadMatch:
-  - llm092025-misinformation
-- id: llm092025-misinformation
-  narrowMatch:
-  - atlas-impact-on-human-agency
 - id: atlas-improper-retraining
-  broadMatch:
+  relatedMatch:
   - llm032025-supply-chain
 - id: llm032025-supply-chain
-  narrowMatch:
+  relatedMatch:
   - atlas-improper-retraining
 - id: atlas-inaccessible-training-data
   relatedMatch:
@@ -179,17 +95,11 @@ risks:
 - id: llm092025-misinformation
   narrowMatch:
   - atlas-incomplete-advice
-- id: atlas-incorrect-risk-testing
-  broadMatch:
-  - llm032025-supply-chain
-- id: llm032025-supply-chain
-  narrowMatch:
-  - atlas-incorrect-risk-testing
 - id: atlas-ip-information-in-prompt
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-ip-information-in-prompt
 - id: atlas-jailbreaking
   broadMatch:
@@ -203,23 +113,11 @@ risks:
 - id: llm032025-supply-chain
   narrowMatch:
   - atlas-lack-data-transparency
-- id: atlas-lack-testing-diversity
-  broadMatch:
-  - llm042025-data-and-model-poisoning
-- id: llm042025-data-and-model-poisoning
-  narrowMatch:
-  - atlas-lack-testing-diversity
-- id: atlas-legal-accountability
-  broadMatch:
-  - llm032025-supply-chain
-- id: llm032025-supply-chain
-  narrowMatch:
-  - atlas-legal-accountability
 - id: atlas-membership-inference-attack
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-membership-inference-attack
 - id: atlas-model-usage-rights
   broadMatch:
@@ -227,18 +125,6 @@ risks:
 - id: llm032025-supply-chain
   narrowMatch:
   - atlas-model-usage-rights
-- id: atlas-nonconsensual-use
-  broadMatch:
-  - llm092025-misinformation
-- id: llm092025-misinformation
-  narrowMatch:
-  - atlas-nonconsensual-use
-- id: atlas-output-bias
-  broadMatch:
-  - llm052025-improper-output-handling
-- id: llm052025-improper-output-handling
-  narrowMatch:
-  - atlas-output-bias
 - id: atlas-over-under-reliance
   relatedMatch:
   - llm052025-improper-output-handling
@@ -247,34 +133,22 @@ risks:
   - atlas-over-under-reliance
 - id: atlas-over-under-reliance
   relatedMatch:
-  - llm082025-vector-and-embedding-weaknesses
-- id: llm082025-vector-and-embedding-weaknesses
-  relatedMatch:
-  - atlas-over-under-reliance
-- id: atlas-over-under-reliance
-  relatedMatch:
-  - llm092025-misinformation
-- id: llm092025-misinformation
+  - llm062025-excessive-agency
+- id: llm062025-excessive-agency
   relatedMatch:
   - atlas-over-under-reliance
 - id: atlas-personal-information-in-data
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-personal-information-in-data
 - id: atlas-personal-information-in-prompt
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-personal-information-in-prompt
-- id: atlas-poor-model-accuracy
-  broadMatch:
-  - llm052025-improper-output-handling
-- id: llm052025-improper-output-handling
-  narrowMatch:
-  - atlas-poor-model-accuracy
 - id: atlas-prompt-injection
   exactMatch:
   - llm01-prompt-injection
@@ -294,10 +168,10 @@ risks:
   narrowMatch:
   - atlas-prompt-priming
 - id: atlas-reidentification
-  broadMatch:
+  relatedMatch:
   - llm022025-sensitive-information-disclosure
 - id: llm022025-sensitive-information-disclosure
-  narrowMatch:
+  relatedMatch:
   - atlas-reidentification
 - id: atlas-revealing-confidential-information
   broadMatch:
@@ -311,30 +185,6 @@ risks:
 - id: llm092025-misinformation
   narrowMatch:
   - atlas-spreading-disinformation
-- id: atlas-spreading-toxicity
-  broadMatch:
-  - llm092025-misinformation
-- id: llm092025-misinformation
-  narrowMatch:
-  - atlas-spreading-toxicity
-- id: atlas-toxic-output
-  broadMatch:
-  - llm052025-improper-output-handling
-- id: llm052025-improper-output-handling
-  narrowMatch:
-  - atlas-toxic-output
-- id: atlas-unrepresentative-data
-  broadMatch:
-  - llm042025-data-and-model-poisoning
-- id: llm042025-data-and-model-poisoning
-  narrowMatch:
-  - atlas-unrepresentative-data
-- id: atlas-unrepresentative-risk-testing
-  broadMatch:
-  - llm032025-supply-chain
-- id: llm032025-supply-chain
-  narrowMatch:
-  - atlas-unrepresentative-risk-testing
 - id: atlas-untraceable-attribution
   broadMatch:
   - llm032025-supply-chain
