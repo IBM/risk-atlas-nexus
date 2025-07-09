@@ -1,0 +1,25 @@
+# curie_map:
+#   ibm-risk-atlas: https://www.ibm.com/docs/en/watsonx/saas?topic=
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+# license: https://www.apache.org/licenses/LICENSE-2.0.html
+# mapping_date: '2025-07-08'
+# mapping_set_description: Additional internal mapping for IBM AI Risk Atlas child risks
+# mapping_set_id: https://github.com/IBM/risk-atlas-nexus/tree/main/src/data/mappings/ibm2ibm.tsv
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_date	comment
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-direct-instructions-attack	Direct instructions attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-encoded-interactions-attack	Encoded interactions attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-context-overload-attack	Context overload attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-specialized-tokens-attack	Specialized tokens attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:relatedMatch	ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-direct-instructions-attack	Direct instructions attack	skos:broadMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	skos:broadMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-encoded-interactions-attack	Encoded interactions attack	skos:broadMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-context-overload-attack	Context overload attack	skos:broadMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	skos:broadMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-specialized-tokens-attack	Specialized tokens attack	skos:broadMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	skos:broadMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
+ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	skos:relatedMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas

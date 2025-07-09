@@ -98,7 +98,7 @@ if __name__ == "__main__":
     mapping_files = [
         file_name
         for file_name in listdir(MAP_DIR)
-        if (isfile(join(MAP_DIR, file_name) and not file_name.endswith(".md")))
+        if (file_name.endswith(".md") == False) and isfile(join(MAP_DIR, file_name))
     ]
     for file_name in mapping_files:
         output_file = DATA_DIR + Path(file_name).stem + "_from_tsv_data.yaml"

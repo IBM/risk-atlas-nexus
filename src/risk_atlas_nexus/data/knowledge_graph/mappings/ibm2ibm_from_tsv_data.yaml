@@ -1,0 +1,97 @@
+risks:
+- id: atlas-context-overload-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-context-overload-attack
+- id: atlas-direct-instructions-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-direct-instructions-attack
+- id: atlas-encoded-interactions-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-encoded-interactions-attack
+- id: atlas-indirect-instructions-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-indirect-instructions-attack
+- id: atlas-jailbreaking
+  relatedMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  relatedMatch:
+  - atlas-jailbreaking
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-context-overload-attack
+- id: atlas-context-overload-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-direct-instructions-attack
+- id: atlas-direct-instructions-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-encoded-interactions-attack
+- id: atlas-encoded-interactions-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-indirect-instructions-attack
+- id: atlas-indirect-instructions-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-prompt-leaking
+- id: atlas-prompt-leaking
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-social-hacking-attack
+- id: atlas-social-hacking-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-specialized-tokens-attack
+- id: atlas-specialized-tokens-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  relatedMatch:
+  - atlas-jailbreaking
+- id: atlas-jailbreaking
+  relatedMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-leaking
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-prompt-leaking
+- id: atlas-social-hacking-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-social-hacking-attack
+- id: atlas-specialized-tokens-attack
+  broadMatch:
+  - atlas-prompt-injection
+- id: atlas-prompt-injection
+  narrowMatch:
+  - atlas-specialized-tokens-attack
