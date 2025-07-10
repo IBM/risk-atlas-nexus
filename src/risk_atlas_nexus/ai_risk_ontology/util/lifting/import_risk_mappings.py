@@ -101,10 +101,8 @@ if __name__ == "__main__":
         if (file_name.endswith(".md") == False) and isfile(join(MAP_DIR, file_name))
     ]
     for file_name in mapping_files:
-        print(file_name)
         output_file = DATA_DIR + Path(file_name).stem + "_from_tsv_data.yaml"
         rs = process_mapping_from_tsv_to_risk_mapping(file_name)
         logger.info(f"Processed file: %s, %s valid entries", file_name, len(rs))
         output_risks = process_mappings_to_risks(rs)
         write_to_file(output_risks, output_file)
-'/Users/ingevejs/Documents/workspace/ingelise/risk-atlas-nexus/src/risk_atlas_nexus/data/mappings/mit-ai-risk-repository_ibm-risk-atlas.tsv'
