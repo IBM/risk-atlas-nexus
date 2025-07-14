@@ -37,7 +37,9 @@ Our intention is to create a starting point for an open AI Systems ontology whos
     - [Auto assist questionnaire](examples/notebooks/autoassist_questionnaire.ipynb) Auto-fill questionnaire using Chain of Thought or Few-Shot Examples
     - [AI Tasks identification](examples/notebooks/ai_tasks_identification.ipynb) Uncover ai tasks related to your usecase
     - [AI Domain identification](examples/notebooks/domain_identification.ipynb) Uncover ai domain from your usecase
-      - [Risk Categorization](examples/notebooks/risk_categorization.ipynb) Assess and categorize the severity of risks associated with an AI system usecase. Prompt templates are used with thanks to https://doi.org/10.48550/arXiv.2407.12454.
+    - [Risk Categorization](examples/notebooks/risk_categorization.ipynb) Assess and categorize the severity of risks associated with an AI system usecase. Prompt templates are used with thanks to https://doi.org/10.48550/arXiv.2407.12454.
+    - [Crosswalk](notebooks/generate_crosswalk.ipynb) An example of generating crosswalk information between risks of two different taxonomies.
+
 
 - **Additional Resources:**
     - [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
