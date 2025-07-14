@@ -22,9 +22,9 @@ Alias: hasDataset
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
 | [Question](Question.md) | An evaluation where a question has to be answered |  no  |
 | [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
-| [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
 
 
 

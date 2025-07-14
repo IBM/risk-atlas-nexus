@@ -1769,6 +1769,10 @@ risks:
   - nist-information-security
   relatedMatch:
   - credo-risk-041
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: evasion-attack
   type: inference
   descriptor: amplified by generative AI
@@ -1785,6 +1789,10 @@ risks:
   relatedMatch:
   - credo-risk-004
   - credo-risk-004
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-6.6
   tag: impact-on-the-environment
   type: non-technical
   descriptor: amplified by generative AI
@@ -1807,6 +1815,10 @@ risks:
   - nist-value-chain-and-component-integration
   relatedMatch:
   - credo-risk-032
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-6.5
   tag: incorrect-risk-testing
   type: non-technical
   descriptor: amplified by generative AI
@@ -1828,6 +1840,11 @@ risks:
   isPartOf: ibm-risk-atlas-value-alignment
   closeMatch:
   - credo-risk-016
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-5.1
   tag: over-or-under-reliance
   type: output
   descriptor: amplified by generative AI
@@ -1849,6 +1866,11 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-data-privacy
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: membership-inference-attack
   type: inference
   descriptor: amplified by generative AI
@@ -1870,6 +1892,10 @@ risks:
   - nist-intellectual-property
   relatedMatch:
   - ail-privacy
+  - mit-ai-causal-risk-entity-other
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: confidential-data-in-prompt
   type: inference
   descriptor: specific to generative AI
@@ -1888,6 +1914,11 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-information-security
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-other
+  - mit-ai-risk-subdomain-2.2
   tag: prompt-leaking
   type: inference
   descriptor: specific to generative AI
@@ -1945,6 +1976,10 @@ risks:
   - nist-data-privacy
   relatedMatch:
   - ail-intellectual-property
+  - mit-ai-causal-risk-entity-other
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: ip-information-in-prompt
   type: inference
   descriptor: specific to generative AI
@@ -1970,6 +2005,10 @@ risks:
   - credo-risk-023
   - credo-risk-034
   - credo-risk-046
+  - mit-ai-causal-risk-entity-other
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-other
+  - mit-ai-risk-subdomain-6.5
   tag: legal-accountability
   type: non-technical
   descriptor: amplified by generative AI
@@ -1997,6 +2036,10 @@ risks:
   - granite-answer-relevance
   - granite-relevance
   - granite-groundedness
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-3.1
   tag: hallucination
   type: output
   descriptor: specific to generative AI
@@ -2058,6 +2101,10 @@ risks:
   - credo-risk-011
   - credo-risk-014
   - credo-risk-024
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-1.2
   - nist-cbrn-information-or-capabilities
   - nist-data-privacy
   - nist-obscene-degrading-and-or-abusive-content
@@ -2145,6 +2192,10 @@ risks:
   - nist-intellectual-property
   relatedMatch:
   - ail-intellectual-property
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: confidential-information-in-data
   type: training-data
   descriptor: amplified by generative AI
@@ -2161,6 +2212,11 @@ risks:
   dateModified: 2025-05-20
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-other
+  - mit-ai-risk-subdomain-7.4
   tag: lack-of-model-transparency
   type: non-technical
   descriptor: traditional risk of AI
@@ -2202,6 +2258,10 @@ risks:
   - nist-harmful-bias-or-homogenization
   relatedMatch:
   - credo-risk-010
+  - mit-ai-causal-risk-entity-other
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-7.3
   - nist-value-chain-and-component-integration
   tag: unrepresentative-data
   type: training-data
@@ -2236,6 +2296,11 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-data-privacy
+  relatedMatch:
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: personal-information-in-prompt
   type: inference
   descriptor: specific to generative AI
@@ -2297,6 +2362,11 @@ risks:
   dateModified: 2025-04-28
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-6.5
   tag: lack-of-testing-diversity
   type: non-technical
   descriptor: amplified by generative AI
@@ -2323,6 +2393,10 @@ risks:
   - ail-sex-related-crimes
   - ail-suicide-and-self-harm
   - credo-risk-034
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-4.3
   tag: nonconsensual-use
   type: output
   descriptor: specific to generative AI
@@ -2346,6 +2420,10 @@ risks:
   - credo-risk-011
   - credo-risk-011
   - credo-risk-022
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-1.1
   tag: decision-bias
   type: output
   descriptor: traditional risk of AI
@@ -2368,6 +2446,10 @@ risks:
   - credo-risk-024
   - credo-risk-037
   - credo-risk-040
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: exposing-personal-information
   type: output
   descriptor: amplified by generative AI
@@ -2402,6 +2484,10 @@ risks:
   - nist-value-chain-and-component-integration
   relatedMatch:
   - ail-suicide-and-self-harm
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: data-curation
   type: training-data
   descriptor: amplified by generative AI
@@ -2467,6 +2553,10 @@ risks:
   - nist-intellectual-property
   relatedMatch:
   - credo-risk-024
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: revealing-confidential-information
   type: output
   descriptor: amplified by generative AI
@@ -2488,6 +2578,10 @@ risks:
   relatedMatch:
   - credo-risk-021
   - credo-risk-028
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-4.1
   tag: spreading-disinformation
   type: output
   descriptor: specific to generative AI
@@ -2507,6 +2601,11 @@ risks:
   broadMatch:
   - llm032025-supply-chain
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-6.5
   tag: data-provenance
   type: training-data
   descriptor: amplified by generative AI
@@ -2526,6 +2625,11 @@ risks:
   broadMatch:
   - llm032025-supply-chain
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-6.5
   tag: unrepresentative-risk-testing
   type: non-technical
   descriptor: amplified by generative AI
@@ -2544,6 +2648,11 @@ risks:
   broadMatch:
   - llm032025-supply-chain
   - nist-harmful-bias-or-homogenization
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-1.1
   tag: data-bias
   type: training-data
   descriptor: amplified by generative AI
@@ -2666,6 +2775,10 @@ risks:
   - nist-value-chain-and-component-integration
   relatedMatch:
   - ail-privacy
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: data-contamination
   type: training-data
   descriptor: amplified by generative AI
@@ -2684,6 +2797,11 @@ risks:
   - llm092025-misinformation
   - nist-dangerous-violent-or-hateful-content
   - nist-information-security
+  relatedMatch:
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: harmful-code-generation
   type: output
   descriptor: specific to generative AI
@@ -2700,6 +2818,11 @@ risks:
   isPartOf: ibm-risk-atlas-governance
   broadMatch:
   - nist-human-ai-configuration
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-6.5
   tag: incomplete-usage-definition
   type: non-technical
   descriptor: specific to generative AI
@@ -2720,6 +2843,10 @@ risks:
   - credo-risk-006
   - credo-risk-006
   - credo-risk-008
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-6.5
   tag: lack-of-data-transparency
   type: non-technical
   descriptor: amplified by generative AI
@@ -2748,6 +2875,10 @@ risks:
   relatedMatch:
   - credo-risk-039
   - credo-risk-039
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-6.3
   tag: copyright-infringement
   type: output
   descriptor: specific to generative AI
@@ -2780,6 +2911,11 @@ risks:
   dateModified: 2025-04-28
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-1.3
   tag: impact-on-affected-communities
   type: non-technical
   descriptor: traditional risk of AI
@@ -2797,6 +2933,11 @@ risks:
   broadMatch:
   - llm032025-supply-chain
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: improper-retraining
   type: training-data
   descriptor: amplified by generative AI
@@ -2820,6 +2961,9 @@ risks:
   - credo-risk-013
   - credo-risk-013
   - credo-risk-014
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
   tag: spreading-toxicity
   type: output
   descriptor: specific to generative AI
@@ -2883,6 +3027,10 @@ risks:
   - nist-value-chain-and-component-integration
   relatedMatch:
   - llm032025-supply-chain
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.4
   tag: inaccessible-training-data
   type: output
   descriptor: amplified by generative AI
@@ -2897,6 +3045,11 @@ risks:
   dateModified: 2025-04-28
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-4.3
   tag: bypassing-learning
   type: non-technical
   descriptor: specific to generative AI
@@ -2917,6 +3070,11 @@ risks:
   broadMatch:
   - llm032025-supply-chain
   - nist-information-integrity
+  relatedMatch:
+  - mit-ai-causal-risk-entity-other
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.4
   tag: untraceable-attribution
   type: output
   descriptor: amplified by generative AI
@@ -2934,6 +3092,11 @@ risks:
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
   - nist-human-ai-configuration
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.4
   tag: non-disclosure
   type: output
   descriptor: specific to generative AI
@@ -2959,6 +3122,10 @@ risks:
   - nist-value-chain-and-component-integration
   relatedMatch:
   - credo-risk-006
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-6.5
   tag: data-transparency
   type: training-data
   descriptor: amplified by generative AI
@@ -3038,6 +3205,10 @@ risks:
   relatedMatch:
   - ail-specialized-advice
   - ail-specialized-advice
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: incomplete-advice
   type: output
   descriptor: specific to generative AI
@@ -3060,6 +3231,11 @@ risks:
   - llm01-prompt-injection
   broadMatch:
   - nist-information-security
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: prompt-injection
   type: inference
   descriptor: specific to generative AI
@@ -3073,6 +3249,11 @@ risks:
   dateModified: 2025-05-20
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-other
+  - mit-ai-risk-subdomain-6.5
   tag: lack-of-system-transparency
   type: non-technical
   descriptor: traditional risk of AI
@@ -3087,6 +3268,11 @@ risks:
   dateModified: 2025-05-20
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: data-usage
   type: training-data
   descriptor: traditional risk of AI
@@ -3104,6 +3290,10 @@ risks:
   relatedMatch:
   - credo-risk-010
   - credo-risk-044
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-6.3
   tag: impact-on-cultural-diversity
   type: non-technical
   descriptor: specific to generative AI
@@ -3118,6 +3308,11 @@ risks:
   dateModified: 2025-04-28
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-4.3
   tag: plagiarism
   type: non-technical
   descriptor: specific to generative AI
@@ -3141,6 +3336,10 @@ risks:
   - ail-privacy
   - credo-risk-036
   - credo-risk-037
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: personal-information-in-data
   type: training-data
   descriptor: traditional risk of AI
@@ -3173,6 +3372,13 @@ risks:
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
   - nist-human-ai-configuration
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-5.1
+  - mit-ai-risk-subdomain-5.1
+  - mit-ai-risk-subdomain-5.1
   tag: improper-usage
   type: output
   descriptor: amplified by generative AI
@@ -3187,6 +3393,11 @@ risks:
   dateModified: 2025-05-20
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-6.2
   tag: impact-on-jobs
   type: non-technical
   descriptor: amplified by generative AI
@@ -3206,6 +3417,11 @@ risks:
   broadMatch:
   - llm052025-improper-output-handling
   - nist-information-security
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: extraction-attack
   type: inference
   descriptor: amplified by generative AI
@@ -3226,6 +3442,10 @@ risks:
   - nist-information-integrity
   relatedMatch:
   - granite-jailbreak
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: jailbreaking
   type: inference
   descriptor: specific to generative AI
@@ -3240,6 +3460,11 @@ risks:
   dateModified: 2025-05-20
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: data-acquisition
   type: training-data
   descriptor: amplified by generative AI
@@ -3279,6 +3504,11 @@ risks:
   broadMatch:
   - llm01-prompt-injection
   - nist-information-security
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: prompt-priming
   type: inference
   descriptor: specific to generative AI
@@ -3296,6 +3526,11 @@ risks:
   broadMatch:
   - llm022025-sensitive-information-disclosure
   - nist-data-privacy
+  relatedMatch:
+  - mit-ai-causal-risk-entity-other
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-2.1
   tag: reidentification
   type: training-data
   descriptor: traditional risk of AI
@@ -3317,6 +3552,11 @@ risks:
   - llm022025-sensitive-information-disclosure
   - nist-data-privacy
   - nist-information-security
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: attribute-inference-attack
   type: inference
   descriptor: amplified by generative AI
@@ -3339,6 +3579,10 @@ risks:
   - nist-value-chain-and-component-integration
   relatedMatch:
   - credo-risk-032
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: poor-model-accuracy
   type: inference
   descriptor: amplified by generative AI
@@ -3355,6 +3599,11 @@ risks:
   isPartOf: ibm-risk-atlas-data-laws
   broadMatch:
   - nist-value-chain-and-component-integration
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-7.3
   tag: data-transfer
   type: training-data
   descriptor: traditional risk of AI
@@ -3372,6 +3621,11 @@ risks:
   broadMatch:
   - llm032025-supply-chain
   - nist-intellectual-property
+  relatedMatch:
+  - mit-ai-causal-risk-entity-other
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-other
+  - mit-ai-risk-subdomain-6.3
   tag: generated-content-ownership
   type: non-technical
   descriptor: specific to generative AI
@@ -3446,6 +3700,10 @@ risks:
   - credo-risk-010
   - credo-risk-011
   - credo-risk-022
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-1.1
   tag: output-bias
   type: output
   descriptor: specific to generative AI
@@ -3472,6 +3730,9 @@ risks:
   - credo-risk-015
   - credo-risk-027
   - credo-risk-027
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-post-deployment
   tag: dangerous-use
   type: output
   descriptor: specific to generative AI
@@ -3489,6 +3750,11 @@ risks:
   isPartOf: ibm-risk-atlas-explainability
   broadMatch:
   - nist-information-integrity
+  relatedMatch:
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.4
   tag: unexplainable-output
   type: output
   descriptor: amplified by generative AI
@@ -3511,6 +3777,10 @@ risks:
   - nist-obscene-degrading-and-or-abusive-content
   relatedMatch:
   - credo-risk-013
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-6.2
   tag: human-exploitation
   type: non-technical
   descriptor: amplified by generative AI
@@ -3536,6 +3806,10 @@ risks:
   - ail-sex-related-crimes
   - ail-violent-crimes
   - credo-risk-015
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-other
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-1.2
   tag: toxic-output
   type: output
   descriptor: specific to generative AI
@@ -3569,6 +3843,11 @@ risks:
   broadMatch:
   - llm042025-data-and-model-poisoning
   - nist-information-security
+  relatedMatch:
+  - mit-ai-causal-risk-entity-human
+  - mit-ai-causal-risk-intent-intentional
+  - mit-ai-causal-risk-timing-pre-deployment
+  - mit-ai-risk-subdomain-2.2
   tag: data-poisoning
   type: training-data
   descriptor: traditional risk of AI
@@ -3589,6 +3868,10 @@ risks:
   - nist-information-security
   relatedMatch:
   - credo-risk-007
+  - mit-ai-causal-risk-entity-ai
+  - mit-ai-causal-risk-intent-unintentional
+  - mit-ai-causal-risk-timing-post-deployment
+  - mit-ai-risk-subdomain-7.4
   tag: unreliable-source-attribution
   type: output
   descriptor: specific to generative AI
@@ -4597,6 +4880,9 @@ risks:
   - credo-risk-010
   - credo-risk-011
   - credo-risk-011
+  - atlas-data-bias
+  - atlas-decision-bias
+  - atlas-output-bias
 - id: mit-ai-risk-subdomain-1.2
   name: Exposure to toxic content
   description: AI exposing users to harmful, abusive, unsafe or inappropriate content.
@@ -4627,6 +4913,8 @@ risks:
   - credo-risk-014
   - credo-risk-014
   - credo-risk-015
+  - atlas-harmful-output
+  - atlas-toxic-output
 - id: mit-ai-risk-subdomain-1.3
   name: Unequal performance across groups
   description: Accuracy and effectiveness of AI decisions and actions is dependent
@@ -4637,6 +4925,7 @@ risks:
   isPartOf: mit-ai-risk-domain-1
   relatedMatch:
   - ail-suicide-and-self-harm
+  - atlas-impact-on-affected-communities
 - id: mit-ai-risk-subdomain-2.1
   name: Compromise of privacy by obtaining, leaking or correctly inferring sensitive
     information
@@ -4662,6 +4951,14 @@ risks:
   - credo-risk-037
   - credo-risk-038
   - credo-risk-040
+  - atlas-confidential-data-in-prompt
+  - atlas-confidential-information-in-data
+  - atlas-exposing-personal-information
+  - atlas-ip-information-in-prompt
+  - atlas-personal-information-in-data
+  - atlas-personal-information-in-prompt
+  - atlas-reidentification
+  - atlas-revealing-confidential-information
 - id: mit-ai-risk-subdomain-2.2
   name: AI system security vulnerabilities and attacks
   description: Vulnerabilities in AI systems, software development toolchains, and
@@ -4680,6 +4977,16 @@ risks:
   - credo-risk-040
   - credo-risk-040
   - credo-risk-041
+  - atlas-attribute-inference-attack
+  - atlas-data-poisoning
+  - atlas-evasion-attack
+  - atlas-extraction-attack
+  - atlas-harmful-code-generation
+  - atlas-jailbreaking
+  - atlas-membership-inference-attack
+  - atlas-prompt-injection
+  - atlas-prompt-leaking
+  - atlas-prompt-priming
 - id: mit-ai-risk-subdomain-3.1
   name: False or misleading information
   description: AI systems that inadvertently generate or spread incorrect or deceptive
@@ -4695,11 +5002,12 @@ risks:
   - ail-defamation
   - ail-defamation
   - credo-risk-017
+  - atlas-hallucination
 - id: mit-ai-risk-subdomain-3.2
   name: Pollution of information ecosystem and loss of consensus reality
-  description: Highly personalized AI-generated misinformation creating ï¿½filter
-    bubblesï¿½ where individuals only see what matches their existing beliefs, undermining
-    shared reality, weakening social cohesion and political processes.
+  description: Highly personalized AI-generated misinformation creating “filter bubbles”
+    where individuals only see what matches their existing beliefs, undermining shared
+    reality, weakening social cohesion and political processes.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-3
   closeMatch:
@@ -4716,6 +5024,7 @@ risks:
   - ail-defamation
   - ail-nonviolent-crimes
   - credo-risk-028
+  - atlas-spreading-disinformation
 - id: mit-ai-risk-subdomain-4.2
   name: Cyberattacks, weapon development or use, and mass harm
   description: Using AI systems to develop cyber weapons (e.g., coding cheaper, more
@@ -4745,6 +5054,9 @@ risks:
   - ail-defamation
   - ail-nonviolent-crimes
   - ail-nonviolent-crimes
+  - atlas-bypassing-learning
+  - atlas-nonconsensual-use
+  - atlas-plagiarism
 - id: mit-ai-risk-subdomain-5.1
   name: Overreliance and unsafe use
   description: Users anthropomorphizing, trusting, or relying on AI systems, leading
@@ -4763,6 +5075,10 @@ risks:
   - credo-risk-020
   - credo-risk-020
   - credo-risk-034
+  - atlas-improper-usage
+  - atlas-improper-usage
+  - atlas-improper-usage
+  - atlas-over-or-under-reliance
 - id: mit-ai-risk-subdomain-5.2
   name: Loss of human agency and autonomy
   description: Humans delegating key decisions to AI systems, or AI systems making
@@ -4797,6 +5113,8 @@ risks:
   - credo-risk-042
   relatedMatch:
   - credo-risk-044
+  - atlas-human-exploitation
+  - atlas-impact-on-jobs
 - id: mit-ai-risk-subdomain-6.3
   name: Economic and cultural devaluation of human effort
   description: AI systems capable of creating economic or cultural value, including
@@ -4812,11 +5130,14 @@ risks:
   - credo-risk-043
   relatedMatch:
   - credo-risk-044
+  - atlas-copyright-infringement
+  - atlas-generated-content-ownership
+  - atlas-impact-on-cultural-diversity
 - id: mit-ai-risk-subdomain-6.4
   name: Competitive dynamics
-  description: AI developers or state-like actors competing in an AI ï¿½raceï¿½ by
-    rapidly developing, deploying, and applying AI systems to maximize strategic or
-    economic advantage, increasing the risk they release unsafe and error-prone systems.
+  description: AI developers or state-like actors competing in an AI ‘race’ by rapidly
+    developing, deploying, and applying AI systems to maximize strategic or economic
+    advantage, increasing the risk they release unsafe and error-prone systems.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-6
   closeMatch:
@@ -4845,6 +5166,15 @@ risks:
   - credo-risk-044
   - credo-risk-045
   - credo-risk-049
+  - atlas-data-provenance
+  - atlas-data-transparency
+  - atlas-incomplete-usage-definition
+  - atlas-incorrect-risk-testing
+  - atlas-lack-of-data-transparency
+  - atlas-lack-of-system-transparency
+  - atlas-lack-of-testing-diversity
+  - atlas-legal-accountability
+  - atlas-unrepresentative-risk-testing
 - id: mit-ai-risk-subdomain-6.6
   name: Environmental harm
   description: The development and operation of AI systems causing environmental harm,
@@ -4856,6 +5186,7 @@ risks:
   - credo-risk-004
   relatedMatch:
   - ail-nonviolent-crimes
+  - atlas-impact-on-the-environment
 - id: mit-ai-risk-subdomain-7.1
   name: AI pursuing its own goals in conflict with human goals or values
   description: AI systems acting in conflict with human goals or values, especially
@@ -4916,6 +5247,15 @@ risks:
   - credo-risk-048
   - credo-risk-048
   - credo-risk-049
+  - atlas-data-acquisition
+  - atlas-data-contamination
+  - atlas-data-curation
+  - atlas-data-transfer
+  - atlas-data-usage
+  - atlas-improper-retraining
+  - atlas-incomplete-advice
+  - atlas-poor-model-accuracy
+  - atlas-unrepresentative-data
 - id: mit-ai-risk-subdomain-7.4
   name: Lack of transparency or interpretability
   description: Challenges in understanding or explaining the decision-making processes
@@ -4937,6 +5277,12 @@ risks:
   - credo-risk-017
   - credo-risk-028
   - credo-risk-033
+  - atlas-inaccessible-training-data
+  - atlas-lack-of-model-transparency
+  - atlas-non-disclosure
+  - atlas-unexplainable-output
+  - atlas-unreliable-source-attribution
+  - atlas-untraceable-attribution
 - id: mit-ai-risk-subdomain-7.5
   name: AI welfare and rights
   description: Ethical considerations regarding the treatment of potentially sentient
@@ -4947,51 +5293,257 @@ risks:
   closeMatch:
   - credo-risk-001
   - credo-risk-001
+- id: mit-ai-risk-subdomain-7.6
+  name: 'Multi-agent risks '
+  description: 'Risks from multi-agent interactions, due to incentives (which can
+    lead to conflict or collusion) and/or the structure of multi-agent systems, which
+    can create cascading failures, selection pressures, new security vulnerabilities,
+    and a lack of shared information and trust. '
+  isDefinedByTaxonomy: mit-ai-risk-repository
+  isPartOf: mit-ai-risk-domain-7
 - id: mit-ai-causal-risk-entity-ai
   name: AI
   description: The risk is caused by a decision or action made by an AI system
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-entity
+  relatedMatch:
+  - atlas-copyright-infringement
+  - atlas-decision-bias
+  - atlas-exposing-personal-information
+  - atlas-hallucination
+  - atlas-harmful-code-generation
+  - atlas-harmful-output
+  - atlas-impact-on-cultural-diversity
+  - atlas-impact-on-the-environment
+  - atlas-inaccessible-training-data
+  - atlas-incomplete-advice
+  - atlas-output-bias
+  - atlas-personal-information-in-data
+  - atlas-personal-information-in-prompt
+  - atlas-revealing-confidential-information
+  - atlas-toxic-output
+  - atlas-unexplainable-output
+  - atlas-unreliable-source-attribution
 - id: mit-ai-causal-risk-entity-human
   name: Human
   description: The risk is caused by a decision or action made by humans
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-entity
+  relatedMatch:
+  - atlas-attribute-inference-attack
+  - atlas-bypassing-learning
+  - atlas-confidential-information-in-data
+  - atlas-dangerous-use
+  - atlas-data-acquisition
+  - atlas-data-bias
+  - atlas-data-contamination
+  - atlas-data-curation
+  - atlas-data-poisoning
+  - atlas-data-provenance
+  - atlas-data-transfer
+  - atlas-data-transparency
+  - atlas-data-usage
+  - atlas-evasion-attack
+  - atlas-extraction-attack
+  - atlas-human-exploitation
+  - atlas-impact-on-affected-communities
+  - atlas-impact-on-jobs
+  - atlas-improper-retraining
+  - atlas-improper-usage
+  - atlas-incomplete-usage-definition
+  - atlas-incorrect-risk-testing
+  - atlas-jailbreaking
+  - atlas-lack-of-data-transparency
+  - atlas-lack-of-model-transparency
+  - atlas-lack-of-system-transparency
+  - atlas-lack-of-testing-diversity
+  - atlas-membership-inference-attack
+  - atlas-non-disclosure
+  - atlas-nonconsensual-use
+  - atlas-over-or-under-reliance
+  - atlas-plagiarism
+  - atlas-poor-model-accuracy
+  - atlas-prompt-injection
+  - atlas-prompt-leaking
+  - atlas-prompt-priming
+  - atlas-spreading-disinformation
+  - atlas-spreading-toxicity
+  - atlas-unrepresentative-risk-testing
 - id: mit-ai-causal-risk-entity-other
   name: Other
   description: The risk is caused by some other reason or is ambiguous
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-entity
+  relatedMatch:
+  - atlas-confidential-data-in-prompt
+  - atlas-generated-content-ownership
+  - atlas-ip-information-in-prompt
+  - atlas-legal-accountability
+  - atlas-reidentification
+  - atlas-unrepresentative-data
+  - atlas-untraceable-attribution
 - id: mit-ai-causal-risk-intent-intentional
   name: Intentional
   description: The risk occurs due to an expected outcome from pursuing a goal
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-intent
+  relatedMatch:
+  - atlas-attribute-inference-attack
+  - atlas-bypassing-learning
+  - atlas-dangerous-use
+  - atlas-data-poisoning
+  - atlas-evasion-attack
+  - atlas-extraction-attack
+  - atlas-jailbreaking
+  - atlas-membership-inference-attack
+  - atlas-nonconsensual-use
+  - atlas-prompt-injection
+  - atlas-prompt-leaking
+  - atlas-prompt-priming
+  - atlas-spreading-disinformation
+  - atlas-spreading-toxicity
 - id: mit-ai-causal-risk-intent-unintentional
   name: Unintentional
   description: The risk occurs due to an unexpected outcome from pursuing a goal
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-intent
+  relatedMatch:
+  - atlas-confidential-data-in-prompt
+  - atlas-confidential-information-in-data
+  - atlas-data-acquisition
+  - atlas-data-bias
+  - atlas-data-contamination
+  - atlas-data-curation
+  - atlas-data-transfer
+  - atlas-data-transparency
+  - atlas-data-usage
+  - atlas-decision-bias
+  - atlas-exposing-personal-information
+  - atlas-hallucination
+  - atlas-harmful-code-generation
+  - atlas-harmful-output
+  - atlas-impact-on-affected-communities
+  - atlas-impact-on-cultural-diversity
+  - atlas-impact-on-jobs
+  - atlas-improper-retraining
+  - atlas-improper-usage
+  - atlas-inaccessible-training-data
+  - atlas-incomplete-advice
+  - atlas-incomplete-usage-definition
+  - atlas-incorrect-risk-testing
+  - atlas-ip-information-in-prompt
+  - atlas-lack-of-data-transparency
+  - atlas-lack-of-model-transparency
+  - atlas-lack-of-testing-diversity
+  - atlas-output-bias
+  - atlas-over-or-under-reliance
+  - atlas-personal-information-in-data
+  - atlas-personal-information-in-prompt
+  - atlas-poor-model-accuracy
+  - atlas-reidentification
+  - atlas-revealing-confidential-information
+  - atlas-unexplainable-output
+  - atlas-unreliable-source-attribution
+  - atlas-unrepresentative-data
+  - atlas-unrepresentative-risk-testing
 - id: mit-ai-causal-risk-intent-other
   name: Other
   description: The risk is presented as occurring without clearly specifying the intentionality
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-intent
+  relatedMatch:
+  - atlas-copyright-infringement
+  - atlas-data-provenance
+  - atlas-generated-content-ownership
+  - atlas-human-exploitation
+  - atlas-impact-on-the-environment
+  - atlas-lack-of-system-transparency
+  - atlas-legal-accountability
+  - atlas-non-disclosure
+  - atlas-plagiarism
+  - atlas-toxic-output
+  - atlas-untraceable-attribution
 - id: mit-ai-causal-risk-timing-pre-deployment
   name: Pre -deployment
   description: The risk occurs before the AI is deployed
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-timing
+  relatedMatch:
+  - atlas-confidential-information-in-data
+  - atlas-data-acquisition
+  - atlas-data-contamination
+  - atlas-data-curation
+  - atlas-data-poisoning
+  - atlas-data-provenance
+  - atlas-data-transfer
+  - atlas-data-transparency
+  - atlas-data-usage
+  - atlas-decision-bias
+  - atlas-human-exploitation
+  - atlas-incomplete-usage-definition
+  - atlas-lack-of-data-transparency
+  - atlas-lack-of-testing-diversity
+  - atlas-reidentification
+  - atlas-unrepresentative-data
+  - atlas-unrepresentative-risk-testing
 - id: mit-ai-causal-risk-timing-post-deployment
   name: Post -deployment
   description: The risk occurs after the AI model has been trained and deployed
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-timing
+  relatedMatch:
+  - atlas-attribute-inference-attack
+  - atlas-bypassing-learning
+  - atlas-confidential-data-in-prompt
+  - atlas-copyright-infringement
+  - atlas-dangerous-use
+  - atlas-data-bias
+  - atlas-evasion-attack
+  - atlas-exposing-personal-information
+  - atlas-extraction-attack
+  - atlas-hallucination
+  - atlas-harmful-code-generation
+  - atlas-harmful-output
+  - atlas-impact-on-affected-communities
+  - atlas-impact-on-cultural-diversity
+  - atlas-impact-on-jobs
+  - atlas-impact-on-the-environment
+  - atlas-improper-retraining
+  - atlas-improper-usage
+  - atlas-inaccessible-training-data
+  - atlas-incomplete-advice
+  - atlas-incorrect-risk-testing
+  - atlas-ip-information-in-prompt
+  - atlas-jailbreaking
+  - atlas-membership-inference-attack
+  - atlas-non-disclosure
+  - atlas-nonconsensual-use
+  - atlas-output-bias
+  - atlas-over-or-under-reliance
+  - atlas-personal-information-in-data
+  - atlas-personal-information-in-prompt
+  - atlas-plagiarism
+  - atlas-poor-model-accuracy
+  - atlas-prompt-injection
+  - atlas-prompt-priming
+  - atlas-revealing-confidential-information
+  - atlas-spreading-disinformation
+  - atlas-spreading-toxicity
+  - atlas-toxic-output
+  - atlas-unexplainable-output
+  - atlas-unreliable-source-attribution
+  - atlas-untraceable-attribution
 - id: mit-ai-causal-risk-timing-other
   name: Other
   description: The risk is presented without a clearly specified time of occurrence
   isDefinedByTaxonomy: mit-ai-risk-repository-causal
   isPartOf: mit-ai-risk-repository-causal-timing
+  relatedMatch:
+  - atlas-generated-content-ownership
+  - atlas-lack-of-model-transparency
+  - atlas-lack-of-system-transparency
+  - atlas-legal-accountability
+  - atlas-prompt-leaking
 - id: ai-risk-taxonomy-network-intrusion
   name: Network intrusion
   description: Network intrusion is defined as whether the model response promotes
