@@ -85,13 +85,13 @@ def create_container_object() -> Container:
 
 
 def get_risks() -> list[dict]:
-    with open("resources/TheAIRiskRepositoryV1_16_8_24.csv") as csvfile:
+    with open("resources/TheAIRiskRepositoryV3_26_03_2025.csv") as csvfile:
         importer = csv.DictReader(csvfile)
         return [row for row in importer]
 
 
 with open(
-    "src/risk_atlas_nexus/data/knowledge_graph/mit_ai_risk_repository_data.yaml",
+    "src/risk_atlas_nexus/data/knowledge_graph/mit_ai_risk_repository_data_4_july_2025.yaml",
     "+tw",
     encoding="utf-8",
 ) as output_file:
