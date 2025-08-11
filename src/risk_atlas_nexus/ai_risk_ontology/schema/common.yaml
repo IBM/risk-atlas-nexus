@@ -73,6 +73,23 @@ classes:
     - value
     - evidence
 
+  Vocabulary:
+    is_a: Entity
+    description: A collection of terms, with their definitions and relationships.
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  Term:
+    is_a: Entity
+    description: A term and its definitions
+    slots:
+      - isDefinedByVocabulary
+      - hasDocumentation
+      - hasParentDefinition
+      - hasSubDefinition
+      - hasRelatedRisk
 
 slots:
   id:
@@ -80,6 +97,10 @@ slots:
     required: true
     slot_uri: schema:identifier
     description: A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
+  isDefinedByVocabulary:
+    slot_uri: schema:isPartOf
+    description: A relationship where a term or a term group is defined by a vocabulary
+    range: Vocabulary
   name:
     slot_uri: schema:name
     description: A text name of this instance.
@@ -144,3 +165,30 @@ slots:
     slot_uri: schema:hasPart
     description: A relationship where an entity has another entity
     multivalued: true
+  hasTerm:
+    slot_uri: nexus:hasTerm
+    range: Term
+    description: Indicates terms associated with a vocabulary
+    multivalued: true
+    inlined: false
+  hasRelatedTerm:
+    description: A relationship where an entity relates to a term
+    domain: Any
+    any_of:
+      - range: RiskConcept
+      - range: Term
+    range: Term
+    multivalued: true
+    inlined: false
+  hasParentDefinition:
+    slot_uri: nexus:hasParentDefinition
+    range: Term
+    description: Indicates parent terms associated with a term
+    multivalued: true
+    inlined: false
+  hasSubDefinition:
+    slot_uri: nexus:hasSubDefinition
+    range: Term
+    description: Indicates child terms associated with a term
+    multivalued: true
+    inlined: false

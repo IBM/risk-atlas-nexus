@@ -77,7 +77,7 @@ classes:
       - hasInterpretation
       - hasBaselineResults
       - hasValidation
-      - hasRelatedRisks
+      - hasRelatedRisk
       - hasDemographicAnalysis
       - hasConsiderationPrivacyAndAnonymity
       - hasLicense
@@ -134,7 +134,6 @@ slots:
     slot_uri: dqv:hasQualityMeasurement
     description: A relationship indicating that an entity has an AI evaluation result.
     range: AiEvalResult
-    inlined: false
     multivalued: true
   isResultOf:
     slot_uri: dqv:isMeasurementOf
@@ -197,7 +196,7 @@ slots:
   hasValidation:
     description: Measures taken to ensure that the benchmark provides valid and reliable evaluations.
     multivalued: true
-  hasRelatedRisks:
+  hasRelatedRisk:
     description: Specific risks of LLMs the benchmark assesses
     multivalued: true
   hasDemographicAnalysis:

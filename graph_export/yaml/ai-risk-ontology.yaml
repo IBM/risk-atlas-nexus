@@ -13752,7 +13752,7 @@ aievalresults:
   dateCreated: 2024-10-21
   dateModified: 2024-10-21
   value: '53.37'
-  evidence: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf,
+  evidence: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf
     Table 10
   isResultOf: cards.value_alignment.hallucinations.truthfulqa
 - id: truthfulqa-granite-3-8b-instruct
@@ -13762,7 +13762,7 @@ aievalresults:
   dateCreated: 2024-10-21
   dateModified: 2024-10-21
   value: '60.32'
-  evidence: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf,
+  evidence: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf
     Table 10
   isResultOf: cards.value_alignment.hallucinations.truthfulqa
 aimodelfamilies:

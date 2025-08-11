@@ -1,0 +1,58 @@
+id: https://ibm.github.io/risk-atlas-nexus/ontology/ai_intrinsic
+name: ai_intrinsic
+description:
+  An ontology describing AI Intrinsics and representing LoRA (Low-Rank Adaptation) adapters
+license: license-apache-2.0
+version: "1.0.0"
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+  - common
+  - ai_system
+  - ai_eval
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
+  dpv: https://w3c.github.io/dpv/2.1/dpv/#
+  airo: https://w3id.org/airo#
+default_range: string
+default_prefix: nexus
+
+# ----------------
+# Classes
+# ----------------
+classes:
+
+  Adapter:
+    description: Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
+    is_a: Entity
+
+  LLMIntrinsic:
+    description: A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.
+    is_a: Entity
+    slots:
+      - hasRelatedRisk
+      - hasRelatedTerm
+      - hasAdapterType
+      - hasDocumentation
+      - isDefinedByVocabulary
+
+enums:
+  AdapterType:
+    permissible_values:
+      LORA:
+        description: Low-rank adapters, or LoRAs, are a fast way to give generalist large language models targeted knowledge and skills so they can do things like summarize IT manuals or rate the accuracy of their own answers. LoRA reduces the number of trainable parameters by learning pairs of rank-decompostion matrices while freezing the original weights. This vastly reduces the storage requirement for large language models adapted to specific tasks and enables efficient task-switching during deployment all without introducing inference latency. LoRA also outperforms several other adaptation methods including adapter, prefix-tuning, and fine-tuning. See arXiv:2106.09685
+      ALORA:
+        description: Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reusing existing base model KV cache for more efficient inference, unlike standard LoRA models. As a result, aLoRA models can be quickly invoked as-needed for specialized tasks during (long) flows where the base model is primarily used, avoiding potentially expensive prefill costs in terms of latency, throughput, and GPU memory. See arXiv:2504.12397 for further details.
+      X-LORA:
+        description: Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse gating to dynamically activate LoRA experts.
+
+slots:
+  hasAdapter:
+    description: The Adapter for the intrinsic
+    range: Adapter
+  hasAdapterType:
+    description: "The Adapter type, for example: LORA, ALORA, X-LORA"
+    range: AdapterType

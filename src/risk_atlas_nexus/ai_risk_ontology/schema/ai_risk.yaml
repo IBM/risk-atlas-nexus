@@ -179,7 +179,10 @@ slots:
     multivalued: true
   hasRelatedRisk:
     description: A relationship where an entity relates to a risk
-    domain: RiskConcept
+    domain: Any
+    any_of:
+      - range: RiskConcept
+      - range: Term
     range: Risk
     multivalued: true
     inlined: false

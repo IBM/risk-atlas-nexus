@@ -12,6 +12,7 @@ imports:
   - ai_risk
   - ai_system
   - ai_eval
+  - ai_intrinsic
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
@@ -64,10 +65,28 @@ classes:
         range: Dataset
         inlined: true
         inlined_as_list: true
+      llmintrinsics:
+        description: A list of LLMintrinsics
+        multivalued: true
+        range: LLMIntrinsic
+        inlined: true
+        inlined_as_list: true
+      adapters:
+        description: A list of Adapters
+        multivalued: true
+        range: Adapter
+        inlined: true
+        inlined_as_list: true
       taxonomies:
         description: A list of AI risk taxonomies
         multivalued: true
         range: RiskTaxonomy
+        inlined: true
+        inlined_as_list: true
+      vocabularies:
+        description: A list of vocabularies
+        multivalued: true
+        range: Vocabulary
         inlined: true
         inlined_as_list: true
       riskgroups:
@@ -92,6 +111,12 @@ classes:
         description: A list of AI risk incidents
         multivalued: true
         range: RiskIncident
+        inlined: true
+        inlined_as_list: true
+      terms:
+        description: A list of terms from a vocabulary
+        multivalued: true
+        range: Term
         inlined: true
         inlined_as_list: true
       actions:
