@@ -104,10 +104,10 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [datasets](datasets.md) | range | [Dataset](Dataset.md) |
+| [LargeLanguageModel](LargeLanguageModel.md) | [hasTrainingData](hasTrainingData.md) | range | [Dataset](Dataset.md) |
 | [AiEval](AiEval.md) | [hasDataset](hasDataset.md) | range | [Dataset](Dataset.md) |
 | [Question](Question.md) | [hasDataset](hasDataset.md) | range | [Dataset](Dataset.md) |
 | [Questionnaire](Questionnaire.md) | [hasDataset](hasDataset.md) | range | [Dataset](Dataset.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [hasTrainingData](hasTrainingData.md) | range | [Dataset](Dataset.md) |
 
 
 
@@ -184,10 +184,11 @@ attributes:
     domain_of:
     - Dataset
     - Documentation
+    - Vocabulary
     - RiskTaxonomy
+    - BaseAi
     - AiEval
     - BenchmarkMetadataCard
-    - BaseAi
     range: License
   hasDocumentation:
     name: hasDocumentation
@@ -199,12 +200,15 @@ attributes:
     owner: Dataset
     domain_of:
     - Dataset
+    - Vocabulary
+    - Term
     - RiskTaxonomy
     - Action
-    - AiEval
-    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
+    - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Documentation
     multivalued: true
     inlined: false

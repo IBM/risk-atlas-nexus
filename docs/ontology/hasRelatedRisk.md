@@ -22,10 +22,13 @@ Alias: hasRelatedRisk
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
-| [Action](Action.md) | Action to remediate a risk |  no  |
-| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
+| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
+| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
+| [Term](Term.md) | A term and its definitions |  no  |
+| [Action](Action.md) | Action to remediate a risk |  no  |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
 
 
 
@@ -35,7 +38,7 @@ Alias: hasRelatedRisk
 
 ## Properties
 
-* Range: [Risk](Risk.md)
+* Range: [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md)
 
 * Multivalued: True
 
@@ -77,14 +80,20 @@ name: hasRelatedRisk
 description: A relationship where an entity relates to a risk
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
-domain: RiskConcept
+domain: Any
 alias: hasRelatedRisk
 domain_of:
+- Term
 - Action
 - AiEval
+- BenchmarkMetadataCard
+- LLMIntrinsic
 range: Risk
 multivalued: true
 inlined: false
+any_of:
+- range: RiskConcept
+- range: Term
 
 ```
 </details>

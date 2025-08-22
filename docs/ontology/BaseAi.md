@@ -237,12 +237,15 @@ attributes:
     owner: BaseAi
     domain_of:
     - Dataset
+    - Vocabulary
+    - Term
     - RiskTaxonomy
     - Action
-    - AiEval
-    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
+    - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Documentation
     multivalued: true
     inlined: false
@@ -257,10 +260,11 @@ attributes:
     domain_of:
     - Dataset
     - Documentation
+    - Vocabulary
     - RiskTaxonomy
+    - BaseAi
     - AiEval
     - BenchmarkMetadataCard
-    - BaseAi
     range: License
   performsTask:
     name: performsTask

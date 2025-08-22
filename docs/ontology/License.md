@@ -74,18 +74,19 @@ URI: [airo:License](https://w3id.org/airo#License)
 | [Organization](Organization.md) | [grants_license](grants_license.md) | range | [License](License.md) |
 | [Dataset](Dataset.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [Documentation](Documentation.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
+| [Vocabulary](Vocabulary.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [RiskTaxonomy](RiskTaxonomy.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
-| [AiEval](AiEval.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
-| [Question](Question.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
-| [Questionnaire](Questionnaire.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
-| [AiOffice](AiOffice.md) | [grants_license](grants_license.md) | range | [License](License.md) |
 | [BaseAi](BaseAi.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [AiSystem](AiSystem.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [AiAgent](AiAgent.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [AiModel](AiModel.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [AiProvider](AiProvider.md) | [grants_license](grants_license.md) | range | [License](License.md) |
+| [AiEval](AiEval.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
+| [Question](Question.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
+| [Questionnaire](Questionnaire.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
+| [AiOffice](AiOffice.md) | [grants_license](grants_license.md) | range | [License](License.md) |
 
 
 
@@ -161,6 +162,7 @@ attributes:
     owner: License
     domain_of:
     - License
+    - Vocabulary
     - RiskTaxonomy
     range: string
   id:

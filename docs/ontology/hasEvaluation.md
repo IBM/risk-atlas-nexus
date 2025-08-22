@@ -22,8 +22,8 @@ Alias: hasEvaluation
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 | [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 
 
 
@@ -81,8 +81,6 @@ domain_of:
 - AiModel
 range: AiEvalResult
 multivalued: true
-inlined: true
-inlined_as_list: true
 
 ```
 </details>

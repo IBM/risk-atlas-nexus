@@ -16,6 +16,7 @@ Name: ai-risk-ontology
 | [Container](Container.md) | An umbrella object that holds the ontology class instances |
 | [Entity](Entity.md) | A generic grouping for any identifiable entity |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Action](Action.md) | Action to remediate a risk |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiEval](AiEval.md) | An AI Evaluation, e |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Question](Question.md) | An evaluation where a question has to be answered |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Questionnaire](Questionnaire.md) | A questionnaire groups questions |
@@ -40,9 +41,11 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentMitigatedclass](IncidentMitigatedclass.md) |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentNearMissclass](IncidentNearMissclass.md) |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IncidentOngoingclass](IncidentOngoingclass.md) |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Input](Input.md) | Input for which the system or component generates output |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[License](License.md) | The general notion of a license which defines terms and grants permissions to... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Likelihood](Likelihood.md) |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Modality](Modality.md) | A modality supported by an Ai component |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Organization](Organization.md) | Any organizational entity such as a corporation, educational institution, con... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiOffice](AiOffice.md) | The EU AI Office (https://digital-strategy |
@@ -54,6 +57,8 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Severity](Severity.md) |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Term](Term.md) | A term and its definitions |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |
 | [Fact](Fact.md) | A fact about something, for example the result of a measurement |
 
 
@@ -63,6 +68,8 @@ Name: ai-risk-ontology
 | Slot | Description |
 | --- | --- |
 | [actions](actions.md) | A list of risk related actions |
+| [adapters](adapters.md) | A list of Adapters |
+| [aievalresults](aievalresults.md) | A list of AI evaluation results |
 | [aimodelfamilies](aimodelfamilies.md) | A list of AI model families |
 | [aimodels](aimodels.md) | A list of AI models |
 | [aitasks](aitasks.md) | A list of AI tasks |
@@ -89,6 +96,8 @@ Name: ai-risk-ontology
 | [fine_tuning](fine_tuning.md) | A description of the fine-tuning mechanism(s) applied to a model |
 | [gpu_hours](gpu_hours.md) | GPU consumption in terms of hours |
 | [grants_license](grants_license.md) | A relationship from a granting entity such as an Organization to a License in... |
+| [hasAdapter](hasAdapter.md) | The Adapter for the intrinsic |
+| [hasAdapterType](hasAdapterType.md) | The Adapter type, for example: LORA, ALORA, X-LORA |
 | [hasAiActorTask](hasAiActorTask.md) | Pertinent AI Actor Tasks for each subcategory |
 | [hasAnnotation](hasAnnotation.md) | The process used to annotate or label the dataset, including who or what perf... |
 | [hasAudience](hasAudience.md) | The intended audience, such as researchers, developers, policymakers, etc |
@@ -125,16 +134,19 @@ Name: ai-risk-ontology
 | [hasModelCard](hasModelCard.md) | A relationship to model card references |
 | [hasOutOfScopeUses](hasOutOfScopeUses.md) | Use cases where the benchmark is not designed to be applied and could give mi... |
 | [hasOutputModality](hasOutputModality.md) | A relationship indicating the output modalities supported by an AI component |
+| [hasParentDefinition](hasParentDefinition.md) | Indicates parent terms associated with a term |
 | [hasPart](hasPart.md) | A relationship where an entity has another entity |
 | [hasRelatedAction](hasRelatedAction.md) | A relationship where an entity relates to an action |
 | [hasRelatedRisk](hasRelatedRisk.md) | A relationship where an entity relates to a risk |
-| [hasRelatedRisks](hasRelatedRisks.md) | Specific risks of LLMs the benchmark assesses |
+| [hasRelatedTerm](hasRelatedTerm.md) | A relationship where an entity relates to a term |
 | [hasResources](hasResources.md) | Links to relevant resources, such as repositories or papers related to the be... |
 | [hasRiskControl](hasRiskControl.md) | Indicates the control measures associated with a system or component to modif... |
 | [hasSeverity](hasSeverity.md) | Indicates the severity associated with a concept |
 | [hasSimilarBenchmarks](hasSimilarBenchmarks.md) | Benchmarks that are closely related in terms of goals or data type |
 | [hasStatus](hasStatus.md) | Indicates the status of specified concept |
+| [hasSubDefinition](hasSubDefinition.md) | Indicates child terms associated with a term |
 | [hasTasks](hasTasks.md) | The tasks or evaluations the benchmark is intended to assess |
+| [hasTerm](hasTerm.md) | Indicates terms associated with a vocabulary |
 | [hasTrainingData](hasTrainingData.md) | A relationship indicating the datasets an AI model was trained on |
 | [hasUnitxtCard](hasUnitxtCard.md) | A relationship to a Unitxt card defining the risk evaluation |
 | [hasValidation](hasValidation.md) | Measures taken to ensure that the benchmark provides valid and reliable evalu... |
@@ -142,6 +154,7 @@ Name: ai-risk-ontology
 | [id](id.md) | A unique identifier to this instance of the model element |
 | [isComposedOf](isComposedOf.md) | Relationship indicating the some entity is composed of other entities (includ... |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | A relationship where a risk or a risk group is defined by a risk taxonomy |
+| [isDefinedByVocabulary](isDefinedByVocabulary.md) | A relationship where a term or a term group is defined by a vocabulary |
 | [isDeployedBy](isDeployedBy.md) | A relationship indicating that an entity has been deployed by an organization |
 | [isDetectedBy](isDetectedBy.md) | A relationship where a risk, risk source, consequence, or impact is detected ... |
 | [isDistributedBy](isDistributedBy.md) | A relationship indicating that an entity has been distributed by an organizat... |
@@ -150,6 +163,7 @@ Name: ai-risk-ontology
 | [isProvidedBy](isProvidedBy.md) | A relationship indicating the AI model has been provided by an AI model provi... |
 | [isResultOf](isResultOf.md) | A relationship indicating that an entity is the result of an AI evaluation |
 | [licenses](licenses.md) | A list of licenses |
+| [llmintrinsics](llmintrinsics.md) | A list of LLMintrinsics |
 | [modalities](modalities.md) | A list of AI modalities |
 | [name](name.md) | A text name of this instance |
 | [narrowMatch](narrowMatch.md) | The property is used to state a hierarchical mapping link between two concept... |
@@ -172,6 +186,7 @@ Name: ai-risk-ontology
 | [supported_languages](supported_languages.md) | A list of languages, expressed as ISO two letter codes |
 | [tag](tag.md) | A shost version of the name |
 | [taxonomies](taxonomies.md) | A list of AI risk taxonomies |
+| [terms](terms.md) | A list of terms from a vocabulary |
 | [text](text.md) | The question itself |
 | [training_data_preprocessing](training_data_preprocessing.md) | relationship indicating data preprocessing steps performed on training data s... |
 | [type](type.md) | Annotation whether an AI risk occurs at input or output or is non-technical |
@@ -179,12 +194,14 @@ Name: ai-risk-ontology
 | [validated_by](validated_by.md) | A relationship indicating the model validation steps after AI model training |
 | [value](value.md) | Some numeric or string value |
 | [version](version.md) | The version of the entity embodied by a specified resource |
+| [vocabularies](vocabularies.md) | A list of vocabularies |
 
 
 ## Enumerations
 
 | Enumeration | Description |
 | --- | --- |
+| [AdapterType](AdapterType.md) |  |
 | [AiSystemType](AiSystemType.md) |  |
 | [EuAiRiskCategory](EuAiRiskCategory.md) |  |
 

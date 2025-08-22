@@ -24,10 +24,10 @@ URI: [schema:Organization](http://schema.org/Organization)
         click Entity href "../Entity"
 
 
-      Organization <|-- AiOffice
-        click AiOffice href "../AiOffice"
       Organization <|-- AiProvider
         click AiProvider href "../AiProvider"
+      Organization <|-- AiOffice
+        click AiOffice href "../AiOffice"
 
 
       Organization : dateCreated
@@ -63,8 +63,8 @@ URI: [schema:Organization](http://schema.org/Organization)
 ## Inheritance
 * [Entity](Entity.md)
     * **Organization**
-        * [AiOffice](AiOffice.md)
         * [AiProvider](AiProvider.md)
+        * [AiOffice](AiOffice.md)
 
 
 

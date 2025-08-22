@@ -92,13 +92,14 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
+| [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [RiskGroup](RiskGroup.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [Risk](Risk.md) | [detectsRiskConcept](detectsRiskConcept.md) | range | [RiskConcept](RiskConcept.md) |
 | [Risk](Risk.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskConcept](RiskConcept.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskControl](RiskControl.md) | [detectsRiskConcept](detectsRiskConcept.md) | range | [RiskConcept](RiskConcept.md) |
 | [RiskControl](RiskControl.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
-| [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |
+| [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md) | [hasStatus](hasStatus.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md) | [hasSeverity](hasSeverity.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md) | [hasLikelihood](hasLikelihood.md) | domain | [RiskConcept](RiskConcept.md) |
@@ -107,9 +108,12 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [RiskIncident](RiskIncident.md) | [hasImpact](hasImpact.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [Impact](Impact.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
-| [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |
-| [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |
-| [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [RiskConcept](RiskConcept.md) |
+| [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedTerm](hasRelatedTerm.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 
 
 

@@ -159,12 +159,15 @@ attributes:
     owner: LargeLanguageModelFamily
     domain_of:
     - Dataset
+    - Vocabulary
+    - Term
     - RiskTaxonomy
     - Action
-    - AiEval
-    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
+    - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Documentation
     multivalued: true
     inlined: false

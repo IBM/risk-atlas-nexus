@@ -205,6 +205,7 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [risks](risks.md) | range | [Risk](Risk.md) |
+| [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [RiskGroup](RiskGroup.md) | [closeMatch](closeMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [RiskGroup](RiskGroup.md) | [exactMatch](exactMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [RiskGroup](RiskGroup.md) | [broadMatch](broadMatch.md) | any_of[range] | [Risk](Risk.md) |
@@ -219,8 +220,10 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [RiskIncident](RiskIncident.md) | [refersToRisk](refersToRisk.md) | range | [Risk](Risk.md) |
 | [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 
 
 

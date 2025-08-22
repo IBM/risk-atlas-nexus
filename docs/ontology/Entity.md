@@ -30,6 +30,10 @@ URI: [schema:Thing](http://schema.org/Thing)
         click Dataset href "../Dataset"
       Entity <|-- Documentation
         click Documentation href "../Documentation"
+      Entity <|-- Vocabulary
+        click Vocabulary href "../Vocabulary"
+      Entity <|-- Term
+        click Term href "../Term"
       Entity <|-- RiskTaxonomy
         click RiskTaxonomy href "../RiskTaxonomy"
       Entity <|-- RiskGroup
@@ -54,12 +58,6 @@ URI: [schema:Thing](http://schema.org/Thing)
         click Likelihood href "../Likelihood"
       Entity <|-- Consequence
         click Consequence href "../Consequence"
-      Entity <|-- AiEval
-        click AiEval href "../AiEval"
-      Entity <|-- AiEvalResult
-        click AiEvalResult href "../AiEvalResult"
-      Entity <|-- BenchmarkMetadataCard
-        click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
       Entity <|-- BaseAi
         click BaseAi href "../BaseAi"
       Entity <|-- LargeLanguageModelFamily
@@ -70,6 +68,18 @@ URI: [schema:Thing](http://schema.org/Thing)
         click AiLifecyclePhase href "../AiLifecyclePhase"
       Entity <|-- Modality
         click Modality href "../Modality"
+      Entity <|-- Input
+        click Input href "../Input"
+      Entity <|-- AiEval
+        click AiEval href "../AiEval"
+      Entity <|-- AiEvalResult
+        click AiEvalResult href "../AiEvalResult"
+      Entity <|-- BenchmarkMetadataCard
+        click BenchmarkMetadataCard href "../BenchmarkMetadataCard"
+      Entity <|-- Adapter
+        click Adapter href "../Adapter"
+      Entity <|-- LLMIntrinsic
+        click LLMIntrinsic href "../LLMIntrinsic"
 
       Entity : dateCreated
 
@@ -96,6 +106,8 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [License](License.md)
     * [Dataset](Dataset.md)
     * [Documentation](Documentation.md)
+    * [Vocabulary](Vocabulary.md)
+    * [Term](Term.md)
     * [RiskTaxonomy](RiskTaxonomy.md)
     * [RiskGroup](RiskGroup.md) [ [RiskConcept](RiskConcept.md)]
     * [Risk](Risk.md) [ [RiskConcept](RiskConcept.md)]
@@ -108,14 +120,17 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [Severity](Severity.md)
     * [Likelihood](Likelihood.md)
     * [Consequence](Consequence.md)
-    * [AiEval](AiEval.md)
-    * [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
-    * [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
     * [BaseAi](BaseAi.md)
     * [LargeLanguageModelFamily](LargeLanguageModelFamily.md)
     * [AiTask](AiTask.md)
     * [AiLifecyclePhase](AiLifecyclePhase.md)
     * [Modality](Modality.md)
+    * [Input](Input.md)
+    * [AiEval](AiEval.md)
+    * [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
+    * [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
+    * [Adapter](Adapter.md)
+    * [LLMIntrinsic](LLMIntrinsic.md)
 
 
 

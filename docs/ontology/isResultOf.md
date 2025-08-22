@@ -77,6 +77,7 @@ alias: isResultOf
 domain_of:
 - AiEvalResult
 range: AiEval
+multivalued: false
 inlined: false
 
 ```

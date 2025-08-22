@@ -125,7 +125,7 @@ URI: [nexus:Question](https://ibm.github.io/risk-atlas-nexus/ontology/Question)
 | [hasImplementation](hasImplementation.md) | * <br/> [Uri](Uri.md) | A relationship to a implementation defining the risk evaluation | [AiEval](AiEval.md) |
 | [hasUnitxtCard](hasUnitxtCard.md) | * <br/> [Uri](Uri.md) | A relationship to a Unitxt card defining the risk evaluation | [AiEval](AiEval.md) |
 | [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | [AiEval](AiEval.md) |
-| [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md) | A relationship where an entity relates to a risk | [AiEval](AiEval.md) |
+| [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk | [AiEval](AiEval.md) |
 | [bestValue](bestValue.md) | 0..1 <br/> [String](String.md) | Annotation of the best possible result of the evaluation | [AiEval](AiEval.md) |
 | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A relationship to a Benchmark Metadata Card which contains metadata about the... | [AiEval](AiEval.md) |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
@@ -227,12 +227,15 @@ attributes:
     owner: Question
     domain_of:
     - Dataset
+    - Vocabulary
+    - Term
     - RiskTaxonomy
     - Action
-    - AiEval
-    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
+    - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Documentation
     multivalued: true
     inlined: false
@@ -298,25 +301,32 @@ attributes:
     domain_of:
     - Dataset
     - Documentation
+    - Vocabulary
     - RiskTaxonomy
+    - BaseAi
     - AiEval
     - BenchmarkMetadataCard
-    - BaseAi
     range: License
   hasRelatedRisk:
     name: hasRelatedRisk
     description: A relationship where an entity relates to a risk
     from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: RiskConcept
+    domain: Any
     alias: hasRelatedRisk
     owner: Question
     domain_of:
+    - Term
     - Action
     - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Risk
     multivalued: true
     inlined: false
+    any_of:
+    - range: RiskConcept
+    - range: Term
   bestValue:
     name: bestValue
     description: Annotation of the best possible result of the evaluation

@@ -102,7 +102,16 @@ URI: [nexus:benchmarkmetadatacard](https://ibm.github.io/risk-atlas-nexus/ontolo
 
       BenchmarkMetadataCard : hasOutOfScopeUses
 
-      BenchmarkMetadataCard : hasRelatedRisks
+      BenchmarkMetadataCard : hasRelatedRisk
+
+
+
+
+
+        BenchmarkMetadataCard --> "*" Risk : hasRelatedRisk
+        click Risk href "../Risk"
+
+
 
       BenchmarkMetadataCard : hasResources
 
@@ -158,7 +167,7 @@ URI: [nexus:benchmarkmetadatacard](https://ibm.github.io/risk-atlas-nexus/ontolo
 | [hasInterpretation](hasInterpretation.md) | * <br/> [String](String.md) | How users should interpret the scores or results from the metrics | direct |
 | [hasBaselineResults](hasBaselineResults.md) | 0..1 <br/> [String](String.md) | The results of well-known or widely used models to give context to new perfor... | direct |
 | [hasValidation](hasValidation.md) | * <br/> [String](String.md) | Measures taken to ensure that the benchmark provides valid and reliable evalu... | direct |
-| [hasRelatedRisks](hasRelatedRisks.md) | * <br/> [String](String.md) | Specific risks of LLMs the benchmark assesses | direct |
+| [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk | direct |
 | [hasDemographicAnalysis](hasDemographicAnalysis.md) | 0..1 <br/> [String](String.md) | How the benchmark evaluates performance across different demographic groups (... | direct |
 | [hasConsiderationPrivacyAndAnonymity](hasConsiderationPrivacyAndAnonymity.md) | 0..1 <br/> [String](String.md) | How any personal or sensitive data is handled and whether any anonymization t... | direct |
 | [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | direct |
@@ -260,7 +269,7 @@ slots:
 - hasInterpretation
 - hasBaselineResults
 - hasValidation
-- hasRelatedRisks
+- hasRelatedRisk
 - hasDemographicAnalysis
 - hasConsiderationPrivacyAndAnonymity
 - hasLicense
@@ -565,17 +574,26 @@ attributes:
     - BenchmarkMetadataCard
     range: string
     multivalued: true
-  hasRelatedRisks:
-    name: hasRelatedRisks
-    description: Specific risks of LLMs the benchmark assesses
+  hasRelatedRisk:
+    name: hasRelatedRisk
+    description: A relationship where an entity relates to a risk
     from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    alias: hasRelatedRisks
+    domain: Any
+    alias: hasRelatedRisk
     owner: BenchmarkMetadataCard
     domain_of:
+    - Term
+    - Action
+    - AiEval
     - BenchmarkMetadataCard
-    range: string
+    - LLMIntrinsic
+    range: Risk
     multivalued: true
+    inlined: false
+    any_of:
+    - range: RiskConcept
+    - range: Term
   hasDemographicAnalysis:
     name: hasDemographicAnalysis
     description: How the benchmark evaluates performance across different demographic
@@ -609,10 +627,11 @@ attributes:
     domain_of:
     - Dataset
     - Documentation
+    - Vocabulary
     - RiskTaxonomy
+    - BaseAi
     - AiEval
     - BenchmarkMetadataCard
-    - BaseAi
     range: License
   hasConsiderationConsentProcedures:
     name: hasConsiderationConsentProcedures
@@ -645,12 +664,15 @@ attributes:
     owner: BenchmarkMetadataCard
     domain_of:
     - Dataset
+    - Vocabulary
+    - Term
     - RiskTaxonomy
     - Action
-    - AiEval
-    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
+    - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Documentation
     multivalued: true
     inlined: false

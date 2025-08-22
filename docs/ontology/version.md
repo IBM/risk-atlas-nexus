@@ -24,6 +24,7 @@ Alias: version
 | --- | --- | --- |
 | [License](License.md) | The general notion of a license which defines terms and grants permissions to... |  no  |
 | [RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |  no  |
+| [Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |  no  |
 
 
 
@@ -77,6 +78,7 @@ slot_uri: schema:version
 alias: version
 domain_of:
 - License
+- Vocabulary
 - RiskTaxonomy
 range: string
 

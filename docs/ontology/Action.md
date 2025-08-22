@@ -87,7 +87,7 @@ URI: [nexus:Action](https://ibm.github.io/risk-atlas-nexus/ontology/Action)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md) | A relationship where an entity relates to a risk | direct |
+| [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk | direct |
 | [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | direct |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [RiskTaxonomy](RiskTaxonomy.md) | A relationship where a risk or a risk group is defined by a risk taxonomy | direct |
 | [hasAiActorTask](hasAiActorTask.md) | * <br/> [String](String.md) | Pertinent AI Actor Tasks for each subcategory | direct |
@@ -178,15 +178,21 @@ attributes:
     description: A relationship where an entity relates to a risk
     from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: RiskConcept
+    domain: Any
     alias: hasRelatedRisk
     owner: Action
     domain_of:
+    - Term
     - Action
     - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Risk
     multivalued: true
     inlined: false
+    any_of:
+    - range: RiskConcept
+    - range: Term
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
@@ -197,12 +203,15 @@ attributes:
     owner: Action
     domain_of:
     - Dataset
+    - Vocabulary
+    - Term
     - RiskTaxonomy
     - Action
-    - AiEval
-    - BenchmarkMetadataCard
     - BaseAi
     - LargeLanguageModelFamily
+    - AiEval
+    - BenchmarkMetadataCard
+    - LLMIntrinsic
     range: Documentation
     multivalued: true
     inlined: false

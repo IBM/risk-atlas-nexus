@@ -31,6 +31,28 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
 
 
+      Container : adapters
+
+
+
+
+
+        Container --> "*" Adapter : adapters
+        click Adapter href "../Adapter"
+
+
+
+      Container : aievalresults
+
+
+
+
+
+        Container --> "*" AiEvalResult : aievalresults
+        click AiEvalResult href "../AiEvalResult"
+
+
+
       Container : aimodelfamilies
 
 
@@ -119,6 +141,17 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
 
 
+      Container : llmintrinsics
+
+
+
+
+
+        Container --> "*" LLMIntrinsic : llmintrinsics
+        click LLMIntrinsic href "../LLMIntrinsic"
+
+
+
       Container : modalities
 
 
@@ -196,6 +229,28 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
 
 
+      Container : terms
+
+
+
+
+
+        Container --> "*" Term : terms
+        click Term href "../Term"
+
+
+
+      Container : vocabularies
+
+
+
+
+
+        Container --> "*" Vocabulary : vocabularies
+        click Vocabulary href "../Vocabulary"
+
+
+
 
 ```
 
@@ -215,13 +270,18 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 | [aitasks](aitasks.md) | * <br/> [AiTask](AiTask.md) | A list of AI tasks | direct |
 | [documents](documents.md) | * <br/> [Documentation](Documentation.md) | A list of documents | direct |
 | [datasets](datasets.md) | * <br/> [Dataset](Dataset.md) | A list of data sets | direct |
+| [llmintrinsics](llmintrinsics.md) | * <br/> [LLMIntrinsic](LLMIntrinsic.md) | A list of LLMintrinsics | direct |
+| [adapters](adapters.md) | * <br/> [Adapter](Adapter.md) | A list of Adapters | direct |
 | [taxonomies](taxonomies.md) | * <br/> [RiskTaxonomy](RiskTaxonomy.md) | A list of AI risk taxonomies | direct |
+| [vocabularies](vocabularies.md) | * <br/> [Vocabulary](Vocabulary.md) | A list of vocabularies | direct |
 | [riskgroups](riskgroups.md) | * <br/> [RiskGroup](RiskGroup.md) | A list of AI risk groups | direct |
 | [risks](risks.md) | * <br/> [Risk](Risk.md) | A list of AI risks | direct |
 | [riskcontrols](riskcontrols.md) | * <br/> [RiskControl](RiskControl.md) | A list of AI risk controls | direct |
 | [riskincidents](riskincidents.md) | * <br/> [RiskIncident](RiskIncident.md) | A list of AI risk incidents | direct |
+| [terms](terms.md) | * <br/> [Term](Term.md) | A list of terms from a vocabulary | direct |
 | [actions](actions.md) | * <br/> [Action](Action.md) | A list of risk related actions | direct |
 | [evaluations](evaluations.md) | * <br/> [AiEval](AiEval.md) | A list of AI evaluation methods | direct |
+| [aievalresults](aievalresults.md) | * <br/> [AiEvalResult](AiEvalResult.md) | A list of AI evaluation results | direct |
 | [benchmarkmetadatacards](benchmarkmetadatacards.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A list of AI evaluation benchmark metadata cards | direct |
 | [aimodelfamilies](aimodelfamilies.md) | * <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A list of AI model families | direct |
 | [aimodels](aimodels.md) | * <br/> [LargeLanguageModel](LargeLanguageModel.md) | A list of AI models | direct |
@@ -341,6 +401,28 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
+  llmintrinsics:
+    name: llmintrinsics
+    description: A list of LLMintrinsics
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: LLMIntrinsic
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  adapters:
+    name: adapters
+    description: A list of Adapters
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Adapter
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   taxonomies:
     name: taxonomies
     description: A list of AI risk taxonomies
@@ -349,6 +431,17 @@ attributes:
     domain_of:
     - Container
     range: RiskTaxonomy
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  vocabularies:
+    name: vocabularies
+    description: A list of vocabularies
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Vocabulary
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -396,6 +489,17 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
+  terms:
+    name: terms
+    description: A list of terms from a vocabulary
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Term
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   actions:
     name: actions
     description: A list of risk related actions
@@ -415,6 +519,17 @@ attributes:
     domain_of:
     - Container
     range: AiEval
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  aievalresults:
+    name: aievalresults
+    description: A list of AI evaluation results
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: AiEvalResult
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -542,6 +657,32 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
+  llmintrinsics:
+    name: llmintrinsics
+    description: A list of LLMintrinsics
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: llmintrinsics
+    owner: Container
+    domain_of:
+    - Container
+    range: LLMIntrinsic
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  adapters:
+    name: adapters
+    description: A list of Adapters
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: adapters
+    owner: Container
+    domain_of:
+    - Container
+    range: Adapter
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   taxonomies:
     name: taxonomies
     description: A list of AI risk taxonomies
@@ -552,6 +693,19 @@ attributes:
     domain_of:
     - Container
     range: RiskTaxonomy
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  vocabularies:
+    name: vocabularies
+    description: A list of vocabularies
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: vocabularies
+    owner: Container
+    domain_of:
+    - Container
+    range: Vocabulary
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -607,6 +761,19 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
+  terms:
+    name: terms
+    description: A list of terms from a vocabulary
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: terms
+    owner: Container
+    domain_of:
+    - Container
+    range: Term
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   actions:
     name: actions
     description: A list of risk related actions
@@ -630,6 +797,19 @@ attributes:
     domain_of:
     - Container
     range: AiEval
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  aievalresults:
+    name: aievalresults
+    description: A list of AI evaluation results
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: aievalresults
+    owner: Container
+    domain_of:
+    - Container
+    range: AiEvalResult
     multivalued: true
     inlined: true
     inlined_as_list: true

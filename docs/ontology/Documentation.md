@@ -84,18 +84,21 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [documents](documents.md) | range | [Documentation](Documentation.md) |
 | [Dataset](Dataset.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [Vocabulary](Vocabulary.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [Term](Term.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [RiskTaxonomy](RiskTaxonomy.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Action](Action.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
-| [AiEval](AiEval.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
-| [Question](Question.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
-| [Questionnaire](Questionnaire.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [BaseAi](BaseAi.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiSystem](AiSystem.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiAgent](AiAgent.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiModel](AiModel.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [AiEval](AiEval.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [Question](Question.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [Questionnaire](Questionnaire.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [LLMIntrinsic](LLMIntrinsic.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 
 
 
@@ -190,10 +193,11 @@ attributes:
     domain_of:
     - Dataset
     - Documentation
+    - Vocabulary
     - RiskTaxonomy
+    - BaseAi
     - AiEval
     - BenchmarkMetadataCard
-    - BaseAi
     range: License
   id:
     name: id
