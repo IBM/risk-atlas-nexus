@@ -1,0 +1,32 @@
+id: https://ibm.github.io/risk-atlas-nexus/ontology/sample_additional_schema
+name: sample_additional_schema
+description:
+  A sample_additional_schema for an example notebook
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  airo: https://w3id.org/airo#
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
+  dpv: https://w3c.github.io/dpv/2.1/dpv/#
+  ai: https://w3c.github.io/dpv/2.1/ai/#
+
+default_range: string
+default_prefix: nexus
+
+classes:
+
+  SampleItem:
+    description:
+      A sample_additional_schema item
+    abstract: true
+    class_uri: schema:Thing
+    slots:
+      - id
+      - name
+      - description
+      - url
+      - dateCreated
+      - dateModified
