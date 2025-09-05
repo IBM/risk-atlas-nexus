@@ -13,6 +13,7 @@ imports:
   - ai_system
   - ai_eval
   - ai_intrinsic
+  - ai_csiro_rai
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
@@ -117,6 +118,18 @@ classes:
         description: A list of terms from a vocabulary
         multivalued: true
         range: Term
+        inlined: true
+        inlined_as_list: true
+      stakeholdergroups:
+        description: A list of AI stakeholder groups
+        multivalued: true
+        range: StakeholderGroup
+        inlined: true
+        inlined_as_list: true
+      stakeholders:
+        description: A list of stakeholders
+        multivalued: true
+        range: Stakeholder
         inlined: true
         inlined_as_list: true
       actions:

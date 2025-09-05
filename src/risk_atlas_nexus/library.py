@@ -25,6 +25,7 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     RiskControl,
     RiskIncident,
     RiskTaxonomy,
+    Stakeholder,
 )
 from risk_atlas_nexus.blocks.inference import InferenceEngine
 from risk_atlas_nexus.blocks.prompt_builder import (
@@ -1056,7 +1057,7 @@ class RiskAtlasNexus:
                 (Optional) The string label for a taxonomy
 
         Returns:
-            Action
+            BenchmarkMetadataCard
                 Result containing a benchmark_metadata_card.
         """
         type_check(
@@ -1104,7 +1105,7 @@ class RiskAtlasNexus:
                 (Optional) The string label for a taxonomy
 
         Returns:
-            Action
+            Documentation
                 Result containing a document.
         """
         type_check(
@@ -1148,7 +1149,7 @@ class RiskAtlasNexus:
                 (Optional) The string label for a taxonomy
 
         Returns:
-            Action
+            Dataset
                 Result containing a dataset.
         """
         type_check(
@@ -1160,6 +1161,79 @@ class RiskAtlasNexus:
 
         dataset: Dataset | None = cls._risk_explorer.get_dataset(id=id)
         return dataset
+
+    def get_stakeholders(cls, taxonomy=None):
+        """Get all stakeholder definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[Stakeholder]
+                Result containing a list of Stakeholder entries
+        """
+        type_check(
+            "<RAN61770043E>",
+            str,
+            allow_none=True,
+            taxonomy=taxonomy,
+        )
+
+        stakeholder_instances: list[Stakeholder] = cls._risk_explorer.get_stakeholders(taxonomy)
+        return stakeholder_instances
+
+    def get_stakeholder(cls, id=str):
+        """Get a stakeholder definition from the LinkML, filtered by id
+
+        Args:
+            id: str
+                The string id identifying the stakeholder entry
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            Stakeholder
+                Result containing a stakeholder.
+        """
+        type_check(
+            "<RAN12472418E>",
+            str,
+            allow_none=False,
+            id=id,
+        )
+
+        stakeholder: Stakeholder | None = cls._risk_explorer.get_stakeholder(id=id)
+        return stakeholder
+
+    def get_instances(cls, target_class, taxonomy=None):
+        """Get all instance definitions from the LinkML
+
+        Args:
+            target_class: str
+                (Optional) The string label for a target class
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[Any]
+                Result containing a list of instance entries
+        """
+        type_check(
+            "<RAN92358069E>",
+            str,
+            allow_none=False,
+            target_class=id,
+        )
+        type_check(
+            "<RAN61877043E>",
+            str,
+            allow_none=True,
+            taxonomy=taxonomy,
+        )
+
+        instances: list[Any] = cls._risk_explorer.get_instances(target_class, taxonomy)
+        return instances
 
     def identify_domain_from_usecases(
         cls, usecases: List[str], inference_engine: InferenceEngine, verbose=True

@@ -15,7 +15,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
-  dpv: https://w3c.github.io/dpv/2.1/dpv/#
+  dpv: https://w3id.org/dpv#
   airo: https://w3id.org/airo#
 default_range: string
 default_prefix: nexus

@@ -55,7 +55,8 @@ linkml_meta = LinkMLMeta({'default_curi_maps': ['semweb_context'],
                  'ai_risk',
                  'ai_system',
                  'ai_eval',
-                 'ai_intrinsic'],
+                 'ai_intrinsic',
+                 'ai_csiro_rai'],
      'license': 'https://www.apache.org/licenses/LICENSE-2.0.html',
      'name': 'ai-risk-ontology',
      'prefixes': {'airo': {'prefix_prefix': 'airo',
@@ -65,6 +66,21 @@ linkml_meta = LinkMLMeta({'default_curi_maps': ['semweb_context'],
                   'nexus': {'prefix_prefix': 'nexus',
                             'prefix_reference': 'https://ibm.github.io/risk-atlas-nexus/ontology/'}},
      'source_file': 'src/risk_atlas_nexus/ai_risk_ontology/schema/ai-risk-ontology.yaml'} )
+
+class AdapterType(str, Enum):
+    LORA = "LORA"
+    """
+    Low-rank adapters, or LoRAs, are a fast way to give generalist large language models targeted knowledge and skills so they can do things like summarize IT manuals or rate the accuracy of their own answers. LoRA reduces the number of trainable parameters by learning pairs of rank-decompostion matrices while freezing the original weights. This vastly reduces the storage requirement for large language models adapted to specific tasks and enables efficient task-switching during deployment all without introducing inference latency. LoRA also outperforms several other adaptation methods including adapter, prefix-tuning, and fine-tuning. See arXiv:2106.09685
+    """
+    ALORA = "ALORA"
+    """
+    Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reusing existing base model KV cache for more efficient inference, unlike standard LoRA models. As a result, aLoRA models can be quickly invoked as-needed for specialized tasks during (long) flows where the base model is primarily used, avoiding potentially expensive prefill costs in terms of latency, throughput, and GPU memory. See arXiv:2504.12397 for further details.
+    """
+    X_LORA = "X-LORA"
+    """
+    Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse gating to dynamically activate LoRA experts.
+    """
+
 
 class EuAiRiskCategory(str, Enum):
     EXCLUDED = "EXCLUDED"
@@ -113,21 +129,6 @@ class AiSystemType(str, Enum):
     HIGH_RISK = "HIGH_RISK"
     """
     AI systems pursuant to Article 6(1)(2) Classification Rules for High-Risk AI Systems
-    """
-
-
-class AdapterType(str, Enum):
-    LORA = "LORA"
-    """
-    Low-rank adapters, or LoRAs, are a fast way to give generalist large language models targeted knowledge and skills so they can do things like summarize IT manuals or rate the accuracy of their own answers. LoRA reduces the number of trainable parameters by learning pairs of rank-decompostion matrices while freezing the original weights. This vastly reduces the storage requirement for large language models adapted to specific tasks and enables efficient task-switching during deployment all without introducing inference latency. LoRA also outperforms several other adaptation methods including adapter, prefix-tuning, and fine-tuning. See arXiv:2106.09685
-    """
-    ALORA = "ALORA"
-    """
-    Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reusing existing base model KV cache for more efficient inference, unlike standard LoRA models. As a result, aLoRA models can be quickly invoked as-needed for specialized tasks during (long) flows where the base model is primarily used, avoiding potentially expensive prefill costs in terms of latency, throughput, and GPU memory. See arXiv:2504.12397 for further details.
-    """
-    X_LORA = "X-LORA"
-    """
-    Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse gating to dynamically activate LoRA experts.
     """
 
 
@@ -391,6 +392,16 @@ class Term(Entity):
          'slot_uri': 'schema:dateModified'} })
 
 
+class Principle(ConfiguredBaseModel):
+    """
+    A representation of values or norms that must be taken into consideration when conducting activities
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Principle',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
+
+    pass
+
+
 class RiskTaxonomy(Entity):
     """
     A taxonomy of AI system related risks
@@ -476,7 +487,13 @@ class RiskGroup(RiskConcept, Entity):
                                     'range': 'Risk'}}})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup', 'Risk', 'RiskControl', 'Action', 'RiskIncident'],
+         'domain_of': ['RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     closeMatch: Optional[list[str]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'alias': 'closeMatch',
          'any_of': [{'range': 'Risk'}, {'range': 'RiskGroup'}],
@@ -533,10 +550,16 @@ class Risk(RiskConcept, Entity):
 
     hasRelatedAction: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to an action""", json_schema_extra = { "linkml_meta": {'alias': 'hasRelatedAction', 'domain_of': ['Risk']} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup', 'Risk', 'RiskControl', 'Action', 'RiskIncident'],
+         'domain_of': ['RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where a risk is part of a risk group""", json_schema_extra = { "linkml_meta": {'alias': 'isPartOf',
-         'domain_of': ['Risk', 'LargeLanguageModel'],
+         'domain_of': ['Risk', 'LargeLanguageModel', 'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     closeMatch: Optional[list[str]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'alias': 'closeMatch',
          'any_of': [{'range': 'Risk'}, {'range': 'RiskGroup'}],
@@ -602,7 +625,13 @@ class RiskControl(RiskConcept, Entity):
          'exact_mappings': ['airo:detectsRiskConcept'],
          'inverse': 'isDetectedBy'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup', 'Risk', 'RiskControl', 'Action', 'RiskIncident'],
+         'domain_of': ['RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     isDetectedBy: Optional[list[str]] = Field(default=None, description="""A relationship where a risk, risk source, consequence, or impact is detected by a risk control.""", json_schema_extra = { "linkml_meta": {'alias': 'isDetectedBy',
          'domain': 'RiskConcept',
@@ -649,7 +678,13 @@ class Action(Entity):
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup', 'Risk', 'RiskControl', 'Action', 'RiskIncident'],
+         'domain_of': ['RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     hasAiActorTask: Optional[list[str]] = Field(default=None, description="""Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action in the subcategory (i.e., some apply to AI development and others apply to AI deployment).""", json_schema_extra = { "linkml_meta": {'alias': 'hasAiActorTask', 'domain_of': ['Action']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -681,7 +716,13 @@ class RiskIncident(RiskConcept, Entity):
          'domain_of': ['RiskIncident'],
          'exact_mappings': ['dpv:refersToRisk']} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup', 'Risk', 'RiskControl', 'Action', 'RiskIncident'],
+         'domain_of': ['RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     hasStatus: Optional[str] = Field(default=None, description="""Indicates the status of specified concept""", json_schema_extra = { "linkml_meta": {'alias': 'hasStatus', 'domain': 'RiskConcept', 'domain_of': ['RiskIncident']} })
     hasSeverity: Optional[str] = Field(default=None, description="""Indicates the severity associated with a concept""", json_schema_extra = { "linkml_meta": {'alias': 'hasSeverity', 'domain': 'RiskConcept', 'domain_of': ['RiskIncident']} })
@@ -1174,7 +1215,7 @@ class LargeLanguageModel(AiModel):
     fine_tuning: Optional[str] = Field(default=None, description="""A description of the fine-tuning mechanism(s) applied to a model.""", json_schema_extra = { "linkml_meta": {'alias': 'fine_tuning', 'domain_of': ['LargeLanguageModel']} })
     supported_languages: Optional[list[str]] = Field(default=None, description="""A list of languages, expressed as ISO two letter codes. For example, 'jp, fr, en, de'""", json_schema_extra = { "linkml_meta": {'alias': 'supported_languages', 'domain_of': ['LargeLanguageModel']} })
     isPartOf: Optional[str] = Field(default=None, description="""Annotation that a Large Language model is part of a family of models""", json_schema_extra = { "linkml_meta": {'alias': 'isPartOf',
-         'domain_of': ['Risk', 'LargeLanguageModel'],
+         'domain_of': ['Risk', 'LargeLanguageModel', 'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'alias': 'hasEvaluation',
          'domain_of': ['AiModel'],
@@ -1726,30 +1767,6 @@ class Questionnaire(AiEval):
          'slot_uri': 'schema:dateModified'} })
 
 
-class AiOffice(Organization):
-    """
-    The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)
-    """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Organization',
-         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/eu_ai_act'})
-
-    grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'alias': 'grants_license', 'domain_of': ['Organization']} })
-    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
-    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
-         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
-         'slot_uri': 'schema:name'} })
-    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
-         'domain_of': ['Entity'],
-         'slot_uri': 'schema:description'} })
-    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
-    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
-         'domain_of': ['Entity'],
-         'slot_uri': 'schema:dateCreated'} })
-    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
-         'domain_of': ['Entity'],
-         'slot_uri': 'schema:dateModified'} })
-
-
 class Adapter(Entity):
     """
     Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
@@ -1820,6 +1837,100 @@ class LLMIntrinsic(Entity):
          'slot_uri': 'schema:dateModified'} })
 
 
+class AiOffice(Organization):
+    """
+    The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Organization',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/eu_ai_act'})
+
+    grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'alias': 'grants_license', 'domain_of': ['Organization']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
+class StakeholderGroup(Entity):
+    """
+    An AI system stakeholder grouping.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/ai_csiro_rai'})
+
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
+         'domain_of': ['RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
+class Stakeholder(Entity):
+    """
+    An AI system stakeholder for Responsible AI governance (e.g., AI governors, users, consumers).
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/ai_csiro_rai',
+         'slot_usage': {'isPartOf': {'description': 'A relationship where a '
+                                                    'stakeholder is part of a '
+                                                    'stakeholder group',
+                                     'name': 'isPartOf',
+                                     'range': 'StakeholderGroup'}}})
+
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
+         'domain_of': ['RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    isPartOf: Optional[str] = Field(default=None, description="""A relationship where a stakeholder is part of a stakeholder group""", json_schema_extra = { "linkml_meta": {'alias': 'isPartOf',
+         'domain_of': ['Risk', 'LargeLanguageModel', 'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
 class Container(ConfiguredBaseModel):
     """
     An umbrella object that holds the ontology class instances
@@ -1842,6 +1953,8 @@ class Container(ConfiguredBaseModel):
     riskcontrols: Optional[list[RiskControl]] = Field(default=None, description="""A list of AI risk controls""", json_schema_extra = { "linkml_meta": {'alias': 'riskcontrols', 'domain_of': ['Container']} })
     riskincidents: Optional[list[RiskIncident]] = Field(default=None, description="""A list of AI risk incidents""", json_schema_extra = { "linkml_meta": {'alias': 'riskincidents', 'domain_of': ['Container']} })
     terms: Optional[list[Term]] = Field(default=None, description="""A list of terms from a vocabulary""", json_schema_extra = { "linkml_meta": {'alias': 'terms', 'domain_of': ['Container']} })
+    stakeholdergroups: Optional[list[StakeholderGroup]] = Field(default=None, description="""A list of AI stakeholder groups""", json_schema_extra = { "linkml_meta": {'alias': 'stakeholdergroups', 'domain_of': ['Container']} })
+    stakeholders: Optional[list[Stakeholder]] = Field(default=None, description="""A list of stakeholders""", json_schema_extra = { "linkml_meta": {'alias': 'stakeholders', 'domain_of': ['Container']} })
     actions: Optional[list[Action]] = Field(default=None, description="""A list of risk related actions""", json_schema_extra = { "linkml_meta": {'alias': 'actions', 'domain_of': ['Container']} })
     evaluations: Optional[list[AiEval]] = Field(default=None, description="""A list of AI evaluation methods""", json_schema_extra = { "linkml_meta": {'alias': 'evaluations', 'domain_of': ['Container']} })
     aievalresults: Optional[list[AiEvalResult]] = Field(default=None, description="""A list of AI evaluation results""", json_schema_extra = { "linkml_meta": {'alias': 'aievalresults', 'domain_of': ['Container']} })
@@ -1860,6 +1973,7 @@ Documentation.model_rebuild()
 Fact.model_rebuild()
 Vocabulary.model_rebuild()
 Term.model_rebuild()
+Principle.model_rebuild()
 RiskTaxonomy.model_rebuild()
 RiskConcept.model_rebuild()
 RiskGroup.model_rebuild()
@@ -1895,7 +2009,9 @@ AiEvalResult.model_rebuild()
 BenchmarkMetadataCard.model_rebuild()
 Question.model_rebuild()
 Questionnaire.model_rebuild()
-AiOffice.model_rebuild()
 Adapter.model_rebuild()
 LLMIntrinsic.model_rebuild()
+AiOffice.model_rebuild()
+StakeholderGroup.model_rebuild()
+Stakeholder.model_rebuild()
 Container.model_rebuild()

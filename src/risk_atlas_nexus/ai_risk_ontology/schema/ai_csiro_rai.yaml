@@ -1,0 +1,40 @@
+id: https://ibm.github.io/risk-atlas-nexus/ontology/ai_csiro_rai
+name: ai_csiro_rai
+description:
+  Vocabulary describing CSIRO Responsible AI patterns as used by Risk Atlas Nexus
+license: license-apache-2.0
+version: "1.0.0"
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+  - common
+  - ai_system
+  - ai_eval
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
+  dpv: https://w3id.org/dpv#
+  airo: https://w3id.org/airo#
+default_range: string
+default_prefix: nexus
+
+classes:
+
+  StakeholderGroup:
+    is_a: Entity
+    description: An AI system stakeholder grouping.
+    slots:
+    - isDefinedByTaxonomy
+
+  Stakeholder:
+    is_a: Entity
+    description: An AI system stakeholder for Responsible AI governance (e.g., AI governors, users, consumers).
+    slot_usage:
+      isPartOf:
+        description: A relationship where a stakeholder is part of a stakeholder group
+        range: StakeholderGroup
+    slots:
+    - isDefinedByTaxonomy
+    - isPartOf

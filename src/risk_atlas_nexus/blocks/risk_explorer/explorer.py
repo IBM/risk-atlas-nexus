@@ -19,6 +19,7 @@ class RiskExplorer(ExplorerBase):
         self._benchmarkmetadatacards = ontology.benchmarkmetadatacards or []
         self._documents = ontology.documents or []
         self._datasets = ontology.datasets or []
+        self._stakeholders = ontology.stakeholders or []
 
     def get_all_risks(self, taxonomy=None):
         """Get all risk definitions from the LinkML
@@ -720,4 +721,48 @@ class RiskExplorer(ExplorerBase):
             return matching_dataset_instances[0]
         else:
             print("No matching dataset found")
+            return []
+
+    def get_stakeholders(self, taxonomy=None):
+        """Get all stakeholder definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[Stakeholder]
+                Result containing a list of Stakeholder entries
+        """
+        stakeholder_instances = self._stakeholders or []
+
+        if taxonomy is not None:
+            stakeholder_instances = list(
+                filter(
+                    lambda stakeholder: stakeholder.isDefinedByTaxonomy == taxonomy,
+                    stakeholder_instances,
+                )
+            )
+
+        return stakeholder_instances
+
+    def get_stakeholder(self, id):
+        """Get Stakeholder definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a Stakeholder entry
+
+        Returns:
+            Stakeholder
+                Result containing a Stakeholder
+        """
+        matching_stakeholder_instances = list(
+            filter(lambda stakeholder: stakeholder.id == id, self._stakeholders)
+        )
+
+        if len(matching_stakeholder_instances) > 0:
+            return matching_stakeholder_instances[0]
+        else:
+            print("No matching stakeholder found")
             return []

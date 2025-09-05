@@ -1,0 +1,156 @@
+documents:
+- id: CSIRO-responsible-ai-pattern-catalogue-doc
+  name: 'Responsible AI Pattern Catalogue: A Collection of Best Practices for AI Governance and Engineering'
+  description: >-
+    "Responsible Artificial Intelligence (RAI) is widely considered as one of the greatest scientific challenges of our
+    time and is key to increase the adoption of Artificial Intelligence (AI). Recently, a number of AI ethics
+    principles frameworks have been published. However, without further guidance on best practices, practitioners are
+    left with nothing much beyond truisms. In addition, significant efforts have been placed at algorithm level rather
+    than system level, mainly focusing on a subset of mathematics-amenable ethical principles, such as fairness.
+    Nevertheless, ethical issues can arise at any step of the development lifecycle, cutting across many AI and non-AI
+    components of systems beyond AI algorithms and models. To operationalize RAI from a system perspective, in this
+    article, we present an RAI Pattern Catalogue based on the results of a multivocal literature review. Rather than
+    staying at the principle or algorithm level, we focus on patterns that AI system stakeholders can undertake in
+    practice to ensure that the developed AI systems are responsible throughout the entire governance and engineering
+    lifecycle. The RAI Pattern Catalogue classifies the patterns into three groups: multi-level governance patterns,
+    trustworthy process patterns, and RAI-by-design product patterns. These patterns provide systematic and actionable
+    guidance for stakeholders to implement RAI."
+  url: https://doi.org/10.1145/3626234
+  dateCreated: 2024-04-09
+
+taxonomies:
+- id: csiro-responsible-ai-patterns
+  name: CSIRO Responsible AI Pattern Catalogue
+  description: >-
+    A pattern-oriented approach is taken to build up the Responsible AI Pattern Catalogue, for operationalizing
+    responsible AI from a system perspective.
+  url: https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/
+  dateCreated: 2024-04-09
+  version: '1.0'
+  hasDocumentation:
+  - CSIRO-responsible-ai-pattern-catalogue-doc
+
+stakeholdergroups:
+- id: csiro-stakeholder-group-industry-level
+  name: Industry-level stakeholders
+  description: >-
+    Industry-level stakeholders.
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-group-organization-level
+  name: Organization-level stakeholders
+  description: >-
+    Organization-level stakeholders.
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro--stakeholder-group-team-level
+  name: Team-level stakeholders
+  description: >-
+    Team-level stakeholders.
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+
+stakeholders:
+- id: csiro-stakeholder-ai-technology-producers
+  name: AI technology producers
+  description: >-
+    Those who develop AI technologies for others to build on top to produce AI solutions (e.g., parts of Google,
+    Microsoft, and IBM). AI technology producers may embed RAI in their technologies and/or provide additional RAI
+    tools.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-ai-technology-procurers
+  name: AI technology procurers
+  description: >-
+    Those who procure AI technologies to build their in-house AI solutions (e.g., companies or government agencies
+    buying and using AI platforms and tools). AI technology procurers may care about RAI issues and embed RAI into
+    their AI technology procurement process.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-ai-solution-producers
+  name: AI solution producers
+  description: >-
+    Those who develop in-house and blended solutions on top of technologies and need to make sure the solutions adhere
+    to RAI principles, standards, or regulations (e.g., parts of MS/Google providing Office/Gmail “solutions”).
+    AI solution producers may offer the solutions to AI consumers directly or sell to others. They may use RAI tools
+    (provided by tech producers or third parties) and RAI processes during their solution development.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-ai-solution-procurers
+  name: AI solution procurers
+  description: >-
+    Those who procure complete AI solutions (with some further configuration and instantiation) to use internally or
+    offer to external AI consumers (e.g., a government agency buying from a complete solution from vendors). They may
+    care about RAI issues and embed RAI into their AI solution procurement process.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-ai-users
+  name: AI users
+  description: >-
+    Those who use an AI solution to make decisions that may impact a subject (e.g., a loan officer or a government
+    employee). AI users may exercise additional RAI oversight as the human in the loop.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-investors
+  name: Investors
+  description: >-
+    Those who have interests or concerns in the responsible development and use of AI, which can influence a company's
+    performance and risk profile.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-ai-impacted-subjects
+  name: AI impacted subjects
+  description: >-
+    Those who are impacted by some AI-human dyad decisions (e.g., a loan applicant or a taxpayer). AI impacted subjects
+    may contest the decision on dyad AI ground.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-ai-consumers
+  name: AI consumers
+  description: >-
+    Individuals who consume AI solutions (e.g., voice assistants, search engines, recommender engines) for their
+    personal use (not affecting third parties). AI consumers may care about the dyad AI aspects of AI solutions.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-RAI-governors
+  name: RAI governors
+  description: >-
+    Those who set and enable RAI policies and controls within their culture. RAI governors could be functions within an
+    organization in the preceding list or external (regulators, consumer advocacy groups, community).
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-RAI-tool-producers
+  name: RAI tool producers
+  description: >-
+    Technology vendors and dedicated companies offering RAI features integrated into AI platforms or machine learning
+    operations (MLOps) or AI for operations (AIOps) tools.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-RAI-tool-procurers
+  name: RAI tool procurers
+  description: >-
+    Any of the preceding stakeholders who may purchase or use RAI tools to improve or check solutions' or technology's
+    RAI aspects.
+  isPartOf: csiro-stakeholder-group-industry-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-management-teams
+  name: Management teams
+  description: >-
+    Individuals at the higher level of an organization who are responsible for establishing an RAI governance structure
+    in the organization and achieving RAI at the organization level. The management teams include board members,
+    executives, and (middle-level) managers for legal, compliance, privacy, security, risk, and sustainability.
+  isPartOf: csiro-stakeholder-group-organization-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-employees
+  name: Employees
+  description: >-
+    Individuals who are hired by an organization to perform work for the organization and are expected to adhere to RAI
+    principles in their work.
+  isPartOf: csiro-stakeholder-group-organization-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns
+- id: csiro-stakeholder-development-teams
+  name: Development teams
+  description: >-
+    Those who are responsible for developing and deploying AI systems, including product managers, project managers,
+    team leaders, business analysts, architects, UX/UI designers, data scientists, developers, testers, and operators.
+    The development teams are expected to implement RAI in their development process and embed RAI into the product
+    design of AI systems.
+  isPartOf: csiro-stakeholder-group-team-level
+  isDefinedByTaxonomy: csiro-responsible-ai-patterns

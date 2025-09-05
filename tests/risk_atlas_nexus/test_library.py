@@ -20,6 +20,7 @@ from src.risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Documentation,
     Risk,
     RiskIncident,
+    Stakeholder,
 )
 from tests.base import TestCaseBase
 
@@ -294,9 +295,23 @@ class TestLibrary(TestCaseBase):
         datasets = ran_lib.get_datasets()
         self.assertGreater(len(datasets), 0)
 
-    def test_get_evaluation_by_id(self):
+    def test_get_dataset_by_id(self):
         """Get dataset definition from the LinkML filtered by dataset id"""
         ran_lib = self.ran_lib
         ran_lib._risk_explorer._datasets = [Dataset(id="test-ds1")]
         dataset = ran_lib.get_dataset(id="test-ds1")
         assert dataset.id == "test-ds1"
+
+    def test_get_all_stakeholders(self):
+        """Get all stakeholder definitions from the LinkML"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._stakeholders = [Stakeholder(id="test-stakeholder1")]
+        stakeholders = ran_lib.get_stakeholders()
+        self.assertGreater(len(stakeholders), 0)
+
+    def test_get_document_by_id(self):
+        """Get stakeholder definition from the LinkML filtered by stakeholder id"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._stakeholders = [Documentation(id="test-stakeholder1")]
+        stakeholder = ran_lib.get_stakeholder(id="test-stakeholder1")
+        assert stakeholder.id == "test-stakeholder1"

@@ -10,7 +10,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
   nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
-  dpv: https://w3c.github.io/dpv/2.1/dpv/#
+  dpv: https://w3id.org/dpv#
   ai: https://w3c.github.io/dpv/2.1/ai/#
 
 default_range: string
@@ -90,6 +90,10 @@ classes:
       - hasParentDefinition
       - hasSubDefinition
       - hasRelatedRisk
+
+  Principle:
+    description: A representation of values or norms that must be taken into consideration when conducting activities
+    class_uri: dpv:Principle
 
 slots:
   id:
