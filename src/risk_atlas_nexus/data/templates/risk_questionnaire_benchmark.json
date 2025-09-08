@@ -1,0 +1,464 @@
+[
+  {
+    "UseCase": "Medical Diagnosis and Treatment Suggestions",
+    "Domain": "Healthcare",
+    "Environment": "Hospital or clinic databases and patient records",
+    "Techniques_Utilised": ["Natural Language Processing: Question Answering, Text Generation"],
+    "Intended_User": "Physicians and Medical Staff",
+	"Purpose": "To provide support in diagnosing diseases and suggesting treatment plans based on patient symptoms and medical literature",
+	"Application": "Analyzing patient symptoms, medical history, and latest research to generate potential diagnoses and treatment options",
+	"Subject": "Patients"
+  },
+
+  {
+    "UseCase": "Code Autocompletion and Debugging in Software Engineering",
+	"Domain": "Code/software engineering",
+	"Environment": "Integrated Development Environments (IDEs)",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Feature Extraction"],
+	"Intended_User": "Software Developers and Engineers",
+	"Purpose": "To assist in writing code by suggesting completions, correcting errors, and explaining code functionality",
+	"Application": "Suggesting method names, autocompleting lines of code, identifying potential bugs, and providing inline documentation",
+	"Subject": "Code and software developers"
+  },
+
+  {
+    "UseCase": "Sentiment Analysis for Social Media Monitoring",
+	"Domain": "Marketing",
+	"Environment": "Social media platforms and marketing databases",
+	"Techniques_Utilised": ["Natural Language Processing: Text Classification, Sentiment Analysis"],
+	"Intended_User": "Marketing Teams and Brand Managers",
+	"Purpose": "To gauge public opinion about products, services, or brands on social media platforms",
+	"Application": "Analyzing user-generated content to understand customer sentiment, track brand mentions, and identify trends",
+	"Subject": "Social media users discussing the monitored topics"
+  },
+
+  {
+    "UseCase": "Automated Customer Support Tickets Categorization",
+	"Domain": "Customer service/support",
+	"Environment": "Ticketing systems used by companies",
+	"Techniques_Utilised": ["Natural Language Processing: Text Classification, Summarization"],
+	"Intended_User": "Customer Support Teams and Managers",
+	"Purpose": "To categorize incoming customer support tickets based on their content for efficient routing and prioritization",
+	"Application": "Classifying tickets into categories (e.g., billing, technical issues, feature requests) to ensure proper handling by relevant teams",
+	"Subject": "Customers submitting support requests"
+  },
+
+  {
+    "UseCase": "Chatbot for Employee Onboarding and Training",
+	"Domain": "Talent and Organization including HR",
+	"Environment": "Company intranets or HR software platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Question Answering, Text Generation"],
+	"Intended_User": "New Employees, HR Staff",
+	"Purpose": "To provide an interactive and personalized onboarding experience, as well as answer employee queries related to company policies and procedures",
+	"Application": "Guiding new hires through company information, policy explanations, and frequently asked questions via a chat interface",
+	"Subject": "New employees joining the organization"
+  },
+
+  {
+    "UseCase": "Automated Report Generation in Business Intelligence",
+	"Domain": "Product, Marketing, Strategy",
+	"Environment": "Business intelligence software platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Data Analysts and Business Stakeholders",
+	"Purpose": "To automatically generate insightful summaries and reports from large datasets for decision-making support",
+	"Application": "Transforming raw data into digestible narratives, identifying trends, and providing visualizations to communicate key findings",
+	"Subject": "Business stakeholders and end-users of generated reports"
+  },
+
+  {
+    "UseCase": "Chatbot for Legal Document Review and Summarization",
+	"Domain": "Legal",
+	"Environment": "Law firm databases or legal research platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Legal Professionals",
+	"Purpose": "To assist in quickly reviewing and summarizing extensive legal documents for easier understanding and navigation",
+	"Application": "Extracting key information from contracts, case law, or statutes and presenting them in a more concise format",
+	"Subject": "Lawyers and legal professionals dealing with voluminous legal texts"
+  },
+
+  {
+    "UseCase": "Automated Transcription for Interviews and Meetings",
+	"Domain": "User Research, Design",
+	"Environment": "Interview or meeting recording platforms",
+	"Techniques_Utilised": ["Audio: Audio to Text"],
+	"Intended_User": "Researchers, UX/UI Designers, Transcription Services",
+	"Purpose": "To transcribe spoken words into text for easy access, searchability, and analysis of interview or meeting content",
+	"Application": "Converting audio recordings of user research sessions, client meetings, or focus groups into written format",
+	"Subject": "Interview participants and attendees of recorded discussions"
+  },
+
+  {
+    "UseCase": "Automated News Aggregation and Highlighting",
+	"Domain": "Communications",
+	"Environment": "News aggregators, email newsletters",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "News Consumers and Editors",
+	"Purpose": "To curate and personalize news content by summarizing articles and highlighting relevant information based on user preferences",
+	"Application": "Creating tailored news feeds or emails with key points from various news sources",
+	"Subject": "Users subscribing to news services"
+  },
+
+  {
+    "UseCase": "Automated Email Response Generation",
+	"Domain": "Communications",
+	"Environment": "Email clients and business communication platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation"],
+	"Intended_User": "Professionals, Sales Teams",
+	"Purpose": "To draft automated, personalized email responses for common scenarios (e.g., meeting confirmations, order updates)",
+	"Application": "Speeding up routine email communication by generating suggested replies based on context and templates",
+	"Subject": "Recipients of automated emails"
+  },
+
+  {
+    "UseCase": "Automated Content Moderation for Social Platforms",
+	"Domain": "Cybersecurity, Communications",
+	"Environment": "Social media platforms, comment sections",
+	"Techniques_Utilised": ["Natural Language Processing: Text Classification"],
+	"Intended_User": "Platform Administrators and Content Moderation Teams",
+	"Purpose": "To automatically detect and flag potentially harmful or inappropriate content for review before it is published",
+	"Application": "Analyzing user-generated content to identify hate speech, spam, misinformation, or other policy violations",
+	"Subject": "Social media users posting content that may be flagged by the system"
+  },
+
+  {
+	"UseCase": "Automated Stock Market Analysis and Predictions",
+	"Domain": "Financial",
+	"Environment": "Stock market databases and financial analysis software",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Investors, Financial Analysts",
+	"Purpose": "To analyze vast amounts of financial data and generate predictions about stock performance for informed investment decisions",
+	"Application": "Processing news articles, earnings reports, and market trends to provide summaries and forecast potential stock movements",
+	"Subject": "Investors and those considering investments affected by predicted stock performance"
+  },
+
+  {
+	"UseCase": "AI-Powered Personalized Learning Platform",
+	"Domain": "Education, Writing assistant",
+	"Environment": "E-learning platforms and educational software",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Students and Educators",
+	"Purpose": "To create personalized learning paths and adaptive content based on individual student needs and progress",
+	"Application": "Generating tailored educational materials, suggesting practice exercises, and providing real-time feedback to enhance the learning experience",
+	"Subject": "Students utilizing the platform for learning"
+  },
+
+  {
+	"UseCase": "Automated Legal Brief Drafting",
+	"Domain": "Legal",
+	"Environment": "Legal case management software",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Lawyers and Paralegals",
+	"Purpose": "To assist in drafting legal briefs by summarizing relevant case law and statutes for faster document creation",
+	"Application": "Extracting key points from legal precedents and statutory provisions to generate initial sections of a legal brief",
+	"Subject": "Lawyers preparing legal documents involving extensive research"
+  },
+
+  {
+	"UseCase": "Automated Language Translation for Multilingual Websites",
+	"Domain": "Communications, Design",
+	"Environment": "Website content management systems and translation software",
+	"Techniques_Utilised": ["Natural Language Processing: Translation"],
+	"Intended_User": "Web Developers, Site Administrators",
+	"Purpose": "To automatically translate website content into multiple languages for global accessibility",
+	"Application": "Facilitating the creation of multilingual websites by translating text from a source language to one or more target languages",
+	"Subject": "Website visitors accessing translated content"
+  },
+
+  {
+	"UseCase": "Automated Code Review and Suggestions",
+	"Domain": "Code/software engineering",
+	"Environment": "Version control systems (e.g., Git) and code review platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Feature Extraction"],
+	"Intended_User": "Software Developers and Code Reviewers",
+	"Purpose": "To provide automated feedback on code quality, style, and potential improvements during the review process",
+	"Application": "Analyzing code commits to identify issues such as coding standards violations, inefficiencies, or security vulnerabilities",
+	"Subject": "Developers submitting code for review"
+  },
+
+  {
+	"UseCase": "Automated Meeting Summarization and Action Item Tracking",
+	"Domain": "Product, Strategy, User Research",
+	"Environment": "Meeting recording software and project management tools",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Project Managers, Team Leads",
+	"Purpose": "To automatically generate summaries of meetings and track action items for better follow-up and accountability",
+	"Application": "Converting recorded discussions into written summaries with identified tasks, deadlines, and responsible parties",
+	"Subject": "Meeting participants whose discussions are being summarized and analyzed"
+  },
+
+  {
+	"UseCase": "Automated Customer Feedback Analysis for Product Improvement",
+	"Domain": "Product, Marketing",
+	"Environment": "Customer feedback platforms and product management software",
+	"Techniques_Utilised": ["Natural Language Processing: Text Classification, Sentiment Analysis"],
+	"Intended_User": "Product Managers, UX/UI Designers",
+	"Purpose": "To analyze customer feedback to inform product improvements and identify trends in user preferences or pain points",
+	"Application": "Categorizing and sentiment-analyzing customer comments from various sources (e.g., surveys, support tickets, social media)",
+	"Subject": "Customers providing feedback that is being analyzed for product improvement"
+  },
+
+  {
+	"UseCase": "Automated Medical Diagnosis Support System",
+	"Domain": "Healthcare",
+	"Environment": "Electronic health record systems and medical databases",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Doctors, Nurses",
+	"Purpose": "To assist in generating initial diagnoses or treatment suggestions based on patient symptoms and medical history",
+	"Application": "Analyzing patient records to identify relevant medical information and propose potential diagnoses or courses of action",
+	"Subject": "Patients whose health records are being analyzed for diagnostic support"
+  },
+
+  {
+	"UseCase": "Automated Job Description Generation from Resumes",
+	"Domain": "HR, Recruitment",
+	"Environment": "Applicant Tracking Systems (ATS) and resume parsing software",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation"],
+	"Intended_User": "Recruiters, Hiring Managers",
+	"Purpose": "To generate job descriptions based on candidate skills and experiences to optimize recruitment efforts",
+	"Application": "Extracting key qualifications from resumes to create targeted, compelling job postings tailored to specific candidates",
+	"Subject": "Job applicants whose resumes are being analyzed for job description generation"
+  },
+
+  {
+	"UseCase": "Automated Sports Analysis and Highlights Generation",
+	"Domain": "Communications",
+	"Environment": "Sports broadcasting platforms and data analytics software",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Sports Analysts, Broadcasters",
+	"Purpose": "To automatically generate summaries and highlight clips of sporting events for broadcast or digital content creation",
+	"Application": "Processing game data to create concise recaps, identify key moments, and compile video highlights for sharing across platforms",
+	"Subject": "Sports fans consuming automated event summaries and highlights"
+  },
+
+  {
+	"UseCase": "Automated Mental Health Chatbot for Support and Therapy",
+	"Domain": "Healthcare",
+	"Environment": "Mental health apps and online therapy platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation, Summarization"],
+	"Intended_User": "Individuals Seeking Mental Health Support",
+	"Purpose": "To provide automated conversational support, cognitive behavioral techniques, and coping strategies for users struggling with mental health issues",
+	"Application": "Engaging in real-time text or voice conversations to offer immediate assistance, track progress, and suggest therapeutic exercises",
+	"Subject": "Individuals using the chatbot for mental health support and intervention"
+  },
+
+  {
+	"UseCase": "Automated Image and Video Captioning for Accessibility",
+	"Domain": "Accessibility, AI/Computer Vision",
+	"Environment": "Image and video repositories or platforms focused on accessibility",
+	"Techniques_Utilised": ["Computer Vision: Object Detection, Description Generation"],
+	"Intended_User": "Visually Impaired Individuals, Content Creators",
+	"Purpose": "To generate accurate, descriptive captions for images and videos to enhance their accessibility for visually impaired users",
+	"Application": "Analyzing visual content and generating natural language descriptions to support screen readers or other assistive technologies",
+	"Subject": "Visually impaired individuals using screen reader technology"
+  },
+
+  {
+	"UseCase": "Automated News Headline Generation for Personalized Feeds",
+	"Domain": "Communications, AI/NLP",
+	"Environment": "News aggregator platforms or personalized news feed software",
+	"Techniques_Utilised": ["Natural Language Processing: Text Generation"],
+	"Intended_User": "News Consumers",
+	"Purpose": "To create tailored, engaging headlines for individual users based on their interests and reading history",
+	"Application": "Generating unique headlines for each user's news feed to increase engagement and personalization",
+	"Subject": "News consumers receiving personalized headline recommendations"
+  },
+
+  {
+	"UseCase": "Automated Transcription of Audio Content for Accessibility",
+	"Domain": "Accessibility, AI/Speech Recognition",
+	"Environment": "Audio repositories or platforms focused on accessibility",
+	"Techniques_Utilised": ["Speech Recognition: Automatic Speech-to-Text Conversion"],
+	"Intended_User": "Individuals with Hearing Impairments, Content Creators",
+	"Purpose": "To generate accurate transcripts of audio content to enhance its accessibility for those with hearing impairments",
+	"Application": "Converting spoken words into written text for podcasts, lectures, or other audio materials",
+	"Subject": "Individuals using transcript technology due to hearing impairment"
+  },
+
+  {
+	"UseCase": "Automated Music Composition and Generation",
+	"Domain": "AI/Music, Entertainment",
+	"Environment": "Digital Audio Workstations (DAWs) or AI-focused music platforms",
+	"Techniques_Utilised": ["Machine Learning: Generative Models"],
+	"Intended_User": "Musicians, Composers, Sound Designers",
+	"Purpose": "To create original musical compositions and soundscapes using machine learning algorithms for inspiration or assistance in the creative process",
+	"Application": "Generating melodies, harmonies, or entire songs based on user-defined parameters or styles",
+	"Subject": "Musicians and composers utilizing AI-generated musical content"
+  },
+
+  {
+	"UseCase": "Automated Art Generation for Personalized Decor or Marketing",
+	"Domain": "AI/Visual Arts, Marketing",
+	"Environment": "AI art generation platforms or custom software solutions",
+	"Techniques_Utilised": ["Generative Adversarial Networks (GANs): Image Synthesis"],
+	"Intended_User": "Art Enthusiasts, Businesses",
+	"Purpose": "To produce unique, customized visual art pieces tailored to individual preferences or branding guidelines",
+	"Application": "Generating a wide range of art styles and themes based on user input for personal use or marketing purposes",
+	"Subject": "Art enthusiasts or businesses utilizing AI-generated artwork"
+  },
+
+  {
+	"UseCase": "Automated Scheduling and Time Management Assistance",
+	"Domain": "Productivity, AI/NLP",
+	"Environment": "Personal productivity apps or AI-powered time management tools",
+	"Techniques_Utilised": ["Natural Language Processing: Intent Recognition, Task Prioritization"],
+	"Intended_User": "Professionals, Students, Individuals Seeking Improved Time Management",
+	"Purpose": "To optimize daily schedules and manage tasks more effectively by analyzing user preferences, priorities, and availability",
+	"Application": "Analyzing email, calendar events, and personal goals to suggest time allocations, reminders, or task prioritizations",
+	"Subject": "Individuals utilizing the AI-powered scheduling assistance for improved productivity"
+  },
+
+  {
+	"UseCase": "Automated Financial Portfolio Optimization",
+	"Domain": "Finance, AI/Optimization",
+	"Environment": "Investment management platforms or AI-driven financial advisory software",
+	"Techniques_Utilised": ["Machine Learning: Portfolio Allocation, Risk Assessment"],
+	"Intended_User": "Individual Investors, Financial Advisors",
+	"Purpose": "To provide data-driven recommendations for portfolio optimization and risk management based on individual investment goals and market conditions",
+	"Application": "Analyzing historical performance, volatility, and correlations of assets to suggest optimal asset allocations and rebalancing strategies",
+	"Subject": "Investors or financial advisors using AI-generated portfolio recommendations"
+  },
+
+  {
+	"UseCase": "Automated Customer Churn Prediction for Retention Strategies",
+	"Domain": "Customer Relationship Management (CRM), AI/Predictive Analytics",
+	"Environment": "CRM platforms or dedicated customer churn prediction software",
+	"Techniques_Utilised": ["Machine Learning: Predictive Modeling, Feature Engineering"],
+	"Intended_User": "Business Analysts, Customer Success Teams",
+	"Purpose": "To identify at-risk customers and predict potential churn events to inform targeted retention strategies",
+	"Application": "Analyzing customer behavior, demographics, and transaction history to forecast the likelihood of customer attrition",
+	"Subject": "Customers whose data is being analyzed for churn prediction"
+  },
+
+  {
+	"UseCase": "Automated Social Media Content Moderation",
+	"Domain": "Social Media Management, AI/Content Filtering",
+	"Environment": "Social media platforms or content management tools",
+	"Techniques_Utilised": ["Natural Language Processing: Sentiment Analysis, Offensive Language Detection"],
+	"Intended_User": "Social Media Managers, Content Creators",
+	"Purpose": "To automatically monitor and filter user-generated content for compliance with community guidelines or platform policies",
+	"Application": "Identifying and flagging inappropriate, offensive, or misleading posts to ensure a safe and respectful online environment",
+	"Subject": "Social media users whose content is being monitored and potentially moderated by the AI system"
+  },
+
+  {
+	"UseCase": "Automated Fraud Detection in Financial Transactions",
+	"Domain": "Finance, AI/Anomaly Detection",
+	"Environment": "Banking systems or financial transaction monitoring software",
+	"Techniques_Utilised": ["Machine Learning: Anomaly Detection, Network Analysis"],
+	"Intended_User": "Financial Institutions, Compliance Teams",
+	"Purpose": "To identify and flag potentially fraudulent transactions based on patterns of suspicious activity or anomalies in user behavior",
+	"Application": "Analyzing transaction data to detect unusual patterns, outliers, or correlations that may indicate fraudulent activity",
+	"Subject": "Financial institution customers whose transactions are being monitored for potential fraud"
+  },
+
+  {
+	"UseCase": "Automated Personalized Workout Recommendations",
+	"Domain": "Health & Fitness, AI/NLP",
+	"Environment": "Fitness apps or AI-powered workout platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Intent Recognition, Fitness Knowledge Base"],
+	"Intended_User": "Gym Goers, Athletes, Health Enthusiasts",
+	"Purpose": "To suggest tailored exercise routines based on individual fitness goals, preferences, and physical capabilities",
+	"Application": "Analyzing user input and health data to generate personalized workout plans, including recommended exercises, sets, reps, and progression strategies",
+	"Subject": "Individuals using the AI-powered fitness recommendation system for their exercise routines"
+  },
+
+  {
+	"UseCase": "Automated Sentiment Analysis of Customer Reviews for Business Insights",
+	"Domain": "Customer Relationship Management (CRM), AI/NLP",
+	"Environment": "Business intelligence platforms or customer feedback analysis software",
+	"Techniques_Utilised": ["Natural Language Processing: Sentiment Analysis, Topic Modeling"],
+	"Intended_User": "Marketing and Business Analysts",
+	"Purpose": "To analyze customer reviews across various platforms to gain insights into brand perception, product satisfaction, or emerging trends",
+	"Application": "Processing text from customer feedback to categorize sentiment (positive, negative, neutral) and identify recurring themes or topics of discussion",
+	"Subject": "Consumers whose reviews are being analyzed for business insight generation"
+  },
+
+  {
+	"UseCase": "Automated Code Review Metrics and Quality Assessment",
+	"Domain": "Code/Software Engineering, AI/Static Analysis",
+	"Environment": "Version control systems (e.g., Git) or dedicated code quality assessment tools",
+	"Techniques_Utilised": ["Machine Learning: Static Code Analysis, Metrics Extraction"],
+	"Intended_User": "Software Developers, Technical Managers",
+	"Purpose": "To provide quantitative metrics and assessments of code quality based on established best practices and industry standards",
+	"Application": "Analyzing source code to identify technical debt, code smells, duplication, or adherence to coding conventions",
+	"Subject": "Software developers whose code is being assessed for quality metrics"
+  },
+
+  {
+	"UseCase": "Automated Meeting Minutes Generation and Transcription",
+	"Domain": "Productivity, AI/NLP",
+	"Environment": "Meeting management software or AI-powered transcription platforms",
+	"Techniques_Utilised": ["Natural Language Processing: Automatic Speech Recognition, Summarization"],
+	"Intended_User": "Professionals, Teams, Individuals Seeking Efficient Meeting Documentation",
+	"Purpose": "To create automated summaries and transcriptions of meetings for improved documentation, follow-up, and information retention",
+	"Application": "Recording and analyzing spoken discussions to generate written minutes that capture key points, action items, or decisions made during the meeting",
+	"Subject": "Meeting participants whose discussions are being automatically documented and summarized"
+  },
+
+  {
+	"UseCase": "Automated Personalized News Aggregation based on User Interests",
+	"Domain": "AI/Content Curation, Entertainment",
+	"Environment": "News aggregators or AI-powered content curation platforms",
+	"Techniques_Utilised": ["Machine Learning: Content Filtering, User Profiling"],
+	"Intended_User": "News Consumers, Information Enthusiasts",
+	"Purpose": "To curate and deliver a personalized selection of news articles tailored to individual interests, reading history, or preferences",
+	"Application": "Analyzing user behavior, browsing history, and expressed interests to generate a customized feed of relevant news stories",
+	"Subject": "News consumers whose content is being curated for personalized delivery"
+  },
+
+  {
+	"UseCase": "Automated Energy Efficiency Recommendations for Home Automation Systems",
+	"Domain": "Smart Home, AI/Energy Management",
+	"Environment": "Home automation platforms or dedicated energy management software",
+	"Techniques_Utilised": ["Machine Learning: Predictive Modeling, Optimization"],
+	"Intended_User": "Homeowners, Property Managers",
+	"Purpose": "To suggest data-driven strategies for reducing energy consumption and improving overall home efficiency based on historical usage patterns and environmental factors",
+	"Application": "Analyzing real-time and historical data from sensors and appliances to identify opportunities for optimization or automation of energy-saving practices",
+	"Subject": "Homeowners whose smart home systems are providing personalized energy efficiency recommendations"
+  },
+
+  {
+	"UseCase": "Automated Sentiment Analysis of Social Media Posts for Brand Monitoring",
+	"Domain": "Social Media Management, AI/NLP",
+	"Environment": "Social media monitoring platforms or dedicated brand sentiment analysis software",
+	"Techniques_Utilised": ["Natural Language Processing: Sentiment Analysis, Topic Modeling"],
+	"Intended_User": "Marketing and Brand Management Teams",
+	"Purpose": "To track and analyze online conversations about a brand to gauge public perception, identify trends, or address potential issues proactively",
+	"Application": "Processing text from social media posts to categorize sentiment (positive, negative, neutral) and identify recurring themes or topics related to the brand",
+	"Subject": "Social media users whose posts are being monitored for brand sentiment analysis"
+  },
+
+  {
+	"UseCase": "Automated Personalized Learning Paths in E-Learning Platforms",
+	"Domain": "Education, AI/Adaptive Learning",
+	"Environment": "E-learning platforms or dedicated adaptive learning software",
+	"Techniques_Utilised": ["Machine Learning: Student Profiling, Content Recommendation"],
+	"Intended_User": "Students, Educators, Lifelong Learners",
+	"Purpose": "To suggest customized educational content and resources based on individual learning styles, knowledge gaps, or progress",
+	"Application": "Analyzing student performance data, preferences, and engagement to recommend personalized learning paths and adaptive course materials",
+	"Subject": "E-learning students whose platforms are providing personalized learning recommendations"
+  },
+
+  {
+	"UseCase": "Automated Personalized Recipe Recommendations based on Dietary Restrictions",
+	"Domain": "Food & Nutrition, AI/Content Curation",
+	"Environment": "Recipe discovery apps or dedicated diet-specific platforms",
+	"Techniques_Utilised": ["Machine Learning: Content Filtering, User Profiling"],
+	"Intended_User": "Cooks, Food Enthusiasts, Individuals with Dietary Restrictions",
+	"Purpose": "To suggest tailored recipes based on individual dietary preferences, allergies, or nutritional goals",
+	"Application": "Analyzing user input and dietary information to generate a customized list of recipe suggestions that align with their specific needs and restrictions",
+	"Subject": "Individuals using the AI-powered recipe recommendation system for personalized meal planning"
+  },
+
+  {
+	"UseCase": "Automated Personalized Book Recommendations based on Reading Preferences",
+	"Domain": "Literature, AI/Content Curation",
+	"Environment": "Book discovery apps or dedicated reading platforms",
+	"Techniques_Utilised": ["Machine Learning: Content Filtering, User Profiling"],
+	"Intended_User": "Readers, Book Enthusiasts, Individuals Seeking New Reading Materials",
+	"Purpose": "To suggest tailored books based on individual reading preferences, genres, or historical engagement with similar content",
+	"Application": "Analyzing user input and reading history to generate a customized list of book recommendations that align with their specific interests and tastes",
+    "Subject": "Book enthusiasts whose platforms are providing personalized recommendation"
+}
+
+]
