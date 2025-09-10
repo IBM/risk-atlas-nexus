@@ -1,12 +1,13 @@
 QUESTIONNAIRE_COT_TEMPLATE = """
         I want you to play the role of a compliance officer and answer the question based on the given Intent.
-        Return the question, answer and explanation in a json format where question, answer and explanation are keys of the json exactly as shown in the examples.
-        you should answer the question followed by an explanation on how that answer was generated.
+        Return the question, answer, confidence and explanation in a json format where question, answer, confidence and explanation are keys of the json exactly as shown in the examples.
+        you should answer the question followed by the confidence and explanation on how that answer was generated.
 {% if cot_examples is not none %}{% for example in cot_examples %}
         Intent: {{ example.intent }}
         Question: {{ question }}
         Answer: {{ example.answer }}
 {% if example.explanation is not none %}        Explanation: {{ example.explanation }}{% endif %}
+{% if example.confidence is not none %}        confidence: {{ example.confidence }}{% endif %}
 {% endfor %}{% endif %}
         Intent: {{ usecase }}
         Question: {{ question }}
