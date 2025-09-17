@@ -1,10 +1,15 @@
 
 
-# Class: IncidentConcludedclass
+# Class: StakeholderGroup
+
+
+_An AI system stakeholder grouping._
 
 
 
-URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
+
+
+URI: [nexus:StakeholderGroup](https://ibm.github.io/risk-atlas-nexus/ontology/StakeholderGroup)
 
 
 
@@ -13,22 +18,33 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 ```mermaid
  classDiagram
-    class IncidentConcludedclass
-    click IncidentConcludedclass href "../IncidentConcludedclass"
-      IncidentStatus <|-- IncidentConcludedclass
-        click IncidentStatus href "../IncidentStatus"
+    class StakeholderGroup
+    click StakeholderGroup href "../StakeholderGroup"
+      Entity <|-- StakeholderGroup
+        click Entity href "../Entity"
 
-      IncidentConcludedclass : dateCreated
+      StakeholderGroup : dateCreated
 
-      IncidentConcludedclass : dateModified
+      StakeholderGroup : dateModified
 
-      IncidentConcludedclass : description
+      StakeholderGroup : description
 
-      IncidentConcludedclass : id
+      StakeholderGroup : id
 
-      IncidentConcludedclass : name
+      StakeholderGroup : isDefinedByTaxonomy
 
-      IncidentConcludedclass : url
+
+
+
+
+        StakeholderGroup --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
+        click RiskTaxonomy href "../RiskTaxonomy"
+
+
+
+      StakeholderGroup : name
+
+      StakeholderGroup : url
 
 
 ```
@@ -39,8 +55,7 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 ## Inheritance
 * [Entity](Entity.md)
-    * [IncidentStatus](IncidentStatus.md)
-        * **IncidentConcludedclass**
+    * **StakeholderGroup**
 
 
 
@@ -48,6 +63,7 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [RiskTaxonomy](RiskTaxonomy.md) | A relationship where a risk or a risk group is defined by a risk taxonomy | direct |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -57,6 +73,14 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 
 
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Container](Container.md) | [stakeholdergroups](stakeholdergroups.md) | range | [StakeholderGroup](StakeholderGroup.md) |
+| [Stakeholder](Stakeholder.md) | [isPartOf](isPartOf.md) | range | [StakeholderGroup](StakeholderGroup.md) |
 
 
 
@@ -83,8 +107,8 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | dpv:IncidentConcludedclass |
-| native | nexus:IncidentConcludedclass |
+| self | nexus:StakeholderGroup |
+| native | nexus:StakeholderGroup |
 
 
 
@@ -100,10 +124,12 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 <details>
 ```yaml
-name: IncidentConcludedclass
+name: StakeholderGroup
+description: An AI system stakeholder grouping.
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
-is_a: IncidentStatus
-class_uri: dpv:IncidentConcludedclass
+is_a: Entity
+slots:
+- isDefinedByTaxonomy
 
 ```
 </details>
@@ -112,10 +138,29 @@ class_uri: dpv:IncidentConcludedclass
 
 <details>
 ```yaml
-name: IncidentConcludedclass
+name: StakeholderGroup
+description: An AI system stakeholder grouping.
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
-is_a: IncidentStatus
+is_a: Entity
 attributes:
+  isDefinedByTaxonomy:
+    name: isDefinedByTaxonomy
+    description: A relationship where a risk or a risk group is defined by a risk
+      taxonomy
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:isPartOf
+    alias: isDefinedByTaxonomy
+    owner: StakeholderGroup
+    domain_of:
+    - RiskGroup
+    - Risk
+    - RiskControl
+    - Action
+    - RiskIncident
+    - StakeholderGroup
+    - Stakeholder
+    range: RiskTaxonomy
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -125,7 +170,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: IncidentConcludedclass
+    owner: StakeholderGroup
     domain_of:
     - Entity
     range: string
@@ -137,7 +182,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: IncidentConcludedclass
+    owner: StakeholderGroup
     domain_of:
     - Entity
     - BenchmarkMetadataCard
@@ -149,7 +194,7 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: IncidentConcludedclass
+    owner: StakeholderGroup
     domain_of:
     - Entity
     range: string
@@ -160,7 +205,7 @@ attributes:
     rank: 1000
     slot_uri: schema:url
     alias: url
-    owner: IncidentConcludedclass
+    owner: StakeholderGroup
     domain_of:
     - Entity
     range: uri
@@ -171,7 +216,7 @@ attributes:
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
-    owner: IncidentConcludedclass
+    owner: StakeholderGroup
     domain_of:
     - Entity
     range: date
@@ -183,12 +228,11 @@ attributes:
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified
-    owner: IncidentConcludedclass
+    owner: StakeholderGroup
     domain_of:
     - Entity
     range: date
     required: false
-class_uri: dpv:IncidentConcludedclass
 
 ```
 </details>

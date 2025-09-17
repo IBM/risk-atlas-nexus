@@ -4,7 +4,7 @@
 
 
 
-URI: [dpv:Severity](https://w3c.github.io/dpv/2.1/dpv/#Severity)
+URI: [dpv:Severity](https://w3id.org/dpv#Severity)
 
 
 

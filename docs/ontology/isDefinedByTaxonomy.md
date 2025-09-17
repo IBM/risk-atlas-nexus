@@ -22,11 +22,13 @@ Alias: isDefinedByTaxonomy
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
-| [Action](Action.md) | Action to remediate a risk |  no  |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 | [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
+| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping |  no  |
+| [Action](Action.md) | Action to remediate a risk |  no  |
+| [Stakeholder](Stakeholder.md) | An AI system stakeholder for Responsible AI governance (e |  no  |
 | [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
+| [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
 
 
 
@@ -84,6 +86,8 @@ domain_of:
 - RiskControl
 - Action
 - RiskIncident
+- StakeholderGroup
+- Stakeholder
 range: RiskTaxonomy
 
 ```

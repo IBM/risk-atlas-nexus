@@ -428,6 +428,8 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
+    - StakeholderGroup
+    - Stakeholder
     range: RiskTaxonomy
   isPartOf:
     name: isPartOf
@@ -440,6 +442,7 @@ attributes:
     domain_of:
     - Risk
     - LargeLanguageModel
+    - Stakeholder
     range: RiskGroup
   closeMatch:
     name: closeMatch

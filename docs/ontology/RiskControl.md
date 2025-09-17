@@ -217,6 +217,8 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
+    - StakeholderGroup
+    - Stakeholder
     range: RiskTaxonomy
   isDetectedBy:
     name: isDetectedBy

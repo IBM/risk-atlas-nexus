@@ -4,7 +4,7 @@
 
 
 
-URI: [dpv:IncidentStatus](https://w3c.github.io/dpv/2.1/dpv/#IncidentStatus)
+URI: [dpv:IncidentStatus](https://w3id.org/dpv#IncidentStatus)
 
 
 

@@ -434,6 +434,7 @@ attributes:
     domain_of:
     - Risk
     - LargeLanguageModel
+    - Stakeholder
     range: LargeLanguageModelFamily
   hasEvaluation:
     name: hasEvaluation

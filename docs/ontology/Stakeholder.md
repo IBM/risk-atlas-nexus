@@ -1,10 +1,15 @@
 
 
-# Class: IncidentConcludedclass
+# Class: Stakeholder
+
+
+_An AI system stakeholder for Responsible AI governance (e.g., AI governors, users, consumers)._
 
 
 
-URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
+
+
+URI: [nexus:Stakeholder](https://ibm.github.io/risk-atlas-nexus/ontology/Stakeholder)
 
 
 
@@ -13,22 +18,44 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 ```mermaid
  classDiagram
-    class IncidentConcludedclass
-    click IncidentConcludedclass href "../IncidentConcludedclass"
-      IncidentStatus <|-- IncidentConcludedclass
-        click IncidentStatus href "../IncidentStatus"
+    class Stakeholder
+    click Stakeholder href "../Stakeholder"
+      Entity <|-- Stakeholder
+        click Entity href "../Entity"
 
-      IncidentConcludedclass : dateCreated
+      Stakeholder : dateCreated
 
-      IncidentConcludedclass : dateModified
+      Stakeholder : dateModified
 
-      IncidentConcludedclass : description
+      Stakeholder : description
 
-      IncidentConcludedclass : id
+      Stakeholder : id
 
-      IncidentConcludedclass : name
+      Stakeholder : isDefinedByTaxonomy
 
-      IncidentConcludedclass : url
+
+
+
+
+        Stakeholder --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
+        click RiskTaxonomy href "../RiskTaxonomy"
+
+
+
+      Stakeholder : isPartOf
+
+
+
+
+
+        Stakeholder --> "0..1" StakeholderGroup : isPartOf
+        click StakeholderGroup href "../StakeholderGroup"
+
+
+
+      Stakeholder : name
+
+      Stakeholder : url
 
 
 ```
@@ -39,8 +66,7 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 ## Inheritance
 * [Entity](Entity.md)
-    * [IncidentStatus](IncidentStatus.md)
-        * **IncidentConcludedclass**
+    * **Stakeholder**
 
 
 
@@ -48,6 +74,8 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [RiskTaxonomy](RiskTaxonomy.md) | A relationship where a risk or a risk group is defined by a risk taxonomy | direct |
+| [isPartOf](isPartOf.md) | 0..1 <br/> [StakeholderGroup](StakeholderGroup.md) | A relationship where a stakeholder is part of a stakeholder group | direct |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -57,6 +85,13 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 
 
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Container](Container.md) | [stakeholders](stakeholders.md) | range | [Stakeholder](Stakeholder.md) |
 
 
 
@@ -83,8 +118,8 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | dpv:IncidentConcludedclass |
-| native | nexus:IncidentConcludedclass |
+| self | nexus:Stakeholder |
+| native | nexus:Stakeholder |
 
 
 
@@ -100,10 +135,19 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
 
 <details>
 ```yaml
-name: IncidentConcludedclass
+name: Stakeholder
+description: An AI system stakeholder for Responsible AI governance (e.g., AI governors,
+  users, consumers).
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
-is_a: IncidentStatus
-class_uri: dpv:IncidentConcludedclass
+is_a: Entity
+slots:
+- isDefinedByTaxonomy
+- isPartOf
+slot_usage:
+  isPartOf:
+    name: isPartOf
+    description: A relationship where a stakeholder is part of a stakeholder group
+    range: StakeholderGroup
 
 ```
 </details>
@@ -112,10 +156,48 @@ class_uri: dpv:IncidentConcludedclass
 
 <details>
 ```yaml
-name: IncidentConcludedclass
+name: Stakeholder
+description: An AI system stakeholder for Responsible AI governance (e.g., AI governors,
+  users, consumers).
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
-is_a: IncidentStatus
+is_a: Entity
+slot_usage:
+  isPartOf:
+    name: isPartOf
+    description: A relationship where a stakeholder is part of a stakeholder group
+    range: StakeholderGroup
 attributes:
+  isDefinedByTaxonomy:
+    name: isDefinedByTaxonomy
+    description: A relationship where a risk or a risk group is defined by a risk
+      taxonomy
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:isPartOf
+    alias: isDefinedByTaxonomy
+    owner: Stakeholder
+    domain_of:
+    - RiskGroup
+    - Risk
+    - RiskControl
+    - Action
+    - RiskIncident
+    - StakeholderGroup
+    - Stakeholder
+    range: RiskTaxonomy
+  isPartOf:
+    name: isPartOf
+    description: A relationship where a stakeholder is part of a stakeholder group
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:isPartOf
+    alias: isPartOf
+    owner: Stakeholder
+    domain_of:
+    - Risk
+    - LargeLanguageModel
+    - Stakeholder
+    range: StakeholderGroup
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -125,7 +207,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: IncidentConcludedclass
+    owner: Stakeholder
     domain_of:
     - Entity
     range: string
@@ -137,7 +219,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: IncidentConcludedclass
+    owner: Stakeholder
     domain_of:
     - Entity
     - BenchmarkMetadataCard
@@ -149,7 +231,7 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: IncidentConcludedclass
+    owner: Stakeholder
     domain_of:
     - Entity
     range: string
@@ -160,7 +242,7 @@ attributes:
     rank: 1000
     slot_uri: schema:url
     alias: url
-    owner: IncidentConcludedclass
+    owner: Stakeholder
     domain_of:
     - Entity
     range: uri
@@ -171,7 +253,7 @@ attributes:
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
-    owner: IncidentConcludedclass
+    owner: Stakeholder
     domain_of:
     - Entity
     range: date
@@ -183,12 +265,11 @@ attributes:
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified
-    owner: IncidentConcludedclass
+    owner: Stakeholder
     domain_of:
     - Entity
     range: date
     required: false
-class_uri: dpv:IncidentConcludedclass
 
 ```
 </details>

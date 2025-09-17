@@ -4,7 +4,7 @@
 
 
 
-URI: [dpv:IncidentHaltedclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentHaltedclass)
+URI: [dpv:IncidentHaltedclass](https://w3id.org/dpv#IncidentHaltedclass)
 
 
 

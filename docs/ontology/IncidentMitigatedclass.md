@@ -4,7 +4,7 @@
 
 
 
-URI: [dpv:IncidentMitigatedclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentMitigatedclass)
+URI: [dpv:IncidentMitigatedclass](https://w3id.org/dpv#IncidentMitigatedclass)
 
 
 

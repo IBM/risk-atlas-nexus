@@ -22,13 +22,13 @@ Alias: hasRelatedRisk
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
 | [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
-| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
+| [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
 | [Term](Term.md) | A term and its definitions |  no  |
 | [Action](Action.md) | Action to remediate a risk |  no  |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
 
 
 

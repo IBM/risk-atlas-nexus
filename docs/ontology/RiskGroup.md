@@ -274,6 +274,8 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
+    - StakeholderGroup
+    - Stakeholder
     range: RiskTaxonomy
   closeMatch:
     name: closeMatch

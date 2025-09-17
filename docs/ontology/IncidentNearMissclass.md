@@ -4,7 +4,7 @@
 
 
 
-URI: [dpv:IncidentNearMissclass](https://w3c.github.io/dpv/2.1/dpv/#IncidentNearMissclass)
+URI: [dpv:IncidentNearMissclass](https://w3id.org/dpv#IncidentNearMissclass)
 
 
 

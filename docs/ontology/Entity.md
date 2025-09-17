@@ -80,6 +80,10 @@ URI: [schema:Thing](http://schema.org/Thing)
         click Adapter href "../Adapter"
       Entity <|-- LLMIntrinsic
         click LLMIntrinsic href "../LLMIntrinsic"
+      Entity <|-- StakeholderGroup
+        click StakeholderGroup href "../StakeholderGroup"
+      Entity <|-- Stakeholder
+        click Stakeholder href "../Stakeholder"
 
       Entity : dateCreated
 
@@ -131,6 +135,8 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
     * [Adapter](Adapter.md)
     * [LLMIntrinsic](LLMIntrinsic.md)
+    * [StakeholderGroup](StakeholderGroup.md)
+    * [Stakeholder](Stakeholder.md)
 
 
 

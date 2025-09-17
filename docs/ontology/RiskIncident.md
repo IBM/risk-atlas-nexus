@@ -340,6 +340,8 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
+    - StakeholderGroup
+    - Stakeholder
     range: RiskTaxonomy
   hasStatus:
     name: hasStatus

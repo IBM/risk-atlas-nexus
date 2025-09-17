@@ -218,6 +218,28 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
 
 
+      Container : stakeholdergroups
+
+
+
+
+
+        Container --> "*" StakeholderGroup : stakeholdergroups
+        click StakeholderGroup href "../StakeholderGroup"
+
+
+
+      Container : stakeholders
+
+
+
+
+
+        Container --> "*" Stakeholder : stakeholders
+        click Stakeholder href "../Stakeholder"
+
+
+
       Container : taxonomies
 
 
@@ -279,6 +301,8 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 | [riskcontrols](riskcontrols.md) | * <br/> [RiskControl](RiskControl.md) | A list of AI risk controls | direct |
 | [riskincidents](riskincidents.md) | * <br/> [RiskIncident](RiskIncident.md) | A list of AI risk incidents | direct |
 | [terms](terms.md) | * <br/> [Term](Term.md) | A list of terms from a vocabulary | direct |
+| [stakeholdergroups](stakeholdergroups.md) | * <br/> [StakeholderGroup](StakeholderGroup.md) | A list of AI stakeholder groups | direct |
+| [stakeholders](stakeholders.md) | * <br/> [Stakeholder](Stakeholder.md) | A list of stakeholders | direct |
 | [actions](actions.md) | * <br/> [Action](Action.md) | A list of risk related actions | direct |
 | [evaluations](evaluations.md) | * <br/> [AiEval](AiEval.md) | A list of AI evaluation methods | direct |
 | [aievalresults](aievalresults.md) | * <br/> [AiEvalResult](AiEvalResult.md) | A list of AI evaluation results | direct |
@@ -497,6 +521,28 @@ attributes:
     domain_of:
     - Container
     range: Term
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  stakeholdergroups:
+    name: stakeholdergroups
+    description: A list of AI stakeholder groups
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: StakeholderGroup
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  stakeholders:
+    name: stakeholders
+    description: A list of stakeholders
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Stakeholder
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -771,6 +817,32 @@ attributes:
     domain_of:
     - Container
     range: Term
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  stakeholdergroups:
+    name: stakeholdergroups
+    description: A list of AI stakeholder groups
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: stakeholdergroups
+    owner: Container
+    domain_of:
+    - Container
+    range: StakeholderGroup
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  stakeholders:
+    name: stakeholders
+    description: A list of stakeholders
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: stakeholders
+    owner: Container
+    domain_of:
+    - Container
+    range: Stakeholder
     multivalued: true
     inlined: true
     inlined_as_list: true

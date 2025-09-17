@@ -57,9 +57,12 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Severity](Severity.md) |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Stakeholder](Stakeholder.md) | An AI system stakeholder for Responsible AI governance (e |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Term](Term.md) | A term and its definitions |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |
 | [Fact](Fact.md) | A fact about something, for example the result of a measurement |
+| [Principle](Principle.md) | A representation of values or norms that must be taken into consideration whe... |
 
 
 
@@ -183,6 +186,8 @@ Name: ai-risk-ontology
 | [riskincidents](riskincidents.md) | A list of AI risk incidents |
 | [risks](risks.md) | A list of AI risks |
 | [source_uri](source_uri.md) | The uri of the incident |
+| [stakeholdergroups](stakeholdergroups.md) | A list of AI stakeholder groups |
+| [stakeholders](stakeholders.md) | A list of stakeholders |
 | [supported_languages](supported_languages.md) | A list of languages, expressed as ISO two letter codes |
 | [tag](tag.md) | A shost version of the name |
 | [taxonomies](taxonomies.md) | A list of AI risk taxonomies |

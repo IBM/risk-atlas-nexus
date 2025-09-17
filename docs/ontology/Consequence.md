@@ -4,7 +4,7 @@
 
 
 
-URI: [dpv:Consequence](https://w3c.github.io/dpv/2.1/dpv/#Consequence)
+URI: [dpv:Consequence](https://w3id.org/dpv#Consequence)
 
 
 
