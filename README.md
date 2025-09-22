@@ -10,14 +10,14 @@
 
 ## Overview
 
-Risk Atlas Nexus aims to provide tooling to help bring together resources related to governance of foundation models. We support a community-driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations. Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, Risk Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. Risk Atlas Nexus builds on the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) making this educational resource a nexus of governance assets and tooling. An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data.
+Risk Atlas Nexus provides tooling to help bring together resources related to governance of foundation models. We support a community-driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations. Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, Risk Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. Risk Atlas Nexus builds on the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) making this educational resource a nexus of governance assets and tooling. An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data.
 
 Our intention is to create a starting point for an open AI Systems ontology whose focus is on risk and that the community can extend and enhance. This ontology serves as the foundation that unifies innovation and tooling in the AI risk space. By lowering the barrier to entry for developers, it fosters a governance-first approach to AI solutions, while also inviting the broader community to contribute their own tools and methodologies to expand its impact.
 
 ## Features
 
-- 🏗️ An ontology has been provided, that combines the AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema
-- 📚 AI Risks were collected from IBM AI Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AI Risk Taxonomy (AIR 2024), the AILuminate Benchmark, Credo's Unified Control Framework, and OWASP Top 10 for Large Language Model Applications
+- 🏗️ An ontology that combines the AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema
+- 📚 AI Risks collected from IBM AI Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AI Risk Taxonomy (AIR 2024), the AILuminate Benchmark, Credo's Unified Control Framework, and OWASP Top 10 for Large Language Model Applications
 - 🔗 Mappings are proposed between the taxonomies and between risks and actions
 - 🐍 Use the python library methods to quickly explore available risks, relations and actions
 - 🚨 Use the python library methods to detect potential risks in your usecase
@@ -55,7 +55,7 @@ This project targets python version ">=3.11, <3.12". You can download specific v
 
 To install the current release
 ```
-pip install risk-atlas-nexus[INFERENCE_LIB]
+pip install "risk-atlas-nexus[INFERENCE_LIB]"
 ```
 
 To install the latest code
