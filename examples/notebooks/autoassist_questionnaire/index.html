@@ -7124,13 +7124,13 @@ provide the LLM with example responses for some use-cases.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -7180,6 +7180,20 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/Users/seshu/Documents/2025/risk-atlas-nexus/src/risk_atlas_nexus/toolkit/job_utils.py:4: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from tqdm.autonotebook import tqdm
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -7214,7 +7228,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
     <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"granite3.2:8b"</span><span class="p">,</span>
-    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"OLLAMA_API_URL"</span><span class="p">),</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"http://localhost:11434"</span><span class="p">),</span>
     <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
         <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">repeat_penalty</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span>
     <span class="p">),</span>
@@ -7251,7 +7265,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">inference_engine = OllamaInferenceEngine(
     model_name_or_path="granite3.2:8b",
-    credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
+    credentials=InferenceEngineCredentials(api_url="http://localhost:11434"),
     parameters=OllamaInferenceEngineParams(
         num_predict=1000, temperature=0, repeat_penalty=1, num_ctx=8192
     ),
@@ -7296,8 +7310,8 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-05-26 18:30:21:729] - INFO - RiskAtlasNexus - OLLAMA inference engine will execute requests on the server at http://localhost:11434.
-[2025-05-26 18:30:21:803] - INFO - RiskAtlasNexus - Created OLLAMA inference engine.
+<pre>[2025-09-10 07:48:03:128] - INFO - RiskAtlasNexus - OLLAMA inference engine will execute requests on the server at http://localhost:11434.
+[2025-09-10 07:48:03:157] - INFO - RiskAtlasNexus - Created OLLAMA inference engine.
 </pre>
 </div>
 </div>
@@ -7348,7 +7362,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-05-26 18:30:21:880] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
+<pre>[2025-09-10 07:48:03:379] - INFO - RiskAtlasNexus - Created RiskAtlasNexus instance. Base_dir: None
 </pre>
 </div>
 </div>
@@ -7428,7 +7442,7 @@ from the Airo questionnaire:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -7457,23 +7471,29 @@ risk_questionnaire[0]</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>{'question': 'What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other',
+<pre>{'no': 'Q1',
+ 'question': 'What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other',
  'cot_examples': [{'intent': 'Optimize supply chain management in Investment banks',
    'answer': 'Strategy',
+   'confidence': 'Likely answer from the intent',
    'explanation': 'Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks.'},
   {'intent': 'Ability to create dialog flows and integrations from natural language instructions.',
    'answer': 'Customer service/support',
+   'confidence': 'Likely answer from the intent',
    'explanation': 'Since the task relates to human conversations or generating human converstations or support.'},
   {'intent': 'Check if a document has grammatical mistakes.',
    'answer': 'Writing assitant',
+   'confidence': 'Likely answer from the intent',
    'explanation': 'Since this helps in improving the quality of text. It is not customer service since this on on the quality of text rather than helping in human conversations.'},
   {'intent': 'Optimize supply chain management in Investment banks',
    'answer': 'Strategy',
+   'confidence': 'Likely answer from the intent',
    'explanation': 'Since the task is involved in improving the processes to ensure better performance. It is not finance since the task is on supply chain optimization and not on financial aspects even though the application domain is banks.'},
   {'intent': "In the context of drug repurposing, generative AI can be employed to analyze vast databases of existing drugs and their clinical trials data. By identifying patterns and similarities, the AI can suggest potential new therapeutic indications for existing drugs, based on the chemical structure and pharmacological properties of the APIs. This process can help streamline the drug development pipeline, as it would reduce the need for time-consuming and expensive clinical trials for new indications. For instance, a drug like Atorvastatin, which is currently used to lower cholesterol, could be repurposed for the treatment of diabetic nephropathy, a kidney disease, based on the AI's analysis of similar drugs and their clinical data. This would not only save resources but also provide new treatment options for patients suffering from this debilitating condition. ",
    'answer': 'Healthcare and strategy',
+   'confidence': 'Directly from the  input text',
    'explanation': 'Since the task is related to healthcare and drug repurposing, which involves analyzing data related to drugs and their clinical trials, this falls under the healthcare domain. It also involves Strategy it talks about using patterns to create new treatment options.'}]}</pre>
 </div>
 </div>
@@ -7521,7 +7541,7 @@ risk_questionnaire[0]</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers. Include whether the information is in the prompt, a plausible answer or not able to answer based on the prompt."</span>
 
 <span class="n">results</span> <span class="o">=</span> <span class="n">risk_atlas_nexus</span><span class="o">.</span><span class="n">generate_zero_shot_risk_questionnaire_output</span><span class="p">(</span>
     <span class="n">usecase</span><span class="p">,</span> <span class="n">risk_questionnaire</span><span class="p">,</span> <span class="n">inference_engine</span>
@@ -7538,7 +7558,7 @@ risk_questionnaire[0]</div>
         <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span>
     <span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-5">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers. Include whether the information is in the prompt, a plausible answer or not able to answer based on the prompt."
 
 results = risk_atlas_nexus.generate_zero_shot_risk_questionnaire_output(
     usecase, risk_questionnaire, inference_engine
@@ -7565,7 +7585,7 @@ for index, (question_data, result) in enumerate(
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:24&lt;00:00,  3.46s/it]</pre>
+<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:54&lt;00:00,  7.84s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -7576,22 +7596,22 @@ for index, (question_data, result) in enumerate(
 A: Customer service/support
 
 2: In which environment is the system used?
-A: The system is used in a digital environment, specifically designed for online interactions between customers and support agents.
+A: The system is used in a digital environment, specifically as an AI assistant providing responses to user queries.
 
 3: What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning
-A: The system employs a variety of techniques, including multi-modal approaches such as Document Question/Answering, Image and text to text, Video and text to text, and visual question answering. In terms of Natural Language Processing, it utilizes methods like feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, and zero shot classification. For computer vision, it uses image classification, image segmentation, text to image, and object detection. In the audio domain, it applies audio classification, audio to audio, and text to speech. Additionally, it incorporates tabular methods such as tabular classification and tabular regression. Lastly, it leverages reinforcement learning.
+A: The system employs a variety of techniques including multi-modal capabilities such as Document Question/Answering, Image and text to text, Video and text to text, and visual question answering. In the realm of Natural Language Processing, it utilizes methods like feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, and zero shot classification. For computer vision, it incorporates image classification, image segmentation, text to image, and object detection. In the audio domain, it uses audio classification, audio to audio, and text to speech. Additionally, it includes tabular methods like tabular classification and tabular regression. Lastly, it incorporates reinforcement learning techniques.
 
 4: Who is the intended user of the system?
-A: The intended user of the system is the support agent.
+A: The intended user of the system is the customer service agent.
 
 5: What is the intended purpose of the system?
-A: The intended purpose of the system is to assist compliance officers in generating personalized, relevant responses, recommendations, and summaries of claims for customers. This is done to enhance interactions between support agents and customers, ensuring accurate and efficient communication.
+A: The intended purpose of the system is to assist as a compliance officer, providing personalized, relevant responses, recommendations, and summaries of claims to support agents in their interactions with customers. This is inferred from the Intent, which specifies generating personalized content to enhance customer interactions.
 
 6: What is the application of the system?
-A: The application of the system is to assist compliance officers in generating personalized, relevant responses, recommendations, and summaries of claims for support agents. This is achieved by understanding the intent of the customer's inquiry and providing tailored information to enhance the interaction between the support agent and the customer.
+A: The application of the system is not explicitly provided in the given prompt. Therefore, I cannot generate a personalized, relevant response regarding its application.
 
 7: Who is the subject as per the intent?
-A: The subject in this context is the compliance officer.
+A: The subject in this context is the compliance officer role.
 </pre>
 </div>
 </div>
@@ -7600,6 +7620,53 @@ A: The subject in this context is the compliance officer.
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># for index, (question_data, result) in enumerate(</span>
+<span class="c1">#     zip(risk_questionnaire, results), start=1</span>
+<span class="c1"># ):</span>
+<span class="c1">#     print(</span>
+<span class="c1">#         f"\n{index}: "</span>
+<span class="c1">#         + question_data["question"]</span>
+<span class="c1">#         + "\nA: "</span>
+<span class="c1">#         + result.prediction["answer"]</span>
+<span class="c1">#         + "\nC: "</span>
+<span class="c1">#         + result.prediction["Confidence"]</span>
+<span class="c1">#     )</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6"># for index, (question_data, result) in enumerate(
+#     zip(risk_questionnaire, results), start=1
+# ):
+#     print(
+#         f"\n{index}: "
+#         + question_data["question"]
+#         + "\nA: "
+#         + result.prediction["answer"]
+#         + "\nC: "
+#         + result.prediction["Confidence"]
+#     )</div>
 </div>
 </div>
 </div>
@@ -7616,16 +7683,16 @@ A: The subject in this context is the compliance officer.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -7635,43 +7702,133 @@ A: The subject in this context is the compliance officer.
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span> 
 
-<span class="n">results</span> <span class="o">=</span> <span class="n">risk_atlas_nexus</span><span class="o">.</span><span class="n">generate_few_shot_risk_questionnaire_output</span><span class="p">(</span>
-    <span class="n">usecase</span><span class="p">,</span>
-    <span class="n">risk_questionnaire</span><span class="p">,</span>
-    <span class="n">inference_engine</span><span class="p">,</span>
-<span class="p">)</span>
+<span class="n">usecases</span> <span class="o">=</span> <span class="n">load_resource</span><span class="p">(</span><span class="s2">"questionnaire_benchmark.json"</span><span class="p">)</span>
 
-<span class="c1"># Display Results</span>
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">question_data</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
-    <span class="nb">zip</span><span class="p">(</span><span class="n">risk_questionnaire</span><span class="p">,</span> <span class="n">results</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span>
-<span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: "</span>
-        <span class="o">+</span> <span class="n">question_data</span><span class="p">[</span><span class="s2">"question"</span><span class="p">]</span>
-        <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">A: "</span>
-        <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span>
-    <span class="p">)</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-7">import json 
 
-results = risk_atlas_nexus.generate_few_shot_risk_questionnaire_output(
-    usecase,
-    risk_questionnaire,
-    inference_engine,
-)
+usecases = load_resource("questionnaire_benchmark.json")
 
-# Display Results
-for index, (question_data, result) in enumerate(
-    zip(risk_questionnaire, results), start=1
-):
-    print(
-        f"\n{index}: "
-        + question_data["question"]
-        + "\nA: "
-        + result.prediction["answer"]
-    )</div>
+predictions = []</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">index_map</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">"UseCase"</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">"Domain"</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">"Environment"</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">"Techniques_Utilised"</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s2">"Intended_User"</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s2">"Purpose"</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="s2">"Application"</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="s2">"Subject"</span> <span class="p">}</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">index_map = {0: "UseCase", 1: "Domain", 2: "Environment", 3: "Techniques_Utilised", 4: "Intended_User", 5: "Purpose", 6: "Application", 7: "Subject" }</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># usecase = usecases[0]["UseCase"]</span>
+<span class="k">for</span> <span class="n">usecase_dict</span> <span class="ow">in</span> <span class="n">usecases</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]:</span>
+    <span class="n">usecase</span> <span class="o">=</span> <span class="n">usecase_dict</span><span class="p">[</span><span class="s2">"UseCase"</span><span class="p">]</span> 
+    <span class="n">results</span> <span class="o">=</span> <span class="n">risk_atlas_nexus</span><span class="o">.</span><span class="n">generate_few_shot_risk_questionnaire_output</span><span class="p">(</span>
+        <span class="n">usecase</span><span class="p">,</span>
+        <span class="n">risk_questionnaire</span><span class="p">,</span>
+        <span class="n">inference_engine</span><span class="p">,</span>
+    <span class="p">)</span>
+    
+    <span class="n">result_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="c1"># Display Results</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">question_data</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+        <span class="nb">zip</span><span class="p">(</span><span class="n">risk_questionnaire</span><span class="p">,</span> <span class="n">results</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: "</span>
+            <span class="o">+</span> <span class="n">question_data</span><span class="p">[</span><span class="s2">"question"</span><span class="p">]</span>
+            <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">A: "</span>
+            <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span>
+            <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">C: "</span>
+            <span class="o">+</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"confidence"</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">result_dict</span><span class="p">[</span><span class="n">index_map</span><span class="p">[</span><span class="n">index</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">result_dict</span><span class="p">[</span><span class="n">index_map</span><span class="p">[</span><span class="n">index</span><span class="p">]][</span><span class="s2">"answer"</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span>
+        <span class="n">result_dict</span><span class="p">[</span><span class="n">index_map</span><span class="p">[</span><span class="n">index</span><span class="p">]][</span><span class="s2">"explanation"</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"explanation"</span><span class="p">]</span>
+        <span class="n">result_dict</span><span class="p">[</span><span class="n">index_map</span><span class="p">[</span><span class="n">index</span><span class="p">]][</span><span class="s2">"confidence"</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">prediction</span><span class="p">[</span><span class="s2">"confidence"</span><span class="p">]</span>
+
+        <span class="n">result_dict</span><span class="p">[</span><span class="s2">"usecase"</span><span class="p">]</span> <span class="o">=</span> <span class="n">usecase</span>
+        <span class="c1"># print(result)</span>
+    
+    <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_dict</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-9"># usecase = usecases[0]["UseCase"]
+for usecase_dict in usecases[2:3]:
+    usecase = usecase_dict["UseCase"] 
+    results = risk_atlas_nexus.generate_few_shot_risk_questionnaire_output(
+        usecase,
+        risk_questionnaire,
+        inference_engine,
+    )
+    
+    result_dict = {}
+    # Display Results
+    for index, (question_data, result) in enumerate(
+        zip(risk_questionnaire, results), start=1
+    ):
+        print(
+            f"\n{index}: "
+            + question_data["question"]
+            + "\nA: "
+            + result.prediction["answer"]
+            + "\nC: "
+            + result.prediction["confidence"]
+        )
+        print(result)
+        result_dict[index_map[index]] = {}
+        result_dict[index_map[index]]["answer"] = result.prediction["answer"]
+        result_dict[index_map[index]]["explanation"] = result.prediction["explanation"]
+        result_dict[index_map[index]]["confidence"] = result.prediction["confidence"]
+
+        result_dict["usecase"] = usecase
+        # print(result)
+    
+    predictions.append(result_dict)</div>
 </div>
 </div>
 </div>
@@ -7683,7 +7840,7 @@ for index, (question_data, result) in enumerate(
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [00:36&lt;00:00,  5.23s/it]</pre>
+<pre>Inferring with OLLAMA: 100%|██████████| 7/7 [01:31&lt;00:00, 13.09s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -7691,28 +7848,39 @@ for index, (question_data, result) in enumerate(
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
 1: What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other
-A: Customer service/support
+A: Marketing
+C: Likely answer from the intent
+TextGenerationInferenceOutput(prediction={'answer': 'Marketing', 'explanation': 'Since the task involves analyzing social media data to understand public sentiment, which is a key aspect of marketing strategies and customer understanding.', 'confidence': 'Likely answer from the intent'}, input_tokens=None, output_tokens=None, stop_reason=None, seed=None, input_text=None, model_name_or_path='granite3.2:8b', inference_engine='OLLAMA')
 
 2: In which environment is the system used?
-A: Customer Service or Claims Support Departments
+A: Social Media Monitoring Teams or Public Relations Departments or Customer Service Teams
+C: Likely answer from the intent
+TextGenerationInferenceOutput(prediction={'answer': 'Social Media Monitoring Teams or Public Relations Departments or Customer Service Teams', 'explanation': '1. Social Media Monitoring Teams: Companies or organizations with dedicated social media monitoring teams could use this system to analyze public sentiment towards their brand, products, or services. 2. Public Relations Departments: PR departments might utilize this application to track and respond to public sentiment, manage crises, and develop effective communication strategies. 3. Customer Service Teams: Customer service teams could benefit from using this system to understand customer feedback, improve service quality, and address concerns proactively.', 'confidence': 'Likely answer from the intent'}, input_tokens=None, output_tokens=None, stop_reason=None, seed=None, input_text=None, model_name_or_path='granite3.2:8b', inference_engine='OLLAMA')
 
 3: What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning
-A: Natural language processing: text generation and summarization
+A: Natural language processing: text classification, sentiment analysis
+C: Likely answer from the intent
+TextGenerationInferenceOutput(prediction={'answer': 'Natural language processing: text classification, sentiment analysis', 'explanation': 'Sentiment Analysis for Social Media Monitoring involves analyzing text data from social media platforms to understand public opinion or sentiment towards a particular topic, brand, or product. This is achieved through Natural Language Processing techniques, specifically text classification and sentiment analysis. Text classification categorizes the text into predefined sentiment classes (e.g., positive, negative, neutral), while sentiment analysis determines the emotional tone behind the words.', 'confidence': 'Likely answer from the intent'}, input_tokens=None, output_tokens=None, stop_reason=None, seed=None, input_text=None, model_name_or_path='granite3.2:8b', inference_engine='OLLAMA')
 
 4: Who is the intended user of the system?
-A: Customer Support Agents
+A: Brands, Marketing Agencies, or Social Media Managers
+C: Likely answer from the intent
+TextGenerationInferenceOutput(prediction={'answer': 'Brands, Marketing Agencies, or Social Media Managers', 'explanation': 'Sentiment analysis for social media monitoring is primarily used by brands, marketing agencies, or social media managers to understand public opinion about their products, services, or brand image. By analyzing sentiments expressed in social media posts, these users can gain insights into customer satisfaction, brand reputation, and market trends. This information can help them make informed decisions about marketing strategies, product development, and customer service improvements.', 'confidence': 'Likely answer from the intent'}, input_tokens=None, output_tokens=None, stop_reason=None, seed=None, input_text=None, model_name_or_path='granite3.2:8b', inference_engine='OLLAMA')
 
 5: What is the intended purpose of the system?
-A: To enhance customer service by providing support agents with personalized, contextually relevant information and recommendations, enabling them to address customer inquiries and claims more effectively and efficiently.
+A: To monitor and analyze public sentiment expressed on social media platforms, providing insights into brand reputation, customer satisfaction, and market trends, enabling proactive management of online presence and crisis response.
+C: High. The answer is directly inferred from the intent's focus on sentiment analysis for social media monitoring.
+TextGenerationInferenceOutput(prediction={'answer': 'To monitor and analyze public sentiment expressed on social media platforms, providing insights into brand reputation, customer satisfaction, and market trends, enabling proactive management of online presence and crisis response.', 'explanation': "The intent focuses on sentiment analysis for social media monitoring, which implies the system's purpose is to track and interpret the emotions, opinions, and attitudes expressed by users on social media platforms. This analysis helps organizations understand their brand reputation, customer satisfaction, and market trends, allowing them to make informed decisions and respond effectively to potential crises.", 'confidence': "High. The answer is directly inferred from the intent's focus on sentiment analysis for social media monitoring."}, input_tokens=None, output_tokens=None, stop_reason=None, seed=None, input_text=None, model_name_or_path='granite3.2:8b', inference_engine='OLLAMA')
 
 6: What is the application of the system?
-A: Natural Language Generation (NLG): Develop AI models to generate personalized, context-aware responses and summaries for customer interactions. 
-Sentiment Analysis: Use NLP to understand customer sentiment and tailor responses accordingly. 
-Recommendation Engine: Analyze customer data to suggest relevant products, services, or solutions based on individual preferences and needs. 
-Chatbot Integration: Integrate with customer support platforms to provide real-time, automated assistance to support agents.
+A: Natural Language Processing (NLP): Analyze social media posts and comments to determine public sentiment towards the brand, products, or services. This can help in understanding customer perceptions, identifying potential issues, and informing marketing strategies.
+C: High
+TextGenerationInferenceOutput(prediction={'answer': 'Natural Language Processing (NLP): Analyze social media posts and comments to determine public sentiment towards the brand, products, or services. This can help in understanding customer perceptions, identifying potential issues, and informing marketing strategies.', 'explanation': 'The intent focuses on Sentiment Analysis for Social Media Monitoring. This involves using NLP to process and interpret the emotional tone behind words in social media posts. The system would analyze the text to categorize it as positive, negative, or neutral, providing insights into public sentiment towards the brand, products, or services. This can be used to understand customer perceptions, identify potential issues, and inform marketing strategies.', 'confidence': 'High'}, input_tokens=None, output_tokens=None, stop_reason=None, seed=None, input_text=None, model_name_or_path='granite3.2:8b', inference_engine='OLLAMA')
 
 7: Who is the subject as per the intent?
-A: Claims and Customers
+A: Social media users
+C: Directly from the input text
+TextGenerationInferenceOutput(prediction={'answer': 'Social media users', 'explanation': 'The system would need to analyze and interpret the sentiment of posts and comments made by users on social media platforms. This implies that the subject of the AI system is the social media users themselves, as their posts and interactions are the data being analyzed for sentiment.', 'confidence': 'Directly from the input text'}, input_tokens=None, output_tokens=None, stop_reason=None, seed=None, input_text=None, model_name_or_path='granite3.2:8b', inference_engine='OLLAMA')
 </pre>
 </div>
 </div>
@@ -7721,6 +7889,991 @@ A: Claims and Customers
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecases</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> 
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-10">usecases[2] </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'UseCase': 'Sentiment Analysis for Social Media Monitoring',
+ 'Domain': 'Marketing',
+ 'Environment': 'Social media platforms and marketing databases',
+ 'Techniques_Utilised': ['Natural Language Processing: Text Classification, Sentiment Analysis'],
+ 'Intended_User': 'Marketing Teams and Brand Managers',
+ 'Purpose': 'To gauge public opinion about products, services, or brands on social media platforms',
+ 'Application': 'Analyzing user-generated content to understand customer sentiment, track brand mentions, and identify trends',
+ 'Subject': 'Social media users discussing the monitored topics'}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./autoassist_questionnaire_v2.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-11">with open("./autoassist_questionnaire_v2.json", "w") as f:
+    json.dump(predictions, f)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./autoassist_questionnaire_v2.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">autoassist_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">usecase_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">domain_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">environment_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">techniques_utilised_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">intended_user_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">purpose_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">application_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">subject_autoassist</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">autoassist_data</span><span class="p">:</span>
+    <span class="n">domain_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Domain"</span><span class="p">])</span>
+    <span class="n">environment_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Environment"</span><span class="p">])</span>
+    <span class="n">techniques_utilised_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Techniques_Utilised"</span><span class="p">])</span>
+    <span class="n">intended_user_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Intended_User"</span><span class="p">])</span>
+    <span class="n">purpose_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Purpose"</span><span class="p">])</span>
+    <span class="n">application_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Application"</span><span class="p">])</span>
+    <span class="n">subject_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"Subject"</span><span class="p">])</span>
+    <span class="n">usecase_autoassist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"usecase"</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-12">import json
+
+with open("./autoassist_questionnaire_v2.json") as f:
+    autoassist_data = json.load(f)
+
+usecase_autoassist = []
+domain_autoassist = []
+environment_autoassist = []
+techniques_utilised_autoassist = []
+intended_user_autoassist = []
+purpose_autoassist = []
+application_autoassist = []
+subject_autoassist = []
+
+
+for data in autoassist_data:
+    domain_autoassist.append(data["Domain"])
+    environment_autoassist.append(data["Environment"])
+    techniques_utilised_autoassist.append(data["Techniques_Utilised"])
+    intended_user_autoassist.append(data["Intended_User"])
+    purpose_autoassist.append(data["Purpose"])
+    application_autoassist.append(data["Application"])
+    subject_autoassist.append(data["Subject"])
+    usecase_autoassist.append(data["usecase"])
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepeval</span><span class="w"> </span><span class="kn">import</span> <span class="n">evaluate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEval</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.test_case</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMTestCase</span><span class="p">,</span> <span class="n">LLMTestCaseParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnswerRelevancyMetric</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContextualRelevancyMetric</span>
+
+<span class="n">criteria</span> <span class="o">=</span> <span class="s2">"""Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be</span>
+<span class="s2">relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""</span>
+
+<span class="n">likely_relevance_metric</span> <span class="o">=</span> <span class="n">GEval</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Likely relevance"</span><span class="p">,</span>
+    <span class="n">criteria</span><span class="o">=</span><span class="n">criteria</span><span class="p">,</span>
+    <span class="c1"># NOTE: you can only provide either criteria or evaluation_steps, and not both</span>
+    <span class="n">evaluation_steps</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"Read the input and question carefully and identify if the actual output is relevant to the input."</span><span class="p">,</span>
+        <span class="s2">"Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct."</span><span class="p">,</span>
+        <span class="s2">"Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."</span>
+    <span class="p">],</span>
+    <span class="n">evaluation_params</span><span class="o">=</span><span class="p">[</span><span class="n">LLMTestCaseParams</span><span class="o">.</span><span class="n">ACTUAL_OUTPUT</span><span class="p">],</span>
+
+<span class="p">)</span>
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">question</span> <span class="o">=</span> <span class="s2">"In which environment is the system used?"</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">environment_autoassist</span><span class="p">):</span>
+
+    <span class="n">actual_output</span> <span class="o">=</span> <span class="s2">"Answer: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".Explanation: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"explanation"</span><span class="p">]</span> 
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">"Intent: "</span> <span class="o">+</span> <span class="n">usecase_autoassist</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"."</span> <span class="o">+</span> <span class="n">question</span>
+    <span class="n">retrieval_context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">input</span><span class="p">]</span>
+    <span class="n">test_case</span> <span class="o">=</span> <span class="n">LLMTestCase</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span>
+        <span class="n">actual_output</span><span class="o">=</span><span class="n">actual_output</span><span class="p">,</span> 
+    <span class="p">)</span>
+    <span class="n">test_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_case</span><span class="p">)</span>
+
+
+<span class="n">evaluate</span><span class="p">(</span><span class="n">test_cases</span><span class="o">=</span><span class="n">test_cases</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">likely_relevance_metric</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-13">from deepeval import evaluate
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.metrics import ContextualRelevancyMetric
+
+criteria = """Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be
+relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""
+
+likely_relevance_metric = GEval(
+    name="Likely relevance",
+    criteria=criteria,
+    # NOTE: you can only provide either criteria or evaluation_steps, and not both
+    evaluation_steps=[
+        "Read the input and question carefully and identify if the actual output is relevant to the input.",
+        "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",
+        "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."
+    ],
+    evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT],
+
+)
+
+test_cases = []
+question = "In which environment is the system used?"
+for index, data in enumerate(environment_autoassist):
+
+    actual_output = "Answer: " + data["answer"] + ".Explanation: " + data["explanation"] 
+    input = "Intent: " + usecase_autoassist[index] + "." + question
+    retrieval_context = [input]
+    test_case = LLMTestCase(
+        input=input,
+        actual_output=actual_output, 
+    )
+    test_cases.append(test_case)
+
+
+evaluate(test_cases=test_cases, metrics=[likely_relevance_metric])
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">✨ You're running DeepEval's latest <span style="color: #6a00ff; text-decoration-color: #6a00ff">Likely relevance </span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">[</span><span style="color: #6a00ff; text-decoration-color: #6a00ff">GEval</span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">]</span><span style="color: #6a00ff; text-decoration-color: #6a00ff"> Metric</span>! <span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">using gemma3n </span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">Ollama</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">, </span><span style="color: #374151; text-decoration-color: #374151">strict</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">False</span><span style="color: #374151; text-decoration-color: #374151">, </span>
+<span style="color: #374151; text-decoration-color: #374151">async_mode</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">True</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">/Users/seshu/Documents/2025/risk-atlas-nexus/ran/lib/python3.11/site-packages/rich/live.py:231: UserWarning: 
+install "ipywidgets" for Jupyter support
+  warnings.warn('install "ipywidgets" for Jupyter support')
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+======================================================================
+
+Metrics Summary
+
+  - ✅ Likely relevance [GEval] (score: 0.5, threshold: 0.5, strict: False, evaluation model: gemma3n (Ollama), reason: The response directly addresses the prompt by suggesting relevant teams that would benefit from a social media monitoring system. It provides specific examples (Social Media Monitoring Teams, PR Departments, Customer Service Teams) and explains how each team could utilize the system. The explanation is relevant, valid, and provides a clear rationale for each suggestion, demonstrating a strong understanding of the application's potential uses., error: None)
+
+For test case:
+
+  - input: Intent: Sentiment Analysis for Social Media Monitoring.In which environment is the system used?
+  - actual output: Answer: Social Media Monitoring Teams or Public Relations Departments or Customer Service Teams.Explanation: 1. Social Media Monitoring Teams: Companies or organizations with dedicated social media monitoring teams could use this system to analyze public sentiment towards their brand, products, or services. 2. Public Relations Departments: PR departments might utilize this application to track and respond to public sentiment, manage crises, and develop effective communication strategies. 3. Customer Service Teams: Customer service teams could benefit from using this system to understand customer feedback, improve service quality, and address concerns proactively.
+  - expected output: None
+  - context: None
+  - retrieval context: None
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Likely relevance [GEval]: 100.00% pass rate
+
+======================================================================
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+<span style="color: #05f58d; text-decoration-color: #05f58d">✓</span> Tests finished 🎉! Run <span style="color: #008000; text-decoration-color: #008000; font-weight: bold">'deepeval view'</span> to analyze, debug, and save evaluation results on <span style="color: #6a00ff; text-decoration-color: #6a00ff">Confident AI</span>.
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>EvaluationResult(test_results=[TestResult(name='test_case_0', success=True, metrics_data=[MetricData(name='Likely relevance [GEval]', threshold=0.5, success=True, score=0.5, reason="The response directly addresses the prompt by suggesting relevant teams that would benefit from a social media monitoring system. It provides specific examples (Social Media Monitoring Teams, PR Departments, Customer Service Teams) and explains how each team could utilize the system. The explanation is relevant, valid, and provides a clear rationale for each suggestion, demonstrating a strong understanding of the application's potential uses.", strict_mode=False, evaluation_model='gemma3n (Ollama)', error=None, evaluation_cost=0.0, verbose_logs='Criteria:\nLikely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be\nrelevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received. \n \nEvaluation Steps:\n[\n    "Read the input and question carefully and identify if the actual output is relevant to the input.",\n    "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",\n    "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."\n] \n \nRubric:\nNone \n \nScore: 0.5')], conversational=False, multimodal=False, input='Intent: Sentiment Analysis for Social Media Monitoring.In which environment is the system used?', actual_output='Answer: Social Media Monitoring Teams or Public Relations Departments or Customer Service Teams.Explanation: 1. Social Media Monitoring Teams: Companies or organizations with dedicated social media monitoring teams could use this system to analyze public sentiment towards their brand, products, or services. 2. Public Relations Departments: PR departments might utilize this application to track and respond to public sentiment, manage crises, and develop effective communication strategies. 3. Customer Service Teams: Customer service teams could benefit from using this system to understand customer feedback, improve service quality, and address concerns proactively.', expected_output=None, context=None, retrieval_context=None, additional_metadata=None)], confident_link=None)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepeval</span><span class="w"> </span><span class="kn">import</span> <span class="n">evaluate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEval</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.test_case</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMTestCase</span><span class="p">,</span> <span class="n">LLMTestCaseParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnswerRelevancyMetric</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContextualRelevancyMetric</span>
+
+<span class="n">criteria</span> <span class="o">=</span> <span class="s2">"""Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be</span>
+<span class="s2">relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""</span>
+
+<span class="n">likely_relevance_metric</span> <span class="o">=</span> <span class="n">GEval</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Likely relevance"</span><span class="p">,</span>
+    <span class="n">criteria</span><span class="o">=</span><span class="n">criteria</span><span class="p">,</span>
+    <span class="c1"># NOTE: you can only provide either criteria or evaluation_steps, and not both</span>
+    <span class="n">evaluation_steps</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"Read the input and question carefully and identify if the actual output is relevant to the input."</span><span class="p">,</span>
+        <span class="s2">"Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct."</span><span class="p">,</span>
+        <span class="s2">"Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."</span>
+    <span class="p">],</span>
+    <span class="n">evaluation_params</span><span class="o">=</span><span class="p">[</span><span class="n">LLMTestCaseParams</span><span class="o">.</span><span class="n">ACTUAL_OUTPUT</span><span class="p">],</span>
+
+<span class="p">)</span>
+
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">question</span> <span class="o">=</span> <span class="s2">"What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other"</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domain_autoassist</span><span class="p">):</span>
+
+    <span class="n">actual_output</span> <span class="o">=</span> <span class="s2">"Answer: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".Explanation: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"explanation"</span><span class="p">]</span> 
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">"Intent: "</span> <span class="o">+</span> <span class="n">usecase_autoassist</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"."</span> <span class="o">+</span> <span class="n">question</span>
+    <span class="n">retrieval_context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">input</span><span class="p">]</span>
+    <span class="n">test_case</span> <span class="o">=</span> <span class="n">LLMTestCase</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span>
+        <span class="n">actual_output</span><span class="o">=</span><span class="n">actual_output</span><span class="p">,</span> 
+    <span class="p">)</span>
+    <span class="n">test_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_case</span><span class="p">)</span>
+
+
+<span class="n">evaluate</span><span class="p">(</span><span class="n">test_cases</span><span class="o">=</span><span class="n">test_cases</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">likely_relevance_metric</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-14">from deepeval import evaluate
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.metrics import ContextualRelevancyMetric
+
+criteria = """Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be
+relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""
+
+likely_relevance_metric = GEval(
+    name="Likely relevance",
+    criteria=criteria,
+    # NOTE: you can only provide either criteria or evaluation_steps, and not both
+    evaluation_steps=[
+        "Read the input and question carefully and identify if the actual output is relevant to the input.",
+        "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",
+        "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."
+    ],
+    evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT],
+
+)
+
+
+test_cases = []
+question = "What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other"
+for index, data in enumerate(domain_autoassist):
+
+    actual_output = "Answer: " + data["answer"] + ".Explanation: " + data["explanation"] 
+    input = "Intent: " + usecase_autoassist[index] + "." + question
+    retrieval_context = [input]
+    test_case = LLMTestCase(
+        input=input,
+        actual_output=actual_output, 
+    )
+    test_cases.append(test_case)
+
+
+evaluate(test_cases=test_cases, metrics=[likely_relevance_metric])
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">✨ You're running DeepEval's latest <span style="color: #6a00ff; text-decoration-color: #6a00ff">Likely relevance </span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">[</span><span style="color: #6a00ff; text-decoration-color: #6a00ff">GEval</span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">]</span><span style="color: #6a00ff; text-decoration-color: #6a00ff"> Metric</span>! <span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">using gemma3n </span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">Ollama</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">, </span><span style="color: #374151; text-decoration-color: #374151">strict</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">False</span><span style="color: #374151; text-decoration-color: #374151">, </span>
+<span style="color: #374151; text-decoration-color: #374151">async_mode</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">True</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+======================================================================
+
+Metrics Summary
+
+  - ✅ Likely relevance [GEval] (score: 0.5, threshold: 0.5, strict: False, evaluation model: gemma3n (Ollama), reason: The response directly addresses the task of analyzing social media data to understand public sentiment, linking it to marketing strategies and customer understanding. The explanation is relevant and plausible, demonstrating a clear connection between the input (social media sentiment analysis) and the output (marketing). It correctly identifies marketing as a relevant field., error: None)
+
+For test case:
+
+  - input: Intent: Sentiment Analysis for Social Media Monitoring.What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other
+  - actual output: Answer: Marketing.Explanation: Since the task involves analyzing social media data to understand public sentiment, which is a key aspect of marketing strategies and customer understanding.
+  - expected output: None
+  - context: None
+  - retrieval context: None
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Likely relevance [GEval]: 100.00% pass rate
+
+======================================================================
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+<span style="color: #05f58d; text-decoration-color: #05f58d">✓</span> Tests finished 🎉! Run <span style="color: #008000; text-decoration-color: #008000; font-weight: bold">'deepeval view'</span> to analyze, debug, and save evaluation results on <span style="color: #6a00ff; text-decoration-color: #6a00ff">Confident AI</span>.
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>EvaluationResult(test_results=[TestResult(name='test_case_0', success=True, metrics_data=[MetricData(name='Likely relevance [GEval]', threshold=0.5, success=True, score=0.5, reason='The response directly addresses the task of analyzing social media data to understand public sentiment, linking it to marketing strategies and customer understanding. The explanation is relevant and plausible, demonstrating a clear connection between the input (social media sentiment analysis) and the output (marketing). It correctly identifies marketing as a relevant field.', strict_mode=False, evaluation_model='gemma3n (Ollama)', error=None, evaluation_cost=0.0, verbose_logs='Criteria:\nLikely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be\nrelevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received. \n \nEvaluation Steps:\n[\n    "Read the input and question carefully and identify if the actual output is relevant to the input.",\n    "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",\n    "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."\n] \n \nRubric:\nNone \n \nScore: 0.5')], conversational=False, multimodal=False, input='Intent: Sentiment Analysis for Social Media Monitoring.What domain does your use request fall under? Customer service/support, Technical, Information retrieval, Strategy, Code/software engineering, Communications, IT/business automation, Writing assistant, Financial, Talent and Organization including HR, Product, Marketing, Cybersecurity, Healthcare, User Research, Sales, Risk and Compliance, Design, Other', actual_output='Answer: Marketing.Explanation: Since the task involves analyzing social media data to understand public sentiment, which is a key aspect of marketing strategies and customer understanding.', expected_output=None, context=None, retrieval_context=None, additional_metadata=None)], confident_link=None)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepeval</span><span class="w"> </span><span class="kn">import</span> <span class="n">evaluate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEval</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.test_case</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMTestCase</span><span class="p">,</span> <span class="n">LLMTestCaseParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnswerRelevancyMetric</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContextualRelevancyMetric</span>
+
+<span class="n">criteria</span> <span class="o">=</span> <span class="s2">"""Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be</span>
+<span class="s2">relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""</span>
+
+<span class="n">likely_relevance_metric</span> <span class="o">=</span> <span class="n">GEval</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Likely relevance"</span><span class="p">,</span>
+    <span class="n">criteria</span><span class="o">=</span><span class="n">criteria</span><span class="p">,</span>
+    <span class="c1"># NOTE: you can only provide either criteria or evaluation_steps, and not both</span>
+    <span class="n">evaluation_steps</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"Read the input and question carefully and identify if the actual output is relevant to the input."</span><span class="p">,</span>
+        <span class="s2">"Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct."</span><span class="p">,</span>
+        <span class="s2">"Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."</span>
+    <span class="p">],</span>
+    <span class="n">evaluation_params</span><span class="o">=</span><span class="p">[</span><span class="n">LLMTestCaseParams</span><span class="o">.</span><span class="n">ACTUAL_OUTPUT</span><span class="p">],</span>
+
+<span class="p">)</span>
+
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">question</span> <span class="o">=</span> <span class="s2">"What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning"</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">techniques_utilised_autoassist</span><span class="p">):</span>
+
+    <span class="n">actual_output</span> <span class="o">=</span> <span class="s2">"Answer: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".Explanation: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"explanation"</span><span class="p">]</span> 
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">"Intent: "</span> <span class="o">+</span> <span class="n">usecase_autoassist</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"."</span> <span class="o">+</span> <span class="n">question</span>
+    <span class="n">retrieval_context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">input</span><span class="p">]</span>
+    <span class="n">test_case</span> <span class="o">=</span> <span class="n">LLMTestCase</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span>
+        <span class="n">actual_output</span><span class="o">=</span><span class="n">actual_output</span><span class="p">,</span> 
+    <span class="p">)</span>
+    <span class="n">test_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_case</span><span class="p">)</span>
+
+
+<span class="n">evaluate</span><span class="p">(</span><span class="n">test_cases</span><span class="o">=</span><span class="n">test_cases</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">likely_relevance_metric</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-15">from deepeval import evaluate
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.metrics import ContextualRelevancyMetric
+
+criteria = """Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be
+relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""
+
+likely_relevance_metric = GEval(
+    name="Likely relevance",
+    criteria=criteria,
+    # NOTE: you can only provide either criteria or evaluation_steps, and not both
+    evaluation_steps=[
+        "Read the input and question carefully and identify if the actual output is relevant to the input.",
+        "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",
+        "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."
+    ],
+    evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT],
+
+)
+
+
+test_cases = []
+question = "What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning"
+for index, data in enumerate(techniques_utilised_autoassist):
+
+    actual_output = "Answer: " + data["answer"] + ".Explanation: " + data["explanation"] 
+    input = "Intent: " + usecase_autoassist[index] + "." + question
+    retrieval_context = [input]
+    test_case = LLMTestCase(
+        input=input,
+        actual_output=actual_output, 
+    )
+    test_cases.append(test_case)
+
+
+evaluate(test_cases=test_cases, metrics=[likely_relevance_metric])
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">✨ You're running DeepEval's latest <span style="color: #6a00ff; text-decoration-color: #6a00ff">Likely relevance </span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">[</span><span style="color: #6a00ff; text-decoration-color: #6a00ff">GEval</span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">]</span><span style="color: #6a00ff; text-decoration-color: #6a00ff"> Metric</span>! <span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">using gemma3n </span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">Ollama</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">, </span><span style="color: #374151; text-decoration-color: #374151">strict</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">False</span><span style="color: #374151; text-decoration-color: #374151">, </span>
+<span style="color: #374151; text-decoration-color: #374151">async_mode</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">True</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+======================================================================
+
+Metrics Summary
+
+  - ✅ Likely relevance [GEval] (score: 0.5, threshold: 0.5, strict: False, evaluation model: gemma3n (Ollama), reason: The response directly addresses the prompt by identifying natural language processing applications in text classification and sentiment analysis. The explanation is relevant, providing a clear description of sentiment analysis for social media monitoring and how it utilizes text classification and sentiment analysis techniques. It correctly links these concepts to NLP and explains their roles in understanding public opinion., error: None)
+
+For test case:
+
+  - input: Intent: Sentiment Analysis for Social Media Monitoring.What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning
+  - actual output: Answer: Natural language processing: text classification, sentiment analysis.Explanation: Sentiment Analysis for Social Media Monitoring involves analyzing text data from social media platforms to understand public opinion or sentiment towards a particular topic, brand, or product. This is achieved through Natural Language Processing techniques, specifically text classification and sentiment analysis. Text classification categorizes the text into predefined sentiment classes (e.g., positive, negative, neutral), while sentiment analysis determines the emotional tone behind the words.
+  - expected output: None
+  - context: None
+  - retrieval context: None
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Likely relevance [GEval]: 100.00% pass rate
+
+======================================================================
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+<span style="color: #05f58d; text-decoration-color: #05f58d">✓</span> Tests finished 🎉! Run <span style="color: #008000; text-decoration-color: #008000; font-weight: bold">'deepeval view'</span> to analyze, debug, and save evaluation results on <span style="color: #6a00ff; text-decoration-color: #6a00ff">Confident AI</span>.
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>EvaluationResult(test_results=[TestResult(name='test_case_0', success=True, metrics_data=[MetricData(name='Likely relevance [GEval]', threshold=0.5, success=True, score=0.5, reason='The response directly addresses the prompt by identifying natural language processing applications in text classification and sentiment analysis. The explanation is relevant, providing a clear description of sentiment analysis for social media monitoring and how it utilizes text classification and sentiment analysis techniques. It correctly links these concepts to NLP and explains their roles in understanding public opinion.', strict_mode=False, evaluation_model='gemma3n (Ollama)', error=None, evaluation_cost=0.0, verbose_logs='Criteria:\nLikely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be\nrelevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received. \n \nEvaluation Steps:\n[\n    "Read the input and question carefully and identify if the actual output is relevant to the input.",\n    "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",\n    "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."\n] \n \nRubric:\nNone \n \nScore: 0.5')], conversational=False, multimodal=False, input='Intent: Sentiment Analysis for Social Media Monitoring.What techniques are utilised in the system? Multi-modal: {Document Question/Answering, Image and text to text, Video and text to text, visual question answering}, Natural language processing: {feature extraction, fill mask, question answering, sentence similarity, summarization, table question answering, text classification, text generation, token classification, translation, zero shot classification}, computer vision: {image classification, image segmentation, text to image, object detection}, audio:{audio classification, audio to audio, text to speech}, tabular: {tabular classification, tabular regression}, reinforcement learning', actual_output='Answer: Natural language processing: text classification, sentiment analysis.Explanation: Sentiment Analysis for Social Media Monitoring involves analyzing text data from social media platforms to understand public opinion or sentiment towards a particular topic, brand, or product. This is achieved through Natural Language Processing techniques, specifically text classification and sentiment analysis. Text classification categorizes the text into predefined sentiment classes (e.g., positive, negative, neutral), while sentiment analysis determines the emotional tone behind the words.', expected_output=None, context=None, retrieval_context=None, additional_metadata=None)], confident_link=None)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepeval</span><span class="w"> </span><span class="kn">import</span> <span class="n">evaluate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEval</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.test_case</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMTestCase</span><span class="p">,</span> <span class="n">LLMTestCaseParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnswerRelevancyMetric</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContextualRelevancyMetric</span>
+
+<span class="n">criteria</span> <span class="o">=</span> <span class="s2">"""Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be</span>
+<span class="s2">relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""</span>
+
+<span class="n">likely_relevance_metric</span> <span class="o">=</span> <span class="n">GEval</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Likely relevance"</span><span class="p">,</span>
+    <span class="n">criteria</span><span class="o">=</span><span class="n">criteria</span><span class="p">,</span>
+    <span class="c1"># NOTE: you can only provide either criteria or evaluation_steps, and not both</span>
+    <span class="n">evaluation_steps</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"Read the input and question carefully and identify if the actual output is relevant to the input."</span><span class="p">,</span>
+        <span class="s2">"Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct."</span><span class="p">,</span>
+        <span class="s2">"Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."</span>
+    <span class="p">],</span>
+    <span class="n">evaluation_params</span><span class="o">=</span><span class="p">[</span><span class="n">LLMTestCaseParams</span><span class="o">.</span><span class="n">ACTUAL_OUTPUT</span><span class="p">],</span>
+
+<span class="p">)</span>
+
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">question</span> <span class="o">=</span> <span class="s2">"What is the application of the system?"</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">application_autoassist</span><span class="p">):</span>
+
+    <span class="n">actual_output</span> <span class="o">=</span> <span class="s2">"Answer: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".Explanation: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"explanation"</span><span class="p">]</span> 
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">"Intent: "</span> <span class="o">+</span> <span class="n">usecase_autoassist</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"."</span> <span class="o">+</span> <span class="n">question</span>
+    <span class="n">retrieval_context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">input</span><span class="p">]</span>
+    <span class="n">test_case</span> <span class="o">=</span> <span class="n">LLMTestCase</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span>
+        <span class="n">actual_output</span><span class="o">=</span><span class="n">actual_output</span><span class="p">,</span> 
+    <span class="p">)</span>
+    <span class="n">test_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_case</span><span class="p">)</span>
+
+
+<span class="n">evaluate</span><span class="p">(</span><span class="n">test_cases</span><span class="o">=</span><span class="n">test_cases</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">likely_relevance_metric</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-16">from deepeval import evaluate
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.metrics import ContextualRelevancyMetric
+
+criteria = """Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be
+relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""
+
+likely_relevance_metric = GEval(
+    name="Likely relevance",
+    criteria=criteria,
+    # NOTE: you can only provide either criteria or evaluation_steps, and not both
+    evaluation_steps=[
+        "Read the input and question carefully and identify if the actual output is relevant to the input.",
+        "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",
+        "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."
+    ],
+    evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT],
+
+)
+
+
+test_cases = []
+question = "What is the application of the system?"
+for index, data in enumerate(application_autoassist):
+
+    actual_output = "Answer: " + data["answer"] + ".Explanation: " + data["explanation"] 
+    input = "Intent: " + usecase_autoassist[index] + "." + question
+    retrieval_context = [input]
+    test_case = LLMTestCase(
+        input=input,
+        actual_output=actual_output, 
+    )
+    test_cases.append(test_case)
+
+
+evaluate(test_cases=test_cases, metrics=[likely_relevance_metric])</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">✨ You're running DeepEval's latest <span style="color: #6a00ff; text-decoration-color: #6a00ff">Likely relevance </span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">[</span><span style="color: #6a00ff; text-decoration-color: #6a00ff">GEval</span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">]</span><span style="color: #6a00ff; text-decoration-color: #6a00ff"> Metric</span>! <span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">using gemma3n </span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">Ollama</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">, </span><span style="color: #374151; text-decoration-color: #374151">strict</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">False</span><span style="color: #374151; text-decoration-color: #374151">, </span>
+<span style="color: #374151; text-decoration-color: #374151">async_mode</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">True</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+======================================================================
+
+Metrics Summary
+
+  - ✅ Likely relevance [GEval] (score: 0.5, threshold: 0.5, strict: False, evaluation model: gemma3n (Ollama), reason: The output directly addresses the prompt by explaining how Natural Language Processing (NLP) can be used for sentiment analysis of social media posts. It accurately describes the process of analyzing text to determine public sentiment, identifying potential issues, and informing marketing strategies. The explanation is relevant, valid, and covers the key aspects of the task., error: None)
+
+For test case:
+
+  - input: Intent: Sentiment Analysis for Social Media Monitoring.What is the application of the system?
+  - actual output: Answer: Natural Language Processing (NLP): Analyze social media posts and comments to determine public sentiment towards the brand, products, or services. This can help in understanding customer perceptions, identifying potential issues, and informing marketing strategies..Explanation: The intent focuses on Sentiment Analysis for Social Media Monitoring. This involves using NLP to process and interpret the emotional tone behind words in social media posts. The system would analyze the text to categorize it as positive, negative, or neutral, providing insights into public sentiment towards the brand, products, or services. This can be used to understand customer perceptions, identify potential issues, and inform marketing strategies.
+  - expected output: None
+  - context: None
+  - retrieval context: None
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Likely relevance [GEval]: 100.00% pass rate
+
+======================================================================
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+<span style="color: #05f58d; text-decoration-color: #05f58d">✓</span> Tests finished 🎉! Run <span style="color: #008000; text-decoration-color: #008000; font-weight: bold">'deepeval view'</span> to analyze, debug, and save evaluation results on <span style="color: #6a00ff; text-decoration-color: #6a00ff">Confident AI</span>.
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>EvaluationResult(test_results=[TestResult(name='test_case_0', success=True, metrics_data=[MetricData(name='Likely relevance [GEval]', threshold=0.5, success=True, score=0.5, reason='The output directly addresses the prompt by explaining how Natural Language Processing (NLP) can be used for sentiment analysis of social media posts. It accurately describes the process of analyzing text to determine public sentiment, identifying potential issues, and informing marketing strategies. The explanation is relevant, valid, and covers the key aspects of the task.', strict_mode=False, evaluation_model='gemma3n (Ollama)', error=None, evaluation_cost=0.0, verbose_logs='Criteria:\nLikely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be\nrelevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received. \n \nEvaluation Steps:\n[\n    "Read the input and question carefully and identify if the actual output is relevant to the input.",\n    "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",\n    "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."\n] \n \nRubric:\nNone \n \nScore: 0.5')], conversational=False, multimodal=False, input='Intent: Sentiment Analysis for Social Media Monitoring.What is the application of the system?', actual_output='Answer: Natural Language Processing (NLP): Analyze social media posts and comments to determine public sentiment towards the brand, products, or services. This can help in understanding customer perceptions, identifying potential issues, and informing marketing strategies..Explanation: The intent focuses on Sentiment Analysis for Social Media Monitoring. This involves using NLP to process and interpret the emotional tone behind words in social media posts. The system would analyze the text to categorize it as positive, negative, or neutral, providing insights into public sentiment towards the brand, products, or services. This can be used to understand customer perceptions, identify potential issues, and inform marketing strategies.', expected_output=None, context=None, retrieval_context=None, additional_metadata=None)], confident_link=None)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepeval</span><span class="w"> </span><span class="kn">import</span> <span class="n">evaluate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEval</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.test_case</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMTestCase</span><span class="p">,</span> <span class="n">LLMTestCaseParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnswerRelevancyMetric</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepeval.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContextualRelevancyMetric</span>
+
+<span class="n">criteria</span> <span class="o">=</span> <span class="s2">"""Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be</span>
+<span class="s2">relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""</span>
+
+<span class="n">likely_relevance_metric</span> <span class="o">=</span> <span class="n">GEval</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"Likely relevance"</span><span class="p">,</span>
+    <span class="n">criteria</span><span class="o">=</span><span class="n">criteria</span><span class="p">,</span>
+    <span class="c1"># NOTE: you can only provide either criteria or evaluation_steps, and not both</span>
+    <span class="n">evaluation_steps</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"Read the input and question carefully and identify if the actual output is relevant to the input."</span><span class="p">,</span>
+        <span class="s2">"Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct."</span><span class="p">,</span>
+        <span class="s2">"Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."</span>
+    <span class="p">],</span>
+    <span class="n">evaluation_params</span><span class="o">=</span><span class="p">[</span><span class="n">LLMTestCaseParams</span><span class="o">.</span><span class="n">ACTUAL_OUTPUT</span><span class="p">],</span>
+
+<span class="p">)</span>
+
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">question</span> <span class="o">=</span> <span class="s2">"Who is the subject as per the intent?"</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">subject_autoassist</span><span class="p">):</span>
+
+    <span class="n">actual_output</span> <span class="o">=</span> <span class="s2">"Answer: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"answer"</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".Explanation: "</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">"explanation"</span><span class="p">]</span> 
+    <span class="nb">input</span> <span class="o">=</span> <span class="s2">"Intent: "</span> <span class="o">+</span> <span class="n">usecase_autoassist</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"."</span> <span class="o">+</span> <span class="n">question</span>
+    <span class="n">retrieval_context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">input</span><span class="p">]</span>
+    <span class="n">test_case</span> <span class="o">=</span> <span class="n">LLMTestCase</span><span class="p">(</span>
+        <span class="nb">input</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span>
+        <span class="n">actual_output</span><span class="o">=</span><span class="n">actual_output</span><span class="p">,</span> 
+    <span class="p">)</span>
+    <span class="n">test_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_case</span><span class="p">)</span>
+
+
+<span class="n">evaluate</span><span class="p">(</span><span class="n">test_cases</span><span class="o">=</span><span class="n">test_cases</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">likely_relevance_metric</span><span class="p">])</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-17">from deepeval import evaluate
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+from deepeval.metrics import AnswerRelevancyMetric
+from deepeval.metrics import ContextualRelevancyMetric
+
+criteria = """Likely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be
+relevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received."""
+
+likely_relevance_metric = GEval(
+    name="Likely relevance",
+    criteria=criteria,
+    # NOTE: you can only provide either criteria or evaluation_steps, and not both
+    evaluation_steps=[
+        "Read the input and question carefully and identify if the actual output is relevant to the input.",
+        "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",
+        "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."
+    ],
+    evaluation_params=[LLMTestCaseParams.ACTUAL_OUTPUT],
+
+)
+
+
+test_cases = []
+question = "Who is the subject as per the intent?"
+for index, data in enumerate(subject_autoassist):
+
+    actual_output = "Answer: " + data["answer"] + ".Explanation: " + data["explanation"] 
+    input = "Intent: " + usecase_autoassist[index] + "." + question
+    retrieval_context = [input]
+    test_case = LLMTestCase(
+        input=input,
+        actual_output=actual_output, 
+    )
+    test_cases.append(test_case)
+
+
+evaluate(test_cases=test_cases, metrics=[likely_relevance_metric])</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">✨ You're running DeepEval's latest <span style="color: #6a00ff; text-decoration-color: #6a00ff">Likely relevance </span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">[</span><span style="color: #6a00ff; text-decoration-color: #6a00ff">GEval</span><span style="color: #6a00ff; text-decoration-color: #6a00ff; font-weight: bold">]</span><span style="color: #6a00ff; text-decoration-color: #6a00ff"> Metric</span>! <span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">using gemma3n </span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">(</span><span style="color: #374151; text-decoration-color: #374151">Ollama</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">, </span><span style="color: #374151; text-decoration-color: #374151">strict</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">False</span><span style="color: #374151; text-decoration-color: #374151">, </span>
+<span style="color: #374151; text-decoration-color: #374151">async_mode</span><span style="color: #374151; text-decoration-color: #374151">=</span><span style="color: #374151; text-decoration-color: #374151; font-style: italic">True</span><span style="color: #374151; text-decoration-color: #374151; font-weight: bold">)</span><span style="color: #374151; text-decoration-color: #374151">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+======================================================================
+
+Metrics Summary
+
+  - ✅ Likely relevance [GEval] (score: 0.5, threshold: 0.5, strict: False, evaluation model: gemma3n (Ollama), reason: The response directly addresses the prompt by identifying social media users as the subject of sentiment analysis. The explanation clearly connects the analysis of posts and comments to the users themselves, demonstrating a strong understanding of the task's core requirement. It's relevant, valid, and a probable correct interpretation., error: None)
+
+For test case:
+
+  - input: Intent: Sentiment Analysis for Social Media Monitoring.Who is the subject as per the intent?
+  - actual output: Answer: Social media users.Explanation: The system would need to analyze and interpret the sentiment of posts and comments made by users on social media platforms. This implies that the subject of the AI system is the social media users themselves, as their posts and interactions are the data being analyzed for sentiment.
+  - expected output: None
+  - context: None
+  - retrieval context: None
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Likely relevance [GEval]: 100.00% pass rate
+
+======================================================================
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
+<span style="color: #05f58d; text-decoration-color: #05f58d">✓</span> Tests finished 🎉! Run <span style="color: #008000; text-decoration-color: #008000; font-weight: bold">'deepeval view'</span> to analyze, debug, and save evaluation results on <span style="color: #6a00ff; text-decoration-color: #6a00ff">Confident AI</span>.
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>EvaluationResult(test_results=[TestResult(name='test_case_0', success=True, metrics_data=[MetricData(name='Likely relevance [GEval]', threshold=0.5, success=True, score=0.5, reason="The response directly addresses the prompt by identifying social media users as the subject of sentiment analysis. The explanation clearly connects the analysis of posts and comments to the users themselves, demonstrating a strong understanding of the task's core requirement. It's relevant, valid, and a probable correct interpretation.", strict_mode=False, evaluation_model='gemma3n (Ollama)', error=None, evaluation_cost=0.0, verbose_logs='Criteria:\nLikely relevance (1-5) - the collective relevance and correctness of the answer. We align this dimension with the structure and Likely relevance whereby the answer should be\nrelevant and correct. The answer should not be completely irrelevant, but should be plausible extraction based on the information received. \n \nEvaluation Steps:\n[\n    "Read the input and question carefully and identify if the actual output is relevant to the input.",\n    "Read the actual output. Check if the actual output covers the input and the explanation of the output is valid, relevant and probable to be correct.",\n    "Assign a score for Likely relevance on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria."\n] \n \nRubric:\nNone \n \nScore: 0.5')], conversational=False, multimodal=False, input='Intent: Sentiment Analysis for Social Media Monitoring.Who is the subject as per the intent?', actual_output='Answer: Social media users.Explanation: The system would need to analyze and interpret the sentiment of posts and comments made by users on social media platforms. This implies that the subject of the AI system is the social media users themselves, as their posts and interactions are the data being analyzed for sentiment.', expected_output=None, context=None, retrieval_context=None, additional_metadata=None)], confident_link=None)</pre>
 </div>
 </div>
 </div>
