@@ -22,8 +22,8 @@ Alias: isDefinedByVocabulary
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Term](Term.md) | A term and its definitions |  no  |
 | [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+| [Term](Term.md) | A term and its definitions |  no  |
 
 
 
