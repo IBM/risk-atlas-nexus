@@ -1,5 +1,5 @@
 [project]
-name = "risk_atlas_nexus"
+name = "risk-atlas-nexus"
 version = "1.0.1"
 authors = [
     { name = "Risk Atlas Nexus", email = "risk-atlas-nexus@ibm.com" },
