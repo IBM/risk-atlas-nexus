@@ -67,7 +67,7 @@ classes:
         inlined: true
         inlined_as_list: true
       llmintrinsics:
-        description: A list of LLMintrinsics
+        description: A list of LLMIntrinsics
         multivalued: true
         range: LLMIntrinsic
         inlined: true
