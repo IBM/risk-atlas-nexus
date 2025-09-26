@@ -221,7 +221,8 @@ class Dataset(Entity):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDocumentation',
          'domain_of': ['Dataset',
@@ -233,6 +234,7 @@ class Dataset(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     provider: Optional[str] = Field(default=None, description="""A relationship to the Organization instance that provides this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'provider', 'domain_of': ['Dataset'], 'slot_uri': 'schema:provider'} })
@@ -266,7 +268,8 @@ class Documentation(Entity):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     author: Optional[str] = Field(default=None, description="""The author or authors of the documentation""", json_schema_extra = { "linkml_meta": {'alias': 'author', 'domain_of': ['Documentation', 'RiskIncident']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -316,6 +319,7 @@ class Vocabulary(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
@@ -325,7 +329,8 @@ class Vocabulary(Entity):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
@@ -350,7 +355,7 @@ class Term(Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
 
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByVocabulary',
-         'domain_of': ['Term', 'LLMIntrinsic'],
+         'domain_of': ['Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDocumentation',
          'domain_of': ['Dataset',
@@ -362,6 +367,7 @@ class Term(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasParentDefinition: Optional[list[str]] = Field(default=None, description="""Indicates parent terms associated with a term""", json_schema_extra = { "linkml_meta": {'alias': 'hasParentDefinition',
@@ -421,6 +427,7 @@ class RiskTaxonomy(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
@@ -430,7 +437,8 @@ class RiskTaxonomy(Entity):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
@@ -675,6 +683,7 @@ class Action(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
@@ -987,6 +996,7 @@ class BaseAi(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
@@ -996,7 +1006,8 @@ class BaseAi(Entity):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'alias': 'performsTask', 'domain_of': ['BaseAi']} })
     isProvidedBy: Optional[str] = Field(default=None, description="""A relationship indicating the AI model has been provided by an AI model provider.""", json_schema_extra = { "linkml_meta": {'alias': 'isProvidedBy',
@@ -1045,6 +1056,7 @@ class AiSystem(BaseAi):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
@@ -1054,7 +1066,8 @@ class AiSystem(BaseAi):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'alias': 'performsTask', 'domain_of': ['BaseAi']} })
     isProvidedBy: Optional[str] = Field(default=None, description="""A relationship indicating the AI model has been provided by an AI model provider.""", json_schema_extra = { "linkml_meta": {'alias': 'isProvidedBy',
@@ -1100,6 +1113,7 @@ class AiAgent(AiSystem):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
@@ -1109,7 +1123,8 @@ class AiAgent(AiSystem):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'alias': 'performsTask', 'domain_of': ['BaseAi']} })
     isProvidedBy: Optional[str] = Field(default=None, description="""A relationship indicating the AI agent has been provided by an AI systems provider.""", json_schema_extra = { "linkml_meta": {'alias': 'isProvidedBy',
@@ -1161,6 +1176,7 @@ class AiModel(BaseAi):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
@@ -1170,7 +1186,8 @@ class AiModel(BaseAi):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'alias': 'performsTask', 'domain_of': ['BaseAi']} })
     isProvidedBy: Optional[str] = Field(default=None, description="""A relationship indicating the AI model has been provided by an AI model provider.""", json_schema_extra = { "linkml_meta": {'alias': 'isProvidedBy',
@@ -1241,6 +1258,7 @@ class LargeLanguageModel(AiModel):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
@@ -1250,7 +1268,8 @@ class LargeLanguageModel(AiModel):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'alias': 'performsTask', 'domain_of': ['BaseAi']} })
     isProvidedBy: Optional[str] = Field(default=None, description="""A relationship indicating the AI model has been provided by an AI model provider.""", json_schema_extra = { "linkml_meta": {'alias': 'isProvidedBy',
@@ -1288,6 +1307,7 @@ class LargeLanguageModelFamily(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -1492,6 +1512,7 @@ class AiEval(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasDataset: Optional[list[str]] = Field(default=None, description="""A relationship to datasets that are used.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDataset', 'domain_of': ['AiEval']} })
@@ -1507,7 +1528,8 @@ class AiEval(Entity):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""Specific risks of LLMs the benchmark assesses""", json_schema_extra = { "linkml_meta": {'alias': 'hasRelatedRisk',
          'domain_of': ['Term',
@@ -1612,7 +1634,8 @@ class BenchmarkMetadataCard(Entity):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasConsiderationConsentProcedures: Optional[str] = Field(default=None, description="""Information on how consent was obtained (if applicable), especially for datasets involving personal data.""", json_schema_extra = { "linkml_meta": {'alias': 'hasConsiderationConsentProcedures',
          'domain_of': ['BenchmarkMetadataCard']} })
@@ -1628,6 +1651,7 @@ class BenchmarkMetadataCard(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     name: Optional[str] = Field(default=None, description="""The official name of the benchmark.""", json_schema_extra = { "linkml_meta": {'alias': 'name', 'domain_of': ['Entity', 'BenchmarkMetadataCard']} })
@@ -1662,6 +1686,7 @@ class Question(AiEval):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasDataset: Optional[list[str]] = Field(default=None, description="""A relationship to datasets that are used.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDataset', 'domain_of': ['AiEval']} })
@@ -1677,7 +1702,8 @@ class Question(AiEval):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""Specific risks of LLMs the benchmark assesses""", json_schema_extra = { "linkml_meta": {'alias': 'hasRelatedRisk',
          'domain_of': ['Term',
@@ -1723,6 +1749,7 @@ class Questionnaire(AiEval):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasDataset: Optional[list[str]] = Field(default=None, description="""A relationship to datasets that are used.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDataset', 'domain_of': ['AiEval']} })
@@ -1738,7 +1765,8 @@ class Questionnaire(AiEval):
                        'RiskTaxonomy',
                        'BaseAi',
                        'AiEval',
-                       'BenchmarkMetadataCard'],
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""Specific risks of LLMs the benchmark assesses""", json_schema_extra = { "linkml_meta": {'alias': 'hasRelatedRisk',
          'domain_of': ['Term',
@@ -1773,6 +1801,33 @@ class Adapter(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/ai_intrinsic'})
 
+    hasAdapterType: Optional[AdapterType] = Field(default=None, description="""The Adapter type, for example: LORA, ALORA, X-LORA""", json_schema_extra = { "linkml_meta": {'alias': 'hasAdapterType', 'domain_of': ['Adapter']} })
+    isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByVocabulary',
+         'domain_of': ['Term', 'Adapter', 'LLMIntrinsic'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDocumentation',
+         'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Term',
+                       'RiskTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'alias': 'hasLicense',
+         'domain_of': ['Dataset',
+                       'Documentation',
+                       'Vocabulary',
+                       'RiskTaxonomy',
+                       'BaseAi',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
+         'slot_uri': 'airo:hasLicense'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
          'domain_of': ['Entity', 'BenchmarkMetadataCard'],
@@ -1793,7 +1848,8 @@ class LLMIntrinsic(Entity):
     """
     A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/ai_intrinsic'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'ai:Capability',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/ai_intrinsic'})
 
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""Specific risks of LLMs the benchmark assesses""", json_schema_extra = { "linkml_meta": {'alias': 'hasRelatedRisk',
          'domain_of': ['Term',
@@ -1805,7 +1861,6 @@ class LLMIntrinsic(Entity):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['LLMIntrinsic']} })
-    hasAdapterType: Optional[AdapterType] = Field(default=None, description="""The Adapter type, for example: LORA, ALORA, X-LORA""", json_schema_extra = { "linkml_meta": {'alias': 'hasAdapterType', 'domain_of': ['LLMIntrinsic']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDocumentation',
          'domain_of': ['Dataset',
                        'Vocabulary',
@@ -1816,11 +1871,13 @@ class LLMIntrinsic(Entity):
                        'LargeLanguageModelFamily',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByVocabulary',
-         'domain_of': ['Term', 'LLMIntrinsic'],
+         'domain_of': ['Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
+    hasAdapter: Optional[list[str]] = Field(default=None, description="""The Adapter for the intrinsic""", json_schema_extra = { "linkml_meta": {'alias': 'hasAdapter', 'domain': 'LLMIntrinsic', 'domain_of': ['LLMIntrinsic']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
          'domain_of': ['Entity', 'BenchmarkMetadataCard'],
@@ -1944,7 +2001,7 @@ class Container(ConfiguredBaseModel):
     aitasks: Optional[list[AiTask]] = Field(default=None, description="""A list of AI tasks""", json_schema_extra = { "linkml_meta": {'alias': 'aitasks', 'domain_of': ['Container']} })
     documents: Optional[list[Documentation]] = Field(default=None, description="""A list of documents""", json_schema_extra = { "linkml_meta": {'alias': 'documents', 'domain_of': ['Container']} })
     datasets: Optional[list[Dataset]] = Field(default=None, description="""A list of data sets""", json_schema_extra = { "linkml_meta": {'alias': 'datasets', 'domain_of': ['Container']} })
-    llmintrinsics: Optional[list[LLMIntrinsic]] = Field(default=None, description="""A list of LLMintrinsics""", json_schema_extra = { "linkml_meta": {'alias': 'llmintrinsics', 'domain_of': ['Container']} })
+    llmintrinsics: Optional[list[LLMIntrinsic]] = Field(default=None, description="""A list of LLMIntrinsics""", json_schema_extra = { "linkml_meta": {'alias': 'llmintrinsics', 'domain_of': ['Container']} })
     adapters: Optional[list[Adapter]] = Field(default=None, description="""A list of Adapters""", json_schema_extra = { "linkml_meta": {'alias': 'adapters', 'domain_of': ['Container']} })
     taxonomies: Optional[list[RiskTaxonomy]] = Field(default=None, description="""A list of AI risk taxonomies""", json_schema_extra = { "linkml_meta": {'alias': 'taxonomies', 'domain_of': ['Container']} })
     vocabularies: Optional[list[Vocabulary]] = Field(default=None, description="""A list of vocabularies""", json_schema_extra = { "linkml_meta": {'alias': 'vocabularies', 'domain_of': ['Container']} })

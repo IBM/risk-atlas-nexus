@@ -16,6 +16,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
   dpv: https://w3id.org/dpv#
+  ai: https://w3id.org/dpv/ai#
   airo: https://w3id.org/airo#
 default_range: string
 default_prefix: nexus
@@ -28,16 +29,31 @@ classes:
   Adapter:
     description: Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
     is_a: Entity
+    slots:
+    - hasAdapterType
+    - isDefinedByVocabulary
+    - hasDocumentation
+    - hasLicense
 
   LLMIntrinsic:
     description: A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.
     is_a: Entity
+    class_uri: ai:Capability
     slots:
       - hasRelatedRisk
       - hasRelatedTerm
-      - hasAdapterType
       - hasDocumentation
       - isDefinedByVocabulary
+      - hasAdapter
+
+    # ---
+    # Can this LLMIntrinsic be mapped to dpv ai capability
+    # https://w3id.org/dpv/ai#Capability
+
+    # Definition	Capability or use of AI to achieve a technical goal or objective
+    # Usage Note	This concept refers to the application of an AI technique to achieve a technical goal or function,
+    # and is necessary to distinguish the 'algorithm' (ai:Technique) from the 'application' (ai:Capability) and 'goal' (dpv:Purpose)
+    # ---
 
 enums:
   AdapterType:
@@ -52,7 +68,10 @@ enums:
 slots:
   hasAdapter:
     description: The Adapter for the intrinsic
+    domain: LLMIntrinsic
     range: Adapter
+    multivalued: true
+    inlined: false
   hasAdapterType:
     description: "The Adapter type, for example: LORA, ALORA, X-LORA"
     range: AdapterType
