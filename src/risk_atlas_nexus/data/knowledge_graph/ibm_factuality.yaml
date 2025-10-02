@@ -41,6 +41,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
     name: "Granite 3.3 8b Instruct - Query Expansion"
     description: >-
@@ -53,6 +54,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
     name: "Granite 3.3 8b Instruct - Context Relevance"
     description: >-
@@ -70,6 +72,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
     name: "Granite 3.3 8b Instruct - Answerability Determination"
     description: >-
@@ -82,6 +85,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
     name: "Granite 3.3 Instruct - Passage Reranking"
     description: >-
@@ -93,6 +97,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-uncertainty-quantification
     name: "Granite 3.3 8b Instruct - Uncertainty Quantification"
     description: >-
@@ -105,6 +110,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-uncertainty
     name: "Granite 3.3 8b Instruct - Uncertainty LoRA"
     description: >-
@@ -116,6 +122,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-hallucination-detection
     name: "Granite 3.3 8b Instruct - Hallucination detection"
     description: >-
@@ -129,6 +136,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-citation-generation
     name: "Granite 3.3 8b Instruct - Citation Generation"
     description: >-
@@ -142,8 +150,9 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-5b-harm-correction
-    #missing intrinsic parent
+    # missing intrinsic parent
     name: "Granite Guardian 3.2 5b Harm Correction LoRA"
     description: >-
       Granite Guardian 3.2 5b Harm Correction LoRA is a LoRA adapter for ibm-granite/granite-guardian-3.2-5b, designed
@@ -155,6 +164,21 @@ adapters:
     hasDocumentation:
     - "granite-guardian-paper"
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.2-5b
+  - id: ibm-factuality-adapter-granite-3.2-5b-harm-categories
+    # missing intrinsic parent
+    name: "Granite Guardian 3.2 5b Harm Categories LoRA"
+    description: >-
+      Granite Guardian 3.2 5b Harm Categories LoRA is a LoRA adapter for ibm-granite/granite-guardian-3.2-5b, designed
+      to detect specific and multi-risks in prompts and responses. While the base model identifies a broad range of
+      harms, this adapter allows users to detect specific sub-categories of harm without requiring multiple, parallel
+      calls. It can help with risk detection along many key dimensions catalogued in the IBM AI Risk Atlas.
+    isDefinedByVocabulary: ibm-factuality
+    url: https://huggingface.co/ibm-granite/granite-guardian-3.2-5b-lora-harm-categories
+    hasDocumentation:
+    - "granite-guardian-paper"
+    hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.2-5b
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-jailbreak
     name: "Granite 3.2 8B Instruct - Jailbreak aLoRA"
     description: >-
@@ -168,6 +192,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.12397
     - arxiv.org/2409.15398
+    adaptsModel: granite-guardian-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-alora-uncertainty
     name: "Granite 3.3 8B Instruct - Uncertainty aLoRA"
     description: >-
@@ -180,6 +205,7 @@ adapters:
     url: https://huggingface.co/ibm-granite/granite-3.3-8b-alora-uncertainty
     hasDocumentation:
     - arxiv.org/2504.12397
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-uncertainty
     name: "Granite 3.2 8B Instruct - Uncertainty aLoRA"
     description: >-
@@ -192,6 +218,7 @@ adapters:
     url: https://huggingface.co/ibm-granite/granite-3.2-8b-alora-uncertainty
     hasDocumentation:
     - arxiv.org/2504.12397
+    adaptsModel: granite-guardian-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-requirement-checker
     name: "Granite 3.3 8B Instruct - Requirement Checker"
     description: >-
@@ -204,6 +231,7 @@ adapters:
     url: https://huggingface.co/ibm-granite/granite-3.3-8b-alora-requirement-check
     hasDocumentation:
     - arxiv.org/2504.12397
+    adaptsModel: granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-requirement-checker
     name: "Granite 3.2 8B Instruct - Requirement Checker"
     description: >-
@@ -216,6 +244,7 @@ adapters:
     url: https://huggingface.co/ibm-granite/granite-3.2-8b-alora-requirement-check
     hasDocumentation:
     - arxiv.org/2504.12397
+    adaptsModel: granite-guardian-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-query-rewrite
     name: "Granite 3.2 8B Instruct - Query Rewrite aLoRA"
     description: >-
@@ -230,6 +259,9 @@ adapters:
     - arxiv.org/2504.12397
     hasAdapterType: ALORA
     hasLicense: license-apache-2.0
+    hasRelatedRisk:
+    - granite-relevance
+    adaptsModel: granite-guardian-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-answerability-classification
     name: "Granite 3.2 8B Instruct - Answerability Classification aLoRA"
     description: >-
@@ -242,6 +274,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.12397
     hasAdapterType: ALORA
+    adaptsModel: granite-guardian-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-math-prm
     # missing parent intrinsic
     name: "Granite-3.3-8B-LoRA-Math-PRM"
@@ -257,12 +290,19 @@ adapters:
     isDefinedByVocabulary: ibm-factuality
     url: https://huggingface.co/ibm-granite/granite-3.3-8b-lora-math-prm
     hasAdapterType: LORA
+    adaptsModel: granite-guardian-3.3-8b-instruct
     # missing documentation
 
 llmintrinsics:
   - id: ibm-factuality-intrinsic-qr
     name: Query Rewrite (QR)
-    description: Given a conversation ending with a user query, QR will decontextualize that last user query by rewriting it (whenever necessary) into an equivalent version that is standalone and can be understood by itself. While this adapter is general purpose for any multi-turn conversation, it is especially effective in RAG settings where its ability to rewrite a user query into a standalone version directly improves the retriever performance, which in turn improves the answer generation performance. This is a pre-retrieval intrinsic since its suggested use is before invoking retrieval.
+    description: >-
+      Given a conversation ending with a user query, QR will decontextualize that last user query by rewriting it
+      (whenever necessary) into an equivalent version that is standalone and can be understood by itself. While this
+      adapter is general purpose for any multi-turn conversation, it is especially effective in RAG settings where its
+      ability to rewrite a user query into a standalone version directly improves the retriever performance, which in
+      turn improves the answer generation performance. This is a pre-retrieval intrinsic since its suggested use is
+      before invoking retrieval.
     isDefinedByVocabulary: ibm-factuality
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
@@ -271,9 +311,15 @@ llmintrinsics:
     - arxiv.org/2504.11704
     hasRelatedTerm:
     - ibm-factuality-query-rewrite
+    hasRelatedRisk:
+    - granite-relevance
   - id: ibm-factuality-intrinsic-qe
     name: Query Expansion (QE)
-    description: Given a conversation ending with a user query, QE is designed to probe the retriever from multiple angles by generating a set of semantically diverse versions of that last user query. This expanded set of queries provides diverse retrieval paths, and thus this intrinsic is particularly effective in RAG settings, especially with terse, general, or underspecified queries. Like Query Rewrite, this is a pre-retrieval intrinsic.
+    description: >-
+      Given a conversation ending with a user query, QE is designed to probe the retriever from multiple angles by
+      generating a set of semantically diverse versions of that last user query. This expanded set of queries provides
+      diverse retrieval paths, and thus this intrinsic is particularly effective in RAG settings, especially with
+      terse, general, or underspecified queries. Like Query Rewrite, this is a pre-retrieval intrinsic.
     isDefinedByVocabulary: ibm-factuality
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
@@ -281,34 +327,62 @@ llmintrinsics:
     - arxiv.org/2504.11704
     hasRelatedTerm:
     - ibm-factuality-query-expansion
+    hasRelatedRisk:
+    - granite-relevance
   - id: ibm-factuality-intrinsic-cr
     name: Context Relevance (CR).
-    description: Given a conversation ending with a user query, and an individual passage, CR classifies whether the passage is relevant, partially relevant, or irrelevant for answering the last user query or if the passage may instead mislead or harm the downstream generator model's response quality. This is a pre-generation intrinsic.
+    description: Given a conversation ending with a user query, and an individual passage, CR classifies whether the
+      passage is relevant, partially relevant, or irrelevant for answering the last user query or if the passage may
+      instead mislead or harm the downstream generator model's response quality. This is a pre-generation intrinsic.
     isDefinedByVocabulary: ibm-factuality
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+    hasRelatedRisk:
+    - granite-relevance
   - id: ibm-factuality-intrinsic-ad
     name: Answerability Determination (AD)
-    description:  Given a conversation ending with a user query, and a set of passages, AD classifies whether that final user query is answerable or unanswerable based on the available information in the passages. It is valuable for restraining over-eager models by identifying unanswerable queries and prevent the generation of hallucinated responses. It can also be used to indicate that the system should re-query the retriever with alternate formulations, to fetch more relevant passages. This is a pre-generation intrinsic.
+    description: >-
+      Given a conversation ending with a user query, and a set of passages, AD classifies whether that final user query
+      is answerable or unanswerable based on the available information in the passages. It is valuable for restraining
+      over-eager models by identifying unanswerable queries and prevent the generation of hallucinated responses.
+      It can also be used to indicate that the system should re-query the retriever with alternate formulations,
+      to fetch more relevant passages. This is a pre-generation intrinsic.
     isDefinedByVocabulary: ibm-factuality
     hasDocumentation:
     - arxiv.org/2504.11704
+    hasRelatedRisk:
+    - granite-relevance
+    - atlas-hallucination
+    - atlas-over-under-reliance
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
     - ibm-factuality-adapter-granite-3.2-8b-instruct-alora-answerability-classification
   - id: ibm-factuality-intrinsic-prr
     name: Passage Reranking (PRR)
-    description: Given a conversation ending with a user query, and a set of passages, PRR returns a ranked list of the passages ordered by suitability to answering the query. If the number of passages is small (< 10) all passages are compared pairwise and returned ranked by win count; otherwise a tournament algorithm is used. This is a pre-generation intrinsic.
+    description: >-
+      Given a conversation ending with a user query, and a set of passages, PRR returns a ranked list of the
+      passages ordered by suitability to answering the query. If the number of passages is small (< 10) all passages
+      are compared pairwise and returned ranked by win count; otherwise a tournament algorithm is used. This is a
+      pre-generation intrinsic.
     isDefinedByVocabulary: ibm-factuality
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+    hasRelatedRisk:
+    - granite-relevance
+    - atlas-hallucination
   - id: ibm-factualityintrinsic-uq
     name: Uncertainty Quantification (UQ)
-    description: Given a conversation ending with an assistant response, UQ calculates a certainty percentage to reflect how certain it is about the answer generated to the previous user query. UQ can also take as input a conversation ending with an user query and predicting the certainty score based solely on the query, prior to generating an answer. UQ is also calibrated on document-based question answering datasets, and hence it can be applied to giving certainty scores for RAG responses created using grounding passages. This intrinsic could be used in a post-generation or pre-generation step.
+    description: >-
+      Given a conversation ending with an assistant response, UQ calculates a certainty percentage to reflect how
+      ertain it is about the answer generated to the previous user query. UQ can also take as input a conversation
+      ending with an user query and predicting the certainty score based solely on the query, prior to generating an
+      answer. UQ is also calibrated on document-based question answering datasets, and hence it can be applied to
+      giving certainty scores for RAG responses created using grounding passages. This intrinsic could be used in a
+      post-generation or pre-generation step.
     isDefinedByVocabulary: ibm-factuality
     hasDocumentation:
     - arxiv.org/2504.11704
@@ -317,22 +391,46 @@ llmintrinsics:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-uncertainty-quantification
     - ibm-factuality-adapter-granite-3.3-8b-instruct-alora-uncertainty
     - ibm-factuality-adapter-granite-3.2-8b-instruct-alora-uncertainty
+    hasRelatedRisk:
+    - atlas-poor-model-accuracy
+    - nist-information-integrity
   - id: ibm-factuality-intrinsic-hd
     name: Hallucination Detection (HD)
-    description: Given a conversation ending with an assistant response, and a set of passages, HD outputs a hallucination risk for each sentence in the last assistant response, with respect to the set of passages. It could be used in concert with sampling techniques that yield multiple generated responses, some of which could then be filtered according to their hallucination risks. This is a post-generation intrinsic since its expected use is after invoking the LLM to create the response.
+    description: >-
+      Given a conversation ending with an assistant response, and a set of passages, HD outputs a hallucination risk
+      for each sentence in the last assistant response, with respect to the set of passages. It could be used in
+      concert with sampling techniques that yield multiple generated responses, some of which could then be filtered
+      according to their hallucination risks. This is a post-generation intrinsic since its expected use is after
+      invoking the LLM to create the response.
     isDefinedByVocabulary: ibm-factuality
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-hallucination-detection
+    hasRelatedRisk:
+    - atlas-hallucination
+    - atlas-function-calling-hallucination
+    - nist-confabulation
+    - llm092025-misinformation
+    - credo-risk-021
+    - granite-function-call
   - id: ibm-factuality-intrinsic-cg
     name: Citation Generation (CG)
-    description:  Given a conversation ending with an assistant response, and a set of passages, CG generates citations for that last assistant response from the provided passages. Citations are generated for each sentence in the response (when available), where each citation consists of a set of sentences from the supporting passages. This is a post-generation intrinsic since its expected use is after invoking the LLM, and therefore can be used to create citations for responses generated by any model.
+    description: >-
+      Given a conversation ending with an assistant response, and a set of passages, CG generates citations for that
+      last assistant response from the provided passages. Citations are generated for each sentence in the response
+      (when available), where each citation consists of a set of sentences from the supporting passages. This is a
+      post-generation intrinsic since its expected use is after invoking the LLM, and therefore can be used to create
+      citations for responses generated by any model.
     isDefinedByVocabulary: ibm-factuality
     hasDocumentation:
     - arxiv.org/2504.11704
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-citation-generation
+    hasRelatedRisk:
+    - granite-relevance
+    - atlas-hallucination
+    - atlas-over-under-reliance
   - id: ibm-factuality-intrinsic-jailbreak
     name: Jailbreak Detection
     description: >-
@@ -345,3 +443,7 @@ llmintrinsics:
     - arxiv.org/2504.12397
     hasAdapter:
     - ibm-factuality-adapter-granite-3.2-8b-instruct-alora-jailbreak
+    hasRelatedRisk:
+    - atlas-jailbreak
+    - nist-information-security
+    - llm052025-improper-output-handling

@@ -196,9 +196,6 @@ slots:
   hasValidation:
     description: Measures taken to ensure that the benchmark provides valid and reliable evaluations.
     multivalued: true
-  hasRelatedRisk:
-    description: Specific risks of LLMs the benchmark assesses
-    multivalued: true
   hasDemographicAnalysis:
     description:  How the benchmark evaluates performance across different demographic groups (e.g., gender, race).
   hasConsiderationPrivacyAndAnonymity:
