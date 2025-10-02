@@ -20,6 +20,8 @@ class RiskExplorer(ExplorerBase):
         self._documents = ontology.documents or []
         self._datasets = ontology.datasets or []
         self._stakeholders = ontology.stakeholders or []
+        self._llmintrinsics = ontology.llmintrinsics or []
+        self._adapters = ontology.adapters or []
 
     def get_all_risks(self, taxonomy=None):
         """Get all risk definitions from the LinkML
@@ -765,4 +767,152 @@ class RiskExplorer(ExplorerBase):
             return matching_stakeholder_instances[0]
         else:
             print("No matching stakeholder found")
+            return []
+
+
+    def get_llmintrinsics(self, taxonomy=None):
+        """Get all LLMIntrinsic definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[LLMIntrinsic]
+                Result containing a list of LLMIntrinsic entries
+        """
+        llmintrinsic_instances = self._llmintrinsics or []
+
+        if taxonomy is not None:
+            llmintrinsic_instances = list(
+                filter(
+                    lambda llmintrinsic: llmintrinsic.isDefinedByTaxonomy == taxonomy,
+                    llmintrinsic_instances,
+                )
+            )
+
+        return llmintrinsic_instances
+
+    def get_llmintrinsic(self, id):
+        """Get LLMIntrinsic definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a LLMIntrinsic entry
+
+        Returns:
+            LLMIntrinsic
+                Result containing a LLMIntrinsic
+        """
+        matching_llmintrinsic_instances = list(
+            filter(lambda llmintrinsic: llmintrinsic.id == id, self._llmintrinsics)
+        )
+
+        if len(matching_llmintrinsic_instances) > 0:
+            return matching_llmintrinsic_instances[0]
+        else:
+            print("No matching LLMIntrinsic found")
+            return []
+
+    def get_related_llmintrinsics(
+        self, risk=None, tag=None, risk_id=None, name=None, taxonomy=None
+    ):
+        """Get llmintrinsics for a risk from the LinkML
+
+        Args:
+            risk: (Optional) Risk
+                The Risk object to find related llmintrinsics for
+            risk_id: (Optional) str
+                The string ID identifying the risk to find related llmintrinsics for
+            tag: (Optional) str
+                The string tag identifying the risk to find related llmintrinsics for
+            name: (Optional) str
+                The string name identifying the risk to find related llmintrinsics for
+            taxonomy: str
+                (Optional) Only return llmintrinsics which come from this taxonomy
+
+        Returns:
+            list[LLMIntrinsics]
+                Result containing a list of the llmintrinsics which are marked as related to the specified AI risk
+        """
+        matching_risks = self._risks
+        llmintrinsic_instances = []
+
+        if risk is not None:
+            matching_risks = [risk]
+        if risk_id is not None:
+            matching_risks = list(
+                filter(lambda risk: risk.id == risk_id, matching_risks)
+            )
+
+        if risk is not None:
+            matching_risks = [risk]
+        if tag is not None:
+            matching_risks = list(filter(lambda risk: risk.tag == tag, matching_risks))
+        if risk_id is not None:
+            matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
+        if name is not None:
+            matching_risks = list(
+                filter(lambda risk: risk.name == name, matching_risks)
+            )
+
+        if len(matching_risks) > 0:
+            risk: Risk = matching_risks[0]
+            llmintrinsics = [x for x in self._llmintrinsics if (x.hasRelatedRisk is not None and risk.id in x.hasRelatedRisk)]
+            if taxonomy is not None:
+                llmintrinsic_instances = list(
+                    filter(
+                        lambda llmintrinsic: llmintrinsic.isDefinedByTaxonomy == taxonomy,
+                        llmintrinsics,
+                    )
+                )
+
+
+            return llmintrinsic_instances
+        else:
+            print("No matching intrinsics found")
+            return []
+
+    def get_adapters(self, taxonomy=None):
+        """Get all Adapter definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[Adapter]
+                Result containing a list of Adapter entries
+        """
+        adapter_instances = self._adapters or []
+
+        if taxonomy is not None:
+            adapter_instances = list(
+                filter(
+                    lambda adapter: adapter.isDefinedByTaxonomy == taxonomy,
+                    adapter_instances,
+                )
+            )
+
+        return adapter_instances
+
+    def get_adapter(self, id):
+        """Get Adapter definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a Adapter entry
+
+        Returns:
+            Adapter
+                Result containing a Adapter
+        """
+        matching_adapter_instances = list(
+            filter(lambda adapter: adapter.id == id, self._adapters)
+        )
+
+        if len(matching_adapter_instances) > 0:
+            return matching_adapter_instances[0]
+        else:
+            print("No matching adapter found")
             return []

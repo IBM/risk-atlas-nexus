@@ -9,7 +9,7 @@ from linkml_runtime.dumpers import YAMLDumper
 from sssom_schema import Mapping
 
 # Internal
-from src.risk_atlas_nexus import RiskAtlasNexus
+from src.risk_atlas_nexus import LLMIntrinsic, RiskAtlasNexus
 
 # Unit Test Infrastructure
 from src.risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
@@ -315,3 +315,27 @@ class TestLibrary(TestCaseBase):
         ran_lib._risk_explorer._stakeholders = [Documentation(id="test-stakeholder1")]
         stakeholder = ran_lib.get_stakeholder(id="test-stakeholder1")
         assert stakeholder.id == "test-stakeholder1"
+
+    def test_get_all_intrinsics(self):
+        """Get all llm intrinsic definitions from the LinkML"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._llmintrinsics = [LLMIntrinsic(id="test-intrinsic")]
+        llm_intrinsics = ran_lib.get_intrinsics()
+        self.assertGreater(len(llm_intrinsics), 0)
+
+    def test_get_intrinsic_by_id(self):
+        """Get intrinsic definition from the LinkML filtered by intrinsic id"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._llmintrinsics= [LLMIntrinsic(id="test-intrinsic1")]
+        intrinsic = ran_lib.get_intrinsic(id="test-intrinsic1")
+        assert intrinsic.id == "test-intrinsic1"
+
+    def test_get_related_intrinsics(self):
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._llmintrinsics = ran_lib._risk_explorer._llmintrinsics + [
+            LLMIntrinsic(id="test-intrinsic1", hasRelatedRisk=["atlas-data-bias"])
+        ]
+        ev1 = ran_lib.get_intrinsic(id="test-intrinsic1")
+        assert isinstance(ev1, LLMIntrinsic)
+        evs = ran_lib.get_related_intrinsics(risk_id="atlas-data-bias")
+        assert all(isinstance(i, LLMIntrinsic) for i in evs)
