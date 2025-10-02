@@ -840,13 +840,6 @@ class RiskExplorer(ExplorerBase):
 
         if risk is not None:
             matching_risks = [risk]
-        if risk_id is not None:
-            matching_risks = list(
-                filter(lambda risk: risk.id == risk_id, matching_risks)
-            )
-
-        if risk is not None:
-            matching_risks = [risk]
         if tag is not None:
             matching_risks = list(filter(lambda risk: risk.tag == tag, matching_risks))
         if risk_id is not None:
