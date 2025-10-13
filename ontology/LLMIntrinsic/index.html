@@ -1031,11 +1031,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/notebooks/Prepare_taxonomy_mappings/" class="md-nav__link">
+      <a href="../../examples/notebooks/schema_viewer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Preparing taxonomy mappings
+    Using Schemaview to introspect Risk Atlas Nexus
     
   </span>
   
@@ -1140,6 +1140,8 @@
       
         
       
+        
+      
     
     
       
@@ -1196,6 +1198,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/generate_crosswalk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate a Crosswalk with Risk Atlas Nexus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1224,6 +1248,8 @@
       
         
           
+        
+      
         
       
         
@@ -1817,6 +1843,28 @@
   
   <span class="md-ellipsis">
     Enum: AdapterType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptsModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: adaptsModel
     
   </span>
   
@@ -6716,7 +6764,7 @@
 
 <h1 id="class-llmintrinsic">Class: LLMIntrinsic</h1>
 <p><em>A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.</em></p>
-<p>URI: <a href="https://ibm.github.io/risk-atlas-nexus/ontology/LLMIntrinsic">nexus:LLMIntrinsic</a></p>
+<p>URI: <a href="https://w3id.org/dpv/ai#Capability">ai:Capability</a></p>
 <pre class="mermaid"><code> classDiagram
     class LLMIntrinsic
     click LLMIntrinsic href "../LLMIntrinsic"
@@ -6729,14 +6777,14 @@
 
       LLMIntrinsic : description
 
-      LLMIntrinsic : hasAdapterType
+      LLMIntrinsic : hasAdapter
 
 
 
 
 
-        LLMIntrinsic --&gt; "0..1" AdapterType : hasAdapterType
-        click AdapterType href "../AdapterType"
+        LLMIntrinsic --&gt; "*" Adapter : hasAdapter
+        click Adapter href "../Adapter"
 
 
 
@@ -6822,12 +6870,6 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../hasAdapterType/">hasAdapterType</a></td>
-<td>0..1 <br/> <a href="../AdapterType/">AdapterType</a></td>
-<td>The Adapter type, for example: LORA, ALORA, X-LORA</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../hasDocumentation/">hasDocumentation</a></td>
 <td>* <br/> <a href="../Documentation/">Documentation</a></td>
 <td>Indicates documentation associated with an entity</td>
@@ -6837,6 +6879,12 @@
 <td><a href="../isDefinedByVocabulary/">isDefinedByVocabulary</a></td>
 <td>0..1 <br/> <a href="../Vocabulary/">Vocabulary</a></td>
 <td>A relationship where a term or a term group is defined by a vocabulary</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../hasAdapter/">hasAdapter</a></td>
+<td>* <br/> <a href="../Adapter/">Adapter</a></td>
+<td>The Adapter for the intrinsic</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -6894,6 +6942,12 @@
 <td>range</td>
 <td><a href="./">LLMIntrinsic</a></td>
 </tr>
+<tr>
+<td><a href="./">LLMIntrinsic</a></td>
+<td><a href="../hasAdapter/">hasAdapter</a></td>
+<td>domain</td>
+<td><a href="./">LLMIntrinsic</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -6912,7 +6966,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>nexus:LLMIntrinsic</td>
+<td>ai:Capability</td>
 </tr>
 <tr>
 <td>native</td>
@@ -6933,9 +6987,10 @@
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasRelatedRisk</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasRelatedTerm</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAdapterType</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasDocumentation</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByVocabulary</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAdapter</span>
+<span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:Capability</span>
 </code></pre></div>
 </details>
 
@@ -6960,6 +7015,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiEval</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BenchmarkMetadataCard</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -6983,16 +7039,6 @@
 <span class="w">    </span><span class="nt">any_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Term</span>
-<span class="w">  </span><span class="nt">hasAdapterType</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAdapterType</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">Adapter</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">LORA,</span><span class="nv"> </span><span class="s">ALORA,</span><span class="nv"> </span><span class="s">X-LORA&#39;</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
-<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAdapterType</span>
-<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
-<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AdapterType</span>
 <span class="w">  </span><span class="nt">hasDocumentation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasDocumentation</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates documentation associated with an entity.</span>
@@ -7011,6 +7057,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LargeLanguageModelFamily</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiEval</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BenchmarkMetadataCard</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -7025,8 +7072,22 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Term</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vocabulary</span>
+<span class="w">  </span><span class="nt">hasAdapter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAdapter</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Adapter for the intrinsic</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasAdapter</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier to this instance of the model element. Example</span>
@@ -7099,6 +7160,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">date</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:Capability</span>
 </code></pre></div>
 </details>
 

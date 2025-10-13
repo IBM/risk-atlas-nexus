@@ -1238,11 +1238,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Prepare_taxonomy_mappings/" class="md-nav__link">
+      <a href="../schema_viewer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Preparing taxonomy mappings
+    Using Schemaview to introspect Risk Atlas Nexus
     
   </span>
   
@@ -1350,6 +1350,8 @@
       
         
       
+        
+      
     
     
       
@@ -1409,6 +1411,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate_crosswalk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate a Crosswalk with Risk Atlas Nexus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1435,6 +1459,8 @@
       
         
           
+        
+      
         
       
         
@@ -2025,6 +2051,28 @@
   
   <span class="md-ellipsis">
     Enum: AdapterType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/adaptsModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: adaptsModel
     
   </span>
   
@@ -7321,12 +7369,12 @@ pip install -e .
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># imports</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">rich</span><span class="w"> </span><span class="kn">import</span> <span class="nb">print</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span><span class="w"> </span><span class="kn">import</span> <span class="n">Risk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span><span class="w"> </span><span class="kn">import</span> <span class="n">Risk</span><span class="p">,</span> <span class="n">LLMIntrinsic</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">risk_atlas_nexus</span><span class="w"> </span><span class="kn">import</span> <span class="n">RiskAtlasNexus</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1"># imports
 from rich import print
-from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
+from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk, LLMIntrinsic
 from risk_atlas_nexus import RiskAtlasNexus</div>
 </div>
 </div>
@@ -8066,6 +8114,108 @@ else:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>1.8 Intrinsics and Adapters</p>
+<p>The LLM intrinsics are available for inspection.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">all_intrinsics</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_intrinsics</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total intrinsics available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_intrinsics</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
+<span class="c1"># Let's just print out a few for now</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 intrinsics in list "</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">all_intrinsics</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># View an individual intrinsic by ID. Each intrinsic is returned as a pydantic "LLMIntrinsic" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
+<span class="n">an_intrinsic</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_intrinsic</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'ibm-factuality-intrinsic-ad'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get an intrinsic by ID, 'ibm-factuality-intrinsic-ad'"</span><span class="p">)</span> 
+<span class="k">if</span> <span class="n">an_intrinsic</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">an_intrinsic</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># LLM intrinsic 'ibm-factuality-intrinsic-ad' not found"</span><span class="p">)</span> 
+
+<span class="c1"># Get any intrinsics which are linked to the IBM risk atlas risk 'atlas-hallucination'</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get the linked intrinsics by ID for 'atlas-hallucination'"</span><span class="p">)</span> 
+<span class="n">linked_intrinsics</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_related_intrinsics</span><span class="p">(</span><span class="n">risk_id</span><span class="o">=</span><span class="s1">'atlas-hallucination'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linked_intrinsics</span><span class="p">)</span> <span class="c1"># 1 expected</span>
+
+<span class="c1"># We can do the same with adapters</span>
+<span class="n">adapters</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_adapters</span><span class="p">()</span>
+<span class="c1"># Let's just print out a few for now</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 adapters in list "</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">adapters</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># View an individual adapter by ID. Each adapter is returned as a pydantic "Adapter" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology</span>
+<span class="n">an_adapter</span> <span class="o">=</span> <span class="n">ran</span><span class="o">.</span><span class="n">get_adapter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get an adapter by ID, 'ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"</span><span class="p">)</span> 
+<span class="k">if</span> <span class="n">an_adapter</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">an_adapter</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Adapter 'ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite' not found"</span><span class="p">)</span> 
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-12">all_intrinsics = ran.get_intrinsics()
+print(f"\n# Total intrinsics available : {len(all_intrinsics)}") 
+# Let's just print out a few for now
+print(f"\n# First 2 intrinsics in list ") 
+print(all_intrinsics[:2])
+
+# View an individual intrinsic by ID. Each intrinsic is returned as a pydantic "LLMIntrinsic" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
+an_intrinsic = ran.get_intrinsic(id='ibm-factuality-intrinsic-ad')
+print(f"\n# Get an intrinsic by ID, 'ibm-factuality-intrinsic-ad'") 
+if an_intrinsic:
+    print(dict(an_intrinsic))
+else:
+    print(f"\n# LLM intrinsic 'ibm-factuality-intrinsic-ad' not found") 
+
+# Get any intrinsics which are linked to the IBM risk atlas risk 'atlas-hallucination'
+print(f"\n# Get the linked intrinsics by ID for 'atlas-hallucination'") 
+linked_intrinsics = ran.get_related_intrinsics(risk_id='atlas-hallucination')
+print(linked_intrinsics) # 1 expected
+
+# We can do the same with adapters
+adapters = ran.get_adapters()
+# Let's just print out a few for now
+print(f"\n# First 2 adapters in list ") 
+print(adapters[:2])
+
+# View an individual adapter by ID. Each adapter is returned as a pydantic "Adapter" object as defined in risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology
+an_adapter = ran.get_adapter(id='ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite')
+print(f"\n# Get an adapter by ID, 'ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite") 
+if an_adapter:
+    print(dict(an_adapter))
+else:
+    print(f"\n# Adapter 'ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite' not found") 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
@@ -8089,7 +8239,7 @@ else:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -8112,7 +8262,7 @@ else:
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get a taxonomy by ID, 'nist-ai-rmf' "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">a_taxonomy</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12">all_taxonomies = ran.get_all_taxonomies()
+<div class="clipboard-copy-txt" id="cell-13">all_taxonomies = ran.get_all_taxonomies()
 print(f"\n# Total taxonomies available : {len(all_taxonomies)}") # 9
 print(f"\n# Taxonomy IDs available : {[taxonomy.id for taxonomy in all_taxonomies]}") # 9
 
@@ -8150,7 +8300,7 @@ print(dict(a_taxonomy))
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -8168,7 +8318,7 @@ print(dict(a_taxonomy))
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># First 2 risks in NIST risk list "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">all_nist_risks</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">all_nist_risks = ran.get_all_risks(taxonomy='nist-ai-rmf')
+<div class="clipboard-copy-txt" id="cell-14">all_nist_risks = ran.get_all_risks(taxonomy='nist-ai-rmf')
 print(f"\n# Total risks available : {len(all_risks)}") # 518
 print(f"\n# Total NIST risks available : {len(all_nist_risks)}") # 12
 
@@ -8189,7 +8339,7 @@ print(all_nist_risks[:2])</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -8201,7 +8351,7 @@ print(all_nist_risks[:2])</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="s1">'ai-risk-taxonomy'</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-14">ran.get_all_risks(taxonomy='ai-risk-taxonomy')</div>
+<div class="clipboard-copy-txt" id="cell-15">ran.get_all_risks(taxonomy='ai-risk-taxonomy')</div>
 </div>
 </div>
 </div>
@@ -8234,7 +8384,7 @@ Ensure the risks comply with <a href="../../../docs/ontology/index.md">the schem
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -8250,7 +8400,7 @@ Ensure the risks comply with <a href="../../../docs/ontology/index.md">the schem
 <span class="n">my_extended_risks</span> <span class="o">=</span> <span class="n">my_extended_ran</span><span class="o">.</span><span class="n">get_all_risks</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Total risks available : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">my_extended_risks</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-15"># Create an instance which extends the graph with your custom definitions
+<div class="clipboard-copy-txt" id="cell-16"># Create an instance which extends the graph with your custom definitions
 my_base_dir='<my_user_input_dir_path>'
 my_extended_ran = RiskAtlasNexus(base_dir=my_base_dir)
 my_extended_risks = my_extended_ran.get_all_risks()
@@ -8281,7 +8431,7 @@ print(f"\n# Total risks available : {len(my_extended_risks)}")
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -8301,7 +8451,7 @@ print(f"\n# Total risks available : {len(my_extended_risks)}")
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"># Get my own risk by ID, 'my-own-risk'  "</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">my_risk</span><span class="p">))</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-16"># Export the total graph
+<div class="clipboard-copy-txt" id="cell-17"># Export the total graph
 my_output_dir='<my_output_dir_path>'
 my_extended_ran.export(my_output_dir)
 print(f"\n# Graph exported to: {my_output_dir}") 

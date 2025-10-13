@@ -1031,11 +1031,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/notebooks/Prepare_taxonomy_mappings/" class="md-nav__link">
+      <a href="../../examples/notebooks/schema_viewer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Preparing taxonomy mappings
+    Using Schemaview to introspect Risk Atlas Nexus
     
   </span>
   
@@ -1140,6 +1140,8 @@
       
         
       
+        
+      
     
     
       
@@ -1196,6 +1198,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/generate_crosswalk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate a Crosswalk with Risk Atlas Nexus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1224,6 +1248,8 @@
       
         
           
+        
+      
         
       
         
@@ -1817,6 +1843,28 @@
   
   <span class="md-ellipsis">
     Enum: AdapterType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptsModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: adaptsModel
     
   </span>
   
@@ -6665,78 +6713,13 @@ Alias: url</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
-<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Severity/">Severity</a></td>
+<td><a href="../IncidentStatus/">IncidentStatus</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Entity/">Entity</a></td>
-<td>A generic grouping for any identifiable entity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Documentation/">Documentation</a></td>
-<td>Documented information about a concept or other topic(s) of interest</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Impact/">Impact</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Input/">Input</a></td>
-<td>Input for which the system or component generates output</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../BenchmarkMetadataCard/">BenchmarkMetadataCard</a></td>
-<td>Benchmark metadata cards offer a standardized way to document LLM benchmarks ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../License/">License</a></td>
-<td>The general notion of a license which defines terms and grants permissions to...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiModelValidation/">AiModelValidation</a></td>
-<td>AI model validation steps that have been performed after the model training t...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Consequence/">Consequence</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../IncidentMitigatedclass/">IncidentMitigatedclass</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../IncidentOngoingclass/">IncidentOngoingclass</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiOffice/">AiOffice</a></td>
-<td>The EU AI Office (https://digital-strategy</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiLifecyclePhase/">AiLifecyclePhase</a></td>
-<td>A Phase of AI lifecycle which indicates evolution of the system from concepti...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../BaseAi/">BaseAi</a></td>
-<td>Any type of AI, be it a LLM, RL agent, SVM, etc</td>
+<td><a href="../AiModel/">AiModel</a></td>
+<td>A base AI Model class</td>
 <td>no</td>
 </tr>
 <tr>
@@ -6745,8 +6728,33 @@ Alias: url</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Action/">Action</a></td>
-<td>Action to remediate a risk</td>
+<td><a href="../AiEval/">AiEval</a></td>
+<td>An AI Evaluation, e</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Questionnaire/">Questionnaire</a></td>
+<td>A questionnaire groups questions</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DataPreprocessing/">DataPreprocessing</a></td>
+<td>Data transformations, such as PI filtering, performed to ensure high quality ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Organization/">Organization</a></td>
+<td>Any organizational entity such as a corporation, educational institution, con...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../StakeholderGroup/">StakeholderGroup</a></td>
+<td>An AI system stakeholder grouping</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../IncidentOngoingclass/">IncidentOngoingclass</a></td>
+<td></td>
 <td>no</td>
 </tr>
 <tr>
@@ -6760,38 +6768,8 @@ Alias: url</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Likelihood/">Likelihood</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../IncidentConcludedclass/">IncidentConcludedclass</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RiskConcept/">RiskConcept</a></td>
-<td>An umbrella term for refering to risk, risk source, consequence and impact</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Questionnaire/">Questionnaire</a></td>
-<td>A questionnaire groups questions</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RiskControl/">RiskControl</a></td>
-<td>A measure that maintains and/or modifies risk (and risk concepts)</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RiskGroup/">RiskGroup</a></td>
-<td>A group of AI system related risks that are part of a risk taxonomy</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../IncidentNearMissclass/">IncidentNearMissclass</a></td>
-<td></td>
+<td><a href="../AiLifecyclePhase/">AiLifecyclePhase</a></td>
+<td>A Phase of AI lifecycle which indicates evolution of the system from concepti...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -6800,73 +6778,8 @@ Alias: url</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../LargeLanguageModelFamily/">LargeLanguageModelFamily</a></td>
-<td>A large language model family is a set of models that are provided by the sam...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Stakeholder/">Stakeholder</a></td>
-<td>An AI system stakeholder for Responsible AI governance (e</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiEvalResult/">AiEvalResult</a></td>
-<td>The result of an evaluation for a specific AI model</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DataPreprocessing/">DataPreprocessing</a></td>
-<td>Data transformations, such as PI filtering, performed to ensure high quality ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiEval/">AiEval</a></td>
-<td>An AI Evaluation, e</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Modality/">Modality</a></td>
-<td>A modality supported by an Ai component</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiModel/">AiModel</a></td>
-<td>A base AI Model class</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Adapter/">Adapter</a></td>
-<td>Adapter-based methods add extra trainable parameters after the attention and ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../IncidentHaltedclass/">IncidentHaltedclass</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../StakeholderGroup/">StakeholderGroup</a></td>
-<td>An AI system stakeholder grouping</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiProvider/">AiProvider</a></td>
-<td>A provider under the AI Act is defined by Article 3(3) as a natural or legal ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Vocabulary/">Vocabulary</a></td>
-<td>A collection of terms, with their definitions and relationships</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td>Any organizational entity such as a corporation, educational institution, con...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Risk/">Risk</a></td>
-<td>The state of uncertainty associated with an AI system, that has the potential...</td>
+<td><a href="../Documentation/">Documentation</a></td>
+<td>Documented information about a concept or other topic(s) of interest</td>
 <td>no</td>
 </tr>
 <tr>
@@ -6875,13 +6788,78 @@ Alias: url</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Severity/">Severity</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
+<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../AiAgent/">AiAgent</a></td>
 <td>An artificial intelligence (AI) agent refers to a system or program that is c...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Question/">Question</a></td>
-<td>An evaluation where a question has to be answered</td>
+<td><a href="../BaseAi/">BaseAi</a></td>
+<td>Any type of AI, be it a LLM, RL agent, SVM, etc</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../License/">License</a></td>
+<td>The general notion of a license which defines terms and grants permissions to...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Impact/">Impact</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../IncidentNearMissclass/">IncidentNearMissclass</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AiEvalResult/">AiEvalResult</a></td>
+<td>The result of an evaluation for a specific AI model</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Term/">Term</a></td>
+<td>A term and its definitions</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LargeLanguageModelFamily/">LargeLanguageModelFamily</a></td>
+<td>A large language model family is a set of models that are provided by the sam...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AiProvider/">AiProvider</a></td>
+<td>A provider under the AI Act is defined by Article 3(3) as a natural or legal ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AiOffice/">AiOffice</a></td>
+<td>The EU AI Office (https://digital-strategy</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
+<td>The state of uncertainty associated with an AI system, that has the potential...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Adapter/">Adapter</a></td>
+<td>Adapter-based methods add extra trainable parameters after the attention and ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RiskGroup/">RiskGroup</a></td>
+<td>A group of AI system related risks that are part of a risk taxonomy</td>
 <td>no</td>
 </tr>
 <tr>
@@ -6890,13 +6868,83 @@ Alias: url</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../IncidentStatus/">IncidentStatus</a></td>
+<td><a href="../BenchmarkMetadataCard/">BenchmarkMetadataCard</a></td>
+<td>Benchmark metadata cards offer a standardized way to document LLM benchmarks ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Consequence/">Consequence</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Term/">Term</a></td>
-<td>A term and its definitions</td>
+<td><a href="../AiModelValidation/">AiModelValidation</a></td>
+<td>AI model validation steps that have been performed after the model training t...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Likelihood/">Likelihood</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Stakeholder/">Stakeholder</a></td>
+<td>An AI system stakeholder for Responsible AI governance (e</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Input/">Input</a></td>
+<td>Input for which the system or component generates output</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
+<td>An umbrella term for refering to risk, risk source, consequence and impact</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Question/">Question</a></td>
+<td>An evaluation where a question has to be answered</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../IncidentMitigatedclass/">IncidentMitigatedclass</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Action/">Action</a></td>
+<td>Action to remediate a risk</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../IncidentConcludedclass/">IncidentConcludedclass</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RiskControl/">RiskControl</a></td>
+<td>A measure that maintains and/or modifies risk (and risk concepts)</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Entity/">Entity</a></td>
+<td>A generic grouping for any identifiable entity</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Vocabulary/">Vocabulary</a></td>
+<td>A collection of terms, with their definitions and relationships</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Modality/">Modality</a></td>
+<td>A modality supported by an Ai component</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../IncidentHaltedclass/">IncidentHaltedclass</a></td>
+<td></td>
 <td>no</td>
 </tr>
 </tbody>

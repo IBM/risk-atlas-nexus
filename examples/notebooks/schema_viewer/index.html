@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://ibm.github.io/risk-atlas-nexus/examples/notebooks/schema_viewer/">
       
       
+        <link rel="prev" href="../risk_categorization/">
+      
+      
+        <link rel="next" href="../autoassist_questionnaire/">
       
       
       <link rel="icon" href="../../../assets/risk_atlas_nexus_vector.svg">
@@ -264,10 +268,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
   
@@ -741,6 +747,8 @@
       
   
   
+    
+  
   
   
     
@@ -761,16 +769,19 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
@@ -787,13 +798,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -818,17 +829,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -881,8 +895,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -900,18 +916,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -923,7 +942,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             🔍 Discovery
@@ -1022,19 +1041,129 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Prepare_taxonomy_mappings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using Schemaview to introspect Risk Atlas Nexus
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Preparing taxonomy mappings
+    Using Schemaview to introspect Risk Atlas Nexus
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introspection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introspection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-a-list-of-all-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return a list of all imports:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-size-of-classes-slots-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check size of classes, slots, subsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-the-ancestors-of-a-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      See the ancestors of a class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-the-curies-or-uris-of-a-classes-ancestors" class="md-nav__link">
+    <span class="md-ellipsis">
+      See the CURIEs or URIs of a classes ancestors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-the-ancestors-of-a-class-without-mixins" class="md-nav__link">
+    <span class="md-ellipsis">
+      See the ancestors of a class without mixins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-the-ancestors-of-a-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      See the ancestors of a slot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1064,17 +1193,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1134,22 +1266,27 @@
       
         
       
+        
+      
     
     
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1190,6 +1327,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate_crosswalk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate a Crosswalk with Risk Atlas Nexus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1216,6 +1375,8 @@
       
         
           
+        
+      
         
       
         
@@ -1806,6 +1967,28 @@
   
   <span class="md-ellipsis">
     Enum: AdapterType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ontology/adaptsModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slot: adaptsModel
     
   </span>
   
@@ -6981,7 +7164,21 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1dfa9372">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="using-schemaview-to-introspect-risk-atlas-nexus">Using Schemaview to introspect Risk Atlas Nexus<a class="anchor-link" href="#using-schemaview-to-introspect-risk-atlas-nexus">¶</a></h1><p>The SchemaView class in the linkml-runtime provides a method for dynamically introspecting and manipulating schemas.  This can be used to programatically explore or edit the Risk Atlas Nexus.</p>
+<ul>
+<li><a href="https://linkml.io/linkml/developers/schemaview.html">Schemaview reference</a></li>
+</ul>
+<h2 id="introspection">Introspection<a class="anchor-link" href="#introspection">¶</a></h2><p>The following cells show some examples of how you can examine the contents of the schema.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4610f20c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7013,21 +7210,6 @@ from linkml_runtime.linkml_model.meta import (
 from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1dfa9372">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="using-schemaview-to-introspect-risk-atlas-nexus">Using Schemaview to introspect Risk Atlas Nexus<a class="anchor-link" href="#using-schemaview-to-introspect-risk-atlas-nexus">¶</a></h1><p>The SchemaView class in the linkml-runtime provides a method for dynamically introspecting and manipulating schemas.  This can be used to programatically explore or edit the Risk Atlas Nexus.</p>
-<ul>
-<li><a href="https://linkml.io/linkml/developers/schemaview.html">Schemaview reference</a></li>
-</ul>
-<h2 id="introspection">Introspection<a class="anchor-link" href="#introspection">¶</a></h2><p>The following cells show some examples of how you can examine the contents of the schema.</p>
 </div>
 </div>
 </div>
@@ -8149,6 +8331,44 @@ print(len(view.all_classes()), len(view.all_slots()), len(view.all_subsets()))</
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../risk_categorization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Risk categorization">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Risk categorization
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../autoassist_questionnaire/" class="md-footer__link md-footer__link--next" aria-label="Next: Auto assist questionnaire">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Auto assist questionnaire
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
