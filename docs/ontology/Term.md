@@ -136,6 +136,7 @@ URI: [nexus:Term](https://ibm.github.io/risk-atlas-nexus/ontology/Term)
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
 | [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
 | [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
+| [Adapter](Adapter.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedTerm](hasRelatedTerm.md) | range | [Term](Term.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedTerm](hasRelatedTerm.md) | any_of[range] | [Term](Term.md) |
@@ -215,6 +216,7 @@ attributes:
     owner: Term
     domain_of:
     - Term
+    - Adapter
     - LLMIntrinsic
     range: Vocabulary
   hasDocumentation:
@@ -235,6 +237,7 @@ attributes:
     - LargeLanguageModelFamily
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Documentation
     multivalued: true
@@ -278,6 +281,7 @@ attributes:
     - Action
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Risk
     multivalued: true

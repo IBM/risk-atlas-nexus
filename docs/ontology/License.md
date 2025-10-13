@@ -86,6 +86,7 @@ URI: [airo:License](https://w3id.org/airo#License)
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [Question](Question.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [Questionnaire](Questionnaire.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
+| [Adapter](Adapter.md) | [hasLicense](hasLicense.md) | range | [License](License.md) |
 | [AiOffice](AiOffice.md) | [grants_license](grants_license.md) | range | [License](License.md) |
 
 

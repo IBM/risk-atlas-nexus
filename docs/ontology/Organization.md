@@ -95,6 +95,7 @@ URI: [schema:Organization](http://schema.org/Organization)
 | [AiAgent](AiAgent.md) | [producer](producer.md) | range | [Organization](Organization.md) |
 | [AiModel](AiModel.md) | [producer](producer.md) | range | [Organization](Organization.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [producer](producer.md) | range | [Organization](Organization.md) |
+| [Adapter](Adapter.md) | [producer](producer.md) | range | [Organization](Organization.md) |
 
 
 

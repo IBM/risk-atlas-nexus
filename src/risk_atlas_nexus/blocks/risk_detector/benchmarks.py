@@ -6,6 +6,7 @@ from risk_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
 from risk_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 from risk_atlas_nexus.blocks.risk_detector import RiskDetector
 
+
 # Benchmark-specific risk identification template
 BENCHMARK_RISK_IDENTIFICATION_TEMPLATE = """You are an expert at AI risk classification for AI benchmarks and evaluation datasets. Study the risks JSON below containing list of risk category and its description.
 

@@ -3,7 +3,7 @@
 # Slot: llmintrinsics
 
 
-_A list of LLMintrinsics_
+_A list of LLMIntrinsics_
 
 
 
@@ -71,7 +71,7 @@ Alias: llmintrinsics
 <details>
 ```yaml
 name: llmintrinsics
-description: A list of LLMintrinsics
+description: A list of LLMIntrinsics
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: llmintrinsics

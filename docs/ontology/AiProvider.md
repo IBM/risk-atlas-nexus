@@ -85,6 +85,7 @@ URI: [airo:AIProvider](https://w3id.org/airo#AIProvider)
 | [AiAgent](AiAgent.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
 | [AiModel](AiModel.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
+| [Adapter](Adapter.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
 
 
 

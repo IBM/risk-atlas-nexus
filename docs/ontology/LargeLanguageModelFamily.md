@@ -81,6 +81,7 @@ URI: [nexus:LargeLanguageModelFamily](https://ibm.github.io/risk-atlas-nexus/ont
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [aimodelfamilies](aimodelfamilies.md) | range | [LargeLanguageModelFamily](LargeLanguageModelFamily.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [isPartOf](isPartOf.md) | range | [LargeLanguageModelFamily](LargeLanguageModelFamily.md) |
+| [Adapter](Adapter.md) | [isPartOf](isPartOf.md) | range | [LargeLanguageModelFamily](LargeLanguageModelFamily.md) |
 
 
 
@@ -167,6 +168,7 @@ attributes:
     - LargeLanguageModelFamily
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Documentation
     multivalued: true

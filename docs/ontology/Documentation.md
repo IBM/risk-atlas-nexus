@@ -98,6 +98,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Question](Question.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Questionnaire](Questionnaire.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [Adapter](Adapter.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 
 
@@ -198,6 +199,7 @@ attributes:
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     range: License
   id:
     name: id

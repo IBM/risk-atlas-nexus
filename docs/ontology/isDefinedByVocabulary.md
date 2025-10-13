@@ -22,8 +22,9 @@ Alias: isDefinedByVocabulary
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 | [Term](Term.md) | A term and its definitions |  no  |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
 
 
 
@@ -77,6 +78,7 @@ slot_uri: schema:isPartOf
 alias: isDefinedByVocabulary
 domain_of:
 - Term
+- Adapter
 - LLMIntrinsic
 range: Vocabulary
 

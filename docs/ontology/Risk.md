@@ -223,6 +223,7 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [Adapter](Adapter.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 
 

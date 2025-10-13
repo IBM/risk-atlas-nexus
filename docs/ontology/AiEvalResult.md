@@ -90,6 +90,7 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
 | [Container](Container.md) | [aievalresults](aievalresults.md) | range | [AiEvalResult](AiEvalResult.md) |
 | [AiModel](AiModel.md) | [hasEvaluation](hasEvaluation.md) | range | [AiEvalResult](AiEvalResult.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [hasEvaluation](hasEvaluation.md) | range | [AiEvalResult](AiEvalResult.md) |
+| [Adapter](Adapter.md) | [hasEvaluation](hasEvaluation.md) | range | [AiEvalResult](AiEvalResult.md) |
 
 
 

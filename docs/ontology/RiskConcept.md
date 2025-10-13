@@ -112,6 +112,7 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [Adapter](Adapter.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedTerm](hasRelatedTerm.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 

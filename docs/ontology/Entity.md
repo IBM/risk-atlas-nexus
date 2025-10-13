@@ -133,7 +133,7 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [AiEval](AiEval.md)
     * [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
     * [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
-    * [Adapter](Adapter.md)
+    * [Adapter](Adapter.md) [ [LargeLanguageModel](LargeLanguageModel.md)]
     * [LLMIntrinsic](LLMIntrinsic.md)
     * [StakeholderGroup](StakeholderGroup.md)
     * [Stakeholder](Stakeholder.md)
