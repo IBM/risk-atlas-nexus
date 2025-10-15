@@ -95,6 +95,43 @@ classes:
     description: A representation of values or norms that must be taken into consideration when conducting activities
     class_uri: dpv:Principle
 
+  Policy:
+    is_a: Entity
+    description: "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."
+    class_uri: dpv:Policy
+    slots:
+      - isDefinedByTaxonomy
+
+  LLMQuestionPolicy:
+    is_a: Policy
+    description: The policy guides how the language model should answer a diverse set of sensitive questions.
+    slots:
+      - hasRelatedRisk
+      - hasRule
+      - hasReasonDenial
+      - hasShortReplyType
+      - hasException
+
+  Rule:
+    is_a: Entity
+    class_uri: dpv:Rule
+    description: "A rule describing a process or control that directs or determines if and how an activity should be conducted."
+
+  Permission:
+    is_a: Rule
+    description: "A rule describing a permission to perform an activity"
+    class_uri: dpv:Permission
+
+  Prohibition:
+    is_a: Rule
+    description: "A rule describing a prohibition to perform an activity"
+    class_uri: dpv:Prohibition
+
+  Obligation:
+    is_a: Rule
+    description: "A rule describing an obligation for performing an activity"
+    class_uri: dpv:Obligation
+
 slots:
   id:
     identifier: true
@@ -196,3 +233,27 @@ slots:
     description: Indicates child terms associated with a term
     multivalued: true
     inlined: false
+  hasRule:
+    slot_uri: dpv:hasRule
+    range: Rule
+    multivalued: true
+    inlined: false
+    description: Specifying applicability or inclusion of a rule within specified context.
+  hasReasonDenial:
+    slot_uri: nexus:hasReasonDenial
+    range: string
+    multivalued: false
+    inlined: true
+    description: Reason for denial
+  hasShortReplyType:
+    slot_uri: nexus:hasShortReplyType
+    range: string
+    multivalued: false
+    inlined: true
+    description: Short reply type
+  hasException:
+    slot_uri: nexus:hasException
+    range: string
+    multivalued: false
+    inlined: true
+    description: Exception type

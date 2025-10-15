@@ -168,3 +168,39 @@ classes:
         range: LargeLanguageModel
         inlined: true
         inlined_as_list: true
+      policies:
+        description: A list of policies
+        multivalued: true
+        range: Policy
+        inlined: true
+        inlined_as_list: true
+      llmquestionpolicies:
+        description: A list of LLM question policies
+        multivalued: true
+        range: LLMQuestionPolicy
+        inlined: true
+        inlined_as_list: true
+      rules:
+        description: A list of rules
+        multivalued: true
+        range: Rule
+        inlined: true
+        inlined_as_list: true
+      prohibitions:
+        description: A list of prohibitions
+        multivalued: true
+        range: Prohibition
+        inlined: true
+        inlined_as_list: true
+      permissions:
+        description: A list of Permissions
+        multivalued: true
+        range: Permission
+        inlined: true
+        inlined_as_list: true
+      obligations:
+        description: A list of Obligations
+        multivalued: true
+        range: Obligation
+        inlined: true
+        inlined_as_list: true

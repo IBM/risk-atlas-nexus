@@ -15,6 +15,7 @@ from sssom_schema import Mapping
 os.environ["KMP_DUPLICATE_LIB_OK"] = "True"
 os.environ["OMP_NUM_THREADS"] = "1"
 
+from risk_atlas_nexus.ai_risk_ontology import LLMQuestionPolicy, Rule
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Action,
     Adapter,
@@ -23,6 +24,7 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Dataset,
     Documentation,
     LLMIntrinsic,
+    Policy,
     Risk,
     RiskControl,
     RiskIncident,
@@ -1354,6 +1356,52 @@ class RiskAtlasNexus:
 
         adapter: Adapter | None = cls._risk_explorer.get_adapter(id=id)
         return adapter
+
+
+    def get_llm_question_policies(cls, taxonomy=None):
+        """Get all LLM Quesiton Policy definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[LLMQuestionPolicy]
+                Result containing a list of LLMQuestionPolicy entries
+        """
+        type_check(
+            "<RAN61796043E>",
+            str,
+            allow_none=True,
+            taxonomy=taxonomy,
+        )
+
+        llm_question_policy_instances: list[LLMQuestionPolicy] = cls._risk_explorer.get_llm_question_policies(taxonomy)
+        return llm_question_policy_instances
+
+    def get_llm_question_policy(cls, id=str):
+        """Get an LLM Question Policy definition from the LinkML, filtered by id
+
+        Args:
+            id: str
+                The string id identifying the LLM question policy entry
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            LLMQuestionPolicy
+                Result containing an LLM Question Policy.
+        """
+        type_check(
+            "<RAN32462418E>",
+            str,
+            allow_none=False,
+            id=id,
+        )
+
+        llm_question_policy: LLMQuestionPolicy | None = cls._risk_explorer.get_llm_question_policy(id=id)
+        return llm_question_policy
+
 
 
     def get_instances(cls, target_class, taxonomy=None):

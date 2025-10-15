@@ -380,6 +380,7 @@ class Term(Entity):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -409,6 +410,185 @@ class Principle(ConfiguredBaseModel):
          'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
 
     pass
+
+
+class Policy(Entity):
+    """
+    A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Policy',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
+
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
+         'domain_of': ['Policy',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
+class LLMQuestionPolicy(Policy):
+    """
+    The policy guides how the language model should answer a diverse set of sensitive questions.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
+
+    hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'alias': 'hasRelatedRisk',
+         'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
+         'domain': 'Any',
+         'domain_of': ['Term',
+                       'LLMQuestionPolicy',
+                       'Action',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic']} })
+    hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'alias': 'hasRule',
+         'domain_of': ['LLMQuestionPolicy'],
+         'slot_uri': 'dpv:hasRule'} })
+    hasReasonDenial: Optional[str] = Field(default=None, description="""Reason for denial""", json_schema_extra = { "linkml_meta": {'alias': 'hasReasonDenial',
+         'domain_of': ['LLMQuestionPolicy'],
+         'slot_uri': 'nexus:hasReasonDenial'} })
+    hasShortReplyType: Optional[str] = Field(default=None, description="""Short reply type""", json_schema_extra = { "linkml_meta": {'alias': 'hasShortReplyType',
+         'domain_of': ['LLMQuestionPolicy'],
+         'slot_uri': 'nexus:hasShortReplyType'} })
+    hasException: Optional[str] = Field(default=None, description="""Exception type""", json_schema_extra = { "linkml_meta": {'alias': 'hasException',
+         'domain_of': ['LLMQuestionPolicy'],
+         'slot_uri': 'nexus:hasException'} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
+         'domain_of': ['Policy',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'StakeholderGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
+class Rule(Entity):
+    """
+    A rule describing a process or control that directs or determines if and how an activity should be conducted.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Rule',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
+
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
+class Permission(Rule):
+    """
+    A rule describing a permission to perform an activity
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Permission',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
+
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
+class Prohibition(Rule):
+    """
+    A rule describing a prohibition to perform an activity
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Prohibition',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
+
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
+
+
+class Obligation(Rule):
+    """
+    A rule describing an obligation for performing an activity
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Obligation',
+         'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
+
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
 
 
 class RiskTaxonomy(Entity):
@@ -498,7 +678,8 @@ class RiskGroup(RiskConcept, Entity):
                                     'range': 'Risk'}}})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup',
+         'domain_of': ['Policy',
+                       'RiskGroup',
                        'Risk',
                        'RiskControl',
                        'Action',
@@ -561,7 +742,8 @@ class Risk(RiskConcept, Entity):
 
     hasRelatedAction: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to an action""", json_schema_extra = { "linkml_meta": {'alias': 'hasRelatedAction', 'domain_of': ['Risk']} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup',
+         'domain_of': ['Policy',
+                       'RiskGroup',
                        'Risk',
                        'RiskControl',
                        'Action',
@@ -636,7 +818,8 @@ class RiskControl(RiskConcept, Entity):
          'exact_mappings': ['airo:detectsRiskConcept'],
          'inverse': 'isDetectedBy'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup',
+         'domain_of': ['Policy',
+                       'RiskGroup',
                        'Risk',
                        'RiskControl',
                        'Action',
@@ -674,6 +857,7 @@ class Action(Entity):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -693,7 +877,8 @@ class Action(Entity):
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup',
+         'domain_of': ['Policy',
+                       'RiskGroup',
                        'Risk',
                        'RiskControl',
                        'Action',
@@ -731,7 +916,8 @@ class RiskIncident(RiskConcept, Entity):
          'domain_of': ['RiskIncident'],
          'exact_mappings': ['dpv:refersToRisk']} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup',
+         'domain_of': ['Policy',
+                       'RiskGroup',
                        'Risk',
                        'RiskControl',
                        'Action',
@@ -1541,6 +1727,7 @@ class AiEval(Entity):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -1631,6 +1818,7 @@ class BenchmarkMetadataCard(Entity):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -1721,6 +1909,7 @@ class Question(AiEval):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -1787,6 +1976,7 @@ class Questionnaire(AiEval):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -1851,6 +2041,7 @@ class Adapter(LargeLanguageModel, Entity):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -1915,6 +2106,7 @@ class LLMIntrinsic(Entity):
          'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
          'domain_of': ['Term',
+                       'LLMQuestionPolicy',
                        'Action',
                        'AiEval',
                        'BenchmarkMetadataCard',
@@ -1988,7 +2180,8 @@ class StakeholderGroup(Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/ai_csiro_rai'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup',
+         'domain_of': ['Policy',
+                       'RiskGroup',
                        'Risk',
                        'RiskControl',
                        'Action',
@@ -2024,7 +2217,8 @@ class Stakeholder(Entity):
                                      'range': 'StakeholderGroup'}}})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a risk or a risk group is defined by a risk taxonomy""", json_schema_extra = { "linkml_meta": {'alias': 'isDefinedByTaxonomy',
-         'domain_of': ['RiskGroup',
+         'domain_of': ['Policy',
+                       'RiskGroup',
                        'Risk',
                        'RiskControl',
                        'Action',
@@ -2081,6 +2275,12 @@ class Container(ConfiguredBaseModel):
     benchmarkmetadatacards: Optional[list[BenchmarkMetadataCard]] = Field(default=None, description="""A list of AI evaluation benchmark metadata cards""", json_schema_extra = { "linkml_meta": {'alias': 'benchmarkmetadatacards', 'domain_of': ['Container']} })
     aimodelfamilies: Optional[list[LargeLanguageModelFamily]] = Field(default=None, description="""A list of AI model families""", json_schema_extra = { "linkml_meta": {'alias': 'aimodelfamilies', 'domain_of': ['Container']} })
     aimodels: Optional[list[LargeLanguageModel]] = Field(default=None, description="""A list of AI models""", json_schema_extra = { "linkml_meta": {'alias': 'aimodels', 'domain_of': ['Container']} })
+    policies: Optional[list[Policy]] = Field(default=None, description="""A list of policies""", json_schema_extra = { "linkml_meta": {'alias': 'policies', 'domain_of': ['Container']} })
+    llmquestionpolicies: Optional[list[LLMQuestionPolicy]] = Field(default=None, description="""A list of LLM question policies""", json_schema_extra = { "linkml_meta": {'alias': 'llmquestionpolicies', 'domain_of': ['Container']} })
+    rules: Optional[list[Rule]] = Field(default=None, description="""A list of rules""", json_schema_extra = { "linkml_meta": {'alias': 'rules', 'domain_of': ['Container']} })
+    prohibitions: Optional[list[Prohibition]] = Field(default=None, description="""A list of prohibitions""", json_schema_extra = { "linkml_meta": {'alias': 'prohibitions', 'domain_of': ['Container']} })
+    permissions: Optional[list[Permission]] = Field(default=None, description="""A list of Permissions""", json_schema_extra = { "linkml_meta": {'alias': 'permissions', 'domain_of': ['Container']} })
+    obligations: Optional[list[Obligation]] = Field(default=None, description="""A list of Obligations""", json_schema_extra = { "linkml_meta": {'alias': 'obligations', 'domain_of': ['Container']} })
 
 
 # Model rebuild
@@ -2094,6 +2294,12 @@ Fact.model_rebuild()
 Vocabulary.model_rebuild()
 Term.model_rebuild()
 Principle.model_rebuild()
+Policy.model_rebuild()
+LLMQuestionPolicy.model_rebuild()
+Rule.model_rebuild()
+Permission.model_rebuild()
+Prohibition.model_rebuild()
+Obligation.model_rebuild()
 RiskTaxonomy.model_rebuild()
 RiskConcept.model_rebuild()
 RiskGroup.model_rebuild()

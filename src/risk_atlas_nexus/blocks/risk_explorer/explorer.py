@@ -22,6 +22,8 @@ class RiskExplorer(ExplorerBase):
         self._stakeholders = ontology.stakeholders or []
         self._llmintrinsics = ontology.llmintrinsics or []
         self._adapters = ontology.adapters or []
+        self._llmquestionpolicies = ontology.llmquestionpolicies or []
+        self._rules = ontology.rules or []
 
     def get_all_risks(self, taxonomy=None):
         """Get all risk definitions from the LinkML
@@ -898,7 +900,7 @@ class RiskExplorer(ExplorerBase):
 
         Returns:
             Adapter
-                Result containing a Adapter
+                Result containing an Adapter
         """
         matching_adapter_instances = list(
             filter(lambda adapter: adapter.id == id, self._adapters)
@@ -908,4 +910,48 @@ class RiskExplorer(ExplorerBase):
             return matching_adapter_instances[0]
         else:
             print("No matching adapter found")
+            return []
+
+    def get_llm_question_policies(self, taxonomy=None):
+        """Get all LLM Question Policy definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+
+        Returns:
+            list[LLMQuestionPolicy]
+                Result containing a list of LLM Question Policy entries
+        """
+        llm_question_policy_instances = self._llmquestionpolicies or []
+
+        if taxonomy is not None:
+            llm_question_policy_instances = list(
+                filter(
+                    lambda adapter: adapter.isDefinedByTaxonomy == taxonomy,
+                    llm_question_policy_instances,
+                )
+            )
+
+        return llm_question_policy_instances
+
+    def get_llm_question_policy(self, id):
+        """Get LLM Question Policy definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a LLM Question Policy entry
+
+        Returns:
+            policy
+                Result containing a LLM Question Policy
+        """
+        matching_llm_question_policy_instances = list(
+            filter(lambda llm_question_policy: llm_question_policy.id == id, self._llmquestionpolicies)
+        )
+
+        if len(matching_llm_question_policy_instances) > 0:
+            return matching_llm_question_policy_instances[0]
+        else:
+            print("No matching policy found")
             return []
