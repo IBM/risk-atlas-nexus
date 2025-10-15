@@ -38,6 +38,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [Any](Any.md) |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [Any](Any.md) |
 | [RiskGroup](RiskGroup.md) | [closeMatch](closeMatch.md) | range | [Any](Any.md) |
 | [RiskGroup](RiskGroup.md) | [exactMatch](exactMatch.md) | range | [Any](Any.md) |
 | [RiskGroup](RiskGroup.md) | [broadMatch](broadMatch.md) | range | [Any](Any.md) |

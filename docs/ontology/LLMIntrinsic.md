@@ -208,6 +208,7 @@ attributes:
     owner: LLMIntrinsic
     domain_of:
     - Term
+    - LLMQuestionPolicy
     - Action
     - AiEval
     - BenchmarkMetadataCard

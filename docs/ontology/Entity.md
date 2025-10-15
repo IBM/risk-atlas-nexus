@@ -34,6 +34,10 @@ URI: [schema:Thing](http://schema.org/Thing)
         click Vocabulary href "../Vocabulary"
       Entity <|-- Term
         click Term href "../Term"
+      Entity <|-- Policy
+        click Policy href "../Policy"
+      Entity <|-- Rule
+        click Rule href "../Rule"
       Entity <|-- RiskTaxonomy
         click RiskTaxonomy href "../RiskTaxonomy"
       Entity <|-- RiskGroup
@@ -112,6 +116,8 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [Documentation](Documentation.md)
     * [Vocabulary](Vocabulary.md)
     * [Term](Term.md)
+    * [Policy](Policy.md)
+    * [Rule](Rule.md)
     * [RiskTaxonomy](RiskTaxonomy.md)
     * [RiskGroup](RiskGroup.md) [ [RiskConcept](RiskConcept.md)]
     * [Risk](Risk.md) [ [RiskConcept](RiskConcept.md)]

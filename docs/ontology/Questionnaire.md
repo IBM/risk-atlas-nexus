@@ -304,6 +304,7 @@ attributes:
     owner: Questionnaire
     domain_of:
     - Term
+    - LLMQuestionPolicy
     - Action
     - AiEval
     - BenchmarkMetadataCard

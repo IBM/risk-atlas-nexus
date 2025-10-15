@@ -206,6 +206,7 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [risks](risks.md) | range | [Risk](Risk.md) |
 | [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [RiskGroup](RiskGroup.md) | [closeMatch](closeMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [RiskGroup](RiskGroup.md) | [exactMatch](exactMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [RiskGroup](RiskGroup.md) | [broadMatch](broadMatch.md) | any_of[range] | [Risk](Risk.md) |
@@ -424,6 +425,7 @@ attributes:
     alias: isDefinedByTaxonomy
     owner: Risk
     domain_of:
+    - Policy
     - RiskGroup
     - Risk
     - RiskControl

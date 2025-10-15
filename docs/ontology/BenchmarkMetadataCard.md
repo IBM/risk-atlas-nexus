@@ -584,6 +584,7 @@ attributes:
     owner: BenchmarkMetadataCard
     domain_of:
     - Term
+    - LLMQuestionPolicy
     - Action
     - AiEval
     - BenchmarkMetadataCard

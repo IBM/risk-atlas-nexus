@@ -183,6 +183,7 @@ attributes:
     owner: Action
     domain_of:
     - Term
+    - LLMQuestionPolicy
     - Action
     - AiEval
     - BenchmarkMetadataCard
@@ -227,6 +228,7 @@ attributes:
     alias: isDefinedByTaxonomy
     owner: Action
     domain_of:
+    - Policy
     - RiskGroup
     - Risk
     - RiskControl

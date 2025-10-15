@@ -50,12 +50,18 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Organization](Organization.md) | Any organizational entity such as a corporation, educational institution, con... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiOffice](AiOffice.md) | The EU AI Office (https://digital-strategy |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiProvider](AiProvider.md) | A provider under the AI Act is defined by Article 3(3) as a natural or legal ... |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Policy](Policy.md) | A guidance document outlining any of: procedures, plans, principles, decision... |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskConcept](RiskConcept.md) | An umbrella term for refering to risk, risk source, consequence and impact |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Rule](Rule.md) | A rule describing a process or control that directs or determines if and how ... |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Obligation](Obligation.md) | A rule describing an obligation for performing an activity |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Permission](Permission.md) | A rule describing a permission to perform an activity |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Prohibition](Prohibition.md) | A rule describing a prohibition to perform an activity |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Severity](Severity.md) |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Stakeholder](Stakeholder.md) | An AI system stakeholder for Responsible AI governance (e |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping |
@@ -123,6 +129,7 @@ Name: ai-risk-ontology
 | [hasEuAiSystemType](hasEuAiSystemType.md) | The type of system as defined by the EU AI Act |
 | [hasEuRiskCategory](hasEuRiskCategory.md) | The risk category of an AI system as defined by the EU AI Act |
 | [hasEvaluation](hasEvaluation.md) | A relationship indicating that an entity has an AI evaluation result |
+| [hasException](hasException.md) | Exception type |
 | [hasGoal](hasGoal.md) | The specific goal or primary use case the benchmark is designed for |
 | [hasImpact](hasImpact.md) | Indicates impact(s) possible or arising as consequences from specified concep... |
 | [hasImpactOn](hasImpactOn.md) | Indicates impact(s) possible or arising as consequences from specified concep... |
@@ -140,12 +147,15 @@ Name: ai-risk-ontology
 | [hasOutputModality](hasOutputModality.md) | A relationship indicating the output modalities supported by an AI component |
 | [hasParentDefinition](hasParentDefinition.md) | Indicates parent terms associated with a term |
 | [hasPart](hasPart.md) | A relationship where an entity has another entity |
+| [hasReasonDenial](hasReasonDenial.md) | Reason for denial |
 | [hasRelatedAction](hasRelatedAction.md) | A relationship where an entity relates to an action |
 | [hasRelatedRisk](hasRelatedRisk.md) | A relationship where an entity relates to a risk |
 | [hasRelatedTerm](hasRelatedTerm.md) | A relationship where an entity relates to a term |
 | [hasResources](hasResources.md) | Links to relevant resources, such as repositories or papers related to the be... |
 | [hasRiskControl](hasRiskControl.md) | Indicates the control measures associated with a system or component to modif... |
+| [hasRule](hasRule.md) | Specifying applicability or inclusion of a rule within specified context |
 | [hasSeverity](hasSeverity.md) | Indicates the severity associated with a concept |
+| [hasShortReplyType](hasShortReplyType.md) | Short reply type |
 | [hasSimilarBenchmarks](hasSimilarBenchmarks.md) | Benchmarks that are closely related in terms of goals or data type |
 | [hasStatus](hasStatus.md) | Indicates the status of specified concept |
 | [hasSubDefinition](hasSubDefinition.md) | Indicates child terms associated with a term |
@@ -168,17 +178,22 @@ Name: ai-risk-ontology
 | [isResultOf](isResultOf.md) | A relationship indicating that an entity is the result of an AI evaluation |
 | [licenses](licenses.md) | A list of licenses |
 | [llmintrinsics](llmintrinsics.md) | A list of LLMIntrinsics |
+| [llmquestionpolicies](llmquestionpolicies.md) | A list of LLM question policies |
 | [modalities](modalities.md) | A list of AI modalities |
 | [name](name.md) | A text name of this instance |
 | [narrowMatch](narrowMatch.md) | The property is used to state a hierarchical mapping link between two concept... |
 | [numParameters](numParameters.md) | A property indicating the number of parameters in a LLM |
 | [numTrainingTokens](numTrainingTokens.md) | The number of tokens a AI model was trained on |
+| [obligations](obligations.md) | A list of Obligations |
 | [organizations](organizations.md) | A list of organizations |
 | [overview](overview.md) | A brief description of the benchmark's main goals and scope |
 | [performsTask](performsTask.md) | relationship indicating the AI tasks an AI model can perform |
+| [permissions](permissions.md) | A list of Permissions |
 | [phase](phase.md) | Annotation whether an AI risk shows specifically during the training-tuning o... |
+| [policies](policies.md) | A list of policies |
 | [power_consumption_w](power_consumption_w.md) | power consumption in Watts |
 | [producer](producer.md) | A relationship to the Organization instance which produces this instance |
+| [prohibitions](prohibitions.md) | A list of prohibitions |
 | [provider](provider.md) | A relationship to the Organization instance that provides this instance |
 | [refersToRisk](refersToRisk.md) | Indicates the incident (subject) is a materialisation of the indicated risk (... |
 | [relatedMatch](relatedMatch.md) | The property skos:relatedMatch is used to state an associative mapping link b... |
@@ -186,6 +201,7 @@ Name: ai-risk-ontology
 | [riskgroups](riskgroups.md) | A list of AI risk groups |
 | [riskincidents](riskincidents.md) | A list of AI risk incidents |
 | [risks](risks.md) | A list of AI risks |
+| [rules](rules.md) | A list of rules |
 | [source_uri](source_uri.md) | The uri of the incident |
 | [stakeholdergroups](stakeholdergroups.md) | A list of AI stakeholder groups |
 | [stakeholders](stakeholders.md) | A list of stakeholders |

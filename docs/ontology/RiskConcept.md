@@ -93,6 +93,7 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [RiskGroup](RiskGroup.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [Risk](Risk.md) | [detectsRiskConcept](detectsRiskConcept.md) | range | [RiskConcept](RiskConcept.md) |
 | [Risk](Risk.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |

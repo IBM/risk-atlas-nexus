@@ -319,6 +319,7 @@ attributes:
     owner: Question
     domain_of:
     - Term
+    - LLMQuestionPolicy
     - Action
     - AiEval
     - BenchmarkMetadataCard

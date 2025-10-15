@@ -152,6 +152,17 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
 
 
+      Container : llmquestionpolicies
+
+
+
+
+
+        Container --> "*" LLMQuestionPolicy : llmquestionpolicies
+        click LLMQuestionPolicy href "../LLMQuestionPolicy"
+
+
+
       Container : modalities
 
 
@@ -163,6 +174,17 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
 
 
+      Container : obligations
+
+
+
+
+
+        Container --> "*" Obligation : obligations
+        click Obligation href "../Obligation"
+
+
+
       Container : organizations
 
 
@@ -171,6 +193,39 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
         Container --> "*" Organization : organizations
         click Organization href "../Organization"
+
+
+
+      Container : permissions
+
+
+
+
+
+        Container --> "*" Permission : permissions
+        click Permission href "../Permission"
+
+
+
+      Container : policies
+
+
+
+
+
+        Container --> "*" Policy : policies
+        click Policy href "../Policy"
+
+
+
+      Container : prohibitions
+
+
+
+
+
+        Container --> "*" Prohibition : prohibitions
+        click Prohibition href "../Prohibition"
 
 
 
@@ -215,6 +270,17 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
         Container --> "*" Risk : risks
         click Risk href "../Risk"
+
+
+
+      Container : rules
+
+
+
+
+
+        Container --> "*" Rule : rules
+        click Rule href "../Rule"
 
 
 
@@ -309,6 +375,12 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 | [benchmarkmetadatacards](benchmarkmetadatacards.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A list of AI evaluation benchmark metadata cards | direct |
 | [aimodelfamilies](aimodelfamilies.md) | * <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A list of AI model families | direct |
 | [aimodels](aimodels.md) | * <br/> [LargeLanguageModel](LargeLanguageModel.md) | A list of AI models | direct |
+| [policies](policies.md) | * <br/> [Policy](Policy.md) | A list of policies | direct |
+| [llmquestionpolicies](llmquestionpolicies.md) | * <br/> [LLMQuestionPolicy](LLMQuestionPolicy.md) | A list of LLM question policies | direct |
+| [rules](rules.md) | * <br/> [Rule](Rule.md) | A list of rules | direct |
+| [prohibitions](prohibitions.md) | * <br/> [Prohibition](Prohibition.md) | A list of prohibitions | direct |
+| [permissions](permissions.md) | * <br/> [Permission](Permission.md) | A list of Permissions | direct |
+| [obligations](obligations.md) | * <br/> [Obligation](Obligation.md) | A list of Obligations | direct |
 
 
 
@@ -609,6 +681,72 @@ attributes:
     domain_of:
     - Container
     range: LargeLanguageModel
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  policies:
+    name: policies
+    description: A list of policies
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Policy
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  llmquestionpolicies:
+    name: llmquestionpolicies
+    description: A list of LLM question policies
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: LLMQuestionPolicy
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  rules:
+    name: rules
+    description: A list of rules
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Rule
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  prohibitions:
+    name: prohibitions
+    description: A list of prohibitions
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Prohibition
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  permissions:
+    name: permissions
+    description: A list of Permissions
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Permission
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  obligations:
+    name: obligations
+    description: A list of Obligations
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Obligation
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -921,6 +1059,84 @@ attributes:
     domain_of:
     - Container
     range: LargeLanguageModel
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  policies:
+    name: policies
+    description: A list of policies
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: policies
+    owner: Container
+    domain_of:
+    - Container
+    range: Policy
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  llmquestionpolicies:
+    name: llmquestionpolicies
+    description: A list of LLM question policies
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: llmquestionpolicies
+    owner: Container
+    domain_of:
+    - Container
+    range: LLMQuestionPolicy
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  rules:
+    name: rules
+    description: A list of rules
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: rules
+    owner: Container
+    domain_of:
+    - Container
+    range: Rule
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  prohibitions:
+    name: prohibitions
+    description: A list of prohibitions
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: prohibitions
+    owner: Container
+    domain_of:
+    - Container
+    range: Prohibition
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  permissions:
+    name: permissions
+    description: A list of Permissions
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: permissions
+    owner: Container
+    domain_of:
+    - Container
+    range: Permission
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  obligations:
+    name: obligations
+    description: A list of Obligations
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: obligations
+    owner: Container
+    domain_of:
+    - Container
+    range: Obligation
     multivalued: true
     inlined: true
     inlined_as_list: true

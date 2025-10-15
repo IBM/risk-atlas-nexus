@@ -434,6 +434,7 @@ attributes:
     owner: Adapter
     domain_of:
     - Term
+    - LLMQuestionPolicy
     - Action
     - AiEval
     - BenchmarkMetadataCard

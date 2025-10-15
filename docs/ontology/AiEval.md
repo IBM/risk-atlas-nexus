@@ -341,6 +341,7 @@ attributes:
     owner: AiEval
     domain_of:
     - Term
+    - LLMQuestionPolicy
     - Action
     - AiEval
     - BenchmarkMetadataCard

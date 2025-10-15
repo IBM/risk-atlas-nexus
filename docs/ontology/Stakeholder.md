@@ -177,6 +177,7 @@ attributes:
     alias: isDefinedByTaxonomy
     owner: Stakeholder
     domain_of:
+    - Policy
     - RiskGroup
     - Risk
     - RiskControl

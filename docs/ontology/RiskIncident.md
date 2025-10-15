@@ -335,6 +335,7 @@ attributes:
     alias: isDefinedByTaxonomy
     owner: RiskIncident
     domain_of:
+    - Policy
     - RiskGroup
     - Risk
     - RiskControl

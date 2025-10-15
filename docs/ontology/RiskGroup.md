@@ -269,6 +269,7 @@ attributes:
     alias: isDefinedByTaxonomy
     owner: RiskGroup
     domain_of:
+    - Policy
     - RiskGroup
     - Risk
     - RiskControl
