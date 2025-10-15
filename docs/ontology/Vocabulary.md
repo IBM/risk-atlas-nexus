@@ -96,6 +96,7 @@ URI: [nexus:Vocabulary](https://ibm.github.io/risk-atlas-nexus/ontology/Vocabula
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [vocabularies](vocabularies.md) | range | [Vocabulary](Vocabulary.md) |
 | [Term](Term.md) | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Adapter](Adapter.md) | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
 
 
@@ -192,6 +193,7 @@ attributes:
     - LargeLanguageModelFamily
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Documentation
     multivalued: true
@@ -212,6 +214,7 @@ attributes:
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     range: License
   id:
     name: id

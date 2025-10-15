@@ -294,6 +294,7 @@ attributes:
     - LargeLanguageModelFamily
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Documentation
     multivalued: true
@@ -314,6 +315,7 @@ attributes:
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     range: License
   performsTask:
     name: performsTask

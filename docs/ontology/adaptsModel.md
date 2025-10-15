@@ -1,16 +1,16 @@
 
 
-# Slot: gpu_hours
+# Slot: adaptsModel
 
 
-_GPU consumption in terms of hours_
+_The LargeLanguageModel being adapted_
 
 
 
 
 
-URI: [nexus:gpu_hours](https://ibm.github.io/risk-atlas-nexus/ontology/gpu_hours)
-Alias: gpu_hours
+URI: [nexus:adaptsModel](https://ibm.github.io/risk-atlas-nexus/ontology/adaptsModel)
+Alias: adaptsModel
 
 <!-- no inheritance hierarchy -->
 
@@ -23,8 +23,6 @@ Alias: gpu_hours
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 
 
 
@@ -34,9 +32,7 @@ Alias: gpu_hours
 
 ## Properties
 
-* Range: [Integer](Integer.md)
-
-* Minimum Value: 0
+* Range: [LargeLanguageModel](LargeLanguageModel.md)
 
 
 
@@ -62,8 +58,8 @@ Alias: gpu_hours
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | nexus:gpu_hours |
-| native | nexus:gpu_hours |
+| self | nexus:adaptsModel |
+| native | nexus:adaptsModel |
 
 
 
@@ -72,15 +68,14 @@ Alias: gpu_hours
 
 <details>
 ```yaml
-name: gpu_hours
-description: GPU consumption in terms of hours
+name: adaptsModel
+description: The LargeLanguageModel being adapted
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
-alias: gpu_hours
+alias: adaptsModel
 domain_of:
-- AiModel
-range: integer
-minimum_value: 0
+- Adapter
+range: LargeLanguageModel
 
 ```
 </details>

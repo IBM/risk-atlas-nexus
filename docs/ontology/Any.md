@@ -53,6 +53,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [Any](Any.md) |
 | [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [Any](Any.md) |
 | [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [Any](Any.md) |
+| [Adapter](Adapter.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [Any](Any.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | domain | [Any](Any.md) |
 | [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedTerm](hasRelatedTerm.md) | domain | [Any](Any.md) |
 

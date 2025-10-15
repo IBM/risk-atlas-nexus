@@ -22,6 +22,7 @@ Alias: numTrainingTokens
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 
 

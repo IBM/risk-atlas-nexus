@@ -18,12 +18,23 @@ Alias: hasAdapter
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+
+
+
+
 
 
 
 ## Properties
 
 * Range: [Adapter](Adapter.md)
+
+* Multivalued: True
 
 
 
@@ -63,8 +74,13 @@ name: hasAdapter
 description: The Adapter for the intrinsic
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
+domain: LLMIntrinsic
 alias: hasAdapter
+domain_of:
+- LLMIntrinsic
 range: Adapter
+multivalued: true
+inlined: false
 
 ```
 </details>

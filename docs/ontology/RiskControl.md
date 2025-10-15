@@ -116,6 +116,7 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 | [Impact](Impact.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
 | [AiModel](AiModel.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
+| [Adapter](Adapter.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
 
 
 

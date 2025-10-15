@@ -23,6 +23,11 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/risk-atlas-nexus/ontology/
       AiModel <|-- LargeLanguageModel
         click AiModel href "../AiModel"
 
+
+      LargeLanguageModel <|-- Adapter
+        click Adapter href "../Adapter"
+
+
       LargeLanguageModel : architecture
 
       LargeLanguageModel : carbon_emitted
@@ -232,6 +237,7 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/risk-atlas-nexus/ontology/
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [aimodels](aimodels.md) | range | [LargeLanguageModel](LargeLanguageModel.md) |
+| [Adapter](Adapter.md) | [adaptsModel](adaptsModel.md) | range | [LargeLanguageModel](LargeLanguageModel.md) |
 
 
 
@@ -549,6 +555,7 @@ attributes:
     - LargeLanguageModelFamily
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Documentation
     multivalued: true
@@ -569,6 +576,7 @@ attributes:
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     range: License
   performsTask:
     name: performsTask

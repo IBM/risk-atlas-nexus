@@ -36,15 +36,33 @@ We run a series of checks on the codebase on every commit using pre-commit. To i
 To run the checks on-demand, run:
 `pre-commit run --all-files`
 
+## Secret scanning
+This repository uses IBM's [detect-secrets](https://github.com/ibm/detect-secrets) to scan for secrets before the code is pushed to GitHub. Follow installation instructions in their repository: https://github.com/ibm/detect-secrets?tab=readme-ov-file#example-usage
+
+To update the secrets database manually, run:
+```
+detect-secrets scan --update .secrets.baseline
+```
+To audit detected secrets, use:
+```
+detect-secrets audit .secrets.baseline
+```
+If the pre-commit hook raises an error but the audit command succeeds with just `Nothing to audit!` then run `detect-secrets scan --update .secrets.baseline` to perform a full scan and then repeat the audit command.
+
+
 ## Contributing to documentation
-`python3.11 -m pip install -e ".[docs]"`
+`pip install -e ".[docs]"`
 
 We use [MkDocs](https://www.mkdocs.org/) to write documentation.
 
+To build documentation, run
+```bash
+JUPYTER_PLATFORM_DIRS=1 mkdocs build
+```
 To run the documentation server, run:
 
 ```bash
-mkdocs serve
+JUPYTER_PLATFORM_DIRS=1 mkdocs serve
 ```
 
 The server will be available at [http://localhost:8000](http://localhost:8000).

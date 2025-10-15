@@ -22,7 +22,7 @@ Alias: hasAdapterType
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 
 
 
@@ -74,7 +74,7 @@ from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasAdapterType
 domain_of:
-- LLMIntrinsic
+- Adapter
 range: AdapterType
 
 ```

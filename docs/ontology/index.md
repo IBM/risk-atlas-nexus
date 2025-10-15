@@ -72,6 +72,7 @@ Name: ai-risk-ontology
 | --- | --- |
 | [actions](actions.md) | A list of risk related actions |
 | [adapters](adapters.md) | A list of Adapters |
+| [adaptsModel](adaptsModel.md) | The LargeLanguageModel being adapted |
 | [aievalresults](aievalresults.md) | A list of AI evaluation results |
 | [aimodelfamilies](aimodelfamilies.md) | A list of AI model families |
 | [aimodels](aimodels.md) | A list of AI models |
@@ -166,7 +167,7 @@ Name: ai-risk-ontology
 | [isProvidedBy](isProvidedBy.md) | A relationship indicating the AI model has been provided by an AI model provi... |
 | [isResultOf](isResultOf.md) | A relationship indicating that an entity is the result of an AI evaluation |
 | [licenses](licenses.md) | A list of licenses |
-| [llmintrinsics](llmintrinsics.md) | A list of LLMintrinsics |
+| [llmintrinsics](llmintrinsics.md) | A list of LLMIntrinsics |
 | [modalities](modalities.md) | A list of AI modalities |
 | [name](name.md) | A text name of this instance |
 | [narrowMatch](narrowMatch.md) | The property is used to state a hierarchical mapping link between two concept... |

@@ -108,6 +108,7 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 | [AiEval](AiEval.md) | [hasDataset](hasDataset.md) | range | [Dataset](Dataset.md) |
 | [Question](Question.md) | [hasDataset](hasDataset.md) | range | [Dataset](Dataset.md) |
 | [Questionnaire](Questionnaire.md) | [hasDataset](hasDataset.md) | range | [Dataset](Dataset.md) |
+| [Adapter](Adapter.md) | [hasTrainingData](hasTrainingData.md) | range | [Dataset](Dataset.md) |
 
 
 
@@ -189,6 +190,7 @@ attributes:
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     range: License
   hasDocumentation:
     name: hasDocumentation
@@ -208,6 +210,7 @@ attributes:
     - LargeLanguageModelFamily
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Documentation
     multivalued: true

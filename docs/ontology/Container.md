@@ -292,7 +292,7 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 | [aitasks](aitasks.md) | * <br/> [AiTask](AiTask.md) | A list of AI tasks | direct |
 | [documents](documents.md) | * <br/> [Documentation](Documentation.md) | A list of documents | direct |
 | [datasets](datasets.md) | * <br/> [Dataset](Dataset.md) | A list of data sets | direct |
-| [llmintrinsics](llmintrinsics.md) | * <br/> [LLMIntrinsic](LLMIntrinsic.md) | A list of LLMintrinsics | direct |
+| [llmintrinsics](llmintrinsics.md) | * <br/> [LLMIntrinsic](LLMIntrinsic.md) | A list of LLMIntrinsics | direct |
 | [adapters](adapters.md) | * <br/> [Adapter](Adapter.md) | A list of Adapters | direct |
 | [taxonomies](taxonomies.md) | * <br/> [RiskTaxonomy](RiskTaxonomy.md) | A list of AI risk taxonomies | direct |
 | [vocabularies](vocabularies.md) | * <br/> [Vocabulary](Vocabulary.md) | A list of vocabularies | direct |
@@ -427,7 +427,7 @@ attributes:
     inlined_as_list: true
   llmintrinsics:
     name: llmintrinsics
-    description: A list of LLMintrinsics
+    description: A list of LLMIntrinsics
     from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain_of:
@@ -705,7 +705,7 @@ attributes:
     inlined_as_list: true
   llmintrinsics:
     name: llmintrinsics
-    description: A list of LLMintrinsics
+    description: A list of LLMIntrinsics
     from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: llmintrinsics

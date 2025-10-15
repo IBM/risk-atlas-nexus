@@ -9,7 +9,7 @@ _A capability that can be invoked through a well-defined API that is reasonably 
 
 
 
-URI: [nexus:LLMIntrinsic](https://ibm.github.io/risk-atlas-nexus/ontology/LLMIntrinsic)
+URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
 
 
@@ -29,14 +29,14 @@ URI: [nexus:LLMIntrinsic](https://ibm.github.io/risk-atlas-nexus/ontology/LLMInt
 
       LLMIntrinsic : description
 
-      LLMIntrinsic : hasAdapterType
+      LLMIntrinsic : hasAdapter
 
 
 
 
 
-        LLMIntrinsic --> "0..1" AdapterType : hasAdapterType
-        click AdapterType href "../AdapterType"
+        LLMIntrinsic --> "*" Adapter : hasAdapter
+        click Adapter href "../Adapter"
 
 
 
@@ -109,9 +109,9 @@ URI: [nexus:LLMIntrinsic](https://ibm.github.io/risk-atlas-nexus/ontology/LLMInt
 | ---  | --- | --- | --- |
 | [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk | direct |
 | [hasRelatedTerm](hasRelatedTerm.md) | * <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a term | direct |
-| [hasAdapterType](hasAdapterType.md) | 0..1 <br/> [AdapterType](AdapterType.md) | The Adapter type, for example: LORA, ALORA, X-LORA | direct |
 | [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | direct |
 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md) | A relationship where a term or a term group is defined by a vocabulary | direct |
+| [hasAdapter](hasAdapter.md) | * <br/> [Adapter](Adapter.md) | The Adapter for the intrinsic | direct |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -128,6 +128,7 @@ URI: [nexus:LLMIntrinsic](https://ibm.github.io/risk-atlas-nexus/ontology/LLMInt
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Container](Container.md) | [llmintrinsics](llmintrinsics.md) | range | [LLMIntrinsic](LLMIntrinsic.md) |
+| [LLMIntrinsic](LLMIntrinsic.md) | [hasAdapter](hasAdapter.md) | domain | [LLMIntrinsic](LLMIntrinsic.md) |
 
 
 
@@ -154,7 +155,7 @@ URI: [nexus:LLMIntrinsic](https://ibm.github.io/risk-atlas-nexus/ontology/LLMInt
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | nexus:LLMIntrinsic |
+| self | ai:Capability |
 | native | nexus:LLMIntrinsic |
 
 
@@ -179,9 +180,10 @@ is_a: Entity
 slots:
 - hasRelatedRisk
 - hasRelatedTerm
-- hasAdapterType
 - hasDocumentation
 - isDefinedByVocabulary
+- hasAdapter
+class_uri: ai:Capability
 
 ```
 </details>
@@ -209,6 +211,7 @@ attributes:
     - Action
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Risk
     multivalued: true
@@ -232,16 +235,6 @@ attributes:
     any_of:
     - range: RiskConcept
     - range: Term
-  hasAdapterType:
-    name: hasAdapterType
-    description: 'The Adapter type, for example: LORA, ALORA, X-LORA'
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
-    rank: 1000
-    alias: hasAdapterType
-    owner: LLMIntrinsic
-    domain_of:
-    - LLMIntrinsic
-    range: AdapterType
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
@@ -260,6 +253,7 @@ attributes:
     - LargeLanguageModelFamily
     - AiEval
     - BenchmarkMetadataCard
+    - Adapter
     - LLMIntrinsic
     range: Documentation
     multivalued: true
@@ -274,8 +268,22 @@ attributes:
     owner: LLMIntrinsic
     domain_of:
     - Term
+    - Adapter
     - LLMIntrinsic
     range: Vocabulary
+  hasAdapter:
+    name: hasAdapter
+    description: The Adapter for the intrinsic
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: LLMIntrinsic
+    alias: hasAdapter
+    owner: LLMIntrinsic
+    domain_of:
+    - LLMIntrinsic
+    range: Adapter
+    multivalued: true
+    inlined: false
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -348,6 +356,7 @@ attributes:
     - Entity
     range: date
     required: false
+class_uri: ai:Capability
 
 ```
 </details>

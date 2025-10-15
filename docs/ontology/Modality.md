@@ -70,6 +70,8 @@ URI: [airo:Modality](https://w3id.org/airo#Modality)
 | [Container](Container.md) | [modalities](modalities.md) | range | [Modality](Modality.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [hasInputModality](hasInputModality.md) | range | [Modality](Modality.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [hasOutputModality](hasOutputModality.md) | range | [Modality](Modality.md) |
+| [Adapter](Adapter.md) | [hasInputModality](hasInputModality.md) | range | [Modality](Modality.md) |
+| [Adapter](Adapter.md) | [hasOutputModality](hasOutputModality.md) | range | [Modality](Modality.md) |
 
 
 
