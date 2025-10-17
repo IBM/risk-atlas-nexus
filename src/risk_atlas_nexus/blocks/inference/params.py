@@ -151,6 +151,8 @@ class TextGenerationInferenceOutput:
         model_name (str): the model_name as kept in the InferenceEngine.
 
         inference_engine (str): The label stating the type of the InferenceEngine.
+
+        thinking: When thinking is enabled in ollama (think=True), the output will separate the model's thinking from the model's output.
     """
 
     prediction: Union[str, List[Dict[str, Any]]]
@@ -161,6 +163,7 @@ class TextGenerationInferenceOutput:
     input_text: Optional[str] = None
     model_name_or_path: Optional[str] = None
     inference_engine: Optional[str] = None
+    thinking: Optional[str] = None
 
 
 OpenAIChatCompletionMessageParam: TypeAlias = List[ChatCompletionMessageParam]
