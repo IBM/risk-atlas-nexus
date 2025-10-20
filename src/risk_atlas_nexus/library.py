@@ -1,3 +1,4 @@
+from copy import deepcopy
 import json
 import os
 from importlib.metadata import version
@@ -59,7 +60,23 @@ from risk_atlas_nexus.toolkit.logging import configure_logger
 logger = configure_logger(__name__)
 RISK_IDENTIFICATION_COT = load_resource("risk_generation_cot.json")
 
+USECASE_STAKEHOLDER_PROMPT = """
+Your task is to predict stakeholders that are users or subjects of a use case.
 
+Usecase:
+{{ usecase }}
+
+{% if candidate_labels %}
+Choose zero or more stakeholders from this allowed list ONLY:
+{% for s in candidate_labels %}
+- {{ s }}
+{% endfor %}
+Return ONLY a JSON array of strings, each exactly matching one allowed label.
+{% else %}
+Extract zero or more stakeholder groups (free-form) as concise strings (e.g., "patients", "IT admins", "drivers").
+Return ONLY a JSON array of strings (no duplicates, max 5 words each).
+{% endif %}
+"""
 class RiskAtlasNexus:
     """A RiskAtlasNexus object"""
 
@@ -1491,6 +1508,63 @@ class RiskAtlasNexus:
             postprocessors=["json_object"],
             verbose=verbose,
         )
+
+
+    def identify_stakeholders_from_usecases(
+        cls,
+        usecases: List[str],
+        inference_engine: InferenceEngine,
+        candidate_labels: Optional[List[str]] = None, 
+        max_items: int = 10,
+        verbose: bool = True,
+    ) -> List[List[str]]:
+        """Infer usecase/intent based stakeholders directly from the input usecase.
+
+        Args:
+            usecases: List of use case strings.
+            inference_engine: LLM engine to invoke.
+            candidate_labels: Optional list of allowed stakeholder labels. If provided,
+                outputs will be limited to this set. If None, free-form labels will be used (extracted using a prompt).
+            max_items: Upper limit on the number of stakeholders to return per usecase. This is only used if `candidate_labels` is None.
+        Returns:
+            For each usecase, a list of stakeholder strings.
+        """
+        # Type and value checks
+        type_check("<RAN-STK-IE>", InferenceEngine, allow_none=False, inference_engine=inference_engine) # STK = Stakeholder
+        type_check("<RAN-STK-UC>", List, allow_none=False, usecases=usecases) # UC = Usecases
+        type_check("<RAN-STK-MI>", int, allow_none=False, max_items=max_items) # MI = Max Items
+        value_check("<RAN-STK-VAL>", inference_engine and usecases, "Please provide usecases and inference_engine") # VAL = Value
+        if candidate_labels is not None:
+            type_check("<RAN-STK-LISTLABELS>", List, allow_none=False, candidate_labels=candidate_labels) # LISTLABELS = List of Labels
+            value_check("<RAN-STK-LABELS>", all(isinstance(x, str) for x in candidate_labels), "candidate_labels must be list[str]")
+
+        # JSON schema for responses
+        json_schema = deepcopy(LIST_OF_STR_SCHEMA) # May be better to use deepcopy here to avoid mutation issues.
+        if candidate_labels:
+            # If user inputs candidate labels, we restrict outputs to these
+            json_schema["items"]["enum"] = candidate_labels
+        else:
+            # Free-form list of short strings
+            json_schema["items"]["type"] = "string"
+            json_schema["minItems"] = 0
+            json_schema["maxItems"] = max_items
+
+        # Prompts to infer stakeholders
+        prompts = [
+            Template(USECASE_STAKEHOLDER_PROMPT).render(
+                usecase=usecase,
+                candidate_labels=candidate_labels or [],
+            )
+            for usecase in usecases
+        ]
+
+        return inference_engine.generate(
+            prompts=prompts,
+            response_format=json_schema,
+            postprocessors=["list_of_str"],
+            verbose=verbose,
+        )
+
 
     def categorize_risk_severity(
         self,
