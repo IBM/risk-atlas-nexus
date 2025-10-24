@@ -25,6 +25,11 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
       Entity <|-- RiskControl
         click Entity href "../Entity"
 
+
+      RiskControl <|-- Action
+        click Action href "../Action"
+
+
       RiskControl : dateCreated
 
       RiskControl : dateModified
@@ -80,6 +85,7 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 ## Inheritance
 * [Entity](Entity.md)
     * **RiskControl** [ [RiskConcept](RiskConcept.md)]
+        * [Action](Action.md)
 
 
 
@@ -112,6 +118,8 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 | [RiskConcept](RiskConcept.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
 | [RiskControl](RiskControl.md) | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
 | [RiskControl](RiskControl.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
+| [Action](Action.md) | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
+| [Action](Action.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
 | [RiskIncident](RiskIncident.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
 | [Impact](Impact.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
 | [AiModel](AiModel.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |

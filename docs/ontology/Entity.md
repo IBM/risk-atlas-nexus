@@ -48,8 +48,6 @@ URI: [schema:Thing](http://schema.org/Thing)
         click RiskConcept href "../RiskConcept"
       Entity <|-- RiskControl
         click RiskControl href "../RiskControl"
-      Entity <|-- Action
-        click Action href "../Action"
       Entity <|-- RiskIncident
         click RiskIncident href "../RiskIncident"
       Entity <|-- Impact
@@ -123,7 +121,6 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [Risk](Risk.md) [ [RiskConcept](RiskConcept.md)]
     * [RiskConcept](RiskConcept.md)
     * [RiskControl](RiskControl.md) [ [RiskConcept](RiskConcept.md)]
-    * [Action](Action.md)
     * [RiskIncident](RiskIncident.md) [ [RiskConcept](RiskConcept.md)]
     * [Impact](Impact.md) [ [RiskConcept](RiskConcept.md)]
     * [IncidentStatus](IncidentStatus.md)

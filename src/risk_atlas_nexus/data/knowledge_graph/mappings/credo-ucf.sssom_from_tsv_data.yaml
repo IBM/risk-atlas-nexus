@@ -1585,14 +1585,14 @@ risks:
   - credo-risk-042
 - id: credo-risk-042
   relatedMatch:
-  - atlas-job-loss
-- id: atlas-job-loss
+  - atlas-impact-on-jobs
+- id: atlas-impact-on-jobs
   relatedMatch:
   - credo-risk-042
 - id: credo-risk-042
   relatedMatch:
-  - atlas-job-loss
-- id: atlas-job-loss
+  - atlas-impact-on-jobs
+- id: atlas-impact-on-jobs
   relatedMatch:
   - credo-risk-042
 - id: credo-risk-043

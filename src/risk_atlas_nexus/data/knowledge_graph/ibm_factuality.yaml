@@ -192,7 +192,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.12397
     - arxiv.org/2409.15398
-    adaptsModel: granite-guardian-3.2-8b-instruct
+    adaptsModel: granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-alora-uncertainty
     name: "Granite 3.3 8B Instruct - Uncertainty aLoRA"
     description: >-
@@ -218,7 +218,7 @@ adapters:
     url: https://huggingface.co/ibm-granite/granite-3.2-8b-alora-uncertainty
     hasDocumentation:
     - arxiv.org/2504.12397
-    adaptsModel: granite-guardian-3.2-8b-instruct
+    adaptsModel: granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-requirement-checker
     name: "Granite 3.3 8B Instruct - Requirement Checker"
     description: >-
@@ -244,7 +244,7 @@ adapters:
     url: https://huggingface.co/ibm-granite/granite-3.2-8b-alora-requirement-check
     hasDocumentation:
     - arxiv.org/2504.12397
-    adaptsModel: granite-guardian-3.2-8b-instruct
+    adaptsModel: granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-query-rewrite
     name: "Granite 3.2 8B Instruct - Query Rewrite aLoRA"
     description: >-
@@ -261,7 +261,7 @@ adapters:
     hasLicense: license-apache-2.0
     hasRelatedRisk:
     - granite-relevance
-    adaptsModel: granite-guardian-3.2-8b-instruct
+    adaptsModel: granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-answerability-classification
     name: "Granite 3.2 8B Instruct - Answerability Classification aLoRA"
     description: >-
@@ -274,7 +274,7 @@ adapters:
     hasDocumentation:
     - arxiv.org/2504.12397
     hasAdapterType: ALORA
-    adaptsModel: granite-guardian-3.2-8b-instruct
+    adaptsModel: granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-math-prm
     # missing parent intrinsic
     name: "Granite-3.3-8B-LoRA-Math-PRM"
@@ -309,8 +309,6 @@ llmintrinsics:
     - ibm-factuality-adapter-granite-3.2-8b-instruct-alora-query-rewrite
     hasDocumentation:
     - arxiv.org/2504.11704
-    hasRelatedTerm:
-    - ibm-factuality-query-rewrite
     hasRelatedRisk:
     - granite-relevance
   - id: ibm-factuality-intrinsic-qe
@@ -325,8 +323,6 @@ llmintrinsics:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
     hasDocumentation:
     - arxiv.org/2504.11704
-    hasRelatedTerm:
-    - ibm-factuality-query-expansion
     hasRelatedRisk:
     - granite-relevance
   - id: ibm-factuality-intrinsic-cr
@@ -355,7 +351,7 @@ llmintrinsics:
     hasRelatedRisk:
     - granite-relevance
     - atlas-hallucination
-    - atlas-over-under-reliance
+    - atlas-over-or-under-reliance
     hasAdapter:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
     - ibm-factuality-adapter-granite-3.2-8b-instruct-alora-answerability-classification
@@ -409,7 +405,7 @@ llmintrinsics:
     - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-hallucination-detection
     hasRelatedRisk:
     - atlas-hallucination
-    - atlas-function-calling-hallucination
+    - atlas-function-calling-hallucination-agentic
     - nist-confabulation
     - llm092025-misinformation
     - credo-risk-021
@@ -430,7 +426,7 @@ llmintrinsics:
     hasRelatedRisk:
     - granite-relevance
     - atlas-hallucination
-    - atlas-over-under-reliance
+    - atlas-over-or-under-reliance
   - id: ibm-factuality-intrinsic-jailbreak
     name: Jailbreak Detection
     description: >-
@@ -444,6 +440,6 @@ llmintrinsics:
     hasAdapter:
     - ibm-factuality-adapter-granite-3.2-8b-instruct-alora-jailbreak
     hasRelatedRisk:
-    - atlas-jailbreak
+    - atlas-jailbreaking
     - nist-information-security
     - llm052025-improper-output-handling

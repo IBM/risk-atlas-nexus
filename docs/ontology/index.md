@@ -15,7 +15,6 @@ Name: ai-risk-ontology
 | [Any](Any.md) |  |
 | [Container](Container.md) | An umbrella object that holds the ontology class instances |
 | [Entity](Entity.md) | A generic grouping for any identifiable entity |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Action](Action.md) | Action to remediate a risk |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiEval](AiEval.md) | An AI Evaluation, e |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Question](Question.md) | An evaluation where a question has to be answered |
@@ -55,6 +54,7 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskConcept](RiskConcept.md) | An umbrella term for refering to risk, risk source, consequence and impact |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Action](Action.md) | Action to remediate a risk |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |

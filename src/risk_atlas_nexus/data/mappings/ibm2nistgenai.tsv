@@ -19,13 +19,13 @@ ibmairisk:atlas-harmful-output	harmful output	skos:relatedMatch	nistai:nist-data
 ibmairisk:atlas-confidential-information-in-data	confidential information in data	skos:broadMatch	nistai:nist-intellectual-property	Intellectual Property	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-unrepresentative-data	unrepresentative data	skos:broadMatch	nistai:nist-harmful-bias-or-homogenization	Harmful Bias and Homogenization	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-unrepresentative-data	unrepresentative data	skos:relatedMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-lack-model-transparency	lack model transparency	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-lack-of-model-transparency	lack model transparency	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-personal-information-in-prompt	personal information in prompt	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-impact-on-human-agency	impact human agency	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-exposing-personal-information	exposing personal information	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-nonconsensual-use	nonconsensual use	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-decision-bias	decision bias	skos:broadMatch	nistai:nist-harmful-bias-or-homogenization	Harmful Bias and Homogenization	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-lack-testing-diversity	lack testing diversity	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-lack-of-testing-diversity	lack testing diversity	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-data-privacy-rights	data privacy rights alignment	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-prompt-leaking	prompt leaking	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-ip-information-in-prompt	ip information in prompt	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
@@ -44,15 +44,15 @@ ibmairisk:atlas-incomplete-advice	incomplete advice	skos:broadMatch	nistai:nist-
 ibmairisk:atlas-incomplete-advice	incomplete advice	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-data-usage-rights	data usage restrictions	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-data-usage-rights	data usage restrictions	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-lack-system-transparency	lack system transparency	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-impact-cultural-diversity	impact cultural diversity	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-lack-of-system-transparency	lack system transparency	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-impact-on-cultural-diversity	impact cultural diversity	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-plagiarism	impact education plagiarism	noMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
 ibmairisk:atlas-improper-usage	improper usage	skos:broadMatch	nistai:nist-human-ai-configuration	Human-AI Configuration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	Defining the intended use of an AI system is not specifically addressed by NIST Gen AI Profile
 ibmairisk:atlas-personal-information-in-data	personal information in data	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-jailbreaking	jailbreaking	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-extraction-attack	extraction attack	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-job-loss	impact jobs	noMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
-ibmairisk:atlas-data-acquisition-restrictions	data acquisition restrictions	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-impact-on-jobs	impact jobs	noMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
+ibmairisk:atlas-data-acquisition	data acquisition restrictions	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-prompt-priming	prompt priming	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-reidentification	reidentification	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-attribute-inference-attack	attribute inference attack	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
@@ -78,19 +78,19 @@ ibmairisk:atlas-harmful-code-generation	harmful code generation	skos:broadMatch	
 ibmairisk:atlas-data-contamination	data contamination	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-data-contamination	data contamination	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-incomplete-usage-definition	incomplete usage definition	skos:broadMatch	nistai:nist-human-ai-configuration	Human-AI Configuration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	Defining the intended use of an AI system is not specifically addressed by NIST Gen AI Profile
-ibmairisk:atlas-lack-data-transparency	lack data transparency	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-lack-of-data-transparency	lack data transparency	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-copyright-infringement	copyright infringement	skos:broadMatch	nistai:nist-intellectual-property	Intellectual Property	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-impact-affected-communities	impact affected communities	skos:broadMatch	nistai:nist-harmful-bias-or-homogenization	Harmful Bias and Homogenization	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-impact-on-affected-communities	impact affected communities	skos:broadMatch	nistai:nist-harmful-bias-or-homogenization	Harmful Bias and Homogenization	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-spreading-toxicity	spreading toxicity	skos:broadMatch	nistai:nist-harmful-bias-or-homogenization	Harmful Bias and Homogenization	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-improper-retraining	improper retraining	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-inaccessible-training-data	inaccessible training data	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-bypassing-learning	impact education bypassing learning	noMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
 ibmairisk:atlas-untraceable-attribution	untraceable attribution	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-evasion-attack	evasion attack	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-impact-environment	impact environment	skos:exactMatch	nistai:nist-environmental-impacts	Environmental Impacts	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-impact-on-the-environment	impact environment	skos:exactMatch	nistai:nist-environmental-impacts	Environmental Impacts	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-incorrect-risk-testing	incorrect risk testing	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-over-under-reliance	over under reliance	skos:broadMatch	nistai:nist-human-ai-configuration	Human-AI Configuration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-over-under-reliance	over under reliance	skos:relatedMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-over-under-reliance	over under reliance	skos:relatedMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-over-or-under-reliance	over under reliance	skos:broadMatch	nistai:nist-human-ai-configuration	Human-AI Configuration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-over-or-under-reliance	over under reliance	skos:relatedMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
+ibmairisk:atlas-over-or-under-reliance	over under reliance	skos:relatedMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-membership-inference-attack	membership inference attack	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-confidential-data-in-prompt	confidential data in prompt	skos:broadMatch	nistai:nist-intellectual-property	Intellectual Property	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95

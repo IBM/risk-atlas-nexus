@@ -22,8 +22,9 @@ Alias: detectsRiskConcept
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
 | [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
+| [Action](Action.md) | Action to remediate a risk |  no  |
+| [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
 
 
 

@@ -58,6 +58,7 @@ classes:
         description: Annotation whether an AI risk shows specifically during the training-tuning or inference phase.
       descriptor:
         description: Annotates whether an AI risk is a traditional risk, specific to or amplified by AI.
+        multivalued: true
       concern:
         description: Some explanation about the concern related to an AI risk
     slot_usage:
@@ -93,7 +94,7 @@ classes:
       - isDefinedByTaxonomy
 
   Action:
-    is_a: Entity
+    is_a: RiskControl
     description: Action to remediate a risk
     attributes:
     slots:

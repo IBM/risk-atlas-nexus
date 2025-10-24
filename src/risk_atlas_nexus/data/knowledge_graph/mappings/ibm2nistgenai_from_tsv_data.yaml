@@ -35,12 +35,12 @@ risks:
 - id: nist-cbrn-information-or-capabilities
   narrowMatch:
   - atlas-dangerous-use
-- id: atlas-data-acquisition-restrictions
+- id: atlas-data-acquisition
   broadMatch:
   - nist-value-chain-and-component-integration
 - id: nist-value-chain-and-component-integration
   narrowMatch:
-  - atlas-data-acquisition-restrictions
+  - atlas-data-acquisition
 - id: atlas-data-bias
   broadMatch:
   - nist-harmful-bias-or-homogenization
@@ -197,30 +197,30 @@ risks:
 - id: nist-obscene-degrading-and-or-abusive-content
   narrowMatch:
   - atlas-human-exploitation
-- id: atlas-impact-affected-communities
+- id: atlas-impact-on-affected-communities
   broadMatch:
   - nist-harmful-bias-or-homogenization
 - id: nist-harmful-bias-or-homogenization
   narrowMatch:
-  - atlas-impact-affected-communities
-- id: atlas-impact-cultural-diversity
+  - atlas-impact-on-affected-communities
+- id: atlas-impact-on-cultural-diversity
   broadMatch:
   - nist-information-integrity
 - id: nist-information-integrity
   narrowMatch:
-  - atlas-impact-cultural-diversity
-- id: atlas-impact-environment
-  exactMatch:
-  - nist-environmental-impacts
-- id: nist-environmental-impacts
-  exactMatch:
-  - atlas-impact-environment
+  - atlas-impact-on-cultural-diversity
 - id: atlas-impact-on-human-agency
   broadMatch:
   - nist-information-integrity
 - id: nist-information-integrity
   narrowMatch:
   - atlas-impact-on-human-agency
+- id: atlas-impact-on-the-environment
+  exactMatch:
+  - nist-environmental-impacts
+- id: nist-environmental-impacts
+  exactMatch:
+  - atlas-impact-on-the-environment
 - id: atlas-improper-retraining
   broadMatch:
   - nist-value-chain-and-component-integration
@@ -275,30 +275,30 @@ risks:
 - id: nist-information-integrity
   narrowMatch:
   - atlas-jailbreaking
-- id: atlas-lack-data-transparency
+- id: atlas-lack-of-data-transparency
   broadMatch:
   - nist-value-chain-and-component-integration
 - id: nist-value-chain-and-component-integration
   narrowMatch:
-  - atlas-lack-data-transparency
-- id: atlas-lack-model-transparency
+  - atlas-lack-of-data-transparency
+- id: atlas-lack-of-model-transparency
   broadMatch:
   - nist-value-chain-and-component-integration
 - id: nist-value-chain-and-component-integration
   narrowMatch:
-  - atlas-lack-model-transparency
-- id: atlas-lack-system-transparency
+  - atlas-lack-of-model-transparency
+- id: atlas-lack-of-system-transparency
   broadMatch:
   - nist-value-chain-and-component-integration
 - id: nist-value-chain-and-component-integration
   narrowMatch:
-  - atlas-lack-system-transparency
-- id: atlas-lack-testing-diversity
+  - atlas-lack-of-system-transparency
+- id: atlas-lack-of-testing-diversity
   broadMatch:
   - nist-information-integrity
 - id: nist-information-integrity
   narrowMatch:
-  - atlas-lack-testing-diversity
+  - atlas-lack-of-testing-diversity
 - id: atlas-legal-accountability
   broadMatch:
   - nist-data-privacy
@@ -359,12 +359,12 @@ risks:
 - id: nist-harmful-bias-or-homogenization
   narrowMatch:
   - atlas-output-bias
-- id: atlas-over-under-reliance
+- id: atlas-over-or-under-reliance
   broadMatch:
   - nist-human-ai-configuration
 - id: nist-human-ai-configuration
   narrowMatch:
-  - atlas-over-under-reliance
+  - atlas-over-or-under-reliance
 - id: atlas-personal-information-in-data
   broadMatch:
   - nist-data-privacy

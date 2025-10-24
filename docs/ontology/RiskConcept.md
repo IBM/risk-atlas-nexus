@@ -101,6 +101,8 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [RiskControl](RiskControl.md) | [detectsRiskConcept](detectsRiskConcept.md) | range | [RiskConcept](RiskConcept.md) |
 | [RiskControl](RiskControl.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [Action](Action.md) | [detectsRiskConcept](detectsRiskConcept.md) | range | [RiskConcept](RiskConcept.md) |
+| [Action](Action.md) | [isDetectedBy](isDetectedBy.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md) | [hasStatus](hasStatus.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md) | [hasSeverity](hasSeverity.md) | domain | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md) | [hasLikelihood](hasLikelihood.md) | domain | [RiskConcept](RiskConcept.md) |

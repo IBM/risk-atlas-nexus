@@ -186,7 +186,7 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | [tag](tag.md) | 0..1 <br/> [String](String.md) | A shost version of the name | direct |
 | [type](type.md) | 0..1 <br/> [String](String.md) | Annotation whether an AI risk occurs at input or output or is non-technical | direct |
 | [phase](phase.md) | 0..1 <br/> [String](String.md) | Annotation whether an AI risk shows specifically during the training-tuning o... | direct |
-| [descriptor](descriptor.md) | 0..1 <br/> [String](String.md) | Annotates whether an AI risk is a traditional risk, specific to or amplified ... | direct |
+| [descriptor](descriptor.md) | * <br/> [String](String.md) | Annotates whether an AI risk is a traditional risk, specific to or amplified ... | direct |
 | [concern](concern.md) | 0..1 <br/> [String](String.md) | Some explanation about the concern related to an AI risk | direct |
 | [isDetectedBy](isDetectedBy.md) | * <br/> [RiskControl](RiskControl.md) | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
@@ -322,6 +322,7 @@ attributes:
     rank: 1000
     domain_of:
     - Risk
+    multivalued: true
   concern:
     name: concern
     description: Some explanation about the concern related to an AI risk
@@ -393,6 +394,7 @@ attributes:
     domain_of:
     - Risk
     range: string
+    multivalued: true
   concern:
     name: concern
     description: Some explanation about the concern related to an AI risk

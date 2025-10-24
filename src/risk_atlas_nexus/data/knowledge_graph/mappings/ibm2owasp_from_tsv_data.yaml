@@ -17,12 +17,12 @@ risks:
 - id: llm022025-sensitive-information-disclosure
   relatedMatch:
   - atlas-confidential-information-in-data
-- id: atlas-data-acquisition-restrictions
+- id: atlas-data-acquisition
   broadMatch:
   - llm032025-supply-chain
 - id: llm032025-supply-chain
   narrowMatch:
-  - atlas-data-acquisition-restrictions
+  - atlas-data-acquisition
 - id: atlas-data-contamination
   broadMatch:
   - llm032025-supply-chain
@@ -107,12 +107,12 @@ risks:
 - id: llm01-prompt-injection
   narrowMatch:
   - atlas-jailbreaking
-- id: atlas-lack-data-transparency
+- id: atlas-lack-of-data-transparency
   broadMatch:
   - llm032025-supply-chain
 - id: llm032025-supply-chain
   narrowMatch:
-  - atlas-lack-data-transparency
+  - atlas-lack-of-data-transparency
 - id: atlas-membership-inference-attack
   relatedMatch:
   - llm022025-sensitive-information-disclosure
@@ -125,18 +125,18 @@ risks:
 - id: llm032025-supply-chain
   narrowMatch:
   - atlas-model-usage-rights
-- id: atlas-over-under-reliance
+- id: atlas-over-or-under-reliance
   relatedMatch:
   - llm052025-improper-output-handling
 - id: llm052025-improper-output-handling
   relatedMatch:
-  - atlas-over-under-reliance
-- id: atlas-over-under-reliance
+  - atlas-over-or-under-reliance
+- id: atlas-over-or-under-reliance
   relatedMatch:
   - llm062025-excessive-agency
 - id: llm062025-excessive-agency
   relatedMatch:
-  - atlas-over-under-reliance
+  - atlas-over-or-under-reliance
 - id: atlas-personal-information-in-data
   relatedMatch:
   - llm022025-sensitive-information-disclosure

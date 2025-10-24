@@ -20,14 +20,25 @@ URI: [nexus:Action](https://ibm.github.io/risk-atlas-nexus/ontology/Action)
  classDiagram
     class Action
     click Action href "../Action"
-      Entity <|-- Action
-        click Entity href "../Entity"
+      RiskControl <|-- Action
+        click RiskControl href "../RiskControl"
 
       Action : dateCreated
 
       Action : dateModified
 
       Action : description
+
+      Action : detectsRiskConcept
+
+
+
+
+
+        Action --> "*" RiskConcept : detectsRiskConcept
+        click RiskConcept href "../RiskConcept"
+
+
 
       Action : hasAiActorTask
 
@@ -66,6 +77,17 @@ URI: [nexus:Action](https://ibm.github.io/risk-atlas-nexus/ontology/Action)
 
 
 
+      Action : isDetectedBy
+
+
+
+
+
+        Action --> "*" RiskControl : isDetectedBy
+        click RiskControl href "../RiskControl"
+
+
+
       Action : name
 
       Action : url
@@ -79,7 +101,8 @@ URI: [nexus:Action](https://ibm.github.io/risk-atlas-nexus/ontology/Action)
 
 ## Inheritance
 * [Entity](Entity.md)
-    * **Action**
+    * [RiskControl](RiskControl.md) [ [RiskConcept](RiskConcept.md)]
+        * **Action**
 
 
 
@@ -91,6 +114,8 @@ URI: [nexus:Action](https://ibm.github.io/risk-atlas-nexus/ontology/Action)
 | [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | direct |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [RiskTaxonomy](RiskTaxonomy.md) | A relationship where a risk or a risk group is defined by a risk taxonomy | direct |
 | [hasAiActorTask](hasAiActorTask.md) | * <br/> [String](String.md) | Pertinent AI Actor Tasks for each subcategory | direct |
+| [detectsRiskConcept](detectsRiskConcept.md) | * <br/> [RiskConcept](RiskConcept.md) | The property airo:detectsRiskConcept indicates the control used for detecting... | [RiskControl](RiskControl.md) |
+| [isDetectedBy](isDetectedBy.md) | * <br/> [RiskControl](RiskControl.md) | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
@@ -154,7 +179,7 @@ URI: [nexus:Action](https://ibm.github.io/risk-atlas-nexus/ontology/Action)
 name: Action
 description: Action to remediate a risk
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
-is_a: Entity
+is_a: RiskControl
 slots:
 - hasRelatedRisk
 - hasDocumentation
@@ -171,7 +196,7 @@ slots:
 name: Action
 description: Action to remediate a risk
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
-is_a: Entity
+is_a: RiskControl
 attributes:
   hasRelatedRisk:
     name: hasRelatedRisk
@@ -250,6 +275,39 @@ attributes:
     - Action
     range: string
     multivalued: true
+  detectsRiskConcept:
+    name: detectsRiskConcept
+    description: The property airo:detectsRiskConcept indicates the control used for
+      detecting risks, risk sources, consequences, and impacts.
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    exact_mappings:
+    - airo:detectsRiskConcept
+    rank: 1000
+    domain: RiskControl
+    alias: detectsRiskConcept
+    owner: Action
+    domain_of:
+    - Risk
+    - RiskControl
+    inverse: isDetectedBy
+    range: RiskConcept
+    multivalued: true
+    inlined: false
+  isDetectedBy:
+    name: isDetectedBy
+    description: A relationship where a risk, risk source, consequence, or impact
+      is detected by a risk control.
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: RiskConcept
+    alias: isDetectedBy
+    owner: Action
+    domain_of:
+    - RiskConcept
+    inverse: detectsRiskConcept
+    range: RiskControl
+    multivalued: true
+    inlined: false
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example

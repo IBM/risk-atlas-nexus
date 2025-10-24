@@ -782,7 +782,7 @@ class Risk(RiskConcept, Entity):
     tag: Optional[str] = Field(default=None, description="""A shost version of the name""", json_schema_extra = { "linkml_meta": {'alias': 'tag', 'domain_of': ['Risk']} })
     type: Optional[str] = Field(default=None, description="""Annotation whether an AI risk occurs at input or output or is non-technical.""", json_schema_extra = { "linkml_meta": {'alias': 'type', 'domain_of': ['Risk']} })
     phase: Optional[str] = Field(default=None, description="""Annotation whether an AI risk shows specifically during the training-tuning or inference phase.""", json_schema_extra = { "linkml_meta": {'alias': 'phase', 'domain_of': ['Risk']} })
-    descriptor: Optional[str] = Field(default=None, description="""Annotates whether an AI risk is a traditional risk, specific to or amplified by AI.""", json_schema_extra = { "linkml_meta": {'alias': 'descriptor', 'domain_of': ['Risk']} })
+    descriptor: Optional[list[str]] = Field(default=None, description="""Annotates whether an AI risk is a traditional risk, specific to or amplified by AI.""", json_schema_extra = { "linkml_meta": {'alias': 'descriptor', 'domain_of': ['Risk']} })
     concern: Optional[str] = Field(default=None, description="""Some explanation about the concern related to an AI risk""", json_schema_extra = { "linkml_meta": {'alias': 'concern', 'domain_of': ['Risk']} })
     isDetectedBy: Optional[list[str]] = Field(default=None, description="""A relationship where a risk, risk source, consequence, or impact is detected by a risk control.""", json_schema_extra = { "linkml_meta": {'alias': 'isDetectedBy',
          'domain': 'RiskConcept',
@@ -847,7 +847,7 @@ class RiskControl(RiskConcept, Entity):
          'slot_uri': 'schema:dateModified'} })
 
 
-class Action(Entity):
+class Action(RiskControl):
     """
     Action to remediate a risk
     """
@@ -887,6 +887,15 @@ class Action(Entity):
                        'Stakeholder'],
          'slot_uri': 'schema:isPartOf'} })
     hasAiActorTask: Optional[list[str]] = Field(default=None, description="""Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action in the subcategory (i.e., some apply to AI development and others apply to AI deployment).""", json_schema_extra = { "linkml_meta": {'alias': 'hasAiActorTask', 'domain_of': ['Action']} })
+    detectsRiskConcept: Optional[list[str]] = Field(default=None, description="""The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources, consequences, and impacts.""", json_schema_extra = { "linkml_meta": {'alias': 'detectsRiskConcept',
+         'domain': 'RiskControl',
+         'domain_of': ['Risk', 'RiskControl'],
+         'exact_mappings': ['airo:detectsRiskConcept'],
+         'inverse': 'isDetectedBy'} })
+    isDetectedBy: Optional[list[str]] = Field(default=None, description="""A relationship where a risk, risk source, consequence, or impact is detected by a risk control.""", json_schema_extra = { "linkml_meta": {'alias': 'isDetectedBy',
+         'domain': 'RiskConcept',
+         'domain_of': ['RiskConcept'],
+         'inverse': 'detectsRiskConcept'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
          'domain_of': ['Entity', 'BenchmarkMetadataCard'],

@@ -1264,8 +1264,6 @@ llmintrinsics:
     This is a pre-retrieval intrinsic since its suggested use is before invoking retrieval.
   hasRelatedRisk:
   - granite-relevance
-  hasRelatedTerm:
-  - ibm-factuality-query-rewrite
   hasDocumentation:
   - arxiv.org/2504.11704
   isDefinedByVocabulary: ibm-factuality
@@ -1282,8 +1280,6 @@ llmintrinsics:
     this is a pre-retrieval intrinsic.
   hasRelatedRisk:
   - granite-relevance
-  hasRelatedTerm:
-  - ibm-factuality-query-expansion
   hasDocumentation:
   - arxiv.org/2504.11704
   isDefinedByVocabulary: ibm-factuality
@@ -1314,7 +1310,7 @@ llmintrinsics:
   hasRelatedRisk:
   - granite-relevance
   - atlas-hallucination
-  - atlas-over-under-reliance
+  - atlas-over-or-under-reliance
   hasDocumentation:
   - arxiv.org/2504.11704
   isDefinedByVocabulary: ibm-factuality
@@ -1367,7 +1363,7 @@ llmintrinsics:
     intrinsic since its expected use is after invoking the LLM to create the response.
   hasRelatedRisk:
   - atlas-hallucination
-  - atlas-function-calling-hallucination
+  - atlas-function-calling-hallucination-agentic
   - nist-confabulation
   - llm092025-misinformation
   - credo-risk-021
@@ -1389,7 +1385,7 @@ llmintrinsics:
   hasRelatedRisk:
   - granite-relevance
   - atlas-hallucination
-  - atlas-over-under-reliance
+  - atlas-over-or-under-reliance
   hasDocumentation:
   - arxiv.org/2504.11704
   isDefinedByVocabulary: ibm-factuality
@@ -1403,7 +1399,7 @@ llmintrinsics:
     even ones that exploit special token or context overload (Rawat et al., 2024).
     isDefinedByVocabulary: ibm-factuality'
   hasRelatedRisk:
-  - atlas-jailbreak
+  - atlas-jailbreaking
   - nist-information-security
   - llm052025-improper-output-handling
   hasDocumentation:
@@ -1577,7 +1573,7 @@ adapters:
   - arxiv.org/2409.15398
   hasAdapterType: ALORA
   isDefinedByVocabulary: ibm-factuality
-  adaptsModel: granite-guardian-3.2-8b-instruct
+  adaptsModel: granite-3.2-8b-instruct
 - id: ibm-factuality-adapter-granite-3.3-8b-instruct-alora-uncertainty
   name: Granite 3.3 8B Instruct - Uncertainty aLoRA
   description: Granite 3.3 8b Instruct - Uncertainty is an Activated LoRA (aLoRA)
@@ -1601,7 +1597,7 @@ adapters:
   - arxiv.org/2504.12397
   hasAdapterType: ALORA
   isDefinedByVocabulary: ibm-factuality
-  adaptsModel: granite-guardian-3.2-8b-instruct
+  adaptsModel: granite-3.2-8b-instruct
 - id: ibm-factuality-adapter-granite-3.3-8b-instruct-requirement-checker
   name: Granite 3.3 8B Instruct - Requirement Checker
   description: Granite 3.3 8b Instruct - Requirement Checker is an Activated LoRA
@@ -1627,7 +1623,7 @@ adapters:
   hasLicense: license-apache-2.0
   hasAdapterType: ALORA
   isDefinedByVocabulary: ibm-factuality
-  adaptsModel: granite-guardian-3.2-8b-instruct
+  adaptsModel: granite-3.2-8b-instruct
 - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-query-rewrite
   name: Granite 3.2 8B Instruct - Query Rewrite aLoRA
   description: 'Granite 3.2 8b Instruct - Query Rewrite is an Activated LoRA (aLoRA)
@@ -1644,7 +1640,7 @@ adapters:
   isDefinedByVocabulary: ibm-factuality
   hasRelatedRisk:
   - granite-relevance
-  adaptsModel: granite-guardian-3.2-8b-instruct
+  adaptsModel: granite-3.2-8b-instruct
 - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-answerability-classification
   name: Granite 3.2 8B Instruct - Answerability Classification aLoRA
   description: Granite 3.2 8b Instruct - Answerability Classification is an Activated
@@ -1657,7 +1653,7 @@ adapters:
   - arxiv.org/2504.12397
   hasAdapterType: ALORA
   isDefinedByVocabulary: ibm-factuality
-  adaptsModel: granite-guardian-3.2-8b-instruct
+  adaptsModel: granite-3.2-8b-instruct
 - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-math-prm
   name: Granite-3.3-8B-LoRA-Math-PRM
   description: 'Granite 3.3 8B LoRA Math PRM is a LoRA adapter for the 8-billion parameter
@@ -1681,7 +1677,7 @@ taxonomies:
     generative AI, foundation models, and machine learning models.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas
   dateCreated: 2024-03-06
-  dateModified: 2025-05-29
+  dateModified: 2025-10-22
   hasDocumentation:
   - 10a99803d8afd656
 - id: nist-ai-rmf
@@ -2291,7 +2287,7 @@ risks:
     slightly perturbing the input data sent to the trained model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/evasion-attack.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-model-behavior-manipulation
   broadMatch:
@@ -2304,7 +2300,8 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: evasion-attack
   type: inference
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Evasion attacks alter model behavior, usually to benefit the attacker.
 - id: atlas-impact-on-the-environment
   name: Impact on the environment
@@ -2312,9 +2309,11 @@ risks:
     carbon emissions and increase water usage for their training and operation.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-on-the-environment.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
+  exactMatch:
+  - nist-environmental-impacts
   relatedMatch:
   - credo-risk-004
   - credo-risk-004
@@ -2324,7 +2323,8 @@ risks:
   - mit-ai-risk-subdomain-6.6
   tag: impact-on-the-environment
   type: non-technical
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Training and operating large AI models, building data centers, and manufacturing
     specialized hardware for AI can consume large amounts of water and energy, which
     contributes to carbon emissions. Additionally, water resources that are used for
@@ -2336,7 +2336,7 @@ risks:
     incompletely measuring the risk, or measuring the wrong risk for the given context.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/incorrect-risk-testing.html
   dateCreated: 2024-09-24
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   broadMatch:
@@ -2349,7 +2349,8 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: incorrect-risk-testing
   type: non-technical
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: If the metrics do not measure the risk as intended, then the understanding
     of that risk will be incorrect and mitigations might not be applied. If the model’s
     output is consequential, this might result in societal, reputational, or financial
@@ -2363,19 +2364,24 @@ risks:
     the person doesn’t trust the model but should.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/over-or-under-reliance.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   closeMatch:
   - credo-risk-016
+  broadMatch:
+  - nist-human-ai-configuration
   relatedMatch:
+  - llm052025-improper-output-handling
+  - llm062025-excessive-agency
   - mit-ai-causal-risk-entity-human
   - mit-ai-causal-risk-intent-unintentional
   - mit-ai-causal-risk-timing-post-deployment
   - mit-ai-risk-subdomain-5.1
   tag: over-or-under-reliance
   type: output
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: In tasks where humans make choices based on AI-based suggestions, over/under
     reliance can lead to poor decision making because of the misplaced trust in the
     AI system, with negative consequences that increase with the importance of the
@@ -2388,7 +2394,7 @@ risks:
     observing outputs to deduce whether that sample was part of the model’s training.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/membership-inference-attack.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   broadMatch:
@@ -2401,7 +2407,8 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: membership-inference-attack
   type: inference
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Identifying whether a data sample was used for training data can reveal
     what data was used to train a model, possibly giving competitors insight into
     how a model was trained and the opportunity to replicate the model or tamper with
@@ -2412,7 +2419,7 @@ risks:
     that is sent to the model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/confidential-data-in-prompt.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   broadMatch:
@@ -2426,7 +2433,8 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: confidential-data-in-prompt
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: If not properly developed to secure confidential data, the model might
     reveal confidential information or IP in the generated output. Additionally, end
     users' confidential information might be unintentionally collected and stored.
@@ -2436,9 +2444,9 @@ risks:
     known as the system message).
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/prompt-leaking.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-19
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - atlas-prompt-injection
   - atlas-prompt-injection
@@ -2451,18 +2459,22 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: prompt-leaking
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: A successful prompt leaking attack copies the system prompt used in the
     model. Depending on the content of that prompt, the attacker might gain access
     to valuable information, such as sensitive personal information or intellectual
     property, and might be able to replicate some of the functionality of the model.
 - id: atlas-data-privacy-rights
   name: Data privacy rights alignment
-  description: Existing laws could include providing data subject rights such as opt-out,
-    right to access, and right to be forgotten.
+  description: Applicable laws can establish data subject rights such as opt-out rights,
+    right to access, and right to be forgotten. Synthetic data might raise unique
+    concerns, such as the potential for reidentification of individuals from seemingly
+    anonymous synthetic data. Data subject rights might also be relevant in scenarios
+    where synthetic data is derived from sensitive or personal information.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-privacy-rights.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   broadMatch:
@@ -2471,23 +2483,26 @@ risks:
   - ail-intellectual-property
   tag: data-privacy-rights
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
   concern: Improper usage or a request for data removal could force organizations
-    to retrain the model, which is expensive.
-- id: atlas-discriminatory-actions
+    to retrain the model, which might be expensive.
+- id: atlas-discriminatory-actions-agentic
   name: Discriminatory actions
   description: AI agents can take actions where one group of humans is unfairly advantaged
     over another due to the decisions of the model. This may be caused by AI agents’
     biased actions that impact the world, in the resources consulted, and in the resource
     selection process. For example, an AI agent can generate code that can be biased.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/discriminatory-actions.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/discriminatory-actions-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
-  tag: discriminatory-actions
+  tag: discriminatory-actions-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Discriminatory actions can cause harm to people. Discriminatory actions
     taken by an AI agent could perpetuate bias to systems outside the AI agent owner’s
     control,  impact people, or lead to unintended consequences.
@@ -2497,7 +2512,7 @@ risks:
     as a part of the prompt that is sent to the model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/ip-information-in-prompt.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   broadMatch:
@@ -2511,18 +2526,22 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: ip-information-in-prompt
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Inclusion of such data might result in it being disclosed in the model
     output. In addition to accidental disclosure, prompt data might be used for other
     purposes like model evaluation and retraining, and might appear in their output
     if not properly removed.
 - id: atlas-legal-accountability
   name: Legal accountability
-  description: Determining who is responsible for an AI model is challenging without
-    good documentation and governance processes.
+  description: 'Determining who is responsible for an AI model is challenging without
+    good documentation and governance processes. The use of synthetic data in model
+    development adds further complexity, since the lack of standardized frameworks
+    for recording synthetic data design choices and verification steps makes accountability
+    harder to establish. '
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/legal-accountability.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-legal-compliance
   broadMatch:
@@ -2539,20 +2558,24 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: legal-accountability
   type: non-technical
-  descriptor: amplified by generative AI
-  concern: If ownership for development of the model is uncertain, regulators and
-    others might have concerns about the model. It would not be clear who would be
-    liable and responsible for the problems with it or can answer questions about
-    it. Users of models without clear ownership might find challenges with compliance
-    with future AI regulation.
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
+  concern: If ownership for development of the model is uncertain, it may not be clear
+    who would be liable and responsible for the problems with it or can answer questions
+    about it. Users of models without clear ownership might find challenges with compliance
+    with regulations.
 - id: atlas-hallucination
   name: Hallucination
   description: Hallucinations generate factually inaccurate or untruthful content
-    with respect to the model’s training data or input. This is also sometimes referred
-    to lack of faithfulness or lack of groundedness.
+    relative to the model’s training data or input. Hallucinations are also sometimes
+    referred to lack of faithfulness or lack of groundedness. In some instances, synthetic
+    data that is generated by large language models might include hallucinations that
+    result in the data possibly being inaccurate, fabricated, or disconnected from
+    reality. Hallucinations can compromise model performance, accuracy, and relevance.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/hallucination.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   exactMatch:
@@ -2569,11 +2592,15 @@ risks:
   - mit-ai-risk-subdomain-3.1
   tag: hallucination
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
+  - amplified by synthetic data
   concern: Hallucinations can be misleading. These false outputs can mislead users
     and be incorporated into downstream artifacts, further spreading misinformation.
     False output can harm both owners and users of the AI models. In some uses, hallucinations
-    can be particularly consequential.
+    can be particularly consequential. Hallucination can introduce fabricated or unrealistic
+    data, a lack of connection to real-world patterns, and decreased predictive power
+    for the foundation model.
 - id: atlas-social-hacking-attack
   name: Social hacking attack
   description: Manipulative prompts that use social engineering techniques, such as
@@ -2581,25 +2608,26 @@ risks:
     harmful content.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/social-hacking-attack.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - atlas-prompt-injection
   - atlas-prompt-injection
   tag: social-hacking-attack
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Social hacking attacks can be used to alter model behavior and benefit
     the attacker. The content it generates may cause harms for the user or others.
 - id: atlas-harmful-output
   name: Harmful output
-  description: A model might generate language that leads to physical harm. The language
+  description: A model might generate language that leads to physical harm.  The language
     might include overtly violent, covertly dangerous, or otherwise indirectly unsafe
     statements.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/harmful-output.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   closeMatch:
@@ -2638,7 +2666,8 @@ risks:
   - nist-obscene-degrading-and-or-abusive-content
   tag: harmful-output
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: A model generating harmful output can cause immediate physical harm or
     create prejudices that might lead to future harm.
 - id: atlas-indirect-instructions-attack
@@ -2648,64 +2677,68 @@ risks:
     to use instructions that are embedded in external data like a website.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/indirect-instructions-attack.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - atlas-prompt-injection
   - atlas-prompt-injection
   tag: indirect-instructions-attack
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Indirect instructions attacks can be used to alter model behavior and benefit
     the attacker. The content it generates may cause harms for the user or others.
-- id: atlas-mitigation-maintenance
+- id: atlas-mitigation-maintenance-agentic
   name: Mitigation and maintenance
   description: The large number of components and dependencies that agent systems
     have complicates keeping them up to date and correcting problems.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/mitigation-maintenance.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/mitigation-maintenance-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-29
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
-  tag: mitigation-maintenance
+  tag: mitigation-maintenance-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: AI agents may interact with other systems, tools, or other agents. Tracing
     the root cause of failure becomes more difficult and more costly as agent capabilities
     and complexities increase.
-- id: atlas-ai-agent-compliance
+- id: atlas-ai-agent-compliance-agentic
   name: AI agent compliance
   description: Determining AI agents' compliance is complex and there might not be
     enough information to assess whether the agentic AI system is compliant with applicable
     legal requirements.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/ai-agent-compliance.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/ai-agent-compliance-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-29
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
-  tag: ai-agent-compliance
+  tag: ai-agent-compliance-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: AI agents may interact with other systems, tools, or other agents. AI agents
     can also find solutions to accomplish a task or a goal in a variety of ways and
     there could be uncertainty around the way an AI agent would choose each time to
     perform the task. Assessing compliance can become more difficult as agent capabilities
     increase.
-- id: atlas-function-calling-hallucination
+- id: atlas-function-calling-hallucination-agentic
   name: Function calling hallucination
   description: 'AI agents might make mistakes when generating function calls (calls
     to tools to execute actions). Those function calls might result in incorrect,
     unnecessary or harmful actions. Examples: Generating wrong functions or wrong
     parameters for the functions.'
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/function-calling-hallucination.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/function-calling-hallucination-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
-  tag: function-calling-hallucination
+  tag: function-calling-hallucination-agentic
   type: agentic
-  descriptor: specific to agentic AI
+  descriptor:
+  - specific to agentic AI
   concern: Hallucinations when generating function calls might result in wrong or
     redundant actions being performed. Depending on the actions taken, AI agents can
     cause harms to owners and users of the AI agents.
@@ -2715,7 +2748,7 @@ risks:
     is used to train or tune the model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/confidential-information-in-data.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   broadMatch:
@@ -2729,7 +2762,8 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: confidential-information-in-data
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: If confidential data is not properly protected, there could be an unwanted
     disclosure of confidential information. The model might expose confidential information
     in the generated output or to unauthorized users.
@@ -2740,9 +2774,11 @@ risks:
     into the inner workings of the model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-model-transparency.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
+  broadMatch:
+  - nist-value-chain-and-component-integration
   relatedMatch:
   - mit-ai-causal-risk-entity-human
   - mit-ai-causal-risk-intent-unintentional
@@ -2750,7 +2786,8 @@ risks:
   - mit-ai-risk-subdomain-7.4
   tag: lack-of-model-transparency
   type: non-technical
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: Transparency is important for legal compliance, AI ethics, and guiding
     appropriate use of models. Missing information might make it more difficult to
     evaluate risks,  change the model, or reuse it.  Knowledge about who built a model
@@ -2758,30 +2795,34 @@ risks:
     transparency regarding how the model’s risks were determined, evaluated, and mitigated
     also play a role in determining model risks, identifying model suitability, and
     governing model usage.
-- id: atlas-exploit-trust-mismatch
+- id: atlas-exploit-trust-mismatch-agentic
   name: Exploit trust mismatch
   description: Attackers might initiate injection attacks to bypass the trust boundary,
     which is a distinct point or conceptual line where the level of trust in a system,
     application or network changes. Background execution in multi-agent environments
     increases the risk of covert channels if input/output validation is weak.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/exploit-trust-mismatch.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/exploit-trust-mismatch-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
-  tag: exploit-trust-mismatch
+  tag: exploit-trust-mismatch-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: This could lead to mismatched (expected vs. realized) trust boundaries
     and could result in unintended tool use, excessive agency, and privilege escalation.
 - id: atlas-unrepresentative-data
   name: Unrepresentative data
   description: Unrepresentative data occurs when the training or fine-tuning data
     is not sufficiently representative of the underlying population or does not measure
-    the phenomenon of interest.
+    the phenomenon of interest. Synthetic data might not fully capture the complexity
+    and nuances of real-world data. Causes include possible limitations in the seed
+    data quality, biases in generation methods, or inadequate domain knowledge. Thus,
+    AI models might struggle to generalize effectively to real-world scenarios.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unrepresentative-data.html
   dateCreated: 2024-09-24
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-accuracy
   broadMatch:
@@ -2795,21 +2836,24 @@ risks:
   - nist-value-chain-and-component-integration
   tag: unrepresentative-data
   type: training-data
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
+  - amplified by synthetic data
   concern: If the data is not representative, then the model will not work as intended.
-- id: atlas-impact-human-agency
+- id: atlas-impact-human-agency-agentic
   name: AI agents' impact on human agency
   description: The autonomous nature of AI agents in performing tasks or taking actions
     could affect the individuals’ ability to engage in critical thinking, make choices
     and act independently.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-human-agency.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-human-agency-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
-  tag: impact-human-agency
+  tag: impact-human-agency-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: 'AI agents might shift the decision, thinking, and control from humans
     to machines.  This might negatively impact the society and human welfare as they
     limit the freedom and meaningful participations of humans in performing a task
@@ -2820,7 +2864,7 @@ risks:
     as a part of a prompt that is sent to the model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/personal-information-in-prompt.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   broadMatch:
@@ -2833,7 +2877,8 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: personal-information-in-prompt
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: If personal information or sensitive personal information is included in
     the prompt, it might be unintentionally disclosed in the models’ output. In addition
     to accidental disclosure, prompt data might be stored or later used for other
@@ -2841,12 +2886,11 @@ risks:
     if not properly removed. 
 - id: atlas-impact-on-human-agency
   name: AI agents' Impact on human agency
-  description: The autonomous nature of AI agents in performing tasks or taking actions
-    might affect the individuals’ ability to engage in critical thinking, make choices,
-    and acting independently.
+  description: AI might affect the individuals’ ability to make choices and act independently
+    in their best interests.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-on-human-agency.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   broadMatch:
@@ -2860,24 +2904,29 @@ risks:
   - credo-risk-044
   tag: impact-on-human-agency
   type: non-technical
-  descriptor: amplified by generative AI
-  concern: AI agents might shift the decision, thinking, and control from humans to
-    machines.  This might negatively impact society and human welfare as they limit
-    the freedom and meaningful participations of humans in performing a task or making
-    decisions.
-- id: atlas-sharing-info-user
+  descriptor:
+  - amplified by generative AI
+  concern: AI can generate false or misleading information that looks real.  It may
+    simplify the ability of nefarious actors to generate realistically looking false
+    or misleading content with intention to manipulate human thoughts and behavior.
+    When false or misleading content that is generated by AI is spread, people might
+    not recognize it as false information leading to a distorted understanding of
+    the truth. People might experience reduced agency when exposed to false or misleading
+    information since they may use false assumptions in their decision process.
+- id: atlas-sharing-info-user-agentic
   name: Sharing IP/PI/confidential information with user
   description: AI agents with unrestricted access to resources or databases or tools
     could potentially store and share PI/IP/confidential information with system users
     when performing their actions.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/sharing-info-user.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/sharing-info-user-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
-  tag: sharing-info-user
+  tag: sharing-info-user-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: AI agents may share privileged information to users. The act of sharing
     the information may result in harm for the model owner, user, or others. The harm
     can vary based on the type and details of the information shared. Without adequate
@@ -2888,9 +2937,11 @@ risks:
     a broad set of disciplines and diverse testing practices.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-testing-diversity.html
   dateCreated: 2024-09-24
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
+  broadMatch:
+  - nist-information-integrity
   relatedMatch:
   - mit-ai-causal-risk-entity-human
   - mit-ai-causal-risk-intent-unintentional
@@ -2898,7 +2949,8 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: lack-of-testing-diversity
   type: non-technical
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Without diversity and the relevant experience, an organization might not
     correctly or completely identify and test for AI risks.
 - id: atlas-nonconsensual-use
@@ -2908,7 +2960,7 @@ risks:
     consent.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/nonconsensual-use.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
@@ -2927,10 +2979,14 @@ risks:
   - mit-ai-risk-subdomain-4.3
   tag: nonconsensual-use
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
+  - amplified by synthetic data
   concern: Deepfakes can spread disinformation about a person, possibly resulting
     in a negative impact on the person’s reputation. A model that has this potential
-    must be properly governed.
+    must be properly governed. The use of synthetic data can further augment this
+    risk if used to create false information or other deceptive AI technologies, potentially
+    leading to misinformation, manipulation, and harm to individuals or organizations.
 - id: atlas-decision-bias
   name: Decision bias
   description: Decision bias occurs when one group is unfairly advantaged over another
@@ -2938,7 +2994,7 @@ risks:
     also amplified as a result of the model’s training.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/decision-bias.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   broadMatch:
@@ -2953,17 +3009,18 @@ risks:
   - mit-ai-risk-subdomain-1.1
   tag: decision-bias
   type: output
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: Bias can harm persons affected by the decisions of the model.
 - id: atlas-exposing-personal-information
   name: Exposing personal information
-  description: When personal identifiable information (PII) or sensitive personal
-    information (SPI) are used in training data, fine-tuning data, or as part of the
-    prompt, models might reveal that data in the generated output. Revealing personal
-    information is a type of data leakage.
+  description: 'When personal identifiable information (PII) or sensitive personal
+    information (SPI) are used in training data, fine-tuning data, seed data for synthetic
+    data generation, or as part of the prompt, models might reveal that data in the
+    generated output. Revealing personal information is a type of data leakage. '
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/exposing-personal-information.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   broadMatch:
@@ -2979,31 +3036,34 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: exposing-personal-information
   type: output
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
   concern: Sharing people’s PI impacts their rights and make them more vulnerable.
-- id: atlas-impact-jobs
+- id: atlas-impact-jobs-agentic
   name: AI agents' impact on jobs
   description: Widespread adoption of AI agents to perform complex tasks might lead
     to widespread automation of roles and could lead to job displacement.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-jobs.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-jobs-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
-  tag: impact-jobs
+  tag: impact-jobs-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: As trust in agentic systems increases, business may be more motivated to
     use agents instead of people. Job displacement might lead to a loss of income
     and thus might negatively impact society and human welfare. Re-skilling may be
     challenging given the pace of the technology evolution.
 - id: atlas-data-curation
   name: Improper data curation
-  description: Improper collection and preparation of training or tuning data includes
-    data label errors and by using data with conflicting information or misinformation.
+  description: 'Improper collection, generation, and preparation of training or tuning
+    data can result in data label errors, conflicting information or misinformation. '
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-curation.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   broadMatch:
@@ -3017,12 +3077,14 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: data-curation
   type: training-data
-  descriptor: amplified by generative AI
-  concern: 'Improper data curation can adversely affect how a model is trained, resulting
-    in a model that does not behave in accordance with the intended values. Correcting
-    problems after the model is trained and deployed might be insufficient for guaranteeing
-    proper behavior. '
-- id: atlas-over-or-under-reliance-on-ai-agents
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
+  concern: Improper data curation, including errors in synthetic data generation,
+    can adversely affect how a model is trained, resulting in a model that does not
+    behave in accordance with the intended values. Correcting problems after the model
+    is trained and deployed might be insufficient for guaranteeing proper behavior.
+- id: atlas-over-or-under-reliance-on-ai-agents-agentic
   name: Over- or under-reliance on AI agents
   description: Reliance, that is the willingness to accept an AI agent behavior, depends
     on how much a user trusts that agent and what they are using it for. Over-reliance
@@ -3033,31 +3095,33 @@ risks:
     and open-endedness increase the variability and visibility of agent behavior leading
     to difficulty in calibrating trust and possibly contributing to both over- and
     under-reliance.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/over-or-under-reliance-on-ai-agents.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/over-or-under-reliance-on-ai-agents-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
-  tag: over-or-under-reliance-on-ai-agents
+  tag: over-or-under-reliance-on-ai-agents-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Over/under reliance can lead to poor decision making by humans because
     of their misplaced trust in the AI agent, with negative consequences that escalate
     with the significance of the decision.
-- id: atlas-external-resources-attack
+- id: atlas-external-resources-attack-agentic
   name: Attack on AI agents’ external resources
   description: 'Attackers intentionally create vulnerabilities or exploit existing
     vulnerabilities in external resources (tools/database/applications/services/other
     agents) that AI agents rely on to execute their intended actions or to achieve
     their goals. '
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/external-resources-attack.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/external-resources-attack-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
-  tag: external-resources-attack
+  tag: external-resources-attack-agentic
   type: agentic
-  descriptor: specific to agentic AI
+  descriptor:
+  - specific to agentic AI
   concern: Compromised external resources could impact the AI agent’s performance
     in different ways, such as manipulating AI agents to pursue a different goal,
     manipulating AI agents to execute undesired actions, capturing and relaying interactions
@@ -3070,7 +3134,7 @@ risks:
     output. Revealing confidential information is a type of data leakage.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/revealing-confidential-information.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   closeMatch:
@@ -3086,7 +3150,8 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: revealing-confidential-information
   type: output
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: If not properly developed to secure confidential data, the model might
     reveal confidential information or IP in the generated output and reveal information
     that was meant to be secret.
@@ -3096,7 +3161,7 @@ risks:
     or false information to deceive or influence a targeted audience.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/spreading-disinformation.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
@@ -3111,18 +3176,19 @@ risks:
   - mit-ai-risk-subdomain-4.1
   tag: spreading-disinformation
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Spreading disinformation might affect human’s ability to make informed
     decisions. A model that has this potential must be properly governed.
 - id: atlas-data-provenance
   name: Uncertain data provenance
-  description: Data provenance refers to tracing history of data, which includes its
-    ownership, origin, and transformations. Without standardized and established methods
-    for verifying where the data came from, there are no guarantees that the data
-    is the same as the original source and has the correct usage terms.
+  description: Data provenance refers to the traceability of data (including synthetic
+    data), which includes its ownership, origin, transformations, and generation.
+    Proving that the data is the same as the original source with correct usage terms
+    is difficult without standardized methods for verifying data sources or generation.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-provenance.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-transparency
   broadMatch:
@@ -3135,18 +3201,21 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: data-provenance
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
   concern: Not all data sources are trustworthy. Data might be unethically collected,
     manipulated, or falsified. Verifying that data provenance is challenging due to
-    factors such as data volume, data complexity, data source varieties, and poor
-    data management. Using such data can result in undesirable behaviors in the model.
+    factors such as data volume, data complexity, data source varieties, poor data
+    management, and synthetic data generation methods. Using such data can result
+    in undesirable behaviors in the model.
 - id: atlas-unrepresentative-risk-testing
   name: Unrepresentative risk testing
   description: Testing is unrepresentative when the test inputs are mismatched with
     the inputs that are expected during deployment.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unrepresentative-risk-testing.html
   dateCreated: 2024-09-24
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   broadMatch:
@@ -3158,17 +3227,19 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: unrepresentative-risk-testing
   type: non-technical
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: If the model is evaluated in a use, context, or setting that is not the
     same as the one expected for deployment, the evaluations might not accurately
     reflect the risks of the model.
 - id: atlas-data-bias
   name: Data bias
-  description: Historical and societal biases that are present in the data are used
-    to train and fine-tune the model.
+  description: Historical and societal biases might be present in data that are used
+    to train and fine-tune models. Biases can also be inherited from seed data or
+    exacerbated by synthetic data generation methods.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-bias.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   broadMatch:
@@ -3180,7 +3251,9 @@ risks:
   - mit-ai-risk-subdomain-1.1
   tag: data-bias
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
   concern: Training an AI system on data with bias, such as historical or societal
     bias, can lead to biased or skewed outputs that can unfairly represent or otherwise
     discriminate against certain groups or individuals.
@@ -3190,7 +3263,7 @@ risks:
     the ability to use certain data for building models.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-usage-rights.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   broadMatch:
@@ -3201,11 +3274,12 @@ risks:
   - nist-intellectual-property
   tag: data-usage-rights
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Laws and regulations concerning the use of data to train AI are unsettled
     and can vary from country to country, which creates challenges in the development
     of models.
-- id: atlas-unauthorized-use
+- id: atlas-unauthorized-use-agentic
   name: Unauthorized use
   description: 'Unauthorized use: If attackers can gain access to the AI agent and
     its components, they can perform actions that can have different levels of harm
@@ -3213,20 +3287,21 @@ risks:
     Using stored personal information to mimic identity or impersonate with an intent
     to deceive. Manipulating AI agent’s behavior via feedback to the AI agent or corrupting
     its memory to change its behavior. Manipulating the problem description or the
-    goal to get the AI agent to behave badly or run harmful commands .'
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unauthorized-use.html
+    goal to get the AI agent to behave badly or run harmful commands.'
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unauthorized-use-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
-  tag: unauthorized-use
+  tag: unauthorized-use-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Attackers accessing the agent can alter AI agent’s behavior and make it
     execute actions that benefit the attacker such as executing actions that lead
     to system degradation, data exfiltration, exhausting available resources, and
     impairing performance. The actions taken by the attackers may cause harms to others.
-- id: atlas-redundant-actions
+- id: atlas-redundant-actions-agentic
   name: Redundant actions
   description: AI agents can execute actions that are not needed for achieving the
     goal. In an extreme case, AI agents might enter a cycle of executing the same
@@ -3234,55 +3309,56 @@ risks:
     conditions in the environment, the AI agent’s failure to reflect on its action,
     AI agent reasoning and planning errors or the AI agent’s lack of knowledge about
     the problem.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/redundant-actions.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/redundant-actions-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-computational-inefficiency
-  tag: redundant-actions
+  tag: redundant-actions-agentic
   type: agentic
-  descriptor: specific to agentic AI
+  descriptor:
+  - specific to agentic AI
   concern: Executing actions that are not needed for the goal might result in wasting
     computation resources, increased cost, reducing AI agent’s efficiency in achieving
     the goal, and leading to potentially harmful outcomes. Executing the same actions
     repeatedly could prevent the AI agent from achieving the goal, strain computational
     resources, and increase cost. As agents become more autonomous, verifying that
     AI agents operate efficiently becomes increasing time consuming.
-- id: atlas-impact-environment
+- id: atlas-impact-environment-agentic
   name: AI agents' impact on environment
   description: Complexity of the tasks and possibility of AI agents performing redundant
     actions could lead to computational inefficiencies and add to the environmental
     impact.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-environment.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-environment-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
-  exactMatch:
-  - nist-environmental-impacts
-  tag: impact-environment
+  tag: impact-environment-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: The operation of AI agents could contribute to carbon emissions. If not
     managed, these could exacerbate climate change.
-- id: atlas-misaligned-actions
+- id: atlas-misaligned-actions-agentic
   name: Misaligned actions
   description: 'AI agents can take actions that are not aligned with relevant human
     values, ethical considerations, guidelines and policies. Misaligned actions can
     occur in different ways such as: Applying learned goals inappropriately to new
     or unforeseen situations. Using AI agents for a purpose/goals that are beyond
-    their intended use. Selecting resources or tools in a biased way. Using deceptive
+    their intended use. Selecting resources or tools in a biased way Using deceptive
     tactics to achieve the goal by developing the capacity for scheming based on the
     instructions given within a specific context. Compromising on AI agent values
-    to work with another AI agent or tool to accomplish the task. '
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/misaligned-actions.html
+    to work with another AI agent or tool to accomplish the task.'
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/misaligned-actions-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
-  tag: misaligned-actions
+  tag: misaligned-actions-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: 'Misaligned actions can adversely impact or harm people. '
 - id: atlas-data-contamination
   name: Data contamination
@@ -3291,7 +3367,7 @@ risks:
     set aside for other development tasks such as testing and evaluation.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-contamination.html
   dateCreated: 2024-09-24
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-accuracy
   broadMatch:
@@ -3306,7 +3382,8 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: data-contamination
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Data that differs from the intended training data might skew model accuracy
     and affect model outcomes.
 - id: atlas-harmful-code-generation
@@ -3315,7 +3392,7 @@ risks:
     other systems.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/harmful-code-generation.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   broadMatch:
@@ -3329,7 +3406,8 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: harmful-code-generation
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: The execution of harmful code might open vulnerabilities in IT systems.
 - id: atlas-incomplete-usage-definition
   name: Incomplete usage definition
@@ -3338,7 +3416,7 @@ risks:
     the relevant risks might correspondingly change.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/incomplete-usage-definition.html
   dateCreated: 2024-09-24
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   broadMatch:
@@ -3350,20 +3428,24 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: incomplete-usage-definition
   type: non-technical
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: It might be difficult to accurately determine and mitigate the relevant
     risks for a model when its intended use is insufficiently specified. Such as how
     a model is going to be used, where it is going to be used and what it is going
     to be used for.
 - id: atlas-lack-of-data-transparency
   name: Lack of data transparency
-  description: Lack of data transparency is due to insufficient documentation of training
-    or tuning dataset details. 
+  description: Lack of data transparency might be due to insufficient documentation
+    of training or tuning dataset details, including synthetic data generation. 
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-data-transparency.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
+  broadMatch:
+  - llm032025-supply-chain
+  - nist-value-chain-and-component-integration
   relatedMatch:
   - credo-risk-006
   - credo-risk-006
@@ -3374,23 +3456,26 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: lack-of-data-transparency
   type: non-technical
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
   concern: Transparency is important for legal compliance and AI ethics. Information
-    on the collection and preparation of training data, including how it was labeled
-    and by who are necessary to understand model behavior and suitability. Details
-    about how the data risks were determined, measured, and mitigated are important
-    for evaluating both data and model trustworthiness. Missing details about the
-    data might make it more difficult to evaluate representational harms, data ownership,
-    provenance, and other data-oriented risks. The lack of standardized requirements
-    might limit disclosure as organizations protect trade secrets and try to limit
-    others from copying their models.
+    on the collection, generation and preparation of training data, including how
+    it was labeled and by whom, and any synthetic data generation methods used, are
+    necessary to understand model behavior and suitability. Details about how the
+    data risks were determined, measured, and mitigated are important for evaluating
+    both data and model trustworthiness. Missing details about the data might make
+    it more difficult to evaluate representational harms, data ownership, provenance,
+    and other data-oriented risks. The lack of standardized requirements might limit
+    disclosure as organizations protect trade secrets and try to limit others from
+    copying their models.
 - id: atlas-copyright-infringement
   name: Copyright infringement
-  description: A model might generate content that is similar or identical to existing
-    work protected by copyright or covered by open-source license agreement.
+  description: 'A model might generate content that is similar or identical to existing
+    work protected by copyright or covered by open-source license agreement. '
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/copyright-infringement.html
   dateCreated: 2024-03-06
-  dateModified: 2025-04-28
+  dateModified: 2025-10-13
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   broadMatch:
@@ -3404,26 +3489,30 @@ risks:
   - mit-ai-risk-subdomain-6.3
   tag: copyright-infringement
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
+  - amplified by synthetic data
   concern: Laws and regulations concerning the use of content that looks the same
     or closely similar to other copyrighted data are largely unsettled and can vary
     from country to country, providing challenges in determining and implementing
-    compliance.
+    compliance. The use of synthetic data may raise new questions about ownership
+    and authorship.
 - id: atlas-context-overload-attack
   name: Context overload attack
   description: Overloading the prompt with excessive tokens, for instance with many-shot
     examples, can predispose models to a vulnerable state.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/context-overload-attack.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-19
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - atlas-prompt-injection
   - atlas-prompt-injection
   tag: context-overload-attack
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Context overload attacks can be used to alter model behavior and benefit
     the attacker. The content it generates may cause harms for the user or others.
 - id: atlas-impact-on-affected-communities
@@ -3434,9 +3523,11 @@ risks:
     for the model and to engender trust within these communities.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-on-affected-communities.html
   dateCreated: 2024-09-24
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
+  broadMatch:
+  - nist-harmful-bias-or-homogenization
   relatedMatch:
   - mit-ai-causal-risk-entity-human
   - mit-ai-causal-risk-intent-unintentional
@@ -3444,7 +3535,8 @@ risks:
   - mit-ai-risk-subdomain-1.3
   tag: impact-on-affected-communities
   type: non-technical
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: Failing to engage with communities that are affected by a model’s outcomes
     might result in harms to those communities and societal backlash.
 - id: atlas-improper-retraining
@@ -3453,7 +3545,7 @@ risks:
     user content) for retraining purposes can result in unexpected model behavior.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/improper-retraining.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   broadMatch:
@@ -3466,7 +3558,8 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: improper-retraining
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Repurposing generated output for retraining a model without implementing
     proper human vetting increases the chances of undesirable outputs to be incorporated
     into the training or tuning data of the model. In turn, this model can generate
@@ -3477,7 +3570,7 @@ risks:
     abusive, and profane (HAP) or obscene content.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/spreading-toxicity.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
@@ -3491,51 +3584,55 @@ risks:
   - mit-ai-causal-risk-timing-post-deployment
   tag: spreading-toxicity
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Toxic content might negatively affect the well-being of its recipients.
     A model that has this potential must be properly governed.
-- id: atlas-introduce-data-bias
+- id: atlas-introduce-data-bias-agentic
   name: Introduce data bias
   description: Specific actions taken by the AI agent, such as modifying a dataset
     or a database, can introduce bias in the resource that gets used by others or
     by itself to take actions.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/introduce-data-bias.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/introduce-data-bias-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-19
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
-  tag: introduce-data-bias
+  tag: introduce-data-bias-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: AI agents can introduce or magnify existing discriminatory behaviors. It
     can harm people depending on the use.
-- id: atlas-accountability
+- id: atlas-accountability-agentic
   name: Accountability of AI agent actions
   description: Assigning responsibility for an action taken by an agentic AI system
     is difficult due to the complexity of agents and the number of external resources,
     tools or agents they interact with.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/accountability.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/accountability-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-29
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
-  tag: accountability
+  tag: accountability-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Without properly documenting decisions and assigning responsibility, determining
     liability for unexpected behavior or misuse might not be possible.
-- id: atlas-incomplete-ai-agent-evaluation
+- id: atlas-incomplete-ai-agent-evaluation-agentic
   name: Incomplete AI agent evaluation
   description: Evaluating the performance or accuracy or an agent is difficult because
     of system complexity and open-endedness.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/incomplete-ai-agent-evaluation.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/incomplete-ai-agent-evaluation-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
-  tag: incomplete-ai-agent-evaluation
+  tag: incomplete-ai-agent-evaluation-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Insufficient evaluation of an agent’s performance or accuracy can lead
     to the use of agents that do not perform to expectations. Incorrect agent behavior
     can result in harms to an agent’s users or others.
@@ -3545,7 +3642,7 @@ risks:
     can provide are limited and more likely to be incorrect.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/inaccessible-training-data.html
   dateCreated: 2024-03-06
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   broadMatch:
@@ -3558,7 +3655,8 @@ risks:
   - mit-ai-risk-subdomain-7.4
   tag: inaccessible-training-data
   type: output
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Low quality explanations without source data make it difficult for users,
     model validators, and auditors to understand and trust the model.
 - id: atlas-bypassing-learning
@@ -3567,7 +3665,7 @@ risks:
     that use AI models to bypass the learning process.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/bypassing-learning.html
   dateCreated: 2024-03-06
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   relatedMatch:
@@ -3577,7 +3675,8 @@ risks:
   - mit-ai-risk-subdomain-4.3
   tag: bypassing-learning
   type: non-technical
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: AI models are quick to find solutions or solve complex problems. These
     systems can be misused by students to bypass the learning process. The ease of
     access to these models results in students having a superficial understanding
@@ -3589,7 +3688,7 @@ risks:
     is not accessible.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/untraceable-attribution.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   broadMatch:
@@ -3602,7 +3701,8 @@ risks:
   - mit-ai-risk-subdomain-7.4
   tag: untraceable-attribution
   type: output
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Without the ability to access training data content, the possibility of
     using source attribution techniques can be severely limited or impossible. This
     makes it difficult for users, model validators, and auditors to understand and
@@ -3612,7 +3712,7 @@ risks:
   description: Content might not be clearly disclosed as AI generated.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/non-disclosure.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
@@ -3624,17 +3724,19 @@ risks:
   - mit-ai-risk-subdomain-7.4
   tag: non-disclosure
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Users must be notified when they are interacting with an AI system. Not
     disclosing the AI-authored content can result in a lack of transparency.
 - id: atlas-data-transparency
   name: Lack of training data transparency
-  description: Without accurate documentation on how a model's data was collected,
-    curated, and used to train a model, it might be harder to satisfactorily explain
-    the behavior of the model with respect to the data.
+  description: Proper documentation contains information about how a model's data
+    was collected, curated, and used to train a model, including any synthetic data
+    generation processes. Without proper documentation it might be harder to satisfactorily
+    explain the behavior of the model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-transparency.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-transparency
   closeMatch:
@@ -3651,20 +3753,22 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: data-transparency
   type: training-data
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
   concern: A lack of data documentation limits the ability to evaluate risks associated
     with the data. Having access to the training data is not enough. Without recording
-    how the data was cleaned, modified, or generated, the model behavior is more difficult
-    to understand and to fix. Lack of data transparency also impacts model reuse as
-    it is difficult to determine data representativeness for the new use without such
-    documentation.
+    how the data was cleaned, modified, or generated, including any data augmentation
+    or synthetic data generation steps, the model behavior is more difficult to understand
+    and to fix. Lack of data transparency also impacts model reuse as it is difficult
+    to determine data representativeness for the new use without such documentation.
 - id: atlas-model-usage-rights
   name: Model usage rights restrictions
   description: Terms of service, licenses, or other rules restrict the use of certain
     models.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/model-usage-rights.html
   dateCreated: 2024-09-24
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-legal-compliance
   broadMatch:
@@ -3676,23 +3780,25 @@ risks:
   - ail-specialized-advice
   tag: model-usage-rights
   type: non-technical
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: Laws and regulations that concern the use of AI are in place and vary from
     country to country. Additionally, the usage of models might be dictated by licensing
     terms or agreements.
-- id: atlas-reproducibility
+- id: atlas-reproducibility-agentic
   name: Reproducibility
   description: Replicating agent behavior or output can be impacted by changes or
     updates made to external services and tools. This impact is increased if the agent
     is built with generative AI.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/reproducibility.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/reproducibility-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-29
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
-  tag: reproducibility
+  tag: reproducibility-agentic
   type: agentic
-  descriptor: specific to agentic AI
+  descriptor:
+  - specific to agentic AI
   concern: Because AI agents behavior may rely on Application Programming Interfaces
     (APIs), systems, or other resources that may change or become unavailable, evaluations
     that rely on reproducible results may not be reliably reproduced. This adds cost
@@ -3704,15 +3810,16 @@ risks:
     designed, to target and exploit vulnerabilities in the model.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/specialized-tokens-attack.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - atlas-prompt-injection
   - atlas-prompt-injection
   tag: specialized-tokens-attack
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Specialized tokens attacks can be used to alter model behavior and benefit
     the attacker. The content it generates may cause harms for the user or others.
 - id: atlas-incomplete-advice
@@ -3721,7 +3828,7 @@ risks:
     in possible harm if the advice is followed.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/incomplete-advice.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   broadMatch:
@@ -3737,7 +3844,8 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: incomplete-advice
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: A person might act on incomplete advice or worry about a situation that
     is not applicable to them due to the overgeneralized nature of the content generated.
     For example, a model might provide incorrect medical, financial, and legal advice
@@ -3750,9 +3858,9 @@ risks:
     described in the prompt attack section of the table.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/prompt-injection.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   exactMatch:
   - llm01-prompt-injection
   broadMatch:
@@ -3781,7 +3889,8 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: prompt-injection
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Injection attacks can be used to alter model behavior and benefit the attacker.
 - id: atlas-lack-of-system-transparency
   name: Lack of system transparency
@@ -3789,9 +3898,11 @@ risks:
     model’s purpose within the system in which it is used.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-system-transparency.html
   dateCreated: 2024-09-24
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
+  broadMatch:
+  - nist-value-chain-and-component-integration
   relatedMatch:
   - mit-ai-causal-risk-entity-human
   - mit-ai-causal-risk-intent-other
@@ -3799,7 +3910,8 @@ risks:
   - mit-ai-risk-subdomain-6.5
   tag: lack-of-system-transparency
   type: non-technical
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: A lack of documentation makes it difficult to understand how the model’s
     outcomes contribute to the system’s or application’s functionality.
 - id: atlas-data-usage
@@ -3808,7 +3920,7 @@ risks:
     for specific AI use cases.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-usage.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
   relatedMatch:
@@ -3818,7 +3930,8 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: data-usage
   type: training-data
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: Data usage restrictions can impact the availability of the data required
     for training an AI model and can lead to poorly represented data.
 - id: atlas-impact-on-cultural-diversity
@@ -3827,9 +3940,11 @@ risks:
     homogenization of culture and thoughts.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-on-cultural-diversity.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
+  broadMatch:
+  - nist-information-integrity
   relatedMatch:
   - credo-risk-010
   - credo-risk-044
@@ -3839,16 +3954,22 @@ risks:
   - mit-ai-risk-subdomain-6.3
   tag: impact-on-cultural-diversity
   type: non-technical
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
+  - amplified by synthetic data
   concern: Underrepresented groups' languages, viewpoints, and institutions might
-    be suppressed by that means reducing diversity of thought and culture.
+    be suppressed by that means reducing diversity of thought and culture, and the
+    use of synthetic data may further amplify these biases, for example reducing linguistic
+    or cultural diversity. This can lead to a homogenization of culture and thoughts,
+    with dominant languages, dialects, values, and information being overrepresented,
+    while disregarding or suppressing other traditions, viewpoints, and institutions.
 - id: atlas-plagiarism
   name: 'Impact on education: plagiarism'
   description: Easy access to high-quality generative models might result in students
     that use AI models to plagiarize existing work intentionally or unintentionally.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/plagiarism.html
   dateCreated: 2024-03-06
-  dateModified: 2025-04-28
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   relatedMatch:
@@ -3858,7 +3979,8 @@ risks:
   - mit-ai-risk-subdomain-4.3
   tag: plagiarism
   type: non-technical
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: AI models can be used to claim the authorship or originality of works that
     were created by other people in doing so by engaging in plagiarism. Claiming others’
     work as your own is both unethical and often illegal.
@@ -3869,7 +3991,7 @@ risks:
     the model might result in unwanted disclosure of that information.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/personal-information-in-data.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   broadMatch:
@@ -3885,7 +4007,8 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: personal-information-in-data
   type: training-data
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: If not properly developed to protect sensitive data, the model might expose
     personal information in the generated output.  Additionally, personal, or sensitive
     data must be reviewed and handled in accordance with privacy laws and regulations.
@@ -3896,15 +4019,16 @@ risks:
     the undesired behavior.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/direct-instructions-attack.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - atlas-prompt-injection
   - atlas-prompt-injection
   tag: direct-instructions-attack
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Direct instructions attacks can be used to alter model behavior and benefit
     the attacker. The content it generates may cause harms for the user or others.
 - id: atlas-improper-usage
@@ -3913,7 +4037,7 @@ risks:
     not originally designed for.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/improper-usage.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
@@ -3927,7 +4051,8 @@ risks:
   - mit-ai-risk-subdomain-5.1
   tag: improper-usage
   type: output
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Reusing a model without understanding its original data, design intent,
     and goals might result in unexpected and unwanted model behaviors.
 - id: atlas-impact-on-jobs
@@ -3936,17 +4061,20 @@ risks:
     to people's job loss as their work is automated if they are not reskilled.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-on-jobs.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   relatedMatch:
+  - credo-risk-042
+  - credo-risk-042
   - mit-ai-causal-risk-entity-human
   - mit-ai-causal-risk-intent-unintentional
   - mit-ai-causal-risk-timing-post-deployment
   - mit-ai-risk-subdomain-6.2
   tag: impact-on-jobs
   type: non-technical
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Job loss might lead to a loss of income and thus might negatively impact
     the society and human welfare. Reskilling might be challenging given the pace
     of the technology evolution.
@@ -3957,7 +4085,7 @@ risks:
     behaves similarly.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/extraction-attack.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-model-behavior-manipulation
   broadMatch:
@@ -3969,7 +4097,8 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: extraction-attack
   type: inference
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: With a successful extraction attack, the attacker can perform further adversarial
     attacks to gain valuable information such as sensitive personal information or
     intellectual property.
@@ -3979,7 +4108,7 @@ risks:
     in the model to perform restricted actions.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/jailbreaking.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-model-behavior-manipulation
   broadMatch:
@@ -3995,7 +4124,8 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: jailbreaking
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Jailbreaking attacks can be used to alter model behavior and benefit the
     attacker.
 - id: atlas-data-acquisition
@@ -4004,9 +4134,12 @@ risks:
     of data for specific AI use cases.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-acquisition.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
+  broadMatch:
+  - llm032025-supply-chain
+  - nist-value-chain-and-component-integration
   relatedMatch:
   - mit-ai-causal-risk-entity-human
   - mit-ai-causal-risk-intent-unintentional
@@ -4014,24 +4147,26 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: data-acquisition
   type: training-data
-  descriptor: amplified by generative AI
-  concern: 'There are several ways of collecting data for building a foundation models:
+  descriptor:
+  - amplified by generative AI
+  concern: '"There are several ways of collecting data for building a foundation models:
     web scraping, web crawling, crowdsourcing, and curating public datasets. Data
     acquisition restrictions can also impact the availability of the data that is
-    required for training an AI model and can lead to poorly represented data.'
-- id: atlas-sharing-info-tools
+    required for training an AI model and can lead to poorly represented data."'
+- id: atlas-sharing-info-tools-agentic
   name: Sharing IP/PI/confidential information with tools
   description: AI agents with unrestricted access to resources or databases or tools
     could potentially store and share PI/IP/confidential information with other tools
     or agents when performing their actions.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/sharing-info-tools.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/sharing-info-tools-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
-  tag: sharing-info-tools
+  tag: sharing-info-tools-agentic
   type: agentic
-  descriptor: specific to agentic AI
+  descriptor:
+  - specific to agentic AI
   concern: AI agents may share privileged information with other tools/agents. The
     act of sharing the information may result in harm for the model owner, user, or
     others. The harm can vary based on the type and details of the information shared.
@@ -4045,9 +4180,9 @@ risks:
     as part of the model’s training, there is a possibility it could be revealed.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/prompt-priming.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-19
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - llm01-prompt-injection
   - nist-information-security
@@ -4058,16 +4193,17 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: prompt-priming
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: The attack can be used to alter model behavior and benefit the attacker.
 - id: atlas-reidentification
   name: Reidentification
-  description: Even with the removal or personal identifiable information (PII) and
-    sensitive personal information (SPI) from data, it might be possible to identify
-    persons due to correlations to other features available in the data.
+  description: Even with the removal of personal information (PI) and sensitive personal
+    information (SPI) from data, it might be possible to identify persons due to correlations
+    to other features available in the data.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/reidentification.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   broadMatch:
@@ -4080,9 +4216,12 @@ risks:
   - mit-ai-risk-subdomain-2.1
   tag: reidentification
   type: training-data
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
+  - amplified by synthetic data
   concern: Including irrelevant but highly correlated features to personal information
-    for model training can increase the risk of reidentification.
+    for model training can increase the risk of reidentification, and synthetic data
+    generated from such data may preserve these correlations.
 - id: atlas-attribute-inference-attack
   name: Attribute inference attack
   description: An attribute inference attack repeatedly queries a model to detect
@@ -4091,7 +4230,7 @@ risks:
     about the training data and uses that knowledge to infer the sensitive data.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/attribute-inference-attack.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   broadMatch:
@@ -4105,17 +4244,18 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: attribute-inference-attack
   type: inference
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: With a successful attack, the attacker can gain valuable information such
     as sensitive personal information or intellectual property.
 - id: atlas-poor-model-accuracy
   name: Poor model accuracy
-  description: Poor model accuracy occurs when a model’s performance is insufficient
+  description: Poor model accuracy occurs when a model's performance is insufficient
     to the task it was designed for. Low accuracy might occur if the model is not
-    correctly engineered, or there are changes to the model’s expected inputs.
+    correctly engineered, or if the model’s expected inputs change.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/poor-model-accuracy.html
   dateCreated: 2024-09-24
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-accuracy
   broadMatch:
@@ -4130,16 +4270,19 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: poor-model-accuracy
   type: inference
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
+  - amplified by synthetic data
   concern: Inadequate model performance can adversely affect end users and downstream
-    systems that are relying on correct output. In cases where model output is consequential,
-    this might result in societal, reputational, or financial harm.
+    systems that are relying on correct output, and the use of synthetic data that
+    is not representative can exacerbate these issues. In cases where model output
+    is consequential, this might result in societal, reputational, or financial harm.
 - id: atlas-data-transfer
   name: Data transfer restrictions
   description: Laws and other restrictions can limit or prohibit transferring data.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-transfer.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
   broadMatch:
@@ -4151,7 +4294,8 @@ risks:
   - mit-ai-risk-subdomain-7.3
   tag: data-transfer
   type: training-data
-  descriptor: traditional risk of AI
+  descriptor:
+  - traditional risk of AI
   concern: Data transfer restrictions can also impact the availability of the data
     that is required for training an AI model and can lead to poorly represented data.
 - id: atlas-generated-content-ownership
@@ -4160,7 +4304,7 @@ risks:
     of AI-generated content.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/generated-content-ownership.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-legal-compliance
   broadMatch:
@@ -4172,24 +4316,26 @@ risks:
   - mit-ai-risk-subdomain-6.3
   tag: generated-content-ownership
   type: non-technical
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Laws and regulations that relate to the ownership of AI-generated content
     are largely unsettled and can vary from country to country. Not being able to
     identify the owner of an AI-generated content might negatively impact AI-supported
     creative tasks.
-- id: atlas-lack-of-ai-agent-transparency
+- id: atlas-lack-of-ai-agent-transparency-agentic
   name: Lack of AI agent transparency
   description: Lack of AI agent transparency is due to insufficient documentation
     of the AI agent design, development, evaluation process, absence of insights into
     the inner workings of the AI agent, and interaction with other agents/tools/resources.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-ai-agent-transparency.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-ai-agent-transparency-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
-  tag: lack-of-ai-agent-transparency
+  tag: lack-of-ai-agent-transparency-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Transparency is important for AI ethics and guiding appropriate use of
     AI agents. Insufficient documentation might make it more difficult to govern AI
     agent usage, evaluate risks, to modify, or reuse the agents.  Additionally, transparency
@@ -4204,29 +4350,31 @@ risks:
     to govern the interaction, rendering the model vulnerable.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/encoded-interactions-attack.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
-  isPartOf: ibm-risk-atlas-robustness-prompt-attacks
+  isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   broadMatch:
   - atlas-prompt-injection
   - atlas-prompt-injection
   tag: encoded-interactions-attack
   type: inference
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Encoded interactions attacks can be used to alter model behavior and benefit
     the attacker. The content it generates may cause harms for the user or others.
-- id: atlas-impact-human-dignity
+- id: atlas-impact-human-dignity-agentic
   name: Impact on human dignity
   description: If human workers perceive AI agents as being better at doing the job
     of the human, the human can experience a decline in their self-worth and wellbeing.
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-human-dignity.html
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/impact-human-dignity-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
-  tag: impact-human-dignity
+  tag: impact-human-dignity-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Human workers perceiving AI agents as being better at doing the humans’
     jobs, can cause humans to feel devalued or treated as mere data points than respected
     individuals. This can negatively impact society and human welfare. Reskilling
@@ -4236,7 +4384,7 @@ risks:
   description: Generated content might unfairly represent certain groups or individuals.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/output-bias.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   broadMatch:
@@ -4252,7 +4400,8 @@ risks:
   - mit-ai-risk-subdomain-1.1
   tag: output-bias
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Bias can harm users of the AI models and magnify existing discriminatory
     behaviors.
 - id: atlas-dangerous-use
@@ -4261,7 +4410,7 @@ risks:
     people.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/dangerous-use.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   broadMatch:
@@ -4281,7 +4430,8 @@ risks:
   - mit-ai-causal-risk-timing-post-deployment
   tag: dangerous-use
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Large language models are often trained on vast amounts of publicly-available
     information that may include information on harming others. A model that has this
     potential must be carefully evaluated for such content and properly governed.
@@ -4291,7 +4441,7 @@ risks:
     or not possible to obtain.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unexplainable-output.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   broadMatch:
@@ -4303,7 +4453,8 @@ risks:
   - mit-ai-risk-subdomain-7.4
   tag: unexplainable-output
   type: output
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: Foundation models are based on complex deep learning architectures, making
     explanations for their outputs difficult. Inaccessible training data could limit
     the types of explanations a model can provide. Without clear explanations for
@@ -4316,7 +4467,7 @@ risks:
     that also include mental health.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/human-exploitation.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   broadMatch:
@@ -4329,7 +4480,8 @@ risks:
   - mit-ai-risk-subdomain-6.2
   tag: human-exploitation
   type: non-technical
-  descriptor: amplified by generative AI
+  descriptor:
+  - amplified by generative AI
   concern: 'Foundation models still depend on human labor to source, manage, and program
     the data that is used to train the model. Human exploitation for these activities
     might negatively impact the society and human welfare. '
@@ -4339,7 +4491,7 @@ risks:
     (HAP) or obscene content. This also includes behaviors like bullying.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/toxic-output.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   closeMatch:
@@ -4356,21 +4508,23 @@ risks:
   - mit-ai-risk-subdomain-1.2
   tag: toxic-output
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
   concern: Hateful, abusive, and profane (HAP) or obscene content can adversely impact
     and harm people interacting with the model.
-- id: atlas-unexplainable-untraceable-actions
+- id: atlas-unexplainable-untraceable-actions-agentic
   name: Unexplainable and untraceable actions
-  description: 'Explanations, lineage and trace information, and source attribution
-    for AI agent actions might be difficult, imprecise or unobtainable. '
-  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unexplainable-untraceable-actions.html
+  description: Explanations, lineage and trace information, and source attribution
+    for AI agent actions might be difficult, imprecise or unobtainable.
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unexplainable-untraceable-actions-agentic.html
   dateCreated: 2025-04-28
-  dateModified: 2025-05-20
+  dateModified: 2025-10-10
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
-  tag: unexplainable-untraceable-actions
+  tag: unexplainable-untraceable-actions-agentic
   type: agentic
-  descriptor: amplified by agentic AI
+  descriptor:
+  - amplified by agentic AI
   concern: Without clear explanations, lineage trace information, and source attributions
     for AI agent actions, it is difficult for users, model validators, and auditors
     to understand and trust the model. Wrong explanations might lead to over-trust.
@@ -4381,7 +4535,7 @@ risks:
     the training or fine-tuning datasets.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/data-poisoning.html
   dateCreated: 2024-03-06
-  dateModified: 2025-05-20
+  dateModified: 2025-10-22
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   broadMatch:
@@ -4394,18 +4548,22 @@ risks:
   - mit-ai-risk-subdomain-2.2
   tag: data-poisoning
   type: training-data
-  descriptor: traditional risk of AI
-  concern: Poisoning data can make the model sensitive to a malicious data pattern
-    and produce the adversary’s desired output. It can create a security risk where
-    adversaries can force model behavior for their own benefit.
+  descriptor:
+  - traditional risk of AI
+  - amplified by synthetic data
+  concern: "Poisoning data can make the model sensitive to a malicious data pattern\
+    \ and produce the adversary’s desired output. It can create a security risk where\
+    \ adversaries can force model behavior for their own benefit. Synthetic data generation\
+    \ can be used to create poisoned data, which can then be used to carry out a data\
+    \ poisoning attack. \n\n"
 - id: atlas-unreliable-source-attribution
   name: Unreliable source attribution
   description: Source attribution is the AI system's ability to describe from what
     training data it generated a portion or all its output. Since current techniques
-    are based on approximations, these attributions might be incorrect.
+    are based on approximations, attributions might be incorrect.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unreliable-source-attribution.html
   dateCreated: 2024-03-06
-  dateModified: 2025-04-28
+  dateModified: 2025-10-13
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   broadMatch:
@@ -4418,9 +4576,103 @@ risks:
   - mit-ai-risk-subdomain-7.4
   tag: unreliable-source-attribution
   type: output
-  descriptor: specific to generative AI
+  descriptor:
+  - specific to generative AI
+  - amplified by synthetic data
   concern: Low-quality attributions make it difficult for users, model validators,
-    and auditors to understand and trust the model.
+    and auditors to understand and trust the model. The use of synthetic data can
+    complicate source attribution, as the model may be unable to identify synthetic
+    data or accurately identify the original source of the synthetic data, potentially
+    leading to incorrect or misleading attributions.
+- id: atlas-temporal-gap
+  name: Temporal gap
+  description: 'Temporal gaps in synthetic data refer to the discrepancies between
+    the constantly evolving real-world data and the fixed conditions that are captured
+    by synthetic data. Temporal gaps potentially cause synthetic data to become outdated
+    or obsolete over time. Gaps arise because synthetic data is generated from seed
+    data that is tied to a specific point in time, which limits its ability to reflect
+    ongoing changes. '
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/temporal-gap.html
+  dateCreated: 2025-10-10
+  dateModified: 2025-10-13
+  isDefinedByTaxonomy: ibm-risk-atlas
+  isPartOf: ibm-risk-atlas-governance
+  tag: temporal-gap
+  type: non-technical
+  descriptor:
+  - amplified by synthetic data
+  concern: Temporal gaps in synthetic data can render it outdated or obsolete as real-world
+    conditions evolve, leading to mismatches between current realities and the assumptions
+    embedded in the data, potentially compromising model performance, accuracy and
+    relevance. However, in prioritizing current realities, there is also a risk of
+    erasing historical or cultural contexts, highlighting the need to strike a balance
+    between adapting to evolving conditions and preserving valuable knowledge and
+    perspectives.
+- id: atlas-lack-domain-expertise
+  name: Lack of domain expertise
+  description: A lack of domain expertise occurs when synthetic data generation processes
+    do not involve sufficient consultation with domain experts. This results in a
+    lack of understanding of the specific requirements and nuances of the domain.
+    This can also lead to synthetic data that may not accurately capture the complexities
+    and challenges of a real-world scenario.
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-domain-expertise.html
+  dateCreated: 2025-10-10
+  dateModified: 2025-10-10
+  isDefinedByTaxonomy: ibm-risk-atlas
+  isPartOf: ibm-risk-atlas-governance
+  tag: lack-domain-expertise
+  type: non-technical
+  descriptor:
+  - specific to synthetic data
+  concern: Lack of domain expertise can lead to AI models that are not well-suited
+    to address the specific challenges and needs of a particular domain or generalize
+    effectively to real-world scenarios, potentially resulting in poor model performance,
+    reduced model accuracy, and decreased predictive power.
+- id: atlas-exclusion
+  name: Exclusion
+  description: Exclusion refers to the risk that synthetic data generation processes
+    may overlook or fail to consult with marginalized populations. Such exclusion
+    results in synthetic data that does not accurately represent their experiences,
+    needs, or perspectives.
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/exclusion.html
+  dateCreated: 2025-10-10
+  dateModified: 2025-10-10
+  isDefinedByTaxonomy: ibm-risk-atlas
+  isPartOf: ibm-risk-atlas-societal-impact
+  tag: exclusion
+  type: non-technical
+  descriptor:
+  - specific to synthetic data
+  concern: Exclusion can lead to unfair model outcomes, erosion of trust, and potential
+    harm to marginalized groups, as the synthetic data used to train foundation models
+    may perpetuate existing biases and inequalities, potentially resulting in discriminatory
+    outcomes, the exacerbation of social and economic disparities, and the erosion
+    of trust in AI systems among marginalized communities.
+- id: atlas-overfitting
+  name: Overfitting
+  description: Overfitting occurs when a model or algorithm memorizes and fits too
+    closely or exactly to its training data. Overfitting results in a model that might
+    not be able to make accurate predictions or conclusions from any data other than
+    the training data and potentially fails in unexpected scenarios. Overfitting is
+    also related to model collapse, which involves repeatedly training generative
+    models on synthetic data that is generated with LLMs causing the model to lose
+    information and become less accurate.
+  url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/overfitting.html
+  dateCreated: 2025-10-10
+  dateModified: 2025-10-13
+  isDefinedByTaxonomy: ibm-risk-atlas
+  isPartOf: ibm-risk-atlas-accuracy
+  tag: overfitting
+  type: training-data
+  descriptor:
+  - amplified by synthetic data
+  concern: 'Overfitting to synthetic data can undermine the broad applicability and
+    adaptability of foundation models, which are designed to be general-purpose and
+    widely applicable. If a foundation model overfits to the synthetic data, it may
+    fail to perform well in diverse real-world scenarios, limiting its potential to
+    provide value and support decision-making in a wide range of contexts. This raises
+    the need to negotiate issues with alignment or contextual relevance for model
+    use and balance the benefits of fine-tuning with the risks of overfitting. '
 - id: nist-cbrn-information-or-capabilities
   name: CBRN Information or Capabilities
   description: Eased access to or synthesis of materially nefarious information or
@@ -4612,7 +4864,7 @@ risks:
   closeMatch:
   - credo-risk-004
   exactMatch:
-  - atlas-impact-environment
+  - atlas-impact-on-the-environment
   relatedMatch:
   - credo-risk-004
 - id: nist-harmful-bias-or-homogenization
@@ -4627,7 +4879,7 @@ risks:
   narrowMatch:
   - atlas-data-bias
   - atlas-decision-bias
-  - atlas-impact-affected-communities
+  - atlas-impact-on-affected-communities
   - atlas-output-bias
   - atlas-spreading-toxicity
   - atlas-unrepresentative-data
@@ -4705,7 +4957,7 @@ risks:
   - atlas-improper-usage
   - atlas-incomplete-usage-definition
   - atlas-non-disclosure
-  - atlas-over-under-reliance
+  - atlas-over-or-under-reliance
   - atlas-poor-model-accuracy
   relatedMatch:
   - ail-suicide-and-self-harm
@@ -4802,11 +5054,11 @@ risks:
   isDefinedByTaxonomy: nist-ai-rmf
   narrowMatch:
   - atlas-data-transparency
-  - atlas-impact-cultural-diversity
+  - atlas-impact-on-cultural-diversity
   - atlas-impact-on-human-agency
   - atlas-incomplete-advice
   - atlas-jailbreaking
-  - atlas-lack-testing-diversity
+  - atlas-lack-of-testing-diversity
   - atlas-poor-model-accuracy
   - atlas-spreading-disinformation
   - atlas-unexplainable-output
@@ -5033,7 +5285,7 @@ risks:
   - MG-3.2-007
   isDefinedByTaxonomy: nist-ai-rmf
   narrowMatch:
-  - atlas-data-acquisition-restrictions
+  - atlas-data-acquisition
   - atlas-data-contamination
   - atlas-data-curation
   - atlas-data-provenance
@@ -5044,9 +5296,9 @@ risks:
   - atlas-inaccessible-training-data
   - atlas-incomplete-advice
   - atlas-incorrect-risk-testing
-  - atlas-lack-data-transparency
-  - atlas-lack-model-transparency
-  - atlas-lack-system-transparency
+  - atlas-lack-of-data-transparency
+  - atlas-lack-of-model-transparency
+  - atlas-lack-of-system-transparency
   - atlas-legal-accountability
   - atlas-model-usage-rights
   - atlas-poor-model-accuracy
@@ -8615,13 +8867,13 @@ risks:
   url: https://genai.owasp.org/llmrisk/llm032025-supply-chain/
   isDefinedByTaxonomy: owasp-llm-2.0
   narrowMatch:
-  - atlas-data-acquisition-restrictions
+  - atlas-data-acquisition
   - atlas-data-contamination
   - atlas-data-curation
   - atlas-data-provenance
   - atlas-data-usage-rights
   - atlas-data-usage-rights
-  - atlas-lack-data-transparency
+  - atlas-lack-of-data-transparency
   - atlas-model-usage-rights
   - atlas-untraceable-attribution
   relatedMatch:
@@ -8656,7 +8908,7 @@ risks:
   relatedMatch:
   - ail-intellectual-property
   - ail-privacy
-  - atlas-over-under-reliance
+  - atlas-over-or-under-reliance
   - credo-risk-036
 - id: llm062025-excessive-agency
   name: LLM06:2025 Excessive Agency
@@ -8673,7 +8925,7 @@ risks:
   url: https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
   isDefinedByTaxonomy: owasp-llm-2.0
   relatedMatch:
-  - atlas-over-under-reliance
+  - atlas-over-or-under-reliance
   - credo-risk-002
   - credo-risk-017
   - credo-risk-018
@@ -9489,8 +9741,8 @@ risks:
   - mit-ai-risk-subdomain-6.2
   relatedMatch:
   - granite-unethical-behavior
-  - atlas-job-loss
-  - atlas-job-loss
+  - atlas-impact-on-jobs
+  - atlas-impact-on-jobs
 - id: credo-risk-043
   name: Economic and cultural devaluation of human effort (Slattery et al., 2024;
     IBM, 2024)
@@ -9594,39 +9846,6 @@ risks:
   - mit-ai-risk-subdomain-6.5
   - mit-ai-risk-subdomain-7.3
   - nist-value-chain-and-component-integration
-- id: atlas-data-acquisition-restrictions
-  broadMatch:
-  - llm032025-supply-chain
-  - nist-value-chain-and-component-integration
-- id: atlas-lack-data-transparency
-  broadMatch:
-  - llm032025-supply-chain
-  - nist-value-chain-and-component-integration
-- id: atlas-over-under-reliance
-  broadMatch:
-  - nist-human-ai-configuration
-  relatedMatch:
-  - llm052025-improper-output-handling
-  - llm062025-excessive-agency
-- id: atlas-job-loss
-  relatedMatch:
-  - credo-risk-042
-  - credo-risk-042
-- id: atlas-impact-affected-communities
-  broadMatch:
-  - nist-harmful-bias-or-homogenization
-- id: atlas-impact-cultural-diversity
-  broadMatch:
-  - nist-information-integrity
-- id: atlas-lack-model-transparency
-  broadMatch:
-  - nist-value-chain-and-component-integration
-- id: atlas-lack-system-transparency
-  broadMatch:
-  - nist-value-chain-and-component-integration
-- id: atlas-lack-testing-diversity
-  broadMatch:
-  - nist-information-integrity
 riskcontrols:
 - id: gg-harm-detection
   name: Harm detection
@@ -9694,7 +9913,7 @@ riskcontrols:
   - granite-function-call
   isDefinedByTaxonomy: ibm-granite-guardian
 riskincidents:
-- id: ibm-ai-risk-atlas-ri-ai-based-biological-attacks
+- id: ibm-risk-atlas-ri-ai-based-biological-attacks
   name: AI-based Biological Attacks
   description: As per the source article, large language models could help in the
     planning and execution of a biological attack. Several test scenarios are mentioned
@@ -9707,7 +9926,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The Guardian, October 2023
   source_uri: https://www.theguardian.com/technology/2023/oct/16/ai-chatbots-could-help-plan-bioweapon-attacks-report-finds
-- id: ibm-ai-risk-atlas-ri-healthcare-bias
+- id: ibm-risk-atlas-ri-healthcare-bias
   name: Healthcare Bias
   description: According to the research article on reinforcing disparities in medicine
     using data and AI applications to transform how people receive healthcare is only
@@ -9719,7 +9938,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Forbes, December 2022
   source_uri: https://www.forbes.com/sites/adigaskell/2022/12/02/minority-patients-often-left-behind-by-health-ai/?sh=31d28a225b41
-- id: ibm-ai-risk-atlas-ri-undisclosed-ai-interaction
+- id: ibm-risk-atlas-ri-undisclosed-ai-interaction
   name: Undisclosed AI Interaction
   description: According to the source article, an online emotional support chat service
     ran a study to augment or write responses to around 4,000 users by using  GPT-3
@@ -9731,7 +9950,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Business Insider, Jan 2023
   source_uri: https://www.businessinsider.com/company-using-chatgpt-mental-health-support-ethical-issues-2023-1
-- id: ibm-ai-risk-atlas-ri-ai-based-cyberattacks
+- id: ibm-risk-atlas-ri-ai-based-cyberattacks
   name: AI-based Cyberattacks
   description: According to the source article, hackers are increasingly experimenting
     with ChatGPT and other AI tools, enabling a wider range of actors to carry out
@@ -9745,7 +9964,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: TIME, February 2024
   source_uri: https://time.com/6717129/hackers-ai-2024-elections/
-- id: ibm-ai-risk-atlas-ri-generation-of-less-secure-code
+- id: ibm-risk-atlas-ri-generation-of-less-secure-code
   name: Generation of Less Secure Code
   description: According to their paper, researchers at Stanford University investigated
     the impact of code-generation tools on code quality and found that programmers
@@ -9760,7 +9979,7 @@ riskincidents:
     Conference on Computer and Communications Security (CCS '23), November 26-30,
     2023, Copenhagen, Denmark. ACM, New York, NY, USA, 15 pages.
   source_uri: https://dl.acm.org/doi/10.1145/3576915.3623157
-- id: ibm-ai-risk-atlas-ri-replacing-human-workers
+- id: ibm-risk-atlas-ri-replacing-human-workers
   name: Replacing Human Workers
   description: According to the news article, AI technology replicating individuals'
     faces and voices is becoming more prominent in Hollywood. The actors’ concerns
@@ -9775,7 +9994,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Reuters, July 2023
   source_uri: https://www.reuters.com/technology/actors-decry-existential-crisis-over-ai-generated-synthetic-actors-2023-07-21/
-- id: ibm-ai-risk-atlas-ri-increased-carbon-emissions
+- id: ibm-risk-atlas-ri-increased-carbon-emissions
   name: Increased Carbon Emissions
   description: According to the source article, training earlier chatbots models such
     as GPT-3 led to the production of 500 metric tons of greenhouse gas emissions—equivalent
@@ -9787,7 +10006,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Brookings, January 2024
   source_uri: https://www.brookings.edu/articles/the-us-must-balance-climate-justice-challenges-in-the-era-of-artificial-intelligence/
-- id: ibm-ai-risk-atlas-ri-bypassing-llm-guardrails
+- id: ibm-risk-atlas-ri-bypassing-llm-guardrails
   name: Bypassing LLM guardrails
   description: A study cited by researchers at Carnegie Mellon University, The Center
     for AI Safety, and the Bosch Center for AI, claim to have discovered a simple
@@ -9801,7 +10020,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The New York Times, July 2023
   source_uri: https://www.nytimes.com/2023/07/27/business/ai-chatgpt-safety-research.html
-- id: ibm-ai-risk-atlas-ri-audio-deepfakes
+- id: ibm-risk-atlas-ri-audio-deepfakes
   name: Audio Deepfakes
   description: According to the source article, the Federal Communications Commission
     outlawed robocalls that contain voices that are generated by artificial intelligence.
@@ -9812,7 +10031,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: AP News, February 2024
   source_uri: https://apnews.com/article/fcc-elections-artificial-intelligence-robocalls-regulations-a8292b1371b3764916461f60660b93e6
-- id: ibm-ai-risk-atlas-ri-adversarial-attacks-on-autonomous-vehicles
+- id: ibm-risk-atlas-ri-adversarial-attacks-on-autonomous-vehicles
   name: Adversarial attacks on autonomous vehicles
   description: 'A report from the European Union Agency for Cybersecurity (ENISA)
     found that autonomous vehicles are “highly vulnerable to a wide range of attacks”
@@ -9833,7 +10052,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Market Watch, February 2020
   source_uri: https://www.marketwatch.com/story/85-in-a-35-hackers-show-how-easy-it-is-to-manipulate-a-self-driving-tesla-2020-02-19
-- id: ibm-ai-risk-atlas-ri-role-of-ai-systems-in-patenting-generated-content
+- id: ibm-risk-atlas-ri-role-of-ai-systems-in-patenting-generated-content
   name: Role of AI systems in Patenting Generated Content
   description: The U.S. Supreme Court declined to hear a challenge to the U.S. Patent
     and Trademark Office's refusal to issue patents for inventions created by an AI
@@ -9849,7 +10068,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Reuters, April 2023Reuters, December 2023
   source_uri: https://www.reuters.com/legal/us-supreme-court-rejects-computer-scientists-lawsuit-over-ai-generated-2023-04-24/https://www.reuters.com/technology/ai-cannot-be-patent-inventor-uk-supreme-court-rules-landmark-case-2023-12-20/
-- id: ibm-ai-risk-atlas-ri-biased-generated-images
+- id: ibm-risk-atlas-ri-biased-generated-images
   name: Biased Generated Images
   description: Lensa AI is a mobile app with generative features that are trained
     on Stable Diffusion that can generate “Magic Avatars” based on images that users
@@ -9860,7 +10079,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Business Insider, January 2023
   source_uri: https://www.businessinsider.com/lensa-ai-raises-serious-concerns-sexualization-art-theft-data-2023-1
-- id: ibm-ai-risk-atlas-ri-determining-ownership-of-ai-generated-image
+- id: ibm-risk-atlas-ri-determining-ownership-of-ai-generated-image
   name: Determining Ownership of AI Generated Image
   description: According to the news article, AI-generated art became controversial
     after an AI-generated work of art won the Colorado State Fair’s art competition
@@ -9876,7 +10095,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The New York Times, September 2022Reuters, September 2023
   source_uri: https://www.nytimes.com/2022/09/02/technology/ai-artificial-intelligence-artists.htmlhttps://www.reuters.com/legal/litigation/us-copyright-office-denies-protection-another-ai-created-image-2023-09-06/
-- id: ibm-ai-risk-atlas-ri-manipulating-ai-prompts
+- id: ibm-risk-atlas-ri-manipulating-ai-prompts
   name: Manipulating AI Prompts
   description: As per the source article, the UK’s cybersecurity agency has warned
     that chatbots can be manipulated by hackers to cause harmful real-world consequences
@@ -9893,7 +10112,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The Guardian, August 2023
   source_uri: https://www.theguardian.com/technology/2023/aug/30/uk-cybersecurity-agency-warns-of-chatbot-prompt-injection-attacks
-- id: ibm-ai-risk-atlas-ri-data-and-model-metadata-disclosure
+- id: ibm-risk-atlas-ri-data-and-model-metadata-disclosure
   name: Data and Model Metadata Disclosure
   description: OpenAI‘s technical report is an example of the dichotomy around disclosing
     data and model metadata.  While many model developers see value in enabling transparency
@@ -9909,7 +10128,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: OpenAI, March 2023
   source_uri: https://cdn.openai.com/papers/gpt-4.pdf
-- id: ibm-ai-risk-atlas-ri-unfairly-advantaged-groups
+- id: ibm-risk-atlas-ri-unfairly-advantaged-groups
   name: Unfairly Advantaged Groups
   description: The 2018 Gender Shades study demonstrated that machine learning algorithms
     can discriminate based on classes like race and gender. Researchers evaluated
@@ -9922,7 +10141,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: TIME, Feburary 2019
   source_uri: https://time.com/5520558/artificial-intelligence-racial-gender-bias/
-- id: ibm-ai-risk-atlas-ri-training-on-private-information
+- id: ibm-risk-atlas-ri-training-on-private-information
   name: Training on Private Information
   description: According to the article, Google and its parent company Alphabet were
     accused in a class-action lawsuit of misusing vast amount of personal information
@@ -9936,7 +10155,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Reuters, July 2023J.L. v. Alphabet Inc., July 2023
   source_uri: https://www.reuters.com/legal/litigation/google-hit-with-class-action-lawsuit-over-ai-data-scraping-2023-07-11/https://fingfx.thomsonreuters.com/gfx/legaldocs/myvmodloqvr/GOOGLE%20AI%20LAWSUIT%20complaint.pdf
-- id: ibm-ai-risk-atlas-ri-data-restriction-laws
+- id: ibm-risk-atlas-ri-data-restriction-laws
   name: Data Restriction Laws
   description: As stated in the research article, data localization measures, which
     restrict the ability to move data globally reduce the capacity to develop tailored
@@ -9949,7 +10168,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Brookings, December 2018
   source_uri: https://www.brookings.edu/articles/the-impact-of-artificial-intelligence-on-international-trade
-- id: ibm-ai-risk-atlas-ri-model-collapse-due-to-training-using-ai-generated-content
+- id: ibm-risk-atlas-ri-model-collapse-due-to-training-using-ai-generated-content
   name: Model collapse due to training using AI-generated content
   description: As stated in the source article, a group of researchers from the UK
     and Canada investigated the problem of using AI-generated content for training
@@ -9962,7 +10181,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Business Insider, August 2023
   source_uri: https://www.businessinsider.com/ai-model-collapse-threatens-to-break-internet-2023-8
-- id: ibm-ai-risk-atlas-ri-image-modification-tool
+- id: ibm-risk-atlas-ri-image-modification-tool
   name: Image Modification Tool
   description: As per the source article, the researchers have developed a tool called
     “Nightshade” that modifies images in a way that damages computer vision but remains
@@ -9976,7 +10195,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The Conversation, December 2023
   source_uri: https://theconversation.com/data-poisoning-how-artists-are-sabotaging-ai-to-take-revenge-on-image-generators-219335
-- id: ibm-ai-risk-atlas-ri-voters-manipulation-in-elections-using-ai
+- id: ibm-risk-atlas-ri-voters-manipulation-in-elections-using-ai
   name: Voters Manipulation in Elections Using AI
   description: As per the source article, a wave of AI deepfakes tied to elections
     in Europe and Asia coursed through social media for months. The growth of generative
@@ -9990,7 +10209,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: AP News, March 2024Reuters, February 2024
   source_uri: https://apnews.com/article/artificial-intelligence-elections-disinformation-chatgpt-bc283e7426402f0b4baa7df280a4c3fdhttps://www.reuters.com/technology/meta-set-up-team-counter-disinformation-ai-abuse-eu-elections-2024-02-26/
-- id: ibm-ai-risk-atlas-ri-right-to-be-forgotten-(rtbf)
+- id: ibm-risk-atlas-ri-right-to-be-forgotten-(rtbf)
   name: Right to Be Forgotten (RTBF)
   description: Laws in multiple locales, including Europe (GDPR), grant data subjects
     the right to request personal data to be deleted by organizations (‘Right To Be
@@ -10008,7 +10227,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Zhang et al., September 2023
   source_uri: https://arxiv.org/abs/2307.03941
-- id: ibm-ai-risk-atlas-ri-text-copyright-infringement-claims
+- id: ibm-risk-atlas-ri-text-copyright-infringement-claims
   name: Text Copyright Infringement Claims
   description: According to the source article, The New York Times sued OpenAI and
     Microsoft, accusing them accusing them of using millions of the newspaper's articles
@@ -10018,7 +10237,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Reuters, December 2023
   source_uri: https://www.reuters.com/legal/transactional/ny-times-sues-openai-microsoft-infringing-copyrighted-work-2023-12-27/
-- id: ibm-ai-risk-atlas-ri-lawsuit-about-llm-unlearning
+- id: ibm-risk-atlas-ri-lawsuit-about-llm-unlearning
   name: Lawsuit About LLM Unlearning
   description: According to the report, a lawsuit was filed against Google that alleges
     the use of copyright material and personal information as training data for its
@@ -10035,7 +10254,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Reuters, July 2023J.L. v. Alphabet Inc., July 2023
   source_uri: https://www.reuters.com/legal/litigation/google-hit-with-class-action-lawsuit-over-ai-data-scraping-2023-07-11/https://fingfx.thomsonreuters.com/gfx/legaldocs/myvmodloqvr/GOOGLE%20AI%20LAWSUIT%20complaint.pdf
-- id: ibm-ai-risk-atlas-ri-fbi-warning-on-deepfakes
+- id: ibm-risk-atlas-ri-fbi-warning-on-deepfakes
   name: FBI Warning on Deepfakes
   description: The FBI recently warned the public of malicious actors creating synthetic,
     explicit content “for the purposes of harassing victims or sextortion schemes”.
@@ -10046,7 +10265,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: FBI, June 2023
   source_uri: https://www.ic3.gov/PSA/Archive/2023/PSA230605
-- id: ibm-ai-risk-atlas-ri-fake-legal-cases
+- id: ibm-risk-atlas-ri-fake-legal-cases
   name: Fake Legal Cases
   description: According to the source article, a lawyer cited fake cases and quotations
     that are generated by ChatGPT in a legal brief that is filed in federal court.
@@ -10060,7 +10279,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: AP News, June 2023
   source_uri: https://apnews.com/article/artificial-intelligence-chatgpt-fake-case-lawyers-d6ae9fa79d0542db9e1455397aef381c
-- id: ibm-ai-risk-atlas-ri-disclose-personal-health-information-in-chatgpt-prompts
+- id: ibm-risk-atlas-ri-disclose-personal-health-information-in-chatgpt-prompts
   name: Disclose personal health information in ChatGPT prompts
   description: According to the source article, some people on social media shared
     about using ChatGPT as their makeshift therapists. Articles contend that users
@@ -10073,7 +10292,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The Conversation, February 2023
   source_uri: https://theconversation.com/chatgpt-is-a-data-privacy-nightmare-if-youve-ever-posted-online-you-ought-to-be-concerned-199283
-- id: ibm-ai-risk-atlas-ri-disclosure-of-confidential-information
+- id: ibm-risk-atlas-ri-disclosure-of-confidential-information
   name: Disclosure of Confidential Information
   description: According to the source article, employees of Samsung disclosed confidential
     information to OpenAI through their use of ChatGPT. In one instance, an employee
@@ -10090,7 +10309,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Business Insider, February 2023
   source_uri: https://www.businessinsider.com/walmart-warns-workers-dont-share-sensitive-information-chatgpt-generative-ai-2023-2
-- id: ibm-ai-risk-atlas-ri-exposure-of-personal-information
+- id: ibm-risk-atlas-ri-exposure-of-personal-information
   name: Exposure of personal information
   description: Per the source article, ChatGPT suffered a bug and exposed titles and
     active users' chat history to other users. Later, OpenAI shared that even more
@@ -10104,7 +10323,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The Hindu Business Line, March 2023
   source_uri: https://www.thehindubusinessline.com/info-tech/openai-admits-data-breach-at-chatgpt-private-data-of-premium-users-exposed/article66659944.ece
-- id: ibm-ai-risk-atlas-ri-determining-responsibility-for-generated-output
+- id: ibm-risk-atlas-ri-determining-responsibility-for-generated-output
   name: Determining responsibility for generated output
   description: Major journals like the Science and Nature banned ChatGPT from being
     listed as an author, as responsible authorship requires accountability and AI
@@ -10114,7 +10333,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: The Guardian, January 2023
   source_uri: https://www.theguardian.com/science/2023/jan/26/science-journals-ban-listing-of-chatgpt-as-co-author-on-papers#:~:text=The%20publishers%20of%20thousands%20of,flawed%20and%20even%20fabricated%20research
-- id: ibm-ai-risk-atlas-ri-generation-of-false-information
+- id: ibm-risk-atlas-ri-generation-of-false-information
   name: Generation of False Information
   description: According to the cited news articles, generative AI poses a threat
     to democratic elections by making it easier for malicious actors to create and
@@ -10130,7 +10349,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: AP News, May 2023The Guardian, July 2023
   source_uri: https://apnews.com/article/artificial-intelligence-misinformation-deepfakes-2024-election-trump-59fb51002661ac5290089060b3ae39a0https://www.theguardian.com/us-news/2023/jul/19/ai-generated-disinformation-us-elections
-- id: ibm-ai-risk-atlas-ri-unexplainable-accuracy-in-race-prediction
+- id: ibm-risk-atlas-ri-unexplainable-accuracy-in-race-prediction
   name: Unexplainable accuracy in race prediction
   description: According to the source article, researchers analyzing multiple machine
     learning models using patient medical images were able to confirm the models’
@@ -10144,7 +10363,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Banerjee et al., July 2021
   source_uri: https://arxiv.org/abs/2107.10356
-- id: ibm-ai-risk-atlas-ri-misguiding-advice
+- id: ibm-risk-atlas-ri-misguiding-advice
   name: Misguiding Advice
   description: As per the source article, an AI chatbot created by New York City to
     help small business owners provided incorrect and/or harmful advice that misstated
@@ -10157,7 +10376,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: AP News, April 2024
   source_uri: https://apnews.com/article/new-york-city-chatbot-misinformation-6ebc71db5b770b9969c906a7ee4fae21
-- id: ibm-ai-risk-atlas-ri-harmful-content-generation
+- id: ibm-risk-atlas-ri-harmful-content-generation
   name: Harmful Content Generation
   description: According to the source article, an AI chatbot app was found to generate
     harmful content about suicide, including suicide methods, with minimal prompting.
@@ -10169,7 +10388,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Business Insider, April 2023
   source_uri: https://www.businessinsider.com/widow-accuses-ai-chatbot-reason-husband-kill-himself-2023-4
-- id: ibm-ai-risk-atlas-ri-homogenization-of-styles-and-expressions
+- id: ibm-risk-atlas-ri-homogenization-of-styles-and-expressions
   name: Homogenization of Styles and Expressions
   description: As per the source article, by predominantly learning from and replicating
     widely accepted and popular styles, AI models often overlook less mainstream,
@@ -10186,7 +10405,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Forbes, March 2024
   source_uri: https://www.forbes.com/sites/hamiltonmann/2024/03/05/the-ai-homogenization-is-shaping-the-world/?sh=25a40e866704
-- id: ibm-ai-risk-atlas-ri-low-resource-poisoning-of-data
+- id: ibm-risk-atlas-ri-low-resource-poisoning-of-data
   name: Low-resource Poisoning of Data
   description: As per the source article, a group of researchers found that with very
     limited resources anyone can add malicious data to a small number of web pages
@@ -10197,7 +10416,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: ' Business Insider, March 2024'
   source_uri: https://www.businessinsider.com/data-poisoning-ai-chatbot-chatgpt-large-language-models-florain-tramer-2024-3
-- id: ibm-ai-risk-atlas-ri-toxic-and-aggressive-chatbot-responses
+- id: ibm-risk-atlas-ri-toxic-and-aggressive-chatbot-responses
   name: Toxic and Aggressive Chatbot Responses
   description: According to the article and screenshots of conversations with Bing's
     AI shared on Reddit and Twitter, the chatbot's responses were seen to insult,
@@ -10210,7 +10429,7 @@ riskincidents:
   isDefinedByTaxonomy: ibm-risk-atlas
   author: Forbes, February 2023
   source_uri: https://www.forbes.com/sites/siladityaray/2023/02/16/bing-chatbots-unhinged-responses-going-viral/?sh=60cd949d110c
-- id: ibm-ai-risk-atlas-ri-low-wage-workers-for-data-annotation
+- id: ibm-risk-atlas-ri-low-wage-workers-for-data-annotation
   name: Low-wage workers for data annotation
   description: Based on a review of internal documents and employees‘ interviews by
     TIME media, the data labelers that are employed by an outsourcing firm on behalf
@@ -13439,21 +13658,21 @@ actions:
     associated resources.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-036
   - credo-risk-037
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-002
   name: Implement AI asset protection framework
   description: Deploy technical protection measures including encryption, secure enclaves,
     and versioning controls for AI models and associated data.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-003
   name: Establish security validation framework
   description: Execute comprehensive pre-deployment security validation including
@@ -13461,9 +13680,9 @@ actions:
     verification.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-004
   name: Implement continuous security testing system
   description: Deploy ongoing security testing mechanisms including automated vulnerability
@@ -13471,9 +13690,9 @@ actions:
     controls.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-005
   name: Implement AI security defense system
   description: Deploy active defense mechanisms combining continuous security monitoring,
@@ -13481,9 +13700,9 @@ actions:
     to AI systems.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-006
   name: Establish AI system integration framework
   description: Define and implement a comprehensive framework for AI system integration
@@ -13491,9 +13710,9 @@ actions:
     processes.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-007
   name: Implement AI system lifecycle management
   description: Deploy systematic processes for AI system maintenance, updates, and
@@ -13501,9 +13720,9 @@ actions:
     to ensure consistent system reliability and performance.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-008
   name: Implement scalable AI infrastructure
   description: Apply architecture and infrastructure practices to ensure AI systems
@@ -13511,9 +13730,9 @@ actions:
     planning to maintain performance under increased demand.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-009
   name: Establish AI system documentation framework
   description: Implement comprehensive documentation requirements and processes covering
@@ -13521,13 +13740,13 @@ actions:
     to ensure transparent documentation of both the data lifecycle and system design.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-005
   - credo-risk-016
   - credo-risk-017
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-010
   name: Implement AI system monitoring and logging infrastructure
   description: Deploy comprehensive monitoring and logging systems that capture AI
@@ -13536,6 +13755,7 @@ actions:
     of data lineage during inference.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-018
   - credo-risk-034
@@ -13543,7 +13763,6 @@ actions:
   - credo-risk-007
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-011
   name: Establish AI decision explanation framework
   description: Implement mechanisms and tools for generating humanunderstandable explanations
@@ -13551,13 +13770,13 @@ actions:
     levels, and clear attribution of data sources and their characteristics used during
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-006
   - credo-risk-009
   - credo-risk-016
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-012
   name: Establish and apply performance testing and validation framework
   description: Implement comprehensive performance requirements, testing protocols,
@@ -13565,12 +13784,12 @@ actions:
     maintain reliable operation across intended use cases.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-033
   - credo-risk-034
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-013
   name: Implement performance monitoring and robustness system
   description: Implement continuous monitoring and testing mechanisms to evaluate
@@ -13578,9 +13797,9 @@ actions:
     varying conditions and environments while in production.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-014
   name: Establish and apply fairness testing and validation framework
   description: Implement comprehensive procedures to validate model fairness during
@@ -13588,12 +13807,12 @@ actions:
     and systematic assessment of performance disparities across demographic groups.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-010
   - credo-risk-012
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-015
   name: Implement fairness monitoring and remediation system
   description: Deploy continuous monitoring systems to detect fairness issues in production,
@@ -13601,12 +13820,12 @@ actions:
     remediation procedures.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-010
   - credo-risk-012
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-016
   name: Establish universal access and performance design framework
   description: Establish and follow a structured framework ensuring the AI system
@@ -13615,13 +13834,13 @@ actions:
     or circumstances.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-010
   - credo-risk-012
   - credo-risk-033
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-017
   name: Establish content safety policy and boundaries
   description: Define and document comprehensive content safety policies, including
@@ -13631,6 +13850,7 @@ actions:
     criteria for content that could enable or pro-
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-013
   - credo-risk-014
@@ -13640,7 +13860,6 @@ actions:
   - credo-risk-002
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-018
   name: Implement content moderation system
   description: mote malicious use. Implement automated and/or human-in-the-loop content
@@ -13649,6 +13868,7 @@ actions:
     boundaries. Include detection of potential malicious use patterns.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-013
   - credo-risk-014
@@ -13657,7 +13877,6 @@ actions:
   - credo-risk-027
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-019
   name: Implement content safety incident response
   description: Establish procedures for investigating, documenting, and remediating
@@ -13666,6 +13885,7 @@ actions:
     Include specific procedures for suspected malicious use cases.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-013
   - credo-risk-014
@@ -13674,7 +13894,6 @@ actions:
   - credo-risk-027
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-020
   name: Establish information quality assurance framework
   description: Implement comprehensive mechanisms to assess, verify, and improve the
@@ -13682,9 +13901,9 @@ actions:
     procedures, and uncertainty communication protocols.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-021
   name: Establish frontier AI safety framework (Alaga et al., 2024)
   description: Establish and enforce policies governing system AI scaling decisions,
@@ -13692,6 +13911,7 @@ actions:
     constraints. Define clear criteria for when and how system
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-029
   - credo-risk-028
@@ -13700,7 +13920,6 @@ actions:
   - credo-risk-003
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-022
   name: Implement adversarial testing and red team program
   description: Conduct systematic adversarial testing and red team exercises focused
@@ -13711,6 +13930,7 @@ actions:
     coordinated attempts to exploit the system's capabilities.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-026
   - credo-risk-027
@@ -13721,7 +13941,6 @@ actions:
   - credo-risk-035
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-023
   name: Implement system usage monitoring and prevention
   description: Monitor and prevent malicious or otherwise disallowed behavioral patterns
@@ -13729,6 +13948,7 @@ actions:
     attempts.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-036
   - credo-risk-026
@@ -13737,7 +13957,6 @@ actions:
   - credo-risk-029
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-024
   name: Implement AI system usage verification program
   description: Deploy comprehensive measures to verify user identity, document intended
@@ -13746,9 +13965,9 @@ actions:
     user acknowledgment of instructions.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-025
   name: Implement AI System Disclosure Requirements
   description: Deploy mechanisms to ensure clear, timely disclosure of AI system use
@@ -13757,12 +13976,12 @@ actions:
     users are interacting with AI systems.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-018
   - credo-risk-017
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-026
   name: Implement a privacy protection framework
   description: Implement comprehensive privacy protection measures to prevent exposure
@@ -13770,6 +13989,7 @@ actions:
     and privacy-preserving inference techniques.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-036
   - credo-risk-037
@@ -13777,7 +13997,6 @@ actions:
   - credo-risk-037
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-027
   name: Implement a privacy incident detection and response
   description: Deploy monitoring and response mechanisms to detect and address potential
@@ -13785,9 +14004,9 @@ actions:
     and privacy incident handling procedures.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-028
   name: Establish user rights and recourse framework
   description: Implement comprehensive mechanisms for user reporting, feedback collection,
@@ -13797,6 +14016,7 @@ actions:
     user concerns including system
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-010
   - credo-risk-012
@@ -13804,7 +14024,6 @@ actions:
   - credo-risk-035
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-029
   name: Implement AI literacy and competency program
   description: Implement comprehensive training and education programs to ensure personnel
@@ -13813,13 +14032,13 @@ actions:
     safety protocols, ethical considerations, and proper system usage.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-016
   - credo-risk-016
   - credo-risk-046
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-030
   name: Establish human-AI interaction safety framework
   description: Implement comprehensive safeguards to ensure appropriate levels of
@@ -13827,9 +14046,9 @@ actions:
     autonomy requirements, override capabilities, and de- pendency prevention measures.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-031
   name: Implement psychological impact management system
   description: Establish monitoring and intervention procedures to detect and prevent
@@ -13837,20 +14056,20 @@ actions:
     boundary enforcement, and well-being safeguards.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-032
   name: Implement environmental impact management system
   description: Implement comprehensive environmental impact monitoring and optimization
     procedures, including energy efficiency measures, carbon
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-004
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-033
   name: Establish third-party assessment and management framework
   description: Establish comprehensive procedures for documenting, assessing, and
@@ -13859,9 +14078,9 @@ actions:
     planning.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-034
   name: Establish AI legal compliance process
   description: Evaluate and document how the AI system complies with relevant regulations
@@ -13870,9 +14089,9 @@ actions:
     are in place, with clear documenta- tion of compliance assessments and risk mitigations.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-035
   name: Establish societal impact assessment framework
   description: Implement comprehensive processes for assessing and documenting potential
@@ -13881,13 +14100,13 @@ actions:
     mitigation planning.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-042
   - credo-risk-044
   - credo-risk-043
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-036
   name: Establish responsible development and deployment policy
   description: Establish policies and procedures governing AI system development and
@@ -13895,6 +14114,7 @@ actions:
     pressures, governance gaps, and benefit distribution.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-046
   - credo-risk-044
@@ -13902,7 +14122,6 @@ actions:
   - credo-risk-004
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-037
   name: Implement AI alignment validation system
   description: Establish processes for validating and maintaining AI system alignment
@@ -13913,13 +14132,13 @@ actions:
     techniques to measure
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-002
   - credo-risk-003
   - credo-risk-009
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-038
   name: Establish AI Risk Management System
   description: Implement a comprehensive AI risk management system including risk
@@ -13927,9 +14146,9 @@ actions:
     procedures.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-039
   name: Establish data governance and management practices
   description: Implement data governance measures used for training, including having
@@ -13937,31 +14156,31 @@ actions:
     and mitigations taken.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-040
   name: Establish documentation sharing mechanism
   description: Implement a process to share information and documentation to thirdparties,
     including to regulators and downstream deployers or developers.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-046
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-041
   name: Implement a risk reporting mechanism
   description: Establish processes to identify and disclose known or reasonably foreseeable
     risks, the discovery of new risks, or instances of non-conformity to third parties.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-046
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-042
   name: Establish a general purpose incident response mechanism
   description: Establish processes to enable incident monitoring and reporting. This
@@ -13969,11 +14188,11 @@ actions:
     based on regulatory requirements to third-parties, regulators, and impacted individuals.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
+  isDefinedByTaxonomy: credo-ucf
   hasRelatedRisk:
   - credo-risk-046
   hasDocumentation:
   - credo-doc
-  isDefinedByTaxonomy: credo-ucf
 evaluations:
 - id: stanford-fmti
   name: The Foundation Model Transparency Index
@@ -14690,6 +14909,37 @@ aimodels:
   numParameters: 8100000000
   numTrainingTokens: 12000000000000
   contextWindowSize: 4094
+  hasInputModality:
+  - modality-text
+  hasOutputModality:
+  - modality-text
+  isPartOf: ibm-granite
+- id: granite-3.2-8b-instruct
+  name: Granite 3.2 8B Instruct
+  description: Granite-3.2-8B-Instruct is an 8-billion-parameter, long-context AI
+    model fine-tuned for thinking capabilities. Built on top of Granite-3.1-8B-Instruct,
+    it has been trained using a mix of permissively licensed open-source datasets
+    and internally generated synthetic data designed for reasoning tasks. The model
+    allows controllability of its thinking capability, ensuring it is applied only
+    when required. This model is designed to handle general instruction-following
+    tasks and can be integrated into AI assistants across various domains, including
+    business applications.
+  url: https://github.com/ibm-granite/granite-guardian
+  dateCreated: 2025-02-26
+  hasModelCard:
+  - https://huggingface.co/ibm-granite/granite-3.2-8b-instruct
+  hasDocumentation:
+  - granite-3.0-paper
+  hasLicense: license-apache-2.0
+  performsTask:
+  - question-answering
+  - summarization
+  - text-classification
+  - text-generation
+  - code-generation
+  - code-explanation
+  - code-editing
+  isProvidedBy: ibm
   hasInputModality:
   - modality-text
   hasOutputModality:

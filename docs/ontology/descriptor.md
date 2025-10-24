@@ -34,6 +34,8 @@ Alias: descriptor
 
 * Range: [String](String.md)
 
+* Multivalued: True
+
 
 
 
@@ -78,6 +80,7 @@ owner: Risk
 domain_of:
 - Risk
 range: string
+multivalued: true
 
 ```
 </details>

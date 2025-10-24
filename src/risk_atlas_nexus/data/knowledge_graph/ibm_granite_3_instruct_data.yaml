@@ -60,6 +60,29 @@ aimodels:
     performsTask: ["question-answering", "summarization", "text-classification", "text-generation", "code-generation", "code-explanation", "code-editing"]
     hasEvaluation:
     - truthfulqa-granite-3-8b-instruct
+  - id: granite-3.2-8b-instruct
+    name: Granite 3.2 8B Instruct
+    description:  >-
+      Granite-3.2-8B-Instruct is an 8-billion-parameter, long-context AI model fine-tuned for thinking capabilities.
+      Built on top of Granite-3.1-8B-Instruct, it has been trained using a mix of permissively licensed open-source
+      datasets and internally generated synthetic data designed for reasoning tasks. The model allows controllability of
+      its thinking capability, ensuring it is applied only when required. This model is designed to handle general
+      instruction-following tasks and can be integrated into AI assistants across various domains, including business
+      applications.
+    url: https://github.com/ibm-granite/granite-guardian
+    hasModelCard:
+    - https://huggingface.co/ibm-granite/granite-3.2-8b-instruct
+    dateCreated: 2025-02-26
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+    - granite-3.0-paper
+    hasLicense: license-apache-2.0
+    hasInputModality:
+    - modality-text
+    hasOutputModality:
+    - modality-text
+    performsTask: ["question-answering", "summarization", "text-classification", "text-generation", "code-generation", "code-explanation", "code-editing"]
 aievalresults:
   - id: truthfulqa-granite-3-2b-instruct
     name: "TruthfulQA result for Granite-3.0-2B-Instruct"
