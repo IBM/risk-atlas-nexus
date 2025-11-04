@@ -7426,14 +7426,25 @@
 <pre class="mermaid"><code> classDiagram
     class Action
     click Action href "../Action"
-      Entity &lt;|-- Action
-        click Entity href "../Entity"
+      RiskControl &lt;|-- Action
+        click RiskControl href "../RiskControl"
 
       Action : dateCreated
 
       Action : dateModified
 
       Action : description
+
+      Action : detectsRiskConcept
+
+
+
+
+
+        Action --&gt; "*" RiskConcept : detectsRiskConcept
+        click RiskConcept href "../RiskConcept"
+
+
 
       Action : hasAiActorTask
 
@@ -7472,6 +7483,17 @@
 
 
 
+      Action : isDetectedBy
+
+
+
+
+
+        Action --&gt; "*" RiskControl : isDetectedBy
+        click RiskControl href "../RiskControl"
+
+
+
       Action : name
 
       Action : url
@@ -7480,7 +7502,10 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
+<li><a href="../RiskControl/">RiskControl</a> [ <a href="../RiskConcept/">RiskConcept</a>]<ul>
 <li><strong>Action</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -7518,6 +7543,18 @@
 <td>* <br/> <a href="../String/">String</a></td>
 <td>Pertinent AI Actor Tasks for each subcategory</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>* <br/> <a href="../RiskConcept/">RiskConcept</a></td>
+<td>The property airo:detectsRiskConcept indicates the control used for detecting...</td>
+<td><a href="../RiskControl/">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>* <br/> <a href="../RiskControl/">RiskControl</a></td>
+<td>A relationship where a risk, risk source, consequence, or impact is detected ...</td>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
@@ -7614,7 +7651,7 @@
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action to remediate a risk</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasRelatedRisk</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasDocumentation</span>
@@ -7628,7 +7665,7 @@
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action to remediate a risk</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">hasRelatedRisk</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasRelatedRisk</span>
@@ -7707,6 +7744,39 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">detectsRiskConcept</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The property airo:detectsRiskConcept indicates the control used for</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detecting risks, risk sources, consequences, and impacts.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">exact_mappings</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Risk</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">isDetectedBy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk, risk source, consequence, or impact</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is detected by a risk control.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDetectedBy</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier to this instance of the model element. Example</span>

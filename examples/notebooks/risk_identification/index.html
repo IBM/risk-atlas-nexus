@@ -7996,7 +7996,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
-    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"granite3.2:8b"</span><span class="p">,</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"granite3.3:8b"</span><span class="p">,</span>
     <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"OLLAMA_API_URL"</span><span class="p">),</span>
     <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
         <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">repeat_penalty</span><span class="o">=</span><span class="mi">1</span>
@@ -8004,7 +8004,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <span class="p">)</span>
 
 <span class="c1"># inference_engine = WMLInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm/granite-3-3-8b-instruct",</span>
 <span class="c1">#     credentials={</span>
 <span class="c1">#         "api_key": "WML_API_KEY",</span>
 <span class="c1">#         "api_url": "WML_API_URL",</span>
@@ -8016,7 +8016,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = VLLMInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",</span>
 <span class="c1">#     credentials=InferenceEngineCredentials(</span>
 <span class="c1">#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"</span>
 <span class="c1">#     ),</span>
@@ -8024,7 +8024,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = RITSInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",</span>
 <span class="c1">#     credentials={</span>
 <span class="c1">#         "api_key": "RITS_API_KEY",</span>
 <span class="c1">#         "api_url": "RITS_API_URL",</span>
@@ -8033,7 +8033,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 <span class="c1"># )</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">inference_engine = OllamaInferenceEngine(
-    model_name_or_path="granite3.2:8b",
+    model_name_or_path="granite3.3:8b",
     credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
     parameters=OllamaInferenceEngineParams(
         num_predict=1000, num_ctx=8192, temperature=0, repeat_penalty=1
@@ -8041,7 +8041,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 )
 
 # inference_engine = WMLInferenceEngine(
-#     model_name_or_path="ibm/granite-20b-code-instruct",
+#     model_name_or_path="ibm/granite-3-3-8b-instruct",
 #     credentials={
 #         "api_key": "WML_API_KEY",
 #         "api_url": "WML_API_URL",
@@ -8053,7 +8053,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 # )
 
 # inference_engine = VLLMInferenceEngine(
-#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",
+#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",
 #     credentials=InferenceEngineCredentials(
 #         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"
 #     ),
@@ -8061,7 +8061,7 @@ from risk_atlas_nexus.library import RiskAtlasNexus</div>
 # )
 
 # inference_engine = RITSInferenceEngine(
-#     model_name_or_path="ibm/granite-20b-code-instruct",
+#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",
 #     credentials={
 #         "api_key": "RITS_API_KEY",
 #         "api_url": "RITS_API_URL",

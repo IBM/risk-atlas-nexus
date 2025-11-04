@@ -7431,6 +7431,11 @@
       Entity &lt;|-- RiskControl
         click Entity href "../Entity"
 
+
+      RiskControl &lt;|-- Action
+        click Action href "../Action"
+
+
       RiskControl : dateCreated
 
       RiskControl : dateModified
@@ -7480,7 +7485,10 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
-<li><strong>RiskControl</strong> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
+<li><strong>RiskControl</strong> [ <a href="../RiskConcept/">RiskConcept</a>]<ul>
+<li><a href="../Action/">Action</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -7600,6 +7608,18 @@
 </tr>
 <tr>
 <td><a href="./">RiskControl</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Action/">Action</a></td>
+<td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>domain</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Action/">Action</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
