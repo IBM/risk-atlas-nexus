@@ -1,0 +1,65 @@
+documents:
+- id: doc-australia-ai-ethics-principles
+  name: "Australia's AI Ethics Principles"
+  description: >-
+    "Australia's 8 Artificial Intelligence (AI) Ethics Principles are designed to ensure AI is safe, secure and reliable.
+    They will help: achieve safer, more reliable and fairer outcomes for all Australians; reduce the risk of negative
+    impact on those affected by AI applications; businesses and governments to practice the highest ethical standards
+    when designing, developing and implementing AI."
+  url: https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles/australias-ai-ethics-principles
+  dateCreated: 2024-10-11
+
+principles:
+- id: principle-au-human-societal-and-environmental-wellbeing
+  name: Human, societal and environmental wellbeing
+  description: >-
+    AI systems should benefit individuals, society and the environment.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-human-centred-values
+  name: Human-centred values
+  description: >-
+    AI systems should respect human rights, diversity, and the autonomy of individuals.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-fairness
+  name: Fairness
+  description: >-
+    AI systems should be inclusive and accessible, and should not involve or result in unfair discrimination
+    against individuals, communities or groups.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-privacy-protection-and-security
+  name: Privacy protection and security
+  description: >-
+    AI systems should respect and uphold privacy rights and data protection, and ensure the security of
+    data.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-reliability-and-safety
+  name:  Reliability and safety
+  description: >-
+    AI systems should reliably operate in accordance with their intended purpose.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-transparency-and-explainability
+  name: Transparency and explainability
+  description: >-
+    There should be transparency and responsible disclosure so people can understand when they are being
+    significantly impacted by AI, and can find out when an AI system is engaging with them.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-contestability
+  name: Contestability
+  description: >-
+    When an AI system significantly impacts a person, community, group or environment, there should be a
+    timely process to allow people to challenge the use or outcomes of the AI system.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-accountability
+  name: Accountability
+  description: >-
+    People responsible for the different phases of the AI system lifecycle should be identifiable and
+    accountable for the outcomes of the AI systems, and human oversight of AI systems should be enabled.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles

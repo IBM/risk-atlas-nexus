@@ -92,8 +92,11 @@ classes:
       - hasRelatedRisk
 
   Principle:
+    is_a: Entity
     description: A representation of values or norms that must be taken into consideration when conducting activities
     class_uri: dpv:Principle
+    slots:
+      - hasDocumentation
 
   Policy:
     is_a: Entity

@@ -218,6 +218,17 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 
 
 
+      Container : principles
+
+
+
+
+
+        Container --> "*" Principle : principles
+        click Principle href "../Principle"
+
+
+
       Container : prohibitions
 
 
@@ -381,6 +392,7 @@ URI: [nexus:Container](https://ibm.github.io/risk-atlas-nexus/ontology/Container
 | [prohibitions](prohibitions.md) | * <br/> [Prohibition](Prohibition.md) | A list of prohibitions | direct |
 | [permissions](permissions.md) | * <br/> [Permission](Permission.md) | A list of Permissions | direct |
 | [obligations](obligations.md) | * <br/> [Obligation](Obligation.md) | A list of Obligations | direct |
+| [principles](principles.md) | * <br/> [Principle](Principle.md) | A list of Principles | direct |
 
 
 
@@ -747,6 +759,17 @@ attributes:
     domain_of:
     - Container
     range: Obligation
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  principles:
+    name: principles
+    description: A list of Principles
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: Principle
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -1137,6 +1160,19 @@ attributes:
     domain_of:
     - Container
     range: Obligation
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  principles:
+    name: principles
+    description: A list of Principles
+    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: principles
+    owner: Container
+    domain_of:
+    - Container
+    range: Principle
     multivalued: true
     inlined: true
     inlined_as_list: true

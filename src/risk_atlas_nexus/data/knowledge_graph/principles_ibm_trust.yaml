@@ -1,0 +1,81 @@
+documents:
+  - id: doc-ibms-principles-for-trust-and-transparency
+    name: "IBM's Principles for Trust and Transparency"
+    description: >-
+      "For more than a century, IBM has earned the trust of our clients by responsibly managing their most valuable data.
+
+      And we have worked to earn the trust of society by ushering powerful new technologies into the world responsibly
+      and with clear purpose.
+
+      IBM continues to follow core principles, grounded in commitments to trust and transparency, that guide its
+      handling of client data and insights. These principles also guide its responsible development and deployment of
+      new  technologies, such as IBM Watson® to the more advanced watsonx™.
+
+      We encourage all technology companies to adopt similar principles to protect client data and insights, and to
+      ensure the responsible and transparent use of artificial intelligence (AI) and other transformative innovations.
+      We offer our own Trust and Transparency Principles here as a roadmap."
+    url: https://www.ibm.com/policy/trust-transparency
+    dateCreated: 2024-10-11
+
+principles:
+  - id: principle-ibm-tt-principle-1
+    name: "1. The purpose of AI is to augment human intelligence"
+    description: >-
+      The purpose of AI and cognitive systems developed and applied by IBM is to augment—not replace—human intelligence.
+      Our technology is and will be designed to enhance and extend human capability and potential. At IBM, we believe AI
+      should make ALL of us better at our jobs, and that the benefits of the AI era should touch the many, not just the
+      elite few. To that end, we are investing in initiatives to help the global workforce gain the skills needed to work
+      in partnership with these technologies. That includes preparing more people for new collar jobs, which prioritize
+      skills over specific degrees.
+    hasDocumentation:
+    - doc-ibms-principles-for-trust-and-transparency
+  - id: principle-ibm-tt-principle-2
+    name: "2. Data and insights belong to their creator"
+    description: >-
+      IBM clients' data is their data, and their insights are
+      their insights. Client data and the insights produced
+      on IBM's cloud or from IBM's AI are owned by IBM's
+      clients. We believe that government data policies
+      should be fair and equitable and prioritize openness.
+      Data Ownership Clients are not required to
+      relinquish rights to their data—or insights derived
+      from it—to have the benefits of IBM's solutions and
+      services.
+      Data Privacy IBM is fully committed to protecting
+      the privacy of our clients' data, which is fundamental
+      in a data-driven society.
+      Data Security IBM is devoting our powerful engines
+      of innovation to create tools to protect our clients,
+      their data and global trade from cyber threats, and
+      convening a broader discussion on balancing
+      security, privacy and freedom.
+      Government Access To Data IBM has not provided
+      client data to any government agency under any
+      surveillance program involving bulk collection of
+      content or metadata.
+      Cross-Border Data Flows IBM views the free
+      movement of data across borders as essential to
+      21st century commerce.
+    hasDocumentation:
+    - doc-ibms-principles-for-trust-and-transparency
+  - id: principle-ibm-tt-principle-3
+    name: "3. New technology, including AI systems, must be transparent and explainable"
+    description: >-
+      For the public to trust AI, it must be transparent.
+      Technology companies must be clear about who
+      trains their AI systems, what data was used in that
+      training and, most importantly, what went into their
+      algorithm's recommendations. If we are to use AI to
+      help make important decisions, it must be
+      explainable.
+      IBM will make clear:
+      When and for what purposes AI is being applied.
+      The major sources of data and expertise—and the
+      methods—used to train AI systems and solutions.
+      That while bias can never be fully eliminated, we and
+      all companies advancing AI have an obligation to
+      address it proactively. We therefore continually test
+      our systems and find new data sets to better align
+      their output with human values and expectations.
+    hasDocumentation:
+    - doc-ibms-principles-for-trust-and-transparency

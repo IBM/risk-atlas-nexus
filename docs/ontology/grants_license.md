@@ -22,8 +22,8 @@ Alias: grants_license
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiOffice](AiOffice.md) | The EU AI Office (https://digital-strategy |  no  |
 | [Organization](Organization.md) | Any organizational entity such as a corporation, educational institution, con... |  no  |
+| [AiOffice](AiOffice.md) | The EU AI Office (https://digital-strategy |  no  |
 | [AiProvider](AiProvider.md) | A provider under the AI Act is defined by Article 3(3) as a natural or legal ... |  no  |
 
 

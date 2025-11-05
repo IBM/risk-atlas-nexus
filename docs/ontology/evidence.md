@@ -22,8 +22,8 @@ Alias: evidence
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
 | [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
+| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
 
 
 

@@ -1,0 +1,86 @@
+documents:
+- id: doc-oecd-ai-principles
+  name: "OECD AI Principles"
+  description: >-
+    "The OECD AI Principles promote use of AI that is innovative and trustworthy and that respects human rights and
+    democratic values. Adopted in May 2019, they set standards for AI that are practical and flexible enough to stand
+    the test of time."
+  url: https://oecd.ai/en/ai-principles
+  dateCreated: 2019-05-22
+
+principles:
+- id: principle-oecd-inclusive-growth
+  name: Inclusive growth, sustainable development and well-being (Principle 1.1)
+  description: >-
+    This Principle highlights the potential for trustworthy AI to contribute to overall growth and prosperity for all
+    – individuals, society, and planet – and advance global development objectives.
+
+    Stakeholders should proactively
+    engage in responsible stewardship of trustworthy AI in pursuit of beneficial outcomes for people and the planet,
+    such as augmenting human capabilities and enhancing creativity, advancing inclusion of underrepresented populations,
+    reducing economic, social, gender and other inequalities, and protecting natural environments, thus invigorating
+    inclusive growth, well-being, sustainable development and environmental sustainability.
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-human-rights
+  name: Human rights and democratic values, including fairness and privacy (Principle 1.2)
+  description: >-
+    AI systems should be designed in a way that respects the rule of law, human rights, democratic values and diversity,
+    and should include appropriate safeguards to ensure a fair and just society.
+
+    AI actors should respect the rule of law, human rights, democratic and human-centred values throughout the AI
+    system lifecycle. These include non-discrimination and equality, freedom, dignity, autonomy of individuals,
+    privacy and data protection, diversity, fairness, social justice, and internationally recognised labour rights.
+    This also includes addressing misinformation and disinformation amplified by AI, while respecting freedom of
+    expression and other rights and freedoms protected by applicable international law.
+
+    To this end, AI actors should implement mechanisms and safeguards, such as capacity for human agency and oversight,
+    including to address risks arising from uses outside of intended purpose, intentional misuse, or unintentional
+    misuse in a manner appropriate to the context and consistent with the state of the art.
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-transparency
+  name: Transparency and explainability (Principle 1.3)
+  description: >-
+    This principle is about transparency and responsible disclosure around AI systems to ensure that people understand
+    when they are engaging with them and can challenge outcomes.
+
+    AI Actors should commit to transparency and responsible disclosure regarding AI systems. To this end, they should
+    provide meaningful information, appropriate to the context, and consistent with the state of art:
+    to foster a general understanding of AI systems, including their capabilities and limitations,
+    to make stakeholders aware of their interactions with AI systems, including in the workplace,
+    where feasible and useful, to provide plain and easy-to-understand information on the sources of data/input,
+    factors, processes and/or logic that led to the prediction, content, recommendation or decision, to enable those
+    affected by an AI system to understand the output, and,
+    to provide information that enable those adversely affected by an AI system to challenge its output.
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-robustness
+  name: Robustness, security and safety (Principle 1.4)
+  description: >-
+    AI systems must function in a robust, secure and safe way throughout their lifetimes, and potential risks should be
+    continually assessed and managed.
+
+    AI systems should be robust, secure and safe throughout their entire lifecycle so that, in conditions of normal use,
+    foreseeable use or misuse, or other adverse conditions, they function appropriately and do not pose unreasonable
+    safety and/or security risks.
+
+    Mechanisms should be in place, as appropriate, to ensure that if AI systems risk causing undue harm or exhibit
+    undesired behaviour, they can be overridden, repaired, and/or decommissioned safely as needed.
+
+    Mechanisms should also, where technically feasible, be in place to bolster information integrity while ensuring
+    respect for freedom of expression.
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-accountability
+  name: Accountability (Principle 1.5)
+  description: >-
+    Organisations and individuals developing, deploying or operating AI systems should be held accountable for their proper functioning in line with the OECD’s values-based principles for AI.
+
+    AI actors should be accountable for the proper functioning of AI systems and for the respect of the above principles, based on their roles, the context, and consistent with the state of the art.
+
+    To this end, AI actors should ensure traceability, including in relation to datasets, processes and decisions made during the AI system lifecycle, to enable analysis of the AI system’s outputs and responses to inquiry, appropriate to the context and consistent with the state of the art.
+
+    AI actors, should, based on their roles, the context, and their ability to act, apply a systematic risk management approach to each phase of the AI system lifecycle on an ongoing basis and adopt responsible business conduct to address risks related to AI systems, including, as appropriate, via co-operation between different AI actors, suppliers of AI knowledge and AI resources, AI system users, and other stakeholders. Risks include those related to harmful bias, human rights including safety, security, and privacy, as well as labour and intellectual property rights.
+  hasDocumentation:
+  - doc-oecd-ai-principles

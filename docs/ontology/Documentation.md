@@ -86,6 +86,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [Dataset](Dataset.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Vocabulary](Vocabulary.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Term](Term.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [Principle](Principle.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [RiskTaxonomy](RiskTaxonomy.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Action](Action.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [BaseAi](BaseAi.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |

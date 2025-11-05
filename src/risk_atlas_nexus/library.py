@@ -15,7 +15,6 @@ from sssom_schema import Mapping
 os.environ["KMP_DUPLICATE_LIB_OK"] = "True"
 os.environ["OMP_NUM_THREADS"] = "1"
 
-from risk_atlas_nexus.ai_risk_ontology import LLMQuestionPolicy, Rule
 from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Action,
     Adapter,
@@ -24,11 +23,14 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Dataset,
     Documentation,
     LLMIntrinsic,
+    LLMQuestionPolicy,
     Policy,
+    Principle,
     Risk,
     RiskControl,
     RiskIncident,
     RiskTaxonomy,
+    Rule,
     Stakeholder,
 )
 from risk_atlas_nexus.blocks.inference import InferenceEngine
@@ -1402,6 +1404,56 @@ class RiskAtlasNexus:
         llm_question_policy: LLMQuestionPolicy | None = cls._risk_explorer.get_llm_question_policy(id=id)
         return llm_question_policy
 
+    def get_principles(cls, taxonomy=None, document=None):
+        """Get all Principle definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+            document: str
+                (Optional) The string label for a document
+
+
+        Returns:
+            list[Principle]
+                Result containing a list of Principle entries
+        """
+        type_check(
+            "<RAN61573043E>",
+            str,
+            allow_none=True,
+            taxonomy=taxonomy,
+        )
+        type_check(
+            "<RAN62577043E>",
+            str,
+            allow_none=True,
+            document=document,
+        )
+
+        principle_instances: list[Principle] = cls._risk_explorer.get_principles(taxonomy, document)
+        return principle_instances
+
+    def get_principle(cls, id=str):
+        """Get a Principle definition from the LinkML, filtered by id
+
+        Args:
+            id: str
+                The string id identifying the Principle entry
+
+        Returns:
+            Principle
+                Result containing a Principle.
+        """
+        type_check(
+            "<RAN97462678E>",
+            str,
+            allow_none=False,
+            id=id,
+        )
+
+        principle: Principle | None = cls._risk_explorer.get_principle(id=id)
+        return principle
 
 
     def get_instances(cls, target_class, taxonomy=None):

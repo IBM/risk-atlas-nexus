@@ -23,8 +23,8 @@ Alias: isPartOf
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  yes  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  yes  |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 | [Stakeholder](Stakeholder.md) | An AI system stakeholder for Responsible AI governance (e |  yes  |
 
 

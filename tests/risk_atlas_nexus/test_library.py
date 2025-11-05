@@ -18,6 +18,7 @@ from src.risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     BenchmarkMetadataCard,
     Dataset,
     Documentation,
+    Principle,
     Risk,
     RiskIncident,
     Stakeholder,
@@ -339,3 +340,17 @@ class TestLibrary(TestCaseBase):
         assert isinstance(ev1, LLMIntrinsic)
         evs = ran_lib.get_related_intrinsics(risk_id="atlas-data-bias")
         assert all(isinstance(i, LLMIntrinsic) for i in evs)
+
+    def test_get_all_principles(self):
+        """Get all principle definitions from the LinkML"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._principles = [Principle(id="test-principle")]
+        principles = ran_lib.get_principles()
+        self.assertGreater(len(principles), 0)
+
+    def test_get_principle_by_id(self):
+        """Get principle definition from the LinkML filtered by principle id"""
+        ran_lib = self.ran_lib
+        ran_lib._risk_explorer._principles = [Principle(id="test-principle1")]
+        principle = ran_lib.get_principle(id="test-principle1")
+        assert principle.id == "test-principle1"

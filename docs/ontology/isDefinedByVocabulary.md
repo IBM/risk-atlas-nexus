@@ -23,8 +23,8 @@ Alias: isDefinedByVocabulary
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Term](Term.md) | A term and its definitions |  no  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 | [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 
 
 

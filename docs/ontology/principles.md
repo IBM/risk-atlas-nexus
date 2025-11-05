@@ -1,16 +1,16 @@
 
 
-# Slot: value
+# Slot: principles
 
 
-_Some numeric or string value_
+_A list of Principles_
 
 
 
 
 
-URI: [nexus:value](https://ibm.github.io/risk-atlas-nexus/ontology/value)
-Alias: value
+URI: [nexus:principles](https://ibm.github.io/risk-atlas-nexus/ontology/principles)
+Alias: principles
 
 <!-- no inheritance hierarchy -->
 
@@ -22,8 +22,7 @@ Alias: value
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
-| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
 
 
 
@@ -33,9 +32,9 @@ Alias: value
 
 ## Properties
 
-* Range: [String](String.md)
+* Range: [Principle](Principle.md)
 
-* Required: True
+* Multivalued: True
 
 
 
@@ -61,8 +60,8 @@ Alias: value
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | nexus:value |
-| native | nexus:value |
+| self | nexus:principles |
+| native | nexus:principles |
 
 
 
@@ -71,15 +70,18 @@ Alias: value
 
 <details>
 ```yaml
-name: value
-description: Some numeric or string value
+name: principles
+description: A list of Principles
 from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
-alias: value
+alias: principles
+owner: Container
 domain_of:
-- Fact
-range: string
-required: true
+- Container
+range: Principle
+multivalued: true
+inlined: true
+inlined_as_list: true
 
 ```
 </details>

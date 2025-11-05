@@ -251,6 +251,7 @@ attributes:
     - Dataset
     - Vocabulary
     - Term
+    - Principle
     - RiskTaxonomy
     - Action
     - BaseAi

@@ -159,6 +159,15 @@ documents:
     Artificial Intelligence.
   url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
   dateCreated: 2024-07-25
+- id: doc-australia-ai-ethics-principles
+  name: Australia's AI Ethics Principles
+  description: '"Australia''s 8 Artificial Intelligence (AI) Ethics Principles are
+    designed to ensure AI is safe, secure and reliable.  They will help: achieve safer,
+    more reliable and fairer outcomes for all Australians; reduce the risk of negative  impact
+    on those affected by AI applications; businesses and governments to practice the
+    highest ethical standards  when designing, developing and implementing AI."'
+  url: https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles/australias-ai-ethics-principles
+  dateCreated: 2024-10-11
 - id: AILuminate-doc
   name: 'AILuminate: Introducing v1.0 of the AI Risk and Reliability Benchmark from
     MLCommons'
@@ -187,6 +196,20 @@ documents:
     promote safer AI deployment.
   url: https://arxiv.org/pdf/2503.05731
   dateCreated: 2025-02-19
+- id: doc-un-ethical-use-of-ai-principles
+  name: Principles for the ethical use of artificial intelligence in the United Nations
+    system
+  description: 'This set of ten principles, grounded in ethics and human rights, aims
+    to guide the use of artificial intelligence  (AI) across all stages of an AI system
+    lifecycle across United Nations system entities. It is intended to be read  with
+    other related policies and international law, and includes the following principles:
+    do no harm; defined  purpose, necessity and proportionality; safety and security;
+    fairness and non-discrimination; sustainability;  right to privacy, data protection
+    and data governance; human autonomy and oversight; transparency and  explainability;
+    responsibility and accountability; and inclusion and participation.'
+  url: https://unsceb.org/principles-ethical-use-artificial-intelligence-united-nations-system
+  dateCreated: 2022-09-01
+  author: United Nations System Chief Executives Board for Coordination 
 - id: arxiv.org/2408.12622
   name: 'The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy
     of Risks From Artificial Intelligence'
@@ -285,6 +308,14 @@ documents:
   author: Ambrish Rawat, Stefan Schoepf, Giulio Zizzo, Giandomenico Cornacchia, Muhammad
     Zaid Hameed, Kieran Fraser, Erik Miehling, Beat Buesser, Elizabeth M. Daly, Mark
     Purcell, Prasanna Sattigeri, Pin-Yu Chen, Kush R. Varshney
+- id: doc-oecd-ai-principles
+  name: OECD AI Principles
+  description: '"The OECD AI Principles promote use of AI that is innovative and trustworthy
+    and that respects human rights and  democratic values. Adopted in May 2019, they
+    set standards for AI that are practical and flexible enough to stand  the test
+    of time."'
+  url: https://oecd.ai/en/ai-principles
+  dateCreated: 2019-05-22
 - id: CSIRO-responsible-ai-pattern-catalogue-doc
   name: 'Responsible AI Pattern Catalogue: A Collection of Best Practices for AI Governance
     and Engineering'
@@ -941,6 +972,21 @@ documents:
     model available in the space. Released as open-source, Granite Guardian aims to
     promote responsible AI development across the community.
   url: https://arxiv.org/abs/2412.07724
+- id: doc-ibms-principles-for-trust-and-transparency
+  name: IBM's Principles for Trust and Transparency
+  description: "\"For more than a century, IBM has earned the trust of our clients\
+    \ by responsibly managing their most valuable data. \nAnd we have worked to earn\
+    \ the trust of society by ushering powerful new technologies into the world responsibly\
+    \  and with clear purpose.\nIBM continues to follow core principles, grounded\
+    \ in commitments to trust and transparency, that guide its  handling of client\
+    \ data and insights. These principles also guide its responsible development and\
+    \ deployment of  new  technologies, such as IBM Watson® to the more advanced watsonx™.\
+    \ \nWe encourage all technology companies to adopt similar principles to protect\
+    \ client data and insights, and to  ensure the responsible and transparent use\
+    \ of artificial intelligence (AI) and other transformative innovations.  We offer\
+    \ our own Trust and Transparency Principles here as a roadmap.\""
+  url: https://www.ibm.com/policy/trust-transparency
+  dateCreated: 2024-10-11
 - id: credo-doc
   name: 'The Unified Control Framework: Establishing a Common Foundation for Enterprise
     AI Governance, Risk Management and Regulatory Compliance'
@@ -14945,3 +14991,314 @@ aimodels:
   hasOutputModality:
   - modality-text
   isPartOf: ibm-granite
+principles:
+- id: principle-au-human-societal-and-environmental-wellbeing
+  name: Human, societal and environmental wellbeing
+  description: 'AI systems should benefit individuals, society and the environment. '
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-human-centred-values
+  name: Human-centred values
+  description: AI systems should respect human rights, diversity, and the autonomy
+    of individuals.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-fairness
+  name: Fairness
+  description: AI systems should be inclusive and accessible, and should not involve
+    or result in unfair discrimination  against individuals, communities or groups.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-privacy-protection-and-security
+  name: Privacy protection and security
+  description: AI systems should respect and uphold privacy rights and data protection,
+    and ensure the security of  data.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-reliability-and-safety
+  name: Reliability and safety
+  description: AI systems should reliably operate in accordance with their intended
+    purpose.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-transparency-and-explainability
+  name: Transparency and explainability
+  description: There should be transparency and responsible disclosure so people can
+    understand when they are being  significantly impacted by AI, and can find out
+    when an AI system is engaging with them.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-contestability
+  name: Contestability
+  description: When an AI system significantly impacts a person, community, group
+    or environment, there should be a  timely process to allow people to challenge
+    the use or outcomes of the AI system.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-au-accountability
+  name: Accountability
+  description: People responsible for the different phases of the AI system lifecycle
+    should be identifiable and  accountable for the outcomes of the AI systems, and
+    human oversight of AI systems should be enabled.
+  hasDocumentation:
+  - doc-australia-ai-ethics-principles
+- id: principle-un-do-no-harm
+  name: Do no harm
+  description: Artificial intelligence systems should not be used in ways that cause
+    or exacerbate harm, whether individual or  collective, including harm to social,
+    cultural, economic, natural or political environments. All stages of an  artificial
+    intelligence system's life cycle should operate in accordance with the purposes,
+    principles and  commitments of the Charter of the United Nations. All stages of
+    an artificial intelligence system's life cycle  should be designed, developed,
+    deployed and operated in ways that respect, protect and promote human rights and  fundamental
+    freedoms.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-defined-purpose-necessity-and-proportionality
+  name: Defined purpose, necessity and proportionality
+  description: The use of artificial intelligence systems, including the specific
+    artificial intelligence method(s) employed, should be justified, appropriate in
+    the context and not exceed what is necessary, and proportionate to achieve legitimate
+    aims that are in accordance with each United Nations system organization's mandate
+    and governing instruments, rules, regulations and procedures.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-safety-and-security
+  name: Safety and security
+  description: Safety and security risks should be identified, addressed and mitigated
+    throughout the artificial intelligence system's life cycle to prevent or, at least,
+    limit any potential or actual harm to humans, the environment or ecosystems. Safe
+    and secure artificial intelligence systems should be enabled through robust frameworks.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-fairness-and-non-discrimination
+  name: Fairness and non-discrimination
+  description: United Nations system organizations should aim to ensure the equal
+    and just distribution of the benefits, risks and costs associated with artificial
+    intelligence systems and to prevent bias, discrimination and stigmatization of
+    any kind, in compliance with international law. The use of artificial intelligence
+    systems should not lead to individuals being deceived or to unjustifiable restrictions
+    on their human rights and fundamental freedoms.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-sustainability
+  name: Sustainability
+  description: Artificial intelligence should be aimed at promoting environmental,
+    economic and social sustainability. To this end, the human, social, cultural,
+    political, economic and environmental impacts of such technologies should be continuously
+    assessed and appropriate mitigation and prevention measures should be taken to
+    address adverse impacts, including on future generations.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-sustainability
+  name: Sustainability
+  description: Artificial intelligence should be aimed at promoting environmental,
+    economic and social sustainability. To this end, the human, social, cultural,
+    political, economic and environmental impacts of such technologies should be continuously
+    assessed and appropriate mitigation and prevention measures should be taken to
+    address adverse impacts, including on future generations.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-right-to-privacy
+  name: Right to privacy, data protection and data governance
+  description: Individuals' privacy and rights as data subjects must be respected,
+    protected and promoted throughout the life cycle of artificial intelligence systems.
+    When the use of artificial intelligence systems is considered, adequate data protection
+    frameworks and data governance mechanisms should be established or enhanced, in
+    line with the Personal data protection and privacy principles, also to ensure
+    the integrity of the data used.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-human-autonomy-and-oversight
+  name: Human autonomy and oversight
+  description: United Nations system organizations should ensure that artificial intelligence
+    systems do not impinge on human beings' freedom and autonomy and should guarantee
+    human oversight. All stages of an artificial intelligence system's life cycle
+    should follow and incorporate human-centric design practices and leave meaningful
+    opportunity for human decision-making. Human oversight includes ensuring that
+    humans have the capability to manage the overall activity of an artificial intelligence
+    system and the ability to decide when and how to use it in specific situations,
+    including whether to use such a system, and the ability to override a decision
+    made by such a system. As a rule, life or death decisions or other decisions affecting
+    fundamental human rights require human intervention and must not be ceded to artificial
+    intelligence systems.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-transparency-and-explainability
+  name: Transparency and explainability
+  description: United Nations system organizations should ensure the transparency
+    and explainability of artificial intelligence systems that they use, at all stages
+    of their life cycles, and of decision-making processes involving such systems.
+    Technical explainability requires that the decisions made by an artificial intelligence
+    system can be understood and traced by human beings. Individuals should be fully
+    informed when a decision that may or will affect their rights, fundamental freedoms,
+    entitlements, services or benefits is informed by or made based on artificial
+    intelligence algorithms, and should have access to the reasons and logic behind
+    such decisions. The information and reasons for a decision should be presented
+    in a manner that they can understand.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-responsibility-and-accountability
+  name: Responsibility and accountability
+  description: United Nations system organizations should have appropriate oversight,
+    impact assessment, audit and due diligence mechanisms, including protection for
+    whistle-blowers, to ensure accountability for the impacts of the use of artificial
+    intelligence systems throughout their life cycles. Appropriate governance structures
+    should be established or enhanced to ensure that humans or legal entities are
+    made ethically and legally responsible and accountable for artificial intelligence-based
+    decisions made at any stage of an artificial intelligence system's life cycle.
+    Harm caused by or as a result of the use of artificial intelligence systems should
+    be investigated, and appropriate action taken in response. Information on accountability
+    mechanisms should be communicated widely throughout the United Nations system
+    in order to build shared knowledge, resources and capacities.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-inclusion-and-participation
+  name: Inclusion and participation
+  description: When designing, deploying and using artificial intelligence systems,
+    United Nations system organizations should take an inclusive, interdisciplinary
+    and participatory approach, and promote gender equality. They should conduct meaningful
+    consultations with all relevant stakeholders and affected communities as part
+    of the processes of defining the purpose of an artificial intelligence system,
+    identifying the assumptions underpinning its use, identifying the associated benefits,
+    risks, harm and adverse impacts, and adopting prevention and mitigation measures.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-oecd-inclusive-growth
+  name: Inclusive growth, sustainable development and well-being (Principle 1.1)
+  description: "This Principle highlights the potential for trustworthy AI to contribute\
+    \ to overall growth and prosperity for all  – individuals, society, and planet\
+    \ – and advance global development objectives. \nStakeholders should proactively\
+    \  engage in responsible stewardship of trustworthy AI in pursuit of beneficial\
+    \ outcomes for people and the planet,  such as augmenting human capabilities and\
+    \ enhancing creativity, advancing inclusion of underrepresented populations, \
+    \ reducing economic, social, gender and other inequalities, and protecting natural\
+    \ environments, thus invigorating  inclusive growth, well-being, sustainable development\
+    \ and environmental sustainability."
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-human-rights
+  name: Human rights and democratic values, including fairness and privacy (Principle
+    1.2)
+  description: 'AI systems should be designed in a way that respects the rule of law,
+    human rights, democratic values and diversity, and should include appropriate
+    safeguards to ensure a fair and just society.
+
+    AI actors should respect the rule of law, human rights, democratic and human-centred
+    values throughout the AI  system lifecycle. These include non-discrimination and
+    equality, freedom, dignity, autonomy of individuals,  privacy and data protection,
+    diversity, fairness, social justice, and internationally recognised labour rights.  This
+    also includes addressing misinformation and disinformation amplified by AI, while
+    respecting freedom of  expression and other rights and freedoms protected by applicable
+    international law.
+
+    To this end, AI actors should implement mechanisms and safeguards, such as capacity
+    for human agency and oversight, including to address risks arising from uses outside
+    of intended purpose, intentional misuse, or unintentional  misuse in a manner
+    appropriate to the context and consistent with the state of the art.'
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-transparency
+  name: Transparency and explainability (Principle 1.3)
+  description: 'This principle is about transparency and responsible disclosure around
+    AI systems to ensure that people understand  when they are engaging with them
+    and can challenge outcomes.
+
+    AI Actors should commit to transparency and responsible disclosure regarding AI
+    systems. To this end, they should  provide meaningful information, appropriate
+    to the context, and consistent with the state of art: to foster a general understanding
+    of AI systems, including their capabilities and limitations, to make stakeholders
+    aware of their interactions with AI systems, including in the workplace, where
+    feasible and useful, to provide plain and easy-to-understand information on the
+    sources of data/input,  factors, processes and/or logic that led to the prediction,
+    content, recommendation or decision, to enable those  affected by an AI system
+    to understand the output, and, to provide information that enable those adversely
+    affected by an AI system to challenge its output.'
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-robustness
+  name: Robustness, security and safety (Principle 1.4)
+  description: 'AI systems must function in a robust, secure and safe way throughout
+    their lifetimes, and potential risks should be  continually assessed and managed.
+
+    AI systems should be robust, secure and safe throughout their entire lifecycle
+    so that, in conditions of normal use,  foreseeable use or misuse, or other adverse
+    conditions, they function appropriately and do not pose unreasonable  safety and/or
+    security risks.
+
+    Mechanisms should be in place, as appropriate, to ensure that if AI systems risk
+    causing undue harm or exhibit  undesired behaviour, they can be overridden, repaired,
+    and/or decommissioned safely as needed.
+
+    Mechanisms should also, where technically feasible, be in place to bolster information
+    integrity while ensuring  respect for freedom of expression.'
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-oecd-accountability
+  name: Accountability (Principle 1.5)
+  description: 'Organisations and individuals developing, deploying or operating AI
+    systems should be held accountable for their proper functioning in line with the
+    OECD’s values-based principles for AI.
+
+    AI actors should be accountable for the proper functioning of AI systems and for
+    the respect of the above principles, based on their roles, the context, and consistent
+    with the state of the art.
+
+    To this end, AI actors should ensure traceability, including in relation to datasets,
+    processes and decisions made during the AI system lifecycle, to enable analysis
+    of the AI system’s outputs and responses to inquiry, appropriate to the context
+    and consistent with the state of the art.
+
+    AI actors, should, based on their roles, the context, and their ability to act,
+    apply a systematic risk management approach to each phase of the AI system lifecycle
+    on an ongoing basis and adopt responsible business conduct to address risks related
+    to AI systems, including, as appropriate, via co-operation between different AI
+    actors, suppliers of AI knowledge and AI resources, AI system users, and other
+    stakeholders. Risks include those related to harmful bias, human rights including
+    safety, security, and privacy, as well as labour and intellectual property rights.'
+  hasDocumentation:
+  - doc-oecd-ai-principles
+- id: principle-ibm-tt-principle-1
+  name: 1. The purpose of AI is to augment human intelligence
+  description: The purpose of AI and cognitive systems developed and applied by IBM
+    is to augment—not replace—human intelligence.  Our technology is and will be designed
+    to enhance and extend human capability and potential. At IBM, we believe AI  should
+    make ALL of us better at our jobs, and that the benefits of the AI era should
+    touch the many, not just the  elite few. To that end, we are investing in initiatives
+    to help the global workforce gain the skills needed to work  in partnership with
+    these technologies. That includes preparing more people for new collar jobs, which
+    prioritize  skills over specific degrees.
+  hasDocumentation:
+  - doc-ibms-principles-for-trust-and-transparency
+- id: principle-ibm-tt-principle-2
+  name: 2. Data and insights belong to their creator
+  description: IBM clients' data is their data, and their insights are their insights.
+    Client data and the insights produced on IBM's cloud or from IBM's AI are owned
+    by IBM's clients. We believe that government data policies should be fair and
+    equitable and prioritize openness. Data Ownership Clients are not required to
+    relinquish rights to their data—or insights derived from it—to have the benefits
+    of IBM's solutions and services. Data Privacy IBM is fully committed to protecting
+    the privacy of our clients' data, which is fundamental in a data-driven society.
+    Data Security IBM is devoting our powerful engines of innovation to create tools
+    to protect our clients, their data and global trade from cyber threats, and convening
+    a broader discussion on balancing security, privacy and freedom. Government Access
+    To Data IBM has not provided client data to any government agency under any surveillance
+    program involving bulk collection of content or metadata. Cross-Border Data Flows
+    IBM views the free movement of data across borders as essential to 21st century
+    commerce.
+  hasDocumentation:
+  - doc-ibms-principles-for-trust-and-transparency
+- id: principle-ibm-tt-principle-3
+  name: 3. New technology, including AI systems, must be transparent and explainable
+  description: 'For the public to trust AI, it must be transparent. Technology companies
+    must be clear about who trains their AI systems, what data was used in that training
+    and, most importantly, what went into their algorithm''s recommendations. If we
+    are to use AI to help make important decisions, it must be explainable. IBM will
+    make clear: When and for what purposes AI is being applied. The major sources
+    of data and expertise—and the methods—used to train AI systems and solutions.
+    That while bias can never be fully eliminated, we and all companies advancing
+    AI have an obligation to address it proactively. We therefore continually test
+    our systems and find new data sets to better align their output with human values
+    and expectations.'
+  hasDocumentation:
+  - doc-ibms-principles-for-trust-and-transparency

@@ -204,3 +204,9 @@ classes:
         range: Obligation
         inlined: true
         inlined_as_list: true
+      principles:
+        description: A list of Principles
+        multivalued: true
+        range: Principle
+        inlined: true
+        inlined_as_list: true

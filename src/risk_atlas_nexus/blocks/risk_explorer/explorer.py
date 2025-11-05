@@ -24,6 +24,7 @@ class RiskExplorer(ExplorerBase):
         self._adapters = ontology.adapters or []
         self._llmquestionpolicies = ontology.llmquestionpolicies or []
         self._rules = ontology.rules or []
+        self._principles = ontology.principles or []
 
     def get_all_risks(self, taxonomy=None):
         """Get all risk definitions from the LinkML
@@ -928,7 +929,7 @@ class RiskExplorer(ExplorerBase):
         if taxonomy is not None:
             llm_question_policy_instances = list(
                 filter(
-                    lambda adapter: adapter.isDefinedByTaxonomy == taxonomy,
+                    lambda llmqp: llmqp.isDefinedByTaxonomy == taxonomy,
                     llm_question_policy_instances,
                 )
             )
@@ -954,4 +955,57 @@ class RiskExplorer(ExplorerBase):
             return matching_llm_question_policy_instances[0]
         else:
             print("No matching policy found")
+            return []
+
+    def get_principles(self, taxonomy=None, document=None):
+        """Get all Principle definitions from the LinkML
+
+        Args:
+            taxonomy: str
+                (Optional) The string label for a taxonomy
+            document: str
+                (Optional) The string label for a document
+
+        Returns:
+            list[Principle]
+                Result containing a list of Principle entries
+        """
+        principle_instances = self._principles or []
+
+        if taxonomy is not None:
+            principle_instances = list(
+                filter(
+                    lambda principle: principle.isDefinedByTaxonomy == taxonomy,
+                    principle_instances,
+                )
+            )
+        if document is not None:
+            principle_instances = list(
+                filter(
+                    lambda principle: principle.hasDocumentation == document,
+                    principle_instances,
+                )
+            )
+
+        return principle_instances
+
+    def get_principle(self, id):
+        """Get Principle definition from the LinkML by ID
+
+        Args:
+            id: str
+                The string id for a Principle entry
+
+        Returns:
+            Principle
+                Result containing a Principle
+        """
+        matching_principle_instances = list(
+            filter(lambda principle: principle.id == id, self._principles)
+        )
+
+        if len(matching_principle_instances) > 0:
+            return matching_principle_instances[0]
+        else:
+            print("No matching principle found")
             return []

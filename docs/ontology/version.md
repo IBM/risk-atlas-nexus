@@ -22,9 +22,9 @@ Alias: version
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |  no  |
 | [Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |  no  |
 | [License](License.md) | The general notion of a license which defines terms and grants permissions to... |  no  |
+| [RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |  no  |
 
 
 

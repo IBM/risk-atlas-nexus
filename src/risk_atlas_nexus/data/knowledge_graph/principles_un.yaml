@@ -1,0 +1,160 @@
+documents:
+- id: doc-un-ethical-use-of-ai-principles
+  name: "Principles for the ethical use of artificial intelligence in the United Nations system"
+  description: >-
+    This set of ten principles, grounded in ethics and human rights, aims to guide the use of artificial intelligence
+    (AI) across all stages of an AI system lifecycle across United Nations system entities. It is intended to be read
+    with other related policies and international law, and includes the following principles: do no harm; defined
+    purpose, necessity and proportionality; safety and security; fairness and non-discrimination; sustainability;
+    right to privacy, data protection and data governance; human autonomy and oversight; transparency and
+    explainability; responsibility and accountability; and inclusion and participation.
+  author: United Nations System Chief Executives Board for Coordination 
+  url: https://unsceb.org/principles-ethical-use-artificial-intelligence-united-nations-system
+  dateCreated: 2022-09-01
+
+principles:
+- id: principle-un-do-no-harm
+  name: Do no harm
+  description: >-
+    Artificial intelligence systems should not be used in ways that cause or exacerbate harm, whether individual or
+    collective, including harm to social, cultural, economic, natural or political environments. All stages of an
+    artificial intelligence system's life cycle should operate in accordance with the purposes, principles and
+    commitments of the Charter of the United Nations. All stages of an artificial intelligence system's life cycle
+    should be designed, developed, deployed and operated in ways that respect, protect and promote human rights and
+    fundamental freedoms.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-defined-purpose-necessity-and-proportionality
+  name: Defined purpose, necessity and proportionality
+  description: >-
+    The use of artificial intelligence systems, including the specific
+    artificial intelligence method(s) employed, should be justified,
+    appropriate in the context and not exceed what is necessary, and
+    proportionate to achieve legitimate aims that are in accordance with
+    each United Nations system organization's mandate and governing
+    instruments, rules, regulations and procedures.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-safety-and-security
+  name: Safety and security
+  description: >-
+    Safety and security risks should be identified, addressed and mitigated
+    throughout the artificial intelligence system's life cycle to prevent or, at
+    least, limit any potential or actual harm to humans, the environment or
+    ecosystems. Safe and secure artificial intelligence systems should be
+    enabled through robust frameworks.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-fairness-and-non-discrimination
+  name: Fairness and non-discrimination
+  description: >-
+    United Nations system organizations should aim to ensure the equal and
+    just distribution of the benefits, risks and costs associated with artificial
+    intelligence systems and to prevent bias, discrimination and
+    stigmatization of any kind, in compliance with international law. The
+    use of artificial intelligence systems should not lead to individuals
+    being deceived or to unjustifiable restrictions on their human rights and
+    fundamental freedoms.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-sustainability
+  name: Sustainability
+  description: >-
+    Artificial intelligence should be aimed at promoting environmental,
+    economic and social sustainability. To this end, the human, social,
+    cultural, political, economic and environmental impacts of such
+    technologies should be continuously assessed and appropriate
+    mitigation and prevention measures should be taken to address adverse
+    impacts, including on future generations.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-sustainability
+  name: Sustainability
+  description: >-
+    Artificial intelligence should be aimed at promoting environmental,
+    economic and social sustainability. To this end, the human, social,
+    cultural, political, economic and environmental impacts of such
+    technologies should be continuously assessed and appropriate
+    mitigation and prevention measures should be taken to address adverse
+    impacts, including on future generations.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-right-to-privacy
+  name: Right to privacy, data protection and data governance
+  description: >-
+    Individuals' privacy and rights as data subjects must be respected,
+    protected and promoted throughout the life cycle of artificial
+    intelligence systems. When the use of artificial intelligence systems is
+    considered, adequate data protection frameworks and data governance
+    mechanisms should be established or enhanced, in line with the
+    Personal data protection and privacy principles, also to ensure the
+    integrity of the data used.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-human-autonomy-and-oversight
+  name: Human autonomy and oversight
+  description: >-
+    United Nations system organizations should ensure that artificial
+    intelligence systems do not impinge on human beings' freedom and
+    autonomy and should guarantee human oversight. All stages of an
+    artificial intelligence system's life cycle should follow and incorporate
+    human-centric design practices and leave meaningful opportunity for
+    human decision-making. Human oversight includes ensuring that
+    humans have the capability to manage the overall activity of an
+    artificial intelligence system and the ability to decide when and how to
+    use it in specific situations, including whether to use such a system, and
+    the ability to override a decision made by such a system. As a rule, life
+    or death decisions or other decisions affecting fundamental human
+    rights require human intervention and must not be ceded to artificial
+    intelligence systems.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-transparency-and-explainability
+  name: Transparency and explainability
+  description: >-
+    United Nations system organizations should ensure the transparency
+    and explainability of artificial intelligence systems that they use, at all
+    stages of their life cycles, and of decision-making processes involving
+    such systems.
+    Technical explainability requires that the decisions made by an
+    artificial intelligence system can be understood and traced by human
+    beings. Individuals should be fully informed when a decision that may
+    or will affect their rights, fundamental freedoms, entitlements, services
+    or benefits is informed by or made based on artificial intelligence
+    algorithms, and should have access to the reasons and logic behind such
+    decisions. The information and reasons for a decision should be
+    presented in a manner that they can understand.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-responsibility-and-accountability
+  name: Responsibility and accountability
+  description: >-
+    United Nations system organizations should have appropriate oversight,
+    impact assessment, audit and due diligence mechanisms, including
+    protection for whistle-blowers, to ensure accountability for the impacts
+    of the use of artificial intelligence systems throughout their life cycles.
+    Appropriate governance structures should be established or enhanced to
+    ensure that humans or legal entities are made ethically and legally
+    responsible and accountable for artificial intelligence-based decisions
+    made at any stage of an artificial intelligence system's life cycle. Harm
+    caused by or as a result of the use of artificial intelligence systems
+    should be investigated, and appropriate action taken in response.
+    Information on accountability mechanisms should be communicated
+    widely throughout the United Nations system in order to build shared
+    knowledge, resources and capacities.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles
+- id: principle-un-inclusion-and-participation
+  name: Inclusion and participation
+  description: >-
+    When designing, deploying and using artificial intelligence systems,
+    United Nations system organizations should take an inclusive,
+    interdisciplinary and participatory approach, and promote gender
+    equality. They should conduct meaningful consultations with all
+    relevant stakeholders and affected communities as part of the processes
+    of defining the purpose of an artificial intelligence system, identifying
+    the assumptions underpinning its use, identifying the associated
+    benefits, risks, harm and adverse impacts, and adopting prevention and
+    mitigation measures.
+  hasDocumentation:
+  - doc-un-ethical-use-of-ai-principles

@@ -228,6 +228,7 @@ class Dataset(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -313,6 +314,7 @@ class Vocabulary(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -361,6 +363,7 @@ class Term(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -402,14 +405,41 @@ class Term(Entity):
          'slot_uri': 'schema:dateModified'} })
 
 
-class Principle(ConfiguredBaseModel):
+class Principle(Entity):
     """
     A representation of values or norms that must be taken into consideration when conducting activities
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Principle',
          'from_schema': 'https://ibm.github.io/risk-atlas-nexus/ontology/common'})
 
-    pass
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'hasDocumentation',
+         'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Term',
+                       'Principle',
+                       'RiskTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'alias': 'id', 'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'domain_of': ['Entity', 'BenchmarkMetadataCard'],
+         'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'alias': 'url', 'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'alias': 'dateCreated',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'alias': 'dateModified',
+         'domain_of': ['Entity'],
+         'slot_uri': 'schema:dateModified'} })
 
 
 class Policy(Entity):
@@ -604,6 +634,7 @@ class RiskTaxonomy(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -867,6 +898,7 @@ class Action(RiskControl):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1191,6 +1223,7 @@ class BaseAi(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1251,6 +1284,7 @@ class AiSystem(BaseAi):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1308,6 +1342,7 @@ class AiAgent(AiSystem):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1371,6 +1406,7 @@ class AiModel(BaseAi):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1453,6 +1489,7 @@ class LargeLanguageModel(AiModel):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1502,6 +1539,7 @@ class LargeLanguageModelFamily(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1707,6 +1745,7 @@ class AiEval(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1854,6 +1893,7 @@ class BenchmarkMetadataCard(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1889,6 +1929,7 @@ class Question(AiEval):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -1956,6 +1997,7 @@ class Questionnaire(AiEval):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -2027,6 +2069,7 @@ class Adapter(LargeLanguageModel, Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -2129,6 +2172,7 @@ class LLMIntrinsic(Entity):
          'domain_of': ['Dataset',
                        'Vocabulary',
                        'Term',
+                       'Principle',
                        'RiskTaxonomy',
                        'Action',
                        'BaseAi',
@@ -2290,6 +2334,7 @@ class Container(ConfiguredBaseModel):
     prohibitions: Optional[list[Prohibition]] = Field(default=None, description="""A list of prohibitions""", json_schema_extra = { "linkml_meta": {'alias': 'prohibitions', 'domain_of': ['Container']} })
     permissions: Optional[list[Permission]] = Field(default=None, description="""A list of Permissions""", json_schema_extra = { "linkml_meta": {'alias': 'permissions', 'domain_of': ['Container']} })
     obligations: Optional[list[Obligation]] = Field(default=None, description="""A list of Obligations""", json_schema_extra = { "linkml_meta": {'alias': 'obligations', 'domain_of': ['Container']} })
+    principles: Optional[list[Principle]] = Field(default=None, description="""A list of Principles""", json_schema_extra = { "linkml_meta": {'alias': 'principles', 'domain_of': ['Container']} })
 
 
 # Model rebuild

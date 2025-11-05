@@ -51,6 +51,7 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AiProvider](AiProvider.md) | A provider under the AI Act is defined by Article 3(3) as a natural or legal ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Policy](Policy.md) | A guidance document outlining any of: procedures, plans, principles, decision... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Principle](Principle.md) | A representation of values or norms that must be taken into consideration whe... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskConcept](RiskConcept.md) | An umbrella term for refering to risk, risk source, consequence and impact |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |
@@ -68,7 +69,6 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Term](Term.md) | A term and its definitions |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |
 | [Fact](Fact.md) | A fact about something, for example the result of a measurement |
-| [Principle](Principle.md) | A representation of values or norms that must be taken into consideration whe... |
 
 
 
@@ -192,6 +192,7 @@ Name: ai-risk-ontology
 | [phase](phase.md) | Annotation whether an AI risk shows specifically during the training-tuning o... |
 | [policies](policies.md) | A list of policies |
 | [power_consumption_w](power_consumption_w.md) | power consumption in Watts |
+| [principles](principles.md) | A list of Principles |
 | [producer](producer.md) | A relationship to the Organization instance which produces this instance |
 | [prohibitions](prohibitions.md) | A list of prohibitions |
 | [provider](provider.md) | A relationship to the Organization instance that provides this instance |
