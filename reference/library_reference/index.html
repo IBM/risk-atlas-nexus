@@ -1744,6 +1744,8 @@
       
         
       
+        
+      
     
     
     
@@ -6005,6 +6007,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ontology/principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slot: principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ontology/producer/" class="md-nav__link">
         
   
@@ -7441,6 +7466,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#risk_atlas_nexus.library.RiskAtlasNexus.get_principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk_atlas_nexus.library.RiskAtlasNexus.get_principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#risk_atlas_nexus.library.RiskAtlasNexus.get_related_actions" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_related_actions
@@ -7962,6 +8005,24 @@
   <a href="#risk_atlas_nexus.library.RiskAtlasNexus.get_llm_question_policy" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_llm_question_policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk_atlas_nexus.library.RiskAtlasNexus.get_principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_principle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk_atlas_nexus.library.RiskAtlasNexus.get_principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_principles
     </span>
   </a>
   
@@ -8504,6 +8565,20 @@
             –
             <div class="doc-md-description">
               <p>Get an LLM Question Policy definition from the LinkML, filtered by id</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            get_principle (risk_atlas_nexus.library.RiskAtlasNexus.get_principle)" href="#risk_atlas_nexus.library.RiskAtlasNexus.get_principle">get_principle</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Get a Principle definition from the LinkML, filtered by id</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            get_principles (risk_atlas_nexus.library.RiskAtlasNexus.get_principles)" href="#risk_atlas_nexus.library.RiskAtlasNexus.get_principles">get_principles</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Get all Principle definitions from the LinkML</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -10028,6 +10103,104 @@ The string id identifying the LLM question policy entry</p>
           <div class="doc-md-description">
             <p>LLMQuestionPolicy
 Result containing an LLM Question Policy.</p>
+          </div>
+        </li>
+    </ul>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="risk_atlas_nexus.library.RiskAtlasNexus.get_principle" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_principle</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_principle</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n"><span title="str">str</span></span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get a Principle definition from the LinkML, filtered by id</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>id</code></b>
+          –
+          <div class="doc-md-description">
+            <p>str
+The string id identifying the Principle entry</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>Principle
+Result containing a Principle.</p>
+          </div>
+        </li>
+    </ul>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="risk_atlas_nexus.library.RiskAtlasNexus.get_principles" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_principles</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_principles</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">document</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get all Principle definitions from the LinkML</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>taxonomy</code></b>
+          –
+          <div class="doc-md-description">
+            <p>str
+(Optional) The string label for a taxonomy</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>document</code></b>
+          –
+          <div class="doc-md-description">
+            <p>str
+(Optional) The string label for a document</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>list[Principle]
+Result containing a list of Principle entries</p>
           </div>
         </li>
     </ul>
