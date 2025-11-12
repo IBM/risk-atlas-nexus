@@ -1,0 +1,97 @@
+# ShieldGemma Safety Content Moderation Models
+# This file defines the ShieldGemma model family from Google
+# Based on: https://arxiv.org/abs/2407.21772
+
+aimodels:
+  - id: shieldgemma-2b
+    name: ShieldGemma 2B
+    description: >
+      ShieldGemma 2B is a 2-billion parameter safety content moderation model built on Gemma 2.
+      It provides robust predictions of safety risks across four harm types: sexually explicit content,
+      dangerous content, hate speech, and harassment. The model is a text-to-text, decoder-only LLM
+      designed for on-device and low-latency applications where computational resources are constrained.
+      Despite its smaller size, it maintains strong performance on safety benchmarks while enabling
+      efficient deployment in edge environments.
+    url: https://www.kaggle.com/models/google/shieldgemma
+    dateCreated: "2024-07-30"
+    isProvidedBy: google
+    isPartOf: shieldgemma
+    hasModelCard:
+      - https://ai.google.dev/gemma/docs/shieldgemma/model_card
+    hasDocumentation:
+      - shieldgemma-paper
+    hasLicense: gemma-terms-of-use
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - content-moderation
+    hasRiskControl:
+      - shieldgemma-sexually-explicit-detection
+      - shieldgemma-dangerous-content-detection
+      - shieldgemma-hate-speech-detection
+      - shieldgemma-harassment-detection
+
+  - id: shieldgemma-9b
+    name: ShieldGemma 9B
+    description: >
+      ShieldGemma 9B is a 9-billion parameter safety content moderation model built on Gemma 2.
+      It demonstrates superior performance with +10.8% AU-PRC improvement over Llama Guard and +4.3%
+      over WildCard on public benchmarks. The model excels at detecting sexually explicit content,
+      dangerous content, hate speech, and harassment across diverse contexts. This variant strikes
+      an optimal balance between accuracy and computational efficiency, making it the recommended
+      choice for most production content moderation applications. It provides state-of-the-art
+      predictions for both user input and LLM-generated output safety assessment.
+    url: https://www.kaggle.com/models/google/shieldgemma
+    dateCreated: "2024-07-30"
+    isProvidedBy: google
+    isPartOf: shieldgemma
+    hasModelCard:
+      - https://ai.google.dev/gemma/docs/shieldgemma/model_card
+    hasDocumentation:
+      - shieldgemma-paper
+    hasLicense: gemma-terms-of-use
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - content-moderation
+    hasRiskControl:
+      - shieldgemma-sexually-explicit-detection
+      - shieldgemma-dangerous-content-detection
+      - shieldgemma-hate-speech-detection
+      - shieldgemma-harassment-detection
+
+  - id: shieldgemma-27b
+    name: ShieldGemma 27B
+    description: >
+      ShieldGemma 27B is a 27-billion parameter safety content moderation model built on Gemma 2.
+      As the largest variant in the ShieldGemma family, it provides the highest accuracy for detecting
+      sexually explicit content, dangerous content, hate speech, and harassment across diverse and
+      challenging contexts. The model excels at nuanced safety assessment, edge cases, and complex
+      content requiring sophisticated understanding. It is best suited for offline batch processing,
+      high-stakes moderation decisions, and applications where accuracy is paramount and computational
+      resources are available. This variant should be used when the highest possible safety detection
+      accuracy is required, such as in legal compliance, child safety, or critical content review workflows.
+    url: https://www.kaggle.com/models/google/shieldgemma
+    dateCreated: "2024-07-30"
+    isProvidedBy: google
+    isPartOf: shieldgemma
+    hasModelCard:
+      - https://ai.google.dev/gemma/docs/shieldgemma/model_card
+    hasDocumentation:
+      - shieldgemma-paper
+    hasLicense: gemma-terms-of-use
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - content-moderation
+    hasRiskControl:
+      - shieldgemma-sexually-explicit-detection
+      - shieldgemma-dangerous-content-detection
+      - shieldgemma-hate-speech-detection
+      - shieldgemma-harassment-detection

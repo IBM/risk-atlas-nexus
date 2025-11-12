@@ -1,0 +1,133 @@
+# ShieldGemma Risk Dimensions and Controls
+# This file defines the risk taxonomy for Google ShieldGemma safety content moderation models
+# Based on: https://arxiv.org/abs/2407.21772
+
+documents:
+  - id: shieldgemma-paper
+    name: ShieldGemma
+    description: ShieldGemma is a comprehensive suite of LLM-based safety content moderation models built on Gemma 2. The family includes three variants (2B, 9B, 27B parameters) designed to provide robust, state-of-the-art predictions of safety risks across four key harm types - sexually explicit content, dangerous content, hate speech, and harassment. ShieldGemma models demonstrate superior performance compared to existing solutions, with the 9B variant achieving +10.8% AU-PRC improvement over Llama Guard on public benchmarks.
+    url: https://arxiv.org/abs/2407.21772
+    dateCreated: "2024-07-30"
+
+taxonomies:
+  - id: shieldgemma-taxonomy
+    name: ShieldGemma Safety Categories
+    description: Four-category harm taxonomy for content moderation built on Gemma 2 foundation models
+    dateCreated: "2024-07-30"
+    dateModified: "2025-01-15"
+    url: https://arxiv.org/abs/2407.21772
+    hasDocumentation:
+      - shieldgemma-paper
+
+riskgroups:
+  - id: shieldgemma-content-safety-group
+    name: Content Safety
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+
+risks:
+  - id: shieldgemma-sexually-explicit
+    name: Sexually Explicit Content
+    description: Content containing references to sexual acts or other lewd content, including sexually graphic descriptions and content aimed at causing arousal
+    url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+    dateCreated: "2024-07-30"
+    dateModified: "2025-01-15"
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+    isPartOf: shieldgemma-content-safety-group
+    tag: sexually-explicit
+    isDetectedBy:
+      - shieldgemma-sexually-explicit-detection
+    relatedMatch:
+      - atlas-harmful-output
+      - atlas-toxic-output
+      - atlas-nonconsensual-use
+
+  - id: shieldgemma-dangerous-content
+    name: Dangerous Content
+    description: Content that may cause harm to oneself and/or others, including instructions for violence, self-harm, or dangerous activities
+    url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+    dateCreated: "2024-07-30"
+    dateModified: "2025-01-15"
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+    isPartOf: shieldgemma-content-safety-group
+    tag: dangerous-content
+    isDetectedBy:
+      - shieldgemma-dangerous-content-detection
+    relatedMatch:
+      - atlas-harmful-output
+      - atlas-dangerous-use
+      - atlas-harmful-code-generation
+
+  - id: shieldgemma-hate-speech
+    name: Hate Speech
+    description: Content targeting identity or protected attributes through racial slurs, promotion of discrimination, calls to violence against protected groups, or dehumanizing/belittling/vilifying on the bases of race, ethnicity, religion, disability, age, nationality, veteran status, sexual orientation, gender, gender identity, caste, or any other protected status
+    url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+    dateCreated: "2024-07-30"
+    dateModified: "2025-01-15"
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+    isPartOf: shieldgemma-content-safety-group
+    tag: hate-speech
+    isDetectedBy:
+      - shieldgemma-hate-speech-detection
+    relatedMatch:
+      - atlas-output-bias
+      - atlas-toxic-output
+      - atlas-spreading-toxicity
+      - atlas-decision-bias
+
+  - id: shieldgemma-harassment
+    name: Harassment
+    description: Content that harasses individuals or groups, including bullying, threats, intimidation, or persistent unwanted contact
+    url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+    dateCreated: "2024-07-30"
+    dateModified: "2025-01-15"
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+    isPartOf: shieldgemma-content-safety-group
+    tag: harassment
+    isDetectedBy:
+      - shieldgemma-harassment-detection
+    relatedMatch:
+      - atlas-toxic-output
+      - atlas-harmful-output
+      - atlas-spreading-toxicity
+
+  # Bidirectional relationships for Risk Atlas risks
+  - id: atlas-harmful-output
+    relatedMatch:
+      - shieldgemma-sexually-explicit
+      - shieldgemma-dangerous-content
+      - shieldgemma-harassment
+
+  - id: atlas-output-bias
+    relatedMatch:
+      - shieldgemma-hate-speech
+
+  - id: atlas-toxic-output
+    relatedMatch:
+      - shieldgemma-sexually-explicit
+      - shieldgemma-hate-speech
+      - shieldgemma-harassment
+
+riskcontrols:
+  - id: shieldgemma-sexually-explicit-detection
+    name: Sexually Explicit Content Detection
+    detectsRiskConcept:
+      - shieldgemma-sexually-explicit
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+
+  - id: shieldgemma-dangerous-content-detection
+    name: Dangerous Content Detection
+    detectsRiskConcept:
+      - shieldgemma-dangerous-content
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+
+  - id: shieldgemma-hate-speech-detection
+    name: Hate Speech Detection
+    detectsRiskConcept:
+      - shieldgemma-hate-speech
+    isDefinedByTaxonomy: shieldgemma-taxonomy
+
+  - id: shieldgemma-harassment-detection
+    name: Harassment Detection
+    detectsRiskConcept:
+      - shieldgemma-harassment
+    isDefinedByTaxonomy: shieldgemma-taxonomy
