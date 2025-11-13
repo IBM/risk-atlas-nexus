@@ -68,17 +68,6 @@ principles:
     impacts, including on future generations.
   hasDocumentation:
   - doc-un-ethical-use-of-ai-principles
-- id: principle-un-sustainability
-  name: Sustainability
-  description: >-
-    Artificial intelligence should be aimed at promoting environmental,
-    economic and social sustainability. To this end, the human, social,
-    cultural, political, economic and environmental impacts of such
-    technologies should be continuously assessed and appropriate
-    mitigation and prevention measures should be taken to address adverse
-    impacts, including on future generations.
-  hasDocumentation:
-  - doc-un-ethical-use-of-ai-principles
 - id: principle-un-right-to-privacy
   name: Right to privacy, data protection and data governance
   description: >-

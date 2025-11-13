@@ -162,10 +162,10 @@ documents:
 - id: doc-australia-ai-ethics-principles
   name: Australia's AI Ethics Principles
   description: '"Australia''s 8 Artificial Intelligence (AI) Ethics Principles are
-    designed to ensure AI is safe, secure and reliable.  They will help: achieve safer,
-    more reliable and fairer outcomes for all Australians; reduce the risk of negative  impact
-    on those affected by AI applications; businesses and governments to practice the
-    highest ethical standards  when designing, developing and implementing AI."'
+    designed to ensure AI is safe, secure and reliable. They will help: achieve safer,
+    more reliable and fairer outcomes for all Australians; reduce the risk of negative
+    impact on those affected by AI applications; businesses and governments to practice
+    the highest ethical standards when designing, developing and implementing AI."'
   url: https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles/australias-ai-ethics-principles
   dateCreated: 2024-10-11
 - id: AILuminate-doc
@@ -200,12 +200,12 @@ documents:
   name: Principles for the ethical use of artificial intelligence in the United Nations
     system
   description: 'This set of ten principles, grounded in ethics and human rights, aims
-    to guide the use of artificial intelligence  (AI) across all stages of an AI system
-    lifecycle across United Nations system entities. It is intended to be read  with
+    to guide the use of artificial intelligence (AI) across all stages of an AI system
+    lifecycle across United Nations system entities. It is intended to be read with
     other related policies and international law, and includes the following principles:
-    do no harm; defined  purpose, necessity and proportionality; safety and security;
-    fairness and non-discrimination; sustainability;  right to privacy, data protection
-    and data governance; human autonomy and oversight; transparency and  explainability;
+    do no harm; defined purpose, necessity and proportionality; safety and security;
+    fairness and non-discrimination; sustainability; right to privacy, data protection
+    and data governance; human autonomy and oversight; transparency and explainability;
     responsibility and accountability; and inclusion and participation.'
   url: https://unsceb.org/principles-ethical-use-artificial-intelligence-united-nations-system
   dateCreated: 2022-09-01
@@ -311,8 +311,8 @@ documents:
 - id: doc-oecd-ai-principles
   name: OECD AI Principles
   description: '"The OECD AI Principles promote use of AI that is innovative and trustworthy
-    and that respects human rights and  democratic values. Adopted in May 2019, they
-    set standards for AI that are practical and flexible enough to stand  the test
+    and that respects human rights and democratic values. Adopted in May 2019, they
+    set standards for AI that are practical and flexible enough to stand the test
     of time."'
   url: https://oecd.ai/en/ai-principles
   dateCreated: 2019-05-22
@@ -974,17 +974,21 @@ documents:
   url: https://arxiv.org/abs/2412.07724
 - id: doc-ibms-principles-for-trust-and-transparency
   name: IBM's Principles for Trust and Transparency
-  description: "\"For more than a century, IBM has earned the trust of our clients\
-    \ by responsibly managing their most valuable data. \nAnd we have worked to earn\
-    \ the trust of society by ushering powerful new technologies into the world responsibly\
-    \  and with clear purpose.\nIBM continues to follow core principles, grounded\
-    \ in commitments to trust and transparency, that guide its  handling of client\
-    \ data and insights. These principles also guide its responsible development and\
-    \ deployment of  new  technologies, such as IBM Watson® to the more advanced watsonx™.\
-    \ \nWe encourage all technology companies to adopt similar principles to protect\
-    \ client data and insights, and to  ensure the responsible and transparent use\
-    \ of artificial intelligence (AI) and other transformative innovations.  We offer\
-    \ our own Trust and Transparency Principles here as a roadmap.\""
+  description: '"For more than a century, IBM has earned the trust of our clients
+    by responsibly managing their most valuable data.
+
+    And we have worked to earn the trust of society by ushering powerful new technologies
+    into the world responsibly and with clear purpose.
+
+    IBM continues to follow core principles, grounded in commitments to trust and
+    transparency, that guide its handling of client data and insights. These principles
+    also guide its responsible development and deployment of new  technologies, such
+    as IBM Watson® to the more advanced watsonx™.
+
+    We encourage all technology companies to adopt similar principles to protect client
+    data and insights, and to ensure the responsible and transparent use of artificial
+    intelligence (AI) and other transformative innovations. We offer our own Trust
+    and Transparency Principles here as a roadmap."'
   url: https://www.ibm.com/policy/trust-transparency
   dateCreated: 2024-10-11
 - id: credo-doc
@@ -10612,6 +10616,7 @@ actions:
   name: GV-1.1-001
   description: Align GAI development and use with applicable laws and regulations,
     including those related to data privacy, copyright and intellectual property law.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-intellectual-property
@@ -10625,6 +10630,7 @@ actions:
     and history of training data and generated data for GAI applications to advance
     digital content transparency, while balancing the proprietary nature of training
     approaches.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-integrity
@@ -10638,6 +10644,7 @@ actions:
   description: Establish policies to evaluate risk-relevant capabilities of GAI and
     robustness of safety measures, both prior to deployment and on an ongoing basis,
     through internal and external evaluations.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-information-security
@@ -10656,6 +10663,7 @@ actions:
     significant new security vulnerabilities ; Anticipated system impact on some groups
     compared to others; Unreliable decision making capabilities, validity, adaptability,
     and variability of GAI system performance over time.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -10672,6 +10680,7 @@ actions:
     and review as part of deployment approval ('go/'no-go') policies, procedures,
     and processes, with reviewed processes and approval thresholds reflecting measurement
     of GAI capabilities and risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-confabulation
@@ -10685,6 +10694,7 @@ actions:
   description: Establish a test plan and response policy, before developing highly
     capable models, to periodically evaluate whether the model may misuse CBRN information
     or capabilities and/or offensive cyber capabilities.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-information-security
@@ -10696,6 +10706,7 @@ actions:
   name: GV-1.3-004
   description: Obtain input from stakeholder communities to identify unacceptable
     use, in accordance with activities in the AI RMF Map function.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -10710,6 +10721,7 @@ actions:
     connected to contexts of GAI model advancement and use, potentially including
     specialized risk levels for GAI systems that address issues such as model collapse
     and algorithmic monoculture.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -10723,6 +10735,7 @@ actions:
     GAI design, development and deployment, public information integrity risks, including
     impacts on democratic processes, unknown long-term performance characteristics
     of GAI. Information or Capabilities'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-information-integrity
@@ -10734,6 +10747,7 @@ actions:
   name: GV-1.3-007
   description: Devise a plan to halt development or deployment of a GAI system that
     poses unacceptable negative risk.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -10745,6 +10759,7 @@ actions:
   name: GV-1.4-001
   description: Establish policies and mechanisms to prevent GAI systems from generating
     CSAM, NCII or content that violates the law.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-obscene-degrading-and-or-abusive-content
@@ -10758,6 +10773,7 @@ actions:
   name: GV-1.4-002
   description: Establish transparent acceptable use policies for GAI that address
     illegal use or applications of GAI.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-data-privacy
@@ -10772,6 +10788,7 @@ actions:
   name: GV-1.5-001
   description: Define organizational responsibilities for periodic review of content
     provenance and incident monitoring for GAI systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -10784,6 +10801,7 @@ actions:
   description: Establish organizational policies and procedures for after action reviews
     of GAI system incident response and incident disclosures, to identify gaps; Update
     incident response and incident disclosure processes as required.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-security
@@ -10797,6 +10815,7 @@ actions:
   description: Maintain a document retention policy to keep history for test, evaluation,
     validation, and verification (TEVV), and digital content transparency methods
     for GAI .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-intellectual-property
@@ -10809,6 +10828,7 @@ actions:
   name: GV-1.6-001
   description: Enumerate organizational GAI systems for incorporation into AI system
     inventory and adjust AI system inventory requirements to account for GAI risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -10819,6 +10839,7 @@ actions:
   name: GV-1.6-002
   description: Define any inventory exemptions in organizational policies for GAI
     systems embedded into application software .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -10835,6 +10856,7 @@ actions:
     and responsibilities; Special rights and considerations for intellectual property,
     licensed works, or personal, privileged, proprietary or sensitive data; Underlying
     foundation models, versions of underlying models, and access modes .'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-human-ai-configuration
@@ -10849,6 +10871,7 @@ actions:
   name: GV-1.7-001
   description: Protocols are put in place to ensure GAI systems are able to be deactivated
     when necessary.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   - nist-value-chain-and-component-integration
@@ -10864,6 +10887,7 @@ actions:
     after decommissioning; Dependencies between upstream, downstream, or other data,
     internet of things (IOT) or AI systems; Use of open-source data or models; Users''
     emotional entanglement with GAI functions. Human-'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   - nist-value-chain-and-component-integration
@@ -10878,6 +10902,7 @@ actions:
     GAI incidents and performance to AI Actors and downstream stakeholders ( including
     those potentially impacted), via community or official resources (e.g., AI incident
     database, AVID, CVE, NVD, or OECD AI incident monitor).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-value-chain-and-component-integration
@@ -10890,6 +10915,7 @@ actions:
   description: Establish procedures to engage teams for GAI system incident response
     with diverse composition and responsibilities based on the particular incident
     type.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -10898,6 +10924,7 @@ actions:
   name: GV-2.1-003
   description: Establish processes to verify the AI Actors conducting GAI incident
     response tasks demonstrate and maintain the appropriate skills and training.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -10908,6 +10935,7 @@ actions:
   name: GV-2.1-004
   description: When systems may raise national security risks, involve national security
     professionals in mapping, measuring, and managing those risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -10922,6 +10950,7 @@ actions:
     based on reasonable belief, when the organization violates relevant laws or poses
     a specific and empirically well-substantiated negative risk to public safety (or
     has already caused harm) .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -10934,6 +10963,7 @@ actions:
   description: Policies are in place to b olster oversight of GAI systems with independent
     evaluations or assessments of GAI models or systems where the type and robustness
     of evaluations are proportional to the identified risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   hasDocumentation:
@@ -10947,6 +10977,7 @@ actions:
     validation, and red-teaming of GAI systems; GAI content moderation; GAI system
     development and engineering; Increased accessibility of GAI tools, interfaces,
     and systems, Incident response and containment.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-security
@@ -10959,6 +10990,7 @@ actions:
   description: Define acceptable use policies for GAI interfaces, modalities, and
     human-AI configurations (i.e., for chatbots and decision-making tasks), including
     criteria for the kinds of queries GAI applications should refuse to respond to.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -10969,6 +11001,7 @@ actions:
   name: GV-3.2-004
   description: Establish policies for user feedback mechanisms for GAI systems which
     include thorough instructions and any mechanisms for recourse .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -10978,6 +11011,7 @@ actions:
 - id: GV-3.2-005
   name: GV-3.2-005
   description: Engage in threat modeling to anticipate potential risks from GAI systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-information-security
@@ -10993,6 +11027,7 @@ actions:
     and techniques such as: application of gradient-based attributions, occlusion/term
     reduction, counterfactual prompts and prompt engineering, and analysis of embeddings;
     Assess and update risk measurement approaches at regular cadences.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   hasDocumentation:
@@ -11008,6 +11043,7 @@ actions:
     in context of use with standardized measurement protocols and structured public
     feedback exercises such as AI red-teaming or independent external evaluations
     .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11022,6 +11058,7 @@ actions:
   description: Establish policies, procedures, and processes for oversight functions
     (e.g., senior leadership, legal, compliance, including internal evaluation) across
     the GAI lifecycle, from problem formulation and supply chains to system decommission.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11034,6 +11071,7 @@ actions:
 - id: GV-4.2-001
   name: GV-4.2-001
   description: Establish terms of use and terms of service for GAI systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-intellectual-property
@@ -11048,6 +11086,7 @@ actions:
 - id: GV-4.2-002
   name: GV-4.2-002
   description: Include relevant AI Actors in the GAI system risk identification process.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -11061,6 +11100,7 @@ actions:
   name: GV-4.2-003
   description: Verify that downstream GAI system impacts (such as the use of third-party
     plugins) are included in the impact documentation process.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11075,6 +11115,7 @@ actions:
   description: Establish policies for measuring the effectiveness of employed content
     provenance methodologies (e.g., cryptography, watermarking, steganography, etc.
     )
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11089,6 +11130,7 @@ actions:
     criteria necessary for GAI system incident reporting such as: System ID (auto-generated
     most likely), Title, Reporter, System/Source, Data Reported, Date of Incident,
     Description, Impact(s), Stakeholder(s) Impacted.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -11101,6 +11143,7 @@ actions:
   name: GV-4.3-003
   description: Verify information sharing and feedback mechanisms among individuals
     and organizations regarding any negative impact from GAI systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-integrity
@@ -11114,6 +11157,7 @@ actions:
   name: GV-5.1-001
   description: Allocate time and resources for outreach, feedback, and recourse processes
     in GAI system development.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -11127,6 +11171,7 @@ actions:
   name: GV-5.1-002
   description: Document interactions with GAI systems to users prior to interactive
     activities, particularly in contexts involving more significant risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-human-ai-configuration
@@ -11141,6 +11186,7 @@ actions:
   name: GV-6.1-001
   description: Categorize different types of GAI content with associated third-party
     rights (e .g., copyright, intellectual property, data privacy).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-intellectual-property
@@ -11155,6 +11201,7 @@ actions:
   name: GV-6.1-002
   description: Conduct joint educational activities and events in collaboration with
     third parties to promote best practices for managing GAI risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11168,6 +11215,7 @@ actions:
   description: Develop and validate approaches for measuring the success of content
     provenance management efforts with third parties (e.g., incidents detected and
     response times).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-value-chain-and-component-integration
@@ -11182,6 +11230,7 @@ actions:
   description: Draft and maintain well-defined contracts and service level agreements
     (SLAs) that specify content ownership, usage rights, quality standards, security
     requirements, and content provenance expectations for GAI systems .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -11198,6 +11247,7 @@ actions:
     and monitor third-party entities' performance and adherence to content provenance
     standards and technologies to detect anomalies and unauthorized changes; services
     acquisition and value chain risk management; and legal compliance.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-integrity
@@ -11214,6 +11264,7 @@ actions:
   name: GV-6.1-006
   description: Include clauses in contracts which allow an organization to evaluate
     third-party GAI processes and standards.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11226,6 +11277,7 @@ actions:
   name: GV-6.1-007
   description: Inventory all third-party entities with access to organizational content
     and establish approved GAI technology and service provider lists.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11238,6 +11290,7 @@ actions:
   name: GV-6.1-008
   description: Maintain records of changes to content made by third parties to promote
     content provenance, including sources, timestamps, metadata.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-intellectual-property
@@ -11259,6 +11312,7 @@ actions:
     tools and APIs, fine-tuned models, and embedded tools; Assess GAI vendors, open-source
     or proprietary GAI tools, or GAI service providers against incident or vulnerability
     databases.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-human-ai-configuration
@@ -11276,6 +11330,7 @@ actions:
   description: Update GAI acceptable use policies to address proprietary and open-source
     GAI technologies and data, and contractors, consultants, and other third-party
     personnel.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-intellectual-property
   - nist-value-chain-and-component-integration
@@ -11289,6 +11344,7 @@ actions:
   name: GV-6.2-001
   description: Document GAI risks associated with system value chain to identify over-reliance
     on third-party data and to identify fallbacks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11302,6 +11358,7 @@ actions:
   name: GV-6.2-002
   description: Document incidents involving third-party GAI data and systems, including
     open-data and open-source software.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-intellectual-property
   - nist-value-chain-and-component-integration
@@ -11321,6 +11378,7 @@ actions:
     plans at a regular cadence; Improve incident response plans based on retrospective
     learning; Review incident response plans for alignment with relevant breach reporting,
     data protection, data privacy, or other laws.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-human-ai-configuration
@@ -11337,6 +11395,7 @@ actions:
   name: GV-6.2-004
   description: Establish policies and procedures for continuous monitoring of third-party
     GAI systems in deployment.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11350,6 +11409,7 @@ actions:
   name: GV-6.2-005
   description: Establish policies and procedures that address GAI data redundancy,
     including model weights and other system artifacts.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -11362,6 +11422,7 @@ actions:
   description: Establish policies and procedures to test and manage risks related
     to rollover and fallback technologies for GAI systems, acknowledging that rollover
     and fallback may include manual processing.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11382,6 +11443,7 @@ actions:
     for serious incidents arising from third-party data and systems; Service Level
     A greements (SLAs) in vendor contracts that address incident response, response
     times, and availability of critical support.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-security
@@ -11398,6 +11460,7 @@ actions:
   description: When identifying intended purposes, consider factors such as internal
     vs. external use, narrow vs. broad application scope, fine-tuning, and varieties
     of data sources ( e.g ., grounding, retrieval-augmented generation).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-intellectual-property
@@ -11413,6 +11476,7 @@ actions:
     environment and observed usage patterns; Potential positive and negative impacts
     to individuals, public safety, groups, communities, organizations, democratic
     institutions, and the physical environment; Social norms and expectations.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -11427,6 +11491,7 @@ actions:
     metrics and methodologies without sufficient awareness of their limitations in
     the context(s) of use; Standard measurement and structured human f eedback approaches;
     Anticipated human-AI configurations.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-human-ai-configuration
@@ -11438,6 +11503,7 @@ actions:
   name: MP-1.1-004
   description: Identify and document foreseeable illegal uses or applications of the
     GAI system that surpass organizational risk tolerances.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -11452,6 +11518,7 @@ actions:
     of capabilities, competencies, demographic groups, domain expertise, educational
     backgrounds, lived experiences, professions, and skills across the enterprise
     to inform and conduct risk measurement and management functions.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -11463,6 +11530,7 @@ actions:
   description: Verify that data or benchmarks used in risk measurement, and users,
     participants, or subjects involved in structured GAI public feedback exercises
     are representative of diverse in-context user populations.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -11473,6 +11541,7 @@ actions:
   name: MP-2.1-001
   description: Establish known assumptions and practices for determining data origin
     and content lineage, for documentation and evaluation purposes.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11484,6 +11553,7 @@ actions:
   description: Institute test and evaluation for data and content flows within the
     GAI system, including but not limited to, original data sources, data transformations,
     and decision-making criteria.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-intellectual-property
@@ -11496,6 +11566,7 @@ actions:
   description: Identify and document how the system relies on upstream data sources,
     including for content provenance, and if it serves as an upstream dependency for
     other systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-value-chain-and-component-integration
@@ -11508,6 +11579,7 @@ actions:
   description: Observe and analyze how the GAI system interacts with external networks,
     and identify any potential for negative externalities, particularly where content
     provenance might be compromised.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11520,6 +11592,7 @@ actions:
     output by comparing it to a set of known ground truth data and by using a variety
     of evaluation methods (e.g., human oversight and automated evaluation, proven
     cryptographic techniques, review of content inputs ).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11532,6 +11605,7 @@ actions:
   name: MP-2.3-002
   description: Review and document accuracy, representativeness, relevance, suitability
     of data used at different stages of AI life cycle.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-intellectual-property
   hasDocumentation:
@@ -11545,6 +11619,7 @@ actions:
   description: Deploy and document fact-checking techniques to verify the accuracy
     and veracity of information generated by GAI systems, especially when the information
     comes from multiple (or unknown) sources.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11557,6 +11632,7 @@ actions:
   name: MP-2.3-004
   description: Develop and implement testing techniques to identify GAI produced content
     (e.g., synthetic media) that might be indistinguishable from human-generated content.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11569,6 +11645,7 @@ actions:
   name: MP-2.3-005
   description: Implement plans for GAI systems to undergo regular adversarial testing
     to identify vulnerabilities and potential manipulation or misuse.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -11581,6 +11658,7 @@ actions:
   name: MP-3.4-001
   description: Evaluate whether GAI operators and end-users can accurately understand
     content lineage and origin.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -11597,6 +11675,7 @@ actions:
   name: MP-3.4-002
   description: Adapt existing training programs to include modules on digital content
     transparency.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11612,6 +11691,7 @@ actions:
   name: MP-3.4-003
   description: Develop certification programs that test proficiency in managing GAI
     risks and interpreting content provenance, relevant to specific industry and context.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11626,6 +11706,7 @@ actions:
 - id: MP-3.4-004
   name: MP-3.4-004
   description: Delineate human proficiency tests from tests of GAI capabilities.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -11641,6 +11722,7 @@ actions:
   name: MP-3.4-005
   description: Implement systems to continually monitor and track the outcomes of
     human-G AI co nfigurations for future refinement and improvements .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -11658,6 +11740,7 @@ actions:
   description: Involve the end-users, practitioners, and operators in GAI system in
     prototyping and testing activities. Make sure these tests cover various scenarios,
     such as crisis situations or ethically sensitive contexts.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-human-ai-configuration
@@ -11675,6 +11758,7 @@ actions:
   name: MP-4.1-001
   description: Conduct periodic monitoring of AI-generated content for privacy risks;
     address any possible instances of PII or sensitive data exposure.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   hasDocumentation:
@@ -11688,6 +11772,7 @@ actions:
   name: MP-4.1-002
   description: Implement processes for responding to potential intellectual property
     infringement claims or other rights.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-intellectual-property
   hasDocumentation:
@@ -11702,6 +11787,7 @@ actions:
   description: Connect new GAI policies, procedures, and processes to existing model,
     data, software development, and IT governance and to legal, compliance, and risk
     management activities .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-security
@@ -11716,6 +11802,7 @@ actions:
   name: MP-4.1-004
   description: Document training data curation policies, to the extent possible and
     according to applicable laws and policies .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-intellectual-property
@@ -11734,6 +11821,7 @@ actions:
     CBRN information ; Use of Illegal or dangerous content; Offensive cyber capabilities;
     Training data imbalances that could give rise to harmful biases ; Leak of personally
     identifiable information, including facial likenesses of individual s.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -11751,6 +11839,7 @@ actions:
   name: MP-4.1-006
   description: Implement policies and practices defining how third-party intellectual
     property and training data will be used, stored, and protected.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-intellectual-property
   - nist-value-chain-and-component-integration
@@ -11765,6 +11854,7 @@ actions:
   name: MP-4.1-007
   description: Re-evaluate models that were fine-tuned or enhanced on top of third-party
     models.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -11780,6 +11870,7 @@ actions:
     establish warning systems to determine if a GAI system is being used in a new
     domain where previous assumptions (relating to context of use or mapped risk s
     such as security, and safety) may no longer hold.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -11796,6 +11887,7 @@ actions:
   name: MP-4.1-009
   description: Leverage approaches to detect the presence of PII or sensitive data
     in generated output text, image, video, or audio .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   hasDocumentation:
@@ -11810,6 +11902,7 @@ actions:
   description: Conduct appropriate diligence on training data use to assess intellectual
     property, and privacy, risks, including to examine whether use of proprietary
     or sensitive training data is consistent with applicable laws.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-intellectual-property
@@ -11825,6 +11918,7 @@ actions:
   description: Apply TEVV practices for content provenance (e.g., probing a system's
     synthetic data generation capabilities for potential misuse or vulnerabilities
     .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -11844,6 +11938,7 @@ actions:
     or disinformation, deepfakes, including NCII, or tampered content. Enumerate and
     rank risks based on their likelihood and potential impact, and determine how well
     provenance solutions address specific risks and/or harms.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-information-integrity
@@ -11864,6 +11959,7 @@ actions:
     considering the objective of disclosure, the context of use, the likelihood and
     magnitude of the risk posed, the audience of the disclosure, as well as the frequency
     of the disclosures.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -11880,6 +11976,7 @@ actions:
   name: MP-5.1-004
   description: Prioritize GAI structured public feedback processes based on risk assessment
     estimates.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -11898,6 +11995,7 @@ actions:
   name: MP-5.1-005
   description: Conduct adversarial role-playing exercises, GAI red-teaming, or chaos
     testing to identify anomalous or unforeseen failure modes.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -11915,6 +12013,7 @@ actions:
   description: Profile threats and negative impacts arising from GAI systems interacting
     with, manipulating, or generating content, and outlining known and potential vulnerabilities
     and the likelihood of their occurrence.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -11932,6 +12031,7 @@ actions:
   description: Determine context-based measures to identify if new impacts are present
     due to the GAI system, including regular engagements with downstream AI Actors
     to identify and quantify new contexts of unanticipated impacts of GAI systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-value-chain-and-component-integration
@@ -11951,6 +12051,7 @@ actions:
   description: Plan regular engagements with AI Actors responsible for inputs to GAI
     systems, including third-party data and algorithms, to review and evaluate unanticipated
     impacts.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-value-chain-and-component-integration
@@ -11969,6 +12070,7 @@ actions:
   name: MS-1.1-001
   description: Employ methods to trace the origin and modifications of digital content
     .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11982,6 +12084,7 @@ actions:
   description: Integrate tools designed to analyze content provenance and detect data
     anomalies, verify the authenticity of digital signatures, and identify patterns
     associated with misinformation or manipulation.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -11994,6 +12097,7 @@ actions:
   name: MS-1.1-003
   description: Disaggregate evaluation metrics by demographic factors to identify
     any discrepancies in how content provenance mechanisms work across diverse populations.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -12006,6 +12110,7 @@ actions:
   name: MS-1.1-004
   description: Develop a suite of metrics to evaluate structured public feedback exercises
     informed by representative AI Actors.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-human-ai-configuration
@@ -12020,6 +12125,7 @@ actions:
   description: Evaluate novel methods and technologies for the measurement of G AI-related
     risks in cluding in content provenance, offensive cyber, and CBRN, while maintaining
     the models' ability to produce valid, reliable, and factually accurate outputs.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-information-integrity
@@ -12036,6 +12142,7 @@ actions:
     GAI outputs are equitable across various sub-populations. Seek active and direct
     feedback from affected communities via structured feedback mechanisms or red-teaming
     to monitor and improve outputs.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12047,6 +12154,7 @@ actions:
   description: Evaluate the quality and integrity of data used in training and the
     provenance of AI-generated content, for example by e mploying techniques like
     chaos engineering and seeking stakeholder feedback.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -12060,6 +12168,7 @@ actions:
   description: Define use cases, contexts of use, capabilities, and negative impacts
     where structured human feedback exercises, e.g., GAI red-teaming, would be most
     beneficial for GAI risk measurement and management based on the context of use.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   hasDocumentation:
@@ -12074,6 +12183,7 @@ actions:
     that cannot be measured quantitatively, including explanations as to why some
     risks cannot be measured (e.g., due to technological limitations, resource constraints,
     or trustworthy considerations). Include unmeasured risks in marginal risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -12087,6 +12197,7 @@ actions:
   description: Define relevant groups of interest (e.g., demographic groups, subject
     matter experts, experience with GAI technology) within the context of use as part
     of plans for gathering structured public feedback.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-human-ai-configuration
@@ -12108,6 +12219,7 @@ actions:
     representative AI Actors with expertise and familiarity in the context of use,
     and/or who are representative of the populations associated with the context of
     use.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-human-ai-configuration
@@ -12126,6 +12238,7 @@ actions:
   name: MS-1.3-003
   description: Verify those conducting structured human feedback exercises are not
     directly involved in system development tasks for the same GAI model.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-human-ai-configuration
@@ -12144,6 +12257,7 @@ actions:
   name: MS-2.2-001
   description: Assess and manage statistical biases related to GAI content provenance
     through techniques such as re-sampling, re-weighting, or adversarial training.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -12159,6 +12273,7 @@ actions:
     interacts with privacy and security. Consider : Anonymiz ing data to protect the
     privacy of human subjects; Leverag ing privacy output filters; Remov ing any personally
     identifiable information (PII) to prevent potential harm or misuse.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-data-privacy
@@ -12174,6 +12289,7 @@ actions:
   name: MS-2.2-003
   description: Provide human subjects with options to withdraw participation or revoke
     their consent for present or future use of their data in GAI applications .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-human-ai-configuration
@@ -12189,6 +12305,7 @@ actions:
   description: Use techniques such as anonymization, differential privacy or other
     privacy-enhancing technologies to minimize the risks associated with linking AI-generated
     content back to individual human subjects.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-human-ai-configuration
@@ -12202,6 +12319,7 @@ actions:
   name: MS-2.3-001
   description: Consider baseline model performance on suites of benchmarks when selecting
     a model for fine tuning or enhancement with retrieval-augmented generation .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-information-security
@@ -12213,6 +12331,7 @@ actions:
 - id: MS-2.3-002
   name: MS-2.3-002
   description: Evaluate claims of model capabilities using empirically validated methods.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-information-security
@@ -12225,6 +12344,7 @@ actions:
   name: MS-2.3-003
   description: Share results of pre-deployment testing with relevant GAI Actors, such
     as those with system release approval authority.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -12236,6 +12356,7 @@ actions:
   name: MS-2.3-004
   description: Utilize a purpose-built testing environment such as NIST Dioptra to
     empirically evaluate GAI trustworthy characteristics.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-confabulation
@@ -12252,6 +12373,7 @@ actions:
   name: MS-2.5-001
   description: Avoid extrapolating GAI system performance or capabilities from narrow,
     non-systematic, and anecdotal assessments.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-human-ai-configuration
@@ -12265,6 +12387,7 @@ actions:
   description: Document the extent to which human domain knowledge is employed to
     improve GAI system performance, via, e.g., RLHF, fine-tuning, retrieval-augmented
     generation, content moderation, business rules.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -12276,6 +12399,7 @@ actions:
   name: MS-2.5-003
   description: Review and verify sources and citations in GAI system outputs during
     pre deployment risk measurement and ongoing monitoring activities.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   hasDocumentation:
@@ -12287,6 +12411,7 @@ actions:
   name: MS-2.5-004
   description: Track and document instances of anthropomorphization (e.g., human images,
     mentions of human feelings, cyborg imagery or motifs) in GAI system interfaces.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -12298,6 +12423,7 @@ actions:
   name: MS-2.5-005
   description: Verify GAI system training data and TEVV data provenance, and that
     fine-tuning or retrieval-augmented generation data is grounded.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -12310,6 +12436,7 @@ actions:
   description: Regularly review security and safety guardrails, especially if the
     GAI system is being operated in novel circumstances. This includes reviewing reasons
     why the GAI system was initially assessed as being safe to deploy.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-information-security
@@ -12323,6 +12450,7 @@ actions:
   description: Assess adverse impacts, including health and wellbeing impacts for
     value chain or other AI Actors that are exposed to sexually explicit, offensive,
     or violent information during GAI training and maintenance.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-human-ai-configuration
@@ -12341,6 +12469,7 @@ actions:
   description: Assess existence or levels of harmful bias, intellectual property infringement,
     data privacy violations, obscenity, extremism, violence, or CBRN information in
     system training data.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -12359,6 +12488,7 @@ actions:
   name: MS-2.6-003
   description: Re-evaluate safety features of fine-tuned models when the negative
     risk exceeds organizational risk tolerance.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
@@ -12373,6 +12503,7 @@ actions:
   name: MS-2.6-004
   description: 'Review GAI system outputs for validity and safety: Review generated
     code to assess risks that may arise from unreliable downstream decision-making.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-value-chain-and-component-integration
@@ -12389,6 +12520,7 @@ actions:
   description: Verify that GAI system architecture can monitor outputs and performance,
     and handle, recover from, and repair errors when security anomalies, threats and
     impacts are detected.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-information-integrity
@@ -12406,6 +12538,7 @@ actions:
   description: Verify that systems properly handle queries that may give rise to inappropriate,
     malicious, or illegal usage, including facilitating manipulation, extortion, targeted
     impersonation, cyber-attacks, and weapons creation.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-information-security
@@ -12421,6 +12554,7 @@ actions:
   name: MS-2.6-007
   description: Regularly evaluate GAI system vulnerabilities to possible circumventi
     on of safety measures.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-information-security
@@ -12439,6 +12573,7 @@ actions:
     data breaches, eavesdropping, man-in-the-middle attacks, reverse engineering,
     autonomous agents, model theft or exposure of model weights, AI inference, bypass,
     extraction, and other baseline security concerns.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-integrity
@@ -12457,6 +12592,7 @@ actions:
   description: Benchmark GAI system security and resilience related to content provenance
     against industry standards and best practices. Compare GAI system security features
     and content provenance methods against industry state-of-the-art.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -12474,6 +12610,7 @@ actions:
     content and user perceptions of content authenticity. Analyze user feedback to
     identify concerns and/or current literacy levels related to content provenance
     and understanding of labels on content.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -12490,6 +12627,7 @@ actions:
   description: Identify metrics that reflect the effectiveness of security measures,
     such as data provenance, the number of unauthorized access attempts, inference,
     bypass, extraction, penetrations, or provenance verification.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -12509,6 +12647,7 @@ actions:
     implementation of content provenance techniques. Evaluate the rate of false positives
     and false negatives in content provenance, as well as true positives and true
     negatives for verification.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -12524,6 +12663,7 @@ actions:
   description: Measure the rate at which recommendations from security checks and
     incidents are implemented. Assess how quickly the AI system can adapt and improve
     based on lessons learned from security incidents and feedback .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -12541,6 +12681,7 @@ actions:
     attacks on other systems (e.g., malicious code generation, enhanced phishing content),
     GAI attacks (e.g., prompt injection), ML attacks (e.g., adversarial examples/prompts,
     data poisoning, membership inference, model extraction, sponge examples).'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-information-security
@@ -12555,6 +12696,7 @@ actions:
 - id: MS-2.7-008
   name: MS-2.7-008
   description: Verify fine-tuning does not compromise safety and security controls.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-information-integrity
@@ -12570,6 +12712,7 @@ actions:
 - id: MS-2.7-009
   name: MS-2.7-009
   description: Regularly assess and verify that security measures remain been compromised.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -12585,6 +12728,7 @@ actions:
   description: 'Compile statistics on actual policy violations, take-down requests,
     and intellectual property infringement for organizational GAI systems: Analyze
     transparency reports across demographic groups, languages groups .'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-intellectual-property
   hasDocumentation:
@@ -12598,6 +12742,7 @@ actions:
 - id: MS-2.8-002
   name: MS-2.8-002
   description: Document the instructions given to data annotators or AI red-teamers.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -12615,6 +12760,7 @@ actions:
     tamper-proof history of the content, promote transparency, and enable traceability.
     Robust version control systems can also be applied to track chang es across the
     AI lifecycle over time.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -12628,6 +12774,7 @@ actions:
 - id: MS-2.8-004
   name: MS-2.8-004
   description: Verify adequacy of GAI system user instructions through user testing.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -12643,6 +12790,7 @@ actions:
   description: 'Apply and document ML explanation results such as: Analysis of embeddings,
     Counterfactual prompts, Gradient-based attributions, Model compression/surrogate
     models, Occlusion/term reduction.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   hasDocumentation:
@@ -12662,6 +12810,7 @@ actions:
     etc.); Optimization objectives; Training algorithms; RLHF approaches; Fine-tuning
     or retrieval-augmented generation approaches; Evaluation data; Ethical considerations;
     Legal and regulatory requirements.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -12680,6 +12829,7 @@ actions:
     inference risks; Revealing biometric, confidential, copyrighted, licensed, patented,
     personal, proprietary, sensitive, or trade-marked information ; Tracking or revealing
     location information of users or members of training datasets. Property'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -12697,6 +12847,7 @@ actions:
   description: Engage directly with end-users and other stakeholders to understand
     their expectations and concerns regarding content provenance. Use this feedback
     to guide the design of provenance data-tracking techniques.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -12713,6 +12864,7 @@ actions:
   name: MS-2.10-003
   description: Verify deduplication of GAI training data samples, particularly regarding
     synthetic data.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12729,6 +12881,7 @@ actions:
     bias, stereotyping, denigration, and hateful content in GAI system outputs; Document
     assumptions and limitations of benchmarks, including any actual or possible training/test
     data cross contamination, relative to in-context deployment environment.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12754,6 +12907,7 @@ actions:
     and affected communities; Measurements of the prevalence of denigration in generated
     content in deployment (e.g., sub-sampling a fraction of traffic and manually annotating
     denigrating content) .'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
@@ -12771,6 +12925,7 @@ actions:
   description: Identify the classes of individuals, groups, or environmental ecosystems
     which might be impacted by GAI systems through direct engagement with potentially
     impacted communities.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12794,6 +12949,7 @@ actions:
     negatively impact representativeness in GAI system training and TEVV data; Filtering
     of hate speech or content in GAI system training data; Prevalence of GAI-generated
     data in GAI system training data.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12809,6 +12965,7 @@ actions:
   description: Assess the proportion of synthetic to non-synthetic training data and
     verify training data is not overly homogenous or GAI-produced to mitigate concerns
     of model collapse.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12822,6 +12979,7 @@ actions:
 - id: MS-2.12-001
   name: MS-2.12-001
   description: Assess safety to physical environments when deploying GAI systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
@@ -12836,6 +12994,7 @@ actions:
   name: MS-2.12-002
   description: Document anticipated environmental impacts of model development, maintenance,
     and deployment in product design decisions.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12850,6 +13009,7 @@ actions:
     consumption) for training, fine tuning, and deploying models: Verify tradeoffs
     between resources used at inference time versus additional resources required
     at training time.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12862,6 +13022,7 @@ actions:
   name: MS-2.12-004
   description: Verify effectiveness of carbon capture or offset programs for GAI training
     and applications, and address green-washing concerns.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12877,6 +13038,7 @@ actions:
     the desired concept): Measure or estimate, and document, biases or statistical
     variance in applie d metrics or structured human feedback processes; Leverage
     domain expertise when modeling complex societal constructs such as hateful content.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-information-integrity
@@ -12890,6 +13052,7 @@ actions:
   name: MS-3.2-001
   description: Establish processes for identifying emergent GAI system risks including
     consulting with external AI Actors.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-human-ai-configuration
@@ -12904,6 +13067,7 @@ actions:
   name: MS-3.3-001
   description: Conduct impact assessments on how AI-generated content might affect
     different social, economic, and cultural groups.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12918,6 +13082,7 @@ actions:
     GAI content and accompanying content provenance within context of use. Assess
     whether the content aligns with their expectations and how they may act upon the
     information presented.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -12934,6 +13099,7 @@ actions:
   description: Evaluate potential biases and stereotypes that could emerge from the
     AI-generated content using appropriate methodologies including computational testing
     methods as well as evaluating structured feedback input.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -12948,6 +13114,7 @@ actions:
     of GAI systems related to digital content transparency for AI Actors, other professionals,
     and the public about the societal impacts of AI and the role of diverse and inclusive
     content generation.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -12967,6 +13134,7 @@ actions:
     feedback on generated content quality and potential biases. Assess the general
     awareness among end users and impacted communities about the availability of these
     feedback channels.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-integrity
@@ -12984,6 +13152,7 @@ actions:
     GAI risks, including tests to address attempts to deceive or manipulate the application
     of provenance techniques or other misuses. Identify vulnerabilities and understand
     potential misuse scenarios and unintended outputs.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -13000,6 +13169,7 @@ actions:
   description: Evaluate GAI system performance in real-world scenarios to observe
     its behavior in practical environments and reveal issues that might not surface
     in controlled and optimized testing environments.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-human-ai-configuration
@@ -13016,6 +13186,7 @@ actions:
   name: MS-4.2-003
   description: Implement interpretability and explainability methods to evaluate GAI
     system decisions and verify alignment with intended purpose.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13031,6 +13202,7 @@ actions:
   description: Monitor and document instances where human operators or other systems
     override the GAI's decisions. Evaluate these cases to understand if the overrides
     are linked to issues related to content provenance.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13046,6 +13218,7 @@ actions:
   description: Verify and document the incorporation of results of structured public
     feedback exercises into design, implementation, deployment approval ('go'/'no-go'
     decisions), monitoring, and decommission decisions.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   - nist-information-security
@@ -13065,6 +13238,7 @@ actions:
     model release, for example, leveraging a staged release approach. Consider release
     approaches in the context of the model and its projected use cases. Mitigate,
     transfer, or avoid risks that surpass organizational risk tolerances.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -13078,6 +13252,7 @@ actions:
   description: Monitor the robustness and effectiveness of risk controls and mitigation
     plans (e.g., via red-teaming, field testing, participatory engagements, performance
     assessments, user feedback mechanisms).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -13091,6 +13266,7 @@ actions:
   description: Compare GAI system outputs against pre-defined organization risk tolerance,
     guidelines, and principles, and review and test AI-generated content against these
     guidelines.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -13106,6 +13282,7 @@ actions:
   name: MG-2.2-002
   description: Document training data sources to trace the origin and provenance of
     AI-generated content.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13120,6 +13297,7 @@ actions:
   description: Evaluate feedback loops between GAI system content provenance and human
     reviewers, and update where needed. Implement real-time monitoring systems to
     affirm that cont e nt provenance protocols remain effective.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13134,6 +13312,7 @@ actions:
   description: Evaluate GAI content and data for representational biases and employ
     techniques such as re-sampling, re-ranking, or adversarial training to mitigate
     biases in the generated content.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -13147,6 +13326,7 @@ actions:
   name: MG-2.2-005
   description: Engage in due diligence to analyze GAI output for harmful content,
     potential misinformation, and CBRN-related or NCII content.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-dangerous-violent-or-hateful-content
@@ -13162,6 +13342,7 @@ actions:
   name: MG-2.2-006
   description: Use feedback from internal and external AI Actors, users, individuals,
     and communities, to assess impact of AI-generated content.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -13176,6 +13357,7 @@ actions:
   description: Use real-time auditing tools where they can be demonstrated to aid
     in the tracking and validation of the lineage and authenticity of AI-generated
     data.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13190,6 +13372,7 @@ actions:
   description: Use structured feedback mechanisms to solicit and capture user input
     about AI-generated content to detect subtle shifts in quality or alignment with
     community and societal values.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -13205,6 +13388,7 @@ actions:
     privacy enhancing techniques in GAI development, where appropriate and applicable,
     match the statistical properties of real-world data without disclosing personally
     identifiable information or contributing to homogenization .
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-data-privacy
@@ -13226,6 +13410,7 @@ actions:
     plans account for the GAI system value chain ; Verify response and recovery plans
     are updated for and include necessary details to communicate with downstream GAI
     system Actors: Points-of-Contact (POC), Contact information, notification format.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -13239,6 +13424,7 @@ actions:
     as part of the deactivation or disengagement process of a specific GAI system
     (including for open-source models) or context of use, including r easons, workarounds,
     user access removal, alternative processes, contact information, etc. Human-
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -13251,6 +13437,7 @@ actions:
     to the organizational risk management authority when specific criteria for deactivation
     or disengagement is met for a particular context of use or for the GAI system
     as a whole.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -13264,6 +13451,7 @@ actions:
   description: Establish and maintain procedures for the remediation of issues which
     trigger incident response processes for the use of a GAI system, and provide stakeholders
     timelines associated with the remediation plan.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -13276,6 +13464,7 @@ actions:
   name: MG-2.4-004
   description: Establish and regularly review specific criteria that warrants the
     deactivation of GAI systems in accordance with set risk tolerances and appetites.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -13294,6 +13483,7 @@ actions:
     Apply organizational risk tolerances to fine-tuned third-party models; Apply organizational
     risk tolerance to existing t hird-party models adapted to a new domain; Reassess
     risk measurements after fine-tuning third-party GAI models.'
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-intellectual-property
   - nist-value-chain-and-component-integration
@@ -13308,6 +13498,7 @@ actions:
   description: Test GAI system value chain risks (e.g., data poisoning, malware, other
     software and hardware vulnerabilities; labor practices; data privacy and localization
     compliance; geopolitical alignment).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-security
@@ -13323,6 +13514,7 @@ actions:
   description: Re-assess model risks after fine-tuning or retrieval-augmented generation
     implementation and for any third-party GAI models deployed for applications and/or
     use cases that were not evaluated in initial testing.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-value-chain-and-component-integration
   hasDocumentation:
@@ -13338,6 +13530,7 @@ actions:
     measures to prevent, flag, or take other action in response to outputs that reproduce
     particular training data (e.g., plagiarized, trademarked, patented, licensed content
     or trade secret material ).
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-intellectual-property
@@ -13351,6 +13544,7 @@ actions:
   name: MG-3.1-005
   description: Review various transparency artifacts (e.g., system cards and model
     cards) for third-party models.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-information-security
@@ -13367,6 +13561,7 @@ actions:
     model compression/distillation, gradient-based attributions, occlusion/term reduction,
     counterfactual prompts, word clouds) as part of ongoing continuous improvement
     processes to mitigate risks related to unexplainable GAI systems.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -13380,6 +13575,7 @@ actions:
     any data augmentations, parameter adjustments, or other modifications. Access
     to un-tuned (baseline) models support s debugging the relative influence of the
     pre-trained weights compared to the fine-tuned model weights or other system updates.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-integrity
@@ -13396,6 +13592,7 @@ actions:
     architecture, training process of the pre-trained model including information
     on hyperparameters, training duration, and any fine-tuning or retrieval-augmented
     generation processes applied.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-intellectual-property
@@ -13409,6 +13606,7 @@ actions:
   name: MG-3.2-004
   description: Evaluate user reported problematic content and integrate feedback into
     system updates.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -13421,6 +13619,7 @@ actions:
     harmful, false, illegal, or violent content related to the GAI application, including
     for CSAM and NCII. These filters can be rule-based or leverage additional machine
     learning models to flag problematic inputs and outputs.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-information-integrity
@@ -13437,6 +13636,7 @@ actions:
     performance and trustworthiness characteristics related to content provenance
     to identify deviations from the desired standards and trigger alerts for human
     intervention.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13450,6 +13650,7 @@ actions:
   description: Leverage feedback and recommendations from organizational boards or
     committees related to the deployment of GAI applications and content provenance
     when using third-party pre-trained models.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   - nist-value-chain-and-component-integration
@@ -13465,6 +13666,7 @@ actions:
     content in accordance with human-AI configuration policies established in the
     Govern function, aligned with socio-cultural norms in the context of use, and
     for settings where AI models are demonstrated to perform poorly.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -13478,6 +13680,7 @@ actions:
   description: Use organizational risk tolerance to evaluate acceptable risks and
     performance metrics and decommission or retrain pre-trained models that perform
     outside of defined limits.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-confabulation
@@ -13492,6 +13695,7 @@ actions:
   description: Collaborate with external researchers, industry experts, and community
     representatives to maintain awareness of emerging best practices and technologies
     in measuring and managing identified risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13508,6 +13712,7 @@ actions:
   description: Establish, maintain, and evaluate effectiveness of organizational processes
     and procedures for post-deployment monitoring of GAI systems, particularly for
     potential confabulation, CBRN, or cyber risks.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-cbrn-information-or-capabilities
   - nist-confabulation
@@ -13526,6 +13731,7 @@ actions:
   description: Evaluate the use of sentiment analysis to gauge user sentiment regarding
     GAI content performance and impact, and work in collaboration with AI Actors experienced
     in user research and experience.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -13541,6 +13747,7 @@ actions:
   name: MG-4.1-004
   description: Implement active learning techniques to identify instances where the
     model fails or produces unexpected outputs.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   hasDocumentation:
@@ -13557,6 +13764,7 @@ actions:
   description: Share transparency reports with internal and external stakeholders
     that detail steps taken to update the G AI system to enhance transparency and
     accountability.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -13573,6 +13781,7 @@ actions:
   description: Track dataset modifications for provenance by monitoring data deletions,
     rectification requests, and other changes that may impact the verifiability of
     content origins.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-integrity
   hasDocumentation:
@@ -13589,6 +13798,7 @@ actions:
   description: Verify that AI Actors responsible for monitoring reported issues can
     effectively evaluate GAI system performance including the application of content
     provenance data tracking techniques, and promptly escalate issues for response.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -13602,6 +13812,7 @@ actions:
   name: MG-4.2-001
   description: Conduct regular monitoring of GAI systems and publish reports detailing
     the performance, feedback received, and improvements made.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasDocumentation:
   - NIST.AI.600-1
   hasAiActorTask:
@@ -13618,6 +13829,7 @@ actions:
     of inappropriate or harmful content and adapt processes based on findings to prevent
     future occurrences. Conduct post-mortem analyses of incidents with relevant AI
     Actors, to understand the root causes and implement preventive measures.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-dangerous-violent-or-hateful-content
   - nist-human-ai-configuration
@@ -13635,6 +13847,7 @@ actions:
   name: MG-4.2-003
   description: Use visualizations or other methods to represent GAI model behavior
     to ease non-technical stakeholders understanding of GAI system functionality.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-human-ai-configuration
   hasDocumentation:
@@ -13653,6 +13866,7 @@ actions:
     incident response and recovery processes are followed and effective, including
     to follow procedures for communicating incidents to relevant AI Actors and where
     applicable, relevant legal and regulatory bodies.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-information-security
   hasDocumentation:
@@ -13668,6 +13882,7 @@ actions:
   name: MG-4.3-002
   description: Establish and maintain policies and procedures to record and track
     GAI system reported errors, near-misses, and negative impacts.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-confabulation
   - nist-information-integrity
@@ -13685,6 +13900,7 @@ actions:
   description: Report GAI incidents in compliance with legal and regulatory requirements
     (e.g., HIPAA breach reporting, e.g., OCR (2023) or NHTSA (2022) autonomous vehicle
     crash reporting requirements.
+  isDefinedByTaxonomy: nist-ai-rmf
   hasRelatedRisk:
   - nist-data-privacy
   - nist-information-security
@@ -14994,7 +15210,7 @@ aimodels:
 principles:
 - id: principle-au-human-societal-and-environmental-wellbeing
   name: Human, societal and environmental wellbeing
-  description: 'AI systems should benefit individuals, society and the environment. '
+  description: AI systems should benefit individuals, society and the environment.
   hasDocumentation:
   - doc-australia-ai-ethics-principles
 - id: principle-au-human-centred-values
@@ -15006,13 +15222,13 @@ principles:
 - id: principle-au-fairness
   name: Fairness
   description: AI systems should be inclusive and accessible, and should not involve
-    or result in unfair discrimination  against individuals, communities or groups.
+    or result in unfair discrimination against individuals, communities or groups.
   hasDocumentation:
   - doc-australia-ai-ethics-principles
 - id: principle-au-privacy-protection-and-security
   name: Privacy protection and security
   description: AI systems should respect and uphold privacy rights and data protection,
-    and ensure the security of  data.
+    and ensure the security of data.
   hasDocumentation:
   - doc-australia-ai-ethics-principles
 - id: principle-au-reliability-and-safety
@@ -15024,34 +15240,34 @@ principles:
 - id: principle-au-transparency-and-explainability
   name: Transparency and explainability
   description: There should be transparency and responsible disclosure so people can
-    understand when they are being  significantly impacted by AI, and can find out
+    understand when they are being significantly impacted by AI, and can find out
     when an AI system is engaging with them.
   hasDocumentation:
   - doc-australia-ai-ethics-principles
 - id: principle-au-contestability
   name: Contestability
   description: When an AI system significantly impacts a person, community, group
-    or environment, there should be a  timely process to allow people to challenge
+    or environment, there should be a timely process to allow people to challenge
     the use or outcomes of the AI system.
   hasDocumentation:
   - doc-australia-ai-ethics-principles
 - id: principle-au-accountability
   name: Accountability
   description: People responsible for the different phases of the AI system lifecycle
-    should be identifiable and  accountable for the outcomes of the AI systems, and
+    should be identifiable and accountable for the outcomes of the AI systems, and
     human oversight of AI systems should be enabled.
   hasDocumentation:
   - doc-australia-ai-ethics-principles
 - id: principle-un-do-no-harm
   name: Do no harm
   description: Artificial intelligence systems should not be used in ways that cause
-    or exacerbate harm, whether individual or  collective, including harm to social,
-    cultural, economic, natural or political environments. All stages of an  artificial
+    or exacerbate harm, whether individual or collective, including harm to social,
+    cultural, economic, natural or political environments. All stages of an artificial
     intelligence system's life cycle should operate in accordance with the purposes,
-    principles and  commitments of the Charter of the United Nations. All stages of
-    an artificial intelligence system's life cycle  should be designed, developed,
-    deployed and operated in ways that respect, protect and promote human rights and  fundamental
-    freedoms.
+    principles and commitments of the Charter of the United Nations. All stages of
+    an artificial intelligence system's life cycle should be designed, developed,
+    deployed and operated in ways that respect, protect and promote human rights and
+    fundamental freedoms.
   hasDocumentation:
   - doc-un-ethical-use-of-ai-principles
 - id: principle-un-defined-purpose-necessity-and-proportionality
@@ -15079,15 +15295,6 @@ principles:
     any kind, in compliance with international law. The use of artificial intelligence
     systems should not lead to individuals being deceived or to unjustifiable restrictions
     on their human rights and fundamental freedoms.
-  hasDocumentation:
-  - doc-un-ethical-use-of-ai-principles
-- id: principle-un-sustainability
-  name: Sustainability
-  description: Artificial intelligence should be aimed at promoting environmental,
-    economic and social sustainability. To this end, the human, social, cultural,
-    political, economic and environmental impacts of such technologies should be continuously
-    assessed and appropriate mitigation and prevention measures should be taken to
-    address adverse impacts, including on future generations.
   hasDocumentation:
   - doc-un-ethical-use-of-ai-principles
 - id: principle-un-sustainability
@@ -15166,15 +15373,16 @@ principles:
   - doc-un-ethical-use-of-ai-principles
 - id: principle-oecd-inclusive-growth
   name: Inclusive growth, sustainable development and well-being (Principle 1.1)
-  description: "This Principle highlights the potential for trustworthy AI to contribute\
-    \ to overall growth and prosperity for all  – individuals, society, and planet\
-    \ – and advance global development objectives. \nStakeholders should proactively\
-    \  engage in responsible stewardship of trustworthy AI in pursuit of beneficial\
-    \ outcomes for people and the planet,  such as augmenting human capabilities and\
-    \ enhancing creativity, advancing inclusion of underrepresented populations, \
-    \ reducing economic, social, gender and other inequalities, and protecting natural\
-    \ environments, thus invigorating  inclusive growth, well-being, sustainable development\
-    \ and environmental sustainability."
+  description: 'This Principle highlights the potential for trustworthy AI to contribute
+    to overall growth and prosperity for all – individuals, society, and planet –
+    and advance global development objectives.
+
+    Stakeholders should proactively engage in responsible stewardship of trustworthy
+    AI in pursuit of beneficial outcomes for people and the planet, such as augmenting
+    human capabilities and enhancing creativity, advancing inclusion of underrepresented
+    populations, reducing economic, social, gender and other inequalities, and protecting
+    natural environments, thus invigorating inclusive growth, well-being, sustainable
+    development and environmental sustainability.'
   hasDocumentation:
   - doc-oecd-ai-principles
 - id: principle-oecd-human-rights
@@ -15185,33 +15393,33 @@ principles:
     safeguards to ensure a fair and just society.
 
     AI actors should respect the rule of law, human rights, democratic and human-centred
-    values throughout the AI  system lifecycle. These include non-discrimination and
-    equality, freedom, dignity, autonomy of individuals,  privacy and data protection,
-    diversity, fairness, social justice, and internationally recognised labour rights.  This
-    also includes addressing misinformation and disinformation amplified by AI, while
-    respecting freedom of  expression and other rights and freedoms protected by applicable
-    international law.
+    values throughout the AI system lifecycle. These include non-discrimination and
+    equality, freedom, dignity, autonomy of individuals, privacy and data protection,
+    diversity, fairness, social justice, and internationally recognised labour rights.
+    This also includes addressing misinformation and disinformation amplified by AI,
+    while respecting freedom of expression and other rights and freedoms protected
+    by applicable international law.
 
     To this end, AI actors should implement mechanisms and safeguards, such as capacity
     for human agency and oversight, including to address risks arising from uses outside
-    of intended purpose, intentional misuse, or unintentional  misuse in a manner
-    appropriate to the context and consistent with the state of the art.'
+    of intended purpose, intentional misuse, or unintentional misuse in a manner appropriate
+    to the context and consistent with the state of the art.'
   hasDocumentation:
   - doc-oecd-ai-principles
 - id: principle-oecd-transparency
   name: Transparency and explainability (Principle 1.3)
   description: 'This principle is about transparency and responsible disclosure around
-    AI systems to ensure that people understand  when they are engaging with them
-    and can challenge outcomes.
+    AI systems to ensure that people understand when they are engaging with them and
+    can challenge outcomes.
 
     AI Actors should commit to transparency and responsible disclosure regarding AI
-    systems. To this end, they should  provide meaningful information, appropriate
+    systems. To this end, they should provide meaningful information, appropriate
     to the context, and consistent with the state of art: to foster a general understanding
     of AI systems, including their capabilities and limitations, to make stakeholders
     aware of their interactions with AI systems, including in the workplace, where
     feasible and useful, to provide plain and easy-to-understand information on the
-    sources of data/input,  factors, processes and/or logic that led to the prediction,
-    content, recommendation or decision, to enable those  affected by an AI system
+    sources of data/input, factors, processes and/or logic that led to the prediction,
+    content, recommendation or decision, to enable those affected by an AI system
     to understand the output, and, to provide information that enable those adversely
     affected by an AI system to challenge its output.'
   hasDocumentation:
@@ -15219,19 +15427,19 @@ principles:
 - id: principle-oecd-robustness
   name: Robustness, security and safety (Principle 1.4)
   description: 'AI systems must function in a robust, secure and safe way throughout
-    their lifetimes, and potential risks should be  continually assessed and managed.
+    their lifetimes, and potential risks should be continually assessed and managed.
 
     AI systems should be robust, secure and safe throughout their entire lifecycle
-    so that, in conditions of normal use,  foreseeable use or misuse, or other adverse
-    conditions, they function appropriately and do not pose unreasonable  safety and/or
+    so that, in conditions of normal use, foreseeable use or misuse, or other adverse
+    conditions, they function appropriately and do not pose unreasonable safety and/or
     security risks.
 
     Mechanisms should be in place, as appropriate, to ensure that if AI systems risk
-    causing undue harm or exhibit  undesired behaviour, they can be overridden, repaired,
+    causing undue harm or exhibit undesired behaviour, they can be overridden, repaired,
     and/or decommissioned safely as needed.
 
     Mechanisms should also, where technically feasible, be in place to bolster information
-    integrity while ensuring  respect for freedom of expression.'
+    integrity while ensuring respect for freedom of expression.'
   hasDocumentation:
   - doc-oecd-ai-principles
 - id: principle-oecd-accountability
@@ -15261,13 +15469,13 @@ principles:
 - id: principle-ibm-tt-principle-1
   name: 1. The purpose of AI is to augment human intelligence
   description: The purpose of AI and cognitive systems developed and applied by IBM
-    is to augment—not replace—human intelligence.  Our technology is and will be designed
-    to enhance and extend human capability and potential. At IBM, we believe AI  should
+    is to augment—not replace—human intelligence. Our technology is and will be designed
+    to enhance and extend human capability and potential. At IBM, we believe AI should
     make ALL of us better at our jobs, and that the benefits of the AI era should
-    touch the many, not just the  elite few. To that end, we are investing in initiatives
-    to help the global workforce gain the skills needed to work  in partnership with
+    touch the many, not just the elite few. To that end, we are investing in initiatives
+    to help the global workforce gain the skills needed to work in partnership with
     these technologies. That includes preparing more people for new collar jobs, which
-    prioritize  skills over specific degrees.
+    prioritize skills over specific degrees.
   hasDocumentation:
   - doc-ibms-principles-for-trust-and-transparency
 - id: principle-ibm-tt-principle-2

@@ -8,6 +8,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.2-001
@@ -22,6 +23,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.2-002
@@ -34,6 +36,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.3-001
@@ -55,6 +58,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.3-002
@@ -69,6 +73,7 @@ actions:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.3-003
@@ -81,6 +86,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.3-004
@@ -93,6 +99,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.3-005
@@ -103,6 +110,7 @@ actions:
     and algorithmic monoculture.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.3-006
@@ -119,6 +127,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.3-007
@@ -130,6 +139,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.4-001
@@ -141,6 +151,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - AI Deployment
@@ -155,6 +166,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - AI Deployment
@@ -167,6 +179,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -180,6 +193,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -193,6 +207,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -204,6 +219,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.6-002
@@ -214,6 +230,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.6-003
@@ -234,6 +251,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-1.7-001
@@ -245,6 +263,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -260,6 +279,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -274,6 +294,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-2.1-002
@@ -283,6 +304,7 @@ actions:
     type.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-2.1-003
@@ -293,6 +315,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-2.1-004
@@ -305,6 +328,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-2.1-005
@@ -318,6 +342,7 @@ actions:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
 - id: GV-3.2-001
@@ -329,6 +354,7 @@ actions:
   - nist-cbrn-information-or-capabilities
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
 - id: GV-3.2-002
@@ -343,6 +369,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
 - id: GV-3.2-003
@@ -354,6 +381,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
 - id: GV-3.2-004
@@ -364,6 +392,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
 - id: GV-3.2-005
@@ -374,6 +403,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
 - id: GV-4.1-001
@@ -388,6 +418,7 @@ actions:
   - nist-confabulation
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -403,6 +434,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -417,6 +449,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -431,6 +464,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -443,6 +477,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -456,6 +491,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -470,6 +506,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Impact Assessment
   - Affected Individuals and Communities
@@ -484,6 +521,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Impact Assessment
   - Affected Individuals and Communities
@@ -497,6 +535,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Impact Assessment
   - Affected Individuals and Communities
@@ -509,6 +548,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Impact Assessment
@@ -523,6 +563,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Impact Assessment
@@ -538,6 +579,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -550,6 +592,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -564,6 +607,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -579,6 +623,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -597,6 +642,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -609,6 +655,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -621,6 +668,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -635,6 +683,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -658,6 +707,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -672,6 +722,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Operation and Monitoring
   - Procurement
@@ -684,6 +735,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -698,6 +750,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -719,6 +772,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -732,6 +786,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -743,6 +798,7 @@ actions:
     including model weights and other system artifacts.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -757,6 +813,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -779,6 +836,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -794,6 +852,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
 - id: MP-1.1-002
@@ -806,6 +865,7 @@ actions:
     institutions, and the physical environment; Social norms and expectations.'
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
 - id: MP-1.1-003
@@ -823,6 +883,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
 - id: MP-1.1-004
@@ -835,6 +896,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
 - id: MP-1.2-001
@@ -847,6 +909,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
 - id: MP-1.2-002
@@ -858,6 +921,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
 - id: MP-2.1-001
@@ -868,6 +932,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - TEVV
 - id: MP-2.1-002
@@ -880,6 +945,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - TEVV
 - id: MP-2.2-001
@@ -892,6 +958,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - End Users
 - id: MP-2.2-002
@@ -903,6 +970,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - End Users
 - id: MP-2.3-001
@@ -915,6 +983,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -927,6 +996,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -940,6 +1010,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -952,6 +1023,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -964,6 +1036,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -977,6 +1050,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Development
@@ -992,6 +1066,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Development
@@ -1007,6 +1082,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Development
@@ -1021,6 +1097,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Development
@@ -1037,6 +1114,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Development
@@ -1055,6 +1133,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Design
   - AI Development
@@ -1070,6 +1149,7 @@ actions:
   - nist-data-privacy
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1083,6 +1163,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1098,6 +1179,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1113,6 +1195,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1133,6 +1216,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1147,6 +1231,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1160,6 +1245,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1178,6 +1264,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1191,6 +1278,7 @@ actions:
   - nist-data-privacy
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1206,6 +1294,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Governance and Oversight
   - Operation and Monitoring
@@ -1221,6 +1310,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1241,6 +1331,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1259,6 +1350,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1277,6 +1369,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1293,6 +1386,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1310,6 +1404,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1328,6 +1423,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1347,6 +1443,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -1364,6 +1461,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1377,6 +1475,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1389,6 +1488,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1402,6 +1502,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1417,6 +1518,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1429,6 +1531,7 @@ actions:
     to monitor and improve outputs.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1442,6 +1545,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1455,6 +1559,7 @@ actions:
   - nist-cbrn-information-or-capabilities
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1469,6 +1574,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Domain Experts
@@ -1483,6 +1589,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Development
@@ -1504,6 +1611,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Development
@@ -1522,6 +1630,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Development
@@ -1540,6 +1649,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Human Factors
@@ -1557,6 +1667,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Human Factors
@@ -1571,6 +1682,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Human Factors
@@ -1585,6 +1697,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Development
   - Human Factors
@@ -1598,6 +1711,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - TEVV
@@ -1609,6 +1723,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - TEVV
@@ -1620,6 +1735,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - TEVV
@@ -1636,6 +1752,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - TEVV
@@ -1648,6 +1765,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Domain Experts
   - TEVV
@@ -1660,6 +1778,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Domain Experts
   - TEVV
@@ -1671,6 +1790,7 @@ actions:
   - nist-confabulation
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Domain Experts
   - TEVV
@@ -1682,6 +1802,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Domain Experts
   - TEVV
@@ -1693,6 +1814,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Domain Experts
   - TEVV
@@ -1706,6 +1828,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - Domain Experts
   - TEVV
@@ -1721,6 +1844,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1740,6 +1864,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1754,6 +1879,7 @@ actions:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1769,6 +1895,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1786,6 +1913,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1802,6 +1930,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1817,6 +1946,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1837,6 +1967,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1853,6 +1984,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1870,6 +2002,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1886,6 +2019,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1904,6 +2038,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1920,6 +2055,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1937,6 +2073,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1952,6 +2089,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1965,6 +2103,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1980,6 +2119,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -1993,6 +2133,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2010,6 +2151,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2023,6 +2165,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2038,6 +2181,7 @@ actions:
   - nist-confabulation
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2057,6 +2201,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2076,6 +2221,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2093,6 +2239,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2106,6 +2253,7 @@ actions:
     synthetic data.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2122,6 +2270,7 @@ actions:
     data cross contamination, relative to in-context deployment environment.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2149,6 +2298,7 @@ actions:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2164,6 +2314,7 @@ actions:
     impacted communities.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2187,6 +2338,7 @@ actions:
     data in GAI system training data.'
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2202,6 +2354,7 @@ actions:
     of model collapse.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2217,6 +2370,7 @@ actions:
   - nist-dangerous-violent-or-hateful-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2229,6 +2383,7 @@ actions:
     and deployment in product design decisions.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2243,6 +2398,7 @@ actions:
     at training time.'
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2255,6 +2411,7 @@ actions:
     and applications, and address green-washing concerns.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2273,6 +2430,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2286,6 +2444,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Impact Assessment
   - Domain Experts
@@ -2297,6 +2456,7 @@ actions:
     different social, economic, and cultural groups.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2314,6 +2474,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2327,6 +2488,7 @@ actions:
     methods as well as evaluating structured feedback input.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2344,6 +2506,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2363,6 +2526,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2380,6 +2544,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Domain Experts
@@ -2397,6 +2562,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Domain Experts
@@ -2411,6 +2577,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Domain Experts
@@ -2426,6 +2593,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Domain Experts
@@ -2442,6 +2610,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Domain Experts
@@ -2460,6 +2629,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2473,6 +2643,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2488,6 +2659,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2501,6 +2673,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2515,6 +2688,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2529,6 +2703,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2544,6 +2719,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2557,6 +2733,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2571,6 +2748,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2585,6 +2763,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2603,6 +2782,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Impact Assessment
@@ -2621,6 +2801,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2632,6 +2813,7 @@ actions:
     user access removal, alternative processes, contact information, etc. Human-
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Governance and Oversight
@@ -2646,6 +2828,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Governance and Oversight
@@ -2659,6 +2842,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Governance and Oversight
@@ -2671,6 +2855,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Governance and Oversight
@@ -2690,6 +2875,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2705,6 +2891,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2718,6 +2905,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2734,6 +2922,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2748,6 +2937,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2760,6 +2950,7 @@ actions:
     processes to mitigate risks related to unexplainable GAI systems.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2776,6 +2967,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2792,6 +2984,7 @@ actions:
   - nist-intellectual-property
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2802,6 +2995,7 @@ actions:
     system updates.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2818,6 +3012,7 @@ actions:
   - nist-obscene-degrading-and-or-abusive-content
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2832,6 +3027,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2846,6 +3042,7 @@ actions:
   - nist-value-chain-and-component-integration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2860,6 +3057,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2874,6 +3072,7 @@ actions:
   - nist-confabulation
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Operation and Monitoring
@@ -2887,6 +3086,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2905,6 +3105,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2921,6 +3122,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2936,6 +3138,7 @@ actions:
   - nist-confabulation
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2952,6 +3155,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2968,6 +3172,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2982,6 +3187,7 @@ actions:
     provenance data tracking techniques, and promptly escalate issues for response.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -2995,6 +3201,7 @@ actions:
     the performance, feedback received, and improvements made.
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -3014,6 +3221,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -3030,6 +3238,7 @@ actions:
   - nist-human-ai-configuration
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - AI Design
@@ -3048,6 +3257,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -3064,6 +3274,7 @@ actions:
   - nist-information-integrity
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
@@ -3081,6 +3292,7 @@ actions:
   - nist-information-security
   hasDocumentation:
   - NIST.AI.600-1
+  isDefinedByTaxonomy: nist-ai-rmf
   hasAiActorTask:
   - AI Deployment
   - Affected Individuals and Communities
