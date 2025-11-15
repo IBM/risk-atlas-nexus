@@ -1604,7 +1604,7 @@ class RiskAtlasNexus:
             # (Q6) The capability of an AI system to do what it is designed to do
             # (Q7) AI Subject impacted by the AI System
             predictions = [
-                response.prediction["answer"]
+                response
                 for response in self.generate_few_shot_risk_questionnaire_output(
                     usecase,
                     list(
